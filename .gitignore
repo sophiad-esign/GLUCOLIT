@@ -59,3 +59,5 @@ dist
 
 # content collections
 .content-collections
+
+.vercel
