@@ -26,7 +26,7 @@ import { env } from "./env";
 import { hooks } from "./hooks";
 import { getUrl } from "./lib/utils";
 import { ac, roles } from "./rbac";
-import { AuthProvider, SocialProvider, VerificationType } from "./types";
+import { AuthProvider, VerificationType } from "./types";
 
 export const auth = betterAuth({
   appName: "TurboStarter",
@@ -84,7 +84,7 @@ export const auth = betterAuth({
   ],
   emailAndPassword: {
     enabled: true,
-    requireEmailVerification: true,
+    requireEmailVerification: false,
     sendResetPassword: async ({ user, url }, request) =>
       sendEmail({
         to: user.email,
@@ -96,7 +96,7 @@ export const auth = betterAuth({
       }),
   },
   emailVerification: {
-    sendOnSignUp: true,
+    sendOnSignUp: false,
     autoSignInAfterVerification: true,
     sendVerificationEmail: async ({ user, url }, request) =>
       sendEmail({
@@ -199,21 +199,7 @@ export const auth = betterAuth({
     expo(),
     nextCookies(),
   ],
-  socialProviders: {
-    [SocialProvider.APPLE]: {
-      clientId: env.APPLE_CLIENT_ID,
-      clientSecret: env.APPLE_CLIENT_SECRET,
-      appBundleIdentifier: env.APPLE_APP_BUNDLE_IDENTIFIER,
-    },
-    [SocialProvider.GOOGLE]: {
-      clientId: env.GOOGLE_CLIENT_ID,
-      clientSecret: env.GOOGLE_CLIENT_SECRET,
-    },
-    [SocialProvider.GITHUB]: {
-      clientId: env.GITHUB_CLIENT_ID,
-      clientSecret: env.GITHUB_CLIENT_SECRET,
-    },
-  },
+  socialProviders: {},
   advanced: {
     cookiePrefix: "turbostarter",
     cookies: {
