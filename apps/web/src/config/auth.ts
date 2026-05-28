@@ -4,13 +4,29 @@ import env from "../../env.config";
 
 import type { AuthConfig } from "@workspace/auth";
 
+const toBoolean = (value: boolean | string | undefined, fallback = false) => {
+  if (typeof value === "boolean") {
+    return value;
+  }
+
+  if (value === "true") {
+    return true;
+  }
+
+  if (value === "false") {
+    return false;
+  }
+
+  return fallback;
+};
+
 export const authConfig = authConfigSchema.parse({
   providers: {
-    password: env.NEXT_PUBLIC_AUTH_PASSWORD,
-    magicLink: env.NEXT_PUBLIC_AUTH_MAGIC_LINK,
-    emailOtp: env.NEXT_PUBLIC_AUTH_EMAIL_OTP,
-    passkey: env.NEXT_PUBLIC_AUTH_PASSKEY,
-    anonymous: env.NEXT_PUBLIC_AUTH_ANONYMOUS,
+    password: toBoolean(env.NEXT_PUBLIC_AUTH_PASSWORD, true),
+    magicLink: toBoolean(env.NEXT_PUBLIC_AUTH_MAGIC_LINK),
+    emailOtp: toBoolean(env.NEXT_PUBLIC_AUTH_EMAIL_OTP),
+    passkey: toBoolean(env.NEXT_PUBLIC_AUTH_PASSKEY),
+    anonymous: toBoolean(env.NEXT_PUBLIC_AUTH_ANONYMOUS),
     oAuth: [],
   },
 }) satisfies AuthConfig;
