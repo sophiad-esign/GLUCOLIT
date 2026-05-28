@@ -14,6 +14,10 @@ export const ContentTag = {
   DEVELOPMENT: "development",
   PROTOTYPE: "prototype",
   LAUNCH: "launch",
+  MEDICAL_RESEARCH: "medical-research",
+  PREDIABETES: "prediabetes",
+  INSULIN_RESISTANCE: "insulin-resistance",
+  LIFESTYLE: "lifestyle",
 } as const;
 
 export type ContentStatus = (typeof ContentStatus)[keyof typeof ContentStatus];

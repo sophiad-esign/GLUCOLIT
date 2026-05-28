@@ -177,7 +177,11 @@
       "product": "product",
       "development": "development",
       "prototype": "prototype",
-      "launch": "launch"
+      "launch": "launch",
+      "medical-research": "medical research",
+      "prediabetes": "prediabetes",
+      "insulin-resistance": "insulin resistance",
+      "lifestyle": "lifestyle"
     }
   },
   "api": {

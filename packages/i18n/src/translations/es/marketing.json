@@ -183,7 +183,11 @@
       "product": "producto",
       "development": "desarrollo",
       "prototype": "prototipo",
-      "launch": "lanzamiento"
+      "launch": "lanzamiento",
+      "medical-research": "investigacion medica",
+      "prediabetes": "prediabetes",
+      "insulin-resistance": "resistencia a la insulina",
+      "lifestyle": "estilo de vida"
     }
   },
 
