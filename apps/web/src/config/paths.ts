@@ -1,5 +1,6 @@
 const ADMIN_PREFIX = "/admin";
 const AUTH_PREFIX = "/auth";
+const ARTICLES_PREFIX = "/articles";
 const BLOG_PREFIX = "/blog";
 const DASHBOARD_PREFIX = "/dashboard";
 const LEGAL_PREFIX = "/legal";
@@ -26,6 +27,10 @@ const pathsConfig = {
   marketing: {
     pricing: "/pricing",
     contact: "/contact",
+    articles: {
+      index: ARTICLES_PREFIX,
+      article: (slug: string) => `${ARTICLES_PREFIX}/${slug}`,
+    },
     blog: {
       index: BLOG_PREFIX,
       post: (slug: string) => `${BLOG_PREFIX}/${slug}`,
@@ -65,6 +70,7 @@ export {
   pathsConfig,
   DASHBOARD_PREFIX,
   ADMIN_PREFIX,
+  ARTICLES_PREFIX,
   BLOG_PREFIX,
   AUTH_PREFIX,
   API_PREFIX,

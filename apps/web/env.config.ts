@@ -20,7 +20,7 @@ export default defineEnv({
    * This way you can ensure the app isn't built with invalid env vars.
    */
   server: {
-    CONTACT_EMAIL: z.email(),
+    CONTACT_EMAIL: z.email().optional().default("hello@glucolit.vercel.app"),
   },
 
   /**

@@ -15,7 +15,9 @@ const PageView = dynamic(
   },
 );
 
-if (typeof window !== "undefined" && !posthog.__loaded) {
+const isPostHogEnabled = Boolean(env.NEXT_PUBLIC_POSTHOG_KEY);
+
+if (typeof window !== "undefined" && isPostHogEnabled && !posthog.__loaded) {
   posthog.init(env.NEXT_PUBLIC_POSTHOG_KEY, {
     api_host: env.NEXT_PUBLIC_POSTHOG_HOST,
     person_profiles: "always",
@@ -27,6 +29,10 @@ if (typeof window !== "undefined" && !posthog.__loaded) {
 
 export const strategy = {
   Provider: ({ children }) => {
+    if (!isPostHogEnabled) {
+      return children;
+    }
+
     return (
       <PostHogProvider client={posthog}>
         {children}
@@ -35,21 +41,21 @@ export const strategy = {
     );
   },
   track: (event, properties) => {
-    if (typeof window === "undefined") {
+    if (typeof window === "undefined" || !isPostHogEnabled) {
       return;
     }
 
     posthog.capture(event, properties);
   },
   identify: (userId, traits) => {
-    if (typeof window === "undefined") {
+    if (typeof window === "undefined" || !isPostHogEnabled) {
       return;
     }
 
     posthog.identify(userId, traits);
   },
   reset: () => {
-    if (typeof window === "undefined") {
+    if (typeof window === "undefined" || !isPostHogEnabled) {
       return;
     }
 
