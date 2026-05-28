@@ -33,6 +33,10 @@ const hasTags = <T extends CollectionType>(
   return "tags" in item;
 };
 
+const isPublic = <T extends CollectionType>(item: ContentCollectionItem<T>) => {
+  return !("draft" in item) || item.draft !== true;
+};
+
 const sortItems = <T extends CollectionType>(
   items: ContentCollectionItem<T>[],
   sortBy: keyof ContentCollectionItem<T>,
@@ -75,6 +79,7 @@ export const getContentItems: GetContentItems = ({
   sortBy,
   sortOrder = SortOrder.DESCENDING,
   locale,
+  includeDrafts = false,
 }) => {
   const items = content[collection];
 
@@ -89,7 +94,11 @@ export const getContentItems: GetContentItems = ({
     (item) => item.status === status,
   );
 
-  const itemsWithLocale = itemsWithStatus.filter(
+  const publicItems = includeDrafts
+    ? itemsWithStatus
+    : itemsWithStatus.filter(isPublic);
+
+  const itemsWithLocale = publicItems.filter(
     (item) => !locale || item.locale === locale,
   );
 
@@ -108,8 +117,12 @@ export const getContentItemBySlug: GetContentItemBySlug = ({
   slug,
   status = ContentStatus.PUBLISHED,
   locale,
+  includeDrafts = false,
 }) =>
   content[collection].find(
     (item) =>
-      item.slug === slug && item.status === status && item.locale === locale,
+      item.slug === slug &&
+      item.status === status &&
+      item.locale === locale &&
+      (includeDrafts || isPublic(item)),
   ) ?? null;

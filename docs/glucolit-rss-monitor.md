@@ -8,13 +8,14 @@ This project includes a small Python monitor for diabetes and metabolic-health r
 - Falls back to PubMed E-utilities when a publisher RSS URL is unavailable.
 - Scores each item for relevance to prediabetes, insulin resistance, diabetes prevention, and lifestyle intervention.
 - Generates a bilingual MDX blog post under `packages/cms/src/collections/blog/content`.
+- Writes `draft: true` by default, so articles stay hidden until human review.
 - Stores processed item IDs in `data/glucolit-rss-state.json` to avoid duplicates.
 
 ## Run Locally
 
 ```bash
 python scripts/glucolit_rss_monitor.py --dry-run
-python scripts/glucolit_rss_monitor.py --status published
+python scripts/glucolit_rss_monitor.py --status published --draft
 ```
 
 ## GitHub Actions
@@ -33,7 +34,19 @@ Optional repository variable:
 OPENAI_MODEL
 ```
 
-Without `OPENAI_API_KEY`, the script still creates conservative research-note scaffolds, but those should be treated as drafts that need human review.
+The GitHub workflow requires `OPENAI_API_KEY`. If OpenAI generation fails, the workflow fails instead of publishing a low-quality fallback article.
+
+To publish a reviewed article, change its frontmatter from:
+
+```yaml
+draft: true
+```
+
+to:
+
+```yaml
+draft: false
+```
 
 ## Medical Safety
 

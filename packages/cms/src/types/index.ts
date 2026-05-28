@@ -35,6 +35,7 @@ export type GetContentItems = <T extends CollectionType>(args: {
   locale?: string;
   sortBy?: keyof ContentCollectionItem<T>;
   sortOrder?: SortOrder;
+  includeDrafts?: boolean;
 }) => {
   count: number;
   items: ContentCollectionItem<T>[];
@@ -45,4 +46,5 @@ export type GetContentItemBySlug = <T extends CollectionType>(args: {
   slug: string;
   status?: ContentStatus;
   locale?: string;
+  includeDrafts?: boolean;
 }) => ContentCollectionItem<T> | null;

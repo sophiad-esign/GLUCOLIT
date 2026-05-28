@@ -29,7 +29,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
-        run: python scripts/glucolit_rss_monitor.py --status published --min-score 8
+        run: python scripts/glucolit_rss_monitor.py --status published --draft --min-score 8 --require-openai
 
       - name: Commit generated posts
         run: |

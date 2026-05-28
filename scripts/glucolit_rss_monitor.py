@@ -3,8 +3,8 @@
 
 The script is intentionally dependency-free so it can run in GitHub Actions
 without installing Python packages. If OPENAI_API_KEY is present, it asks a
-language model to create a bilingual plain-language summary. Without that key,
-it still creates a conservative bilingual scaffold that links to the source.
+language model to create a bilingual plain-language summary. Generated posts
+are drafts by default and require human review before publication.
 """
 
 from __future__ import annotations
@@ -451,10 +451,15 @@ def bullet_list(items: list[str]) -> str:
     return "\n".join(f"- {item.strip()}" for item in items if item.strip())
 
 
-def article_to_mdx(item: FeedItem, article: dict[str, Any], status: str) -> str:
+def article_to_mdx(
+    item: FeedItem,
+    article: dict[str, Any],
+    status: str,
+    draft: bool,
+) -> str:
     title = f"{article['title_zh']} / {article['title_en']}"
     description = f"{article['description_zh']} {article['description_en']}"
-    return textwrap.dedent(
+    content = textwrap.dedent(
         f"""\
         ---
         title: "{md_escape(title[:180])}"
@@ -463,6 +468,7 @@ def article_to_mdx(item: FeedItem, article: dict[str, Any], status: str) -> str:
         tags: {yaml_list(["medical-research", "prediabetes", "lifestyle"])}
         thumbnail: {THUMBNAIL}
         status: {status}
+        draft: {str(draft).lower()}
         ---
 
         > 本文是糖前卫士自动监测国际期刊 RSS 后生成的科普草稿，仅用于健康教育，不构成诊断、治疗或用药建议。任何医疗决定请咨询合格医生或营养专业人士。
@@ -499,6 +505,7 @@ def article_to_mdx(item: FeedItem, article: dict[str, Any], status: str) -> str:
         - Published or RSS date: {item.published_at}
         """
     )
+    return re.sub(r"(?m)^ {8}", "", content).lstrip()
 
 
 def load_state() -> dict[str, Any]:
@@ -515,13 +522,19 @@ def save_state(state: dict[str, Any]) -> None:
     )
 
 
-def write_article(item: FeedItem, item_id: str, article: dict[str, Any], status: str) -> Path:
+def write_article(
+    item: FeedItem,
+    item_id: str,
+    article: dict[str, Any],
+    status: str,
+    draft: bool,
+) -> Path:
     slug = slugify(item.title, item_id)
     post_dir = CONTENT_ROOT / slug
     post_dir.mkdir(parents=True, exist_ok=True)
     post_path = post_dir / "en.mdx"
     if not post_path.exists():
-        post_path.write_text(article_to_mdx(item, article, status), encoding="utf-8")
+        post_path.write_text(article_to_mdx(item, article, status, draft), encoding="utf-8")
     return post_path
 
 
@@ -567,12 +580,18 @@ def run(args: argparse.Namespace) -> int:
                 continue
 
             prompt = build_prompt(item, matched)
-            article = call_openai(prompt) or fallback_article(item, matched)
+            article = call_openai(prompt)
+            if article is None and args.require_openai:
+                raise RuntimeError(
+                    "OPENAI_API_KEY is required and generation failed. "
+                    "No fallback article was written."
+                )
+            article = article or fallback_article(item, matched)
             if args.dry_run:
                 print(f"Would create score={score}: {item.title}")
                 continue
 
-            path = write_article(item, item_id, article, args.status)
+            path = write_article(item, item_id, article, args.status, args.draft)
             created.append(path)
             state["items"][item_id]["generated"] = True
             state["items"][item_id]["path"] = str(path.relative_to(REPO_ROOT))
@@ -590,6 +609,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--limit-per-feed", type=int, default=15)
     parser.add_argument("--min-score", type=int, default=8)
     parser.add_argument("--status", choices=("draft", "published"), default="published")
+    parser.add_argument("--draft", action=argparse.BooleanOptionalAction, default=True)
+    parser.add_argument("--require-openai", action="store_true")
     parser.add_argument("--sleep", type=float, default=0.25)
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
