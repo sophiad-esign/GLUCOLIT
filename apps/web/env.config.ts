@@ -2,15 +2,45 @@ import { defineEnv } from "envin";
 import { vercel } from "envin/presets/zod";
 import * as z from "zod";
 
-import { preset as api } from "@workspace/api/env";
-import { preset as i18n } from "@workspace/i18n/env";
-import { envConfig, NodeEnv } from "@workspace/shared/constants";
-import { castStringToBool } from "@workspace/shared/schema";
-import { ThemeColor, ThemeMode } from "@workspace/ui";
+const NodeEnv = {
+  DEVELOPMENT: "development",
+  PRODUCTION: "production",
+  TEST: "test",
+} as const;
+
+const ThemeMode = {
+  SYSTEM: "system",
+  LIGHT: "light",
+  DARK: "dark",
+} as const;
+
+const ThemeColor = {
+  ORANGE: "orange",
+  ROSE: "rose",
+  RED: "red",
+  YELLOW: "yellow",
+  GRAY: "gray",
+  STONE: "stone",
+  GREEN: "green",
+  BLUE: "blue",
+  VIOLET: "violet",
+} as const;
+
+const castStringToBool = z
+  .union([
+    z.boolean(),
+    z
+      .string()
+      .transform((value) => ["1", "true", "yes"].includes(value.toLowerCase())),
+  ])
+  .pipe(z.boolean());
 
 export default defineEnv({
-  ...envConfig,
-  extends: [vercel, api, i18n],
+  skip:
+    (!!process.env.SKIP_ENV_VALIDATION &&
+      ["1", "true"].includes(process.env.SKIP_ENV_VALIDATION)) ||
+    ["postinstall", "lint"].includes(process.env.npm_lifecycle_event ?? ""),
+  extends: [vercel],
   shared: {
     NODE_ENV: z.enum(NodeEnv).default(NodeEnv.DEVELOPMENT),
   },
@@ -20,6 +50,7 @@ export default defineEnv({
    */
   server: {
     CONTACT_EMAIL: z.email().optional().default("hello@glucolit.vercel.app"),
+    DEFAULT_LOCALE: z.string().optional().default("en"),
   },
 
   /**
@@ -52,6 +83,7 @@ export default defineEnv({
    */
   env: {
     ...process.env,
+    DEFAULT_LOCALE: process.env.DEFAULT_LOCALE,
     NEXT_PUBLIC_PRODUCT_NAME: process.env.NEXT_PUBLIC_PRODUCT_NAME,
     NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL,
     NEXT_PUBLIC_DEFAULT_LOCALE: process.env.NEXT_PUBLIC_DEFAULT_LOCALE,
