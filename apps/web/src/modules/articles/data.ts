@@ -34,6 +34,8 @@ export type Article = {
   originalUrl?: string;
   publishedAt: Date;
   publishedAtLabel: string;
+  draft: boolean;
+  contentPath: string;
   tags: string[];
   categoryLabels: string[];
 };
@@ -178,6 +180,8 @@ const toArticle = (
     originalUrl,
     publishedAt: item.publishedAt,
     publishedAtLabel: dayjs(item.publishedAt).format("YYYY-MM-DD"),
+    draft: item.draft,
+    contentPath: `packages/cms/src/collections/blog/content/${item.slug}/en.mdx`,
     tags: item.tags,
     categoryLabels: inferCategoryLabels(textForLabels, item.tags),
   };
@@ -228,3 +232,16 @@ export const getPublishedArticleBySlug = (slug: string) => {
 
 export const getAllPublishedArticleSlugs = () =>
   getPublishedArticles().map((article) => ({ slug: article.slug }));
+
+export const getReviewArticles = () => {
+  const { items } = getContentItems({
+    collection: CollectionType.BLOG,
+    status: ContentStatus.PUBLISHED,
+    sortBy: "publishedAt",
+    sortOrder: SortOrder.DESCENDING,
+    locale: "en",
+    includeDrafts: true,
+  });
+
+  return items.filter((item) => isResearchArticle(item.tags)).map(toArticle);
+};

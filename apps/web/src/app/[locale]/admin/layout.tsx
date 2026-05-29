@@ -38,6 +38,12 @@ const menu = [
         exact: false,
         icon: <Icons.HandCoins />,
       },
+      {
+        title: "articles",
+        href: pathsConfig.admin.articles.index,
+        exact: false,
+        icon: <Icons.BookOpen />,
+      },
     ],
   },
 ];
