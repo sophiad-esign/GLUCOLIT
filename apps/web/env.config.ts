@@ -2,7 +2,6 @@ import { defineEnv } from "envin";
 import { vercel } from "envin/presets/zod";
 import * as z from "zod";
 
-import { preset as analytics } from "@workspace/analytics-web/env";
 import { preset as api } from "@workspace/api/env";
 import { preset as i18n } from "@workspace/i18n/env";
 import { envConfig, NodeEnv } from "@workspace/shared/constants";
@@ -11,7 +10,7 @@ import { ThemeColor, ThemeMode } from "@workspace/ui";
 
 export default defineEnv({
   ...envConfig,
-  extends: [vercel, api, analytics, i18n],
+  extends: [vercel, api, i18n],
   shared: {
     NODE_ENV: z.enum(NodeEnv).default(NodeEnv.DEVELOPMENT),
   },
