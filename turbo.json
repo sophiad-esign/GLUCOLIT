@@ -32,6 +32,11 @@
   },
   "globalEnv": ["DATABASE_URL", "PRODUCT_NAME", "URL", "DEFAULT_LOCALE"],
   "globalPassThroughEnv": [
+    "GITHUB_CONTENT_BRANCH",
+    "GITHUB_CONTENT_TOKEN",
+    "GITHUB_REPOSITORY",
+    "GITHUB_REPOSITORY_OWNER",
+    "GITHUB_TOKEN",
     "NODE_ENV",
     "SKIP_ENV_VALIDATION",
     "npm_lifecycle_event"

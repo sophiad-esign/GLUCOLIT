@@ -44,6 +44,12 @@ const menu = [
         exact: false,
         icon: <Icons.BookOpen />,
       },
+      {
+        title: "drafts",
+        href: pathsConfig.admin.drafts.index,
+        exact: false,
+        icon: <Icons.ClockFading />,
+      },
     ],
   },
 ];
