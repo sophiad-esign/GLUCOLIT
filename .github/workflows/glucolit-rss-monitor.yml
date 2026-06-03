@@ -1,4 +1,5 @@
 name: GLUCOLIT / RSS monitor
+run-name: GLUCOLIT daily literature update
 
 on:
   workflow_dispatch:
@@ -9,10 +10,15 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: glucolit-rss-monitor
+  cancel-in-progress: false
+
 jobs:
   monitor:
     name: Fetch research RSS feeds
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -25,11 +31,31 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Verify OpenAI secret
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "OPENAI_API_KEY is missing. Add it in GitHub repository Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
       - name: Generate GLUCOLIT research posts
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
         run: python scripts/glucolit_rss_monitor.py --status published --draft --min-score 8 --require-openai
+
+      - name: Write run summary
+        if: always()
+        run: |
+          {
+            echo "## GLUCOLIT RSS monitor"
+            echo ""
+            echo "- Schedule: daily at 09:15 Los Angeles time during PDT"
+            echo "- Output: MDX drafts under \`packages/cms/src/collections/blog/content\`"
+            echo "- Public safety: generated posts keep \`draft: true\` until manually reviewed"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit generated posts
         run: |

@@ -23,6 +23,7 @@ import { getMetadata } from "~/lib/metadata";
 import { getReviewArticles } from "~/modules/articles/data";
 
 import { publishDraftAction } from "./actions";
+import { AutoUpdateStatus } from "./auto-update-status";
 
 export const generateMetadata = getMetadata({
   title: "待审核文章草稿",
@@ -64,6 +65,8 @@ export default async function AdminDraftsPage({
           </div>
         </div>
       </section>
+
+      <AutoUpdateStatus canPublish={canPublish} />
 
       {published ? (
         <div className="flex items-start gap-3 rounded-xl border border-green-200 bg-green-50 p-4 text-sm leading-7 text-green-900 dark:border-green-900/60 dark:bg-green-950/30 dark:text-green-100">
