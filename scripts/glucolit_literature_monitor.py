@@ -136,7 +136,17 @@ ARTICLE_SCHEMA = {
     ],
 }
 
-OPENAI_ERRORS: list[str] = []
+LLM_ERRORS: list[str] = []
+
+
+@dataclass
+class LLMConfig:
+    provider: str
+    api_key: str
+    base_url: str
+    model: str
+    supports_responses: bool
+    strict_json_schema: bool
 
 
 @dataclass
@@ -416,14 +426,50 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
     ).strip()
 
 
-def call_openai(prompt: str) -> dict[str, Any] | None:
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        OPENAI_ERRORS.append("OPENAI_API_KEY is missing")
-        return None
+def llm_config() -> LLMConfig | None:
+    kimi_key = os.getenv("KIMI_API_KEY")
+    if kimi_key:
+        return LLMConfig(
+            provider="Kimi",
+            api_key=kimi_key,
+            base_url=os.getenv("KIMI_BASE_URL", "https://api.moonshot.ai/v1").rstrip("/"),
+            model=os.getenv("KIMI_MODEL", "kimi-k2.6"),
+            supports_responses=False,
+            strict_json_schema=False,
+        )
+
+    openai_key = os.getenv("OPENAI_API_KEY")
+    if openai_key:
+        return LLMConfig(
+            provider="OpenAI",
+            api_key=openai_key,
+            base_url="https://api.openai.com/v1",
+            model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+            supports_responses=True,
+            strict_json_schema=True,
+        )
+
+    LLM_ERRORS.append("KIMI_API_KEY or OPENAI_API_KEY is missing")
+    return None
+
+
+def chat_response_format(config: LLMConfig) -> dict[str, Any]:
+    if config.strict_json_schema:
+        return {
+            "type": "json_schema",
+            "json_schema": {
+                "name": "glucolit_article",
+                "strict": True,
+                "schema": ARTICLE_SCHEMA,
+            },
+        }
+    return {"type": "json_object"}
+
+
+def call_chat_completion(config: LLMConfig, prompt: str) -> dict[str, Any] | None:
 
     payload = {
-        "model": os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+        "model": config.model,
         "messages": [
             {
                 "role": "system",
@@ -435,20 +481,13 @@ def call_openai(prompt: str) -> dict[str, Any] | None:
             {"role": "user", "content": prompt},
         ],
         "max_tokens": 2200,
-        "response_format": {
-            "type": "json_schema",
-            "json_schema": {
-                "name": "glucolit_article",
-                "strict": True,
-                "schema": ARTICLE_SCHEMA,
-            },
-        },
+        "response_format": chat_response_format(config),
     }
     request = urllib.request.Request(
-        "https://api.openai.com/v1/chat/completions",
+        f"{config.base_url}/chat/completions",
         data=json.dumps(payload).encode("utf-8"),
         headers={
-            "Authorization": f"Bearer {api_key}",
+            "Authorization": f"Bearer {config.api_key}",
             "Content-Type": "application/json",
         },
         method="POST",
@@ -458,14 +497,14 @@ def call_openai(prompt: str) -> dict[str, Any] | None:
             data = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")[:1200]
-        message = f"HTTP {exc.code}: {body}"
-        OPENAI_ERRORS.append(message)
-        print(f"OpenAI generation failed: {message}")
+        message = f"{config.provider} chat HTTP {exc.code}: {body}"
+        LLM_ERRORS.append(message)
+        print(f"LLM generation failed: {message}")
         return None
     except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-        message = str(exc)
-        OPENAI_ERRORS.append(message)
-        print(f"OpenAI generation failed: {message}")
+        message = f"{config.provider} chat: {exc}"
+        LLM_ERRORS.append(message)
+        print(f"LLM generation failed: {message}")
         return None
 
     output_text = (
@@ -476,18 +515,17 @@ def call_openai(prompt: str) -> dict[str, Any] | None:
     try:
         return json.loads(output_text)
     except (TypeError, json.JSONDecodeError):
-        OPENAI_ERRORS.append("OpenAI generation returned non-JSON output")
-        print("OpenAI generation returned non-JSON output.")
+        LLM_ERRORS.append(f"{config.provider} chat returned non-JSON output")
+        print("LLM generation returned non-JSON output.")
         return None
 
 
-def call_openai_responses_fallback(prompt: str) -> dict[str, Any] | None:
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
+def call_openai_responses_fallback(config: LLMConfig, prompt: str) -> dict[str, Any] | None:
+    if not config.supports_responses:
         return None
 
     payload = {
-        "model": os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+        "model": config.model,
         "input": prompt,
         "max_output_tokens": 2200,
         "text": {
@@ -500,10 +538,10 @@ def call_openai_responses_fallback(prompt: str) -> dict[str, Any] | None:
         },
     }
     request = urllib.request.Request(
-        "https://api.openai.com/v1/responses",
+        f"{config.base_url}/responses",
         data=json.dumps(payload).encode("utf-8"),
         headers={
-            "Authorization": f"Bearer {api_key}",
+            "Authorization": f"Bearer {config.api_key}",
             "Content-Type": "application/json",
         },
         method="POST",
@@ -514,13 +552,13 @@ def call_openai_responses_fallback(prompt: str) -> dict[str, Any] | None:
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")[:1200]
         message = f"Responses fallback HTTP {exc.code}: {body}"
-        OPENAI_ERRORS.append(message)
-        print(f"OpenAI generation failed: {message}")
+        LLM_ERRORS.append(message)
+        print(f"LLM generation failed: {message}")
         return None
     except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
         message = f"Responses fallback: {exc}"
-        OPENAI_ERRORS.append(message)
-        print(f"OpenAI generation failed: {message}")
+        LLM_ERRORS.append(message)
+        print(f"LLM generation failed: {message}")
         return None
 
     output_text = data.get("output_text")
@@ -534,16 +572,19 @@ def call_openai_responses_fallback(prompt: str) -> dict[str, Any] | None:
     try:
         return json.loads(output_text)
     except (TypeError, json.JSONDecodeError):
-        OPENAI_ERRORS.append("Responses fallback returned non-JSON output")
-        print("OpenAI generation returned non-JSON output.")
+        LLM_ERRORS.append("Responses fallback returned non-JSON output")
+        print("LLM generation returned non-JSON output.")
         return None
 
 
 def generate_article(prompt: str) -> dict[str, Any] | None:
-    article = call_openai(prompt)
+    config = llm_config()
+    if config is None:
+        return None
+    article = call_chat_completion(config, prompt)
     if article is not None:
         return article
-    return call_openai_responses_fallback(prompt)
+    return call_openai_responses_fallback(config, prompt)
 
 
 def is_valid_article(article: dict[str, Any] | None) -> bool:
@@ -683,8 +724,8 @@ def candidate_papers(limit_per_journal: int) -> list[PaperItem]:
 
 
 def run(args: argparse.Namespace) -> int:
-    if args.require_openai and not os.getenv("OPENAI_API_KEY"):
-        print("OPENAI_API_KEY is missing.")
+    if args.require_openai and not (os.getenv("KIMI_API_KEY") or os.getenv("OPENAI_API_KEY")):
+        print("KIMI_API_KEY or OPENAI_API_KEY is missing.")
         return 1
 
     state = load_state()
@@ -788,13 +829,13 @@ def run(args: argparse.Namespace) -> int:
                 f"- Skipped because OpenAI returned no article: {skipped_openai}\n"
                 f"- Skipped by article quality gate: {skipped_quality}\n"
             )
-            if OPENAI_ERRORS:
-                summary_file.write("\n### OpenAI error samples\n\n")
-                for error in OPENAI_ERRORS[:3]:
+            if LLM_ERRORS:
+                summary_file.write("\n### LLM error samples\n\n")
+                for error in LLM_ERRORS[:3]:
                     summary_file.write(f"- `{error[:500]}`\n")
     if skipped_openai > 0 and reported_created == 0:
         print(
-            "OpenAI generation failed for every eligible candidate. "
+            "LLM generation failed for every eligible candidate. "
             "Failing the workflow so the error is visible."
         )
         return 1
