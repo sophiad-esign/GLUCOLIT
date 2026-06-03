@@ -13,8 +13,21 @@ import { Icons } from "@workspace/ui-web/icons";
 const feeds = [
   "Lancet Diabetes & Endocrinology",
   "Nature Metabolism",
-  "Diabetes Care (ADA)",
-  "PubMed prediabetes",
+  "Nature Medicine",
+  "Cell Metabolism",
+  "Diabetes Care",
+  "Diabetes",
+  "Diabetologia",
+  "JAMA",
+  "JAMA Internal Medicine",
+  "NEJM",
+  "BMJ",
+  "Annals of Internal Medicine",
+  "Circulation",
+  "American Journal of Clinical Nutrition",
+  "Obesity",
+  "BMC Medicine",
+  "PLOS Medicine",
 ];
 
 export function AutoUpdateStatus({ canPublish }: { canPublish: boolean }) {
@@ -28,8 +41,9 @@ export function AutoUpdateStatus({ canPublish }: { canPublish: boolean }) {
               Daily literature update
             </CardTitle>
             <CardDescription>
-              GitHub Actions fetches research feeds every day, creates review
-              drafts, and commits them back to GitHub.
+              GitHub Actions searches PubMed every day, enriches records with
+              Europe PMC and Unpaywall, creates review drafts, and commits them
+              back to GitHub.
             </CardDescription>
           </div>
           <Badge variant="secondary">
@@ -49,8 +63,9 @@ export function AutoUpdateStatus({ canPublish }: { canPublish: boolean }) {
           <div className="text-sm font-semibold">Safety rule</div>
           <p className="text-muted-foreground mt-2 text-sm leading-7">
             New posts are always generated as draft: true, with a daily cap of 2
-            new drafts. They only become public after manual review and
-            one-click publishing.
+            new drafts. The monitor uses abstracts or legal open-access links,
+            never scraped paywalled full text. Posts only become public after
+            manual review and one-click publishing.
           </p>
         </div>
 
@@ -66,7 +81,7 @@ export function AutoUpdateStatus({ canPublish }: { canPublish: boolean }) {
         <div className="rounded-xl border p-4 lg:col-span-3">
           <div className="mb-3 flex items-center gap-2 text-sm font-semibold">
             <Icons.BookOpen className="size-4" />
-            Research sources
+            Journal sources
           </div>
           <div className="flex flex-wrap gap-2">
             {feeds.map((feed) => (
