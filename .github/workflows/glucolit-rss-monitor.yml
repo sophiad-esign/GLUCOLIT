@@ -44,7 +44,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
-        run: python scripts/glucolit_rss_monitor.py --status published --draft --min-score 8 --require-openai
+        run: python scripts/glucolit_rss_monitor.py --status published --draft --min-score 8 --max-created 2 --require-openai
 
       - name: Write run summary
         if: always()
@@ -53,6 +53,7 @@ jobs:
             echo "## GLUCOLIT RSS monitor"
             echo ""
             echo "- Schedule: daily at 09:15 Los Angeles time during PDT"
+            echo "- Daily limit: up to 2 new draft articles"
             echo "- Output: MDX drafts under \`packages/cms/src/collections/blog/content\`"
             echo "- Public safety: generated posts keep \`draft: true\` until manually reviewed"
           } >> "$GITHUB_STEP_SUMMARY"

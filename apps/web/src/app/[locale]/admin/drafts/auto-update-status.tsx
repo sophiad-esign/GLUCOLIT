@@ -32,7 +32,9 @@ export function AutoUpdateStatus({ canPublish }: { canPublish: boolean }) {
               drafts, and commits them back to GitHub.
             </CardDescription>
           </div>
-          <Badge variant="secondary">Daily 09:15 Los Angeles</Badge>
+          <Badge variant="secondary">
+            Daily 09:15 Los Angeles, max 2 drafts
+          </Badge>
         </div>
       </CardHeader>
       <CardContent className="grid gap-4 lg:grid-cols-3">
@@ -46,8 +48,9 @@ export function AutoUpdateStatus({ canPublish }: { canPublish: boolean }) {
         <div className="rounded-xl border bg-slate-50 p-4 dark:bg-slate-900">
           <div className="text-sm font-semibold">Safety rule</div>
           <p className="text-muted-foreground mt-2 text-sm leading-7">
-            New posts are always generated as draft: true. They only become
-            public after manual review and one-click publishing.
+            New posts are always generated as draft: true, with a daily cap of 2
+            new drafts. They only become public after manual review and
+            one-click publishing.
           </p>
         </div>
 

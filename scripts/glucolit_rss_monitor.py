@@ -542,9 +542,14 @@ def run(args: argparse.Namespace) -> int:
     state = load_state()
     min_score = args.min_score
     created: list[Path] = []
+    created_count = 0
     scanned = 0
 
     for source, url in RSS_FEEDS.items():
+        if args.max_created is not None and created_count >= args.max_created:
+            print(f"Reached max-created={args.max_created}; stopping.")
+            break
+
         print(f"Fetching {source}: {url}")
         try:
             items = parse_feed(source, fetch_text(url))
@@ -558,6 +563,10 @@ def run(args: argparse.Namespace) -> int:
                 continue
 
         for item in items[: args.limit_per_feed]:
+            if args.max_created is not None and created_count >= args.max_created:
+                print(f"Reached max-created={args.max_created}; stopping.")
+                break
+
             scanned += 1
             item_id = stable_id(item.link, item.title)
             if item_id in state["items"]:
@@ -589,10 +598,12 @@ def run(args: argparse.Namespace) -> int:
             article = article or fallback_article(item, matched)
             if args.dry_run:
                 print(f"Would create score={score}: {item.title}")
+                created_count += 1
                 continue
 
             path = write_article(item, item_id, article, args.status, args.draft)
             created.append(path)
+            created_count += 1
             state["items"][item_id]["generated"] = True
             state["items"][item_id]["path"] = str(path.relative_to(REPO_ROOT))
             print(f"Created {path.relative_to(REPO_ROOT)}")
@@ -607,6 +618,12 @@ def run(args: argparse.Namespace) -> int:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--limit-per-feed", type=int, default=15)
+    parser.add_argument(
+        "--max-created",
+        type=int,
+        default=None,
+        help="Maximum number of new MDX drafts to create in one run.",
+    )
     parser.add_argument("--min-score", type=int, default=8)
     parser.add_argument("--status", choices=("draft", "published"), default="published")
     parser.add_argument("--draft", action=argparse.BooleanOptionalAction, default=True)
