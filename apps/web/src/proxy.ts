@@ -1,4 +1,5 @@
 import { i18nRouter } from "next-i18n-router";
+import { NextResponse } from "next/server";
 
 import { config as i18nConfig } from "@workspace/i18n";
 import { getLocaleFromRequest } from "@workspace/i18n/server";
@@ -9,14 +10,33 @@ import env from "../env.config";
 
 import type { NextRequest } from "next/server";
 
-export const proxy = (request: NextRequest) =>
-  i18nRouter(request, {
+const disabledAuthPaths = new Set([
+  "/auth/login",
+  "/auth/register",
+  "/auth/password/forgot",
+]);
+
+const stripLocale = (pathname: string) => {
+  const locale = i18nConfig.locales.find(
+    (value) => pathname === `/${value}` || pathname.startsWith(`/${value}/`),
+  );
+
+  return locale ? pathname.replace(`/${locale}`, "") || "/" : pathname;
+};
+
+export const proxy = (request: NextRequest) => {
+  if (disabledAuthPaths.has(stripLocale(request.nextUrl.pathname))) {
+    return NextResponse.redirect(new URL("/admin/drafts", request.url));
+  }
+
+  return i18nRouter(request, {
     locales: i18nConfig.locales,
     defaultLocale:
       appConfig.locale || env.DEFAULT_LOCALE || i18nConfig.defaultLocale,
     localeCookie: i18nConfig.cookie,
     localeDetector: getLocaleFromRequest,
   });
+};
 
 export const config = {
   matcher: "/((?!api|static|.*\\..*|_next).*)",
