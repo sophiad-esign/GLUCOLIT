@@ -107,6 +107,37 @@ NEGATIVE_KEYWORDS = {
     "nephropathy": -2,
 }
 
+ARTICLE_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "properties": {
+        "title_en": {"type": "string"},
+        "title_zh": {"type": "string"},
+        "description_en": {"type": "string"},
+        "description_zh": {"type": "string"},
+        "plain_en": {"type": "string"},
+        "plain_zh": {"type": "string"},
+        "takeaways_en": {"type": "array", "items": {"type": "string"}},
+        "takeaways_zh": {"type": "array", "items": {"type": "string"}},
+        "why_relevant_en": {"type": "string"},
+        "why_relevant_zh": {"type": "string"},
+    },
+    "required": [
+        "title_en",
+        "title_zh",
+        "description_en",
+        "description_zh",
+        "plain_en",
+        "plain_zh",
+        "takeaways_en",
+        "takeaways_zh",
+        "why_relevant_en",
+        "why_relevant_zh",
+    ],
+}
+
+OPENAI_ERRORS: list[str] = []
+
 
 @dataclass
 class PaperItem:
@@ -388,6 +419,71 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
 def call_openai(prompt: str) -> dict[str, Any] | None:
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
+        OPENAI_ERRORS.append("OPENAI_API_KEY is missing")
+        return None
+
+    payload = {
+        "model": os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
+        "messages": [
+            {
+                "role": "system",
+                "content": (
+                    "You are a precise bilingual medical research explainer. "
+                    "Return only JSON that matches the requested schema."
+                ),
+            },
+            {"role": "user", "content": prompt},
+        ],
+        "max_tokens": 2200,
+        "response_format": {
+            "type": "json_schema",
+            "json_schema": {
+                "name": "glucolit_article",
+                "strict": True,
+                "schema": ARTICLE_SCHEMA,
+            },
+        },
+    }
+    request = urllib.request.Request(
+        "https://api.openai.com/v1/chat/completions",
+        data=json.dumps(payload).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=120) as response:
+            data = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")[:1200]
+        message = f"HTTP {exc.code}: {body}"
+        OPENAI_ERRORS.append(message)
+        print(f"OpenAI generation failed: {message}")
+        return None
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+        message = str(exc)
+        OPENAI_ERRORS.append(message)
+        print(f"OpenAI generation failed: {message}")
+        return None
+
+    output_text = (
+        data.get("choices", [{}])[0]
+        .get("message", {})
+        .get("content", "")
+    )
+    try:
+        return json.loads(output_text)
+    except (TypeError, json.JSONDecodeError):
+        OPENAI_ERRORS.append("OpenAI generation returned non-JSON output")
+        print("OpenAI generation returned non-JSON output.")
+        return None
+
+
+def call_openai_responses_fallback(prompt: str) -> dict[str, Any] | None:
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
         return None
 
     payload = {
@@ -398,34 +494,8 @@ def call_openai(prompt: str) -> dict[str, Any] | None:
             "format": {
                 "type": "json_schema",
                 "name": "glucolit_article",
-                "schema": {
-                    "type": "object",
-                    "additionalProperties": False,
-                    "properties": {
-                        "title_en": {"type": "string"},
-                        "title_zh": {"type": "string"},
-                        "description_en": {"type": "string"},
-                        "description_zh": {"type": "string"},
-                        "plain_en": {"type": "string"},
-                        "plain_zh": {"type": "string"},
-                        "takeaways_en": {"type": "array", "items": {"type": "string"}},
-                        "takeaways_zh": {"type": "array", "items": {"type": "string"}},
-                        "why_relevant_en": {"type": "string"},
-                        "why_relevant_zh": {"type": "string"},
-                    },
-                    "required": [
-                        "title_en",
-                        "title_zh",
-                        "description_en",
-                        "description_zh",
-                        "plain_en",
-                        "plain_zh",
-                        "takeaways_en",
-                        "takeaways_zh",
-                        "why_relevant_en",
-                        "why_relevant_zh",
-                    ],
-                },
+                "strict": True,
+                "schema": ARTICLE_SCHEMA,
             }
         },
     }
@@ -441,8 +511,16 @@ def call_openai(prompt: str) -> dict[str, Any] | None:
     try:
         with urllib.request.urlopen(request, timeout=120) as response:
             data = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode("utf-8", errors="replace")[:1200]
+        message = f"Responses fallback HTTP {exc.code}: {body}"
+        OPENAI_ERRORS.append(message)
+        print(f"OpenAI generation failed: {message}")
+        return None
     except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
-        print(f"OpenAI generation failed: {exc}")
+        message = f"Responses fallback: {exc}"
+        OPENAI_ERRORS.append(message)
+        print(f"OpenAI generation failed: {message}")
         return None
 
     output_text = data.get("output_text")
@@ -456,8 +534,16 @@ def call_openai(prompt: str) -> dict[str, Any] | None:
     try:
         return json.loads(output_text)
     except (TypeError, json.JSONDecodeError):
+        OPENAI_ERRORS.append("Responses fallback returned non-JSON output")
         print("OpenAI generation returned non-JSON output.")
         return None
+
+
+def generate_article(prompt: str) -> dict[str, Any] | None:
+    article = call_openai(prompt)
+    if article is not None:
+        return article
+    return call_openai_responses_fallback(prompt)
 
 
 def is_valid_article(article: dict[str, Any] | None) -> bool:
@@ -661,7 +747,7 @@ def run(args: argparse.Namespace) -> int:
             created_count += 1
             continue
 
-        article = call_openai(build_prompt(paper, matched))
+        article = generate_article(build_prompt(paper, matched))
         if article is None:
             print(f"Skip because OpenAI did not return an article: {paper.title}")
             state["items"][item_id]["skip_reason"] = "OpenAI did not return an article"
@@ -702,6 +788,16 @@ def run(args: argparse.Namespace) -> int:
                 f"- Skipped because OpenAI returned no article: {skipped_openai}\n"
                 f"- Skipped by article quality gate: {skipped_quality}\n"
             )
+            if OPENAI_ERRORS:
+                summary_file.write("\n### OpenAI error samples\n\n")
+                for error in OPENAI_ERRORS[:3]:
+                    summary_file.write(f"- `{error[:500]}`\n")
+    if skipped_openai > 0 and reported_created == 0:
+        print(
+            "OpenAI generation failed for every eligible candidate. "
+            "Failing the workflow so the error is visible."
+        )
+        return 1
     return 0
 
 
