@@ -18,6 +18,7 @@ import os
 import re
 import textwrap
 import time
+import http.cookiejar
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -33,7 +34,7 @@ CONTENT_ROOT = REPO_ROOT / "packages/cms/src/collections/blog/content"
 STATE_PATH = REPO_ROOT / "data/glucolit-rss-state.json"
 
 RSS_FEEDS = {
-    "Lancet Diabetes & Endocrinology": "https://www.thelancet.com/rss/journal/landia",
+    "Lancet Diabetes & Endocrinology": "https://www.thelancet.com/rssfeed/landia_current.xml",
     "Nature Metabolism": "https://www.nature.com/natmetab.rss",
     "Diabetes Care (ADA)": "https://diabetesjournals.org/care/rss",
     "PubMed prediabetes": "https://pubmed.ncbi.nlm.nih.gov/rss/search/1nP-1wF1RzGJ8v8/?limit=15&utm_campaign=pubmed-2&fc=20250601",
@@ -112,11 +113,17 @@ def fetch_text(url: str, timeout: int = 30) -> str:
     request = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "GLUCOLIT RSS monitor/1.0 (+https://glucolit.vercel.app)",
+            "User-Agent": (
+                "Mozilla/5.0 (compatible; GLUCOLIT RSS monitor/1.0; "
+                "+https://glucolit.vercel.app)"
+            ),
             "Accept": "application/rss+xml, application/atom+xml, text/xml, */*",
         },
     )
-    with urllib.request.urlopen(request, timeout=timeout) as response:
+    opener = urllib.request.build_opener(
+        urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar())
+    )
+    with opener.open(request, timeout=timeout) as response:
         return response.read().decode("utf-8", errors="replace")
 
 
@@ -171,7 +178,11 @@ def parse_date(value: str) -> str:
 
 def parse_feed(source: str, xml_text: str) -> list[FeedItem]:
     root = ET.fromstring(xml_text)
-    candidates = root.findall(".//item") or root.findall(".//{http://www.w3.org/2005/Atom}entry")
+    candidates = [
+        node
+        for node in root.iter()
+        if node.tag.split("}", 1)[-1].lower() in {"item", "entry"}
+    ]
     items: list[FeedItem] = []
     for node in candidates:
         title = child_text(node, ("title",))
@@ -615,6 +626,10 @@ def run(args: argparse.Namespace) -> int:
     created: list[Path] = []
     created_count = 0
     scanned = 0
+    failed_feeds = 0
+    skipped_score = 0
+    skipped_openai = 0
+    skipped_quality = 0
 
     for source, url in RSS_FEEDS.items():
         if args.max_created is not None and created_count >= args.max_created:
@@ -631,6 +646,7 @@ def run(args: argparse.Namespace) -> int:
                 items = fetch_pubmed_fallback(source, args.limit_per_feed)
             except Exception as fallback_exc:  # noqa: BLE001
                 print(f"Failed PubMed fallback for {source}: {fallback_exc}")
+                failed_feeds += 1
                 continue
 
         for item in items[: args.limit_per_feed]:
@@ -640,10 +656,12 @@ def run(args: argparse.Namespace) -> int:
 
             scanned += 1
             item_id = stable_id(item.link, item.title)
-            if item_id in state["items"]:
+            existing = state["items"].get(item_id)
+            if existing and existing.get("generated"):
                 continue
 
             score, matched = relevance_score(item.title, item.summary)
+            attempts = int(existing.get("attempts", 0)) if existing else 0
             state["items"][item_id] = {
                 "title": item.title,
                 "source": item.source,
@@ -651,27 +669,36 @@ def run(args: argparse.Namespace) -> int:
                 "published_at": item.published_at,
                 "score": score,
                 "matched": matched,
-                "created_at": dt.datetime.now(dt.UTC).isoformat(),
+                "created_at": existing.get("created_at") if existing else dt.datetime.now(dt.UTC).isoformat(),
+                "last_seen_at": dt.datetime.now(dt.UTC).isoformat(),
+                "attempts": attempts,
                 "generated": False,
             }
 
             if score < min_score:
                 print(f"Skip score={score}: {item.title}")
+                state["items"][item_id]["skip_reason"] = f"score {score} below min-score {min_score}"
+                skipped_score += 1
                 continue
 
             prompt = build_prompt(item, matched)
+            state["items"][item_id]["attempts"] = attempts + 1
             article = call_openai(prompt)
             if article is None:
                 print(
                     "Skip because OpenAI did not return an article: "
                     f"{item.title}"
                 )
+                state["items"][item_id]["skip_reason"] = "OpenAI did not return an article"
+                skipped_openai += 1
                 continue
             if not is_valid_article(article):
                 print(
                     "Skip incomplete generated article. No draft was written: "
                     f"{item.title}"
                 )
+                state["items"][item_id]["skip_reason"] = "generated article failed quality gate"
+                skipped_quality += 1
                 continue
             if args.dry_run:
                 print(f"Would create score={score}: {item.title}")
@@ -683,12 +710,25 @@ def run(args: argparse.Namespace) -> int:
             created_count += 1
             state["items"][item_id]["generated"] = True
             state["items"][item_id]["path"] = str(path.relative_to(REPO_ROOT))
+            state["items"][item_id].pop("skip_reason", None)
             print(f"Created {path.relative_to(REPO_ROOT)}")
             time.sleep(args.sleep)
 
     if not args.dry_run:
         save_state(state)
     print(f"Scanned {scanned} items, created {len(created)} article(s).")
+    summary_path = os.getenv("GITHUB_STEP_SUMMARY")
+    if summary_path:
+        with open(summary_path, "a", encoding="utf-8") as summary_file:
+            summary_file.write(
+                "\n### Run result\n\n"
+                f"- Scanned items: {scanned}\n"
+                f"- Created draft articles: {len(created)}\n"
+                f"- Skipped by relevance score: {skipped_score}\n"
+                f"- Skipped because OpenAI returned no article: {skipped_openai}\n"
+                f"- Skipped by article quality gate: {skipped_quality}\n"
+                f"- Feeds unavailable after fallback: {failed_feeds}\n"
+            )
     return 0
 
 
