@@ -113,7 +113,10 @@
         "prediabetes"
       ],
       "created_at": "2026-05-28T03:53:52.278551+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:07.020533+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 3 below min-score 8"
     },
     "6a1d10c9d60cd9e0": {
       "title": "Oral Insulin for Type 1 Diabetes Prevention.",
@@ -125,7 +128,10 @@
         "diabetes prevention"
       ],
       "created_at": "2026-05-28T03:54:21.803926+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:37.006424+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
     },
     "633dc0fa1e73e001": {
       "title": "Profiles of Social Determinants of Health and Change in Diabetes Status Among U.S. Hispanic/Latino Adults: HCHS/SOL, 2008-2024.",
@@ -137,7 +143,10 @@
         "prediabetes"
       ],
       "created_at": "2026-05-28T03:54:37.191917+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:55.741990+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 6 below min-score 8"
     },
     "48bf85af11230757": {
       "title": "Perinatal and long-term implications of diagnosing gestational diabetes mellitus using only fasting and one-hour post-load glucose concentrations: Secondary analysis of the GEMS trial and its five-year follow-up.",
@@ -254,7 +263,7 @@
     },
     "36132a6815c1fee5": {
       "title": "Progression to Diabetes by Adults With Prediabetes Who Use the National Diabetes Prevention Program: A Natural Experiment.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
+      "source": "PubMed prediabetes via PubMed (Diabetes care)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42227951/",
       "published_at": "2026-06-02",
       "score": 16,
@@ -264,7 +273,10 @@
         "lifestyle intervention"
       ],
       "created_at": "2026-06-03T08:53:57.989204+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:24.326433+00:00",
+      "attempts": 2,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "1241c3afeddbbd92": {
       "title": "Comment on Echouffo-Tcheugui et al. Is the Current Lifestyle Modification Approach to Diabetes Prevention in the U.S. a Success? Diabetes Care 2025;48:863-870.",
@@ -277,11 +289,14 @@
         "lifestyle modification"
       ],
       "created_at": "2026-06-03T08:54:04.240049+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:24:51.111945+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "787ac54855be75c3": {
       "title": "The Effectiveness of Diabetes Prevention Programs Delivered in Primary Care for Individuals With Prediabetes or at Risk of Developing Type 2 Diabetes: A Systematic Review and Meta-analysis.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
+      "source": "PubMed prediabetes via PubMed (Diabetes care)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42030121/",
       "published_at": "2026-06-01",
       "score": 35,
@@ -297,7 +312,10 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:54:10.779990+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:59.851971+00:00",
+      "attempts": 2,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "99706f7150cc4a09": {
       "title": "Insulin Hypersecretion and Increased Ectopic Fat in South Asian American Adolescents and Young Adults Compared With White and African American Peers: The CHARISMA Study.",
@@ -311,7 +329,10 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:54:17.100330+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:01.927934+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "c3f40e52ac4d2138": {
       "title": "Comparison of the Continuous Glucose Monitoring Profiles of Four Glucose-Lowering Medications in the GRADE Randomized Trial.",
@@ -326,7 +347,10 @@
         "continuous glucose"
       ],
       "created_at": "2026-06-03T08:54:22.288899+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:07.020601+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "6e0c406d713af574": {
       "title": "Effect of Semaglutide on Insulin Sensitivity and Cardiometabolic Risk Factors in Adolescents With Obesity: The STEP TEENS Study.",
@@ -341,7 +365,10 @@
         "glycemic"
       ],
       "created_at": "2026-06-03T08:54:26.884461+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:12.891398+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "e045ab1e69b1130f": {
       "title": "Renal Lipotoxicity: Mechanisms and Therapeutic Perspectives.",
@@ -355,7 +382,10 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:54:32.145548+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:18.768484+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "951f6b09c7bef6f8": {
       "title": "Subtypes of Type 2 Diabetes and Prediabetes: Mortality and Excess Life Lost in South Asians.",
@@ -370,7 +400,10 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:54:37.107151+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:25.392379+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "1085f0a438d75270": {
       "title": "Extending Sleep to Improve Glucose Metabolism in Adults With Short Sleep and Prediabetes: A Challenging Intervention.",
@@ -384,7 +417,10 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:54:42.815489+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:30.806720+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "f57856530eaebd7d": {
       "title": "Response to Comment on Abdul-Ghani et al. One-Hour Plasma Glucose Predicts the Progression From Normal Glucose Tolerance to Prediabetes. Diabetes Care 2025;48:1273-1279.",
@@ -397,7 +433,10 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:54:48.388661+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:37.006457+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "c4d1f1e3eef6c5cf": {
       "title": "Comment on Abdul-Ghani et al. One-Hour Plasma Glucose Predicts the Progression From Normal Glucose Tolerance to Prediabetes. Diabetes Care 2025;48:1273-1279.",
@@ -410,7 +449,10 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:54:53.563315+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:42.827265+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "f2b4d3e5084f4f0a": {
       "title": "Screening for Diabetes and Prediabetes in Cystic Fibrosis Using a Nonfasting 50-Gram 1-Hour Oral Glucose Challenge Test.",
@@ -424,7 +466,10 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:54:58.756227+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:48.030909+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "5a95ab4f09a9f61f": {
       "title": "Understanding barriers and facilitators of adherence to lifestyle changes in prediabetes: a qualitative study.",
@@ -438,7 +483,10 @@
         "exercise"
       ],
       "created_at": "2026-06-03T08:55:04.361907+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:25:56.234574+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "3bcce78c62bd51fa": {
       "title": "Prevalence and factors associated with isolated systolic hypertension among middle-aged adults and older Filipinos: a population-based study.",
@@ -453,7 +501,10 @@
         "nutrition"
       ],
       "created_at": "2026-06-03T08:55:08.939931+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:01.948578+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "2e7a61d9d590dd0b": {
       "title": "Sex Differences in Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD): Epidemiology, Pathophysiology, and Clinical Implications.",
@@ -468,7 +519,10 @@
         "diet"
       ],
       "created_at": "2026-06-03T08:55:13.812578+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:08.010162+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "434a579af9dec499": {
       "title": "Biochemical biomarker-Driven deep learning framework with SHAP-based feature interpretation for diabetes classification.",
@@ -482,7 +536,10 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:55:19.642846+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:13.669013+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "ded28be3a4ee1794": {
       "title": "Development of a complex digital lifestyle intervention for individuals with prediabetes - Using the Medical research Council (MRC) framework.",
@@ -496,7 +553,10 @@
         "exercise"
       ],
       "created_at": "2026-06-03T08:55:25.174771+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:18.391944+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "22aede4f94d35896": {
       "title": "Physical activity and glycosylphosphatidylinositol-specific phospholipase D1 (GPLD1) plasma levels in different age cohorts.",
@@ -512,7 +572,10 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:55:29.774037+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:30.866910+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "3d1e95daa5c8cdca": {
       "title": "Geographic Analysis of Access to the National Diabetes Prevention Program in New York State.",
@@ -525,7 +588,10 @@
         "diabetes prevention"
       ],
       "created_at": "2026-06-03T08:55:34.153900+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:35.328652+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "1f73adaeb28b8134": {
       "title": "Identifying Promising Practices in Lifestyle Intervention Programs for the Prediabetes Population: A Meta-Analysis and Meta-Regression of Randomized Controlled Trials.",
@@ -547,7 +613,10 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:55:39.711713+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:41.831997+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "d80c4f32a93ba21d": {
       "title": "Shifts in waist-to-height ratio categories within tirzepatide groups: a post-hoc analysis of SURMOUNT-1.",
@@ -561,7 +630,10 @@
         "physical activity"
       ],
       "created_at": "2026-06-03T08:55:45.180809+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:48.013676+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "782319cf598f03cc": {
       "title": "Neurocognition and food cue-related brain reactivity after fiber supplementation within a high-protein, plant-based diet in individuals with overweight and prediabetes: A randomized-controlled trial (the DISTAL-study).",
@@ -575,7 +647,10 @@
         "diet"
       ],
       "created_at": "2026-06-03T08:55:50.764694+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:26:53.741433+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "61758f3bb7c194c1": {
       "title": "Evaluating the cardio-protective effects of Momordica balsamina in a diet-induced prediabetic rats.",
@@ -590,7 +665,10 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:55:55.599013+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:27:04.839468+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
     },
     "f70212db52df0a41": {
       "title": "Data-driven cluster analysis of adults with prediabetes: Findings from the Japan diabetes prevention study.",
@@ -610,7 +688,327 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:56:00.448609+00:00",
-      "generated": false
+      "last_seen_at": "2026-06-03T09:27:09.771819+00:00",
+      "attempts": 1,
+      "generated": false,
+      "skip_reason": "OpenAI did not return an article"
+    },
+    "cf42a0542c4a05f8": {
+      "title": "[Editorial] Diabetes-related complications: an evolving spectrum",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00103-8/fulltext?rss=yes",
+      "published_at": "2026-04-30",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.028907+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.028920+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "53c3b1f36f277b1c": {
+      "title": "[Comment] What REDEFINE 5 signals for obesity trials in Asia and beyond",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00012-4/fulltext?rss=yes",
+      "published_at": "2026-04-17",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.028966+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.028969+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "56d8db77d694f083": {
+      "title": "[Comment] Freedom through technology: transforming management of type 2 diabetes",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00080-X/fulltext?rss=yes",
+      "published_at": "2026-04-23",
+      "score": 3,
+      "matched": [
+        "glucose",
+        "hba1c",
+        "continuous glucose"
+      ],
+      "created_at": "2026-06-03T09:24:44.028997+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029000+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 3 below min-score 8"
+    },
+    "76e653d2ea8833d9": {
+      "title": "[Comment] Burosumab treatment for children younger than 12 months with X-linked hypophosphataemia",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00073-2/fulltext?rss=yes",
+      "published_at": "2026-04-24",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.029022+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029023+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "c28eeeb1ae2aaf91": {
+      "title": "[Comment] What is an optimal serum thyroid-stimulating hormone value in older adults?",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00031-8/fulltext?rss=yes",
+      "published_at": "2026-04-27",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.029056+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029057+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "17c9784d8bbb59ad": {
+      "title": "[Comment] A conceptual framework for modernising and right-sizing global diabetes care",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00070-7/fulltext?rss=yes",
+      "published_at": "2026-04-20",
+      "score": 2,
+      "matched": [
+        "glucose"
+      ],
+      "created_at": "2026-06-03T09:24:44.029088+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029090+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 2 below min-score 8"
+    },
+    "af7cd9e159cf3e74": {
+      "title": "[Comment] Diabetes in sub-Saharan Africa: aligning biology, culture, and health systems for improved outcomes",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00099-9/fulltext?rss=yes",
+      "published_at": "2026-04-24",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.029123+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029124+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "b1ed593c31d91f4c": {
+      "title": "[Correspondence] Implications of microplastics as emerging endocrine disruptors",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00074-4/fulltext?rss=yes",
+      "published_at": "2026-04-15",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.029149+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029150+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "7104bafa39274159": {
+      "title": "[Corrections] Correction to Lancet Diabetes Endocrinol 2025; 13: 935–48",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00078-1/fulltext?rss=yes",
+      "published_at": "2026-03-31",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.029180+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029181+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "32dd1d7375abf0c0": {
+      "title": "[Articles] Efficacy and safety of co-administered cagrilintide and semaglutide versus semaglutide alone in adults with overweight or obesity with or without type 2 diabetes in Japan and Taiwan (REDEFINE 5): a multicentre, randomised, active-controlled, phase 3a trial",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(25)00402-4/fulltext?rss=yes",
+      "published_at": "2026-04-17",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.029206+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029208+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "8df8ff7143341744": {
+      "title": "[Articles] Continuous glucose monitoring versus self-monitoring of blood glucose in individuals with type 2 diabetes: a randomised, multicentre, open-label, superiority trial",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00076-8/fulltext?rss=yes",
+      "published_at": "2026-04-23",
+      "score": 7,
+      "matched": [
+        "glucose",
+        "glycaemic",
+        "continuous glucose"
+      ],
+      "created_at": "2026-06-03T09:24:44.029224+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029225+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 7 below min-score 8"
+    },
+    "efe3d7b00d82b590": {
+      "title": "[Articles] Safety, tolerability, pharmacokinetics, and efficacy of burosumab in infants with X-linked hypophosphataemia: an open-label, multicentre, non-randomised study",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00013-6/fulltext?rss=yes",
+      "published_at": "2026-04-24",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.029240+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029242+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "c12d4373526f289f": {
+      "title": "[Articles] Natural history of thyroid function in ageing: an individual participant data analysis of 137 488 participants from 31 prospective cohort studies",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00009-4/fulltext?rss=yes",
+      "published_at": "2026-04-27",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.029260+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029262+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "f63c5a4f2cf5ed03": {
+      "title": "[Series] Burden and determinants of diabetes in sub-Saharan Africa",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00065-3/fulltext?rss=yes",
+      "published_at": "2026-04-24",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.029285+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029286+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "81388f14fe18c12a": {
+      "title": "[Series] Diabetes-related complications and multiple long-term conditions in sub-Saharan Africa: determinants and management strategies",
+      "source": "Lancet Diabetes & Endocrinology",
+      "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00036-7/fulltext?rss=yes",
+      "published_at": "2026-04-24",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.029321+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.029323+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "ec64b31eb2b0f6fb": {
+      "title": "Neuronal glycogen powers anticipatory brain responses to food",
+      "source": "Nature Metabolism",
+      "link": "https://www.nature.com/articles/s42255-026-01536-6",
+      "published_at": "2026-05-27",
+      "score": 6,
+      "matched": [
+        "insulin resistance"
+      ],
+      "created_at": "2026-06-03T09:24:44.100964+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.100972+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 6 below min-score 8"
+    },
+    "5ac047aabb3294b9": {
+      "title": "Glycogen drives the sensory activation of POMC neurons",
+      "source": "Nature Metabolism",
+      "link": "https://www.nature.com/articles/s42255-026-01535-7",
+      "published_at": "2026-05-27",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.100995+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.100997+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "1f0c5b47d0b80e8b": {
+      "title": "Author Correction: Regulation of urea cycle by reversible high-stoichiometry lysine succinylation",
+      "source": "Nature Metabolism",
+      "link": "https://www.nature.com/articles/s42255-026-01549-1",
+      "published_at": "2026-05-22",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.101010+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.101012+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "129fa0ce9ed753ec": {
+      "title": "Glycerol is a new ally for heat production and bone health",
+      "source": "Nature Metabolism",
+      "link": "https://www.nature.com/articles/s42255-026-01545-5",
+      "published_at": "2026-05-22",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.101033+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.101034+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
+    },
+    "d39b6baf924d68a1": {
+      "title": "Semaglutide drives weight loss through cAMP-dependent mechanisms in GLP1R-expressing hindbrain neurons",
+      "source": "Nature Metabolism",
+      "link": "https://www.nature.com/articles/s42255-026-01534-8",
+      "published_at": "2026-05-22",
+      "score": 4,
+      "matched": [
+        "weight loss"
+      ],
+      "created_at": "2026-06-03T09:24:44.101049+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.101051+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 4 below min-score 8"
+    },
+    "a1e0a5c5e4a796cc": {
+      "title": "Irisin as a driver of neuroprotection in multiple sclerosis",
+      "source": "Nature Metabolism",
+      "link": "https://www.nature.com/articles/s42255-026-01505-z",
+      "published_at": "2026-05-21",
+      "score": 4,
+      "matched": [
+        "exercise"
+      ],
+      "created_at": "2026-06-03T09:24:44.101066+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.101067+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 4 below min-score 8"
+    },
+    "8197fb2be1ec54da": {
+      "title": "The exercise hormone irisin has neuroprotective effects in a mouse model of multiple sclerosis",
+      "source": "Nature Metabolism",
+      "link": "https://www.nature.com/articles/s42255-026-01527-7",
+      "published_at": "2026-05-21",
+      "score": 4,
+      "matched": [
+        "exercise"
+      ],
+      "created_at": "2026-06-03T09:24:44.101082+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.101084+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 4 below min-score 8"
+    },
+    "60f176bd85fe21b1": {
+      "title": "Cardiolipin preserves T reg metabolic fitness and immune homeostasis in the gut",
+      "source": "Nature Metabolism",
+      "link": "https://www.nature.com/articles/s42255-026-01533-9",
+      "published_at": "2026-05-18",
+      "score": 0,
+      "matched": [],
+      "created_at": "2026-06-03T09:24:44.101103+00:00",
+      "last_seen_at": "2026-06-03T09:24:44.101104+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "score 0 below min-score 8"
     }
   }
 }
