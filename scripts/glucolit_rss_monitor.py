@@ -661,18 +661,17 @@ def run(args: argparse.Namespace) -> int:
 
             prompt = build_prompt(item, matched)
             article = call_openai(prompt)
-            if article is None and args.require_openai:
-                raise RuntimeError(
-                    "OPENAI_API_KEY is required and generation failed. "
-                    "No fallback article was written."
+            if article is None:
+                print(
+                    "Skip because OpenAI did not return an article: "
+                    f"{item.title}"
                 )
+                continue
             if not is_valid_article(article):
-                if args.require_openai:
-                    raise RuntimeError(
-                        "OpenAI generation did not produce a complete "
-                        "plain-language article. No draft was written."
-                    )
-                print(f"Skip invalid generated article: {item.title}")
+                print(
+                    "Skip incomplete generated article. No draft was written: "
+                    f"{item.title}"
+                )
                 continue
             if args.dry_run:
                 print(f"Would create score={score}: {item.title}")
