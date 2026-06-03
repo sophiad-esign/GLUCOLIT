@@ -25,7 +25,7 @@ import { TurboLink } from "~/modules/common/turbo-link";
 
 export const generateMetadata = getMetadata({
   title: "文章审核后台",
-  description: "查看 GLUCOLIT RSS 生成的待审核文章草稿。",
+  description: "查看 GLUCOLIT RSS 自动生成的待审核文章草稿。",
 });
 
 export default function AdminArticlesPage() {
@@ -46,8 +46,8 @@ export default function AdminArticlesPage() {
               文章审核后台
             </h1>
             <p className="mt-3 max-w-3xl text-sm leading-7 text-sky-50">
-              RSS 工作流生成的文章会先进入草稿池。确认内容质量后，把对应 MDX
-              文件里的 draft: true 改成 draft: false，推送后才会公开展示。
+              RSS
+              工作流生成的文章会先进入草稿池。确认内容质量后，再从草稿审核页发布到公开网站。
             </p>
           </div>
 
@@ -73,22 +73,22 @@ export default function AdminArticlesPage() {
           <CardHeader>
             <CardTitle>待审核草稿在哪里？</CardTitle>
             <CardDescription>
-              每篇文章都是一个文件夹，真正要改的是里面的 en.mdx。
+              每篇文章都是一个文件夹，真正要审核的是里面的 en.mdx。
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="rounded-xl border bg-slate-50 p-4 font-mono text-sm leading-7 text-slate-700 dark:bg-slate-900 dark:text-slate-200">
               packages/cms/src/collections/blog/content/
               <br />
-              └── 文章-slug/
+              article-slug/
               <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;└── en.mdx
+              &nbsp;&nbsp;en.mdx
             </div>
             <div className="mt-4 flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900 dark:border-amber-900/60 dark:bg-amber-950/30 dark:text-amber-100">
               <Icons.AlertTriangle className="mt-1 size-4 flex-none" />
               <p>
-                当前自动生成文章仍有内容质量风险，所以默认不会显示到公开网站。
-                只要保持 draft: true，首页和 /articles 都看不到它。
+                自动生成文章默认不会公开。只要保持 draft: true，首页和 /articles
+                都不会显示它。
               </p>
             </div>
           </CardContent>
@@ -100,12 +100,10 @@ export default function AdminArticlesPage() {
             <CardDescription>人工审核通过后再发布。</CardDescription>
           </CardHeader>
           <CardContent className="space-y-3 text-sm leading-7">
-            <p>1. 打开表格里的文件路径。</p>
+            <p>1. 打开草稿审核页。</p>
             <p>2. 检查中文摘要、英文摘要和原文链接。</p>
-            <p>
-              3. 把 <code>draft: true</code> 改成 <code>draft: false</code>。
-            </p>
-            <p>4. git commit + push，Vercel 会自动更新。</p>
+            <p>3. 点击一键发布。</p>
+            <p>4. GitHub 更新后，Vercel 会自动重新部署。</p>
           </CardContent>
         </Card>
       </section>
@@ -117,14 +115,14 @@ export default function AdminArticlesPage() {
               最新待审核草稿
             </h2>
             <p className="text-muted-foreground mt-1 text-sm">
-              先从这些开始审，越靠前越新。
+              越靠前越新，可以优先审核。
             </p>
           </div>
           <TurboLink
-            href={pathsConfig.marketing.articles.index}
+            href={pathsConfig.admin.drafts.index}
             className="inline-flex items-center gap-2 text-sm font-medium text-[#1e3a5f] hover:text-[#2d5a87] dark:text-sky-200"
           >
-            查看公开文章页
+            去草稿审核页
             <Icons.ArrowUpRight className="size-4" />
           </TurboLink>
         </div>
@@ -148,13 +146,6 @@ export default function AdminArticlesPage() {
                 <p className="line-clamp-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
                   {article.summaryZh}
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  {article.categoryLabels.map((label) => (
-                    <Badge key={label} variant="outline">
-                      {label}
-                    </Badge>
-                  ))}
-                </div>
                 <code className="block rounded-lg bg-slate-100 p-3 text-xs leading-5 whitespace-normal text-slate-700 dark:bg-slate-900 dark:text-slate-200">
                   {article.contentPath}
                 </code>

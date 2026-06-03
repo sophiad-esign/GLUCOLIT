@@ -1,24 +1,12 @@
-import { getTranslation } from "@workspace/i18n/server";
+import { redirect } from "next/navigation";
 
+import { pathsConfig } from "~/config/paths";
 import { getMetadata } from "~/lib/metadata";
-import { ForgotPasswordForm } from "~/modules/auth/form/password/forgot";
-import { AuthHeader } from "~/modules/auth/layout/header";
 
 export const generateMetadata = getMetadata({
-  title: "auth:account.password.forgot.title",
+  title: "GLUCOLIT 后台",
 });
 
-const ForgotPassword = async () => {
-  const { t } = await getTranslation({ ns: "auth" });
-  return (
-    <>
-      <AuthHeader
-        title={t("account.password.forgot.header.title")}
-        description={t("account.password.forgot.header.description")}
-      />
-      <ForgotPasswordForm />
-    </>
-  );
-};
-
-export default ForgotPassword;
+export default function ForgotPassword() {
+  redirect(pathsConfig.admin.drafts.index);
+}

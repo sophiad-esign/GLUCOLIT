@@ -27,7 +27,7 @@ import { AutoUpdateStatus } from "./auto-update-status";
 
 export const generateMetadata = getMetadata({
   title: "待审核文章草稿",
-  description: "审核并发布 GLUCOLIT RSS 生成的文章草稿。",
+  description: "审核并发布 GLUCOLIT RSS 自动生成的文章草稿。",
 });
 
 export default async function AdminDraftsPage({
@@ -47,15 +47,15 @@ export default async function AdminDraftsPage({
         <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-sm font-medium tracking-[0.18em] text-sky-100 uppercase">
-              Protected Admin
+              GLUCOLIT CMS
             </p>
             <h1 className="mt-3 text-3xl font-bold tracking-normal">
               待审核文章草稿
             </h1>
             <p className="mt-3 max-w-3xl text-sm leading-7 text-sky-50">
-              这里列出所有 frontmatter 里 draft: true
-              的文章。点击一键发布后，系统会把对应 MDX 文件改成 draft: false
-              并提交到 GitHub，随后 Vercel 自动重新部署。
+              这里列出所有 frontmatter 里 draft: true 的文章。点击一键发布后，
+              系统会把对应 MDX 文件改成 draft: false，并提交到 GitHub； Vercel
+              会随后自动重新部署。
             </p>
           </div>
 
@@ -72,8 +72,8 @@ export default async function AdminDraftsPage({
         <div className="flex items-start gap-3 rounded-xl border border-green-200 bg-green-50 p-4 text-sm leading-7 text-green-900 dark:border-green-900/60 dark:bg-green-950/30 dark:text-green-100">
           <Icons.CheckCircle2 className="mt-1 size-4 flex-none" />
           <p>
-            已提交发布：{published}。GitHub main 更新后，Vercel
-            会自动重新部署，稍等几十秒后公开页面会显示。
+            已提交发布：{published}。GitHub main 更新后，Vercel 会自动重新部署，
+            稍等几十秒后公开页面会显示。
           </p>
         </div>
       ) : null}
@@ -93,9 +93,9 @@ export default async function AdminDraftsPage({
               一键发布需要 GitHub 写入 Token
             </CardTitle>
             <CardDescription className="text-amber-900 dark:text-amber-100/80">
-              页面已经受 /admin 登录保护；要让按钮真正写回仓库，请在 Vercel
-              环境变量里添加 GITHUB_CONTENT_TOKEN，权限需要 Contents: Read and
-              write。不要把 token 写进代码。
+              要让按钮真正写回仓库，请在 Vercel 环境变量里添加
+              GITHUB_CONTENT_TOKEN，权限需要 Contents: Read and write。不要把
+              token 写进代码。
             </CardDescription>
           </CardHeader>
         </Card>
@@ -105,7 +105,7 @@ export default async function AdminDraftsPage({
         <CardHeader>
           <CardTitle>草稿列表</CardTitle>
           <CardDescription>
-            显示标题、摘要、创建日期和一键发布操作。
+            显示标题、摘要、创建日期、文件路径和一键发布操作。
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -176,8 +176,8 @@ export default async function AdminDraftsPage({
               <Icons.CheckCircle2 className="mx-auto size-10 text-green-600" />
               <h2 className="mt-4 text-xl font-semibold">暂无待审核草稿</h2>
               <p className="text-muted-foreground mt-2 text-sm">
-                所有研究文章都已经发布，或 RSS 工作流还没有生成新的 draft: true
-                文件。
+                所有研究文章都已经发布，或者 RSS 工作流还没有生成新的 draft:
+                true 文件。
               </p>
             </div>
           )}

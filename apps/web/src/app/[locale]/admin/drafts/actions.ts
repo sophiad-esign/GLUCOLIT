@@ -2,10 +2,7 @@
 
 import { redirect } from "next/navigation";
 
-import { hasAdminPermission } from "@workspace/auth";
-
 import { pathsConfig } from "~/config/paths";
-import { getSession } from "~/lib/auth/server";
 
 const CONTENT_ROOT = "packages/cms/src/collections/blog/content/";
 
@@ -40,16 +37,6 @@ const getFormString = (formData: FormData, key: string) => {
 };
 
 export async function publishDraftAction(formData: FormData) {
-  const { user } = await getSession();
-
-  if (!user) {
-    redirect(pathsConfig.auth.login);
-  }
-
-  if (!hasAdminPermission(user)) {
-    redirect(pathsConfig.dashboard.user.index);
-  }
-
   const token = envValue("GITHUB_CONTENT_TOKEN") || envValue("GITHUB_TOKEN");
 
   if (!token) {

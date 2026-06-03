@@ -1,93 +1,74 @@
-import { redirect } from "next/navigation";
+/* eslint-disable i18next/no-literal-string */
 
-import { hasAdminPermission } from "@workspace/auth";
 import { Icons } from "@workspace/ui-web/icons";
-import { SidebarInset, SidebarProvider } from "@workspace/ui-web/sidebar";
 
 import { pathsConfig } from "~/config/paths";
-import { getSession } from "~/lib/auth/server";
-import { DashboardActionBar } from "~/modules/common/layout/dashboard/action-bar";
-import { DashboardInset } from "~/modules/common/layout/dashboard/inset";
-import { DashboardSidebar } from "~/modules/common/layout/dashboard/sidebar/index";
 import { TurboLink } from "~/modules/common/turbo-link";
 
-const menu = [
+const links = [
   {
-    label: "admin",
-    items: [
-      {
-        title: "home",
-        href: pathsConfig.admin.index,
-        icon: <Icons.Home />,
-      },
-      {
-        title: "users",
-        href: pathsConfig.admin.users.index,
-        exact: false,
-        icon: <Icons.UsersRound />,
-      },
-      {
-        title: "organizations",
-        href: pathsConfig.admin.organizations.index,
-        exact: false,
-        icon: <Icons.Building />,
-      },
-      {
-        title: "customers",
-        href: pathsConfig.admin.customers.index,
-        exact: false,
-        icon: <Icons.HandCoins />,
-      },
-      {
-        title: "articles",
-        href: pathsConfig.admin.articles.index,
-        exact: false,
-        icon: <Icons.BookOpen />,
-      },
-      {
-        title: "drafts",
-        href: pathsConfig.admin.drafts.index,
-        exact: false,
-        icon: <Icons.ClockFading />,
-      },
-    ],
+    href: pathsConfig.admin.drafts.index,
+    label: "草稿审核",
+    icon: Icons.ClockFading,
+  },
+  {
+    href: pathsConfig.admin.articles.index,
+    label: "文章总览",
+    icon: Icons.BookOpen,
+  },
+  {
+    href: pathsConfig.marketing.articles.index,
+    label: "公开文章",
+    icon: Icons.ArrowUpRight,
   },
 ];
 
-export default async function AdminLayout({
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { user } = await getSession();
-
-  if (!user) {
-    return redirect(pathsConfig.auth.login);
-  }
-
-  if (!hasAdminPermission(user)) {
-    return redirect(pathsConfig.dashboard.user.index);
-  }
-
   return (
-    <SidebarProvider>
-      <DashboardSidebar
-        user={user}
-        menu={menu}
-        header={
+    <div className="min-h-screen bg-slate-50 text-slate-950 dark:bg-slate-950 dark:text-white">
+      <header className="border-b bg-white/90 backdrop-blur dark:bg-slate-950/90">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <TurboLink
-            href={pathsConfig.index}
-            className="flex items-center gap-3 p-2 transition-[padding] group-data-[collapsible=icon]:p-0.5"
+            href={pathsConfig.admin.drafts.index}
+            className="flex items-center gap-3"
           >
-            <Icons.Logo className="text-primary h-8 transition-[width,height]" />
-            <Icons.LogoText className="text-foreground h-4 group-data-[collapsible=icon]:hidden" />
+            <Icons.Logo className="text-primary size-9" />
+            <div>
+              <div className="text-lg font-bold tracking-normal">
+                GLUCOLIT 后台
+              </div>
+              <div className="text-muted-foreground text-xs">
+                文章草稿审核与发布
+              </div>
+            </div>
           </TurboLink>
-        }
-      />
-      <SidebarInset>
-        <DashboardActionBar menu={menu} />
-        <DashboardInset>{children}</DashboardInset>
-      </SidebarInset>
-    </SidebarProvider>
+
+          <nav className="flex flex-wrap gap-2">
+            {links.map((link) => {
+              const Icon = link.icon;
+
+              return (
+                <TurboLink
+                  key={link.href}
+                  href={link.href}
+                  className="inline-flex items-center gap-2 rounded-full border bg-white px-4 py-2 text-sm font-medium shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:bg-slate-900"
+                >
+                  <Icon className="size-4" />
+                  {link.label}
+                </TurboLink>
+              );
+            })}
+          </nav>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        {children}
+      </main>
+    </div>
   );
 }
