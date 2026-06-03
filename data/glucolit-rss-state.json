@@ -6,9 +6,7 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42009015/",
       "published_at": "2026-06-01",
       "score": 5,
-      "matched": [
-        "lifestyle intervention"
-      ],
+      "matched": ["lifestyle intervention"],
       "created_at": "2026-05-28T03:52:52.665109+00:00",
       "generated": false
     },
@@ -27,49 +25,13 @@
       "created_at": "2026-05-28T03:52:52.665190+00:00",
       "generated": false
     },
-    "e246c84336e57001": {
-      "title": "Defining prediabetes remission as a distinct prevention endpoint.",
-      "source": "Lancet Diabetes & Endocrinology via PubMed (The lancet. Diabetes & endocrinology)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41397403/",
-      "published_at": "2026-02-01",
-      "score": 9,
-      "matched": [
-        "prediabetes",
-        "remission"
-      ],
-      "created_at": "2026-05-28T03:52:52.665203+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/defining-prediabetes-remission-as-a-distinct-prevention-endpoint-e246c843/en.mdx"
-    },
-    "5edab9d413dcc97e": {
-      "title": "Prediabetes remission and cardiovascular morbidity and mortality: post-hoc analyses from the Diabetes Prevention Program Outcome study and the DaQing Diabetes Prevention Outcome study.",
-      "source": "Lancet Diabetes & Endocrinology via PubMed (The lancet. Diabetes & endocrinology)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41397402/",
-      "published_at": "2026-02-01",
-      "score": 32,
-      "matched": [
-        "prediabetes",
-        "diabetes prevention",
-        "lifestyle intervention",
-        "weight loss",
-        "diet",
-        "physical activity",
-        "glucose",
-        "remission"
-      ],
-      "created_at": "2026-05-28T03:53:00.471203+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/prediabetes-remission-and-cardiovascular-morbidity-and-mortality-post-ho-5edab9d4/en.mdx"
-    },
     "a07c025cbae73a57": {
       "title": "Preventing cardiovascular risk in people with prediabetes.",
       "source": "Lancet Diabetes & Endocrinology via PubMed (The lancet. Diabetes & endocrinology)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/41397401/",
       "published_at": "2026-02-01",
       "score": 6,
-      "matched": [
-        "prediabetes"
-      ],
+      "matched": ["prediabetes"],
       "created_at": "2026-05-28T03:53:07.975816+00:00",
       "generated": false
     },
@@ -79,25 +41,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41381174/",
       "published_at": "2026-01-01",
       "score": 6,
-      "matched": [
-        "prediabetes"
-      ],
+      "matched": ["prediabetes"],
       "created_at": "2026-05-28T03:53:07.975859+00:00",
       "generated": false
-    },
-    "4e89f35d06fd2237": {
-      "title": "Trajectories of type 2 diabetes and cancer in 330 000 individuals with prediabetes: 20-year observational study in England.",
-      "source": "Lancet Diabetes & Endocrinology via PubMed (The lancet. Diabetes & endocrinology)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41274303/",
-      "published_at": "2026-01-01",
-      "score": 8,
-      "matched": [
-        "prediabetes",
-        "glucose"
-      ],
-      "created_at": "2026-05-28T03:53:07.975963+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/trajectories-of-type-2-diabetes-and-cancer-in-330-000-individuals-with-p-4e89f35d/en.mdx"
     },
     "be770bf545d9e3ad": {
       "title": "Comorbidities and mortality in subgroups of adults with diabetes with up to 14 years follow-up: a prospective cohort study in Sweden.",
@@ -105,26 +51,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41248671/",
       "published_at": "2026-01-01",
       "score": 7,
-      "matched": [
-        "insulin resistance",
-        "hba1c"
-      ],
+      "matched": ["insulin resistance", "hba1c"],
       "created_at": "2026-05-28T03:53:13.357901+00:00",
       "generated": false
-    },
-    "3c53504402d1af39": {
-      "title": "Once-weekly semaglutide 7·2 mg in adults with obesity and type 2 diabetes (STEP UP T2D): a randomised, controlled, phase 3b trial.",
-      "source": "Lancet Diabetes & Endocrinology via PubMed (The lancet. Diabetes & endocrinology)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/40961953/",
-      "published_at": "2025-11-01",
-      "score": 8,
-      "matched": [
-        "lifestyle intervention",
-        "hba1c"
-      ],
-      "created_at": "2026-05-28T03:53:13.358043+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/once-weekly-semaglutide-7-2-mg-in-adults-with-obesity-and-type-2-diabete-3c535044/en.mdx"
     },
     "bf3727c09777dfc1": {
       "title": "Once-weekly semaglutide 7·2 mg in adults with obesity (STEP UP): a randomised, controlled, phase 3b trial.",
@@ -132,9 +61,7 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/40961952/",
       "published_at": "2025-11-01",
       "score": 5,
-      "matched": [
-        "lifestyle intervention"
-      ],
+      "matched": ["lifestyle intervention"],
       "created_at": "2026-05-28T03:53:18.892270+00:00",
       "generated": false
     },
@@ -144,57 +71,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/40854315/",
       "published_at": "2025-10-01",
       "score": 5,
-      "matched": [
-        "glucose",
-        "hba1c"
-      ],
+      "matched": ["glucose", "hba1c"],
       "created_at": "2026-05-28T03:53:18.892460+00:00",
       "generated": false
-    },
-    "79a5df2f1c9c97e6": {
-      "title": "Understanding the mechanism of prediabetes remission in young people.",
-      "source": "Lancet Diabetes & Endocrinology via PubMed (The lancet. Diabetes & endocrinology)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/40812333/",
-      "published_at": "2025-10-01",
-      "score": 9,
-      "matched": [
-        "prediabetes",
-        "remission"
-      ],
-      "created_at": "2026-05-28T03:53:18.892482+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/understanding-the-mechanism-of-prediabetes-remission-in-young-people-79a5df2f/en.mdx"
-    },
-    "5b94d20c685c26a3": {
-      "title": "The central role of recovery of β-cell function in the remission of prediabetes: a prospective cohort study in Canada.",
-      "source": "Lancet Diabetes & Endocrinology via PubMed (The lancet. Diabetes & endocrinology)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/40812331/",
-      "published_at": "2025-10-01",
-      "score": 19,
-      "matched": [
-        "prediabetes",
-        "insulin resistance",
-        "insulin sensitivity",
-        "glucose",
-        "remission"
-      ],
-      "created_at": "2026-05-28T03:53:24.728571+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/the-central-role-of-recovery-of-cell-function-in-the-remission-of-predia-5b94d20c/en.mdx"
-    },
-    "363e50ef8f483a52": {
-      "title": "Efficacy and safety of a biased GLP-1 receptor agonist ecnoglutide in adults with overweight or obesity: a multicentre, randomised, double-blind, placebo-controlled, phase 3 trial.",
-      "source": "Lancet Diabetes & Endocrinology via PubMed (The lancet. Diabetes & endocrinology)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/40555243/",
-      "published_at": "2025-09-01",
-      "score": 9,
-      "matched": [
-        "prediabetes",
-        "sleep"
-      ],
-      "created_at": "2026-05-28T03:53:30.115557+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/efficacy-and-safety-of-a-biased-glp-1-receptor-agonist-ecnoglutide-in-ad-363e50ef/en.mdx"
     },
     "e9d7d2ebc2afcc4e": {
       "title": "Association of gestational thyroid function and thyroid autoimmunity with gestational diabetes: a systematic review and individual participant meta-analysis.",
@@ -202,63 +81,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/40609565/",
       "published_at": "2025-08-01",
       "score": 7,
-      "matched": [
-        "insulin resistance",
-        "glucose",
-        "glycaemic"
-      ],
+      "matched": ["insulin resistance", "glucose", "glycaemic"],
       "created_at": "2026-05-28T03:53:34.795009+00:00",
       "generated": false
-    },
-    "1241c3afeddbbd92": {
-      "title": "Comment on Echouffo-Tcheugui et al. Is the Current Lifestyle Modification Approach to Diabetes Prevention in the U.S. a Success? Diabetes Care 2025;48:863-870.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42160593/",
-      "published_at": "2026-06-01",
-      "score": 10,
-      "matched": [
-        "diabetes prevention",
-        "lifestyle modification"
-      ],
-      "created_at": "2026-05-28T03:53:35.492322+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/comment-on-echouffo-tcheugui-et-al-is-the-current-lifestyle-modification-1241c3af/en.mdx"
-    },
-    "787ac54855be75c3": {
-      "title": "The Effectiveness of Diabetes Prevention Programs Delivered in Primary Care for Individuals With Prediabetes or at Risk of Developing Type 2 Diabetes: A Systematic Review and Meta-analysis.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42030121/",
-      "published_at": "2026-06-01",
-      "score": 35,
-      "matched": [
-        "prediabetes",
-        "diabetes prevention",
-        "lifestyle intervention",
-        "lifestyle modification",
-        "diet",
-        "physical activity",
-        "glucose",
-        "glycemic",
-        "hba1c"
-      ],
-      "created_at": "2026-05-28T03:53:40.627807+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/the-effectiveness-of-diabetes-prevention-programs-delivered-in-primary-c-787ac548/en.mdx"
-    },
-    "99706f7150cc4a09": {
-      "title": "Insulin Hypersecretion and Increased Ectopic Fat in South Asian American Adolescents and Young Adults Compared With White and African American Peers: The CHARISMA Study.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42008009/",
-      "published_at": "2026-06-01",
-      "score": 13,
-      "matched": [
-        "insulin resistance",
-        "insulin sensitivity",
-        "glucose"
-      ],
-      "created_at": "2026-05-28T03:53:46.674841+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/insulin-hypersecretion-and-increased-ectopic-fat-in-south-asian-american-99706f71/en.mdx"
     },
     "9418823154c226b9": {
       "title": "Early Pregnancy Central Obesity and Risk of Prenatal and Postpartum Diabetes and Hypertensive Disorders.",
@@ -266,89 +91,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41973635/",
       "published_at": "2026-06-01",
       "score": 3,
-      "matched": [
-        "prediabetes"
-      ],
+      "matched": ["prediabetes"],
       "created_at": "2026-05-28T03:53:52.278551+00:00",
       "generated": false
-    },
-    "c3f40e52ac4d2138": {
-      "title": "Comparison of the Continuous Glucose Monitoring Profiles of Four Glucose-Lowering Medications in the GRADE Randomized Trial.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41925680/",
-      "published_at": "2026-06-01",
-      "score": 10,
-      "matched": [
-        "glucose",
-        "glycemic",
-        "hba1c",
-        "continuous glucose"
-      ],
-      "created_at": "2026-05-28T03:53:52.278633+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/comparison-of-the-continuous-glucose-monitoring-profiles-of-four-glucose-c3f40e52/en.mdx"
-    },
-    "6e0c406d713af574": {
-      "title": "Effect of Semaglutide on Insulin Sensitivity and Cardiometabolic Risk Factors in Adolescents With Obesity: The STEP TEENS Study.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41296499/",
-      "published_at": "2026-06-01",
-      "score": 15,
-      "matched": [
-        "insulin resistance",
-        "insulin sensitivity",
-        "glucose",
-        "glycemic"
-      ],
-      "created_at": "2026-05-28T03:53:57.040104+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/effect-of-semaglutide-on-insulin-sensitivity-and-cardiometabolic-risk-fa-6e0c406d/en.mdx"
-    },
-    "e045ab1e69b1130f": {
-      "title": "Renal Lipotoxicity: Mechanisms and Therapeutic Perspectives.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42201307/",
-      "published_at": "2026-05-27",
-      "score": 13,
-      "matched": [
-        "insulin resistance",
-        "lifestyle modification",
-        "glucose"
-      ],
-      "created_at": "2026-05-28T03:54:03.319077+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/renal-lipotoxicity-mechanisms-and-therapeutic-perspectives-e045ab1e/en.mdx"
-    },
-    "951f6b09c7bef6f8": {
-      "title": "Subtypes of Type 2 Diabetes and Prediabetes: Mortality and Excess Life Lost in South Asians.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42102359/",
-      "published_at": "2026-05-08",
-      "score": 17,
-      "matched": [
-        "prediabetes",
-        "insulin resistance",
-        "glucose",
-        "hba1c"
-      ],
-      "created_at": "2026-05-28T03:54:09.399706+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/subtypes-of-type-2-diabetes-and-prediabetes-mortality-and-excess-life-lo-951f6b09/en.mdx"
-    },
-    "1085f0a438d75270": {
-      "title": "Extending Sleep to Improve Glucose Metabolism in Adults With Short Sleep and Prediabetes: A Challenging Intervention.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42008708/",
-      "published_at": "2026-05-01",
-      "score": 11,
-      "matched": [
-        "prediabetes",
-        "sleep",
-        "glucose"
-      ],
-      "created_at": "2026-05-28T03:54:15.274332+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/extending-sleep-to-improve-glucose-metabolism-in-adults-with-short-sleep-1085f0a4/en.mdx"
     },
     "6a1d10c9d60cd9e0": {
       "title": "Oral Insulin for Type 1 Diabetes Prevention.",
@@ -356,54 +101,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42008706/",
       "published_at": "2026-05-01",
       "score": 0,
-      "matched": [
-        "diabetes prevention"
-      ],
+      "matched": ["diabetes prevention"],
       "created_at": "2026-05-28T03:54:21.803926+00:00",
       "generated": false
-    },
-    "f57856530eaebd7d": {
-      "title": "Response to Comment on Abdul-Ghani et al. One-Hour Plasma Glucose Predicts the Progression From Normal Glucose Tolerance to Prediabetes. Diabetes Care 2025;48:1273-1279.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42008705/",
-      "published_at": "2026-05-01",
-      "score": 8,
-      "matched": [
-        "prediabetes",
-        "glucose"
-      ],
-      "created_at": "2026-05-28T03:54:21.803975+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/response-to-comment-on-abdul-ghani-et-al-one-hour-plasma-glucose-predict-f5785653/en.mdx"
-    },
-    "c4d1f1e3eef6c5cf": {
-      "title": "Comment on Abdul-Ghani et al. One-Hour Plasma Glucose Predicts the Progression From Normal Glucose Tolerance to Prediabetes. Diabetes Care 2025;48:1273-1279.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42008701/",
-      "published_at": "2026-05-01",
-      "score": 8,
-      "matched": [
-        "prediabetes",
-        "glucose"
-      ],
-      "created_at": "2026-05-28T03:54:26.648784+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/comment-on-abdul-ghani-et-al-one-hour-plasma-glucose-predicts-the-progre-c4d1f1e3/en.mdx"
-    },
-    "f2b4d3e5084f4f0a": {
-      "title": "Screening for Diabetes and Prediabetes in Cystic Fibrosis Using a Nonfasting 50-Gram 1-Hour Oral Glucose Challenge Test.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41911242/",
-      "published_at": "2026-05-01",
-      "score": 11,
-      "matched": [
-        "prediabetes",
-        "glucose",
-        "hba1c"
-      ],
-      "created_at": "2026-05-28T03:54:31.620473+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/screening-for-diabetes-and-prediabetes-in-cystic-fibrosis-using-a-nonfas-f2b4d3e5/en.mdx"
     },
     "633dc0fa1e73e001": {
       "title": "Profiles of Social Determinants of Health and Change in Diabetes Status Among U.S. Hispanic/Latino Adults: HCHS/SOL, 2008-2024.",
@@ -411,187 +111,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41875073/",
       "published_at": "2026-05-01",
       "score": 6,
-      "matched": [
-        "prediabetes"
-      ],
+      "matched": ["prediabetes"],
       "created_at": "2026-05-28T03:54:37.191917+00:00",
       "generated": false
-    },
-    "8c72cfbf19995db9": {
-      "title": "Weight Regain Reverses Caloric Restriction-Induced Benefits on the Insulin-IGF-1 Nutrient-Sensing Pathway: Post Hoc Analysis From the CALERIE-2 Randomized Controlled Trial.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41838032/",
-      "published_at": "2026-05-01",
-      "score": 13,
-      "matched": [
-        "insulin resistance",
-        "weight loss",
-        "diet"
-      ],
-      "created_at": "2026-05-28T03:54:37.192000+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/weight-regain-reverses-caloric-restriction-induced-benefits-on-the-insul-8c72cfbf/en.mdx"
-    },
-    "5a95ab4f09a9f61f": {
-      "title": "Understanding barriers and facilitators of adherence to lifestyle changes in prediabetes: a qualitative study.",
-      "source": "PubMed prediabetes via PubMed (International journal of qualitative studies on health and well-being)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41817101/",
-      "published_at": "2026-12-31",
-      "score": 15,
-      "matched": [
-        "prediabetes",
-        "lifestyle modification",
-        "exercise"
-      ],
-      "created_at": "2026-05-28T03:54:42.284302+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/understanding-barriers-and-facilitators-of-adherence-to-lifestyle-change-5a95ab4f/en.mdx"
-    },
-    "3bcce78c62bd51fa": {
-      "title": "Prevalence and factors associated with isolated systolic hypertension among middle-aged adults and older Filipinos: a population-based study.",
-      "source": "PubMed prediabetes via PubMed (Blood pressure)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41666111/",
-      "published_at": "2026-12-01",
-      "score": 17,
-      "matched": [
-        "pre-diabetes",
-        "lifestyle modification",
-        "diet",
-        "nutrition"
-      ],
-      "created_at": "2026-05-28T03:54:47.572969+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/prevalence-and-factors-associated-with-isolated-systolic-hypertension-am-3bcce78c/en.mdx"
-    },
-    "2e7a61d9d590dd0b": {
-      "title": "Sex Differences in Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD): Epidemiology, Pathophysiology, and Clinical Implications.",
-      "source": "PubMed prediabetes via PubMed (Journal of clinical and experimental hepatology)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42022177/",
-      "published_at": "2026-01-01",
-      "score": 17,
-      "matched": [
-        "prediabetes",
-        "insulin resistance",
-        "lifestyle intervention",
-        "diet"
-      ],
-      "created_at": "2026-05-28T03:54:52.397599+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/sex-differences-in-metabolic-dysfunction-associated-steatotic-liver-dise-2e7a61d9/en.mdx"
-    },
-    "434a579af9dec499": {
-      "title": "Biochemical biomarker-Driven deep learning framework with SHAP-based feature interpretation for diabetes classification.",
-      "source": "PubMed prediabetes via PubMed (Biophysical chemistry)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41935405/",
-      "published_at": "2026-07-01",
-      "score": 10,
-      "matched": [
-        "diabetes prevention",
-        "diet",
-        "glucose"
-      ],
-      "created_at": "2026-05-28T03:54:57.035846+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/biochemical-biomarker-driven-deep-learning-framework-with-shap-based-fea-434a579a/en.mdx"
-    },
-    "ded28be3a4ee1794": {
-      "title": "Development of a complex digital lifestyle intervention for individuals with prediabetes - Using the Medical research Council (MRC) framework.",
-      "source": "PubMed prediabetes via PubMed (International journal of medical informatics)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41812461/",
-      "published_at": "2026-06-15",
-      "score": 15,
-      "matched": [
-        "prediabetes",
-        "lifestyle intervention",
-        "exercise"
-      ],
-      "created_at": "2026-05-28T03:55:03.567965+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/development-of-a-complex-digital-lifestyle-intervention-for-individuals-ded28be3/en.mdx"
-    },
-    "3d1e95daa5c8cdca": {
-      "title": "Geographic Analysis of Access to the National Diabetes Prevention Program in New York State.",
-      "source": "PubMed prediabetes via PubMed (Preventive medicine reports)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42199667/",
-      "published_at": "2026-06-01",
-      "score": 11,
-      "matched": [
-        "prediabetes",
-        "diabetes prevention"
-      ],
-      "created_at": "2026-05-28T03:55:09.384311+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/geographic-analysis-of-access-to-the-national-diabetes-prevention-progra-3d1e95da/en.mdx"
-    },
-    "1f73adaeb28b8134": {
-      "title": "Identifying Promising Practices in Lifestyle Intervention Programs for the Prediabetes Population: A Meta-Analysis and Meta-Regression of Randomized Controlled Trials.",
-      "source": "PubMed prediabetes via PubMed (Worldviews on evidence-based nursing)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42163067/",
-      "published_at": "2026-06-01",
-      "score": 47,
-      "matched": [
-        "prediabetes",
-        "insulin resistance",
-        "type 2 diabetes prevention",
-        "diabetes prevention",
-        "lifestyle intervention",
-        "weight loss",
-        "diet",
-        "exercise",
-        "physical activity",
-        "glucose",
-        "hba1c"
-      ],
-      "created_at": "2026-05-28T03:55:14.066506+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/identifying-promising-practices-in-lifestyle-intervention-programs-for-t-1f73adae/en.mdx"
-    },
-    "782319cf598f03cc": {
-      "title": "Neurocognition and food cue-related brain reactivity after fiber supplementation within a high-protein, plant-based diet in individuals with overweight and prediabetes: A randomized-controlled trial (the DISTAL-study).",
-      "source": "PubMed prediabetes via PubMed (Clinical nutrition (Edinburgh, Scotland))",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42061108/",
-      "published_at": "2026-06-01",
-      "score": 15,
-      "matched": [
-        "prediabetes",
-        "insulin resistance",
-        "diet"
-      ],
-      "created_at": "2026-05-28T03:55:19.909564+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/neurocognition-and-food-cue-related-brain-reactivity-after-fiber-supplem-782319cf/en.mdx"
-    },
-    "61758f3bb7c194c1": {
-      "title": "Evaluating the cardio-protective effects of Momordica balsamina in a diet-induced prediabetic rats.",
-      "source": "PubMed prediabetes via PubMed (Cardiovascular endocrinology & metabolism)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/42004629/",
-      "published_at": "2026-06-01",
-      "score": 16,
-      "matched": [
-        "prediabetes",
-        "lifestyle intervention",
-        "diet",
-        "glucose"
-      ],
-      "created_at": "2026-05-28T03:55:25.472321+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/evaluating-the-cardio-protective-effects-of-momordica-balsamina-in-a-die-61758f3b/en.mdx"
-    },
-    "33e610dec428c2b7": {
-      "title": "SemaGBA: A System Dynamics Model of the Semaglutide-Responsive Gut-Brain Axis A Model of How the Brain and Semaglutide Regulate Appetite and Weight.",
-      "source": "PubMed prediabetes via PubMed (Diabetes, obesity & metabolism)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41969210/",
-      "published_at": "2026-06-01",
-      "score": 17,
-      "matched": [
-        "prediabetes",
-        "insulin sensitivity",
-        "weight loss",
-        "glucose"
-      ],
-      "created_at": "2026-05-28T03:55:31.659588+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/semagba-a-system-dynamics-model-of-the-semaglutide-responsive-gut-brain-33e610de/en.mdx"
     },
     "48bf85af11230757": {
       "title": "Perinatal and long-term implications of diagnosing gestational diabetes mellitus using only fasting and one-hour post-load glucose concentrations: Secondary analysis of the GEMS trial and its five-year follow-up.",
@@ -599,58 +121,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41958348/",
       "published_at": "2026-06-01",
       "score": 5,
-      "matched": [
-        "prediabetes",
-        "glucose"
-      ],
+      "matched": ["prediabetes", "glucose"],
       "created_at": "2026-05-28T03:55:36.815073+00:00",
       "generated": false
-    },
-    "784a86934aba61f9": {
-      "title": "Distinct Motivational Profiles Based on Self-Determination Theory Among Young and Middle-Aged Adults With Prediabetes: Associations With Self-Management.",
-      "source": "PubMed prediabetes via PubMed (Diabetes, obesity & metabolism)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41937326/",
-      "published_at": "2026-06-01",
-      "score": 11,
-      "matched": [
-        "prediabetes",
-        "diabetes prevention"
-      ],
-      "created_at": "2026-05-28T03:55:36.815229+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/distinct-motivational-profiles-based-on-self-determination-theory-among-784a8693/en.mdx"
-    },
-    "d4a49b2026f25e90": {
-      "title": "Does Weight Loss Translate to Workplace Gains? Results of an Employment Questionnaire in Adults With Prediabetes and Overweight or Obesity.",
-      "source": "PubMed prediabetes via PubMed (Diabetes, obesity & metabolism)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41872997/",
-      "published_at": "2026-06-01",
-      "score": 18,
-      "matched": [
-        "prediabetes",
-        "lifestyle intervention",
-        "weight loss",
-        "diet"
-      ],
-      "created_at": "2026-05-28T03:55:42.655256+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/does-weight-loss-translate-to-workplace-gains-results-of-an-employment-q-d4a49b20/en.mdx"
-    },
-    "10f79cdc57f01290": {
-      "title": "The One-Hour Oral Glucose Tolerance Test to Predict Glucose Intolerance Postpartum in Women With Prior Gestational Diabetes.",
-      "source": "PubMed prediabetes via PubMed (Diabetes, obesity & metabolism)",
-      "link": "https://pubmed.ncbi.nlm.nih.gov/41804216/",
-      "published_at": "2026-06-01",
-      "score": 16,
-      "matched": [
-        "prediabetes",
-        "insulin resistance",
-        "lifestyle intervention",
-        "glucose"
-      ],
-      "created_at": "2026-05-28T03:55:48.051751+00:00",
-      "generated": true,
-      "path": "packages/cms/src/collections/blog/content/the-one-hour-oral-glucose-tolerance-test-to-predict-glucose-intolerance-10f79cdc/en.mdx"
     }
   }
 }

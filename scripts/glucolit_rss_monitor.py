@@ -309,6 +309,18 @@ def build_prompt(item: FeedItem, matched: list[str]) -> str:
         prediabetes and insulin resistance.
 
         Turn the source item below into a bilingual plain-language article.
+        Base the article only on the title, abstract/RSS summary, source, and
+        link shown below. Do not invent study details that are not present.
+
+        Write for ordinary readers, especially people with prediabetes. Use a
+        clear, warm, useful style: explain the health meaning, why it matters,
+        what the study did, what it did not prove, and what a reader can
+        cautiously take away. Avoid academic jargon when possible.
+
+        The Chinese plain-language article should be at least 600 Chinese
+        characters when the abstract has enough substance. The English version
+        should be a real plain-language rewrite, not a keyword screening note.
+
         Do not give personal medical advice. Do not overclaim causality.
         Preserve uncertainty. Mention that readers should discuss medical
         decisions with a qualified clinician.
@@ -447,6 +459,44 @@ def fallback_article(item: FeedItem, matched: list[str]) -> dict[str, Any]:
     }
 
 
+def is_valid_article(article: dict[str, Any] | None) -> bool:
+    if not article:
+        return False
+
+    required_strings = [
+        "title_en",
+        "title_zh",
+        "description_en",
+        "description_zh",
+        "plain_en",
+        "plain_zh",
+        "why_relevant_en",
+        "why_relevant_zh",
+    ]
+    if any(not str(article.get(key, "")).strip() for key in required_strings):
+        return False
+
+    plain_text = f"{article.get('plain_en', '')}\n{article.get('plain_zh', '')}"
+    blocked_phrases = [
+        "This item appears relevant",
+        "automated screening result",
+        "Matched keywords",
+        "被系统选中",
+        "命中关键词",
+    ]
+    if any(phrase in plain_text for phrase in blocked_phrases):
+        return False
+
+    if len(str(article.get("plain_en", ""))) < 500:
+        return False
+    if len(str(article.get("plain_zh", ""))) < 250:
+        return False
+
+    return len(article.get("takeaways_en", [])) >= 2 and len(
+        article.get("takeaways_zh", [])
+    ) >= 2
+
+
 def bullet_list(items: list[str]) -> str:
     return "\n".join(f"- {item.strip()}" for item in items if item.strip())
 
@@ -504,6 +554,27 @@ def article_to_mdx(
         - Link: [{item.link}]({item.link})
         - Published or RSS date: {item.published_at}
         """
+    )
+    content = re.sub(
+        r"(?m)^        > .+$",
+        "        > 本文是糖前卫士自动监测国际期刊 RSS 后生成的科普草稿，仅用于健康教育，不构成诊断、治疗或用药建议。任何医疗决定请咨询合格医生或营养专业人士。",
+        content,
+        count=1,
+    )
+    content = re.sub(
+        r"(?m)^        ## .+$", "        ## 中文白话版", content, count=1
+    )
+    content = re.sub(
+        r"(?m)^        ### .+$",
+        "        ### 为什么和糖尿病前期有关？",
+        content,
+        count=1,
+    )
+    content = re.sub(
+        r"(?m)^        ### .+$",
+        "        ### 你可以带走的 3 个点",
+        content,
+        count=1,
     )
     return re.sub(r"(?m)^ {8}", "", content).lstrip()
 
@@ -595,7 +666,14 @@ def run(args: argparse.Namespace) -> int:
                     "OPENAI_API_KEY is required and generation failed. "
                     "No fallback article was written."
                 )
-            article = article or fallback_article(item, matched)
+            if not is_valid_article(article):
+                if args.require_openai:
+                    raise RuntimeError(
+                        "OpenAI generation did not produce a complete "
+                        "plain-language article. No draft was written."
+                    )
+                print(f"Skip invalid generated article: {item.title}")
+                continue
             if args.dry_run:
                 print(f"Would create score={score}: {item.title}")
                 created_count += 1
