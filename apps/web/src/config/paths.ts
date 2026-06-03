@@ -28,6 +28,7 @@ const pathsConfig = {
     },
     drafts: {
       index: `${ADMIN_PREFIX}/drafts`,
+      draft: (slug: string) => `${ADMIN_PREFIX}/drafts/${slug}`,
     },
   },
   marketing: {

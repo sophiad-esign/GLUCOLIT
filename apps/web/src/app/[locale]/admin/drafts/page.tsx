@@ -11,8 +11,10 @@ import {
 } from "@workspace/ui-web/card";
 import { Icons } from "@workspace/ui-web/icons";
 
+import { pathsConfig } from "~/config/paths";
 import { getMetadata } from "~/lib/metadata";
 import { getReviewArticles } from "~/modules/articles/data";
+import { TurboLink } from "~/modules/common/turbo-link";
 
 import { publishDraftAction } from "./actions";
 import { AutoUpdateStatus } from "./auto-update-status";
@@ -157,26 +159,34 @@ export default async function AdminDraftsPage({
                     </div>
                   </div>
 
-                  <form action={publishDraftAction} className="shrink-0">
-                    <input
-                      type="hidden"
-                      name="contentPath"
-                      value={article.contentPath}
-                    />
-                    <input type="hidden" name="slug" value={article.slug} />
-                    <input
-                      type="hidden"
-                      name="title"
-                      value={article.titleEn || article.titleZh}
-                    />
-                    <Button
-                      type="submit"
-                      disabled={!canPublish}
-                      className="w-full bg-[#1e3a5f] hover:bg-[#2d5a87] lg:w-auto"
+                  <div className="flex shrink-0 flex-col gap-2 sm:flex-row lg:flex-col">
+                    <TurboLink
+                      href={pathsConfig.admin.drafts.draft(article.slug)}
+                      className="inline-flex h-10 w-full items-center justify-center rounded-md border bg-white px-4 py-2 text-sm font-medium shadow-sm transition hover:bg-slate-50 dark:bg-slate-950 dark:hover:bg-slate-900"
                     >
-                      一键发布
-                    </Button>
-                  </form>
+                      查看全文审核
+                    </TurboLink>
+                    <form action={publishDraftAction}>
+                      <input
+                        type="hidden"
+                        name="contentPath"
+                        value={article.contentPath}
+                      />
+                      <input type="hidden" name="slug" value={article.slug} />
+                      <input
+                        type="hidden"
+                        name="title"
+                        value={article.titleEn || article.titleZh}
+                      />
+                      <Button
+                        type="submit"
+                        disabled={!canPublish}
+                        className="w-full bg-[#1e3a5f] hover:bg-[#2d5a87]"
+                      >
+                        一键发布
+                      </Button>
+                    </form>
+                  </div>
                 </CardHeader>
 
                 <CardContent className="space-y-4">

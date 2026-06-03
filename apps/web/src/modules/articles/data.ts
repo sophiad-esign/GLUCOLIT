@@ -245,3 +245,19 @@ export const getReviewArticles = () => {
 
   return items.filter((item) => isResearchArticle(item.tags)).map(toArticle);
 };
+
+export const getReviewArticleBySlug = (slug: string) => {
+  const item = getContentItemBySlug({
+    collection: CollectionType.BLOG,
+    slug,
+    status: ContentStatus.PUBLISHED,
+    locale: "en",
+    includeDrafts: true,
+  });
+
+  if (!item || !isResearchArticle(item.tags)) {
+    return null;
+  }
+
+  return toArticle(item);
+};
