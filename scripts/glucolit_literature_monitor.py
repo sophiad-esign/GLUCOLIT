@@ -133,6 +133,30 @@ ARTICLE_SCHEMA = {
         "takeaways_zh": {"type": "array", "items": {"type": "string"}},
         "why_relevant_en": {"type": "string"},
         "why_relevant_zh": {"type": "string"},
+        "evidence_card": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "question": {"type": "string"},
+                "population": {"type": "string"},
+                "intervention_or_exposure": {"type": "string"},
+                "comparison": {"type": "string"},
+                "outcomes": {"type": "string"},
+                "main_findings": {"type": "string"},
+                "limits": {"type": "string"},
+                "reader_meaning": {"type": "string"},
+            },
+            "required": [
+                "question",
+                "population",
+                "intervention_or_exposure",
+                "comparison",
+                "outcomes",
+                "main_findings",
+                "limits",
+                "reader_meaning",
+            ],
+        },
     },
     "required": [
         "title_en",
@@ -145,6 +169,7 @@ ARTICLE_SCHEMA = {
         "takeaways_zh",
         "why_relevant_en",
         "why_relevant_zh",
+        "evidence_card",
     ],
 }
 
@@ -406,25 +431,48 @@ def yaml_list(values: list[str]) -> str:
 def build_prompt(paper: PaperItem, matched: list[str]) -> str:
     return textwrap.dedent(
         f"""
-        You are writing for GLUCOLIT, a public education site for people with
-        prediabetes, insulin resistance, and early metabolic risk.
+        You are the GLUCOLIT medical research editor.
 
-        Create a bilingual plain-language article from the evidence below.
-        Use only the title, abstract, source metadata, DOI/link, and open-access
-        link if provided. Do not invent sample size, methods, results, or
-        causality that are not in the evidence.
+        Follow the GLUCOLIT Research Rewrite SOP:
+        1. First extract an evidence card from the source.
+        2. Then write a Chinese plain-language article for readers with
+           prediabetes, insulin resistance, or early metabolic risk.
+        3. Then write a faithful English plain-language version with the same
+           meaning.
+        4. Explain uncertainty and limits. Do not turn association into
+           causation. Do not give personal medical advice.
 
-        Style:
-        - Chinese: warm, clear, useful, ordinary-reader language, not academic.
-        - English: faithful plain-language version of the same meaning.
-        - Explain what the study suggests, what it does not prove, and what a
-          cautious reader can take away.
-        - No personal medical advice.
+        Use only the title, abstract, source metadata, DOI/link, and legal
+        open-access link if provided. Do not invent sample size, methods,
+        results, harms, or causal claims that are not in the evidence.
+
+        Required style:
+        - Chinese plain_zh: at least 600 Chinese characters, warm, clear,
+          practical, written like an experienced health editor.
+        - English plain_en: at least 700 English characters, faithful to the
+          Chinese version.
+        - No empty paragraphs, no empty bullets, no screening-note language.
+        - Define technical terms briefly when needed.
+        - Make the result useful without making it sound like medical advice.
+
+        Required structure inside the prose:
+        - What this study asked.
+        - How the study was done.
+        - What it found.
+        - What it did not prove.
+        - What a careful reader can take away.
 
         Return strict JSON with:
         title_en, title_zh, description_en, description_zh,
         plain_en, plain_zh, takeaways_en, takeaways_zh,
-        why_relevant_en, why_relevant_zh.
+        why_relevant_en, why_relevant_zh, evidence_card.
+
+        evidence_card must contain:
+        question, population, intervention_or_exposure, comparison, outcomes,
+        main_findings, limits, reader_meaning.
+
+        takeaways_en and takeaways_zh must each contain at least 4 useful,
+        non-empty items.
 
         Source: {paper.source}
         Title: {paper.title}
@@ -496,7 +544,7 @@ def call_chat_completion(config: LLMConfig, prompt: str) -> dict[str, Any] | Non
             },
             {"role": "user", "content": prompt},
         ],
-        "max_tokens": 2200,
+        "max_tokens": 4200,
         "response_format": chat_response_format(config),
     }
     request = urllib.request.Request(
@@ -543,7 +591,7 @@ def call_openai_responses_fallback(config: LLMConfig, prompt: str) -> dict[str, 
     payload = {
         "model": config.model,
         "input": prompt,
-        "max_output_tokens": 2200,
+        "max_output_tokens": 4200,
         "text": {
             "format": {
                 "type": "json_schema",
@@ -603,6 +651,46 @@ def generate_article(prompt: str) -> dict[str, Any] | None:
     return call_openai_responses_fallback(config, prompt)
 
 
+def count_cjk(value: str) -> int:
+    return sum(1 for char in value if "\u4e00" <= char <= "\u9fff")
+
+
+def has_mojibake(value: str) -> bool:
+    markers = [
+        "\ufffd",
+        "\u00c3",
+        "\u00c2",
+        "\u935a",
+        "\u9286",
+        "\u940e",
+        "\u7d8b",
+        "\u20ac",
+    ]
+    return sum(value.count(marker) for marker in markers) >= 2
+
+
+def has_empty_markdown_bullets(value: str) -> bool:
+    return bool(re.search(r"(?m)^\s*[-*]\s*$", value))
+
+
+def clean_markdown_text(value: Any) -> str:
+    text = str(value or "").replace("\r\n", "\n").replace("\r", "\n").strip()
+    lines: list[str] = []
+    blank_seen = False
+    for raw_line in text.split("\n"):
+        line = raw_line.rstrip()
+        if re.match(r"^\s*[-*]\s*$", line):
+            continue
+        if not line.strip():
+            if not blank_seen:
+                lines.append("")
+            blank_seen = True
+            continue
+        lines.append(line)
+        blank_seen = False
+    return "\n".join(lines).strip()
+
+
 def article_quality_issues(article: dict[str, Any] | None) -> list[str]:
     issues: list[str] = []
     if not article:
@@ -616,29 +704,57 @@ def article_quality_issues(article: dict[str, Any] | None) -> list[str]:
         "plain_zh",
         "why_relevant_en",
         "why_relevant_zh",
+        "evidence_card",
     ]
-    missing = [key for key in required if not str(article.get(key, "")).strip()]
+    missing = [key for key in required if not article.get(key)]
     if missing:
         issues.append(f"missing fields: {', '.join(missing)}")
-    plain_text = f"{article.get('plain_en', '')}\n{article.get('plain_zh', '')}"
+    plain_en = clean_markdown_text(article.get("plain_en", ""))
+    plain_zh = clean_markdown_text(article.get("plain_zh", ""))
+    plain_text = f"{plain_en}\n{plain_zh}"
     blocked = [
         "This item appears relevant",
         "automated screening result",
         "Matched keywords",
         "system selected",
-        "被系统选中",
-        "命中关键词",
+        "Human review note",
+        "\u6a21\u578b\u8f93\u51fa\u6ca1\u6709\u5b8c\u5168\u901a\u8fc7\u8d28\u91cf\u68c0\u67e5",
+        "\u88ab\u7cfb\u7edf\u9009\u4e2d",
+        "\u547d\u4e2d\u5173\u952e\u8bcd",
     ]
     if any(phrase in plain_text for phrase in blocked):
         issues.append("contains blocked screening-note language")
-    if len(str(article.get("plain_en", ""))) < 450:
+    if has_mojibake(plain_text):
+        issues.append("contains broken encoding text")
+    if has_empty_markdown_bullets(plain_text):
+        issues.append("contains empty markdown bullets")
+    if len(plain_en) < 700:
         issues.append("English plain-language article is short")
-    if len(str(article.get("plain_zh", ""))) < 220:
+    if count_cjk(plain_zh) < 600:
         issues.append("Chinese plain-language article is short")
-    if len(article.get("takeaways_en", [])) < 2:
+    if len(normalize_takeaways(article.get("takeaways_en", []))) < 4:
         issues.append("English takeaways are incomplete")
-    if len(article.get("takeaways_zh", [])) < 2:
+    if len(normalize_takeaways(article.get("takeaways_zh", []))) < 4:
         issues.append("Chinese takeaways are incomplete")
+    card = article.get("evidence_card")
+    if not isinstance(card, dict):
+        issues.append("evidence card is missing")
+    else:
+        card_fields = [
+            "question",
+            "population",
+            "intervention_or_exposure",
+            "comparison",
+            "outcomes",
+            "main_findings",
+            "limits",
+            "reader_meaning",
+        ]
+        empty_card_fields = [
+            field for field in card_fields if not str(card.get(field, "")).strip()
+        ]
+        if empty_card_fields:
+            issues.append(f"evidence card missing fields: {', '.join(empty_card_fields)}")
     return issues
 
 
@@ -646,64 +762,27 @@ def is_valid_article(article: dict[str, Any] | None) -> bool:
     return not article_quality_issues(article)
 
 
-def reviewable_article(paper: PaperItem, article: dict[str, Any], quality_issues: list[str]) -> dict[str, Any]:
-    title_en = str(article.get("title_en") or paper.title).strip()
-    title_zh = str(article.get("title_zh") or f"研究速递：{paper.title}").strip()
-    description_en = str(
-        article.get("description_en")
-        or "A GLUCOLIT draft generated from PubMed/Europe PMC evidence for manual review."
-    ).strip()
-    description_zh = str(
-        article.get("description_zh")
-        or "这是一篇根据 PubMed/Europe PMC 可访问证据生成的糖前卫士待审核草稿。"
-    ).strip()
-    plain_en = str(article.get("plain_en") or "").strip()
-    plain_zh = str(article.get("plain_zh") or "").strip()
-    if not plain_zh:
-        plain_zh = (
-            "这篇草稿需要人工重点审核。系统已经找到相关研究，但模型生成的中文白话版不完整。"
-            "请根据下方原始标题、摘要和来源链接核对后再决定是否发布。"
-        )
-    if not plain_en:
-        plain_en = (
-            "This draft needs careful human review. The monitor found a relevant study, "
-            "but the generated English plain-language version was incomplete. Please "
-            "verify it against the source title, abstract, and links before publishing."
-        )
-
-    if quality_issues:
-        warning_zh = "【人工审核提醒】模型输出没有完全通过质量检查：" + "；".join(quality_issues) + "。"
-        warning_en = "Human review note: the model output did not fully pass quality checks: " + "; ".join(quality_issues) + "."
-        plain_zh = f"{warning_zh}\n\n{plain_zh}"
-        plain_en = f"{warning_en}\n\n{plain_en}"
-
-    takeaways_en = article.get("takeaways_en") or [
-        "Review the original abstract before publishing.",
-        "Do not treat this draft as medical advice.",
-    ]
-    takeaways_zh = article.get("takeaways_zh") or [
-        "发布前请先核对原始摘要。",
-        "本文仅供科普参考，不构成医疗建议。",
-    ]
-
-    return {
-        "title_en": title_en,
-        "title_zh": title_zh,
-        "description_en": description_en,
-        "description_zh": description_zh,
-        "plain_en": plain_en,
-        "plain_zh": plain_zh,
-        "takeaways_en": takeaways_en,
-        "takeaways_zh": takeaways_zh,
-        "why_relevant_en": str(
-            article.get("why_relevant_en")
-            or "The title or abstract matched GLUCOLIT topics such as prediabetes, insulin resistance, or lifestyle intervention."
-        ).strip(),
-        "why_relevant_zh": str(
-            article.get("why_relevant_zh")
-            or "标题或摘要命中了糖前卫士关注的主题，例如糖尿病前期、胰岛素抵抗或生活方式干预。"
-        ).strip(),
-    }
+def normalize_article(article: dict[str, Any]) -> dict[str, Any]:
+    normalized = dict(article)
+    for key in [
+        "title_en",
+        "title_zh",
+        "description_en",
+        "description_zh",
+        "plain_en",
+        "plain_zh",
+        "why_relevant_en",
+        "why_relevant_zh",
+    ]:
+        normalized[key] = clean_markdown_text(normalized.get(key, ""))
+    normalized["takeaways_en"] = normalize_takeaways(normalized.get("takeaways_en", []))
+    normalized["takeaways_zh"] = normalize_takeaways(normalized.get("takeaways_zh", []))
+    if isinstance(normalized.get("evidence_card"), dict):
+        normalized["evidence_card"] = {
+            key: clean_markdown_text(value)
+            for key, value in normalized["evidence_card"].items()
+        }
+    return normalized
 
 
 def normalize_takeaways(items: Any) -> list[str]:
@@ -730,7 +809,26 @@ def bullet_list(items: Any) -> str:
     return "\n".join(f"- {item}" for item in normalize_takeaways(items))
 
 
+def evidence_card_markdown(card: dict[str, Any]) -> str:
+    rows = [
+        ("研究问题 / Research question", "question"),
+        ("研究对象 / Population", "population"),
+        ("干预或暴露 / Intervention or exposure", "intervention_or_exposure"),
+        ("对照 / Comparison", "comparison"),
+        ("观察指标 / Outcomes", "outcomes"),
+        ("主要发现 / Main findings", "main_findings"),
+        ("局限性 / Limits", "limits"),
+        ("读者怎么理解 / Reader meaning", "reader_meaning"),
+    ]
+    return "\n".join(
+        f"- **{label}:** {clean_markdown_text(card.get(key, ''))}"
+        for label, key in rows
+        if clean_markdown_text(card.get(key, ""))
+    )
+
+
 def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft: bool) -> str:
+    article = normalize_article(article)
     title = f"{article['title_zh']} / {article['title_en']}"
     description = f"{article['description_zh']} {article['description_en']}"
     doi_line = f"- DOI: [{paper.doi}](https://doi.org/{paper.doi})\n" if paper.doi else ""
@@ -749,13 +847,17 @@ def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft
             "",
             "> 本文由 GLUCOLIT 根据 PubMed/Europe PMC/Unpaywall 可访问的题录、摘要和开放获取信息生成，仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。",
             "",
+            "## 审核用证据卡片",
+            "",
+            evidence_card_markdown(article.get("evidence_card", {})),
+            "",
             "## 中文白话版",
             "",
-            article["plain_zh"].strip(),
+            clean_markdown_text(article["plain_zh"]),
             "",
             "### 为什么和糖尿病前期有关？",
             "",
-            article["why_relevant_zh"].strip(),
+            clean_markdown_text(article["why_relevant_zh"]),
             "",
             "### 你可以带走的重点",
             "",
@@ -763,11 +865,11 @@ def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft
             "",
             "## English Plain-Language Version",
             "",
-            article["plain_en"].strip(),
+            clean_markdown_text(article["plain_en"]),
             "",
             "### Why This Matters for Prediabetes",
             "",
-            article["why_relevant_en"].strip(),
+            clean_markdown_text(article["why_relevant_en"]),
             "",
             "### Practical Takeaways",
             "",
@@ -915,7 +1017,7 @@ def run(args: argparse.Namespace) -> int:
         state["items"][item_id]["oa_url"] = paper.oa_url
         state["items"][item_id]["evidence"] = paper.evidence
         state["items"][item_id]["attempts"] = attempts + 1
-        if args.dry_run and not os.getenv("OPENAI_API_KEY"):
+        if args.dry_run and not (os.getenv("OPENAI_API_KEY") or os.getenv("KIMI_API_KEY")):
             print(f"Would create score={score}: {paper.title}")
             created_count += 1
             continue
@@ -931,15 +1033,17 @@ def run(args: argparse.Namespace) -> int:
             state["items"][item_id]["skip_reason"] = "OpenAI did not return an article"
             skipped_openai += 1
             continue
+        article = normalize_article(article)
         quality_issues = article_quality_issues(article)
-        article = reviewable_article(paper, article, quality_issues)
         if quality_issues:
             print(
-                "Write draft with quality warnings: "
+                "Skip because article failed GLUCOLIT quality gate: "
                 f"{paper.title} ({'; '.join(quality_issues)})"
             )
             state["items"][item_id]["quality_issues"] = quality_issues
+            state["items"][item_id]["skip_reason"] = "generated article failed quality gate"
             skipped_quality += 1
+            continue
         if args.dry_run:
             print(f"Would create score={score}: {paper.title}")
             created_count += 1
@@ -951,8 +1055,7 @@ def run(args: argparse.Namespace) -> int:
         state["items"][item_id]["generated"] = True
         state["items"][item_id]["path"] = str(path.relative_to(REPO_ROOT))
         state["items"][item_id].pop("skip_reason", None)
-        if not quality_issues:
-            state["items"][item_id].pop("quality_issues", None)
+        state["items"][item_id].pop("quality_issues", None)
         print(f"Created {path.relative_to(REPO_ROOT)}")
         time.sleep(args.sleep)
 
