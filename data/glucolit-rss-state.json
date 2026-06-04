@@ -1029,7 +1029,7 @@
       "score": 0,
       "matched": [],
       "created_at": "2026-06-03T09:45:17.162926+00:00",
-      "last_seen_at": "2026-06-03T09:45:17.162943+00:00",
+      "last_seen_at": "2026-06-04T03:54:04.677977+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "missing or too-short abstract"
@@ -1046,7 +1046,7 @@
       "score": 0,
       "matched": [],
       "created_at": "2026-06-03T09:45:17.163084+00:00",
-      "last_seen_at": "2026-06-03T09:45:17.163087+00:00",
+      "last_seen_at": "2026-06-04T03:54:04.678137+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 0 below min-score 6"
