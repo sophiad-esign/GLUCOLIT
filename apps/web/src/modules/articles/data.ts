@@ -64,19 +64,29 @@ const splitBilingualTitle = (title: string) => {
   };
 };
 
-const sectionBetween = (content: string, start: string, end?: string) => {
-  const startIndex = content.indexOf(start);
+const sectionBetweenAny = (
+  content: string,
+  starts: string[],
+  ends: string[] = [],
+) => {
+  const matches = starts
+    .map((start) => ({ start, index: content.indexOf(start) }))
+    .filter(({ index }) => index !== -1)
+    .sort((a, b) => a.index - b.index);
 
-  if (startIndex === -1) {
+  if (!matches[0]) {
     return "";
   }
 
-  const bodyStart = startIndex + start.length;
-  const endIndex = end ? content.indexOf(end, bodyStart) : -1;
+  const bodyStart = matches[0].index + matches[0].start.length;
+  const endIndex = ends
+    .map((end) => content.indexOf(end, bodyStart))
+    .filter((index) => index !== -1)
+    .sort((a, b) => a - b)[0];
   const raw =
-    endIndex === -1
-      ? content.slice(bodyStart)
-      : content.slice(bodyStart, endIndex);
+    typeof endIndex === "number"
+      ? content.slice(bodyStart, endIndex)
+      : content.slice(bodyStart);
 
   return raw
     .replace(/^#+\s+.+$/gm, "")
@@ -102,6 +112,12 @@ const metadataLine = (content: string, label: string) => {
   const regex = new RegExp(`^- ${label}:\\s*(.+)$`, "im");
   return content.match(regex)?.[1]?.trim();
 };
+
+const firstMetadataLink = (content: string, labels: string[]) =>
+  labels
+    .map((label) => metadataLine(content, label))
+    .map(markdownLinkUrl)
+    .find(Boolean);
 
 const markdownLinkUrl = (value?: string) =>
   value?.match(/\((https?:\/\/[^)]+)\)/)?.[1] ||
@@ -151,19 +167,24 @@ const toArticle = (
   >["items"][number],
 ): Article => {
   const { titleZh, titleEn } = splitBilingualTitle(item.title);
-  const bodyZh = sectionBetween(
+  const bodyZh = sectionBetweenAny(
     item.content,
-    "## 中文白话版",
-    "## Plain-English Version",
+    ["## 中文白话版"],
+    ["## English Plain-Language Version", "## Plain-English Version"],
   );
-  const bodyEn = sectionBetween(
+  const bodyEn = sectionBetweenAny(
     item.content,
-    "## Plain-English Version",
-    "## Source",
+    ["## English Plain-Language Version", "## Plain-English Version"],
+    ["## Source"],
   );
   const source =
     metadataLine(item.content, "Journal/source") || SOURCE_FALLBACK;
-  const originalUrl = markdownLinkUrl(metadataLine(item.content, "Link"));
+  const originalUrl = firstMetadataLink(item.content, [
+    "Link",
+    "PubMed",
+    "Open-access link",
+    "DOI",
+  ]);
   const doi = inferDoi(item.content);
   const textForLabels = `${item.title} ${item.description} ${bodyZh} ${bodyEn}`;
 
