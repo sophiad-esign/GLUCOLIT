@@ -46,10 +46,10 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4o-mini' }}
           KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
-          KIMI_MODEL: ${{ vars.KIMI_MODEL || 'kimi-k2.6' }}
+          KIMI_MODEL: ${{ vars.KIMI_MODEL || 'moonshot-v1-8k' }}
           KIMI_BASE_URL: ${{ vars.KIMI_BASE_URL || 'https://api.moonshot.ai/v1' }}
           UNPAYWALL_EMAIL: ${{ vars.UNPAYWALL_EMAIL || 'contact@glucolit.vercel.app' }}
-        run: python scripts/glucolit_literature_monitor.py --status published --draft --min-score 6 --max-created 2 --require-openai
+        run: python scripts/glucolit_literature_monitor.py --status published --draft --limit-per-feed 2 --min-score 6 --max-created 2 --max-llm-attempts 4 --require-openai
 
       - name: Write run summary
         if: always()

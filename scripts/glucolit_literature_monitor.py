@@ -433,7 +433,7 @@ def llm_config() -> LLMConfig | None:
             provider="Kimi",
             api_key=kimi_key,
             base_url=os.getenv("KIMI_BASE_URL", "https://api.moonshot.ai/v1").rstrip("/"),
-            model=os.getenv("KIMI_MODEL", "kimi-k2.6"),
+            model=os.getenv("KIMI_MODEL", "moonshot-v1-8k"),
             supports_responses=False,
             strict_json_schema=False,
         )
@@ -493,7 +493,7 @@ def call_chat_completion(config: LLMConfig, prompt: str) -> dict[str, Any] | Non
         method="POST",
     )
     try:
-        with urllib.request.urlopen(request, timeout=120) as response:
+        with urllib.request.urlopen(request, timeout=45) as response:
             data = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")[:1200]
@@ -547,7 +547,7 @@ def call_openai_responses_fallback(config: LLMConfig, prompt: str) -> dict[str, 
         method="POST",
     )
     try:
-        with urllib.request.urlopen(request, timeout=120) as response:
+        with urllib.request.urlopen(request, timeout=45) as response:
             data = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")[:1200]
@@ -736,6 +736,7 @@ def run(args: argparse.Namespace) -> int:
     skipped_no_abstract = 0
     skipped_openai = 0
     skipped_quality = 0
+    llm_attempts = 0
 
     for paper in candidate_papers(args.limit_per_feed):
         if args.max_created is not None and created_count >= args.max_created:
@@ -788,6 +789,11 @@ def run(args: argparse.Namespace) -> int:
             created_count += 1
             continue
 
+        if args.max_llm_attempts is not None and llm_attempts >= args.max_llm_attempts:
+            print(f"Reached max-llm-attempts={args.max_llm_attempts}; stopping.")
+            break
+
+        llm_attempts += 1
         article = generate_article(build_prompt(paper, matched))
         if article is None:
             print(f"Skip because OpenAI did not return an article: {paper.title}")
@@ -824,6 +830,7 @@ def run(args: argparse.Namespace) -> int:
                 "\n### Run result\n\n"
                 f"- Scanned candidate papers: {scanned}\n"
                 f"- Created draft articles: {reported_created}\n"
+                f"- LLM generation attempts: {llm_attempts}\n"
                 f"- Skipped because abstract was missing/short: {skipped_no_abstract}\n"
                 f"- Skipped by relevance score: {skipped_score}\n"
                 f"- Skipped because OpenAI returned no article: {skipped_openai}\n"
@@ -846,6 +853,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--limit-per-feed", type=int, default=5)
     parser.add_argument("--max-created", type=int, default=None)
+    parser.add_argument("--max-llm-attempts", type=int, default=None)
     parser.add_argument("--min-score", type=int, default=6)
     parser.add_argument("--min-abstract-chars", type=int, default=450)
     parser.add_argument("--status", choices=("draft", "published"), default="published")
