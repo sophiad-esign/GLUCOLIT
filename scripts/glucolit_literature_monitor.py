@@ -61,6 +61,18 @@ JOURNALS = [
     ("PLOS Medicine", '"PLoS Med"[Journal]'),
 ]
 
+BROAD_SOURCES = [
+    (
+        "PubMed high-yield prediabetes",
+        (
+            '(prediabetes OR "prediabetic state" OR "impaired fasting glucose" OR '
+            '"impaired glucose tolerance") AND ("lifestyle intervention" OR '
+            '"lifestyle modification" OR "diabetes prevention" OR diet OR exercise OR '
+            '"physical activity" OR "weight loss" OR "insulin resistance")'
+        ),
+    ),
+]
+
 TOPIC_QUERY = (
     '("prediabetic state"[MeSH Terms] OR prediabetes OR prediabetic OR '
     '"impaired fasting glucose" OR "impaired glucose tolerance" OR '
@@ -262,7 +274,7 @@ def parse_pubmed_articles(xml_text: str, requested_source: str) -> list[PaperIte
     return papers
 
 
-def search_pubmed(source: str, journal_query: str, limit: int) -> list[PaperItem]:
+def search_pubmed_term(source: str, term: str, limit: int) -> list[PaperItem]:
     search_url = pubmed_url(
         "esearch.fcgi",
         {
@@ -270,7 +282,7 @@ def search_pubmed(source: str, journal_query: str, limit: int) -> list[PaperItem
             "retmode": "json",
             "retmax": str(limit),
             "sort": "pub date",
-            "term": f"({journal_query}) AND {TOPIC_QUERY}",
+            "term": term,
         },
     )
     search = json.loads(fetch_text(search_url))
@@ -282,6 +294,10 @@ def search_pubmed(source: str, journal_query: str, limit: int) -> list[PaperItem
         {"db": "pubmed", "retmode": "xml", "id": ",".join(ids)},
     )
     return parse_pubmed_articles(fetch_text(fetch_url, accept="text/xml,*/*"), source)
+
+
+def search_pubmed(source: str, journal_query: str, limit: int) -> list[PaperItem]:
+    return search_pubmed_term(source, f"({journal_query}) AND {TOPIC_QUERY}", limit)
 
 
 def europe_pmc_metadata(paper: PaperItem) -> dict[str, Any]:
@@ -706,6 +722,22 @@ def write_article(paper: PaperItem, item_id: str, article: dict[str, Any], statu
 def candidate_papers(limit_per_journal: int) -> list[PaperItem]:
     papers: list[PaperItem] = []
     seen: set[str] = set()
+    broad_limit = max(limit_per_journal * 8, 12)
+    for source, query in BROAD_SOURCES:
+        print(f"Searching PubMed: {source}")
+        try:
+            source_papers = search_pubmed_term(source, query, broad_limit)
+        except Exception as exc:  # noqa: BLE001
+            print(f"PubMed search failed for {source}: {exc}")
+            source_papers = []
+        for paper in source_papers:
+            item_id = stable_id(paper.link, paper.title)
+            if item_id in seen:
+                continue
+            seen.add(item_id)
+            papers.append(paper)
+            time.sleep(0.1)
+
     for source, journal_query in JOURNALS:
         print(f"Searching PubMed: {source}")
         try:
@@ -720,7 +752,15 @@ def candidate_papers(limit_per_journal: int) -> list[PaperItem]:
             seen.add(item_id)
             papers.append(paper)
             time.sleep(0.1)
-    return papers
+    return sorted(
+        papers,
+        key=lambda paper: (
+            relevance_score(paper.title, paper.summary)[0],
+            len(paper.summary),
+            paper.published_at,
+        ),
+        reverse=True,
+    )
 
 
 def run(args: argparse.Namespace) -> int:
