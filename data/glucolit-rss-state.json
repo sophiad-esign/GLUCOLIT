@@ -303,10 +303,14 @@
     },
     "787ac54855be75c3": {
       "title": "The Effectiveness of Diabetes Prevention Programs Delivered in Primary Care for Individuals With Prediabetes or at Risk of Developing Type 2 Diabetes: A Systematic Review and Meta-analysis.",
-      "source": "PubMed prediabetes via PubMed (Diabetes care)",
+      "source": "PubMed high-yield prediabetes via PubMed (Diabetes care)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42030121/",
+      "pmid": "42030121",
+      "doi": "10.2337/dc25-1877",
+      "oa_url": "https://doi.org/10.2337/dc25-1877",
+      "evidence": "Europe PMC abstract + open-access full-text link",
       "published_at": "2026-06-01",
-      "score": 35,
+      "score": 39,
       "matched": [
         "prediabetes",
         "diabetes prevention",
@@ -319,10 +323,10 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:54:10.779990+00:00",
-      "last_seen_at": "2026-06-03T09:26:59.851971+00:00",
-      "attempts": 2,
+      "last_seen_at": "2026-06-04T04:13:22.159294+00:00",
+      "attempts": 3,
       "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "skip_reason": "generated article failed quality gate"
     },
     "99706f7150cc4a09": {
       "title": "Insulin Hypersecretion and Increased Ectopic Fat in South Asian American Adolescents and Young Adults Compared With White and African American Peers: The CHARISMA Study.",
@@ -497,21 +501,25 @@
     },
     "3bcce78c62bd51fa": {
       "title": "Prevalence and factors associated with isolated systolic hypertension among middle-aged adults and older Filipinos: a population-based study.",
-      "source": "PubMed prediabetes via PubMed (Blood pressure)",
+      "source": "PubMed high-yield prediabetes via PubMed (Blood pressure)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/41666111/",
+      "pmid": "41666111",
+      "doi": "10.1080/08037051.2026.2629094",
+      "oa_url": "https://doi.org/10.1080/08037051.2026.2629094",
+      "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-12-01",
-      "score": 17,
+      "score": 25,
       "matched": [
         "pre-diabetes",
+        "prediabetic",
         "lifestyle modification",
         "diet",
         "nutrition"
       ],
       "created_at": "2026-06-03T08:55:08.939931+00:00",
-      "last_seen_at": "2026-06-03T09:26:01.948578+00:00",
-      "attempts": 1,
-      "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "last_seen_at": "2026-06-04T04:13:43.772040+00:00",
+      "attempts": 2,
+      "generated": false
     },
     "2e7a61d9d590dd0b": {
       "title": "Sex Differences in Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD): Epidemiology, Pathophysiology, and Clinical Implications.",
@@ -567,22 +575,27 @@
     },
     "22aede4f94d35896": {
       "title": "Physical activity and glycosylphosphatidylinositol-specific phospholipase D1 (GPLD1) plasma levels in different age cohorts.",
-      "source": "PubMed prediabetes via PubMed (PloS one)",
+      "source": "PubMed high-yield prediabetes via PubMed (PloS one)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42224196/",
+      "pmid": "42224196",
+      "doi": "10.1371/journal.pone.0349883",
+      "oa_url": "https://doi.org/10.1371/journal.pone.0349883",
+      "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-01-01",
-      "score": 22,
+      "score": 30,
       "matched": [
         "prediabetes",
+        "prediabetic",
         "impaired glucose tolerance",
         "exercise",
         "physical activity",
         "glucose"
       ],
       "created_at": "2026-06-03T08:55:29.774037+00:00",
-      "last_seen_at": "2026-06-03T09:26:30.866910+00:00",
-      "attempts": 1,
+      "last_seen_at": "2026-06-04T04:13:32.774185+00:00",
+      "attempts": 2,
       "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "skip_reason": "generated article failed quality gate"
     },
     "3d1e95daa5c8cdca": {
       "title": "Geographic Analysis of Access to the National Diabetes Prevention Program in New York State.",
@@ -602,10 +615,14 @@
     },
     "1f73adaeb28b8134": {
       "title": "Identifying Promising Practices in Lifestyle Intervention Programs for the Prediabetes Population: A Meta-Analysis and Meta-Regression of Randomized Controlled Trials.",
-      "source": "PubMed prediabetes via PubMed (Worldviews on evidence-based nursing)",
+      "source": "PubMed high-yield prediabetes via PubMed (Worldviews on evidence-based nursing)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42163067/",
+      "pmid": "42163067",
+      "doi": "10.1111/wvn.70152",
+      "oa_url": "https://doi.org/10.1111/wvn.70152",
+      "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-06-01",
-      "score": 47,
+      "score": 52,
       "matched": [
         "prediabetes",
         "insulin resistance",
@@ -620,10 +637,10 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:55:39.711713+00:00",
-      "last_seen_at": "2026-06-03T09:26:41.831997+00:00",
-      "attempts": 1,
+      "last_seen_at": "2026-06-04T04:13:01.216372+00:00",
+      "attempts": 2,
       "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "skip_reason": "generated article failed quality gate"
     },
     "d80c4f32a93ba21d": {
       "title": "Shifts in waist-to-height ratio categories within tirzepatide groups: a post-hoc analysis of SURMOUNT-1.",
@@ -679,12 +696,17 @@
     },
     "f70212db52df0a41": {
       "title": "Data-driven cluster analysis of adults with prediabetes: Findings from the Japan diabetes prevention study.",
-      "source": "PubMed prediabetes via PubMed (Journal of diabetes investigation)",
+      "source": "PubMed high-yield prediabetes via PubMed (Journal of diabetes investigation)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/41995253/",
+      "pmid": "41995253",
+      "doi": "10.1111/jdi.70302",
+      "oa_url": "https://doi.org/10.1111/jdi.70302",
+      "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-06-01",
-      "score": 39,
+      "score": 50,
       "matched": [
         "prediabetes",
+        "prediabetic",
         "impaired glucose tolerance",
         "insulin resistance",
         "diabetes prevention",
@@ -695,10 +717,10 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:56:00.448609+00:00",
-      "last_seen_at": "2026-06-03T09:27:09.771819+00:00",
-      "attempts": 1,
+      "last_seen_at": "2026-06-04T04:13:11.389516+00:00",
+      "attempts": 2,
       "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "skip_reason": "generated article failed quality gate"
     },
     "cf42a0542c4a05f8": {
       "title": "[Editorial] Diabetes-related complications: an evolving spectrum",
