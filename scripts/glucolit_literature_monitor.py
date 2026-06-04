@@ -706,8 +706,28 @@ def reviewable_article(paper: PaperItem, article: dict[str, Any], quality_issues
     }
 
 
-def bullet_list(items: list[str]) -> str:
-    return "\n".join(f"- {item.strip()}" for item in items if item.strip())
+def normalize_takeaways(items: Any) -> list[str]:
+    if isinstance(items, list):
+        return [str(item).strip() for item in items if str(item).strip()]
+    if isinstance(items, str):
+        lines = [
+            line.strip(" -•\t")
+            for line in re.split(r"[\r\n]+", items)
+            if line.strip(" -•\t")
+        ]
+        if len(lines) > 1:
+            return lines
+        sentences = [
+            sentence.strip()
+            for sentence in re.split(r"(?<=[.!?。！？])\s+", items.strip())
+            if sentence.strip()
+        ]
+        return sentences or ([items.strip()] if items.strip() else [])
+    return []
+
+
+def bullet_list(items: Any) -> str:
+    return "\n".join(f"- {item}" for item in normalize_takeaways(items))
 
 
 def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft: bool) -> str:
@@ -715,52 +735,55 @@ def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft
     description = f"{article['description_zh']} {article['description_en']}"
     doi_line = f"- DOI: [{paper.doi}](https://doi.org/{paper.doi})\n" if paper.doi else ""
     oa_line = f"- Open-access link: [{paper.oa_url}]({paper.oa_url})\n" if paper.oa_url else ""
-    return textwrap.dedent(
-        f"""\
-        ---
-        title: "{md_escape(title[:180])}"
-        description: "{md_escape(description[:260])}"
-        publishedAt: {paper.published_at}
-        tags: {yaml_list(["medical-research", "prediabetes", "lifestyle"])}
-        thumbnail: {THUMBNAIL}
-        status: {status}
-        draft: {str(draft).lower()}
-        ---
-
-        > 本文由 GLUCOLIT 根据 PubMed/Europe PMC/Unpaywall 可访问的题录、摘要和开放获取信息生成，仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。
-
-        ## 中文白话版
-
-        {article["plain_zh"].strip()}
-
-        ### 为什么和糖尿病前期有关？
-
-        {article["why_relevant_zh"].strip()}
-
-        ### 你可以带走的重点
-
-        {bullet_list(article.get("takeaways_zh", []))}
-
-        ## English Plain-Language Version
-
-        {article["plain_en"].strip()}
-
-        ### Why This Matters for Prediabetes
-
-        {article["why_relevant_en"].strip()}
-
-        ### Practical Takeaways
-
-        {bullet_list(article.get("takeaways_en", []))}
-
-        ## Source
-
-        - Journal/source: {paper.source}
-        - Evidence used: {paper.evidence}
-        - Original title: {paper.title}
-        - PubMed: [{paper.link}]({paper.link})
-        {doi_line}{oa_line}- Published or indexed date: {paper.published_at}
-        """
+    return "\n".join(
+        [
+            "---",
+            f'title: "{md_escape(title[:180])}"',
+            f'description: "{md_escape(description[:260])}"',
+            f"publishedAt: {paper.published_at}",
+            f'tags: {yaml_list(["medical-research", "prediabetes", "lifestyle"])}',
+            f"thumbnail: {THUMBNAIL}",
+            f"status: {status}",
+            f"draft: {str(draft).lower()}",
+            "---",
+            "",
+            "> 本文由 GLUCOLIT 根据 PubMed/Europe PMC/Unpaywall 可访问的题录、摘要和开放获取信息生成，仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。",
+            "",
+            "## 中文白话版",
+            "",
+            article["plain_zh"].strip(),
+            "",
+            "### 为什么和糖尿病前期有关？",
+            "",
+            article["why_relevant_zh"].strip(),
+            "",
+            "### 你可以带走的重点",
+            "",
+            bullet_list(article.get("takeaways_zh", [])),
+            "",
+            "## English Plain-Language Version",
+            "",
+            article["plain_en"].strip(),
+            "",
+            "### Why This Matters for Prediabetes",
+            "",
+            article["why_relevant_en"].strip(),
+            "",
+            "### Practical Takeaways",
+            "",
+            bullet_list(article.get("takeaways_en", [])),
+            "",
+            "## Source",
+            "",
+            f"- Journal/source: {paper.source}",
+            f"- Evidence used: {paper.evidence}",
+            f"- Original title: {paper.title}",
+            f"- PubMed: [{paper.link}]({paper.link})",
+            doi_line.rstrip(),
+            oa_line.rstrip(),
+            f"- Published or indexed date: {paper.published_at}",
+            "",
+        ]
     )
 
 
