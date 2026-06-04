@@ -603,9 +603,10 @@ def generate_article(prompt: str) -> dict[str, Any] | None:
     return call_openai_responses_fallback(config, prompt)
 
 
-def is_valid_article(article: dict[str, Any] | None) -> bool:
+def article_quality_issues(article: dict[str, Any] | None) -> list[str]:
+    issues: list[str] = []
     if not article:
-        return False
+        return ["LLM returned no article object"]
     required = [
         "title_en",
         "title_zh",
@@ -616,8 +617,9 @@ def is_valid_article(article: dict[str, Any] | None) -> bool:
         "why_relevant_en",
         "why_relevant_zh",
     ]
-    if any(not str(article.get(key, "")).strip() for key in required):
-        return False
+    missing = [key for key in required if not str(article.get(key, "")).strip()]
+    if missing:
+        issues.append(f"missing fields: {', '.join(missing)}")
     plain_text = f"{article.get('plain_en', '')}\n{article.get('plain_zh', '')}"
     blocked = [
         "This item appears relevant",
@@ -628,14 +630,80 @@ def is_valid_article(article: dict[str, Any] | None) -> bool:
         "命中关键词",
     ]
     if any(phrase in plain_text for phrase in blocked):
-        return False
+        issues.append("contains blocked screening-note language")
     if len(str(article.get("plain_en", ""))) < 450:
-        return False
+        issues.append("English plain-language article is short")
     if len(str(article.get("plain_zh", ""))) < 220:
-        return False
-    return len(article.get("takeaways_en", [])) >= 2 and len(
-        article.get("takeaways_zh", [])
-    ) >= 2
+        issues.append("Chinese plain-language article is short")
+    if len(article.get("takeaways_en", [])) < 2:
+        issues.append("English takeaways are incomplete")
+    if len(article.get("takeaways_zh", [])) < 2:
+        issues.append("Chinese takeaways are incomplete")
+    return issues
+
+
+def is_valid_article(article: dict[str, Any] | None) -> bool:
+    return not article_quality_issues(article)
+
+
+def reviewable_article(paper: PaperItem, article: dict[str, Any], quality_issues: list[str]) -> dict[str, Any]:
+    title_en = str(article.get("title_en") or paper.title).strip()
+    title_zh = str(article.get("title_zh") or f"研究速递：{paper.title}").strip()
+    description_en = str(
+        article.get("description_en")
+        or "A GLUCOLIT draft generated from PubMed/Europe PMC evidence for manual review."
+    ).strip()
+    description_zh = str(
+        article.get("description_zh")
+        or "这是一篇根据 PubMed/Europe PMC 可访问证据生成的糖前卫士待审核草稿。"
+    ).strip()
+    plain_en = str(article.get("plain_en") or "").strip()
+    plain_zh = str(article.get("plain_zh") or "").strip()
+    if not plain_zh:
+        plain_zh = (
+            "这篇草稿需要人工重点审核。系统已经找到相关研究，但模型生成的中文白话版不完整。"
+            "请根据下方原始标题、摘要和来源链接核对后再决定是否发布。"
+        )
+    if not plain_en:
+        plain_en = (
+            "This draft needs careful human review. The monitor found a relevant study, "
+            "but the generated English plain-language version was incomplete. Please "
+            "verify it against the source title, abstract, and links before publishing."
+        )
+
+    if quality_issues:
+        warning_zh = "【人工审核提醒】模型输出没有完全通过质量检查：" + "；".join(quality_issues) + "。"
+        warning_en = "Human review note: the model output did not fully pass quality checks: " + "; ".join(quality_issues) + "."
+        plain_zh = f"{warning_zh}\n\n{plain_zh}"
+        plain_en = f"{warning_en}\n\n{plain_en}"
+
+    takeaways_en = article.get("takeaways_en") or [
+        "Review the original abstract before publishing.",
+        "Do not treat this draft as medical advice.",
+    ]
+    takeaways_zh = article.get("takeaways_zh") or [
+        "发布前请先核对原始摘要。",
+        "本文仅供科普参考，不构成医疗建议。",
+    ]
+
+    return {
+        "title_en": title_en,
+        "title_zh": title_zh,
+        "description_en": description_en,
+        "description_zh": description_zh,
+        "plain_en": plain_en,
+        "plain_zh": plain_zh,
+        "takeaways_en": takeaways_en,
+        "takeaways_zh": takeaways_zh,
+        "why_relevant_en": str(
+            article.get("why_relevant_en")
+            or "The title or abstract matched GLUCOLIT topics such as prediabetes, insulin resistance, or lifestyle intervention."
+        ).strip(),
+        "why_relevant_zh": str(
+            article.get("why_relevant_zh")
+            or "标题或摘要命中了糖前卫士关注的主题，例如糖尿病前期、胰岛素抵抗或生活方式干预。"
+        ).strip(),
+    }
 
 
 def bullet_list(items: list[str]) -> str:
@@ -840,11 +908,15 @@ def run(args: argparse.Namespace) -> int:
             state["items"][item_id]["skip_reason"] = "OpenAI did not return an article"
             skipped_openai += 1
             continue
-        if not is_valid_article(article):
-            print(f"Skip incomplete generated article: {paper.title}")
-            state["items"][item_id]["skip_reason"] = "generated article failed quality gate"
+        quality_issues = article_quality_issues(article)
+        article = reviewable_article(paper, article, quality_issues)
+        if quality_issues:
+            print(
+                "Write draft with quality warnings: "
+                f"{paper.title} ({'; '.join(quality_issues)})"
+            )
+            state["items"][item_id]["quality_issues"] = quality_issues
             skipped_quality += 1
-            continue
         if args.dry_run:
             print(f"Would create score={score}: {paper.title}")
             created_count += 1
@@ -856,6 +928,8 @@ def run(args: argparse.Namespace) -> int:
         state["items"][item_id]["generated"] = True
         state["items"][item_id]["path"] = str(path.relative_to(REPO_ROOT))
         state["items"][item_id].pop("skip_reason", None)
+        if not quality_issues:
+            state["items"][item_id].pop("quality_issues", None)
         print(f"Created {path.relative_to(REPO_ROOT)}")
         time.sleep(args.sleep)
 
