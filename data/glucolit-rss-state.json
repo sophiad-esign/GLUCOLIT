@@ -270,20 +270,28 @@
     },
     "36132a6815c1fee5": {
       "title": "Progression to Diabetes by Adults With Prediabetes Who Use the National Diabetes Prevention Program: A Natural Experiment.",
-      "source": "PubMed prediabetes via PubMed (Diabetes care)",
+      "source": "PubMed high-yield prediabetes via PubMed (Diabetes care)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42227951/",
+      "pmid": "42227951",
+      "doi": "10.2337/dc25-2485",
+      "oa_url": "https://doi.org/10.2337/dc25-2485",
+      "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-06-02",
-      "score": 16,
+      "score": 25,
       "matched": [
         "prediabetes",
         "diabetes prevention",
-        "lifestyle intervention"
+        "lifestyle intervention",
+        "national diabetes prevention program"
       ],
       "created_at": "2026-06-03T08:53:57.989204+00:00",
-      "last_seen_at": "2026-06-03T09:26:24.326433+00:00",
-      "attempts": 2,
+      "last_seen_at": "2026-06-04T18:30:42.803414+00:00",
+      "attempts": 3,
       "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "quality_issues": [
+        "Chinese plain-language article is short"
+      ],
+      "skip_reason": "generated article failed quality gate"
     },
     "1241c3afeddbbd92": {
       "title": "Comment on Echouffo-Tcheugui et al. Is the Current Lifestyle Modification Approach to Diabetes Prevention in the U.S. a Success? Diabetes Care 2025;48:863-870.",
@@ -521,9 +529,13 @@
         "nutrition"
       ],
       "created_at": "2026-06-03T08:55:08.939931+00:00",
-      "last_seen_at": "2026-06-04T04:13:43.772040+00:00",
-      "attempts": 2,
-      "generated": false
+      "last_seen_at": "2026-06-04T18:30:18.216268+00:00",
+      "attempts": 3,
+      "generated": false,
+      "quality_issues": [
+        "Chinese plain-language article is short"
+      ],
+      "skip_reason": "generated article failed quality gate"
     },
     "2e7a61d9d590dd0b": {
       "title": "Sex Differences in Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD): Epidemiology, Pathophysiology, and Clinical Implications.",
@@ -583,7 +595,7 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42224196/",
       "pmid": "42224196",
       "doi": "10.1371/journal.pone.0349883",
-      "oa_url": "https://doi.org/10.1371/journal.pone.0349883",
+      "oa_url": "https://europepmc.org/articles/PMC13225414",
       "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-01-01",
       "score": 30,
@@ -596,9 +608,12 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:55:29.774037+00:00",
-      "last_seen_at": "2026-06-04T04:13:32.774185+00:00",
-      "attempts": 2,
+      "last_seen_at": "2026-06-04T18:29:57.976257+00:00",
+      "attempts": 3,
       "generated": false,
+      "quality_issues": [
+        "Chinese plain-language article is short"
+      ],
       "skip_reason": "generated article failed quality gate"
     },
     "3d1e95daa5c8cdca": {
@@ -1877,6 +1892,56 @@
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 3 below min-score 6"
+    },
+    "cf7e60fe5fdc7a9b": {
+      "title": "Nature vs nurture of glucose homeostasis trajectories in children from the ALSPAC study.",
+      "source": "PubMed high-yield prediabetes via PubMed (Diabetologia)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41986816/",
+      "pmid": "41986816",
+      "doi": "10.1007/s00125-026-06722-5",
+      "oa_url": "https://doi.org/10.1007/s00125-026-06722-5",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "published_at": "2026-07-01",
+      "score": 35,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "insulin resistance",
+        "diet",
+        "physical activity",
+        "glucose",
+        "glycaemic",
+        "hba1c"
+      ],
+      "created_at": "2026-06-04T18:29:39.634424+00:00",
+      "last_seen_at": "2026-06-04T18:29:39.634439+00:00",
+      "attempts": 1,
+      "generated": false,
+      "quality_issues": [
+        "Chinese plain-language article is short"
+      ],
+      "skip_reason": "generated article failed quality gate"
+    },
+    "f32c813eed518e00": {
+      "title": "Maternal and fetal genetic predispositions to insulin deficiency and resistance affect fetal growth through distinct pathways.",
+      "source": "PubMed high-yield prediabetes via PubMed (Diabetologia)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41634175/",
+      "pmid": "41634175",
+      "doi": "10.1007/s00125-026-06669-7",
+      "oa_url": "https://doi.org/10.1007/s00125-026-06669-7",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "published_at": "2026-07-01",
+      "score": 21,
+      "matched": [
+        "impaired fasting glucose",
+        "insulin resistance",
+        "insulin sensitivity",
+        "glucose"
+      ],
+      "created_at": "2026-06-04T18:31:03.384611+00:00",
+      "last_seen_at": "2026-06-04T18:31:03.384627+00:00",
+      "attempts": 1,
+      "generated": false
     }
   }
 }
