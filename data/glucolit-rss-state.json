@@ -323,10 +323,14 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:54:10.779990+00:00",
-      "last_seen_at": "2026-06-04T04:13:22.159294+00:00",
-      "attempts": 3,
-      "generated": false,
-      "skip_reason": "generated article failed quality gate"
+      "last_seen_at": "2026-06-04T05:22:14.795390+00:00",
+      "attempts": 4,
+      "generated": true,
+      "quality_issues": [
+        "English plain-language article is short",
+        "Chinese plain-language article is short"
+      ],
+      "path": "packages/cms/src/collections/blog/content/the-effectiveness-of-diabetes-prevention-programs-delivered-in-primary-c-787ac548/en.mdx"
     },
     "99706f7150cc4a09": {
       "title": "Insulin Hypersecretion and Increased Ectopic Fat in South Asian American Adolescents and Young Adults Compared With White and African American Peers: The CHARISMA Study.",
@@ -637,10 +641,14 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:55:39.711713+00:00",
-      "last_seen_at": "2026-06-04T04:13:01.216372+00:00",
-      "attempts": 2,
-      "generated": false,
-      "skip_reason": "generated article failed quality gate"
+      "last_seen_at": "2026-06-04T05:22:04.299337+00:00",
+      "attempts": 3,
+      "generated": true,
+      "quality_issues": [
+        "English plain-language article is short",
+        "Chinese plain-language article is short"
+      ],
+      "path": "packages/cms/src/collections/blog/content/identifying-promising-practices-in-lifestyle-intervention-programs-for-t-1f73adae/en.mdx"
     },
     "d80c4f32a93ba21d": {
       "title": "Shifts in waist-to-height ratio categories within tirzepatide groups: a post-hoc analysis of SURMOUNT-1.",
