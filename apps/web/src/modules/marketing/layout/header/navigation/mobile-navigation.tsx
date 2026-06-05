@@ -19,7 +19,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@workspace/ui-web/sheet";
 
 import { pathsConfig } from "~/config/paths";
 import { TurboLink } from "~/modules/common/turbo-link";
-import { CtaButton } from "~/modules/marketing/layout/cta-button";
 
 import { Hamburger } from "./hamburger";
 import { Item } from "./navigation";
@@ -96,7 +95,6 @@ export const MobileNavigation = ({ links }: NavigationProps) => {
           >
             {t("marketing:contact.cta")}
           </TurboLink>
-          <CtaButton />
         </div>
       </SheetContent>
     </Sheet>

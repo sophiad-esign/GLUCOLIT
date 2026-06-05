@@ -88,7 +88,7 @@ const links = [
       },
       {
         title: "marketing:blog.label",
-        href: pathsConfig.marketing.blog.index,
+        href: pathsConfig.marketing.articles.index,
       },
     ],
   },
@@ -123,7 +123,9 @@ export const Footer = async () => {
               aria-label={t("home")}
             >
               <Icons.Logo className="text-primary h-8" />
-              <Icons.LogoText className="text-foreground h-4" />
+              <span className="text-xl font-bold tracking-normal text-slate-950 dark:text-white">
+                GLUCOLIT
+              </span>
             </TurboLink>
 
             <p className="text-muted-foreground text-sm text-pretty">

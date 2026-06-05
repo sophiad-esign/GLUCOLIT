@@ -6,7 +6,6 @@ import { Icons } from "@workspace/ui-web/icons";
 import { pathsConfig } from "~/config/paths";
 import { ThemeControls } from "~/modules/common/theme";
 import { TurboLink } from "~/modules/common/turbo-link";
-import { CtaButton } from "~/modules/marketing/layout/cta-button";
 
 import { MobileNavigation } from "./navigation/mobile-navigation";
 import { Navigation } from "./navigation/navigation";
@@ -82,7 +81,7 @@ const links = [
   },
   {
     label: "marketing:blog.label",
-    href: pathsConfig.marketing.blog.index,
+    href: pathsConfig.marketing.articles.index,
   },
 ] as const;
 
@@ -97,14 +96,15 @@ export const Header = () => {
           aria-label={t("home")}
         >
           <Icons.Logo className="text-primary h-8" />
-          <Icons.LogoText className="text-foreground h-4" />
+          <span className="text-xl font-bold tracking-normal text-slate-950 dark:text-white">
+            GLUCOLIT
+          </span>
         </TurboLink>
 
         <Navigation links={links} />
 
         <div className="flex items-center justify-center lg:gap-2">
           <ThemeControls />
-          <CtaButton className="hidden lg:inline-flex" />
           <MobileNavigation links={links} />
         </div>
       </div>

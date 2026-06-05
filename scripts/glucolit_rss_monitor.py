@@ -59,10 +59,13 @@ PUBMED_FALLBACK_QUERIES = {
     ),
 }
 
-THUMBNAIL = (
-    "https://images.unsplash.com/photo-1576671081837-49000212a370"
-    "?q=80&w=1800&auto=format&fit=crop"
-)
+THUMBNAILS = [
+    "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
+]
 
 POSITIVE_KEYWORDS = {
     "prediabetes": 6,
@@ -313,6 +316,12 @@ def yaml_list(values: list[str]) -> str:
     return "[" + ", ".join(values) + "]"
 
 
+def thumbnail_for_item(item: FeedItem) -> str:
+    seed = item.link or item.title
+    index = int(hashlib.sha256(seed.encode("utf-8")).hexdigest()[:8], 16)
+    return THUMBNAILS[index % len(THUMBNAILS)]
+
+
 def build_prompt(item: FeedItem, matched: list[str]) -> str:
     return textwrap.dedent(
         f"""
@@ -532,7 +541,7 @@ def article_to_mdx(
         description: "{md_escape(description[:260])}"
         publishedAt: {item.published_at}
         tags: {yaml_list(["medical-research", "prediabetes", "lifestyle"])}
-        thumbnail: {THUMBNAIL}
+        thumbnail: {thumbnail_for_item(item)}
         status: {status}
         draft: {str(draft).lower()}
         ---

@@ -172,9 +172,9 @@
   },
 
   "blog": {
-    "label": "Blog",
-    "title": "Noticias y actualizaciones sobre la plataforma",
-    "description": "Mantente al día con las últimas noticias, ideas y actualizaciones de nuestra plataforma. Descubre nuevas funciones, buenas prácticas y tendencias del sector.",
+    "label": "Articulos",
+    "title": "Articulos de investigacion de GLUCOLIT",
+    "description": "Articulos basados en evidencia sobre prediabetes, resistencia a la insulina e intervencion en el estilo de vida.",
     "timeToRead": "{{time}} min de lectura",
     "tag": {
       "learning": "aprendizaje",

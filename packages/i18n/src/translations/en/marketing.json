@@ -166,9 +166,9 @@
     }
   },
   "blog": {
-    "label": "Blog",
-    "title": "News and updates about the platform",
-    "description": "Stay up to date with the latest news, insights, and updates from our platform. Discover new features, best practices, and industry trends.",
+    "label": "Articles",
+    "title": "GLUCOLIT research articles",
+    "description": "Evidence-based articles about prediabetes, insulin resistance, and lifestyle intervention.",
     "timeToRead": "{{time}} min read",
     "tag": {
       "learning": "learning",

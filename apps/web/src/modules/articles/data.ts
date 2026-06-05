@@ -29,6 +29,7 @@ export type Article = {
   summaryEn: string;
   bodyZh: string;
   bodyEn: string;
+  thumbnail: string;
   source: string;
   doi?: string;
   originalUrl?: string;
@@ -196,6 +197,7 @@ const toArticle = (
     summaryEn: firstParagraph(bodyEn, item.description),
     bodyZh: bodyZh || item.description,
     bodyEn: bodyEn || item.description,
+    thumbnail: item.thumbnail,
     source,
     doi,
     originalUrl,
