@@ -319,18 +319,23 @@ def build_prompt(item: FeedItem, matched: list[str]) -> str:
         You are helping GLUCOLIT, a public education site for people with
         prediabetes and insulin resistance.
 
-        Turn the source item below into a bilingual plain-language article.
+        Turn the source item below into a bilingual third-party commentary.
         Base the article only on the title, abstract/RSS summary, source, and
         link shown below. Do not invent study details that are not present.
+        Do not reproduce or closely paraphrase long passages from the source.
+        If only an abstract or RSS summary is available, make this an
+        abstract-based commentary and point readers to the source link for the
+        complete original.
 
         Write for ordinary readers, especially people with prediabetes. Use a
         clear, warm, useful style: explain the health meaning, why it matters,
         what the study did, what it did not prove, and what a reader can
         cautiously take away. Avoid academic jargon when possible.
 
-        The Chinese plain-language article should be at least 600 Chinese
-        characters when the abstract has enough substance. The English version
-        should be a real plain-language rewrite, not a keyword screening note.
+        The Chinese section should follow this structure when the abstract has
+        enough substance: 研究背景, 核心发现, 你的解读与批判, 临床/商业启发.
+        The English version should be a real plain-language commentary, not a
+        keyword screening note.
 
         Do not give personal medical advice. Do not overclaim causality.
         Preserve uncertainty. Mention that readers should discuss medical
@@ -532,7 +537,7 @@ def article_to_mdx(
         draft: {str(draft).lower()}
         ---
 
-        > 本文是糖前卫士自动监测国际期刊 RSS 后生成的科普草稿，仅用于健康教育，不构成诊断、治疗或用药建议。任何医疗决定请咨询合格医生或营养专业人士。
+        > 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。本文仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。
 
         ## 原文精华摘要
 
@@ -564,11 +569,15 @@ def article_to_mdx(
         - Original title: {item.title}
         - Link: [{item.link}]({item.link})
         - Published or RSS date: {item.published_at}
+
+        如需阅读原文，请点击链接获取完整内容。
+
+        本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。
         """
     )
     content = re.sub(
         r"(?m)^        > .+$",
-        "        > 本文是糖前卫士自动监测国际期刊 RSS 后生成的科普草稿，仅用于健康教育，不构成诊断、治疗或用药建议。任何医疗决定请咨询合格医生或营养专业人士。",
+        "        > 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。本文仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。",
         content,
         count=1,
     )

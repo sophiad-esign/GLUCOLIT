@@ -193,6 +193,7 @@ class PaperItem:
     link: str
     summary: str
     published_at: str
+    authors: str = ""
     pmid: str = ""
     doi: str = ""
     oa_url: str = ""
@@ -268,6 +269,24 @@ def article_doi(article: ET.Element) -> str:
     return ""
 
 
+def article_authors(article: ET.Element) -> str:
+    authors: list[str] = []
+    for node in article.findall(".//Author"):
+        last = strip_html(node.findtext("LastName", default=""))
+        initials = strip_html(node.findtext("Initials", default=""))
+        collective = strip_html(node.findtext("CollectiveName", default=""))
+        if collective:
+            authors.append(collective)
+        elif last:
+            authors.append(f"{last} {initials}".strip())
+        if len(authors) >= 6:
+            break
+    if not authors:
+        return ""
+    suffix = " et al." if len(article.findall(".//Author")) > len(authors) else ""
+    return ", ".join(authors) + suffix
+
+
 def parse_pubmed_articles(xml_text: str, requested_source: str) -> list[PaperItem]:
     root = ET.fromstring(xml_text)
     papers: list[PaperItem] = []
@@ -281,6 +300,7 @@ def parse_pubmed_articles(xml_text: str, requested_source: str) -> list[PaperIte
         abstract = " ".join(part for part in abstract_parts if part)
         journal = article.findtext(".//Journal/Title", default=requested_source)
         doi = article_doi(article)
+        authors = article_authors(article)
         link = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/" if pmid else (
             f"https://doi.org/{doi}" if doi else ""
         )
@@ -292,6 +312,7 @@ def parse_pubmed_articles(xml_text: str, requested_source: str) -> list[PaperIte
                     link=link,
                     summary=abstract,
                     published_at=parse_pubmed_date(article),
+                    authors=authors,
                     pmid=pmid,
                     doi=doi,
                 )
@@ -435,7 +456,7 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
 
         Follow the GLUCOLIT Research Rewrite SOP:
         1. First extract an evidence card from the source.
-        2. Then write a Chinese plain-language article for readers with
+        2. Then write a Chinese third-party commentary for readers with
            prediabetes, insulin resistance, or early metabolic risk.
         3. Then write a faithful English plain-language version with the same
            meaning.
@@ -445,27 +466,48 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
         Use only the title, abstract, source metadata, DOI/link, and legal
         open-access link if provided. Do not invent sample size, methods,
         results, harms, or causal claims that are not in the evidence.
+        If the source is only an abstract or metadata, make the article an
+        abstract-based commentary. Do not imply that GLUCOLIT read the full
+        paper. Do not reproduce or closely paraphrase long passages from the
+        source. Mention facts in your own words and keep the reader pointed to
+        PubMed/DOI/source links for the complete original.
 
         Required style:
-        - Chinese plain_zh: at least 600 Chinese characters, warm, clear,
-          practical, written like an experienced health editor.
+        - Chinese plain_zh: at least 2400 Chinese characters, warm, clear,
+          practical, written like an experienced health editor and original
+          analyst.
         - English plain_en: at least 700 English characters, faithful to the
           Chinese version.
         - Use short paragraphs. Chinese paragraphs should usually be 2-4
-          sentences and about 120-160 Chinese characters. English paragraphs
+          sentences and about 90-150 Chinese characters. English paragraphs
           should usually be 2-4 sentences and about 120-180 words.
         - Each paragraph should explain one idea only. If the topic changes,
           start a new paragraph.
         - No empty paragraphs, no empty bullets, no screening-note language.
         - Define technical terms briefly when needed.
         - Make the result useful without making it sound like medical advice.
+        - Avoid reviewer voice. Do not repeatedly write phrases like
+          "this study", "this paper", "the researchers", "这篇研究",
+          "这项研究", "这篇报告", or "研究者发现". Start from the reader's
+          problem and the source topic, not from manuscript-review narration.
 
-        Required structure inside the prose:
-        - What this study asked.
-        - How the study was done.
-        - What it found.
-        - What it did not prove.
-        - What a careful reader can take away.
+        Required structure inside plain_zh, using these exact Markdown headings:
+        ### 研究背景
+        About 100 Chinese characters, in GLUCOLIT's own words.
+
+        ### 核心发现
+        No more than 300 Chinese characters. Rewrite the core finding only,
+        without replacing the original abstract.
+
+        ### 你的解读与批判
+        At least 1500 Chinese characters. This is the main original commentary:
+        explain meaning, uncertainty, blind spots, reader relevance, and what
+        not to overclaim.
+
+        ### 临床/商业启发
+        At least 500 Chinese characters. Original GLUCOLIT insight about care,
+        behavior design, product opportunities, or patient education. No
+        personal medical advice.
 
         Return strict JSON with:
         title_en, title_zh, description_en, description_zh,
@@ -484,6 +526,7 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
         PMID: {paper.pmid}
         DOI: {paper.doi}
         Link: {paper.link}
+        Authors: {paper.authors}
         Open-access link if available: {paper.oa_url}
         Evidence type: {paper.evidence}
         Published date: {paper.published_at}
@@ -549,7 +592,7 @@ def call_chat_completion(config: LLMConfig, prompt: str) -> dict[str, Any] | Non
             },
             {"role": "user", "content": prompt},
         ],
-        "max_tokens": 4200,
+        "max_tokens": 7600,
         "response_format": chat_response_format(config),
     }
     request = urllib.request.Request(
@@ -596,7 +639,7 @@ def call_openai_responses_fallback(config: LLMConfig, prompt: str) -> dict[str, 
     payload = {
         "model": config.model,
         "input": prompt,
-        "max_output_tokens": 4200,
+        "max_output_tokens": 7600,
         "text": {
             "format": {
                 "type": "json_schema",
@@ -678,6 +721,41 @@ def has_empty_markdown_bullets(value: str) -> bool:
     return bool(re.search(r"(?m)^\s*[-*]\s*$", value))
 
 
+REQUIRED_ZH_SECTIONS = [
+    "### 研究背景",
+    "### 核心发现",
+    "### 你的解读与批判",
+    "### 临床/商业启发",
+]
+
+REVIEWER_VOICE_PHRASES = [
+    "This study",
+    "The study",
+    "this paper",
+    "the researchers",
+    "researchers found",
+    "这篇研究",
+    "这项研究",
+    "这篇报告",
+    "这篇论文",
+    "研究者发现",
+]
+
+
+def section_text(markdown: str, heading: str) -> str:
+    pattern = rf"(?s){re.escape(heading)}\s*(.*?)(?=\n### |\Z)"
+    match = re.search(pattern, markdown)
+    return match.group(1).strip() if match else ""
+
+
+def reviewer_voice_count(text: str) -> int:
+    lower = text.lower()
+    total = 0
+    for phrase in REVIEWER_VOICE_PHRASES:
+        total += lower.count(phrase.lower())
+    return total
+
+
 def clean_markdown_text(value: Any) -> str:
     text = str(value or "").replace("\r\n", "\n").replace("\r", "\n").strip()
     lines: list[str] = []
@@ -723,6 +801,7 @@ def article_quality_issues(article: dict[str, Any] | None) -> list[str]:
         "Matched keywords",
         "system selected",
         "Human review note",
+        "这篇报告",
         "\u6a21\u578b\u8f93\u51fa\u6ca1\u6709\u5b8c\u5168\u901a\u8fc7\u8d28\u91cf\u68c0\u67e5",
         "\u88ab\u7cfb\u7edf\u9009\u4e2d",
         "\u547d\u4e2d\u5173\u952e\u8bcd",
@@ -735,8 +814,26 @@ def article_quality_issues(article: dict[str, Any] | None) -> list[str]:
         issues.append("contains empty markdown bullets")
     if len(plain_en) < 700:
         issues.append("English plain-language article is short")
-    if count_cjk(plain_zh) < 600:
-        issues.append("Chinese plain-language article is short")
+    if count_cjk(plain_zh) < 2200:
+        issues.append("Chinese commentary is short for the required SOP structure")
+    missing_sections = [
+        heading for heading in REQUIRED_ZH_SECTIONS if heading not in plain_zh
+    ]
+    if missing_sections:
+        issues.append(f"missing Chinese SOP sections: {', '.join(missing_sections)}")
+    core = section_text(plain_zh, "### 核心发现")
+    if core and count_cjk(core) > 360:
+        issues.append("Chinese core finding section is longer than the 300-character target")
+    critique = section_text(plain_zh, "### 你的解读与批判")
+    if critique and count_cjk(critique) < 1300:
+        issues.append("Chinese interpretation and critique section is short")
+    insight = section_text(plain_zh, "### 临床/商业启发")
+    if insight and count_cjk(insight) < 420:
+        issues.append("Chinese clinical/business insight section is short")
+    if reviewer_voice_count(plain_text) > 4:
+        issues.append("uses reviewer voice too often")
+    if plain_zh.lstrip().startswith(("这篇研究", "这项研究", "这篇报告", "这篇论文")):
+        issues.append("starts with reviewer voice")
     if len(normalize_takeaways(article.get("takeaways_en", []))) < 4:
         issues.append("English takeaways are incomplete")
     if len(normalize_takeaways(article.get("takeaways_zh", []))) < 4:
@@ -892,6 +989,7 @@ def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft
     description = f"{article['description_zh']} {article['description_en']}"
     doi_line = f"- DOI: [{paper.doi}](https://doi.org/{paper.doi})\n" if paper.doi else ""
     oa_line = f"- Open-access link: [{paper.oa_url}]({paper.oa_url})\n" if paper.oa_url else ""
+    authors_line = f"- Authors: {paper.authors}\n" if paper.authors else ""
     return "\n".join(
         [
             "---",
@@ -904,13 +1002,24 @@ def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft
             f"draft: {str(draft).lower()}",
             "---",
             "",
-            "> 本文由 GLUCOLIT 根据 PubMed/Europe PMC/Unpaywall 可访问的题录、摘要和开放获取信息生成，仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。",
+            "> 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。本文仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。",
             "",
             "## 审核用证据卡片",
             "",
             evidence_card_markdown(article.get("evidence_card", {})),
             "",
             "## 原文精华摘要",
+            "",
+            "### 原文信息栏",
+            "",
+            f"- Original title: {paper.title}",
+            authors_line.rstrip(),
+            f"- Journal/source: {paper.source}",
+            doi_line.rstrip(),
+            f"- PubMed/source link: [{paper.link}]({paper.link})",
+            oa_line.rstrip(),
+            f"- Evidence used: {paper.evidence}",
+            f"- Published or indexed date: {paper.published_at}",
             "",
             format_plain_article(article["plain_zh"], language="zh"),
             "",
@@ -943,6 +1052,10 @@ def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft
             doi_line.rstrip(),
             oa_line.rstrip(),
             f"- Published or indexed date: {paper.published_at}",
+            "",
+            "如需阅读原文，请点击链接获取完整内容。",
+            "",
+            "本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
             "",
         ]
     )
@@ -1004,9 +1117,19 @@ def candidate_papers(limit_per_journal: int) -> list[PaperItem]:
             seen.add(item_id)
             papers.append(paper)
             time.sleep(0.1)
+    enriched: list[PaperItem] = []
+    for paper in papers:
+        try:
+            enriched.append(enrich_paper(paper))
+            time.sleep(0.1)
+        except Exception as exc:  # noqa: BLE001
+            print(f"Open-access enrichment failed for {paper.title}: {exc}")
+            enriched.append(paper)
+
     return sorted(
-        papers,
+        enriched,
         key=lambda paper: (
+            bool(paper.oa_url),
             relevance_score(paper.title, paper.summary)[0],
             len(paper.summary),
             paper.published_at,
@@ -1071,7 +1194,8 @@ def run(args: argparse.Namespace) -> int:
             skipped_score += 1
             continue
 
-        paper = enrich_paper(paper)
+        if not paper.oa_url:
+            paper = enrich_paper(paper)
         state["items"][item_id]["doi"] = paper.doi
         state["items"][item_id]["oa_url"] = paper.oa_url
         state["items"][item_id]["evidence"] = paper.evidence

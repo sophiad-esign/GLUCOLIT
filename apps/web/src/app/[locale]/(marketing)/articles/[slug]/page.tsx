@@ -89,6 +89,9 @@ export default async function ArticleDetailPage({
           <p className="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-300">
             本文仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。
           </p>
+          <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
+            如需阅读原文，请点击链接获取完整内容。本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。
+          </p>
         </footer>
       </article>
     </main>
