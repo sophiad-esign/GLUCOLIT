@@ -285,11 +285,13 @@
         "national diabetes prevention program"
       ],
       "created_at": "2026-06-03T08:53:57.989204+00:00",
-      "last_seen_at": "2026-06-04T18:30:42.803414+00:00",
-      "attempts": 3,
+      "last_seen_at": "2026-06-05T18:16:31.457884+00:00",
+      "attempts": 4,
       "generated": false,
       "quality_issues": [
-        "Chinese plain-language article is short"
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "generated article failed quality gate"
     },
@@ -529,11 +531,13 @@
         "nutrition"
       ],
       "created_at": "2026-06-03T08:55:08.939931+00:00",
-      "last_seen_at": "2026-06-04T18:30:18.216268+00:00",
-      "attempts": 3,
+      "last_seen_at": "2026-06-05T18:16:00.860838+00:00",
+      "attempts": 4,
       "generated": false,
       "quality_issues": [
-        "Chinese plain-language article is short"
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "generated article failed quality gate"
     },
@@ -608,11 +612,14 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:55:29.774037+00:00",
-      "last_seen_at": "2026-06-04T18:29:57.976257+00:00",
-      "attempts": 3,
+      "last_seen_at": "2026-06-05T18:15:39.913285+00:00",
+      "attempts": 4,
       "generated": false,
       "quality_issues": [
-        "Chinese plain-language article is short"
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
       ],
       "skip_reason": "generated article failed quality gate"
     },
@@ -701,21 +708,32 @@
     },
     "61758f3bb7c194c1": {
       "title": "Evaluating the cardio-protective effects of Momordica balsamina in a diet-induced prediabetic rats.",
-      "source": "PubMed prediabetes via PubMed (Cardiovascular endocrinology & metabolism)",
+      "source": "PubMed high-yield prediabetes via PubMed (Cardiovascular endocrinology & metabolism)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42004629/",
+      "pmid": "42004629",
+      "doi": "10.1097/XCE.0000000000000359",
+      "oa_url": "https://europepmc.org/articles/PMC13090081",
+      "evidence": "Europe PMC abstract + open-access full-text link",
       "published_at": "2026-06-01",
-      "score": 16,
+      "score": 24,
       "matched": [
         "prediabetes",
+        "prediabetic",
         "lifestyle intervention",
         "diet",
         "glucose"
       ],
       "created_at": "2026-06-03T08:55:55.599013+00:00",
-      "last_seen_at": "2026-06-03T09:27:04.839468+00:00",
-      "attempts": 1,
+      "last_seen_at": "2026-06-05T18:17:03.834279+00:00",
+      "attempts": 2,
       "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "generated article failed quality gate"
     },
     "f70212db52df0a41": {
       "title": "Data-driven cluster analysis of adults with prediabetes: Findings from the Japan diabetes prevention study.",
@@ -740,9 +758,15 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:56:00.448609+00:00",
-      "last_seen_at": "2026-06-04T04:13:11.389516+00:00",
-      "attempts": 2,
+      "last_seen_at": "2026-06-05T18:14:19.347041+00:00",
+      "attempts": 3,
       "generated": false,
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
       "skip_reason": "generated article failed quality gate"
     },
     "cf42a0542c4a05f8": {
@@ -1625,10 +1649,15 @@
         "metabolic syndrome"
       ],
       "created_at": "2026-06-03T09:46:04.819530+00:00",
-      "last_seen_at": "2026-06-03T09:46:04.819531+00:00",
-      "attempts": 1,
+      "last_seen_at": "2026-06-05T18:14:58.921963+00:00",
+      "attempts": 2,
       "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "generated article failed quality gate"
     },
     "5e4da5284d3e5c63": {
       "title": "Role of Physical Activity in Obesity Treatment and Cardiometabolic Health: A Scientific Statement From the American Heart Association.",
@@ -1648,10 +1677,15 @@
         "physical activity"
       ],
       "created_at": "2026-06-03T09:46:10.032867+00:00",
-      "last_seen_at": "2026-06-03T09:46:10.032881+00:00",
-      "attempts": 1,
+      "last_seen_at": "2026-06-05T18:17:39.482587+00:00",
+      "attempts": 2,
       "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "generated article failed quality gate"
     },
     "e24b176506d7141b": {
       "title": "Physical Activity in Pediatric Cardiomyopathies: Moving for Health: A Scientific Statement From the American Heart Association.",
@@ -1902,7 +1936,7 @@
       "oa_url": "https://doi.org/10.1007/s00125-026-06722-5",
       "evidence": "Europe PMC abstract + open-access full-text link",
       "published_at": "2026-07-01",
-      "score": 35,
+      "score": 32,
       "matched": [
         "prediabetes",
         "impaired fasting glucose",
@@ -1910,15 +1944,17 @@
         "diet",
         "physical activity",
         "glucose",
-        "glycaemic",
-        "hba1c"
+        "glycaemic"
       ],
       "created_at": "2026-06-04T18:29:39.634424+00:00",
-      "last_seen_at": "2026-06-04T18:29:39.634439+00:00",
-      "attempts": 1,
+      "last_seen_at": "2026-06-05T18:15:17.427623+00:00",
+      "attempts": 2,
       "generated": false,
       "quality_issues": [
-        "Chinese plain-language article is short"
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
       ],
       "skip_reason": "generated article failed quality gate"
     },
@@ -1939,9 +1975,126 @@
         "glucose"
       ],
       "created_at": "2026-06-04T18:31:03.384611+00:00",
-      "last_seen_at": "2026-06-04T18:31:03.384627+00:00",
-      "attempts": 1,
+      "last_seen_at": "2026-06-05T18:17:58.111021+00:00",
+      "attempts": 2,
       "generated": false
+    },
+    "8f314aee5670869f": {
+      "title": "Impact of oral magnesium supplementation on glycemic and cardiometabolic outcomes in prediabetic adults: a systematic review and meta-analysis.",
+      "source": "PubMed high-yield prediabetes via PubMed (Journal of diabetes and metabolic disorders)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41641401/",
+      "pmid": "41641401",
+      "doi": "10.1007/s40200-025-01853-9",
+      "oa_url": "https://doi.org/10.1007/s40200-025-01853-9",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "published_at": "2026-06-01",
+      "score": 44,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "insulin resistance",
+        "insulin sensitivity",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-06-05T18:14:35.937110+00:00",
+      "last_seen_at": "2026-06-05T18:14:35.937126+00:00",
+      "attempts": 1,
+      "generated": false,
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "generated article failed quality gate"
+    },
+    "90decadc460c473f": {
+      "title": "Comparison of serum adipocyte fatty acid binding protein (A-FABP) levels in prediabetic patients and healthy individuals.",
+      "source": "PubMed high-yield prediabetes via PubMed (The Journal of endocrinology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42041102/",
+      "pmid": "42041102",
+      "doi": "10.1530/JOE-25-0001",
+      "oa_url": "https://doi.org/10.1530/JOE-25-0001",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "published_at": "2026-05-01",
+      "score": 25,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "insulin resistance",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-06-05T18:16:17.677046+00:00",
+      "last_seen_at": "2026-06-05T18:16:17.677063+00:00",
+      "attempts": 1,
+      "generated": false,
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "generated article failed quality gate"
+    },
+    "afac4f5222ccaacf": {
+      "title": "Different Metabolic Responses to Long-term Weight Loss After Lifestyle Intervention Among Type 2 Diabetes Risk Clusters: Results From the TULIP Study.",
+      "source": "Diabetes via PubMed (Diabetes)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41973618/",
+      "pmid": "41973618",
+      "doi": "10.2337/db25-0757",
+      "oa_url": "https://europepmc.org/articles/PMC13191407",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "published_at": "2026-06-01",
+      "score": 24,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "lifestyle intervention",
+        "weight loss",
+        "glucose"
+      ],
+      "created_at": "2026-06-05T18:16:45.099934+00:00",
+      "last_seen_at": "2026-06-05T18:16:45.099954+00:00",
+      "attempts": 1,
+      "generated": false,
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "generated article failed quality gate"
+    },
+    "41a1d06484207ea7": {
+      "title": "[Study on the underlying mechanisms of electroacupuncture at \"Zusanli\" (ST36) in restoring blood glucose homeostasis in prediabetes mice].",
+      "source": "PubMed high-yield prediabetes via PubMed (Zhen ci yan jiu = Acupuncture research)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42185055/",
+      "pmid": "42185055",
+      "doi": "10.13702/j.1000-0607.20250584",
+      "oa_url": "https://doi.org/10.13702/j.1000-0607.20250584",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "published_at": "2026-05-25",
+      "score": 22,
+      "matched": [
+        "prediabetes",
+        "impaired glucose tolerance",
+        "diet",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-06-05T18:17:24.092492+00:00",
+      "last_seen_at": "2026-06-05T18:17:24.092541+00:00",
+      "attempts": 1,
+      "generated": false,
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "generated article failed quality gate"
     }
   }
 }
