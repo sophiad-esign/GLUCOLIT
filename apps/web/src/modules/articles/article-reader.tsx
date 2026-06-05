@@ -44,6 +44,9 @@ export function ArticleReader({ article }: { article: Article }) {
 
       <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10 dark:border-slate-800 dark:bg-slate-950">
         <div className="mx-auto max-w-3xl space-y-5 text-slate-800 dark:text-slate-100">
+          <h2 className="text-2xl font-bold tracking-normal text-slate-950 dark:text-white">
+            {isChinese ? "原文精华摘要" : "English Plain-Language Version"}
+          </h2>
           {readingBlocks(body).map((block, index) =>
             block.type === "list" ? (
               <ul
