@@ -534,7 +534,7 @@ def article_to_mdx(
 
         > 本文是糖前卫士自动监测国际期刊 RSS 后生成的科普草稿，仅用于健康教育，不构成诊断、治疗或用药建议。任何医疗决定请咨询合格医生或营养专业人士。
 
-        ## 中文白话版
+        ## 原文精华摘要
 
         {article["plain_zh"].strip()}
 
@@ -573,7 +573,7 @@ def article_to_mdx(
         count=1,
     )
     content = re.sub(
-        r"(?m)^        ## .+$", "        ## 中文白话版", content, count=1
+        r"(?m)^        ## .+$", "        ## 原文精华摘要", content, count=1
     )
     content = re.sub(
         r"(?m)^        ### .+$",

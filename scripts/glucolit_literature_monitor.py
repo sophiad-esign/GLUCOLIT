@@ -910,7 +910,7 @@ def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft
             "",
             evidence_card_markdown(article.get("evidence_card", {})),
             "",
-            "## 中文白话版",
+            "## 原文精华摘要",
             "",
             format_plain_article(article["plain_zh"], language="zh"),
             "",

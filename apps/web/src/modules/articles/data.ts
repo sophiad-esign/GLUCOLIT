@@ -169,7 +169,7 @@ const toArticle = (
   const { titleZh, titleEn } = splitBilingualTitle(item.title);
   const bodyZh = sectionBetweenAny(
     item.content,
-    ["## 中文白话版"],
+    ["## 原文精华摘要", "## 中文白话版"],
     ["## English Plain-Language Version", "## Plain-English Version"],
   );
   const bodyEn = sectionBetweenAny(

@@ -135,7 +135,7 @@ export default async function DraftPreviewPage({
         <CardHeader>
           <CardTitle>审核提示</CardTitle>
           <CardDescription>
-            重点看中文白话版是否像写给普通人的健康科普：说人话、有解释、有边界，不夸大疗效。
+            重点看原文精华摘要是否像写给普通人的健康科普：说人话、有解释、有边界，不夸大疗效。
           </CardDescription>
         </CardHeader>
         <CardContent className="grid gap-3 text-sm leading-7 md:grid-cols-3">
@@ -163,7 +163,7 @@ export default async function DraftPreviewPage({
       <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
         <Card>
           <CardHeader>
-            <CardTitle>中文白话全文</CardTitle>
+            <CardTitle>原文精华摘要</CardTitle>
             <CardDescription>
               这是给中文读者看的主要版本，也是你审核时最该细读的部分。
             </CardDescription>
