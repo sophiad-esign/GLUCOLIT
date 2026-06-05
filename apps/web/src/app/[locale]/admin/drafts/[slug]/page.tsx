@@ -16,32 +16,27 @@ import { Icons } from "@workspace/ui-web/icons";
 import { pathsConfig } from "~/config/paths";
 import { getMetadata } from "~/lib/metadata";
 import { getReviewArticleBySlug } from "~/modules/articles/data";
+import { readingBlocks } from "~/modules/articles/reading-blocks";
 import { TurboLink } from "~/modules/common/turbo-link";
 
 import { publishDraftAction } from "../actions";
 
-const proseLines = (content: string) =>
-  content
-    .split(/\n{2,}/)
-    .map((line) => line.trim())
-    .filter(Boolean);
-
 const ReviewProse = ({ content }: { content: string }) => (
   <div className="space-y-5 text-base leading-8 text-slate-700 dark:text-slate-200">
-    {proseLines(content).map((line, index) => {
-      if (/^[-*]\s+/.test(line)) {
+    {readingBlocks(content).map((block, index) => {
+      if (block.type === "list") {
         return (
-          <ul key={`${line}-${index}`} className="list-disc space-y-2 pl-6">
-            {line.split(/\n/).map((item) => (
-              <li key={item}>{item.replace(/^[-*]\s+/, "")}</li>
+          <ul key={`list-${index}`} className="list-disc space-y-2 pl-6">
+            {block.items.map((item) => (
+              <li key={item}>{item}</li>
             ))}
           </ul>
         );
       }
 
       return (
-        <p key={`${line}-${index}`} className="whitespace-pre-line">
-          {line}
+        <p key={`${block.text}-${index}`} className="leading-8">
+          {block.text}
         </p>
       );
     })}

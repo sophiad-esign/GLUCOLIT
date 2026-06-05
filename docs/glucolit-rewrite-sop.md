@@ -43,6 +43,9 @@ Every draft must contain:
 
 - Put the most important point first.
 - Use ordinary words and short paragraphs.
+- Keep Chinese paragraphs to about 2-4 sentences and roughly 120-160 Chinese characters.
+- Keep English paragraphs to about 2-4 sentences and roughly 120-180 words.
+- Each paragraph should explain one idea only. If the topic changes, start a new paragraph.
 - Define medical terms when they first appear.
 - Explain uncertainty: what the study suggests, what it does not prove, and who it may or may not apply to.
 - Avoid hype, miracle language, fear language, and personal medical instructions.

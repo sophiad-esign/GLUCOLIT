@@ -451,6 +451,11 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
           practical, written like an experienced health editor.
         - English plain_en: at least 700 English characters, faithful to the
           Chinese version.
+        - Use short paragraphs. Chinese paragraphs should usually be 2-4
+          sentences and about 120-160 Chinese characters. English paragraphs
+          should usually be 2-4 sentences and about 120-180 words.
+        - Each paragraph should explain one idea only. If the topic changes,
+          start a new paragraph.
         - No empty paragraphs, no empty bullets, no screening-note language.
         - Define technical terms briefly when needed.
         - Make the result useful without making it sound like medical advice.
@@ -809,6 +814,60 @@ def bullet_list(items: Any) -> str:
     return "\n".join(f"- {item}" for item in normalize_takeaways(items))
 
 
+def sentence_chunks(text: str) -> list[str]:
+    parts = re.findall(r"[^。！？.!?；;]+[。！？.!?；;]?", text)
+    return [part.strip() for part in parts if part.strip()] or [text.strip()]
+
+
+def split_long_sentence(sentence: str, max_chars: int) -> list[str]:
+    if len(sentence) <= max_chars:
+        return [sentence]
+    chunks: list[str] = []
+    remaining = sentence.strip()
+    while len(remaining) > max_chars:
+        window = remaining[:max_chars]
+        break_at = max(
+            window.rfind("，"),
+            window.rfind(","),
+            window.rfind("、"),
+            window.rfind(" "),
+        )
+        cut = break_at + 1 if break_at > max_chars * 0.45 else max_chars
+        chunks.append(remaining[:cut].strip())
+        remaining = remaining[cut:].strip()
+    if remaining:
+        chunks.append(remaining)
+    return chunks
+
+
+def format_plain_article(text: str, *, language: str) -> str:
+    max_chars = 145 if language == "zh" else 240
+    normalized = clean_markdown_text(text)
+    normalized = re.sub(r"([。！？.!?；;])\s+[-*]\s+", r"\1\n- ", normalized)
+    blocks = [block.strip() for block in re.split(r"\n{2,}", normalized) if block.strip()]
+    paragraphs: list[str] = []
+
+    for block in blocks:
+        lines = [line.strip() for line in block.splitlines() if line.strip()]
+        if lines and all(re.match(r"^[-*]\s+", line) for line in lines):
+            paragraphs.append("\n".join(lines))
+            continue
+
+        current = ""
+        for sentence in sentence_chunks(re.sub(r"\s+", " ", block)):
+            for part in split_long_sentence(sentence, max_chars):
+                candidate = f"{current} {part}".strip() if current else part
+                if current and len(candidate) > max_chars:
+                    paragraphs.append(current)
+                    current = part
+                else:
+                    current = candidate
+        if current:
+            paragraphs.append(current)
+
+    return "\n\n".join(paragraphs)
+
+
 def evidence_card_markdown(card: dict[str, Any]) -> str:
     rows = [
         ("研究问题 / Research question", "question"),
@@ -853,11 +912,11 @@ def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft
             "",
             "## 中文白话版",
             "",
-            clean_markdown_text(article["plain_zh"]),
+            format_plain_article(article["plain_zh"], language="zh"),
             "",
             "### 为什么和糖尿病前期有关？",
             "",
-            clean_markdown_text(article["why_relevant_zh"]),
+            format_plain_article(article["why_relevant_zh"], language="zh"),
             "",
             "### 你可以带走的重点",
             "",
@@ -865,11 +924,11 @@ def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft
             "",
             "## English Plain-Language Version",
             "",
-            clean_markdown_text(article["plain_en"]),
+            format_plain_article(article["plain_en"], language="en"),
             "",
             "### Why This Matters for Prediabetes",
             "",
-            clean_markdown_text(article["why_relevant_en"]),
+            format_plain_article(article["why_relevant_en"], language="en"),
             "",
             "### Practical Takeaways",
             "",

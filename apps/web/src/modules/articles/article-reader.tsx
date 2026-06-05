@@ -6,13 +6,9 @@ import { useState } from "react";
 
 import { Button } from "@workspace/ui-web/button";
 
-import type { Article } from "./data";
+import { readingBlocks } from "./reading-blocks";
 
-const paragraphs = (content: string) =>
-  content
-    .split(/\n{2,}/)
-    .map((paragraph) => paragraph.trim())
-    .filter(Boolean);
+import type { Article } from "./data";
 
 export function ArticleReader({ article }: { article: Article }) {
   const [language, setLanguage] = useState<"zh" | "en">("zh");
@@ -46,13 +42,27 @@ export function ArticleReader({ article }: { article: Article }) {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8 dark:border-slate-800 dark:bg-slate-950">
-        <div className="prose prose-slate dark:prose-invert max-w-none">
-          {paragraphs(body).map((paragraph) => (
-            <p key={paragraph} className="text-base leading-[1.8]">
-              {paragraph.replace(/^[-*]\s+/, "")}
-            </p>
-          ))}
+      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10 dark:border-slate-800 dark:bg-slate-950">
+        <div className="mx-auto max-w-3xl space-y-5 text-slate-800 dark:text-slate-100">
+          {readingBlocks(body).map((block, index) =>
+            block.type === "list" ? (
+              <ul
+                key={`list-${index}`}
+                className="list-disc space-y-2 pl-6 text-[17px] leading-8"
+              >
+                {block.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              <p
+                key={block.text}
+                className="text-[17px] leading-8 sm:leading-9"
+              >
+                {block.text}
+              </p>
+            ),
+          )}
         </div>
       </div>
     </div>
