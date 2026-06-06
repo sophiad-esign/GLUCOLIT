@@ -285,8 +285,8 @@
         "national diabetes prevention program"
       ],
       "created_at": "2026-06-03T08:53:57.989204+00:00",
-      "last_seen_at": "2026-06-05T18:16:31.457884+00:00",
-      "attempts": 4,
+      "last_seen_at": "2026-06-06T17:42:04.132550+00:00",
+      "attempts": 5,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
@@ -531,8 +531,8 @@
         "nutrition"
       ],
       "created_at": "2026-06-03T08:55:08.939931+00:00",
-      "last_seen_at": "2026-06-05T18:16:00.860838+00:00",
-      "attempts": 4,
+      "last_seen_at": "2026-06-06T17:41:46.849030+00:00",
+      "attempts": 5,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
@@ -612,8 +612,8 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:55:29.774037+00:00",
-      "last_seen_at": "2026-06-05T18:15:39.913285+00:00",
-      "attempts": 4,
+      "last_seen_at": "2026-06-06T17:41:26.393523+00:00",
+      "attempts": 5,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
@@ -724,14 +724,13 @@
         "glucose"
       ],
       "created_at": "2026-06-03T08:55:55.599013+00:00",
-      "last_seen_at": "2026-06-05T18:17:03.834279+00:00",
-      "attempts": 2,
+      "last_seen_at": "2026-06-06T17:42:43.658527+00:00",
+      "attempts": 3,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese interpretation and critique section is short",
-        "Chinese clinical/business insight section is short",
-        "uses reviewer voice too often"
+        "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "generated article failed quality gate"
     },
@@ -758,14 +757,13 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:56:00.448609+00:00",
-      "last_seen_at": "2026-06-05T18:14:19.347041+00:00",
-      "attempts": 3,
+      "last_seen_at": "2026-06-06T17:40:11.040515+00:00",
+      "attempts": 4,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese interpretation and critique section is short",
-        "Chinese clinical/business insight section is short",
-        "uses reviewer voice too often"
+        "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "generated article failed quality gate"
     },
@@ -1649,13 +1647,14 @@
         "metabolic syndrome"
       ],
       "created_at": "2026-06-03T09:46:04.819530+00:00",
-      "last_seen_at": "2026-06-05T18:14:58.921963+00:00",
-      "attempts": 2,
+      "last_seen_at": "2026-06-06T17:40:44.448231+00:00",
+      "attempts": 3,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese interpretation and critique section is short",
-        "Chinese clinical/business insight section is short"
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
       ],
       "skip_reason": "generated article failed quality gate"
     },
@@ -1677,8 +1676,8 @@
         "physical activity"
       ],
       "created_at": "2026-06-03T09:46:10.032867+00:00",
-      "last_seen_at": "2026-06-05T18:17:39.482587+00:00",
-      "attempts": 2,
+      "last_seen_at": "2026-06-06T17:43:33.891531+00:00",
+      "attempts": 3,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
@@ -1947,8 +1946,8 @@
         "glycaemic"
       ],
       "created_at": "2026-06-04T18:29:39.634424+00:00",
-      "last_seen_at": "2026-06-05T18:15:17.427623+00:00",
-      "attempts": 2,
+      "last_seen_at": "2026-06-06T17:41:04.608046+00:00",
+      "attempts": 3,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
@@ -1975,8 +1974,8 @@
         "glucose"
       ],
       "created_at": "2026-06-04T18:31:03.384611+00:00",
-      "last_seen_at": "2026-06-05T18:17:58.111021+00:00",
-      "attempts": 2,
+      "last_seen_at": "2026-06-06T17:43:51.335870+00:00",
+      "attempts": 3,
       "generated": false
     },
     "8f314aee5670869f": {
@@ -2001,8 +2000,8 @@
         "hba1c"
       ],
       "created_at": "2026-06-05T18:14:35.937110+00:00",
-      "last_seen_at": "2026-06-05T18:14:35.937126+00:00",
-      "attempts": 1,
+      "last_seen_at": "2026-06-06T17:40:24.982322+00:00",
+      "attempts": 2,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
@@ -2057,8 +2056,8 @@
         "glucose"
       ],
       "created_at": "2026-06-05T18:16:45.099934+00:00",
-      "last_seen_at": "2026-06-05T18:16:45.099954+00:00",
-      "attempts": 1,
+      "last_seen_at": "2026-06-06T17:42:23.353488+00:00",
+      "attempts": 2,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
@@ -2085,14 +2084,41 @@
         "hba1c"
       ],
       "created_at": "2026-06-05T18:17:24.092492+00:00",
-      "last_seen_at": "2026-06-05T18:17:24.092541+00:00",
+      "last_seen_at": "2026-06-06T17:43:17.857649+00:00",
+      "attempts": 2,
+      "generated": false,
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "generated article failed quality gate"
+    },
+    "a55fa88b56c2cfec": {
+      "title": "Aurantio-obtusin ameliorates prediabetes in a gut microbiota-dependent manner via regulating LPS-TLR4 axis and Akt/GLUT4 signaling.",
+      "source": "PubMed high-yield prediabetes via PubMed (Journal of ethnopharmacology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42248376/",
+      "pmid": "42248376",
+      "doi": "10.1016/j.jep.2026.121970",
+      "oa_url": "https://doi.org/10.1016/j.jep.2026.121970",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "published_at": "2026-06-04",
+      "score": 23,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-06-06T17:43:01.383821+00:00",
+      "last_seen_at": "2026-06-06T17:43:01.383837+00:00",
       "attempts": 1,
       "generated": false,
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese interpretation and critique section is short",
-        "Chinese clinical/business insight section is short",
-        "uses reviewer voice too often"
+        "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "generated article failed quality gate"
     }
