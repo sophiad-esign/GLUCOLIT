@@ -20,7 +20,7 @@ import {
 
 import { pathsConfig } from "~/config/paths";
 import { getMetadata } from "~/lib/metadata";
-import { getReviewArticles } from "~/modules/articles/data";
+import { getReviewArticlesFromFiles } from "~/modules/articles/review-files";
 import { TurboLink } from "~/modules/common/turbo-link";
 
 export const generateMetadata = getMetadata({
@@ -29,7 +29,7 @@ export const generateMetadata = getMetadata({
 });
 
 export default function AdminArticlesPage() {
-  const articles = getReviewArticles();
+  const articles = getReviewArticlesFromFiles();
   const drafts = articles.filter((article) => article.draft);
   const published = articles.filter((article) => !article.draft);
   const latestDrafts = drafts.slice(0, 6);

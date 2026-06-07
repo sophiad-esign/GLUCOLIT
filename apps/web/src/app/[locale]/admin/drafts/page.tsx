@@ -13,7 +13,7 @@ import { Icons } from "@workspace/ui-web/icons";
 
 import { pathsConfig } from "~/config/paths";
 import { getMetadata } from "~/lib/metadata";
-import { getReviewArticles } from "~/modules/articles/data";
+import { getReviewArticlesFromFiles } from "~/modules/articles/review-files";
 import { TurboLink } from "~/modules/common/turbo-link";
 
 import { publishDraftAction } from "./actions";
@@ -30,7 +30,9 @@ export default async function AdminDraftsPage({
   searchParams: Promise<{ error?: string; published?: string }>;
 }) {
   const { error, published } = await searchParams;
-  const drafts = getReviewArticles().filter((article) => article.draft);
+  const drafts = getReviewArticlesFromFiles().filter(
+    (article) => article.draft,
+  );
   const canPublish = Boolean(
     process.env["GITHUB_CONTENT_TOKEN"] || process.env["GITHUB_TOKEN"],
   );

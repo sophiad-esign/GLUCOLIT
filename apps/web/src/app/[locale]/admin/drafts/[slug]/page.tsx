@@ -15,8 +15,8 @@ import { Icons } from "@workspace/ui-web/icons";
 
 import { pathsConfig } from "~/config/paths";
 import { getMetadata } from "~/lib/metadata";
-import { getReviewArticleBySlug } from "~/modules/articles/data";
 import { readingBlocks } from "~/modules/articles/reading-blocks";
+import { getReviewArticleFromFileBySlug } from "~/modules/articles/review-files";
 import { TurboLink } from "~/modules/common/turbo-link";
 
 import { publishDraftAction } from "../actions";
@@ -54,7 +54,7 @@ export default async function DraftPreviewPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = getReviewArticleBySlug(slug);
+  const article = getReviewArticleFromFileBySlug(slug);
 
   if (!article || !article.draft) {
     notFound();
