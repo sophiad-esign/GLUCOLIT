@@ -140,6 +140,13 @@ export default async function AdminDraftsPage({
                   <div className="space-y-3">
                     <div className="flex flex-wrap items-center gap-2">
                       <Badge variant="secondary">待审核 #{index + 1}</Badge>
+                      <Badge
+                        variant={
+                          article.reviewRequired ? "destructive" : "default"
+                        }
+                      >
+                        {article.reviewRequired ? "需 SOP 修订" : "可发布候选"}
+                      </Badge>
                       <Badge variant="outline">
                         {article.publishedAtLabel}
                       </Badge>
@@ -180,10 +187,10 @@ export default async function AdminDraftsPage({
                       />
                       <Button
                         type="submit"
-                        disabled={!canPublish}
+                        disabled={!canPublish || article.reviewRequired}
                         className="w-full bg-[#1e3a5f] hover:bg-[#2d5a87]"
                       >
-                        一键发布
+                        {article.reviewRequired ? "先完成修订" : "一键发布"}
                       </Button>
                     </form>
                   </div>
@@ -196,6 +203,21 @@ export default async function AdminDraftsPage({
                       {article.summaryZh}
                     </p>
                   </div>
+
+                  {article.reviewRequired ? (
+                    <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-950 dark:border-amber-900/60 dark:bg-amber-950/30 dark:text-amber-100">
+                      <div className="font-semibold">SOP 修订清单</div>
+                      <p className="mt-1 text-amber-900 dark:text-amber-100/80">
+                        这篇已经进入草稿库，但还不能直接发布。请按问题修订后，把
+                        reviewRequired 改为 false、qualityStatus 改为 ready。
+                      </p>
+                      <ul className="mt-2 list-disc space-y-1 pl-5">
+                        {article.qualityIssues.map((issue) => (
+                          <li key={issue}>{issue}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
 
                   <div className="grid gap-3 text-sm lg:grid-cols-[1fr_2fr]">
                     <div className="rounded-xl border p-3">

@@ -87,7 +87,21 @@ export async function publishDraftAction(formData: FormData) {
     redirectWithError("This article is no longer a draft.");
   }
 
-  const updated = raw.replace(/^draft:\s*true\s*$/m, "draft: false");
+  if (/^reviewRequired:\s*true\s*$/m.test(raw)) {
+    redirectWithError(
+      "This draft still needs SOP revision. Edit it in GitHub, set reviewRequired: false and qualityStatus: ready, then publish.",
+    );
+  }
+
+  if (/^qualityStatus:\s*needs_revision\s*$/m.test(raw)) {
+    redirectWithError(
+      "This draft is marked needs_revision. Finish the SOP rewrite before publishing.",
+    );
+  }
+
+  const updated = raw
+    .replace(/^draft:\s*true\s*$/m, "draft: false")
+    .replace(/^qualityStatus:\s*ready\s*$/m, "qualityStatus: ready");
 
   const updateResponse = await fetch(apiUrl, {
     method: "PUT",

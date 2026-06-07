@@ -19,6 +19,12 @@ export const blog = defineCollection({
     tags: z.array(z.enum(ContentTag)),
     status: z.enum(ContentStatus),
     draft: z.boolean().optional().default(false),
+    reviewRequired: z.boolean().optional().default(false),
+    qualityStatus: z
+      .enum(["ready", "needs_revision"])
+      .optional()
+      .default("ready"),
+    qualityIssues: z.array(z.string()).optional().default([]),
     content: z.string(),
   }),
   transform: async (document, context) => {

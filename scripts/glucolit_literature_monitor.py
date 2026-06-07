@@ -66,12 +66,55 @@ JOURNALS = [
 
 BROAD_SOURCES = [
     (
-        "PubMed high-yield prediabetes",
+        "PubMed prediabetes lifestyle intervention",
         (
             '(prediabetes OR "prediabetic state" OR "impaired fasting glucose" OR '
             '"impaired glucose tolerance") AND ("lifestyle intervention" OR '
             '"lifestyle modification" OR "diabetes prevention" OR diet OR exercise OR '
             '"physical activity" OR "weight loss" OR "insulin resistance")'
+        ),
+    ),
+    (
+        "PubMed diabetes prevention and remission",
+        (
+            '("type 2 diabetes" OR "diabetes prevention" OR prediabetes OR '
+            '"prediabetic state") AND (prevention OR remission OR reversal OR '
+            '"risk reduction" OR "weight loss" OR "intensive lifestyle")'
+        ),
+    ),
+    (
+        "PubMed insulin resistance interventions",
+        (
+            '("insulin resistance" OR "insulin sensitivity" OR HOMA-IR OR '
+            '"metabolic syndrome") AND (diet OR nutrition OR exercise OR '
+            '"physical activity" OR sleep OR "time-restricted eating" OR '
+            '"intermittent fasting" OR "weight loss")'
+        ),
+    ),
+    (
+        "PubMed obesity and metabolic health",
+        (
+            '(obesity OR overweight OR adiposity OR "waist circumference") AND '
+            '("type 2 diabetes" OR prediabetes OR "insulin resistance" OR '
+            '"metabolic syndrome") AND (lifestyle OR diet OR exercise OR '
+            '"weight management")'
+        ),
+    ),
+    (
+        "PubMed nutrition and glycemic control",
+        (
+            '(diet OR nutrition OR "Mediterranean diet" OR "low carbohydrate" OR '
+            'fiber OR protein OR "ultra-processed food") AND '
+            '(prediabetes OR "type 2 diabetes" OR "insulin resistance" OR HbA1c '
+            'OR "glycemic control")'
+        ),
+    ),
+    (
+        "PubMed digital diabetes prevention",
+        (
+            '("diabetes prevention program" OR "digital health" OR app OR '
+            'telehealth OR coaching OR "behavior change") AND '
+            '(prediabetes OR "type 2 diabetes" OR "insulin resistance")'
         ),
     ),
 ]
@@ -452,6 +495,10 @@ def yaml_list(values: list[str]) -> str:
     return "[" + ", ".join(values) + "]"
 
 
+def yaml_string_list(values: list[str]) -> str:
+    return "[" + ", ".join(json.dumps(value, ensure_ascii=False) for value in values) + "]"
+
+
 def thumbnail_for_paper(paper: PaperItem) -> str:
     seed = paper.doi or paper.pmid or paper.title
     index = int(hashlib.sha256(seed.encode("utf-8")).hexdigest()[:8], 16)
@@ -543,6 +590,64 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
 
         Abstract/evidence:
         {paper.summary[:5000]}
+        """
+    ).strip()
+
+
+def build_revision_prompt(
+    paper: PaperItem,
+    matched: list[str],
+    article: dict[str, Any],
+    quality_issues: list[str],
+) -> str:
+    return textwrap.dedent(
+        f"""
+        You are the GLUCOLIT senior medical editor. Revise the draft below so
+        it follows the GLUCOLIT Research Rewrite SOP and fixes these quality
+        issues:
+
+        {json.dumps(quality_issues, ensure_ascii=False, indent=2)}
+
+        Non-negotiable revision rules:
+        - Keep every claim source-bounded. Use only the provided title,
+          abstract, DOI/link, and metadata.
+        - Do not invent full-text details, sample sizes, methods, or outcomes
+          that are not in the evidence.
+        - Do not write in reviewer voice. Avoid repeated phrases like
+          "this study", "this paper", "the researchers", "这篇研究",
+          "这项研究", or "这篇报告".
+        - Chinese paragraphs must be short and readable. One paragraph should
+          usually contain 2-4 sentences and stay under about 150 Chinese
+          characters. Break long blocks aggressively.
+        - Use the required Chinese section headings exactly:
+          ### 研究背景
+          ### 核心发现
+          ### 你的解读与批判
+          ### 临床/商业启发
+        - `核心发现` must stay within 300 Chinese characters.
+        - `你的解读与批判` should be the main original commentary, not a
+          rewritten abstract.
+        - Remove empty bullets and any human-review warning from the article
+          body.
+        - Return strict JSON with the same schema as the draft.
+
+        Source metadata:
+        Source: {paper.source}
+        Title: {paper.title}
+        PMID: {paper.pmid}
+        DOI: {paper.doi}
+        Link: {paper.link}
+        Authors: {paper.authors}
+        Open-access link if available: {paper.oa_url}
+        Evidence type: {paper.evidence}
+        Published date: {paper.published_at}
+        Matched relevance keywords: {", ".join(matched)}
+
+        Abstract/evidence:
+        {paper.summary[:5000]}
+
+        Draft JSON to revise:
+        {json.dumps(article, ensure_ascii=False)}
         """
     ).strip()
 
@@ -706,6 +811,16 @@ def generate_article(prompt: str) -> dict[str, Any] | None:
     if article is not None:
         return article
     return call_openai_responses_fallback(config, prompt)
+
+
+def revise_article_with_sop(
+    paper: PaperItem,
+    matched: list[str],
+    article: dict[str, Any],
+    quality_issues: list[str],
+) -> dict[str, Any] | None:
+    prompt = build_revision_prompt(paper, matched, article, quality_issues)
+    return generate_article(prompt)
 
 
 def count_cjk(value: str) -> int:
@@ -992,25 +1107,52 @@ def evidence_card_markdown(card: dict[str, Any]) -> str:
     )
 
 
-def article_to_mdx(paper: PaperItem, article: dict[str, Any], status: str, draft: bool) -> str:
+def article_to_mdx(
+    paper: PaperItem,
+    article: dict[str, Any],
+    status: str,
+    draft: bool,
+    quality_issues: list[str] | None = None,
+) -> str:
     article = normalize_article(article)
     title = f"{article['title_zh']} / {article['title_en']}"
     description = f"{article['description_zh']} {article['description_en']}"
     doi_line = f"- DOI: [{paper.doi}](https://doi.org/{paper.doi})\n" if paper.doi else ""
     oa_line = f"- Open-access link: [{paper.oa_url}]({paper.oa_url})\n" if paper.oa_url else ""
     authors_line = f"- Authors: {paper.authors}\n" if paper.authors else ""
+    quality_issues = quality_issues or []
+    quality_status = "needs_revision" if quality_issues else "ready"
+    frontmatter = [
+        "---",
+        f'title: "{md_escape(title[:180])}"',
+        f'description: "{md_escape(description[:260])}"',
+        f"publishedAt: {paper.published_at}",
+        f'tags: {yaml_list(["medical-research", "prediabetes", "lifestyle"])}',
+        f"thumbnail: {thumbnail_for_paper(paper)}",
+        f"status: {status}",
+        f"draft: {str(draft).lower()}",
+        f"reviewRequired: {str(bool(quality_issues)).lower()}",
+        f"qualityStatus: {quality_status}",
+    ]
+    if quality_issues:
+        frontmatter.append(f"qualityIssues: {yaml_string_list(quality_issues)}")
+    frontmatter.append("---")
     return "\n".join(
-        [
-            "---",
-            f'title: "{md_escape(title[:180])}"',
-            f'description: "{md_escape(description[:260])}"',
-            f"publishedAt: {paper.published_at}",
-            f'tags: {yaml_list(["medical-research", "prediabetes", "lifestyle"])}',
-            f"thumbnail: {thumbnail_for_paper(paper)}",
-            f"status: {status}",
-            f"draft: {str(draft).lower()}",
-            "---",
+        frontmatter
+        + [
             "",
+            *(
+                [
+                    "> **待修订提醒：** 这篇草稿已进入后台，但还没有完全通过 GLUCOLIT 发布质量门。请按下方 SOP 检查并人工改稿后再发布。",
+                    "",
+                    "### 待修订问题",
+                    "",
+                    bullet_list(quality_issues),
+                    "",
+                ]
+                if quality_issues
+                else []
+            ),
             "> 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。本文仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。",
             "",
             "## 审核用证据卡片",
@@ -1084,16 +1226,26 @@ def save_state(state: dict[str, Any]) -> None:
     )
 
 
-def write_article(paper: PaperItem, item_id: str, article: dict[str, Any], status: str, draft: bool) -> Path:
+def write_article(
+    paper: PaperItem,
+    item_id: str,
+    article: dict[str, Any],
+    status: str,
+    draft: bool,
+    quality_issues: list[str] | None = None,
+) -> Path:
     slug = slugify(paper.title, item_id)
     post_dir = CONTENT_ROOT / slug
     post_dir.mkdir(parents=True, exist_ok=True)
     post_path = post_dir / "en.mdx"
-    post_path.write_text(article_to_mdx(paper, article, status, draft), encoding="utf-8")
+    post_path.write_text(
+        article_to_mdx(paper, article, status, draft, quality_issues),
+        encoding="utf-8",
+    )
     return post_path
 
 
-def candidate_papers(limit_per_journal: int) -> list[PaperItem]:
+def candidate_papers(limit_per_journal: int, max_candidates: int) -> list[PaperItem]:
     papers: list[PaperItem] = []
     seen: set[str] = set()
     broad_limit = max(limit_per_journal * 8, 12)
@@ -1126,8 +1278,18 @@ def candidate_papers(limit_per_journal: int) -> list[PaperItem]:
             seen.add(item_id)
             papers.append(paper)
             time.sleep(0.1)
+    preselected = sorted(
+        papers,
+        key=lambda paper: (
+            relevance_score(paper.title, paper.summary)[0],
+            len(paper.summary),
+            paper.published_at,
+        ),
+        reverse=True,
+    )[:max_candidates]
+
     enriched: list[PaperItem] = []
-    for paper in papers:
+    for paper in preselected:
         try:
             enriched.append(enrich_paper(paper))
             time.sleep(0.1)
@@ -1160,9 +1322,10 @@ def run(args: argparse.Namespace) -> int:
     skipped_no_abstract = 0
     skipped_openai = 0
     skipped_quality = 0
+    saved_needs_revision = 0
     llm_attempts = 0
 
-    for paper in candidate_papers(args.limit_per_feed):
+    for paper in candidate_papers(args.limit_per_feed, args.max_candidates):
         if args.max_created is not None and created_count >= args.max_created:
             print(f"Reached max-created={args.max_created}; stopping.")
             break
@@ -1229,13 +1392,47 @@ def run(args: argparse.Namespace) -> int:
         quality_issues = article_quality_issues(article)
         if quality_issues:
             print(
-                "Skip because article failed GLUCOLIT quality gate: "
+                "Article failed GLUCOLIT quality gate; trying one SOP revision: "
                 f"{paper.title} ({'; '.join(quality_issues)})"
             )
-            state["items"][item_id]["quality_issues"] = quality_issues
-            state["items"][item_id]["skip_reason"] = "generated article failed quality gate"
-            skipped_quality += 1
-            continue
+            revised = revise_article_with_sop(paper, matched, article, quality_issues)
+            if revised is not None:
+                revised = normalize_article(revised)
+                revised_issues = article_quality_issues(revised)
+                if len(revised_issues) <= len(quality_issues):
+                    article = revised
+                    quality_issues = revised_issues
+
+            if quality_issues:
+                print(
+                    "Saving as needs-revision draft after quality gate: "
+                    f"{paper.title} ({'; '.join(quality_issues)})"
+                )
+                skipped_quality += 1
+                if args.dry_run:
+                    print(f"Would create needs-revision draft score={score}: {paper.title}")
+                    created_count += 1
+                    continue
+
+                path = write_article(
+                    paper,
+                    item_id,
+                    article,
+                    args.status,
+                    args.draft,
+                    quality_issues,
+                )
+                created.append(path)
+                created_count += 1
+                saved_needs_revision += 1
+                state["items"][item_id]["generated"] = True
+                state["items"][item_id]["path"] = str(path.relative_to(REPO_ROOT))
+                state["items"][item_id]["quality_status"] = "needs_revision"
+                state["items"][item_id]["quality_issues"] = quality_issues
+                state["items"][item_id]["skip_reason"] = "saved as needs-revision draft"
+                print(f"Created needs-revision draft {path.relative_to(REPO_ROOT)}")
+                time.sleep(args.sleep)
+                continue
         if args.dry_run:
             print(f"Would create score={score}: {paper.title}")
             created_count += 1
@@ -1246,6 +1443,7 @@ def run(args: argparse.Namespace) -> int:
         created_count += 1
         state["items"][item_id]["generated"] = True
         state["items"][item_id]["path"] = str(path.relative_to(REPO_ROOT))
+        state["items"][item_id]["quality_status"] = "ready"
         state["items"][item_id].pop("skip_reason", None)
         state["items"][item_id].pop("quality_issues", None)
         print(f"Created {path.relative_to(REPO_ROOT)}")
@@ -1266,7 +1464,8 @@ def run(args: argparse.Namespace) -> int:
                 f"- Skipped because abstract was missing/short: {skipped_no_abstract}\n"
                 f"- Skipped by relevance score: {skipped_score}\n"
                 f"- Skipped because OpenAI returned no article: {skipped_openai}\n"
-                f"- Skipped by article quality gate: {skipped_quality}\n"
+                f"- Saved as needs-revision drafts: {saved_needs_revision}\n"
+                f"- Still carrying quality issues: {skipped_quality}\n"
             )
             if LLM_ERRORS:
                 summary_file.write("\n### LLM error samples\n\n")
@@ -1284,6 +1483,7 @@ def run(args: argparse.Namespace) -> int:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--limit-per-feed", type=int, default=5)
+    parser.add_argument("--max-candidates", type=int, default=40)
     parser.add_argument("--max-created", type=int, default=None)
     parser.add_argument("--max-llm-attempts", type=int, default=None)
     parser.add_argument("--min-score", type=int, default=6)

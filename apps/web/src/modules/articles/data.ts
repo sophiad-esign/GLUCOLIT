@@ -36,6 +36,9 @@ export type Article = {
   publishedAt: Date;
   publishedAtLabel: string;
   draft: boolean;
+  reviewRequired: boolean;
+  qualityStatus: string;
+  qualityIssues: string[];
   contentPath: string;
   tags: string[];
   categoryLabels: string[];
@@ -204,6 +207,9 @@ const toArticle = (
     publishedAt: item.publishedAt,
     publishedAtLabel: dayjs(item.publishedAt).format("YYYY-MM-DD"),
     draft: item.draft,
+    reviewRequired: item.reviewRequired,
+    qualityStatus: item.qualityStatus,
+    qualityIssues: item.qualityIssues,
     contentPath: `packages/cms/src/collections/blog/content/${item.slug}/en.mdx`,
     tags: item.tags,
     categoryLabels: inferCategoryLabels(textForLabels, item.tags),

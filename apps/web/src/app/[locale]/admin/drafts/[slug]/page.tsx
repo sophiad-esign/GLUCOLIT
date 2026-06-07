@@ -85,10 +85,10 @@ export default async function DraftPreviewPage({
           />
           <Button
             type="submit"
-            disabled={!canPublish}
+            disabled={!canPublish || article.reviewRequired}
             className="w-full bg-[#1e3a5f] hover:bg-[#2d5a87] sm:w-auto"
           >
-            一键发布这篇文章
+            {article.reviewRequired ? "先完成 SOP 修订" : "一键发布这篇文章"}
           </Button>
         </form>
       </div>
@@ -97,6 +97,9 @@ export default async function DraftPreviewPage({
         <div className="space-y-4">
           <div className="flex flex-wrap gap-2">
             <Badge variant="secondary">待审核</Badge>
+            <Badge variant={article.reviewRequired ? "destructive" : "default"}>
+              {article.reviewRequired ? "需 SOP 修订" : "可发布候选"}
+            </Badge>
             <Badge variant="secondary">{article.publishedAtLabel}</Badge>
             {article.categoryLabels.map((label) => (
               <Badge key={label} variant="secondary">
@@ -130,6 +133,26 @@ export default async function DraftPreviewPage({
           </div>
         </div>
       </section>
+
+      {article.reviewRequired ? (
+        <Card className="border-amber-200 bg-amber-50 dark:border-amber-900/60 dark:bg-amber-950/30">
+          <CardHeader>
+            <CardTitle className="text-amber-950 dark:text-amber-100">
+              这篇还不能发布：需要 SOP 修订
+            </CardTitle>
+            <CardDescription className="text-amber-900 dark:text-amber-100/80">
+              系统已经把候选稿放进后台，避免草稿库一直为空。但它还没有完全通过发布质量门，需要人工改稿后再发布。
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="text-sm leading-7 text-amber-950 dark:text-amber-100">
+            <ul className="list-disc space-y-1 pl-5">
+              {article.qualityIssues.map((issue) => (
+                <li key={issue}>{issue}</li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      ) : null}
 
       <Card>
         <CardHeader>

@@ -49,7 +49,7 @@ jobs:
           KIMI_MODEL: ${{ vars.KIMI_MODEL || 'moonshot-v1-8k' }}
           KIMI_BASE_URL: ${{ vars.KIMI_BASE_URL || 'https://api.moonshot.ai/v1' }}
           UNPAYWALL_EMAIL: ${{ vars.UNPAYWALL_EMAIL || 'contact@glucolit.vercel.app' }}
-        run: python scripts/glucolit_literature_monitor.py --status published --draft --limit-per-feed 8 --min-score 5 --max-created 2 --max-llm-attempts 12 --require-openai
+        run: python scripts/glucolit_literature_monitor.py --status published --draft --limit-per-feed 8 --max-candidates 40 --min-score 5 --max-created 2 --max-llm-attempts 12 --require-openai
 
       - name: Write run summary
         if: always()
@@ -58,7 +58,7 @@ jobs:
             echo "## GLUCOLIT literature monitor"
             echo ""
             echo "- Schedule: daily at 09:15 Los Angeles time during PDT"
-            echo "- Daily target: 2 review drafts when enough eligible abstracts pass quality gates"
+            echo "- Daily target: 2 review drafts. Drafts that need more work are saved with reviewRequired: true instead of being discarded."
             echo "- Discovery: PubMed first, Europe PMC and Unpaywall enrichment"
             echo "- Output: MDX drafts under \`packages/cms/src/collections/blog/content\`"
             echo "- Public safety: generated posts keep \`draft: true\` until manually reviewed"
