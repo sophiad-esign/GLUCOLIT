@@ -59,7 +59,7 @@ export function ArticleReader({ article }: { article: Article }) {
               </ul>
             ) : (
               <p
-                key={block.text}
+                key={`${block.text}-${index}`}
                 className="text-[17px] leading-8 sm:leading-9"
               >
                 {block.text}

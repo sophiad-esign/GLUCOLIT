@@ -11,9 +11,9 @@ export type ReadingBlock =
 const hasCjk = (text: string) => /[\u3400-\u9fff]/.test(text);
 
 const sentenceParts = (text: string) =>
-  text
-    .match(/[^。！？.!?；;]+[。！？.!?；;]?/g)
-    ?.map((part) => part.trim()) || [text];
+  text.match(/[^。！？!?；;]+[。！？!?；;]?/g)?.map((part) => part.trim()) || [
+    text,
+  ];
 
 const splitOversizedSentence = (sentence: string, maxLength: number) => {
   if (sentence.length <= maxLength) {
@@ -44,7 +44,7 @@ const splitOversizedSentence = (sentence: string, maxLength: number) => {
 };
 
 const compactParagraphs = (paragraph: string) => {
-  const maxLength = hasCjk(paragraph) ? 135 : 230;
+  const maxLength = hasCjk(paragraph) ? 115 : 210;
   const parts = sentenceParts(paragraph).flatMap((sentence) =>
     splitOversizedSentence(sentence, maxLength),
   );
@@ -73,7 +73,7 @@ const compactParagraphs = (paragraph: string) => {
 const normalizeLooseBullets = (content: string) =>
   content
     .replace(/\r\n/g, "\n")
-    .replace(/([。！？.!?；;])\s+[-*]\s+/g, "$1\n- ")
+    .replace(/([。！？!?；;])\s+[-*]\s+/g, "$1\n- ")
     .replace(/\n[ \t]*[-*]\s+/g, "\n- ");
 
 export const readingBlocks = (content: string): ReadingBlock[] =>

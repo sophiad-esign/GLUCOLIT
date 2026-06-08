@@ -1,13 +1,15 @@
-import { ArticleCard } from "~/modules/articles/article-card";
 /* eslint-disable i18next/no-literal-string */
+
+import { ArticleCard } from "~/modules/articles/article-card";
 import {
-  getPublishedArticles,
   ARTICLE_CATEGORY_OPTIONS,
+  getPublishedArticles,
 } from "~/modules/articles/data";
 
 export const metadata = {
-  title: "GLUCOLIT Articles",
-  description: "糖尿病前期、胰岛素抵抗与生活方式干预的双语科普文章。",
+  title: "GLUCOLIT 干预指南库",
+  description:
+    "糖尿病前期、胰岛素抵抗、饮食、运动、睡眠、压力、补充剂与 CGM 相关的医学科普干预指南。",
 };
 
 export default async function ArticlesPage({
@@ -20,21 +22,22 @@ export default async function ArticlesPage({
 
   return (
     <main className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <section className="rounded-3xl bg-gradient-to-br from-[#1e3a5f] to-[#2d5a87] px-6 py-10 text-white shadow-xl sm:px-10">
+      <section className="rounded-2xl border border-[#2d5a87]/20 bg-gradient-to-br from-[#1e3a5f] to-[#2d5a87] px-6 py-10 text-white shadow-sm sm:px-10">
         <p className="text-sm font-medium tracking-[0.18em] text-sky-100 uppercase">
-          GLUCOLIT Research Radar
+          GLUCOLIT Intervention Guides
         </p>
         <h1 className="mt-4 text-3xl font-bold tracking-normal sm:text-5xl">
-          糖尿病前期权威科普文章库
+          糖尿病前期与代谢健康干预指南库
         </h1>
-        <p className="mt-4 max-w-2xl text-base leading-8 text-sky-50">
-          追踪国际期刊里的糖尿病前期、胰岛素抵抗和生活方式干预研究，审核后转成中英文白话科普。
+        <p className="mt-4 max-w-3xl text-base leading-8 text-sky-50">
+          这里收录已经通过人工审核的干预指南。顶部先给结论、评分和行动清单，研究证据放在底部，方便你核查
+          PubMed、DOI 或开放获取原文。
         </p>
       </section>
 
       <form className="mt-8 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:flex-row sm:items-end dark:border-slate-800 dark:bg-slate-950">
         <label className="flex flex-1 flex-col gap-2 text-sm font-medium text-slate-700 dark:text-slate-200">
-          按分类筛选
+          按干预/主题筛选
           <select
             name="category"
             defaultValue={category}
@@ -80,12 +83,7 @@ export default async function ArticlesPage({
             暂无已发布文章
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-300">
-            当前 RSS 生成文章仍处于草稿审核状态。把确认可发布的文章 frontmatter
-            改为
-            <code className="mx-1 rounded bg-white px-1.5 py-0.5 dark:bg-slate-950">
-              draft: false
-            </code>
-            后，这里会自动展示。
+            草稿需要先在后台审核并一键发布，才会出现在指南库。
           </p>
         </div>
       )}

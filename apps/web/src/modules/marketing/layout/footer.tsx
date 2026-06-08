@@ -1,126 +1,41 @@
-import { getTranslation } from "@workspace/i18n/server";
-import { isExternal } from "@workspace/shared/utils";
-import { BuiltWith } from "@workspace/ui-web/built-with";
+/* eslint-disable i18next/no-literal-string */
+
 import { Icons } from "@workspace/ui-web/icons";
 
-import { appConfig } from "~/config/app";
 import { pathsConfig } from "~/config/paths";
 import { I18nControls } from "~/modules/common/i18n/controls";
 import { TurboLink } from "~/modules/common/turbo-link";
 
-const socials = [
+const columns = [
   {
-    id: "x",
-    href: "https://x.com/turbostarter_",
-    icon: Icons.Twitter,
-  },
-  {
-    id: "github",
-    href: "https://github.com/turbostarter",
-    icon: Icons.Github,
-  },
-
-  {
-    id: "facebook",
-    href: "#",
-    icon: Icons.Facebook,
-  },
-  {
-    id: "linkedin",
-    href: "#",
-    icon: Icons.Linkedin,
-  },
-];
-
-const links = [
-  {
-    label: "common:product",
-    items: [
-      {
-        title: "marketing:product.mobile.ios.title",
-        href: "https://turbostarter.dev",
-      },
-      {
-        title: "marketing:product.mobile.android.title",
-        href: "https://turbostarter.dev",
-      },
-      {
-        title: "marketing:product.extension.chrome.title",
-        href: "https://chromewebstore.google.com/detail/bcjmonmlfbnngpkllpnpmnjajaciaboo",
-      },
-      {
-        title: "marketing:product.extension.firefox.title",
-        href: "https://addons.mozilla.org/addon/turbostarter_",
-      },
-      {
-        title: "marketing:product.extension.edge.title",
-        href: "https://microsoftedge.microsoft.com/addons/detail/turbostarter/ianbflanmmoeleokihabnmmcahhfijig",
-      },
+    title: "站点",
+    links: [
+      { title: "首页", href: pathsConfig.index },
+      { title: "干预指南", href: pathsConfig.marketing.articles.index },
+      { title: "糖前指南", href: "/guide" },
+      { title: "关于 GLUCOLIT", href: "/about" },
     ],
   },
   {
-    label: "resources",
-    items: [
-      {
-        title: "marketing:contact.label",
-        href: pathsConfig.marketing.contact,
-      },
-      {
-        title: "marketing:roadmap.title",
-        href: "https://github.com/orgs/turbostarter/projects/1",
-      },
-      {
-        title: "marketing:docs.title",
-        href: "https://turbostarter.dev/docs/web",
-      },
-      {
-        title: "marketing:api.title",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "about",
-    items: [
-      {
-        title: "billing:pricing.label",
-        href: pathsConfig.marketing.pricing,
-      },
-      {
-        title: "marketing:blog.label",
-        href: pathsConfig.marketing.articles.index,
-      },
-    ],
-  },
-  {
-    label: "legal.label",
-    items: [
-      {
-        title: "legal.privacy",
-        href: pathsConfig.marketing.legal("privacy-policy"),
-      },
-      {
-        title: "legal.terms",
-        href: pathsConfig.marketing.legal("terms-and-conditions"),
-      },
+    title: "读者服务",
+    links: [
+      { title: "订阅每日更新", href: "/subscribe" },
+      { title: "后台草稿审核", href: pathsConfig.admin.drafts.index },
+      { title: "公开文章", href: pathsConfig.marketing.articles.index },
     ],
   },
 ] as const;
 
 export const Footer = async () => {
-  const { t } = await getTranslation({
-    ns: ["common", "marketing", "billing"],
-  });
-
   return (
-    <footer className="mt-auto w-full border-t px-6 pt-8 pb-6 sm:pt-10 sm:pb-8 md:pt-14 md:pb-10 lg:pt-16">
+    <footer className="mt-auto w-full border-t bg-slate-50 px-6 pt-10 pb-8 dark:bg-slate-950">
       <div className="sm:container">
-        <div className="flex w-full flex-col items-start justify-between gap-10 md:gap-16 lg:flex-row lg:gap-24 xl:gap-32">
-          <div className="flex flex-col items-start justify-center gap-2">
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr]">
+          <div>
             <TurboLink
               href={pathsConfig.index}
               className="flex shrink-0 items-center gap-3"
-              aria-label={t("home")}
+              aria-label="GLUCOLIT 首页"
             >
               <Icons.Logo className="text-primary h-8" />
               <span className="text-xl font-bold tracking-normal text-slate-950 dark:text-white">
@@ -128,46 +43,54 @@ export const Footer = async () => {
               </span>
             </TurboLink>
 
-            <p className="text-muted-foreground text-sm text-pretty">
-              {t("product.title")}
-            </p>
+            <div className="mt-5 grid gap-4 text-sm leading-7 text-slate-600 md:grid-cols-3 dark:text-slate-300">
+              <div>
+                <p className="font-semibold text-slate-950 dark:text-white">
+                  数据源声明
+                </p>
+                <p>
+                  优先追踪 PubMed、PubMed Central、Europe PMC、Unpaywall
+                  与开放获取期刊链接。
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-950 dark:text-white">
+                  审核流程说明
+                </p>
+                <p>
+                  自动生成内容先进入草稿库，人工检查事实边界、版权风险和可读性后再发布。
+                </p>
+              </div>
+              <div>
+                <p className="font-semibold text-slate-950 dark:text-white">
+                  免责声明
+                </p>
+                <p>
+                  本站内容仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。
+                </p>
+              </div>
+            </div>
 
-            <I18nControls />
-
-            <div className="mt-2 flex items-center gap-2.5">
-              {socials.map((social) => (
-                <a
-                  key={social.id}
-                  href={social.href}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                  aria-label={social.id}
-                >
-                  <social.icon className="size-7" />
-                </a>
-              ))}
+            <div className="mt-5">
+              <I18nControls />
             </div>
           </div>
 
-          <div className="mt-1 grid w-full max-w-200 grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4">
-            {links.map((link) => (
-              <div className="flex w-full flex-col gap-4" key={link.label}>
+          <div className="grid gap-8 sm:grid-cols-2">
+            {columns.map((column) => (
+              <div className="flex w-full flex-col gap-4" key={column.title}>
                 <span className="text-foreground text-sm font-medium">
-                  {t(link.label)}
+                  {column.title}
                 </span>
                 <nav>
                   <ul className="flex flex-col gap-2">
-                    {link.items.map((link) => (
+                    {column.links.map((link) => (
                       <li key={link.title}>
                         <TurboLink
                           href={link.href}
                           className="text-muted-foreground hover:text-foreground relative text-sm transition-colors"
                         >
-                          {t(link.title)}
-                          {isExternal(link.href) && (
-                            <Icons.ArrowUpRight className="-mt-1 inline size-2.5" />
-                          )}
+                          {link.title}
                         </TurboLink>
                       </li>
                     ))}
@@ -177,16 +100,12 @@ export const Footer = async () => {
             ))}
           </div>
         </div>
-        <div className="mt-8 pt-6">
-          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-            <p className="text-muted-foreground text-sm">
-              {/* oxlint-disable-next-line i18next/no-literal-string */}
-              &copy; {new Date().getFullYear()} {appConfig.name}.{" "}
-              {t("legal.copyright")}.
-            </p>
 
-            <BuiltWith />
-          </div>
+        <div className="mt-8 border-t pt-6">
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} GLUCOLIT.
+            基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。
+          </p>
         </div>
       </div>
     </footer>

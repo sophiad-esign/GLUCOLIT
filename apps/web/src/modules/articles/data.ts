@@ -10,7 +10,7 @@ import {
 import { SortOrder } from "@workspace/shared/constants";
 
 export const ARTICLE_CATEGORY_OPTIONS = [
-  { value: "all", label: "全部分类" },
+  { value: "all", label: "全部主题" },
   { value: ContentTag.PREDIABETES, label: "糖尿病前期" },
   { value: ContentTag.INSULIN_RESISTANCE, label: "胰岛素抵抗" },
   { value: ContentTag.LIFESTYLE, label: "生活方式" },
@@ -42,6 +42,11 @@ export type Article = {
   contentPath: string;
   tags: string[];
   categoryLabels: string[];
+  authors: string;
+  referenceTitle: string;
+  referenceLinks: { label: string; href: string }[];
+  evidenceLabel: string;
+  reviewStatusLabel: string;
 };
 
 const ARTICLE_TAGS = new Set<string>([
@@ -62,6 +67,7 @@ const SOURCE_FALLBACK = "国际医学期刊";
 
 const splitBilingualTitle = (title: string) => {
   const [zh, ...enParts] = title.split(" / ");
+
   return {
     titleZh: zh?.trim() || title,
     titleEn: enParts.join(" / ").trim() || title,
@@ -114,8 +120,13 @@ const firstParagraph = (text: string, fallback: string) =>
 
 const metadataLine = (content: string, label: string) => {
   const regex = new RegExp(`^- ${label}:\\s*(.+)$`, "im");
+
   return content.match(regex)?.[1]?.trim();
 };
+
+const markdownLinkUrl = (value?: string) =>
+  value?.match(/\((https?:\/\/[^)]+)\)/)?.[1] ||
+  value?.match(/https?:\/\/\S+/)?.[0]?.replace(/[.)]+$/, "");
 
 const firstMetadataLink = (content: string, labels: string[]) =>
   labels
@@ -123,33 +134,12 @@ const firstMetadataLink = (content: string, labels: string[]) =>
     .map(markdownLinkUrl)
     .find(Boolean);
 
-const markdownLinkUrl = (value?: string) =>
-  value?.match(/\((https?:\/\/[^)]+)\)/)?.[1] ||
-  value?.match(/https?:\/\/\S+/)?.[0]?.replace(/[.)]+$/, "");
-
 const inferDoi = (content: string) =>
   content.match(/\b10\.\d{4,9}\/[-._;()/:A-Z0-9]+\b/i)?.[0];
 
 const inferCategoryLabels = (text: string, tags: string[]) => {
   const labels = new Set<string>();
   const haystack = text.toLowerCase();
-
-  if (/diet|nutrition|meal|food|weight|饮食|营养|体重/.test(haystack)) {
-    labels.add("饮食干预");
-  }
-  if (
-    /exercise|physical activity|walking|fitness|运动|步行|锻炼/.test(haystack)
-  ) {
-    labels.add("运动");
-  }
-  if (
-    /metformin|glp-?1|semaglutide|drug|medication|药物|二甲双胍/.test(haystack)
-  ) {
-    labels.add("药物");
-  }
-  if (/sleep|stress|睡眠|压力/.test(haystack)) {
-    labels.add("生活方式");
-  }
 
   tags.forEach((tag) => {
     const label = TAG_LABELS[tag];
@@ -159,11 +149,79 @@ const inferCategoryLabels = (text: string, tags: string[]) => {
     }
   });
 
+  if (
+    /diet|nutrition|meal|food|weight|exercise|physical activity|walking|fitness|饮食|营养|体重|运动|步行|锻炼/.test(
+      haystack,
+    )
+  ) {
+    labels.add("生活方式");
+  }
+  if (/insulin|homa-ir|胰岛素|胰岛素抵抗/.test(haystack)) {
+    labels.add("胰岛素抵抗");
+  }
+  if (/cgm|continuous glucose|连续血糖|动态血糖/.test(haystack)) {
+    labels.add("CGM");
+  }
+  if (
+    /metformin|glp-?1|semaglutide|drug|medication|药物|二甲双胍/.test(haystack)
+  ) {
+    labels.add("药物研究");
+  }
+
   return Array.from(labels).slice(0, 4);
+};
+
+const inferEvidenceLabel = (text: string) => {
+  const haystack = text.toLowerCase();
+
+  if (
+    /meta-analysis|systematic review|荟萃|系统综述|meta regression/.test(
+      haystack,
+    )
+  ) {
+    return "荟萃";
+  }
+  if (/randomized|randomised|rct|trial|随机/.test(haystack)) {
+    return "RCT";
+  }
+  if (
+    /cohort|observational|cross-sectional|cluster analysis|队列|观察|聚类/.test(
+      haystack,
+    )
+  ) {
+    return "观察";
+  }
+
+  return "专家";
 };
 
 const isResearchArticle = (tags: string[]) =>
   tags.some((tag) => ARTICLE_TAGS.has(tag));
+
+const buildReferenceLinks = (
+  content: string,
+  doi?: string,
+  originalUrl?: string,
+) => {
+  const links = new Map<string, string>();
+  const pubmed = firstMetadataLink(content, ["PubMed", "PubMed/source link"]);
+  const openAccess = firstMetadataLink(content, ["Open-access link"]);
+
+  if (doi) {
+    links.set("DOI", `https://doi.org/${doi}`);
+  }
+  if (pubmed) {
+    links.set("PubMed", pubmed);
+  }
+  if (openAccess) {
+    links.set("开放获取链接", openAccess);
+  }
+  if (originalUrl) {
+    links.set("原文链接", originalUrl);
+  }
+
+  return Array.from(links, ([label, href]) => ({ label, href }));
+};
 
 const toArticle = (
   item: ReturnType<
@@ -173,24 +231,29 @@ const toArticle = (
   const { titleZh, titleEn } = splitBilingualTitle(item.title);
   const bodyZh = sectionBetweenAny(
     item.content,
-    ["## 原文精华摘要", "## 中文白话版"],
+    ["## 原文精华摘要", "## 中文白话版", "## 鍘熸枃绮惧崕鎽樿"],
     ["## English Plain-Language Version", "## Plain-English Version"],
   );
   const bodyEn = sectionBetweenAny(
     item.content,
     ["## English Plain-Language Version", "## Plain-English Version"],
-    ["## Source"],
+    ["## 解读与批判", "## Source"],
   );
   const source =
     metadataLine(item.content, "Journal/source") || SOURCE_FALLBACK;
   const originalUrl = firstMetadataLink(item.content, [
     "Link",
     "PubMed",
+    "PubMed/source link",
     "Open-access link",
     "DOI",
   ]);
   const doi = inferDoi(item.content);
+  const authors = metadataLine(item.content, "Authors") || "GLUCOLIT 编辑部";
+  const referenceTitle =
+    metadataLine(item.content, "Original title") || item.title;
   const textForLabels = `${item.title} ${item.description} ${bodyZh} ${bodyEn}`;
+  const evidenceText = `${item.title} ${item.description} ${referenceTitle} ${bodyEn}`;
 
   return {
     slug: item.slug,
@@ -213,6 +276,11 @@ const toArticle = (
     contentPath: `packages/cms/src/collections/blog/content/${item.slug}/en.mdx`,
     tags: item.tags,
     categoryLabels: inferCategoryLabels(textForLabels, item.tags),
+    authors,
+    referenceTitle,
+    referenceLinks: buildReferenceLinks(item.content, doi, originalUrl),
+    evidenceLabel: inferEvidenceLabel(evidenceText),
+    reviewStatusLabel: item.reviewRequired ? "需复核" : "已审核",
   };
 };
 
@@ -261,6 +329,20 @@ export const getPublishedArticleBySlug = (slug: string) => {
 
 export const getAllPublishedArticleSlugs = () =>
   getPublishedArticles().map((article) => ({ slug: article.slug }));
+
+export const getRelatedPublishedArticles = (article: Article, limit = 3) => {
+  const articleTags = new Set(article.tags);
+
+  return getPublishedArticles()
+    .filter((item) => item.slug !== article.slug)
+    .map((item) => ({
+      item,
+      score: item.tags.filter((tag) => articleTags.has(tag)).length,
+    }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, limit)
+    .map(({ item }) => item);
+};
 
 export const getReviewArticles = () => {
   const { items } = getContentItems({

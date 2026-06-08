@@ -150,4 +150,70 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     tags: ["medical-research", "prediabetes", "lifestyle"],
     categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
   },
+  {
+    slug: "preventing-the-progression-the-power-of-lifestyle-interventions-in-predi-c1c34354",
+    titleZh: "生活方式干预对糖尿病前期的影响",
+    titleEn: "The Impact of Lifestyle Interventions on Prediabetes",
+    summaryZh:
+      'Original title: "Preventing the Progression: The Power of Lifestyle Interventions in Prediabetic Individuals-A Systematic Review". - Authors: Bhardwaj Y, Rastogi M - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Clinical endocrinology) - DOI: [10.1111/cen.70077](https://doi.org/10.1111/cen.70077) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41387277/](https://pubmed.ncbi.nlm.nih.gov/41387277/) - Open-access link: [https://doi.org/10.1111/cen.70077](https://doi.org/10.1111/cen.70077) - Evidence used: Europe PMC abstract + open-access full-text link - Published or indexed date: 2026-05-01 了解生活方式改变如何预防糖尿病前期的进展对于那些有发展成2型糖尿病风险的人来说至关重要。 它还可以指导医疗保健提供者开发更有效的预防策略。 - 生活方式改变是管理糖尿病前期的关键策略。 - 文化适应增强了干预措施的效果。 - 需要进一步研究以推广到更广泛的人群。 - 将干预措施纳入医疗保健可以改善结果。',
+    summaryEn:
+      "Understanding how lifestyle changes can prevent the progression of prediabetes is crucial for those at risk of developing type 2 diabetes. It can also guide healthcare providers in developing more effective prevention strategies. - Lifestyle modifications are key in managing prediabetes. - Cultural adaptation enhances intervention efficacy. - Further research is needed for broader population applicability. - Healthcare integration of interventions may improve outcomes.",
+    bodyZh:
+      '- Original title: "Preventing the Progression: The Power of Lifestyle Interventions in Prediabetic Individuals-A Systematic Review".\r\n- Authors: Bhardwaj Y, Rastogi M\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Clinical endocrinology)\r\n- DOI: [10.1111/cen.70077](https://doi.org/10.1111/cen.70077)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41387277/](https://pubmed.ncbi.nlm.nih.gov/41387277/)\r\n- Open-access link: [https://doi.org/10.1111/cen.70077](https://doi.org/10.1111/cen.70077)\r\n- Evidence used: Europe PMC abstract + open-access full-text link\r\n- Published or indexed date: 2026-05-01\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n了解生活方式改变如何预防糖尿病前期的进展对于那些有发展成2型糖尿病风险的人来说至关重要。 它还可以指导医疗保健提供者开发更有效的预防策略。\r\n\r\n\r\n\r\n- 生活方式改变是管理糖尿病前期的关键策略。\r\n- 文化适应增强了干预措施的效果。\r\n- 需要进一步研究以推广到更广泛的人群。\r\n- 将干预措施纳入医疗保健可以改善结果。',
+    bodyEn:
+      "Understanding how lifestyle changes can prevent the progression of prediabetes is crucial for those at risk of developing type 2 diabetes. It can also guide healthcare providers in developing more effective prevention strategies.\r\n\r\n\r\n\r\n- Lifestyle modifications are key in managing prediabetes.\r\n- Cultural adaptation enhances intervention efficacy.\r\n- Further research is needed for broader population applicability.\r\n- Healthcare integration of interventions may improve outcomes.",
+    thumbnail:
+      "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
+    source:
+      "PubMed prediabetes lifestyle intervention via PubMed (Clinical endocrinology)",
+    doi: "10.1111/cen.70077",
+    originalUrl: "https://pubmed.ncbi.nlm.nih.gov/41387277/",
+    publishedAt: "2026-05-01",
+    publishedAtLabel: "2026-05-01",
+    draft: true,
+    reviewRequired: true,
+    qualityStatus: "needs_revision",
+    qualityIssues: [
+      "Chinese commentary is short for the required SOP structure",
+      "Chinese interpretation and critique section is short",
+      "Chinese clinical/business insight section is short",
+    ],
+    contentPath:
+      "packages/cms/src/collections/blog/content/preventing-the-progression-the-power-of-lifestyle-interventions-in-predi-c1c34354/en.mdx",
+    tags: ["medical-research", "prediabetes", "lifestyle"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
+  },
+  {
+    slug: "use-of-continuous-glucose-monitoring-with-machine-learning-to-identify-m-9bd9f351",
+    titleZh: "连续葡萄糖监测与机器学习用于个性化代谢亚型分类",
+    titleEn: "CGM and Machine Learning for Personalized Metabolic Subtyping",
+    summaryZh:
+      "Original title: Use of Continuous Glucose Monitoring With Machine Learning to Identify Metabolic Subphenotypes and Inform Precision Lifestyle Changes. - Authors: Metwally AA, Park H, Wu Y, McLaughlin T, Snyder MP - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes science and technology) - DOI: [10.1177/19322968261431860](https://doi.org/10.1177/19322968261431860) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41978474/](https://pubmed.ncbi.nlm.nih.gov/41978474/) - Open-access link: [https://doi.org/10.1177/19322968261431860](https://doi.org/10.1177/19322968261431860) - Evidence used: PubMed abstract + open-access full-text link - Published or indexed date: 2026-05-01 这项研究之所以相关，是因为它提供了管理糖尿病前期的新视角，并可能导致更有针对性的干预措施。 对于糖尿病前期患者来说，了解这些技术的潜在益处和局限性非常重要。 - CGM和机器学习可以提供个性化的代谢档案。 - 个体对食物的反应可以指示代谢亚型。 - 精准的生活方式改变可能在糖尿病预防中更有效。 - 该技术的实际应用和成本是考虑因素。",
+    summaryEn:
+      "However, practical application and cost considerations are important. This approach emphasizes the importance of integrating diet, sleep, and physical activity data into a comprehensive metabolic profile. This study is relevant because it provides a new perspective on managing prediabetes and could lead to more targeted interventions. It's important for those with prediabetes to understand the potential benefits and limitations of such technologies. - CGM and machine learning can offer personalized metabolic profiles. - Individual responses to food can indicate metabolic subtypes. - Precision lifestyle changes could be more effective in diabetes prevention. - Considerations include the technology's real-world application and cost.",
+    bodyZh:
+      "- Original title: Use of Continuous Glucose Monitoring With Machine Learning to Identify Metabolic Subphenotypes and Inform Precision Lifestyle Changes.\r\n- Authors: Metwally AA, Park H, Wu Y, McLaughlin T, Snyder MP\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes science and technology)\r\n- DOI: [10.1177/19322968261431860](https://doi.org/10.1177/19322968261431860)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41978474/](https://pubmed.ncbi.nlm.nih.gov/41978474/)\r\n- Open-access link: [https://doi.org/10.1177/19322968261431860](https://doi.org/10.1177/19322968261431860)\r\n- Evidence used: PubMed abstract + open-access full-text link\r\n- Published or indexed date: 2026-05-01\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n这项研究之所以相关，是因为它提供了管理糖尿病前期的新视角，并可能导致更有针对性的干预措施。 对于糖尿病前期患者来说，了解这些技术的潜在益处和局限性非常重要。\r\n\r\n\r\n\r\n- CGM和机器学习可以提供个性化的代谢档案。\r\n- 个体对食物的反应可以指示代谢亚型。\r\n- 精准的生活方式改变可能在糖尿病预防中更有效。\r\n- 该技术的实际应用和成本是考虑因素。",
+    bodyEn:
+      "However, practical application and cost considerations are important.\r\n\r\n\r\n\r\nThis approach emphasizes the importance of integrating diet, sleep, and physical activity data into a comprehensive metabolic profile.\r\n\r\n\r\n\r\nThis study is relevant because it provides a new perspective on managing prediabetes and could lead to more targeted interventions.\r\n\r\nIt's important for those with prediabetes to understand the potential benefits and limitations of such technologies.\r\n\r\n\r\n\r\n- CGM and machine learning can offer personalized metabolic profiles.\r\n- Individual responses to food can indicate metabolic subtypes.\r\n- Precision lifestyle changes could be more effective in diabetes prevention.\r\n- Considerations include the technology's real-world application and cost.",
+    thumbnail:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1800&auto=format&fit=crop",
+    source:
+      "PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes science and technology)",
+    doi: "10.1177/19322968261431860",
+    originalUrl: "https://pubmed.ncbi.nlm.nih.gov/41978474/",
+    publishedAt: "2026-05-01",
+    publishedAtLabel: "2026-05-01",
+    draft: true,
+    reviewRequired: true,
+    qualityStatus: "needs_revision",
+    qualityIssues: [
+      "Chinese commentary is short for the required SOP structure",
+      "Chinese interpretation and critique section is short",
+      "Chinese clinical/business insight section is short",
+    ],
+    contentPath:
+      "packages/cms/src/collections/blog/content/use-of-continuous-glucose-monitoring-with-machine-learning-to-identify-m-9bd9f351/en.mdx",
+    tags: ["medical-research", "prediabetes", "lifestyle"],
+    categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
+  },
 ];

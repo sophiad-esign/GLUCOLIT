@@ -1,13 +1,7 @@
-import { getMetadata } from "~/lib/metadata";
-import { Pricing } from "~/modules/billing/pricing/pricing";
+import { redirect } from "next/navigation";
 
-export const generateMetadata = getMetadata({
-  title: "billing:pricing.label",
-  description: "billing:pricing.description",
-});
+import { pathsConfig } from "~/config/paths";
 
-const PricingPage = () => {
-  return <Pricing />;
-};
-
-export default PricingPage;
+export default function PricingPage() {
+  redirect(pathsConfig.marketing.articles.index);
+}

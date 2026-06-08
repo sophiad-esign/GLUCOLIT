@@ -1,19 +1,18 @@
-import type { TranslationKey } from "@workspace/i18n";
 import type { Icon } from "@workspace/ui-web/icons";
 
 export type NavigationLink =
   | {
-      readonly label: TranslationKey;
+      readonly label: string;
       readonly href: string;
     }
   | {
-      readonly label: TranslationKey;
+      readonly label: string;
       readonly items: NavigationLinkItem[] | readonly NavigationLinkItem[];
     };
 
 export interface NavigationLinkItem {
-  readonly title: TranslationKey;
-  readonly description: TranslationKey;
+  readonly title: string;
+  readonly description: string;
   readonly href: string;
   readonly icon: Icon;
 }

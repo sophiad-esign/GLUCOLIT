@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import { useTranslation } from "@workspace/i18n";
 import { cn } from "@workspace/ui";
 import {
   Accordion,
@@ -17,7 +16,6 @@ import {
 } from "@workspace/ui-web/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@workspace/ui-web/sheet";
 
-import { pathsConfig } from "~/config/paths";
 import { TurboLink } from "~/modules/common/turbo-link";
 
 import { Hamburger } from "./hamburger";
@@ -26,7 +24,6 @@ import { Item } from "./navigation";
 import type { NavigationProps } from "./types";
 
 export const MobileNavigation = ({ links }: NavigationProps) => {
-  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
   return (
@@ -55,7 +52,7 @@ export const MobileNavigation = ({ links }: NavigationProps) => {
                           "justify-between text-base font-medium hover:no-underline",
                         )}
                       >
-                        {t(link.label)}
+                        {link.label}
                       </AccordionTrigger>
                       <AccordionContent className="py-2 [&_a]:no-underline">
                         <ul className="flex flex-col">
@@ -79,7 +76,7 @@ export const MobileNavigation = ({ links }: NavigationProps) => {
                     )}
                     onClick={() => setOpen(false)}
                   >
-                    {t(link.label)}
+                    {link.label}
                   </TurboLink>
                 )}
               </NavigationMenuItem>
@@ -87,15 +84,16 @@ export const MobileNavigation = ({ links }: NavigationProps) => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div className="flex w-full flex-col gap-2">
-          <TurboLink
-            href={pathsConfig.marketing.contact}
-            className={buttonVariants({ variant: "outline" })}
-            onClick={() => setOpen(false)}
-          >
-            {t("marketing:contact.cta")}
-          </TurboLink>
-        </div>
+        <TurboLink
+          href="/subscribe"
+          className={buttonVariants({
+            className: "w-full bg-[#1e3a5f] hover:bg-[#2d5a87]",
+          })}
+          onClick={() => setOpen(false)}
+        >
+          {/* oxlint-disable-next-line i18next/no-literal-string */}
+          订阅每日更新
+        </TurboLink>
       </SheetContent>
     </Sheet>
   );

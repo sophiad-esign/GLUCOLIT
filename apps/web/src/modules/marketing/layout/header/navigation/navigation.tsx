@@ -1,4 +1,3 @@
-import { useTranslation } from "@workspace/i18n";
 import { isExternal } from "@workspace/shared/utils";
 import { cn } from "@workspace/ui";
 import { Icons } from "@workspace/ui-web/icons";
@@ -17,7 +16,6 @@ import { TurboLink } from "~/modules/common/turbo-link";
 import type { NavigationLinkItem, NavigationProps } from "./types";
 
 export const Navigation = ({ links }: NavigationProps) => {
-  const { t } = useTranslation();
   return (
     <NavigationMenu className="hidden lg:flex">
       <NavigationMenuList>
@@ -30,13 +28,13 @@ export const Navigation = ({ links }: NavigationProps) => {
                     href={link.href}
                     className={navigationMenuTriggerStyle()}
                   >
-                    {t(link.label)}
+                    {link.label}
                   </TurboLink>
                 }
               />
             ) : (
               <>
-                <NavigationMenuTrigger>{t(link.label)}</NavigationMenuTrigger>
+                <NavigationMenuTrigger>{link.label}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="w-80">
                     {link.items.map((item) => (
@@ -62,7 +60,6 @@ export const Item = ({
   icon: Icon,
   ...props
 }: React.ComponentProps<typeof TurboLink> & NavigationLinkItem) => {
-  const { t } = useTranslation();
   return (
     <NavigationMenuLink
       render={
@@ -81,13 +78,13 @@ export const Item = ({
             </div>
             <div className="w-full min-w-0">
               <span className="relative w-fit text-sm leading-none font-medium">
-                {t(title)}
+                {title}
                 {isExternal(href) && (
                   <Icons.ArrowUpRight className="-mt-1 ml-0.5 inline size-2.5" />
                 )}
               </span>
               <p className="text-muted-foreground truncate text-sm leading-snug">
-                {t(description)}
+                {description}
               </p>
             </div>
           </div>
