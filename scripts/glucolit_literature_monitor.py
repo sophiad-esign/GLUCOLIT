@@ -165,6 +165,46 @@ NEGATIVE_KEYWORDS = {
     "nephropathy": -2,
 }
 
+CORE_TOPIC_TERMS = (
+    "prediabetes",
+    "pre-diabetes",
+    "prediabetic",
+    "impaired fasting glucose",
+    "impaired glucose tolerance",
+    "insulin resistance",
+    "insulin sensitivity",
+    "homa-ir",
+    "diabetes prevention",
+    "type 2 diabetes",
+    "metabolic syndrome",
+    "hba1c",
+)
+
+ACTION_OR_PREVENTION_TERMS = (
+    "lifestyle",
+    "intervention",
+    "prevention",
+    "diet",
+    "nutrition",
+    "exercise",
+    "physical activity",
+    "weight loss",
+    "risk",
+    "program",
+    "coaching",
+    "metabolic",
+)
+
+PRIORITY_TOPIC_TERMS = (
+    "prediabetes",
+    "pre-diabetes",
+    "prediabetic",
+    "impaired fasting glucose",
+    "impaired glucose tolerance",
+    "diabetes prevention",
+    "national diabetes prevention program",
+)
+
 ARTICLE_SCHEMA = {
     "type": "object",
     "additionalProperties": False,
@@ -241,9 +281,11 @@ class PaperItem:
     published_at: str
     authors: str = ""
     pmid: str = ""
+    pmcid: str = ""
     doi: str = ""
     oa_url: str = ""
     evidence: str = "PubMed abstract"
+    full_text_excerpt: str = ""
 
 
 def fetch_text(url: str, timeout: int = 30, accept: str = "application/json,*/*") -> str:
@@ -315,6 +357,13 @@ def article_doi(article: ET.Element) -> str:
     return ""
 
 
+def article_pmcid(article: ET.Element) -> str:
+    for node in article.findall(".//ArticleId"):
+        if node.attrib.get("IdType", "").lower() == "pmc" and node.text:
+            return node.text.strip()
+    return ""
+
+
 def article_authors(article: ET.Element) -> str:
     authors: list[str] = []
     for node in article.findall(".//Author"):
@@ -346,6 +395,7 @@ def parse_pubmed_articles(xml_text: str, requested_source: str) -> list[PaperIte
         abstract = " ".join(part for part in abstract_parts if part)
         journal = article.findtext(".//Journal/Title", default=requested_source)
         doi = article_doi(article)
+        pmcid = article_pmcid(article)
         authors = article_authors(article)
         link = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/" if pmid else (
             f"https://doi.org/{doi}" if doi else ""
@@ -360,6 +410,7 @@ def parse_pubmed_articles(xml_text: str, requested_source: str) -> list[PaperIte
                     published_at=parse_pubmed_date(article),
                     authors=authors,
                     pmid=pmid,
+                    pmcid=pmcid,
                     doi=doi,
                 )
             )
@@ -390,6 +441,102 @@ def search_pubmed_term(source: str, term: str, limit: int) -> list[PaperItem]:
 
 def search_pubmed(source: str, journal_query: str, limit: int) -> list[PaperItem]:
     return search_pubmed_term(source, f"({journal_query}) AND {TOPIC_QUERY}", limit)
+
+
+def pmc_text_from_xml(xml_text: str, max_chars: int = 9000) -> str:
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError:
+        return ""
+
+    preferred_sections = {
+        "abstract",
+        "intro",
+        "introduction",
+        "background",
+        "methods",
+        "materials|methods",
+        "results",
+        "discussion",
+        "conclusion",
+        "conclusions",
+    }
+    skip_sections = {"ref-list", "ack", "funding-group", "app-group", "supplementary-material"}
+    chunks: list[str] = []
+
+    for section in root.findall(".//sec"):
+        sec_type = section.attrib.get("sec-type", "").lower()
+        if sec_type in skip_sections:
+            continue
+        title = strip_html(" ".join(section.findtext("title", default="").split()))
+        title_key = title.lower()
+        if (
+            sec_type
+            and sec_type not in preferred_sections
+            and not any(key in title_key for key in preferred_sections)
+        ):
+            continue
+        paragraphs = [
+            strip_html("".join(paragraph.itertext()))
+            for paragraph in section.findall(".//p")
+        ]
+        body = "\n\n".join(paragraph for paragraph in paragraphs if len(paragraph) > 80)
+        if body:
+            heading = title or sec_type.title()
+            chunks.append(f"{heading}\n{body}")
+        if sum(len(chunk) for chunk in chunks) >= max_chars:
+            break
+
+    if not chunks:
+        paragraphs = [
+            strip_html("".join(paragraph.itertext()))
+            for paragraph in root.findall(".//body//p")
+        ]
+        chunks = [paragraph for paragraph in paragraphs if len(paragraph) > 100]
+
+    text = "\n\n".join(chunks)
+    text = re.sub(r"\n{3,}", "\n\n", text).strip()
+    return text[:max_chars]
+
+
+def pubmed_linked_pmcid(pmid: str) -> str:
+    if not pmid:
+        return ""
+    url = pubmed_url(
+        "elink.fcgi",
+        {
+            "dbfrom": "pubmed",
+            "db": "pmc",
+            "retmode": "json",
+            "id": pmid,
+        },
+    )
+    try:
+        data = json.loads(fetch_text(url, timeout=8))
+    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError):
+        return ""
+    linksets = data.get("linksets", [])
+    for linkset in linksets:
+        for linksetdb in linkset.get("linksetdbs", []):
+            for link in linksetdb.get("links", []):
+                link = str(link).strip()
+                if link:
+                    return f"PMC{link}" if not link.upper().startswith("PMC") else link
+    return ""
+
+
+def pmc_full_text_excerpt(pmcid: str) -> str:
+    if not pmcid:
+        return ""
+    clean_pmcid = pmcid.upper().replace("PMC", "")
+    url = pubmed_url(
+        "efetch.fcgi",
+        {"db": "pmc", "retmode": "xml", "id": clean_pmcid},
+    )
+    try:
+        return pmc_text_from_xml(fetch_text(url, timeout=12, accept="text/xml,*/*"))
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError):
+        return ""
 
 
 def europe_pmc_metadata(paper: PaperItem) -> dict[str, Any]:
@@ -455,10 +602,29 @@ def enrich_paper(paper: PaperItem) -> PaperItem:
         paper.evidence = "Europe PMC abstract"
     if not paper.doi and metadata.get("doi"):
         paper.doi = normalize_doi(metadata["doi"])
+    if not paper.pmcid and metadata.get("pmcid"):
+        paper.pmcid = str(metadata["pmcid"]).strip()
+    if not paper.pmcid:
+        paper.pmcid = pubmed_linked_pmcid(paper.pmid)
+    if paper.pmcid and not paper.full_text_excerpt:
+        paper.full_text_excerpt = pmc_full_text_excerpt(paper.pmcid)
+        if paper.full_text_excerpt:
+            paper.evidence += " + PubMed Central open full-text excerpt"
     paper.oa_url = best_europe_pmc_url(metadata) or unpaywall_oa_url(paper.doi)
+    if not paper.oa_url and paper.pmcid:
+        paper.oa_url = f"https://pmc.ncbi.nlm.nih.gov/articles/{paper.pmcid}/"
     if paper.oa_url:
         paper.evidence += " + open-access full-text link"
     return paper
+
+
+def evidence_text(paper: PaperItem) -> str:
+    parts = []
+    if paper.summary:
+        parts.append(f"Abstract:\n{paper.summary}")
+    if paper.full_text_excerpt:
+        parts.append(f"PubMed Central open full-text excerpt:\n{paper.full_text_excerpt}")
+    return "\n\n".join(parts)
 
 
 def relevance_score(title: str, summary: str) -> tuple[int, list[str]]:
@@ -473,6 +639,23 @@ def relevance_score(title: str, summary: str) -> tuple[int, list[str]]:
         if keyword in text:
             score += weight
     return score, matched
+
+
+def is_direct_glucolit_topic(title: str, evidence: str) -> bool:
+    text = f"{title} {evidence}".lower()
+    has_core = any(term in text for term in CORE_TOPIC_TERMS)
+    has_action = any(term in text for term in ACTION_OR_PREVENTION_TERMS)
+    return has_core and has_action
+
+
+def priority_topic_score(paper: PaperItem) -> int:
+    title_and_abstract = f"{paper.title} {paper.summary}".lower()
+    evidence = evidence_text(paper).lower()
+    score = sum(4 for term in PRIORITY_TOPIC_TERMS if term in title_and_abstract)
+    score += sum(1 for term in PRIORITY_TOPIC_TERMS if term in evidence)
+    if paper.full_text_excerpt:
+        score += 2
+    return score
 
 
 def stable_id(link: str, title: str) -> str:
@@ -519,14 +702,15 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
         4. Explain uncertainty and limits. Do not turn association into
            causation. Do not give personal medical advice.
 
-        Use only the title, abstract, source metadata, DOI/link, and legal
-        open-access link if provided. Do not invent sample size, methods,
-        results, harms, or causal claims that are not in the evidence.
-        If the source is only an abstract or metadata, make the article an
-        abstract-based commentary. Do not imply that GLUCOLIT read the full
-        paper. Do not reproduce or closely paraphrase long passages from the
-        source. Mention facts in your own words and keep the reader pointed to
-        PubMed/DOI/source links for the complete original.
+        Use only the title, abstract, source metadata, DOI/link, and the
+        PubMed Central open full-text excerpt if provided. Do not invent sample
+        size, methods, results, harms, or causal claims that are not in the
+        evidence. If the source is only an abstract or metadata, make the
+        article an abstract-based commentary. If a PubMed Central excerpt is
+        available, you may use it for richer context, but still avoid copying
+        or closely paraphrasing long passages. Mention facts in your own words
+        and keep the reader pointed to PubMed/DOI/source links for the complete
+        original.
 
         Required style:
         - Chinese plain_zh: at least 2400 Chinese characters, warm, clear,
@@ -580,6 +764,7 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
         Source: {paper.source}
         Title: {paper.title}
         PMID: {paper.pmid}
+        PMCID: {paper.pmcid}
         DOI: {paper.doi}
         Link: {paper.link}
         Authors: {paper.authors}
@@ -588,8 +773,8 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
         Published date: {paper.published_at}
         Matched relevance keywords: {", ".join(matched)}
 
-        Abstract/evidence:
-        {paper.summary[:5000]}
+        Evidence:
+        {evidence_text(paper)[:9000]}
         """
     ).strip()
 
@@ -635,6 +820,7 @@ def build_revision_prompt(
         Source: {paper.source}
         Title: {paper.title}
         PMID: {paper.pmid}
+        PMCID: {paper.pmcid}
         DOI: {paper.doi}
         Link: {paper.link}
         Authors: {paper.authors}
@@ -643,8 +829,8 @@ def build_revision_prompt(
         Published date: {paper.published_at}
         Matched relevance keywords: {", ".join(matched)}
 
-        Abstract/evidence:
-        {paper.summary[:5000]}
+        Evidence:
+        {evidence_text(paper)[:9000]}
 
         Draft JSON to revise:
         {json.dumps(article, ensure_ascii=False)}
@@ -1118,6 +1304,11 @@ def article_to_mdx(
     title = f"{article['title_zh']} / {article['title_en']}"
     description = f"{article['description_zh']} {article['description_en']}"
     doi_line = f"- DOI: [{paper.doi}](https://doi.org/{paper.doi})\n" if paper.doi else ""
+    pmcid_line = (
+        f"- PubMed Central: [{paper.pmcid}](https://pmc.ncbi.nlm.nih.gov/articles/{paper.pmcid}/)\n"
+        if paper.pmcid
+        else ""
+    )
     oa_line = f"- Open-access link: [{paper.oa_url}]({paper.oa_url})\n" if paper.oa_url else ""
     authors_line = f"- Authors: {paper.authors}\n" if paper.authors else ""
     quality_issues = quality_issues or []
@@ -1167,6 +1358,7 @@ def article_to_mdx(
             authors_line.rstrip(),
             f"- Journal/source: {paper.source}",
             doi_line.rstrip(),
+            pmcid_line.rstrip(),
             f"- PubMed/source link: [{paper.link}]({paper.link})",
             oa_line.rstrip(),
             f"- Evidence used: {paper.evidence}",
@@ -1201,6 +1393,7 @@ def article_to_mdx(
             f"- Original title: {paper.title}",
             f"- PubMed: [{paper.link}]({paper.link})",
             doi_line.rstrip(),
+            pmcid_line.rstrip(),
             oa_line.rstrip(),
             f"- Published or indexed date: {paper.published_at}",
             "",
@@ -1300,9 +1493,11 @@ def candidate_papers(limit_per_journal: int, max_candidates: int) -> list[PaperI
     return sorted(
         enriched,
         key=lambda paper: (
+            priority_topic_score(paper),
+            bool(paper.full_text_excerpt),
             bool(paper.oa_url),
-            relevance_score(paper.title, paper.summary)[0],
-            len(paper.summary),
+            relevance_score(paper.title, evidence_text(paper))[0],
+            len(evidence_text(paper)),
             paper.published_at,
         ),
         reverse=True,
@@ -1336,16 +1531,19 @@ def run(args: argparse.Namespace) -> int:
         if existing and existing.get("generated"):
             continue
 
-        score, matched = relevance_score(paper.title, paper.summary)
+        usable_evidence = evidence_text(paper)
+        score, matched = relevance_score(paper.title, usable_evidence)
         attempts = int(existing.get("attempts", 0)) if existing else 0
         state["items"][item_id] = {
             "title": paper.title,
             "source": paper.source,
             "link": paper.link,
             "pmid": paper.pmid,
+            "pmcid": paper.pmcid,
             "doi": paper.doi,
             "oa_url": paper.oa_url,
             "evidence": paper.evidence,
+            "full_text_excerpt_chars": len(paper.full_text_excerpt),
             "published_at": paper.published_at,
             "score": score,
             "matched": matched,
@@ -1355,10 +1553,15 @@ def run(args: argparse.Namespace) -> int:
             "generated": False,
         }
 
-        if len(paper.summary) < args.min_abstract_chars:
-            print(f"Skip no usable abstract: {paper.title}")
-            state["items"][item_id]["skip_reason"] = "missing or too-short abstract"
+        if len(usable_evidence) < args.min_abstract_chars:
+            print(f"Skip no usable evidence: {paper.title}")
+            state["items"][item_id]["skip_reason"] = "missing or too-short abstract/full-text evidence"
             skipped_no_abstract += 1
+            continue
+        if not is_direct_glucolit_topic(paper.title, usable_evidence):
+            print(f"Skip not direct GLUCOLIT topic: {paper.title}")
+            state["items"][item_id]["skip_reason"] = "not directly about prediabetes prevention or insulin resistance"
+            skipped_score += 1
             continue
         if score < args.min_score:
             print(f"Skip score={score}: {paper.title}")
@@ -1369,8 +1572,10 @@ def run(args: argparse.Namespace) -> int:
         if not paper.oa_url:
             paper = enrich_paper(paper)
         state["items"][item_id]["doi"] = paper.doi
+        state["items"][item_id]["pmcid"] = paper.pmcid
         state["items"][item_id]["oa_url"] = paper.oa_url
         state["items"][item_id]["evidence"] = paper.evidence
+        state["items"][item_id]["full_text_excerpt_chars"] = len(paper.full_text_excerpt)
         state["items"][item_id]["attempts"] = attempts + 1
         if args.dry_run and not (os.getenv("OPENAI_API_KEY") or os.getenv("KIMI_API_KEY")):
             print(f"Would create score={score}: {paper.title}")

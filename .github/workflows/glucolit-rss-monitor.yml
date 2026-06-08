@@ -59,7 +59,7 @@ jobs:
             echo ""
             echo "- Schedule: daily at 09:15 Los Angeles time during PDT"
             echo "- Daily target: 2 review drafts. Candidate thresholds are intentionally broad; drafts that need more work are saved with reviewRequired: true instead of being discarded."
-            echo "- Discovery: PubMed first, Europe PMC and Unpaywall enrichment"
+            echo "- Discovery: PubMed first, PubMed Central open full-text excerpts when available, plus Europe PMC and Unpaywall enrichment"
             echo "- Output: MDX drafts under \`packages/cms/src/collections/blog/content\`"
             echo "- Public safety: generated posts keep \`draft: true\` until manually reviewed"
           } >> "$GITHUB_STEP_SUMMARY"
