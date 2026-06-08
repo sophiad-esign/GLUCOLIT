@@ -2198,6 +2198,79 @@
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
+    },
+    "902dce34d1534bea": {
+      "title": "Experiences and preferences of Hispanic men in the National Diabetes Prevention Program: a qualitative study guided by the COM-B framework.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (BMJ open)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42152451/",
+      "pmid": "42152451",
+      "pmcid": "PMC13182434",
+      "doi": "10.1136/bmjopen-2025-114268",
+      "oa_url": "https://europepmc.org/articles/PMC13182434",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-05-15",
+      "score": 42,
+      "matched": [
+        "prediabetes",
+        "pre-diabetes",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "national diabetes prevention program",
+        "diet",
+        "exercise",
+        "hba1c"
+      ],
+      "created_at": "2026-06-08T04:06:31.027881+00:00",
+      "last_seen_at": "2026-06-08T04:06:31.027907+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/experiences-and-preferences-of-hispanic-men-in-the-national-diabetes-pre-902dce34/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "e11137be4fd0e175": {
+      "title": "Novel OGTT metrics do not provide incremental predictive value beyond conventional glycemic criteria for remission of prediabetes in individuals with impaired fasting glucose: results from the PREVIEW trial.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular diabetology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42021301/",
+      "pmid": "42021301",
+      "pmcid": "PMC13235051",
+      "doi": "10.1186/s12933-026-03186-0",
+      "oa_url": "https://europepmc.org/articles/PMC13235051",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-04-22",
+      "score": 45,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "weight loss",
+        "diet",
+        "glucose",
+        "glycaemic",
+        "glycemic",
+        "hba1c",
+        "remission"
+      ],
+      "created_at": "2026-06-08T04:07:13.749380+00:00",
+      "last_seen_at": "2026-06-08T04:07:13.749403+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/novel-ogtt-metrics-do-not-provide-incremental-predictive-value-beyond-co-e11137be/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
     }
   }
 }
