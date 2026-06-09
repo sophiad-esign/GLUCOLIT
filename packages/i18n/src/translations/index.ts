@@ -9,4 +9,5 @@ export const translations: Record<
 > = {
   en,
   es,
+  zh: en,
 } as const;
