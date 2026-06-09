@@ -421,7 +421,7 @@ const toArticle = (
   return {
     slug: item.slug,
     titleZh,
-    titleEn,
+    titleEn: titleEn === titleZh ? referenceTitle : titleEn,
     summaryZh: firstParagraph(bodyZh, item.description),
     summaryEn: firstParagraph(bodyEn, item.description),
     bodyZh: bodyZh || item.description,

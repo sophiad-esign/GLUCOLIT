@@ -5,7 +5,22 @@ import { TurboLink } from "~/modules/common/turbo-link";
 
 import type { Article } from "./data";
 
-export function ArticleCard({ article }: { article: Article }) {
+export function ArticleCard({
+  article,
+  locale = "zh",
+}: {
+  article: Article;
+  locale?: string;
+}) {
+  const isEnglish = locale === "en";
+  const title = isEnglish ? article.titleEn : article.titleZh;
+  const subtitle = isEnglish ? article.titleZh : article.titleEn;
+  const summary = isEnglish ? article.summaryEn : article.summaryZh;
+  const cta = isEnglish ? "Read guide" : "\u9605\u8bfb\u89e3\u8bfb";
+  const articleHref = isEnglish
+    ? `/en/articles/${article.slug}`
+    : pathsConfig.marketing.articles.article(article.slug);
+
   return (
     <article className="group flex h-full flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950">
       <div className="mb-4 flex flex-wrap gap-2">
@@ -26,20 +41,20 @@ export function ArticleCard({ article }: { article: Article }) {
       </div>
 
       <TurboLink
-        href={pathsConfig.marketing.articles.article(article.slug)}
+        href={articleHref}
         className="focus-visible:ring-2 focus-visible:ring-[#2d5a87] focus-visible:ring-offset-2 focus-visible:outline-none"
       >
         <h2 className="text-[18px] leading-snug font-bold text-slate-950 underline-offset-4 group-hover:text-[#1e3a5f] group-hover:underline dark:text-white dark:group-hover:text-sky-100">
-          {article.titleZh}
+          {title}
         </h2>
       </TurboLink>
 
       <p className="mt-2 line-clamp-2 text-[14px] leading-relaxed text-slate-500 dark:text-slate-400">
-        {article.titleEn}
+        {subtitle}
       </p>
 
       <p className="mt-4 line-clamp-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-        {article.summaryZh}
+        {summary}
       </p>
 
       <div className="mt-auto flex flex-wrap items-center gap-3 pt-6 text-xs text-slate-500 dark:text-slate-400">
@@ -52,14 +67,14 @@ export function ArticleCard({ article }: { article: Article }) {
 
       <div className="mt-5 flex flex-wrap gap-2">
         <TurboLink
-          href={pathsConfig.marketing.articles.article(article.slug)}
+          href={articleHref}
           className={buttonVariants({
             size: "sm",
             className: "bg-[#1e3a5f] hover:bg-[#2d5a87]",
           })}
         >
           {/* oxlint-disable-next-line i18next/no-literal-string */}
-          阅读解读
+          {cta}
         </TurboLink>
         {article.doi ? (
           <a

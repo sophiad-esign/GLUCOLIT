@@ -10,8 +10,14 @@ import { readingBlocks } from "./reading-blocks";
 
 import type { Article } from "./data";
 
-export function ArticleReader({ article }: { article: Article }) {
-  const [language, setLanguage] = useState<"zh" | "en">("zh");
+export function ArticleReader({
+  article,
+  initialLanguage = "zh",
+}: {
+  article: Article;
+  initialLanguage?: "zh" | "en";
+}) {
+  const [language, setLanguage] = useState<"zh" | "en">(initialLanguage);
   const isChinese = language === "zh";
   const body = isChinese ? article.bodyZh : article.bodyEn;
 

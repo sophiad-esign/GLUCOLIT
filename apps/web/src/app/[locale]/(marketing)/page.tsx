@@ -8,7 +8,12 @@ import { ArticleCard } from "~/modules/articles/article-card";
 import { getPublishedArticles, TOPIC_CLUSTERS } from "~/modules/articles/data";
 import { TurboLink } from "~/modules/common/turbo-link";
 
-const HomePage = () => {
+const HomePage = async ({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) => {
+  const { locale } = await params;
   const articles = getPublishedArticles({ limit: 9 });
 
   return (
@@ -125,7 +130,11 @@ const HomePage = () => {
         {articles.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
+              <ArticleCard
+                key={article.slug}
+                article={article}
+                locale={locale}
+              />
             ))}
           </div>
         ) : (

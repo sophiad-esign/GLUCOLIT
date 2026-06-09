@@ -119,9 +119,11 @@ const faqItems = (article: Article) => [
 export default async function ArticleDetailPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const article = getPublishedArticleBySlug((await params).slug);
+  const { locale, slug } = await params;
+  const isEnglish = locale === "en";
+  const article = getPublishedArticleBySlug(slug);
 
   if (!article) {
     notFound();
@@ -131,6 +133,8 @@ export default async function ArticleDetailPage({
   const primaryTopic = getPrimaryTopicCluster(article);
   const scores = scoreItems(article);
   const checklist = actionChecklist(article);
+  const title = isEnglish ? article.titleEn : article.titleZh;
+  const subtitle = isEnglish ? article.titleZh : article.titleEn;
 
   return (
     <main className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
@@ -148,11 +152,9 @@ export default async function ArticleDetailPage({
               ))}
             </div>
             <h1 className="text-3xl leading-tight font-bold tracking-normal sm:text-5xl">
-              {article.titleZh}
+              {title}
             </h1>
-            <p className="mt-4 text-base leading-7 text-sky-100">
-              {article.titleEn}
-            </p>
+            <p className="mt-4 text-base leading-7 text-sky-100">{subtitle}</p>
 
             <div className="mt-6 flex flex-wrap gap-2 text-xs">
               <span className="rounded-full bg-white/15 px-3 py-1 font-medium text-white">
@@ -295,7 +297,10 @@ export default async function ArticleDetailPage({
         </section>
 
         <div className="mt-8">
-          <ArticleReader article={article} />
+          <ArticleReader
+            article={article}
+            initialLanguage={isEnglish ? "en" : "zh"}
+          />
         </div>
 
         <section className="mt-8 grid gap-6 lg:grid-cols-2">
@@ -411,7 +416,7 @@ export default async function ArticleDetailPage({
           </h2>
           <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
             {relatedArticles.map((item) => (
-              <ArticleCard key={item.slug} article={item} />
+              <ArticleCard key={item.slug} article={item} locale={locale} />
             ))}
           </div>
         </section>
@@ -427,16 +432,19 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  const article = getPublishedArticleBySlug((await params).slug);
+  const { locale, slug } = await params;
+  const article = getPublishedArticleBySlug(slug);
 
   if (!article) {
     return {};
   }
 
+  const isEnglish = locale === "en";
+
   return {
-    title: article.titleZh,
-    description: article.summaryZh,
+    title: isEnglish ? article.titleEn : article.titleZh,
+    description: isEnglish ? article.summaryEn : article.summaryZh,
   };
 }

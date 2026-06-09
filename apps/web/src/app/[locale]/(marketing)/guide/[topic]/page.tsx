@@ -36,9 +36,10 @@ export async function generateMetadata({
 export default async function TopicGuidePage({
   params,
 }: {
-  params: Promise<{ topic: string }>;
+  params: Promise<{ locale: string; topic: string }>;
 }) {
-  const topic = getTopicClusterBySlug((await params).topic);
+  const { locale, topic: topicSlug } = await params;
+  const topic = getTopicClusterBySlug(topicSlug);
 
   if (!topic) {
     notFound();
@@ -141,7 +142,11 @@ export default async function TopicGuidePage({
         {articles.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
+              <ArticleCard
+                key={article.slug}
+                article={article}
+                locale={locale}
+              />
             ))}
           </div>
         ) : (

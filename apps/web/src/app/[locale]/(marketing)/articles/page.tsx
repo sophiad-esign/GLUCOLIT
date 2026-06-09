@@ -15,10 +15,13 @@ export const metadata = {
 };
 
 export default async function ArticlesPage({
+  params,
   searchParams,
 }: {
+  params: Promise<{ locale: string }>;
   searchParams: Promise<{ category?: string; sort?: string }>;
 }) {
+  const { locale } = await params;
   const { category = "all", sort = "newest" } = await searchParams;
   const articles = getPublishedArticles({ category, sort });
 
@@ -96,7 +99,7 @@ export default async function ArticlesPage({
       {articles.length > 0 ? (
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {articles.map((article) => (
-            <ArticleCard key={article.slug} article={article} />
+            <ArticleCard key={article.slug} article={article} locale={locale} />
           ))}
         </div>
       ) : (
