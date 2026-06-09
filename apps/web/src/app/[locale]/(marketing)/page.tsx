@@ -5,47 +5,8 @@ import { buttonVariants } from "@workspace/ui-web/button";
 
 import { pathsConfig } from "~/config/paths";
 import { ArticleCard } from "~/modules/articles/article-card";
-import { getPublishedArticles } from "~/modules/articles/data";
+import { getPublishedArticles, TOPIC_CLUSTERS } from "~/modules/articles/data";
 import { TurboLink } from "~/modules/common/turbo-link";
-
-const topicClusters = [
-  {
-    title: "糖前基础",
-    kicker: "Prediabetes 101",
-    body: "诊断标准、OGTT、HbA1c、空腹血糖，以及为什么糖前不是一个单一状态。",
-    href: "/articles?category=prediabetes",
-  },
-  {
-    title: "胰岛素抵抗",
-    kicker: "Insulin resistance",
-    body: "理解餐后血糖、空腹胰岛素、HOMA-IR 与脂肪肝、腰围之间的关系。",
-    href: "/articles?category=insulin-resistance",
-  },
-  {
-    title: "CGM 监测",
-    kicker: "Glucose tracking",
-    body: "用动态血糖找到自己的食物触发点，而不是被单次血糖数字吓住。",
-    href: "/articles",
-  },
-  {
-    title: "饮食干预",
-    kicker: "Diet",
-    body: "蛋白质、膳食纤维、低 GI 主食、进食顺序和体重管理的证据拆解。",
-    href: "/articles?category=lifestyle",
-  },
-  {
-    title: "运动睡眠",
-    kicker: "Exercise & sleep",
-    body: "饭后步行、抗阻训练、睡眠节律和压力管理如何影响代谢弹性。",
-    href: "/guide",
-  },
-  {
-    title: "药物前沿",
-    kicker: "Therapeutics",
-    body: "二甲双胍、GLP-1、补充剂与新兴干预的证据强度和适用边界。",
-    href: "/articles",
-  },
-] as const;
 
 const HomePage = () => {
   const articles = getPublishedArticles({ limit: 9 });
@@ -113,10 +74,10 @@ const HomePage = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {topicClusters.map((topic) => (
+          {TOPIC_CLUSTERS.map((topic) => (
             <TurboLink
               key={topic.title}
-              href={topic.href}
+              href={`/guide/${topic.slug}`}
               className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950"
             >
               <p className="text-xs font-semibold tracking-[0.16em] text-[#2d5a87] uppercase dark:text-sky-200">
@@ -126,8 +87,18 @@ const HomePage = () => {
                 {topic.title}
               </h3>
               <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-                {topic.body}
+                {topic.description}
               </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {topic.searchKeywords.slice(0, 2).map((keyword) => (
+                  <span
+                    key={keyword}
+                    className="rounded-full border border-slate-200 px-3 py-1 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-400"
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
             </TurboLink>
           ))}
         </div>

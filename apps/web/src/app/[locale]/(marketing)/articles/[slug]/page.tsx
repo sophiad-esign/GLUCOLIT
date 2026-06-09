@@ -9,6 +9,7 @@ import { ArticleCard } from "~/modules/articles/article-card";
 import { ArticleReader } from "~/modules/articles/article-reader";
 import {
   getAllPublishedArticleSlugs,
+  getPrimaryTopicCluster,
   getPublishedArticleBySlug,
   getRelatedPublishedArticles,
 } from "~/modules/articles/data";
@@ -127,6 +128,7 @@ export default async function ArticleDetailPage({
   }
 
   const relatedArticles = getRelatedPublishedArticles(article, 3);
+  const primaryTopic = getPrimaryTopicCluster(article);
   const scores = scoreItems(article);
   const checklist = actionChecklist(article);
 
@@ -212,6 +214,30 @@ export default async function ArticleDetailPage({
                 </p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-8 rounded-2xl border border-[#2d5a87]/20 bg-[#2d5a87]/8 p-6 shadow-sm dark:border-sky-300/20 dark:bg-sky-300/10">
+          <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p className="text-sm font-semibold tracking-[0.16em] text-[#2d5a87] uppercase dark:text-sky-200">
+                Topic cluster
+              </p>
+              <h2 className="mt-2 text-2xl font-bold tracking-normal text-slate-950 dark:text-white">
+                本文属于「{primaryTopic.title}」干预主题
+              </h2>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-300">
+                {primaryTopic.description}
+              </p>
+            </div>
+            <TurboLink
+              href={`/guide/${primaryTopic.slug}`}
+              className={buttonVariants({
+                className: "bg-[#1e3a5f] hover:bg-[#2d5a87]",
+              })}
+            >
+              查看主题支柱页
+            </TurboLink>
           </div>
         </section>
 

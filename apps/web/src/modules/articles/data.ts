@@ -49,6 +49,169 @@ export type Article = {
   reviewStatusLabel: string;
 };
 
+export type TopicCluster = {
+  slug: string;
+  title: string;
+  kicker: string;
+  description: string;
+  intent: string;
+  searchKeywords: string[];
+  interventions: string[];
+  articleKeywords: string[];
+};
+
+export const TOPIC_CLUSTERS: TopicCluster[] = [
+  {
+    slug: "prediabetes",
+    title: "糖前基础",
+    kicker: "Prediabetes 101",
+    description:
+      "解释糖尿病前期、OGTT、HbA1c、空腹血糖和不同糖前亚型，帮助读者先判断自己处在哪个风险阶段。",
+    intent: "适合搜索“糖尿病前期怎么逆转”“糖尿病前期多久会变糖尿病”的读者。",
+    searchKeywords: [
+      "糖尿病前期怎么逆转",
+      "糖尿病前期诊断标准",
+      "prediabetes lifestyle intervention",
+      "how to reverse prediabetes",
+    ],
+    interventions: [
+      "确认 HbA1c、空腹血糖和 OGTT 基线",
+      "识别体重、腰围、家族史和餐后血糖风险",
+      "把生活方式干预拆成可记录的 2-4 周实验",
+    ],
+    articleKeywords: ["糖尿病前期", "prediabetes", "diabetes prevention"],
+  },
+  {
+    slug: "insulin-resistance",
+    title: "胰岛素抵抗",
+    kicker: "Insulin resistance",
+    description:
+      "围绕空腹胰岛素、HOMA-IR、脂肪肝、腰围和餐后血糖，建立一套普通人能理解的胰岛素抵抗地图。",
+    intent:
+      "适合搜索“空腹胰岛素高怎么办”“how to lower fasting insulin”的读者。",
+    searchKeywords: [
+      "空腹胰岛素高怎么办",
+      "胰岛素抵抗怎么改善",
+      "how to lower fasting insulin",
+      "insulin resistance diet plan",
+    ],
+    interventions: [
+      "减少液体糖和高精制碳水",
+      "加入抗阻训练和饭后步行",
+      "同时追踪腰围、甘油三酯和餐后血糖",
+    ],
+    articleKeywords: ["胰岛素抵抗", "insulin", "homa-ir", "fasting insulin"],
+  },
+  {
+    slug: "cgm",
+    title: "CGM 监测",
+    kicker: "Glucose tracking",
+    description:
+      "用动态血糖理解个人化餐后反应，重点讨论 CGM 是否适合糖前、如何避免数据焦虑、哪些指标最值得看。",
+    intent:
+      "适合搜索“CGM 对糖尿病前期有用吗”“continuous glucose monitoring for prediabetes”的读者。",
+    searchKeywords: [
+      "CGM 对糖尿病前期有用吗",
+      "动态血糖监测糖前",
+      "continuous glucose monitoring for prediabetes",
+      "continuous glucose monitoring for weight loss",
+    ],
+    interventions: [
+      "观察餐后峰值和回落时间",
+      "比较不同早餐、主食和饭后步行方案",
+      "把 CGM 当作短期学习工具，而不是长期焦虑来源",
+    ],
+    articleKeywords: ["CGM", "动态血糖", "连续血糖", "continuous glucose"],
+  },
+  {
+    slug: "diet",
+    title: "饮食干预",
+    kicker: "Diet",
+    description:
+      "聚焦蛋白质、膳食纤维、低 GI 主食、进食顺序、补充剂和体重管理，先给可执行清单，再放研究证据。",
+    intent: "适合搜索“糖尿病前期饮食怎么吃”“糖尿病前期早餐怎么吃”的读者。",
+    searchKeywords: [
+      "糖尿病前期饮食怎么吃",
+      "糖尿病前期早餐",
+      "糖尿病前期能吃水果吗",
+      "prediabetes diet plan",
+    ],
+    interventions: [
+      "每餐先保证蛋白质和蔬菜",
+      "减少含糖饮料和精制主食",
+      "用体重、腰围和餐后血糖评估饮食调整",
+    ],
+    articleKeywords: [
+      "饮食",
+      "营养",
+      "diet",
+      "nutrition",
+      "protein",
+      "fiber",
+      "magnesium",
+      "weight",
+    ],
+  },
+  {
+    slug: "exercise-sleep",
+    title: "运动睡眠",
+    kicker: "Exercise & sleep",
+    description:
+      "把饭后步行、Zone 2、有氧、抗阻训练、睡眠节律和压力管理放在同一张代谢改善路线图里。",
+    intent: "适合搜索“糖尿病前期运动多久有效”“饭后走路降血糖”的读者。",
+    searchKeywords: [
+      "糖尿病前期运动多久有效",
+      "饭后走路降血糖",
+      "Zone 2 training insulin resistance",
+      "sleep and insulin resistance",
+    ],
+    interventions: [
+      "饭后 10-20 分钟步行",
+      "每周 150 分钟中等强度运动",
+      "每周 2-3 次抗阻训练，并固定起床时间",
+    ],
+    articleKeywords: [
+      "运动",
+      "睡眠",
+      "压力",
+      "exercise",
+      "activity",
+      "walking",
+      "sleep",
+      "stress",
+    ],
+  },
+  {
+    slug: "supplements-medications",
+    title: "药物与补剂前沿",
+    kicker: "Supplements & medications",
+    description:
+      "追踪二甲双胍、GLP-1、镁、维生素 D、肌酸等干预的证据等级、适用人群、成本和安全边界。",
+    intent: "适合搜索“糖尿病前期需要吃二甲双胍吗”“糖前补剂有用吗”的读者。",
+    searchKeywords: [
+      "糖尿病前期需要吃二甲双胍吗",
+      "糖尿病前期补剂",
+      "metformin for prediabetes",
+      "magnesium supplementation prediabetes",
+    ],
+    interventions: [
+      "先确认是否存在缺乏或明确适应证",
+      "核查剂量、安全性和药物相互作用",
+      "不要用补剂替代饮食、运动和医生随访",
+    ],
+    articleKeywords: [
+      "药物",
+      "补剂",
+      "metformin",
+      "glp",
+      "semaglutide",
+      "magnesium",
+      "supplement",
+      "medication",
+    ],
+  },
+];
+
 const ARTICLE_TAGS = new Set<string>([
   ContentTag.MEDICAL_RESEARCH,
   ContentTag.PREDIABETES,
@@ -343,6 +506,56 @@ export const getRelatedPublishedArticles = (article: Article, limit = 3) => {
     .slice(0, limit)
     .map(({ item }) => item);
 };
+
+const topicScore = (article: Article, topic: TopicCluster) => {
+  const haystack = [
+    article.titleZh,
+    article.titleEn,
+    article.summaryZh,
+    article.summaryEn,
+    article.bodyZh,
+    article.bodyEn,
+    article.categoryLabels.join(" "),
+  ]
+    .join(" ")
+    .toLowerCase();
+
+  return topic.articleKeywords.reduce(
+    (score, keyword) =>
+      haystack.includes(keyword.toLowerCase()) ? score + 1 : score,
+    0,
+  );
+};
+
+export const getTopicClusterBySlug = (slug: string) =>
+  TOPIC_CLUSTERS.find((topic) => topic.slug === slug);
+
+export const getTopicClusterArticles = (slug: string, limit?: number) => {
+  const topic = getTopicClusterBySlug(slug);
+
+  if (!topic) {
+    return [];
+  }
+
+  const articles = getPublishedArticles()
+    .map((article) => ({
+      article,
+      score: topicScore(article, topic),
+    }))
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map(({ article }) => article);
+
+  return typeof limit === "number" ? articles.slice(0, limit) : articles;
+};
+
+export const getPrimaryTopicCluster = (article: Article) =>
+  TOPIC_CLUSTERS.map((topic) => ({
+    topic,
+    score: topicScore(article, topic),
+  }))
+    .sort((a, b) => b.score - a.score)
+    .find(({ score }) => score > 0)?.topic ?? TOPIC_CLUSTERS[0]!;
 
 export const getReviewArticles = () => {
   const { items } = getContentItems({

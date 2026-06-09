@@ -151,6 +151,38 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
   },
   {
+    slug: "experiences-and-preferences-of-hispanic-men-in-the-national-diabetes-pre-902dce34",
+    titleZh: "西班牙裔男性在糖尿病预防项目中的经历",
+    titleEn: "Hispanic Men's Experiences in Diabetes Prevention Program",
+    summaryZh:
+      "Original title: Experiences and preferences of Hispanic men in the National Diabetes Prevention Program: a qualitative study guided by the COM-B framework. - Authors: Gonzalez CJ, Hernandez NG, Perez-Mejia CN, Flaxman H, Stephenson-Hunter C, Gil E et al. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (BMJ open) - DOI: [10.1136/bmjopen-2025-114268](https://doi.org/10.1136/bmjopen-2025-114268) - PubMed Central: [PMC13182434](https://pmc.ncbi.nlm.nih.gov/articles/PMC13182434/) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42152451/](https://pubmed.ncbi.nlm.nih.gov/42152451/) - Open-access link: [https://europepmc.org/articles/PMC13182434](https://europepmc.org/articles/PMC13182434) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Published or indexed date: 2026-05-15 了解西班牙裔男性在糖尿病预防项目中的经历对于定制有效的干预措施至关重要，这些措施可以减少健康差异。 - 西班牙裔男性重视从糖尿病预防项目中获得的知识和技能。 - 参与者赞赏文化定制的内容和性别定制的结构。 - 西班牙裔男性对虚拟项目格式的接受度褒贬不一。 - 为了提高招募，需要清晰地传达项目结构。",
+    summaryEn:
+      "Offering diverse delivery formats may enhance sustained engagement. Understanding the experiences of Hispanic men in diabetes prevention programs is essential for tailoring effective interventions that can reduce health disparities. - Hispanic men value the knowledge and skills gained from diabetes prevention programs. - Culturally tailored content and gender-tailored structure are appreciated by participants. - There is a mixed reception to virtual program formats among Hispanic men. - Clear communication about the program structure is necessary to improve recruitment.",
+    bodyZh:
+      "- Original title: Experiences and preferences of Hispanic men in the National Diabetes Prevention Program: a qualitative study guided by the COM-B framework.\r\n- Authors: Gonzalez CJ, Hernandez NG, Perez-Mejia CN, Flaxman H, Stephenson-Hunter C, Gil E et al.\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (BMJ open)\r\n- DOI: [10.1136/bmjopen-2025-114268](https://doi.org/10.1136/bmjopen-2025-114268)\r\n- PubMed Central: [PMC13182434](https://pmc.ncbi.nlm.nih.gov/articles/PMC13182434/)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42152451/](https://pubmed.ncbi.nlm.nih.gov/42152451/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13182434](https://europepmc.org/articles/PMC13182434)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Published or indexed date: 2026-05-15\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n了解西班牙裔男性在糖尿病预防项目中的经历对于定制有效的干预措施至关重要，这些措施可以减少健康差异。\r\n\r\n\r\n\r\n- 西班牙裔男性重视从糖尿病预防项目中获得的知识和技能。\r\n- 参与者赞赏文化定制的内容和性别定制的结构。\r\n- 西班牙裔男性对虚拟项目格式的接受度褒贬不一。\r\n- 为了提高招募，需要清晰地传达项目结构。",
+    bodyEn:
+      "Offering diverse delivery formats may enhance sustained engagement.\r\n\r\n\r\n\r\nUnderstanding the experiences of Hispanic men in diabetes prevention programs is essential for tailoring effective interventions that can reduce health disparities.\r\n\r\n\r\n\r\n- Hispanic men value the knowledge and skills gained from diabetes prevention programs.\r\n- Culturally tailored content and gender-tailored structure are appreciated by participants.\r\n- There is a mixed reception to virtual program formats among Hispanic men.\r\n- Clear communication about the program structure is necessary to improve recruitment.",
+    thumbnail:
+      "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
+    source: "PubMed prediabetes lifestyle intervention via PubMed (BMJ open)",
+    doi: "10.1136/bmjopen-2025-114268",
+    originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42152451/",
+    publishedAt: "2026-05-15",
+    publishedAtLabel: "2026-05-15",
+    draft: true,
+    reviewRequired: true,
+    qualityStatus: "needs_revision",
+    qualityIssues: [
+      "Chinese commentary is short for the required SOP structure",
+      "Chinese interpretation and critique section is short",
+      "Chinese clinical/business insight section is short",
+    ],
+    contentPath:
+      "packages/cms/src/collections/blog/content/experiences-and-preferences-of-hispanic-men-in-the-national-diabetes-pre-902dce34/en.mdx",
+    tags: ["medical-research", "prediabetes", "lifestyle"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
+  },
+  {
     slug: "preventing-the-progression-the-power-of-lifestyle-interventions-in-predi-c1c34354",
     titleZh: "生活方式干预对糖尿病前期的影响",
     titleEn: "The Impact of Lifestyle Interventions on Prediabetes",
@@ -215,5 +247,38 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
       "packages/cms/src/collections/blog/content/use-of-continuous-glucose-monitoring-with-machine-learning-to-identify-m-9bd9f351/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
     categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
+  },
+  {
+    slug: "novel-ogtt-metrics-do-not-provide-incremental-predictive-value-beyond-co-e11137be",
+    titleZh: "新型口服葡萄糖耐量测试指标与糖尿病前期缓解",
+    titleEn: "Novel OGTT Metrics and Prediabetes Remission",
+    summaryZh:
+      "Original title: Novel OGTT metrics do not provide incremental predictive value beyond conventional glycemic criteria for remission of prediabetes in individuals with impaired fasting glucose: results from the PREVIEW trial. - Authors: Zhu R, Guo J, Stratton G, Macdonald IA, Handjieva-Darlenska T, Handjiev S et al. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular diabetology) - DOI: [10.1186/s12933-026-03186-0](https://doi.org/10.1186/s12933-026-03186-0) - PubMed Central: [PMC13235051](https://pmc.ncbi.nlm.nih.gov/articles/PMC13235051/) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42021301/](https://pubmed.ncbi.nlm.nih.gov/42021301/) - Open-access link: [https://europepmc.org/articles/PMC13235051](https://europepmc.org/articles/PMC13235051) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Published or indexed date: 2026-04-22 {'### 研究背景': '糖尿病前期是2型糖尿病发病前的关键阶段，生活方式的改变是预防其发展的关键。 传统指标如空腹血糖和糖化血红蛋白用于诊断，但可能无法捕捉个体葡萄糖代谢的所有变化。 ', '### 核心发现': '研究发现，新型OGTT指标并没有为糖尿病前期的缓解提供超出传统指标如空腹血糖和糖化血红蛋白的额外预测价值。 ', '### 你的解读与批判': '这项研究的重要性在于它阐明了糖尿病前期缓解的预测因素。 尽管OGTT的新指标看似有前景，但它们并没有提供超出传统测试的预测信息，表明专注于简单措施可能足以指导治疗决策。 ', '### 临床/商业启发': '医疗保健提供者可以依赖传统的血糖指标来评估糖尿病前期的风险，简化诊断过程。 对于产品开发者来说，基于传统指标的干预措施可能比开发新测试更有效率。 '} 了解糖尿病前期的发展对于早期干预和预防2型糖尿病至关重要。 这项研究提供了哪些指标对于预测结果最有用，这可以帮助设计有效的生活方式干预措施。 - 糖尿病前期是糖尿病预防的关键阶段。 - 传统血糖指标仍然是糖尿病前期缓解的最佳预测因素。 - 新型OGTT指标没有显示出额外的预测价值。 - 生活方式干预是管理糖尿病前期的关键。",
+    summaryEn:
+      "{'### Research Background': 'Prediabetes is a critical window before type 2 diabetes onset, and lifestyle changes are key to its prevention. Traditional metrics like fasting glucose and HbA1c are used for diagnosis but may not capture all individual glucose metabolism variations. ', '### Core Findings': 'The study indicates that novel OGTT metrics do not offer extra predictive value for prediabetes remission over traditional metrics like fasting glucose and HbA1c. ', '### Your Interpretation and Critique': \"This study is significant as it clarifies the predictive factors for prediabetes remission. Despite the promise of new OGTT metrics, they don't add predictive information beyond traditional tests, suggesting that focusing on simple measures may suffice for treatment decisions. \", '### Clinical/Business Insights': 'Healthcare providers can rely on traditional glycemic measures to assess prediabetes risk, simplifying diagnostics. For developers, focusing on interventions based on traditional metrics could be more efficient than developing new tests. '} Understanding the progression of prediabetes is crucial for early intervention and prevention of type 2 diabetes. This study provides insights into which metrics are most useful for predicting outcomes, which can help in designing effective lifestyle interventions. - Prediabetes is a critical phase for diabetes prevention. - Traditional glycemic measures are still the best predictors of prediabetes remission. - Novel OGTT metrics did not show additional predictive value. - Lifestyle interventions are key in managing prediabetes.",
+    bodyZh:
+      "- Original title: Novel OGTT metrics do not provide incremental predictive value beyond conventional glycemic criteria for remission of prediabetes in individuals with impaired fasting glucose: results from the PREVIEW trial.\r\n- Authors: Zhu R, Guo J, Stratton G, Macdonald IA, Handjieva-Darlenska T, Handjiev S et al.\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular diabetology)\r\n- DOI: [10.1186/s12933-026-03186-0](https://doi.org/10.1186/s12933-026-03186-0)\r\n- PubMed Central: [PMC13235051](https://pmc.ncbi.nlm.nih.gov/articles/PMC13235051/)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42021301/](https://pubmed.ncbi.nlm.nih.gov/42021301/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13235051](https://europepmc.org/articles/PMC13235051)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Published or indexed date: 2026-04-22\r\n\r\n{'### 研究背景': '糖尿病前期是2型糖尿病发病前的关键阶段，生活方式的改变是预防其发展的关键。 传统指标如空腹血糖和糖化血红蛋白用于诊断，但可能无法捕捉个体葡萄糖代谢的所有变化。\r\n\r\n', '### 核心发现': '研究发现，新型OGTT指标并没有为糖尿病前期的缓解提供超出传统指标如空腹血糖和糖化血红蛋白的额外预测价值。 ', '### 你的解读与批判': '这项研究的重要性在于它阐明了糖尿病前期缓解的预测因素。\r\n\r\n尽管OGTT的新指标看似有前景，但它们并没有提供超出传统测试的预测信息，表明专注于简单措施可能足以指导治疗决策。 ', '### 临床/商业启发': '医疗保健提供者可以依赖传统的血糖指标来评估糖尿病前期的风险，简化诊断过程。\r\n\r\n对于产品开发者来说，基于传统指标的干预措施可能比开发新测试更有效率。 '}\r\n\r\n\r\n\r\n了解糖尿病前期的发展对于早期干预和预防2型糖尿病至关重要。 这项研究提供了哪些指标对于预测结果最有用，这可以帮助设计有效的生活方式干预措施。\r\n\r\n\r\n\r\n- 糖尿病前期是糖尿病预防的关键阶段。\r\n- 传统血糖指标仍然是糖尿病前期缓解的最佳预测因素。\r\n- 新型OGTT指标没有显示出额外的预测价值。\r\n- 生活方式干预是管理糖尿病前期的关键。",
+    bodyEn:
+      "{'### Research Background': 'Prediabetes is a critical window before type 2 diabetes onset, and lifestyle changes are key to its prevention.\r\n\r\nTraditional metrics like fasting glucose and HbA1c are used for diagnosis but may not capture all individual glucose metabolism variations.\r\n\r\n', '### Core Findings': 'The study indicates that novel OGTT metrics do not offer extra predictive value for prediabetes remission over traditional metrics like fasting glucose and HbA1c.\r\n\r\n', '### Your Interpretation and Critique': \"This study is significant as it clarifies the predictive factors for prediabetes remission.\r\n\r\nDespite the promise of new OGTT metrics, they don't add predictive information beyond traditional tests, suggesting that focusing on simple measures may suffice for treatment decisions.\r\n\r\n\", '### Clinical/Business Insights': 'Healthcare providers can rely on traditional glycemic measures to assess prediabetes risk, simplifying diagnostics.\r\n\r\nFor developers, focusing on interventions based on traditional metrics could be more efficient than developing new tests. '}\r\n\r\n\r\n\r\nUnderstanding the progression of prediabetes is crucial for early intervention and prevention of type 2 diabetes.\r\n\r\nThis study provides insights into which metrics are most useful for predicting outcomes, which can help in designing effective lifestyle interventions.\r\n\r\n\r\n\r\n- Prediabetes is a critical phase for diabetes prevention.\r\n- Traditional glycemic measures are still the best predictors of prediabetes remission.\r\n- Novel OGTT metrics did not show additional predictive value.\r\n- Lifestyle interventions are key in managing prediabetes.",
+    thumbnail:
+      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1800&auto=format&fit=crop",
+    source:
+      "PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular diabetology)",
+    doi: "10.1186/s12933-026-03186-0",
+    originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42021301/",
+    publishedAt: "2026-04-22",
+    publishedAtLabel: "2026-04-22",
+    draft: true,
+    reviewRequired: true,
+    qualityStatus: "needs_revision",
+    qualityIssues: [
+      "Chinese commentary is short for the required SOP structure",
+      "Chinese interpretation and critique section is short",
+      "Chinese clinical/business insight section is short",
+    ],
+    contentPath:
+      "packages/cms/src/collections/blog/content/novel-ogtt-metrics-do-not-provide-incremental-predictive-value-beyond-co-e11137be/en.mdx",
+    tags: ["medical-research", "prediabetes", "lifestyle"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
 ];

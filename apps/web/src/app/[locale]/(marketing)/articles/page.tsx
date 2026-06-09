@@ -4,7 +4,9 @@ import { ArticleCard } from "~/modules/articles/article-card";
 import {
   ARTICLE_CATEGORY_OPTIONS,
   getPublishedArticles,
+  TOPIC_CLUSTERS,
 } from "~/modules/articles/data";
+import { TurboLink } from "~/modules/common/turbo-link";
 
 export const metadata = {
   title: "GLUCOLIT 干预指南库",
@@ -33,6 +35,26 @@ export default async function ArticlesPage({
           这里收录已经通过人工审核的干预指南。顶部先给结论、评分和行动清单，研究证据放在底部，方便你核查
           PubMed、DOI 或开放获取原文。
         </p>
+      </section>
+
+      <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-950">
+        <p className="text-sm font-semibold tracking-[0.16em] text-[#2d5a87] uppercase">
+          Pillar pages
+        </p>
+        <h2 className="mt-2 text-2xl font-bold tracking-normal text-slate-950 dark:text-white">
+          按主题支柱页阅读
+        </h2>
+        <div className="mt-5 flex flex-wrap gap-3">
+          {TOPIC_CLUSTERS.map((topic) => (
+            <TurboLink
+              key={topic.slug}
+              href={`/guide/${topic.slug}`}
+              className="rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-[#2d5a87]/40 hover:bg-[#2d5a87]/8 hover:text-[#1e3a5f] dark:border-slate-800 dark:text-slate-200"
+            >
+              {topic.title}
+            </TurboLink>
+          ))}
+        </div>
       </section>
 
       <form className="mt-8 flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:flex-row sm:items-end dark:border-slate-800 dark:bg-slate-950">

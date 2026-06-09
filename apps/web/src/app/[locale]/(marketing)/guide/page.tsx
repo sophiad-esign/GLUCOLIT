@@ -2,39 +2,13 @@
 
 import { buttonVariants } from "@workspace/ui-web/button";
 
+import { TOPIC_CLUSTERS } from "~/modules/articles/data";
 import { TurboLink } from "~/modules/common/turbo-link";
 
 export const metadata = {
   title: "糖前指南 | GLUCOLIT",
   description: "糖尿病前期读者的饮食、运动、睡眠、压力和监测入门指南。",
 };
-
-const sections = [
-  {
-    title: "Diet 饮食",
-    body: "先把主食、蛋白质、蔬菜和含糖饮料看清楚。多数人不需要一开始就极端低碳，先减少液体糖和精制碳水更现实。",
-  },
-  {
-    title: "Exercise 运动",
-    body: "从饭后步行开始，每周累计 150 分钟中等强度运动，再逐步加入抗阻训练。",
-  },
-  {
-    title: "Sleep 睡眠",
-    body: "睡眠不足会影响食欲、胰岛素敏感性和第二天的血糖波动。先固定起床时间，再优化入睡环境。",
-  },
-  {
-    title: "Stress 压力",
-    body: "长期压力会推高皮质醇和进食冲动。压力管理不是玄学，而是代谢健康干预的一部分。",
-  },
-  {
-    title: "Supplements 补充剂",
-    body: "补充剂只能作为辅助，不能替代饮食、运动和医生建议。优先看证据等级、剂量、安全性和相互作用。",
-  },
-  {
-    title: "CGM 动态血糖",
-    body: "CGM 的价值不是制造焦虑，而是帮助你发现哪些食物、作息和运动真正影响自己的餐后血糖。",
-  },
-];
 
 export default function GuidePage() {
   return (
@@ -52,18 +26,27 @@ export default function GuidePage() {
       </section>
 
       <section className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {sections.map((section) => (
-          <article
-            key={section.title}
-            className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950"
+        {TOPIC_CLUSTERS.map((section) => (
+          <TurboLink
+            key={section.slug}
+            href={`/guide/${section.slug}`}
+            className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-950"
           >
-            <h2 className="text-xl font-bold tracking-normal text-slate-950 dark:text-white">
+            <p className="text-xs font-semibold tracking-[0.16em] text-[#2d5a87] uppercase">
+              {section.kicker}
+            </p>
+            <h2 className="mt-3 text-xl font-bold tracking-normal text-slate-950 group-hover:text-[#1e3a5f] dark:text-white">
               {section.title}
             </h2>
             <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-300">
-              {section.body}
+              {section.description}
             </p>
-          </article>
+            <ul className="mt-4 space-y-2 text-xs leading-5 text-slate-500 dark:text-slate-400">
+              {section.interventions.slice(0, 2).map((item) => (
+                <li key={item}>- {item}</li>
+              ))}
+            </ul>
+          </TurboLink>
         ))}
       </section>
 
