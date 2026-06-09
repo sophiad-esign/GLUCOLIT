@@ -270,12 +270,14 @@
     },
     "36132a6815c1fee5": {
       "title": "Progression to Diabetes by Adults With Prediabetes Who Use the National Diabetes Prevention Program: A Natural Experiment.",
-      "source": "PubMed high-yield prediabetes via PubMed (Diabetes care)",
+      "source": "PubMed digital diabetes prevention via PubMed (Diabetes care)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42227951/",
       "pmid": "42227951",
+      "pmcid": "",
       "doi": "10.2337/dc25-2485",
       "oa_url": "https://doi.org/10.2337/dc25-2485",
       "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
       "published_at": "2026-06-02",
       "score": 25,
       "matched": [
@@ -285,15 +287,17 @@
         "national diabetes prevention program"
       ],
       "created_at": "2026-06-03T08:53:57.989204+00:00",
-      "last_seen_at": "2026-06-06T17:42:04.132550+00:00",
-      "attempts": 5,
-      "generated": false,
+      "last_seen_at": "2026-06-09T18:33:32.705305+00:00",
+      "attempts": 6,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/progression-to-diabetes-by-adults-with-prediabetes-who-use-the-national-36132a68/en.mdx",
+      "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
       ],
-      "skip_reason": "generated article failed quality gate"
+      "skip_reason": "saved as needs-revision draft"
     },
     "1241c3afeddbbd92": {
       "title": "Comment on Echouffo-Tcheugui et al. Is the Current Lifestyle Modification Approach to Diabetes Prevention in the U.S. a Success? Diabetes Care 2025;48:863-870.",
@@ -630,19 +634,37 @@
     },
     "3d1e95daa5c8cdca": {
       "title": "Geographic Analysis of Access to the National Diabetes Prevention Program in New York State.",
-      "source": "PubMed prediabetes via PubMed (Preventive medicine reports)",
+      "source": "PubMed digital diabetes prevention via PubMed (Preventive medicine reports)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42199667/",
+      "pmid": "42199667",
+      "pmcid": "PMC13199655",
+      "doi": "10.1016/j.pmedr.2026.103500",
+      "oa_url": "https://doi.org/10.1016/j.pmedr.2026.103500",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
       "published_at": "2026-06-01",
-      "score": 11,
+      "score": 30,
       "matched": [
         "prediabetes",
-        "diabetes prevention"
+        "diabetes prevention",
+        "national diabetes prevention program",
+        "weight loss",
+        "nutrition",
+        "physical activity",
+        "hba1c"
       ],
       "created_at": "2026-06-03T08:55:34.153900+00:00",
-      "last_seen_at": "2026-06-03T09:26:35.328652+00:00",
-      "attempts": 1,
-      "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "last_seen_at": "2026-06-09T18:32:42.165115+00:00",
+      "attempts": 2,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/geographic-analysis-of-access-to-the-national-diabetes-prevention-progra-3d1e95da/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
     },
     "1f73adaeb28b8134": {
       "title": "Identifying Promising Practices in Lifestyle Intervention Programs for the Prediabetes Population: A Meta-Analysis and Meta-Regression of Randomized Controlled Trials.",
