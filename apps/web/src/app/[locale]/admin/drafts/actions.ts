@@ -5,6 +5,26 @@ import { redirect } from "next/navigation";
 import { pathsConfig } from "~/config/paths";
 
 const CONTENT_ROOT = "packages/cms/src/collections/blog/content/";
+const REVISION_SYSTEM_PROMPT =
+  "You are a bilingual medical science editor for GLUCOLIT. Return only valid JSON.";
+
+type LlmConfig = {
+  apiKey: string;
+  baseUrl: string;
+  model: string;
+  provider: string;
+};
+
+type RevisedArticle = {
+  bodyEn: string;
+  bodyZh: string;
+  descriptionEn?: string;
+  descriptionZh?: string;
+  takeawaysEn?: string[];
+  takeawaysZh?: string[];
+  titleEn?: string;
+  titleZh?: string;
+};
 
 const envValue = (name: string) => process.env[name];
 
@@ -36,31 +56,40 @@ const getFormString = (formData: FormData, key: string) => {
   return typeof value === "string" ? value : "";
 };
 
-export async function publishDraftAction(formData: FormData) {
-  const token = envValue("GITHUB_CONTENT_TOKEN") || envValue("GITHUB_TOKEN");
+const githubWriteToken = () =>
+  envValue("GITHUB_CONTENT_TOKEN") || envValue("GITHUB_TOKEN");
+
+const requireGithubWriteToken = (): string => {
+  const token = githubWriteToken();
 
   if (!token) {
     redirectWithError(
       "Missing Vercel env var GITHUB_CONTENT_TOKEN. Cannot write to GitHub.",
     );
+    throw new Error("Missing GitHub write token.");
   }
 
-  const contentPath = getFormString(formData, "contentPath");
-  const slug = getFormString(formData, "slug");
-  const title = getFormString(formData, "title") || slug;
+  return token;
+};
 
-  assertContentPath(contentPath);
-
+const githubConfig = (token: string, contentPath: string) => {
   const repoOwner = envValue("GITHUB_REPOSITORY_OWNER") || "sophiad-esign";
   const repoName = envValue("GITHUB_REPOSITORY")?.split("/")[1] || "GLUCOLIT";
   const repoBranch = envValue("GITHUB_CONTENT_BRANCH") || "main";
-  const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${contentPath}`;
-  const headers = {
-    Accept: "application/vnd.github+json",
-    Authorization: `Bearer ${token}`,
-    "X-GitHub-Api-Version": "2022-11-28",
-  };
 
+  return {
+    apiUrl: `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${contentPath}`,
+    headers: {
+      Accept: "application/vnd.github+json",
+      Authorization: `Bearer ${token}`,
+      "X-GitHub-Api-Version": "2022-11-28",
+    },
+    repoBranch,
+  };
+};
+
+const readGithubFile = async (contentPath: string, token: string) => {
+  const { apiUrl, headers, repoBranch } = githubConfig(token, contentPath);
   const currentResponse = await fetch(`${apiUrl}?ref=${repoBranch}`, {
     headers,
     cache: "no-store",
@@ -81,7 +110,409 @@ export async function publishDraftAction(formData: FormData) {
     redirectWithError("GitHub returned an incomplete file response.");
   }
 
-  const raw = decodeBase64(currentContent);
+  return {
+    apiUrl,
+    headers,
+    repoBranch,
+    raw: decodeBase64(currentContent),
+    sha: currentSha,
+  };
+};
+
+const writeGithubFile = async ({
+  apiUrl,
+  branch,
+  content,
+  headers,
+  message,
+  sha,
+}: {
+  apiUrl: string;
+  branch: string;
+  content: string;
+  headers: Record<string, string>;
+  message: string;
+  sha: string;
+}) => {
+  const updateResponse = await fetch(apiUrl, {
+    method: "PUT",
+    headers: {
+      ...headers,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      message,
+      content: encodeBase64(content),
+      sha,
+      branch,
+    }),
+  });
+
+  if (!updateResponse.ok) {
+    const details = await updateResponse.text();
+    redirectWithError(
+      `Failed to write GitHub file: ${updateResponse.status} ${details}`,
+    );
+  }
+};
+
+const frontmatterValue = (raw: string, key: string) => {
+  const match = raw.match(new RegExp(`^${key}:\\s*(.*)$`, "m"));
+
+  return match?.[1]?.replace(/^["']|["']$/g, "").trim() ?? "";
+};
+
+const metadataLine = (raw: string, label: string) => {
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = raw.match(new RegExp(`^-\\s*${escaped}:\\s*(.*)$`, "im"));
+
+  return match?.[1]?.trim() ?? "";
+};
+
+const sectionText = (raw: string, heading: string, nextHeadings: string[]) => {
+  const start = raw.indexOf(heading);
+  if (start < 0) {
+    return "";
+  }
+
+  const after = raw.slice(start + heading.length);
+  const nextIndexes = nextHeadings
+    .map((next) => after.indexOf(next))
+    .filter((index) => index >= 0);
+  const end = nextIndexes.length > 0 ? Math.min(...nextIndexes) : after.length;
+
+  return after.slice(0, end).trim();
+};
+
+const stripFrontmatter = (raw: string) =>
+  raw.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, "");
+
+const cleanMarkdown = (value: string) =>
+  value
+    .replace(/\r\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .replace(/^\s*[-*]\s*$/gm, "")
+    .trim();
+
+const frontmatterWithoutQualityIssues = (frontmatter: string) =>
+  frontmatter
+    .replace(/^reviewRequired:\s*true\s*$/m, "reviewRequired: false")
+    .replace(/^qualityStatus:\s*needs_revision\s*$/m, "qualityStatus: ready")
+    .replace(/^qualityStatus:\s*draft\s*$/m, "qualityStatus: ready")
+    .replace(/^qualityIssues:\s*\[[^\n]*\]\r?\n?/m, "")
+    .replace(/^qualityIssues:\s*\r?\n(?:\s+-\s+.*\r?\n?)+/m, "");
+
+const replaceFrontmatterValue = (
+  frontmatter: string,
+  key: string,
+  value: string,
+) => {
+  const escaped = value.replace(/"/g, '\\"');
+  const line = `${key}: "${escaped}"`;
+
+  return new RegExp(`^${key}:.*$`, "m").test(frontmatter)
+    ? frontmatter.replace(new RegExp(`^${key}:.*$`, "m"), line)
+    : `${frontmatter.trimEnd()}\n${line}`;
+};
+
+const buildSopRevisionPrompt = (raw: string) => {
+  const existingBody = stripFrontmatter(raw).slice(0, 12000);
+  const originalTitle =
+    metadataLine(raw, "Original title") || frontmatterValue(raw, "title");
+  const authors = metadataLine(raw, "Authors");
+  const source = metadataLine(raw, "Journal/source");
+  const doi = metadataLine(raw, "DOI") || frontmatterValue(raw, "doi");
+  const pubmed = metadataLine(raw, "PubMed/source link");
+  const openAccess = metadataLine(raw, "Open-access link");
+  const evidence = metadataLine(raw, "Evidence used");
+  const date =
+    metadataLine(raw, "Published or indexed date") ||
+    frontmatterValue(raw, "publishedAt");
+  const currentZh = sectionText(raw, "## 原文精华摘要", [
+    "## English Plain-Language Version",
+    "## Source",
+  ]);
+  const currentEn = sectionText(raw, "## English Plain-Language Version", [
+    "## Source",
+    "## Research Primer",
+  ]);
+
+  return `
+Rewrite this GLUCOLIT draft into a publishable review draft. The current draft is too thin and still looks like metadata plus translation.
+
+Hard rules:
+- Use only the supplied source metadata, abstract/commentary fragments, DOI/PubMed links, and existing draft text. Do not invent sample sizes, statistics, populations, interventions, or outcomes that are not present.
+- Do not scrape or imply access to paywalled full text.
+- Move all metadata into the Research Primer. Do not put "Original title", "Authors", "Journal/source", "DOI", or "PubMed/source link" inside the Chinese article body.
+- Chinese article should read like a helpful medical science column, not like a peer reviewer. Avoid repeated openings such as "这项研究", "这篇论文", "研究者发现".
+- Paragraphs must be short. Each paragraph should be at most 5 visual lines on mobile, usually 80-140 Chinese characters. No giant blocks. No empty bullets.
+- Keep uncertainty and causality boundaries clear. Do not say cure, reverse, guaranteed, or personalized treatment unless the evidence actually supports it.
+
+Required Chinese body structure:
+### 研究背景
+100-180 Chinese characters. Start from the reader's real-life problem.
+
+### 核心发现
+Within 300 Chinese characters. Summarize only the strongest source-bounded finding.
+
+### 你的解读与批判
+At least 900 Chinese characters. Explain meaning, limits, what ordinary readers should not overclaim, and where the evidence is weak.
+
+### 临床/商业启发
+At least 450 Chinese characters. Include:
+A. 给糖前读者的行动建议
+B. 给健康科技行业的启发
+
+English body:
+- Under 220 English words.
+- Plain language, same conclusion, no long detail.
+
+Return JSON only:
+{
+  "titleZh": "...",
+  "titleEn": "...",
+  "descriptionZh": "...",
+  "descriptionEn": "...",
+  "bodyZh": "Markdown with the required Chinese headings",
+  "bodyEn": "Plain English paragraphs",
+  "takeawaysZh": ["...", "...", "...", "..."],
+  "takeawaysEn": ["...", "...", "...", "..."]
+}
+
+Source metadata:
+Original title: ${originalTitle}
+Authors: ${authors}
+Journal/source: ${source}
+DOI: ${doi}
+PubMed/source link: ${pubmed}
+Open-access link: ${openAccess}
+Evidence used: ${evidence}
+Published or indexed date: ${date}
+
+Current Chinese fragment:
+${currentZh}
+
+Current English fragment:
+${currentEn}
+
+Full current draft excerpt:
+${existingBody}
+`.trim();
+};
+
+const llmConfig = (): LlmConfig | null => {
+  const kimiKey = envValue("KIMI_API_KEY");
+  if (kimiKey) {
+    return {
+      apiKey: kimiKey,
+      baseUrl: envValue("KIMI_BASE_URL") || "https://api.moonshot.ai/v1",
+      model: envValue("KIMI_MODEL") || "moonshot-v1-8k",
+      provider: "Kimi",
+    };
+  }
+
+  const openAiKey = envValue("OPENAI_API_KEY");
+  if (openAiKey) {
+    return {
+      apiKey: openAiKey,
+      baseUrl: "https://api.openai.com/v1",
+      model: envValue("OPENAI_MODEL") || "gpt-4o-mini",
+      provider: "OpenAI",
+    };
+  }
+
+  return null;
+};
+
+const requireLlmConfig = (): LlmConfig => {
+  const config = llmConfig();
+
+  if (!config) {
+    redirectWithError(
+      "Missing KIMI_API_KEY or OPENAI_API_KEY in Vercel env vars. Cannot run SOP revision.",
+    );
+    throw new Error("Missing LLM config.");
+  }
+
+  return config;
+};
+
+const reviseWithLlm = async (raw: string): Promise<RevisedArticle> => {
+  const config = requireLlmConfig();
+
+  const response = await fetch(`${config.baseUrl}/chat/completions`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${config.apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: config.model,
+      messages: [
+        { role: "system", content: REVISION_SYSTEM_PROMPT },
+        { role: "user", content: buildSopRevisionPrompt(raw) },
+      ],
+      response_format: { type: "json_object" },
+      max_tokens: 7600,
+    }),
+  });
+
+  if (!response.ok) {
+    const details = await response.text();
+    redirectWithError(
+      `${config.provider} SOP revision failed: ${response.status} ${details.slice(0, 500)}`,
+    );
+  }
+
+  const data = (await response.json()) as {
+    choices?: { message?: { content?: string } }[];
+  };
+  const content = data.choices?.[0]?.message?.content ?? "";
+
+  try {
+    const parsed = JSON.parse(content) as Partial<RevisedArticle>;
+
+    const bodyZh = parsed.bodyZh;
+    const bodyEn = parsed.bodyEn;
+
+    if (!bodyZh || !bodyEn) {
+      redirectWithError("SOP revision returned incomplete article body.");
+      throw new Error("Incomplete SOP revision.");
+    }
+
+    return {
+      ...parsed,
+      bodyEn,
+      bodyZh,
+    };
+  } catch {
+    redirectWithError("SOP revision returned invalid JSON.");
+    throw new Error("Invalid SOP revision JSON.");
+  }
+};
+
+const buildResearchPrimer = (raw: string) => {
+  const rows = [
+    [
+      "Original title",
+      metadataLine(raw, "Original title") || frontmatterValue(raw, "title"),
+    ],
+    ["Authors", metadataLine(raw, "Authors")],
+    ["Journal/source", metadataLine(raw, "Journal/source")],
+    ["DOI", metadataLine(raw, "DOI") || frontmatterValue(raw, "doi")],
+    ["PubMed/source link", metadataLine(raw, "PubMed/source link")],
+    ["Open-access link", metadataLine(raw, "Open-access link")],
+    ["Evidence used", metadataLine(raw, "Evidence used")],
+    [
+      "Published or indexed date",
+      metadataLine(raw, "Published or indexed date") ||
+        frontmatterValue(raw, "publishedAt"),
+    ],
+  ].filter(([, value]) => value);
+
+  return rows.map(([label, value]) => `- ${label}: ${value}`).join("\n");
+};
+
+const buildRevisedMdx = (raw: string, revised: RevisedArticle) => {
+  const frontmatterMatch = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  const matchedFrontmatter = frontmatterMatch?.[1];
+
+  if (!matchedFrontmatter) {
+    redirectWithError("Draft frontmatter is missing.");
+    throw new Error("Draft frontmatter is missing.");
+  }
+
+  let frontmatter = frontmatterWithoutQualityIssues(matchedFrontmatter);
+  if (revised.titleZh && revised.titleEn) {
+    frontmatter = replaceFrontmatterValue(
+      frontmatter,
+      "title",
+      `${revised.titleZh} / ${revised.titleEn}`,
+    );
+  }
+  if (revised.descriptionZh && revised.descriptionEn) {
+    frontmatter = replaceFrontmatterValue(
+      frontmatter,
+      "description",
+      `${revised.descriptionZh} ${revised.descriptionEn}`,
+    );
+  }
+
+  const body = [
+    "> 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。本文仅供科普参考，不构成医疗建议。如有健康问题，请咨询专业医生。",
+    "",
+    "## 原文精华摘要",
+    "",
+    cleanMarkdown(revised.bodyZh ?? ""),
+    "",
+    "### 你可以带走的重点",
+    "",
+    ...(revised.takeawaysZh ?? []).map((item) => `- ${item}`),
+    "",
+    "## English Plain-Language Version",
+    "",
+    cleanMarkdown(revised.bodyEn ?? ""),
+    "",
+    "### Practical Takeaways",
+    "",
+    ...(revised.takeawaysEn ?? []).map((item) => `- ${item}`),
+    "",
+    "## Research Primer / 参考文献",
+    "",
+    buildResearchPrimer(raw),
+    "",
+    "如需阅读原文，请点击链接获取完整内容。",
+    "",
+    "本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+    "",
+  ].join("\n");
+
+  return `---\n${frontmatter.trim()}\n---\n\n${body}`;
+};
+
+export async function reviseDraftWithSopAction(formData: FormData) {
+  const token = requireGithubWriteToken();
+
+  const contentPath = getFormString(formData, "contentPath");
+  const slug = getFormString(formData, "slug");
+  const title = getFormString(formData, "title") || slug;
+
+  assertContentPath(contentPath);
+
+  const current = await readGithubFile(contentPath, token);
+
+  if (!/^draft:\s*true\s*$/m.test(current.raw)) {
+    redirectWithError("Only draft articles can be revised.");
+  }
+
+  const revised = await reviseWithLlm(current.raw);
+  const updated = buildRevisedMdx(current.raw, revised);
+
+  await writeGithubFile({
+    apiUrl: current.apiUrl,
+    branch: current.repoBranch,
+    content: updated,
+    headers: current.headers,
+    message: `revise: ${title}`,
+    sha: current.sha,
+  });
+
+  redirect(
+    `${pathsConfig.admin.drafts.index}?revised=${encodeURIComponent(slug)}`,
+  );
+}
+
+export async function publishDraftAction(formData: FormData) {
+  const token = requireGithubWriteToken();
+
+  const contentPath = getFormString(formData, "contentPath");
+  const slug = getFormString(formData, "slug");
+  const title = getFormString(formData, "title") || slug;
+
+  assertContentPath(contentPath);
+
+  const current = await readGithubFile(contentPath, token);
+  const raw = current.raw;
 
   if (!/^draft:\s*true\s*$/m.test(raw)) {
     redirectWithError("This article is no longer a draft.");
@@ -103,26 +534,14 @@ export async function publishDraftAction(formData: FormData) {
     .replace(/^draft:\s*true\s*$/m, "draft: false")
     .replace(/^qualityStatus:\s*ready\s*$/m, "qualityStatus: ready");
 
-  const updateResponse = await fetch(apiUrl, {
-    method: "PUT",
-    headers: {
-      ...headers,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      message: `publish: ${title}`,
-      content: encodeBase64(updated),
-      sha: currentSha,
-      branch: repoBranch,
-    }),
+  await writeGithubFile({
+    apiUrl: current.apiUrl,
+    branch: current.repoBranch,
+    content: updated,
+    headers: current.headers,
+    message: `publish: ${title}`,
+    sha: current.sha,
   });
-
-  if (!updateResponse.ok) {
-    const details = await updateResponse.text();
-    redirectWithError(
-      `Failed to write GitHub file: ${updateResponse.status} ${details}`,
-    );
-  }
 
   redirect(
     `${pathsConfig.admin.drafts.index}?published=${encodeURIComponent(slug)}`,

@@ -693,10 +693,12 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
         f"""
         You are the GLUCOLIT medical research editor.
 
-        Follow the GLUCOLIT Research Rewrite SOP:
+        Follow the GLUCOLIT two-step editorial SOP:
         1. First extract an evidence card from the source.
-        2. Then write a Chinese third-party commentary for readers with
-           prediabetes, insulin resistance, or early metabolic risk.
+        2. Then write a publishable intervention-guide style draft for readers
+           with prediabetes, insulin resistance, or early metabolic risk. The
+           article is a third-party commentary, not a translated abstract and
+           not a metadata list.
         3. Then write a faithful English plain-language version with the same
            meaning.
         4. Explain uncertainty and limits. Do not turn association into
@@ -724,6 +726,9 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
         - Each paragraph should explain one idea only. If the topic changes,
           start a new paragraph.
         - No empty paragraphs, no empty bullets, no screening-note language.
+        - Do not put source metadata such as Original title, Authors, DOI,
+          PubMed link, or Journal/source inside plain_zh or plain_en. Those
+          belong only in the Research Primer.
         - Define technical terms briefly when needed.
         - Make the result useful without making it sound like medical advice.
         - Avoid reviewer voice. Do not repeatedly write phrases like
@@ -733,21 +738,25 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
 
         Required structure inside plain_zh, using these exact Markdown headings:
         ### 研究背景
-        About 100 Chinese characters, in GLUCOLIT's own words.
+        100-180 Chinese characters, in GLUCOLIT's own words. Start from the
+        reader's real-life problem, not from "this study".
 
         ### 核心发现
         No more than 300 Chinese characters. Rewrite the core finding only,
         without replacing the original abstract.
 
         ### 你的解读与批判
-        At least 1500 Chinese characters. This is the main original commentary:
+        At least 1200 Chinese characters. This is the main original commentary:
         explain meaning, uncertainty, blind spots, reader relevance, and what
         not to overclaim.
 
         ### 临床/商业启发
-        At least 500 Chinese characters. Original GLUCOLIT insight about care,
-        behavior design, product opportunities, or patient education. No
-        personal medical advice.
+        At least 500 Chinese characters. Use two subheadings inside this
+        section:
+        #### A. 给糖前读者的行动建议
+        #### B. 给健康科技行业的启发
+        Original GLUCOLIT insight about care, behavior design, product
+        opportunities, or patient education. No personal medical advice.
 
         Return strict JSON with:
         title_en, title_zh, description_en, description_zh,
@@ -1352,18 +1361,6 @@ def article_to_mdx(
             "",
             "## 原文精华摘要",
             "",
-            "### 原文信息栏",
-            "",
-            f"- Original title: {paper.title}",
-            authors_line.rstrip(),
-            f"- Journal/source: {paper.source}",
-            doi_line.rstrip(),
-            pmcid_line.rstrip(),
-            f"- PubMed/source link: [{paper.link}]({paper.link})",
-            oa_line.rstrip(),
-            f"- Evidence used: {paper.evidence}",
-            f"- Published or indexed date: {paper.published_at}",
-            "",
             format_plain_article(article["plain_zh"], language="zh"),
             "",
             "### 为什么和糖尿病前期有关？",
@@ -1386,11 +1383,12 @@ def article_to_mdx(
             "",
             bullet_list(article.get("takeaways_en", [])),
             "",
-            "## Source",
+            "## Research Primer / 参考文献",
             "",
             f"- Journal/source: {paper.source}",
             f"- Evidence used: {paper.evidence}",
             f"- Original title: {paper.title}",
+            authors_line.rstrip(),
             f"- PubMed: [{paper.link}]({paper.link})",
             doi_line.rstrip(),
             pmcid_line.rstrip(),

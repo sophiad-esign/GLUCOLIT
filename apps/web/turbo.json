@@ -59,6 +59,10 @@
         "S3_SECRET_ACCESS_KEY",
 
         "OPENAI_API_KEY",
+        "OPENAI_MODEL",
+        "KIMI_API_KEY",
+        "KIMI_BASE_URL",
+        "KIMI_MODEL",
         "ANTHROPIC_API_KEY",
         "GOOGLE_GENERATIVE_AI_API_KEY",
         "MISTRAL_API_KEY",

@@ -400,7 +400,7 @@ const toArticle = (
   const bodyEn = sectionBetweenAny(
     item.content,
     ["## English Plain-Language Version", "## Plain-English Version"],
-    ["## 解读与批判", "## Source"],
+    ["## 解读与批判", "## Source", "## Research Primer / 参考文献"],
   );
   const source =
     metadataLine(item.content, "Journal/source") || SOURCE_FALLBACK;

@@ -37,7 +37,12 @@
     "GITHUB_REPOSITORY",
     "GITHUB_REPOSITORY_OWNER",
     "GITHUB_TOKEN",
+    "KIMI_API_KEY",
+    "KIMI_BASE_URL",
+    "KIMI_MODEL",
     "NODE_ENV",
+    "OPENAI_API_KEY",
+    "OPENAI_MODEL",
     "SKIP_ENV_VALIDATION",
     "npm_lifecycle_event"
   ]

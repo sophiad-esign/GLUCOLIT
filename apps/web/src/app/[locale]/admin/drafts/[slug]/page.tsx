@@ -19,7 +19,7 @@ import { readingBlocks } from "~/modules/articles/reading-blocks";
 import { getReviewArticleFromFileBySlug } from "~/modules/articles/review-files";
 import { TurboLink } from "~/modules/common/turbo-link";
 
-import { publishDraftAction } from "../actions";
+import { publishDraftAction, reviseDraftWithSopAction } from "../actions";
 
 const ReviewProse = ({ content }: { content: string }) => (
   <div className="space-y-5 text-base leading-8 text-slate-700 dark:text-slate-200">
@@ -63,6 +63,10 @@ export default async function DraftPreviewPage({
   const canPublish = Boolean(
     process.env["GITHUB_CONTENT_TOKEN"] || process.env["GITHUB_TOKEN"],
   );
+  const canRevise = Boolean(
+    canPublish &&
+    (process.env["KIMI_API_KEY"] || process.env["OPENAI_API_KEY"]),
+  );
 
   return (
     <div className="space-y-6">
@@ -75,22 +79,50 @@ export default async function DraftPreviewPage({
           返回草稿列表
         </TurboLink>
 
-        <form action={publishDraftAction}>
-          <input type="hidden" name="contentPath" value={article.contentPath} />
-          <input type="hidden" name="slug" value={article.slug} />
-          <input
-            type="hidden"
-            name="title"
-            value={article.titleEn || article.titleZh}
-          />
-          <Button
-            type="submit"
-            disabled={!canPublish || article.reviewRequired}
-            className="w-full bg-[#1e3a5f] hover:bg-[#2d5a87] sm:w-auto"
-          >
-            {article.reviewRequired ? "先完成 SOP 修订" : "一键发布这篇文章"}
-          </Button>
-        </form>
+        <div className="flex flex-col gap-2 sm:flex-row">
+          {article.reviewRequired ? (
+            <form action={reviseDraftWithSopAction}>
+              <input
+                type="hidden"
+                name="contentPath"
+                value={article.contentPath}
+              />
+              <input type="hidden" name="slug" value={article.slug} />
+              <input
+                type="hidden"
+                name="title"
+                value={article.titleEn || article.titleZh}
+              />
+              <Button
+                type="submit"
+                disabled={!canRevise}
+                className="w-full bg-orange-600 hover:bg-orange-700 sm:w-auto"
+              >
+                按 SOP 自动修订
+              </Button>
+            </form>
+          ) : null}
+          <form action={publishDraftAction}>
+            <input
+              type="hidden"
+              name="contentPath"
+              value={article.contentPath}
+            />
+            <input type="hidden" name="slug" value={article.slug} />
+            <input
+              type="hidden"
+              name="title"
+              value={article.titleEn || article.titleZh}
+            />
+            <Button
+              type="submit"
+              disabled={!canPublish || article.reviewRequired}
+              className="w-full bg-[#1e3a5f] hover:bg-[#2d5a87] sm:w-auto"
+            >
+              {article.reviewRequired ? "先完成 SOP 修订" : "一键发布这篇文章"}
+            </Button>
+          </form>
+        </div>
       </div>
 
       <section className="rounded-3xl bg-gradient-to-br from-[#1e3a5f] to-[#2d5a87] p-6 text-white shadow-sm">
@@ -145,6 +177,13 @@ export default async function DraftPreviewPage({
             </CardDescription>
           </CardHeader>
           <CardContent className="text-sm leading-7 text-amber-950 dark:text-amber-100">
+            {!canRevise ? (
+              <p className="mb-3 rounded-xl border border-amber-300 bg-white/70 p-3">
+                自动修订按钮当前不可用：请先在 Vercel 环境变量里配置
+                KIMI_API_KEY 或 OPENAI_API_KEY，并确认 GITHUB_CONTENT_TOKEN
+                仍然存在。
+              </p>
+            ) : null}
             <ul className="list-disc space-y-1 pl-5">
               {article.qualityIssues.map((issue) => (
                 <li key={issue}>{issue}</li>

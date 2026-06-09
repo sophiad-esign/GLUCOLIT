@@ -16,7 +16,7 @@ import { getMetadata } from "~/lib/metadata";
 import { getReviewArticlesFromFiles } from "~/modules/articles/review-files";
 import { TurboLink } from "~/modules/common/turbo-link";
 
-import { publishDraftAction } from "./actions";
+import { publishDraftAction, reviseDraftWithSopAction } from "./actions";
 import { AutoUpdateStatus } from "./auto-update-status";
 
 export const generateMetadata = getMetadata({
@@ -27,14 +27,22 @@ export const generateMetadata = getMetadata({
 export default async function AdminDraftsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string; published?: string }>;
+  searchParams: Promise<{
+    error?: string;
+    published?: string;
+    revised?: string;
+  }>;
 }) {
-  const { error, published } = await searchParams;
+  const { error, published, revised } = await searchParams;
   const drafts = getReviewArticlesFromFiles().filter(
     (article) => article.draft,
   );
   const canPublish = Boolean(
     process.env["GITHUB_CONTENT_TOKEN"] || process.env["GITHUB_TOKEN"],
+  );
+  const canRevise = Boolean(
+    canPublish &&
+    (process.env["KIMI_API_KEY"] || process.env["OPENAI_API_KEY"]),
   );
 
   return (
@@ -74,6 +82,16 @@ export default async function AdminDraftsPage({
         </div>
       ) : null}
 
+      {revised ? (
+        <div className="flex items-start gap-3 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm leading-7 text-blue-900 dark:border-blue-900/60 dark:bg-blue-950/30 dark:text-blue-100">
+          <Icons.CheckCircle2 className="mt-1 size-4 flex-none" />
+          <p>
+            已按 SOP 提交深度修订：{revised}。GitHub main 更新后，Vercel
+            会自动重新部署， 稍等几十秒后这篇会变成可发布候选。
+          </p>
+        </div>
+      ) : null}
+
       {error ? (
         <div className="flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 p-4 text-sm leading-7 text-red-900 dark:border-red-900/60 dark:bg-red-950/30 dark:text-red-100">
           <Icons.AlertTriangle className="mt-1 size-4 flex-none" />
@@ -92,6 +110,22 @@ export default async function AdminDraftsPage({
               要让按钮真正写回仓库，请在 Vercel 环境变量里添加
               GITHUB_CONTENT_TOKEN，权限需要 Contents: Read and write。不要把
               token 写进代码。
+            </CardDescription>
+          </CardHeader>
+        </Card>
+      ) : null}
+
+      {canPublish && !canRevise ? (
+        <Card className="border-amber-200 bg-amber-50 dark:border-amber-900/60 dark:bg-amber-950/30">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-amber-950 dark:text-amber-100">
+              <Icons.Key className="size-5" />
+              SOP 自动修订需要 Kimi 或 OpenAI API Key
+            </CardTitle>
+            <CardDescription className="text-amber-900 dark:text-amber-100/80">
+              请在 Vercel 环境变量里添加 KIMI_API_KEY，或
+              OPENAI_API_KEY。添加后重新部署， 后台就会出现可点击的“按 SOP
+              自动修订”按钮。
             </CardDescription>
           </CardHeader>
         </Card>
@@ -175,6 +209,28 @@ export default async function AdminDraftsPage({
                     >
                       查看全文审核
                     </TurboLink>
+                    {article.reviewRequired ? (
+                      <form action={reviseDraftWithSopAction}>
+                        <input
+                          type="hidden"
+                          name="contentPath"
+                          value={article.contentPath}
+                        />
+                        <input type="hidden" name="slug" value={article.slug} />
+                        <input
+                          type="hidden"
+                          name="title"
+                          value={article.titleEn || article.titleZh}
+                        />
+                        <Button
+                          type="submit"
+                          disabled={!canRevise}
+                          className="w-full bg-orange-600 hover:bg-orange-700"
+                        >
+                          按 SOP 自动修订
+                        </Button>
+                      </form>
+                    ) : null}
                     <form action={publishDraftAction}>
                       <input
                         type="hidden"
