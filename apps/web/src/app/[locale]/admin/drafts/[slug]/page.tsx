@@ -3,7 +3,6 @@
 import { notFound } from "next/navigation";
 
 import { Badge } from "@workspace/ui-web/badge";
-import { Button } from "@workspace/ui-web/button";
 import {
   Card,
   CardContent,
@@ -20,6 +19,9 @@ import { getReviewArticleFromFileBySlug } from "~/modules/articles/review-files"
 import { TurboLink } from "~/modules/common/turbo-link";
 
 import { publishDraftAction, reviseDraftWithSopAction } from "../actions";
+
+const actionButtonClass =
+  "inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white shadow-sm transition disabled:pointer-events-none disabled:opacity-50 sm:w-auto";
 
 const ReviewProse = ({ content }: { content: string }) => (
   <div className="space-y-5 text-base leading-8 text-slate-700 dark:text-slate-200">
@@ -93,13 +95,13 @@ export default async function DraftPreviewPage({
                 name="title"
                 value={article.titleEn || article.titleZh}
               />
-              <Button
+              <button
                 type="submit"
                 disabled={!canRevise}
-                className="w-full bg-orange-600 hover:bg-orange-700 sm:w-auto"
+                className={`${actionButtonClass} bg-orange-600 hover:bg-orange-700`}
               >
                 按 SOP 自动修订
-              </Button>
+              </button>
             </form>
           ) : null}
           <form action={publishDraftAction}>
@@ -114,13 +116,13 @@ export default async function DraftPreviewPage({
               name="title"
               value={article.titleEn || article.titleZh}
             />
-            <Button
+            <button
               type="submit"
               disabled={!canPublish || article.reviewRequired}
-              className="w-full bg-[#1e3a5f] hover:bg-[#2d5a87] sm:w-auto"
+              className={`${actionButtonClass} bg-[#1e3a5f] hover:bg-[#2d5a87]`}
             >
               {article.reviewRequired ? "先完成 SOP 修订" : "一键发布这篇文章"}
-            </Button>
+            </button>
           </form>
         </div>
       </div>

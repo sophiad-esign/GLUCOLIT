@@ -1,7 +1,6 @@
 /* eslint-disable i18next/no-literal-string */
 
 import { Badge } from "@workspace/ui-web/badge";
-import { Button } from "@workspace/ui-web/button";
 import {
   Card,
   CardContent,
@@ -18,6 +17,9 @@ import { TurboLink } from "~/modules/common/turbo-link";
 
 import { publishDraftAction, reviseDraftWithSopAction } from "./actions";
 import { AutoUpdateStatus } from "./auto-update-status";
+
+const actionButtonClass =
+  "inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white shadow-sm transition disabled:pointer-events-none disabled:opacity-50";
 
 export const generateMetadata = getMetadata({
   title: "待审核文章草稿",
@@ -222,13 +224,13 @@ export default async function AdminDraftsPage({
                           name="title"
                           value={article.titleEn || article.titleZh}
                         />
-                        <Button
+                        <button
                           type="submit"
                           disabled={!canRevise}
-                          className="w-full bg-orange-600 hover:bg-orange-700"
+                          className={`${actionButtonClass} bg-orange-600 hover:bg-orange-700`}
                         >
                           按 SOP 自动修订
-                        </Button>
+                        </button>
                       </form>
                     ) : null}
                     <form action={publishDraftAction}>
@@ -243,13 +245,13 @@ export default async function AdminDraftsPage({
                         name="title"
                         value={article.titleEn || article.titleZh}
                       />
-                      <Button
+                      <button
                         type="submit"
                         disabled={!canPublish || article.reviewRequired}
-                        className="w-full bg-[#1e3a5f] hover:bg-[#2d5a87]"
+                        className={`${actionButtonClass} bg-[#1e3a5f] hover:bg-[#2d5a87]`}
                       >
                         {article.reviewRequired ? "先完成修订" : "一键发布"}
-                      </Button>
+                      </button>
                     </form>
                   </div>
                 </CardHeader>
