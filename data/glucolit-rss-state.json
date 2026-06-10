@@ -2332,6 +2332,76 @@
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
+    },
+    "c31c2beec6efefc8": {
+      "title": "Prediabetes, diabetes, and the risk of progression to diabetes among working population in Beijing-the Tongren HealthCare Study.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (PloS one)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42160311/",
+      "pmid": "42160311",
+      "pmcid": "PMC13189350",
+      "doi": "10.1371/journal.pone.0343993",
+      "oa_url": "https://europepmc.org/articles/PMC13189350",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 39,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "insulin resistance",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-06-10T18:49:07.878114+00:00",
+      "last_seen_at": "2026-06-10T18:49:07.878134+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/prediabetes-diabetes-and-the-risk-of-progression-to-diabetes-among-worki-c31c2bee/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "aa151f5dec816af0": {
+      "title": "Proteomic analyses of human islets reveal potential markers of β cell dysfunction during prediabetes.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (JCI insight)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41854718/",
+      "pmid": "41854718",
+      "pmcid": "PMC13232019",
+      "doi": "10.1172/jci.insight.182135",
+      "oa_url": "https://europepmc.org/articles/PMC13232019",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-05-08",
+      "score": 34,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-06-10T18:49:44.151735+00:00",
+      "last_seen_at": "2026-06-10T18:49:44.151780+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/proteomic-analyses-of-human-islets-reveal-potential-markers-of-cell-dysf-aa151f5d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
     }
   }
 }
