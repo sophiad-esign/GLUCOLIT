@@ -17,6 +17,7 @@ import { TurboLink } from "~/modules/common/turbo-link";
 
 import { publishDraftAction, reviseDraftWithSopAction } from "./actions";
 import { AutoUpdateStatus } from "./auto-update-status";
+import { SubmitActionButton } from "./submit-action-button";
 
 const actionButtonClass =
   "inline-flex h-10 w-full items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white shadow-sm transition disabled:pointer-events-none disabled:opacity-50";
@@ -224,13 +225,13 @@ export default async function AdminDraftsPage({
                           name="title"
                           value={article.titleEn || article.titleZh}
                         />
-                        <button
-                          type="submit"
+                        <SubmitActionButton
                           disabled={!canRevise}
                           className={`${actionButtonClass} bg-orange-600 hover:bg-orange-700`}
+                          pendingText="正在 SOP 修订..."
                         >
                           按 SOP 自动修订
-                        </button>
+                        </SubmitActionButton>
                       </form>
                     ) : null}
                     <form action={publishDraftAction}>
@@ -245,13 +246,13 @@ export default async function AdminDraftsPage({
                         name="title"
                         value={article.titleEn || article.titleZh}
                       />
-                      <button
-                        type="submit"
+                      <SubmitActionButton
                         disabled={!canPublish || article.reviewRequired}
                         className={`${actionButtonClass} bg-[#1e3a5f] hover:bg-[#2d5a87]`}
+                        pendingText="正在发布..."
                       >
                         {article.reviewRequired ? "先完成修订" : "一键发布"}
-                      </button>
+                      </SubmitActionButton>
                     </form>
                   </div>
                 </CardHeader>
