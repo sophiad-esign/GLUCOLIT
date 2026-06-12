@@ -2456,7 +2456,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-11T19:19:58.106502+00:00",
+      "last_seen_at": "2026-06-12T18:26:42.621229+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -2487,6 +2487,73 @@
       "attempts": 1,
       "generated": true,
       "path": "packages/cms/src/collections/blog/content/association-between-sleep-duration-and-glycemic-levels-in-adults-with-pr-f509fb5d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "091c708341c4d45b": {
+      "title": "Structure-function relationship of Konjac glucomannan with varying acetylation degrees in modulating gut microbiota and alleviating prediabetes.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Carbohydrate polymers)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41832011/",
+      "pmid": "41832011",
+      "pmcid": "",
+      "doi": "10.1016/j.carbpol.2026.125103",
+      "oa_url": "https://doi.org/10.1016/j.carbpol.2026.125103",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-05-15",
+      "score": 21,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "diabetes prevention",
+        "glucose"
+      ],
+      "created_at": "2026-06-12T18:26:42.621343+00:00",
+      "last_seen_at": "2026-06-12T18:26:42.621347+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/structure-function-relationship-of-konjac-glucomannan-with-varying-acety-091c7083/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "feb4d2e7ceab4589": {
+      "title": "Multi-Axis Reprogramming of Muscle-Metabolic Crosstalk by HiLo Platinum™ Restores Strength in Prediabetes via Mitochondrial Activation and Gut Microbiome Remodeling.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (International journal of molecular sciences)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42123593/",
+      "pmid": "42123593",
+      "pmcid": "PMC13163564",
+      "doi": "10.3390/ijms27094014",
+      "oa_url": "https://europepmc.org/articles/PMC13163564",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-04-30",
+      "score": 47,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "nutrition",
+        "glucose"
+      ],
+      "created_at": "2026-06-12T18:27:18.063299+00:00",
+      "last_seen_at": "2026-06-12T18:27:18.063320+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/multi-axis-reprogramming-of-muscle-metabolic-crosstalk-by-hilo-platinum-feb4d2e7/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
