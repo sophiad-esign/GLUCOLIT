@@ -2456,7 +2456,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-12T18:26:42.621229+00:00",
+      "last_seen_at": "2026-06-13T17:51:13.109773+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -2554,6 +2554,79 @@
       "attempts": 1,
       "generated": true,
       "path": "packages/cms/src/collections/blog/content/multi-axis-reprogramming-of-muscle-metabolic-crosstalk-by-hilo-platinum-feb4d2e7/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "d413dd375cee45db": {
+      "title": "Enduring improvements in hepatic insulin sensitivity predict sustained remission of prediabetes during a 3-year lifestyle intervention: results from the PREVIEW multinational diabetes prevention trial.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Metabolism: clinical and experimental)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41654010/",
+      "pmid": "41654010",
+      "pmcid": "PMC13235051",
+      "doi": "10.1016/j.metabol.2026.156546",
+      "oa_url": "https://doi.org/10.1016/j.metabol.2026.156546",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-05-01",
+      "score": 50,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "insulin sensitivity",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "weight loss",
+        "diet",
+        "glucose",
+        "glycaemic",
+        "glycemic",
+        "hba1c",
+        "remission"
+      ],
+      "created_at": "2026-06-13T17:51:13.110080+00:00",
+      "last_seen_at": "2026-06-13T17:51:13.110085+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/enduring-improvements-in-hepatic-insulin-sensitivity-predict-sustained-r-d413dd37/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "5468558d1710f020": {
+      "title": "Understanding Latino Individual and Family Perspectives in a National Diabetes Prevention Program.",
+      "source": "PubMed digital diabetes prevention via PubMed (JAMA network open)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41926121/",
+      "pmid": "41926121",
+      "pmcid": "PMC13047464",
+      "doi": "10.1001/jamanetworkopen.2026.4780",
+      "oa_url": "https://doi.org/10.1001/jamanetworkopen.2026.4780",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-04-01",
+      "score": 36,
+      "matched": [
+        "prediabetes",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "national diabetes prevention program",
+        "weight loss",
+        "diet",
+        "exercise"
+      ],
+      "created_at": "2026-06-13T17:51:44.015686+00:00",
+      "last_seen_at": "2026-06-13T17:51:44.015698+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/understanding-latino-individual-and-family-perspectives-in-a-national-di-5468558d/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
