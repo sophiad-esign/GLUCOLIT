@@ -2456,7 +2456,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-13T17:51:13.109773+00:00",
+      "last_seen_at": "2026-06-14T17:53:10.421450+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -2627,6 +2627,76 @@
       "attempts": 1,
       "generated": true,
       "path": "packages/cms/src/collections/blog/content/understanding-latino-individual-and-family-perspectives-in-a-national-di-5468558d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "85c8f31921130290": {
+      "title": "Effects of pharmacological treatment and lifestyle modification on prediabetes: a systematic review and meta-analysis of randomized controlled trials (RCTS).",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Naunyn-Schmiedeberg's archives of pharmacology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42108364/",
+      "pmid": "42108364",
+      "pmcid": "10420389",
+      "doi": "10.1007/s00210-026-05369-8",
+      "oa_url": "https://doi.org/10.1007/s00210-026-05369-8",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-05-11",
+      "score": 36,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "lifestyle modification",
+        "weight loss",
+        "diet",
+        "physical activity",
+        "glucose"
+      ],
+      "created_at": "2026-06-14T17:53:10.421757+00:00",
+      "last_seen_at": "2026-06-14T17:53:10.421761+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effects-of-pharmacological-treatment-and-lifestyle-modification-on-predi-85c8f319/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "efad01c78be9118a": {
+      "title": "Association between CVAI-defined body composition phenotypes and prediabetes outcomes in Chinese adults undergoing health check-ups: a cross-sectional study.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Frontiers in nutrition)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42221771/",
+      "pmid": "42221771",
+      "pmcid": "PMC13216018",
+      "doi": "10.3389/fnut.2026.1784292",
+      "oa_url": "https://europepmc.org/articles/PMC13216018",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 35,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-06-14T17:53:48.962019+00:00",
+      "last_seen_at": "2026-06-14T17:53:48.962038+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/association-between-cvai-defined-body-composition-phenotypes-and-prediab-efad01c7/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
