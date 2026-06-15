@@ -83,28 +83,26 @@ export default async function DraftPreviewPage({
         </TurboLink>
 
         <div className="flex flex-col gap-2 sm:flex-row">
-          {article.reviewRequired ? (
-            <form action={reviseDraftWithSopAction}>
-              <input
-                type="hidden"
-                name="contentPath"
-                value={article.contentPath}
-              />
-              <input type="hidden" name="slug" value={article.slug} />
-              <input
-                type="hidden"
-                name="title"
-                value={article.titleEn || article.titleZh}
-              />
-              <SubmitActionButton
-                disabled={!canRevise}
-                className={`${actionButtonClass} bg-orange-600 hover:bg-orange-700`}
-                pendingText="正在 SOP 修订..."
-              >
-                按 SOP 自动修订
-              </SubmitActionButton>
-            </form>
-          ) : null}
+          <form action={reviseDraftWithSopAction}>
+            <input
+              type="hidden"
+              name="contentPath"
+              value={article.contentPath}
+            />
+            <input type="hidden" name="slug" value={article.slug} />
+            <input
+              type="hidden"
+              name="title"
+              value={article.titleEn || article.titleZh}
+            />
+            <SubmitActionButton
+              disabled={!canRevise}
+              className={`${actionButtonClass} bg-orange-600 hover:bg-orange-700`}
+              pendingText="正在 SOP 修订..."
+            >
+              按 SOP 自动修订
+            </SubmitActionButton>
+          </form>
           <form action={publishDraftAction}>
             <input
               type="hidden"

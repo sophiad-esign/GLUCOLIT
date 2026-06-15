@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import { pathsConfig } from "~/config/paths";
 
 const CONTENT_ROOT = "packages/cms/src/collections/blog/content/";
+const PUBLISH_WORKFLOW_FILE = "publish-web.yml";
 const REVISION_SYSTEM_PROMPT =
   "You are a bilingual medical science editor for GLUCOLIT. Return only valid JSON.";
 
@@ -86,6 +87,31 @@ const githubConfig = (token: string, contentPath: string) => {
     },
     repoBranch,
   };
+};
+
+const githubRepoIdentity = () => ({
+  repoOwner: envValue("GITHUB_REPOSITORY_OWNER") || "sophiad-esign",
+  repoName: envValue("GITHUB_REPOSITORY")?.split("/")[1] || "GLUCOLIT",
+  repoBranch: envValue("GITHUB_CONTENT_BRANCH") || "main",
+});
+
+const triggerPublishWorkflow = async (token: string) => {
+  const { repoBranch, repoName, repoOwner } = githubRepoIdentity();
+  const response = await fetch(
+    `https://api.github.com/repos/${repoOwner}/${repoName}/actions/workflows/${PUBLISH_WORKFLOW_FILE}/dispatches`,
+    {
+      method: "POST",
+      headers: {
+        Accept: "application/vnd.github+json",
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+      body: JSON.stringify({ ref: repoBranch }),
+    },
+  );
+
+  return response.ok;
 };
 
 const readGithubFile = async (contentPath: string, token: string) => {
@@ -497,6 +523,8 @@ export async function reviseDraftWithSopAction(formData: FormData) {
     sha: current.sha,
   });
 
+  await triggerPublishWorkflow(token);
+
   redirect(
     `${pathsConfig.admin.drafts.index}?revised=${encodeURIComponent(slug)}`,
   );
@@ -542,6 +570,8 @@ export async function publishDraftAction(formData: FormData) {
     message: `publish: ${title}`,
     sha: current.sha,
   });
+
+  await triggerPublishWorkflow(token);
 
   redirect(
     `${pathsConfig.admin.drafts.index}?published=${encodeURIComponent(slug)}`,

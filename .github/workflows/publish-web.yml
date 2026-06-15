@@ -2,6 +2,11 @@ name: CI / Publish web
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/cms/src/collections/blog/content/**"
 
 jobs:
   tests:

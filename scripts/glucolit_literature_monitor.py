@@ -1075,8 +1075,28 @@ def reviewer_voice_count(text: str) -> int:
     return total
 
 
+def markdown_value_to_text(value: Any) -> str:
+    if isinstance(value, dict):
+        parts: list[str] = []
+        for key, item in value.items():
+            heading = str(key).strip()
+            body = markdown_value_to_text(item).strip()
+            if heading:
+                parts.append(heading)
+            if body:
+                parts.append(body)
+        return "\n\n".join(parts)
+    if isinstance(value, list):
+        return "\n\n".join(
+            markdown_value_to_text(item).strip()
+            for item in value
+            if markdown_value_to_text(item).strip()
+        )
+    return str(value or "")
+
+
 def clean_markdown_text(value: Any) -> str:
-    text = str(value or "").replace("\r\n", "\n").replace("\r", "\n").strip()
+    text = markdown_value_to_text(value).replace("\r\n", "\n").replace("\r", "\n").strip()
     lines: list[str] = []
     blank_seen = False
     for raw_line in text.split("\n"):
