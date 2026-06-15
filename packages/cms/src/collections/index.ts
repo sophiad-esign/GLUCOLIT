@@ -34,7 +34,7 @@ const hasTags = <T extends CollectionType>(
 };
 
 const isPublic = <T extends CollectionType>(item: ContentCollectionItem<T>) => {
-  return !("draft" in item) || item.draft !== true;
+  return !("draft" in item) || !item.draft;
 };
 
 const sortItems = <T extends CollectionType>(
