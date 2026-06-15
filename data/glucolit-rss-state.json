@@ -10,7 +10,9 @@
       "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-06-01",
       "score": 6,
-      "matched": ["lifestyle intervention"],
+      "matched": [
+        "lifestyle intervention"
+      ],
       "created_at": "2026-05-28T03:52:52.665109+00:00",
       "last_seen_at": "2026-06-03T09:45:28.251521+00:00",
       "attempts": 1,
@@ -38,7 +40,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41397401/",
       "published_at": "2026-02-01",
       "score": 6,
-      "matched": ["prediabetes"],
+      "matched": [
+        "prediabetes"
+      ],
       "created_at": "2026-05-28T03:53:07.975816+00:00",
       "generated": false
     },
@@ -48,7 +52,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41381174/",
       "published_at": "2026-01-01",
       "score": 6,
-      "matched": ["prediabetes"],
+      "matched": [
+        "prediabetes"
+      ],
       "created_at": "2026-05-28T03:53:07.975859+00:00",
       "generated": false
     },
@@ -58,7 +64,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41248671/",
       "published_at": "2026-01-01",
       "score": 7,
-      "matched": ["insulin resistance", "hba1c"],
+      "matched": [
+        "insulin resistance",
+        "hba1c"
+      ],
       "created_at": "2026-05-28T03:53:13.357901+00:00",
       "generated": false
     },
@@ -68,7 +77,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/40961952/",
       "published_at": "2025-11-01",
       "score": 5,
-      "matched": ["lifestyle intervention"],
+      "matched": [
+        "lifestyle intervention"
+      ],
       "created_at": "2026-05-28T03:53:18.892270+00:00",
       "generated": false
     },
@@ -78,7 +89,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/40854315/",
       "published_at": "2025-10-01",
       "score": 5,
-      "matched": ["glucose", "hba1c"],
+      "matched": [
+        "glucose",
+        "hba1c"
+      ],
       "created_at": "2026-05-28T03:53:18.892460+00:00",
       "generated": false
     },
@@ -88,7 +102,11 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/40609565/",
       "published_at": "2025-08-01",
       "score": 7,
-      "matched": ["insulin resistance", "glucose", "glycaemic"],
+      "matched": [
+        "insulin resistance",
+        "glucose",
+        "glycaemic"
+      ],
       "created_at": "2026-05-28T03:53:34.795009+00:00",
       "generated": false
     },
@@ -98,7 +116,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41973635/",
       "published_at": "2026-06-01",
       "score": 3,
-      "matched": ["prediabetes"],
+      "matched": [
+        "prediabetes"
+      ],
       "created_at": "2026-05-28T03:53:52.278551+00:00",
       "last_seen_at": "2026-06-03T09:25:07.020533+00:00",
       "attempts": 0,
@@ -111,7 +131,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42008706/",
       "published_at": "2026-05-01",
       "score": 0,
-      "matched": ["diabetes prevention"],
+      "matched": [
+        "diabetes prevention"
+      ],
       "created_at": "2026-05-28T03:54:21.803926+00:00",
       "last_seen_at": "2026-06-03T09:25:37.006424+00:00",
       "attempts": 0,
@@ -124,7 +146,9 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41875073/",
       "published_at": "2026-05-01",
       "score": 6,
-      "matched": ["prediabetes"],
+      "matched": [
+        "prediabetes"
+      ],
       "created_at": "2026-05-28T03:54:37.191917+00:00",
       "last_seen_at": "2026-06-03T09:25:55.741990+00:00",
       "attempts": 0,
@@ -137,7 +161,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41958348/",
       "published_at": "2026-06-01",
       "score": 5,
-      "matched": ["prediabetes", "glucose"],
+      "matched": [
+        "prediabetes",
+        "glucose"
+      ],
       "created_at": "2026-05-28T03:55:36.815073+00:00",
       "generated": false
     },
@@ -147,7 +174,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41397403/",
       "published_at": "2026-02-01",
       "score": 9,
-      "matched": ["prediabetes", "remission"],
+      "matched": [
+        "prediabetes",
+        "remission"
+      ],
       "created_at": "2026-06-03T08:53:11.220399+00:00",
       "generated": false
     },
@@ -176,7 +206,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41274303/",
       "published_at": "2026-01-01",
       "score": 8,
-      "matched": ["prediabetes", "glucose"],
+      "matched": [
+        "prediabetes",
+        "glucose"
+      ],
       "created_at": "2026-06-03T08:53:26.229918+00:00",
       "generated": false
     },
@@ -186,7 +219,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/40961953/",
       "published_at": "2025-11-01",
       "score": 8,
-      "matched": ["lifestyle intervention", "hba1c"],
+      "matched": [
+        "lifestyle intervention",
+        "hba1c"
+      ],
       "created_at": "2026-06-03T08:53:32.579530+00:00",
       "generated": false
     },
@@ -196,7 +232,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/40812333/",
       "published_at": "2025-10-01",
       "score": 9,
-      "matched": ["prediabetes", "remission"],
+      "matched": [
+        "prediabetes",
+        "remission"
+      ],
       "created_at": "2026-06-03T08:53:39.079851+00:00",
       "generated": false
     },
@@ -222,7 +261,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/40555243/",
       "published_at": "2025-09-01",
       "score": 9,
-      "matched": ["prediabetes", "sleep"],
+      "matched": [
+        "prediabetes",
+        "sleep"
+      ],
       "created_at": "2026-06-03T08:53:50.747245+00:00",
       "generated": false
     },
@@ -263,7 +305,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42160593/",
       "published_at": "2026-06-01",
       "score": 10,
-      "matched": ["diabetes prevention", "lifestyle modification"],
+      "matched": [
+        "diabetes prevention",
+        "lifestyle modification"
+      ],
       "created_at": "2026-06-03T08:54:04.240049+00:00",
       "last_seen_at": "2026-06-03T09:24:51.111945+00:00",
       "attempts": 1,
@@ -307,7 +352,11 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42008009/",
       "published_at": "2026-06-01",
       "score": 13,
-      "matched": ["insulin resistance", "insulin sensitivity", "glucose"],
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "glucose"
+      ],
       "created_at": "2026-06-03T08:54:17.100330+00:00",
       "last_seen_at": "2026-06-03T09:25:01.927934+00:00",
       "attempts": 1,
@@ -320,7 +369,12 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41925680/",
       "published_at": "2026-06-01",
       "score": 10,
-      "matched": ["glucose", "glycemic", "hba1c", "continuous glucose"],
+      "matched": [
+        "glucose",
+        "glycemic",
+        "hba1c",
+        "continuous glucose"
+      ],
       "created_at": "2026-06-03T08:54:22.288899+00:00",
       "last_seen_at": "2026-06-03T09:25:07.020601+00:00",
       "attempts": 1,
@@ -351,7 +405,11 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42201307/",
       "published_at": "2026-05-27",
       "score": 13,
-      "matched": ["insulin resistance", "lifestyle modification", "glucose"],
+      "matched": [
+        "insulin resistance",
+        "lifestyle modification",
+        "glucose"
+      ],
       "created_at": "2026-06-03T08:54:32.145548+00:00",
       "last_seen_at": "2026-06-03T09:25:18.768484+00:00",
       "attempts": 1,
@@ -364,7 +422,12 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42102359/",
       "published_at": "2026-05-08",
       "score": 17,
-      "matched": ["prediabetes", "insulin resistance", "glucose", "hba1c"],
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "glucose",
+        "hba1c"
+      ],
       "created_at": "2026-06-03T08:54:37.107151+00:00",
       "last_seen_at": "2026-06-03T09:25:25.392379+00:00",
       "attempts": 1,
@@ -377,7 +440,11 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42008708/",
       "published_at": "2026-05-01",
       "score": 11,
-      "matched": ["prediabetes", "sleep", "glucose"],
+      "matched": [
+        "prediabetes",
+        "sleep",
+        "glucose"
+      ],
       "created_at": "2026-06-03T08:54:42.815489+00:00",
       "last_seen_at": "2026-06-03T09:25:30.806720+00:00",
       "attempts": 1,
@@ -390,7 +457,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42008705/",
       "published_at": "2026-05-01",
       "score": 8,
-      "matched": ["prediabetes", "glucose"],
+      "matched": [
+        "prediabetes",
+        "glucose"
+      ],
       "created_at": "2026-06-03T08:54:48.388661+00:00",
       "last_seen_at": "2026-06-03T09:25:37.006457+00:00",
       "attempts": 1,
@@ -403,7 +473,10 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42008701/",
       "published_at": "2026-05-01",
       "score": 8,
-      "matched": ["prediabetes", "glucose"],
+      "matched": [
+        "prediabetes",
+        "glucose"
+      ],
       "created_at": "2026-06-03T08:54:53.563315+00:00",
       "last_seen_at": "2026-06-03T09:25:42.827265+00:00",
       "attempts": 1,
@@ -416,7 +489,11 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41911242/",
       "published_at": "2026-05-01",
       "score": 11,
-      "matched": ["prediabetes", "glucose", "hba1c"],
+      "matched": [
+        "prediabetes",
+        "glucose",
+        "hba1c"
+      ],
       "created_at": "2026-06-03T08:54:58.756227+00:00",
       "last_seen_at": "2026-06-03T09:25:48.030909+00:00",
       "attempts": 1,
@@ -429,7 +506,11 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41817101/",
       "published_at": "2026-12-31",
       "score": 15,
-      "matched": ["prediabetes", "lifestyle modification", "exercise"],
+      "matched": [
+        "prediabetes",
+        "lifestyle modification",
+        "exercise"
+      ],
       "created_at": "2026-06-03T08:55:04.361907+00:00",
       "last_seen_at": "2026-06-03T09:25:56.234574+00:00",
       "attempts": 1,
@@ -488,7 +569,11 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41935405/",
       "published_at": "2026-07-01",
       "score": 10,
-      "matched": ["diabetes prevention", "diet", "glucose"],
+      "matched": [
+        "diabetes prevention",
+        "diet",
+        "glucose"
+      ],
       "created_at": "2026-06-03T08:55:19.642846+00:00",
       "last_seen_at": "2026-06-03T09:26:13.669013+00:00",
       "attempts": 1,
@@ -501,7 +586,11 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/41812461/",
       "published_at": "2026-06-15",
       "score": 15,
-      "matched": ["prediabetes", "lifestyle intervention", "exercise"],
+      "matched": [
+        "prediabetes",
+        "lifestyle intervention",
+        "exercise"
+      ],
       "created_at": "2026-06-03T08:55:25.174771+00:00",
       "last_seen_at": "2026-06-03T09:26:18.391944+00:00",
       "attempts": 1,
@@ -616,7 +705,11 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42082865/",
       "published_at": "2026-06-01",
       "score": 13,
-      "matched": ["prediabetes", "diet", "physical activity"],
+      "matched": [
+        "prediabetes",
+        "diet",
+        "physical activity"
+      ],
       "created_at": "2026-06-03T08:55:45.180809+00:00",
       "last_seen_at": "2026-06-03T09:26:48.013676+00:00",
       "attempts": 1,
@@ -629,7 +722,11 @@
       "link": "https://pubmed.ncbi.nlm.nih.gov/42061108/",
       "published_at": "2026-06-01",
       "score": 15,
-      "matched": ["prediabetes", "insulin resistance", "diet"],
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "diet"
+      ],
       "created_at": "2026-06-03T08:55:50.764694+00:00",
       "last_seen_at": "2026-06-03T09:26:53.741433+00:00",
       "attempts": 1,
@@ -638,31 +735,39 @@
     },
     "61758f3bb7c194c1": {
       "title": "Evaluating the cardio-protective effects of Momordica balsamina in a diet-induced prediabetic rats.",
-      "source": "PubMed high-yield prediabetes via PubMed (Cardiovascular endocrinology & metabolism)",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular endocrinology & metabolism)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42004629/",
       "pmid": "42004629",
+      "pmcid": "PMC13090081",
       "doi": "10.1097/XCE.0000000000000359",
       "oa_url": "https://europepmc.org/articles/PMC13090081",
-      "evidence": "Europe PMC abstract + open-access full-text link",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
       "published_at": "2026-06-01",
-      "score": 24,
+      "score": 38,
       "matched": [
         "prediabetes",
         "prediabetic",
+        "insulin resistance",
         "lifestyle intervention",
+        "lifestyle modification",
         "diet",
-        "glucose"
+        "physical activity",
+        "glucose",
+        "glycemic"
       ],
       "created_at": "2026-06-03T08:55:55.599013+00:00",
-      "last_seen_at": "2026-06-06T17:42:43.658527+00:00",
-      "attempts": 3,
-      "generated": false,
+      "last_seen_at": "2026-06-15T20:01:13.396842+00:00",
+      "attempts": 4,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/evaluating-the-cardio-protective-effects-of-momordica-balsamina-in-a-die-61758f3b/en.mdx",
+      "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
       ],
-      "skip_reason": "generated article failed quality gate"
+      "skip_reason": "saved as needs-revision draft"
     },
     "f70212db52df0a41": {
       "title": "Data-driven cluster analysis of adults with prediabetes: Findings from the Japan diabetes prevention study.",
@@ -731,7 +836,11 @@
       "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00080-X/fulltext?rss=yes",
       "published_at": "2026-04-23",
       "score": 3,
-      "matched": ["glucose", "hba1c", "continuous glucose"],
+      "matched": [
+        "glucose",
+        "hba1c",
+        "continuous glucose"
+      ],
       "created_at": "2026-06-03T09:24:44.028997+00:00",
       "last_seen_at": "2026-06-03T09:24:44.029000+00:00",
       "attempts": 0,
@@ -770,7 +879,9 @@
       "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00070-7/fulltext?rss=yes",
       "published_at": "2026-04-20",
       "score": 2,
-      "matched": ["glucose"],
+      "matched": [
+        "glucose"
+      ],
       "created_at": "2026-06-03T09:24:44.029088+00:00",
       "last_seen_at": "2026-06-03T09:24:44.029090+00:00",
       "attempts": 0,
@@ -835,7 +946,11 @@
       "link": "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(26)00076-8/fulltext?rss=yes",
       "published_at": "2026-04-23",
       "score": 7,
-      "matched": ["glucose", "glycaemic", "continuous glucose"],
+      "matched": [
+        "glucose",
+        "glycaemic",
+        "continuous glucose"
+      ],
       "created_at": "2026-06-03T09:24:44.029224+00:00",
       "last_seen_at": "2026-06-03T09:24:44.029225+00:00",
       "attempts": 0,
@@ -900,7 +1015,9 @@
       "link": "https://www.nature.com/articles/s42255-026-01536-6",
       "published_at": "2026-05-27",
       "score": 6,
-      "matched": ["insulin resistance"],
+      "matched": [
+        "insulin resistance"
+      ],
       "created_at": "2026-06-03T09:24:44.100964+00:00",
       "last_seen_at": "2026-06-03T09:24:44.100972+00:00",
       "attempts": 0,
@@ -952,7 +1069,9 @@
       "link": "https://www.nature.com/articles/s42255-026-01534-8",
       "published_at": "2026-05-22",
       "score": 4,
-      "matched": ["weight loss"],
+      "matched": [
+        "weight loss"
+      ],
       "created_at": "2026-06-03T09:24:44.101049+00:00",
       "last_seen_at": "2026-06-03T09:24:44.101051+00:00",
       "attempts": 0,
@@ -965,7 +1084,9 @@
       "link": "https://www.nature.com/articles/s42255-026-01505-z",
       "published_at": "2026-05-21",
       "score": 4,
-      "matched": ["exercise"],
+      "matched": [
+        "exercise"
+      ],
       "created_at": "2026-06-03T09:24:44.101066+00:00",
       "last_seen_at": "2026-06-03T09:24:44.101067+00:00",
       "attempts": 0,
@@ -978,7 +1099,9 @@
       "link": "https://www.nature.com/articles/s42255-026-01527-7",
       "published_at": "2026-05-21",
       "score": 4,
-      "matched": ["exercise"],
+      "matched": [
+        "exercise"
+      ],
       "created_at": "2026-06-03T09:24:44.101082+00:00",
       "last_seen_at": "2026-06-03T09:24:44.101084+00:00",
       "attempts": 0,
@@ -1042,7 +1165,11 @@
       "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-06-01",
       "score": 11,
-      "matched": ["lifestyle intervention", "nutrition", "glycaemic"],
+      "matched": [
+        "lifestyle intervention",
+        "nutrition",
+        "glycaemic"
+      ],
       "created_at": "2026-06-03T09:45:17.163176+00:00",
       "last_seen_at": "2026-06-03T09:45:17.163180+00:00",
       "attempts": 1,
@@ -1059,7 +1186,12 @@
       "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-06-01",
       "score": 10,
-      "matched": ["glucose", "glycaemic", "hba1c", "continuous glucose"],
+      "matched": [
+        "glucose",
+        "glycaemic",
+        "hba1c",
+        "continuous glucose"
+      ],
       "created_at": "2026-06-03T09:45:22.543404+00:00",
       "last_seen_at": "2026-06-03T09:45:22.543417+00:00",
       "attempts": 1,
@@ -1076,7 +1208,12 @@
       "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-05-27",
       "score": 14,
-      "matched": ["prediabetic", "diet", "nutrition", "glucose"],
+      "matched": [
+        "prediabetic",
+        "diet",
+        "nutrition",
+        "glucose"
+      ],
       "created_at": "2026-06-03T09:45:34.331306+00:00",
       "last_seen_at": "2026-06-03T09:45:34.331320+00:00",
       "attempts": 1,
@@ -1093,7 +1230,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-05-22",
       "score": 4,
-      "matched": ["weight loss"],
+      "matched": [
+        "weight loss"
+      ],
       "created_at": "2026-06-03T09:45:40.846692+00:00",
       "last_seen_at": "2026-06-03T09:45:40.846708+00:00",
       "attempts": 0,
@@ -1110,7 +1249,9 @@
       "evidence": "Europe PMC abstract + open-access full-text link",
       "published_at": "2026-05-14",
       "score": 6,
-      "matched": ["lifestyle intervention"],
+      "matched": [
+        "lifestyle intervention"
+      ],
       "created_at": "2026-06-03T09:45:40.846745+00:00",
       "last_seen_at": "2026-06-03T09:45:40.846747+00:00",
       "attempts": 1,
@@ -1127,7 +1268,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-05-01",
       "score": 4,
-      "matched": ["exercise"],
+      "matched": [
+        "exercise"
+      ],
       "created_at": "2026-06-03T09:45:46.848531+00:00",
       "last_seen_at": "2026-06-03T09:45:46.848547+00:00",
       "attempts": 0,
@@ -1144,7 +1287,10 @@
       "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-05-01",
       "score": 7,
-      "matched": ["weight loss", "remission"],
+      "matched": [
+        "weight loss",
+        "remission"
+      ],
       "created_at": "2026-06-03T09:45:46.848596+00:00",
       "last_seen_at": "2026-06-03T09:45:46.848600+00:00",
       "attempts": 1,
@@ -1161,7 +1307,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-02",
       "score": 3,
-      "matched": ["diet"],
+      "matched": [
+        "diet"
+      ],
       "created_at": "2026-06-03T09:45:52.469329+00:00",
       "last_seen_at": "2026-06-03T09:45:52.469344+00:00",
       "attempts": 0,
@@ -1178,7 +1326,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-01",
       "score": 3,
-      "matched": ["nutrition"],
+      "matched": [
+        "nutrition"
+      ],
       "created_at": "2026-06-03T09:45:52.469359+00:00",
       "last_seen_at": "2026-06-03T09:45:52.469361+00:00",
       "attempts": 0,
@@ -1212,7 +1362,10 @@
       "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-05-22",
       "score": 10,
-      "matched": ["lifestyle intervention", "weight loss"],
+      "matched": [
+        "lifestyle intervention",
+        "weight loss"
+      ],
       "created_at": "2026-06-03T09:45:52.469422+00:00",
       "last_seen_at": "2026-06-03T09:45:52.469424+00:00",
       "attempts": 1,
@@ -1229,7 +1382,10 @@
       "evidence": "Europe PMC abstract + open-access full-text link",
       "published_at": "2026-05-13",
       "score": 7,
-      "matched": ["weight loss", "diet"],
+      "matched": [
+        "weight loss",
+        "diet"
+      ],
       "created_at": "2026-06-03T09:45:58.355497+00:00",
       "last_seen_at": "2026-06-03T09:45:58.355511+00:00",
       "attempts": 1,
@@ -1263,7 +1419,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-02",
       "score": 3,
-      "matched": ["diet"],
+      "matched": [
+        "diet"
+      ],
       "created_at": "2026-06-03T09:46:04.818747+00:00",
       "last_seen_at": "2026-06-03T09:46:04.818750+00:00",
       "attempts": 0,
@@ -1280,7 +1438,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-02",
       "score": 3,
-      "matched": ["diet"],
+      "matched": [
+        "diet"
+      ],
       "created_at": "2026-06-03T09:46:04.818796+00:00",
       "last_seen_at": "2026-06-03T09:46:04.818798+00:00",
       "attempts": 0,
@@ -1314,7 +1474,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-05-28",
       "score": 4,
-      "matched": ["metabolic syndrome"],
+      "matched": [
+        "metabolic syndrome"
+      ],
       "created_at": "2026-06-03T09:46:04.818883+00:00",
       "last_seen_at": "2026-06-03T09:46:04.818886+00:00",
       "attempts": 0,
@@ -1348,7 +1510,10 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-02",
       "score": 8,
-      "matched": ["weight loss", "exercise"],
+      "matched": [
+        "weight loss",
+        "exercise"
+      ],
       "created_at": "2026-06-03T09:46:04.818931+00:00",
       "last_seen_at": "2026-06-03T09:46:04.818933+00:00",
       "attempts": 0,
@@ -1365,7 +1530,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-02",
       "score": 3,
-      "matched": ["diet"],
+      "matched": [
+        "diet"
+      ],
       "created_at": "2026-06-03T09:46:04.818944+00:00",
       "last_seen_at": "2026-06-03T09:46:04.818946+00:00",
       "attempts": 0,
@@ -1382,7 +1549,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-05-28",
       "score": 4,
-      "matched": ["weight loss"],
+      "matched": [
+        "weight loss"
+      ],
       "created_at": "2026-06-03T09:46:04.819062+00:00",
       "last_seen_at": "2026-06-03T09:46:04.819064+00:00",
       "attempts": 0,
@@ -1399,7 +1568,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-05-27",
       "score": 1,
-      "matched": ["physical activity"],
+      "matched": [
+        "physical activity"
+      ],
       "created_at": "2026-06-03T09:46:04.819212+00:00",
       "last_seen_at": "2026-06-03T09:46:04.819217+00:00",
       "attempts": 0,
@@ -1416,7 +1587,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-01",
       "score": 3,
-      "matched": ["sleep"],
+      "matched": [
+        "sleep"
+      ],
       "created_at": "2026-06-03T09:46:04.819243+00:00",
       "last_seen_at": "2026-06-03T09:46:04.819246+00:00",
       "attempts": 0,
@@ -1560,7 +1733,10 @@
       "evidence": "PubMed abstract + open-access full-text link",
       "published_at": "2026-05-26",
       "score": 8,
-      "matched": ["exercise", "physical activity"],
+      "matched": [
+        "exercise",
+        "physical activity"
+      ],
       "created_at": "2026-06-03T09:46:16.433711+00:00",
       "last_seen_at": "2026-06-03T09:46:16.433727+00:00",
       "attempts": 1,
@@ -1577,7 +1753,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-05-26",
       "score": 3,
-      "matched": ["diet"],
+      "matched": [
+        "diet"
+      ],
       "created_at": "2026-06-03T09:46:23.078418+00:00",
       "last_seen_at": "2026-06-03T09:46:23.078434+00:00",
       "attempts": 0,
@@ -1594,7 +1772,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-05-19",
       "score": 4,
-      "matched": ["weight loss"],
+      "matched": [
+        "weight loss"
+      ],
       "created_at": "2026-06-03T09:46:23.078452+00:00",
       "last_seen_at": "2026-06-03T09:46:23.078455+00:00",
       "attempts": 0,
@@ -1611,7 +1791,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-01",
       "score": 3,
-      "matched": ["nutrition"],
+      "matched": [
+        "nutrition"
+      ],
       "created_at": "2026-06-03T09:46:23.078469+00:00",
       "last_seen_at": "2026-06-03T09:46:23.078471+00:00",
       "attempts": 0,
@@ -1696,7 +1878,10 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-02",
       "score": 7,
-      "matched": ["weight loss", "diet"],
+      "matched": [
+        "weight loss",
+        "diet"
+      ],
       "created_at": "2026-06-03T09:46:23.078769+00:00",
       "last_seen_at": "2026-06-03T09:46:23.078771+00:00",
       "attempts": 1,
@@ -1730,7 +1915,10 @@
       "evidence": "Europe PMC abstract + open-access full-text link",
       "published_at": "2026-06-01",
       "score": 7,
-      "matched": ["weight loss", "diet"],
+      "matched": [
+        "weight loss",
+        "diet"
+      ],
       "created_at": "2026-06-03T09:46:30.390012+00:00",
       "last_seen_at": "2026-06-03T09:46:30.390014+00:00",
       "attempts": 1,
@@ -1747,7 +1935,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-01",
       "score": 3,
-      "matched": ["nutrition"],
+      "matched": [
+        "nutrition"
+      ],
       "created_at": "2026-06-03T09:46:35.478681+00:00",
       "last_seen_at": "2026-06-03T09:46:35.478697+00:00",
       "attempts": 0,
@@ -1764,7 +1954,9 @@
       "evidence": "PubMed abstract",
       "published_at": "2026-06-01",
       "score": 3,
-      "matched": ["diet"],
+      "matched": [
+        "diet"
+      ],
       "created_at": "2026-06-03T09:46:35.478752+00:00",
       "last_seen_at": "2026-06-03T09:46:35.478754+00:00",
       "attempts": 0,
@@ -2272,7 +2464,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-14T17:53:10.421450+00:00",
+      "last_seen_at": "2026-06-15T20:01:13.396486+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -2513,6 +2705,46 @@
       "attempts": 1,
       "generated": true,
       "path": "packages/cms/src/collections/blog/content/association-between-cvai-defined-body-composition-phenotypes-and-prediab-efad01c7/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "5185e28a43750b06": {
+      "title": "Association of prediabetes phenotypes with metabolic dysfunction-associated fatty liver disease and liver fibrosis: a population-based study.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Therapeutic advances in endocrinology and metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42290708/",
+      "pmid": "42290708",
+      "pmcid": "PMC13261032",
+      "doi": "10.1177/20420188261457476",
+      "oa_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13261032/?tool=EBI",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 63,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "diet",
+        "exercise",
+        "physical activity",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-06-15T20:00:34.150701+00:00",
+      "last_seen_at": "2026-06-15T20:00:34.150727+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/association-of-prediabetes-phenotypes-with-metabolic-dysfunction-associa-5185e28a/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
