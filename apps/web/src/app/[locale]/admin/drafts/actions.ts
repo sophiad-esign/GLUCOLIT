@@ -27,6 +27,11 @@ type RevisedArticle = {
   titleZh?: string;
 };
 
+type QualityEvaluation = {
+  issues: string[];
+  ready: boolean;
+};
+
 const envValue = (name: string) => process.env[name];
 
 const redirectWithError = (message: string): never => {
@@ -222,11 +227,31 @@ const cleanMarkdown = (value: string) =>
 
 const frontmatterWithoutQualityIssues = (frontmatter: string) =>
   frontmatter
-    .replace(/^reviewRequired:\s*true\s*$/m, "reviewRequired: false")
-    .replace(/^qualityStatus:\s*needs_revision\s*$/m, "qualityStatus: ready")
-    .replace(/^qualityStatus:\s*draft\s*$/m, "qualityStatus: ready")
+    .replace(/^reviewRequired:\s*(true|false)\s*$/m, "")
+    .replace(/^qualityStatus:\s*.*$/m, "")
     .replace(/^qualityIssues:\s*\[[^\n]*\]\r?\n?/m, "")
     .replace(/^qualityIssues:\s*\r?\n(?:\s+-\s+.*\r?\n?)+/m, "");
+
+const yamlStringList = (items: string[]) =>
+  `[${items.map((item) => JSON.stringify(item)).join(", ")}]`;
+
+const withQualityFrontmatter = (
+  frontmatter: string,
+  evaluation: QualityEvaluation,
+) => {
+  const base = frontmatterWithoutQualityIssues(frontmatter).trimEnd();
+
+  return [
+    base,
+    `reviewRequired: ${evaluation.ready ? "false" : "true"}`,
+    `qualityStatus: ${evaluation.ready ? "ready" : "needs_revision"}`,
+    evaluation.issues.length > 0
+      ? `qualityIssues: ${yamlStringList(evaluation.issues)}`
+      : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+};
 
 const replaceFrontmatterValue = (
   frontmatter: string,
@@ -241,7 +266,122 @@ const replaceFrontmatterValue = (
     : `${frontmatter.trimEnd()}\n${line}`;
 };
 
-const buildSopRevisionPrompt = (raw: string) => {
+const countCjk = (value: string) =>
+  (value.match(/[\u3400-\u9fff]/g) ?? []).length;
+
+const countEnglishWords = (value: string) =>
+  (value.match(/\b[A-Za-z][A-Za-z'-]*\b/g) ?? []).length;
+
+const sectionBetweenHeadings = (
+  content: string,
+  heading: string,
+  nextHeadings: string[],
+) =>
+  sectionText(content, heading, nextHeadings)
+    .replace(/^#+\s+/gm, "")
+    .trim();
+
+const evaluateRevisedArticle = (revised: RevisedArticle): QualityEvaluation => {
+  const bodyZh = cleanMarkdown(revised.bodyZh ?? "");
+  const bodyEn = cleanMarkdown(revised.bodyEn ?? "");
+  const issues: string[] = [];
+  const headings = [
+    "### 研究背景",
+    "### 核心发现",
+    "### 你的解读与批判",
+    "### 临床/商业启发",
+  ];
+
+  headings.forEach((heading) => {
+    if (!bodyZh.includes(heading)) {
+      issues.push(
+        `Missing required section: ${heading.replace(/^###\s*/, "")}`,
+      );
+    }
+  });
+
+  const background = sectionBetweenHeadings(bodyZh, "### 研究背景", [
+    "### 核心发现",
+    "### 你的解读与批判",
+    "### 临床/商业启发",
+  ]);
+  const finding = sectionBetweenHeadings(bodyZh, "### 核心发现", [
+    "### 你的解读与批判",
+    "### 临床/商业启发",
+  ]);
+  const critique = sectionBetweenHeadings(bodyZh, "### 你的解读与批判", [
+    "### 临床/商业启发",
+  ]);
+  const insight = sectionBetweenHeadings(bodyZh, "### 临床/商业启发", []);
+
+  if (countCjk(bodyZh) < 1400) {
+    issues.push(
+      "Chinese SOP article is too short; it needs at least 1400 Chinese characters.",
+    );
+  }
+  if (countCjk(background) < 80) {
+    issues.push("Research background is too short.");
+  }
+  if (countCjk(finding) < 120) {
+    issues.push("Core findings are too short or too vague.");
+  }
+  if (countCjk(critique) < 650) {
+    issues.push("Interpretation and critique section is too short.");
+  }
+  if (countCjk(insight) < 350) {
+    issues.push("Clinical/business insight section is too short.");
+  }
+  if (!/A[.、．：:]\s*给糖前读者/.test(insight)) {
+    issues.push("Clinical action subsection A is missing.");
+  }
+  if (!/B[.、．：:]\s*给健康科技行业/.test(insight)) {
+    issues.push("Business insight subsection B is missing.");
+  }
+  if (
+    /Original title:|Authors:|Journal\/source:|PubMed\/source link:|Evidence used:/i.test(
+      bodyZh,
+    )
+  ) {
+    issues.push("Metadata is still mixed into the Chinese article body.");
+  }
+  if (/^[-*]\s*$/m.test(bodyZh)) {
+    issues.push("Article contains empty bullet points.");
+  }
+  if (/治愈|保证逆转|必然逆转|替代医生/.test(bodyZh)) {
+    issues.push("Article contains overclaimed medical language.");
+  }
+  const englishWords = countEnglishWords(bodyEn);
+  if (englishWords < 80) {
+    issues.push("English plain-language version is too short.");
+  }
+  if (englishWords > 240) {
+    issues.push("English plain-language version is too long.");
+  }
+
+  return {
+    issues,
+    ready: issues.length === 0,
+  };
+};
+
+const evaluateRawDraft = (raw: string): QualityEvaluation => {
+  const bodyZh = sectionText(raw, "## 原文精华摘要", [
+    "## English Plain-Language Version",
+    "## Source",
+    "## Research Primer",
+  ]);
+  const bodyEn = sectionText(raw, "## English Plain-Language Version", [
+    "## Source",
+    "## Research Primer",
+  ]);
+
+  return evaluateRevisedArticle({ bodyEn, bodyZh });
+};
+
+const revisionScore = (article: RevisedArticle) =>
+  countCjk(article.bodyZh ?? "") + countEnglishWords(article.bodyEn ?? "") * 2;
+
+const buildSopRevisionPrompt = (raw: string, qualityFeedback?: string[]) => {
   const existingBody = stripFrontmatter(raw).slice(0, 12000);
   const originalTitle =
     metadataLine(raw, "Original title") || frontmatterValue(raw, "title");
@@ -266,6 +406,8 @@ const buildSopRevisionPrompt = (raw: string) => {
   return `
 Rewrite this GLUCOLIT draft into a publishable review draft. The current draft is too thin and still looks like metadata plus translation.
 
+${qualityFeedback?.length ? `The previous attempt failed these quality checks. Fix every item:\n- ${qualityFeedback.join("\n- ")}\n` : ""}
+
 Hard rules:
 - Use only the supplied source metadata, abstract/commentary fragments, DOI/PubMed links, and existing draft text. Do not invent sample sizes, statistics, populations, interventions, or outcomes that are not present.
 - Do not scrape or imply access to paywalled full text.
@@ -273,6 +415,8 @@ Hard rules:
 - Chinese article should read like a helpful medical science column, not like a peer reviewer. Avoid repeated openings such as "这项研究", "这篇论文", "研究者发现".
 - Paragraphs must be short. Each paragraph should be at most 5 visual lines on mobile, usually 80-140 Chinese characters. No giant blocks. No empty bullets.
 - Keep uncertainty and causality boundaries clear. Do not say cure, reverse, guaranteed, or personalized treatment unless the evidence actually supports it.
+- The final Chinese article must be long enough to publish: at least 1400 Chinese characters across the required sections.
+- If the source does not provide exact numbers, explicitly say the source does not provide enough detail instead of inventing data.
 
 Required Chinese body structure:
 ### 研究背景
@@ -332,7 +476,7 @@ const llmConfig = (): LlmConfig | null => {
     return {
       apiKey: kimiKey,
       baseUrl: envValue("KIMI_BASE_URL") || "https://api.moonshot.ai/v1",
-      model: envValue("KIMI_MODEL") || "moonshot-v1-8k",
+      model: envValue("KIMI_MODEL") || "moonshot-v1-32k",
       provider: "Kimi",
     };
   }
@@ -363,7 +507,10 @@ const requireLlmConfig = (): LlmConfig => {
   return config;
 };
 
-const reviseWithLlm = async (raw: string): Promise<RevisedArticle> => {
+const reviseWithLlm = async (
+  raw: string,
+  qualityFeedback?: string[],
+): Promise<RevisedArticle> => {
   const config = requireLlmConfig();
 
   const response = await fetch(`${config.baseUrl}/chat/completions`, {
@@ -376,9 +523,10 @@ const reviseWithLlm = async (raw: string): Promise<RevisedArticle> => {
       model: config.model,
       messages: [
         { role: "system", content: REVISION_SYSTEM_PROMPT },
-        { role: "user", content: buildSopRevisionPrompt(raw) },
+        { role: "user", content: buildSopRevisionPrompt(raw, qualityFeedback) },
       ],
       response_format: { type: "json_object" },
+      temperature: 0.35,
       max_tokens: 7600,
     }),
   });
@@ -439,7 +587,11 @@ const buildResearchPrimer = (raw: string) => {
   return rows.map(([label, value]) => `- ${label}: ${value}`).join("\n");
 };
 
-const buildRevisedMdx = (raw: string, revised: RevisedArticle) => {
+const buildRevisedMdx = (
+  raw: string,
+  revised: RevisedArticle,
+  evaluation: QualityEvaluation,
+) => {
   const frontmatterMatch = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   const matchedFrontmatter = frontmatterMatch?.[1];
 
@@ -448,7 +600,7 @@ const buildRevisedMdx = (raw: string, revised: RevisedArticle) => {
     throw new Error("Draft frontmatter is missing.");
   }
 
-  let frontmatter = frontmatterWithoutQualityIssues(matchedFrontmatter);
+  let frontmatter = withQualityFrontmatter(matchedFrontmatter, evaluation);
   if (revised.titleZh && revised.titleEn) {
     frontmatter = replaceFrontmatterValue(
       frontmatter,
@@ -511,8 +663,28 @@ export async function reviseDraftWithSopAction(formData: FormData) {
     redirectWithError("Only draft articles can be revised.");
   }
 
-  const revised = await reviseWithLlm(current.raw);
-  const updated = buildRevisedMdx(current.raw, revised);
+  const firstRevision = await reviseWithLlm(current.raw);
+  const firstEvaluation = evaluateRevisedArticle(firstRevision);
+  let revised = firstRevision;
+  let evaluation = firstEvaluation;
+
+  if (!firstEvaluation.ready) {
+    const secondRevision = await reviseWithLlm(
+      current.raw,
+      firstEvaluation.issues,
+    );
+    const secondEvaluation = evaluateRevisedArticle(secondRevision);
+
+    if (
+      secondEvaluation.ready ||
+      revisionScore(secondRevision) >= revisionScore(firstRevision)
+    ) {
+      revised = secondRevision;
+      evaluation = secondEvaluation;
+    }
+  }
+
+  const updated = buildRevisedMdx(current.raw, revised, evaluation);
 
   await writeGithubFile({
     apiUrl: current.apiUrl,
@@ -524,6 +696,12 @@ export async function reviseDraftWithSopAction(formData: FormData) {
   });
 
   await triggerPublishWorkflow(token);
+
+  if (!evaluation.ready) {
+    redirect(
+      `${pathsConfig.admin.drafts.index}?revisionWarning=${encodeURIComponent(slug)}&issues=${encodeURIComponent(evaluation.issues.join("; "))}`,
+    );
+  }
 
   redirect(
     `${pathsConfig.admin.drafts.index}?revised=${encodeURIComponent(slug)}`,
@@ -548,13 +726,21 @@ export async function publishDraftAction(formData: FormData) {
 
   if (/^reviewRequired:\s*true\s*$/m.test(raw)) {
     redirectWithError(
-      "This draft still needs SOP revision. Edit it in GitHub, set reviewRequired: false and qualityStatus: ready, then publish.",
+      "This draft still needs SOP revision. Please run SOP revision again or edit the draft before publishing.",
     );
   }
 
   if (/^qualityStatus:\s*needs_revision\s*$/m.test(raw)) {
     redirectWithError(
       "This draft is marked needs_revision. Finish the SOP rewrite before publishing.",
+    );
+  }
+
+  const quality = evaluateRawDraft(raw);
+
+  if (!quality.ready) {
+    redirectWithError(
+      `This draft still fails the SOP quality gate: ${quality.issues.join("; ")}`,
     );
   }
 

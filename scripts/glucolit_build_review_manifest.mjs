@@ -132,6 +132,109 @@ const firstParagraph = (text, fallback) =>
       .find(Boolean) || fallback,
   );
 
+const countCjk = (value) => (value.match(/[\u3400-\u9fff]/g) ?? []).length;
+
+const countEnglishWords = (value) =>
+  (value.match(/\b[A-Za-z][A-Za-z'-]*\b/g) ?? []).length;
+
+const sectionBetweenHeadings = (content, heading, nextHeadings = []) => {
+  const start = content.indexOf(heading);
+
+  if (start < 0) {
+    return "";
+  }
+
+  const after = content.slice(start + heading.length);
+  const nextIndexes = nextHeadings
+    .map((next) => after.indexOf(next))
+    .filter((index) => index >= 0);
+  const end = nextIndexes.length > 0 ? Math.min(...nextIndexes) : after.length;
+
+  return after
+    .slice(0, end)
+    .replace(/^#+\s+.+$/gm, "")
+    .trim();
+};
+
+const evaluateSopQuality = (bodyZh, bodyEn) => {
+  const issues = [];
+  const requiredHeadings = [
+    "### 研究背景",
+    "### 核心发现",
+    "### 你的解读与批判",
+    "### 临床/商业启发",
+  ];
+
+  requiredHeadings.forEach((heading) => {
+    if (!bodyZh.includes(heading)) {
+      issues.push(
+        `Missing required section: ${heading.replace(/^###\s*/, "")}`,
+      );
+    }
+  });
+
+  const background = sectionBetweenHeadings(bodyZh, "### 研究背景", [
+    "### 核心发现",
+    "### 你的解读与批判",
+    "### 临床/商业启发",
+  ]);
+  const finding = sectionBetweenHeadings(bodyZh, "### 核心发现", [
+    "### 你的解读与批判",
+    "### 临床/商业启发",
+  ]);
+  const critique = sectionBetweenHeadings(bodyZh, "### 你的解读与批判", [
+    "### 临床/商业启发",
+  ]);
+  const insight = sectionBetweenHeadings(bodyZh, "### 临床/商业启发");
+
+  if (countCjk(bodyZh) < 1400) {
+    issues.push(
+      "Chinese SOP article is too short; it needs at least 1400 Chinese characters.",
+    );
+  }
+  if (countCjk(background) < 80) {
+    issues.push("Research background is too short.");
+  }
+  if (countCjk(finding) < 120) {
+    issues.push("Core findings are too short or too vague.");
+  }
+  if (countCjk(critique) < 650) {
+    issues.push("Chinese interpretation and critique section is short.");
+  }
+  if (countCjk(insight) < 350) {
+    issues.push("Chinese clinical/business insight section is short.");
+  }
+  if (!/A[.、：:]\s*给糖前读者/.test(insight)) {
+    issues.push("Clinical action subsection A is missing.");
+  }
+  if (!/B[.、：:]\s*给健康科技行业/.test(insight)) {
+    issues.push("Business insight subsection B is missing.");
+  }
+  if (
+    /Original title:|Authors:|Journal\/source:|PubMed\/source link:|Evidence used:/i.test(
+      bodyZh,
+    )
+  ) {
+    issues.push("Metadata is still mixed into the Chinese article body.");
+  }
+  if (/^[-*]\s*$/m.test(bodyZh)) {
+    issues.push("Article contains empty bullet points.");
+  }
+  if (/治愈|保证逆转|必然逆转|替代医生/.test(bodyZh)) {
+    issues.push("Article contains overclaimed medical language.");
+  }
+
+  const englishWords = countEnglishWords(bodyEn);
+  if (englishWords < 80) {
+    issues.push("English plain-language version is too short.");
+  }
+  if (englishWords > 240) {
+    issues.push("English plain-language version is too long.");
+  }
+
+  return issues;
+};
+
 const metadataLine = (content, label) =>
   content.match(new RegExp(`^- ${label}:\\s*(.+)$`, "im"))?.[1]?.trim();
 
@@ -214,6 +317,14 @@ const readArticle = (slug) => {
     frontmatterValue(frontmatter, "publishedAt") || todayIso(),
   );
   const textForLabels = `${title} ${description} ${bodyZh} ${bodyEn}`;
+  const qualityIssues = Array.from(
+    new Set([
+      ...frontmatterArray(frontmatter, "qualityIssues"),
+      ...evaluateSopQuality(bodyZh, bodyEn),
+    ]),
+  );
+  const reviewRequired =
+    frontmatterBool(frontmatter, "reviewRequired") || qualityIssues.length > 0;
 
   return {
     slug,
@@ -235,9 +346,11 @@ const readArticle = (slug) => {
     publishedAt,
     publishedAtLabel: publishedAt,
     draft: frontmatterBool(frontmatter, "draft"),
-    reviewRequired: frontmatterBool(frontmatter, "reviewRequired"),
-    qualityStatus: frontmatterValue(frontmatter, "qualityStatus") || "ready",
-    qualityIssues: frontmatterArray(frontmatter, "qualityIssues"),
+    reviewRequired,
+    qualityStatus: reviewRequired
+      ? "needs_revision"
+      : frontmatterValue(frontmatter, "qualityStatus") || "ready",
+    qualityIssues,
     contentPath: `packages/cms/src/collections/blog/content/${slug}/en.mdx`,
     tags,
     categoryLabels: inferCategoryLabels(textForLabels, tags),

@@ -181,6 +181,51 @@ const firstParagraph = (body: string, fallback: string) =>
     .map((part) => part.trim())
     .find(Boolean) || fallback;
 
+const countCjk = (value: string) =>
+  (value.match(/[\u3400-\u9fff]/g) ?? []).length;
+
+const countEnglishWords = (value: string) =>
+  (value.match(/\b[A-Za-z][A-Za-z'-]*\b/g) ?? []).length;
+
+const evaluateSopQuality = (bodyZh: string, bodyEn: string) => {
+  const issues: string[] = [];
+  const requiredHeadings = [
+    "### 研究背景",
+    "### 核心发现",
+    "### 你的解读与批判",
+    "### 临床/商业启发",
+  ];
+
+  requiredHeadings.forEach((heading) => {
+    if (!bodyZh.includes(heading)) {
+      issues.push(
+        `Missing required section: ${heading.replace(/^###\s*/, "")}`,
+      );
+    }
+  });
+
+  if (countCjk(bodyZh) < 1400) {
+    issues.push(
+      "Chinese SOP article is too short; it needs at least 1400 Chinese characters.",
+    );
+  }
+  if (countEnglishWords(bodyEn) < 80) {
+    issues.push("English plain-language version is too short.");
+  }
+  if (
+    /Original title:|Authors:|Journal\/source:|PubMed\/source link:|Evidence used:/i.test(
+      bodyZh,
+    )
+  ) {
+    issues.push("Metadata is still mixed into the Chinese article body.");
+  }
+  if (/^[-*]\s*$/m.test(bodyZh)) {
+    issues.push("Article contains empty bullet points.");
+  }
+
+  return issues;
+};
+
 const firstMetadataLink = (content: string, labels: string[]) => {
   for (const label of labels) {
     const value = metadataLine(content, label);
@@ -258,6 +303,14 @@ const readLiveArticle = (slug: string, raw: string): ReviewRecord | null => {
   const publishedAt = clampFutureDate(
     frontmatterValue(frontmatter, "publishedAt") || todayIso(),
   );
+  const qualityIssues = Array.from(
+    new Set([
+      ...frontmatterArray(frontmatter, "qualityIssues"),
+      ...evaluateSopQuality(bodyZh, bodyEn),
+    ]),
+  );
+  const computedReviewRequired =
+    frontmatterBool(frontmatter, "reviewRequired") || qualityIssues.length > 0;
 
   return {
     slug,
@@ -280,9 +333,11 @@ const readLiveArticle = (slug: string, raw: string): ReviewRecord | null => {
     publishedAt,
     publishedAtLabel: publishedAt,
     draft: frontmatterBool(frontmatter, "draft"),
-    reviewRequired: frontmatterBool(frontmatter, "reviewRequired"),
-    qualityStatus: frontmatterValue(frontmatter, "qualityStatus") || "ready",
-    qualityIssues: frontmatterArray(frontmatter, "qualityIssues"),
+    reviewRequired: computedReviewRequired,
+    qualityStatus: computedReviewRequired
+      ? "needs_revision"
+      : frontmatterValue(frontmatter, "qualityStatus") || "ready",
+    qualityIssues,
     contentPath: `${CONTENT_ROOT}/${slug}/en.mdx`,
     tags,
     categoryLabels: categoryLabelsFromTags(tags),

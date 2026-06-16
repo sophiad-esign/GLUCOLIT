@@ -34,11 +34,14 @@ export default async function AdminDraftsPage({
 }: {
   searchParams: Promise<{
     error?: string;
+    issues?: string;
     published?: string;
     revised?: string;
+    revisionWarning?: string;
   }>;
 }) {
-  const { error, published, revised } = await searchParams;
+  const { error, issues, published, revised, revisionWarning } =
+    await searchParams;
   const drafts = (await getAdminReviewArticles()).filter(
     (article) => article.draft,
   );
@@ -92,8 +95,24 @@ export default async function AdminDraftsPage({
           <Icons.CheckCircle2 className="mt-1 size-4 flex-none" />
           <p>
             已按 SOP 提交深度修订：{revised}。GitHub main 更新后，Vercel
-            会自动重新部署， 稍等几十秒后这篇会变成可发布候选。
+            会自动重新部署。系统会重新检查这篇是否满足发布质量门槛。
           </p>
+        </div>
+      ) : null}
+
+      {revisionWarning ? (
+        <div className="flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-950 dark:border-amber-900/60 dark:bg-amber-950/30 dark:text-amber-100">
+          <Icons.AlertTriangle className="mt-1 size-4 flex-none" />
+          <div>
+            <p className="font-semibold">
+              SOP 修订已保存，但这篇仍未达到发布标准：{revisionWarning}
+            </p>
+            {issues ? (
+              <p className="mt-1 text-amber-900 dark:text-amber-100/80">
+                {issues}
+              </p>
+            ) : null}
+          </div>
         </div>
       ) : null}
 
