@@ -165,19 +165,47 @@ const writeGithubFile = async ({
   message: string;
   sha: string;
 }) => {
-  const updateResponse = await fetch(apiUrl, {
-    method: "PUT",
-    headers: {
-      ...headers,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      message,
-      content: encodeBase64(content),
-      sha,
-      branch,
-    }),
-  });
+  const putFile = (fileSha: string) =>
+    fetch(apiUrl, {
+      method: "PUT",
+      headers: {
+        ...headers,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message,
+        content: encodeBase64(content),
+        sha: fileSha,
+        branch,
+      }),
+    });
+
+  let updateResponse = await putFile(sha);
+
+  if (updateResponse.status === 409) {
+    const latestResponse = await fetch(`${apiUrl}?ref=${branch}`, {
+      headers,
+      cache: "no-store",
+    });
+
+    if (!latestResponse.ok) {
+      const details = await latestResponse.text();
+      redirectWithError(
+        `GitHub file changed during write, and the latest file could not be reloaded: ${latestResponse.status} ${details}`,
+      );
+    }
+
+    const latest = (await latestResponse.json()) as { sha?: string };
+    const latestSha = latest.sha ?? "";
+
+    if (!latestSha) {
+      redirectWithError(
+        "GitHub file changed during write, and GitHub returned no latest file SHA.",
+      );
+    }
+
+    updateResponse = await putFile(latestSha);
+  }
 
   if (!updateResponse.ok) {
     const details = await updateResponse.text();
