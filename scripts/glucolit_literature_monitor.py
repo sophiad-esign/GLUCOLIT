@@ -314,6 +314,15 @@ def pubmed_url(path: str, params: dict[str, str]) -> str:
     )
 
 
+def clamp_future_date(value: str) -> str:
+    today = dt.date.today()
+    try:
+        parsed = dt.date.fromisoformat((value or "")[:10])
+    except ValueError:
+        return today.isoformat()
+    return min(parsed, today).isoformat()
+
+
 def parse_pubmed_date(article: ET.Element) -> str:
     year = article.findtext(".//PubDate/Year", default="")
     medline = article.findtext(".//PubDate/MedlineDate", default="")
@@ -338,7 +347,9 @@ def parse_pubmed_date(article: ET.Element) -> str:
             "Dec": 12,
         }.get(month[:3], 1)
     )
-    return f"{year or dt.date.today().year}-{int(month_number):02d}-{int(day):02d}"
+    return clamp_future_date(
+        f"{year or dt.date.today().year}-{int(month_number):02d}-{int(day):02d}"
+    )
 
 
 def normalize_doi(value: str) -> str:
@@ -1330,6 +1341,7 @@ def article_to_mdx(
     quality_issues: list[str] | None = None,
 ) -> str:
     article = normalize_article(article)
+    published_at = clamp_future_date(paper.published_at)
     title = f"{article['title_zh']} / {article['title_en']}"
     description = f"{article['description_zh']} {article['description_en']}"
     doi_line = f"- DOI: [{paper.doi}](https://doi.org/{paper.doi})\n" if paper.doi else ""
@@ -1346,7 +1358,7 @@ def article_to_mdx(
         "---",
         f'title: "{md_escape(title[:180])}"',
         f'description: "{md_escape(description[:260])}"',
-        f"publishedAt: {paper.published_at}",
+        f"publishedAt: {published_at}",
         f'tags: {yaml_list(["medical-research", "prediabetes", "lifestyle"])}',
         f"thumbnail: {thumbnail_for_paper(paper)}",
         f"status: {status}",
@@ -1413,7 +1425,7 @@ def article_to_mdx(
             doi_line.rstrip(),
             pmcid_line.rstrip(),
             oa_line.rstrip(),
-            f"- Published or indexed date: {paper.published_at}",
+            f"- Published or indexed date: {published_at}",
             "",
             "如需阅读原文，请点击链接获取完整内容。",
             "",

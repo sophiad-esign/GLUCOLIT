@@ -40,6 +40,18 @@ const tagLabels = {
 
 const sourceFallback = "国际医学期刊";
 
+const todayIso = () => new Date().toISOString().slice(0, 10);
+
+const clampFutureDate = (value) => {
+  const date = (value || "").slice(0, 10);
+
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    return todayIso();
+  }
+
+  return date > todayIso() ? todayIso() : date;
+};
+
 const frontmatterValue = (frontmatter, key) =>
   (frontmatter.match(new RegExp(`^${key}:\\s*(.+)$`, "m"))?.[1] || "")
     .trim()
@@ -198,8 +210,9 @@ const readArticle = (slug) => {
     ["## English Plain-Language Version", "## Plain-English Version"],
     ["## Source", "## 原文与文件"],
   );
-  const publishedAt =
-    frontmatterValue(frontmatter, "publishedAt") || new Date().toISOString();
+  const publishedAt = clampFutureDate(
+    frontmatterValue(frontmatter, "publishedAt") || todayIso(),
+  );
   const textForLabels = `${title} ${description} ${bodyZh} ${bodyEn}`;
 
   return {
@@ -220,7 +233,7 @@ const readArticle = (slug) => {
       "DOI",
     ]),
     publishedAt,
-    publishedAtLabel: publishedAt.slice(0, 10),
+    publishedAtLabel: publishedAt,
     draft: frontmatterBool(frontmatter, "draft"),
     reviewRequired: frontmatterBool(frontmatter, "reviewRequired"),
     qualityStatus: frontmatterValue(frontmatter, "qualityStatus") || "ready",

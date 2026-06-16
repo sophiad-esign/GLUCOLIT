@@ -12,7 +12,7 @@ import { Icons } from "@workspace/ui-web/icons";
 
 import { pathsConfig } from "~/config/paths";
 import { getMetadata } from "~/lib/metadata";
-import { getReviewArticlesFromFiles } from "~/modules/articles/review-files";
+import { getAdminReviewArticles } from "~/modules/articles/review-files";
 import { TurboLink } from "~/modules/common/turbo-link";
 
 import { publishDraftAction, reviseDraftWithSopAction } from "./actions";
@@ -27,6 +27,8 @@ export const generateMetadata = getMetadata({
   description: "审核并发布 GLUCOLIT RSS 自动生成的文章草稿。",
 });
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminDraftsPage({
   searchParams,
 }: {
@@ -37,7 +39,7 @@ export default async function AdminDraftsPage({
   }>;
 }) {
   const { error, published, revised } = await searchParams;
-  const drafts = getReviewArticlesFromFiles().filter(
+  const drafts = (await getAdminReviewArticles()).filter(
     (article) => article.draft,
   );
   const canPublish = Boolean(

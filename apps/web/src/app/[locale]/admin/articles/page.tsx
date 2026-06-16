@@ -20,7 +20,7 @@ import {
 
 import { pathsConfig } from "~/config/paths";
 import { getMetadata } from "~/lib/metadata";
-import { getReviewArticlesFromFiles } from "~/modules/articles/review-files";
+import { getAdminReviewArticles } from "~/modules/articles/review-files";
 import { TurboLink } from "~/modules/common/turbo-link";
 
 export const generateMetadata = getMetadata({
@@ -28,8 +28,10 @@ export const generateMetadata = getMetadata({
   description: "查看 GLUCOLIT RSS 自动生成的待审核文章草稿。",
 });
 
-export default function AdminArticlesPage() {
-  const articles = getReviewArticlesFromFiles();
+export const dynamic = "force-dynamic";
+
+export default async function AdminArticlesPage() {
+  const articles = await getAdminReviewArticles();
   const drafts = articles.filter((article) => article.draft);
   const published = articles.filter((article) => !article.draft);
   const latestDrafts = drafts.slice(0, 6);

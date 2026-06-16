@@ -15,7 +15,7 @@ import { Icons } from "@workspace/ui-web/icons";
 import { pathsConfig } from "~/config/paths";
 import { getMetadata } from "~/lib/metadata";
 import { readingBlocks } from "~/modules/articles/reading-blocks";
-import { getReviewArticleFromFileBySlug } from "~/modules/articles/review-files";
+import { getAdminReviewArticleBySlug } from "~/modules/articles/review-files";
 import { TurboLink } from "~/modules/common/turbo-link";
 
 import { publishDraftAction, reviseDraftWithSopAction } from "../actions";
@@ -51,13 +51,15 @@ export const generateMetadata = getMetadata({
   description: "阅读全文后再决定是否一键发布。",
 });
 
+export const dynamic = "force-dynamic";
+
 export default async function DraftPreviewPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = getReviewArticleFromFileBySlug(slug);
+  const article = await getAdminReviewArticleBySlug(slug);
 
   if (!article || !article.draft) {
     notFound();
