@@ -535,36 +535,97 @@ const requireLlmConfig = (): LlmConfig => {
   return config;
 };
 
+const sleep = (ms: number) =>
+  new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+
+const retryAfterMs = (response: Response, fallbackMs: number) => {
+  const retryAfter = response.headers.get("retry-after");
+
+  if (!retryAfter) {
+    return fallbackMs;
+  }
+
+  const seconds = Number(retryAfter);
+
+  if (Number.isFinite(seconds)) {
+    return Math.max(seconds * 1000, fallbackMs);
+  }
+
+  const retryAt = Date.parse(retryAfter);
+
+  if (Number.isFinite(retryAt)) {
+    return Math.max(retryAt - Date.now(), fallbackMs);
+  }
+
+  return fallbackMs;
+};
+
+const isRetryableLlmStatus = (status: number) =>
+  status === 408 ||
+  status === 409 ||
+  status === 425 ||
+  status === 429 ||
+  status >= 500;
+
+const fetchChatCompletionWithRetry = async (
+  config: LlmConfig,
+  body: unknown,
+): Promise<Response> => {
+  const retryDelays = [2000, 5000, 10000];
+  let lastStatus = 0;
+  let lastDetails = "";
+
+  for (let attempt = 0; attempt <= retryDelays.length; attempt += 1) {
+    const response = await fetch(`${config.baseUrl}/chat/completions`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${config.apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    });
+
+    if (response.ok) {
+      return response;
+    }
+
+    lastStatus = response.status;
+    lastDetails = await response.text();
+
+    if (
+      attempt === retryDelays.length ||
+      !isRetryableLlmStatus(response.status)
+    ) {
+      break;
+    }
+
+    await sleep(retryAfterMs(response, retryDelays[attempt] ?? 10000));
+  }
+
+  redirectWithError(
+    `${config.provider} SOP revision failed after retries: ${lastStatus} ${lastDetails.slice(0, 500)}`,
+  );
+  throw new Error("LLM revision failed after retries.");
+};
+
 const reviseWithLlm = async (
   raw: string,
   qualityFeedback?: string[],
 ): Promise<RevisedArticle> => {
   const config = requireLlmConfig();
 
-  const response = await fetch(`${config.baseUrl}/chat/completions`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${config.apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: config.model,
-      messages: [
-        { role: "system", content: REVISION_SYSTEM_PROMPT },
-        { role: "user", content: buildSopRevisionPrompt(raw, qualityFeedback) },
-      ],
-      response_format: { type: "json_object" },
-      temperature: 0.35,
-      max_tokens: 7600,
-    }),
+  const response = await fetchChatCompletionWithRetry(config, {
+    model: config.model,
+    messages: [
+      { role: "system", content: REVISION_SYSTEM_PROMPT },
+      { role: "user", content: buildSopRevisionPrompt(raw, qualityFeedback) },
+    ],
+    response_format: { type: "json_object" },
+    temperature: 0.35,
+    max_tokens: 7600,
   });
-
-  if (!response.ok) {
-    const details = await response.text();
-    redirectWithError(
-      `${config.provider} SOP revision failed: ${response.status} ${details.slice(0, 500)}`,
-    );
-  }
 
   const data = (await response.json()) as {
     choices?: { message?: { content?: string } }[];
