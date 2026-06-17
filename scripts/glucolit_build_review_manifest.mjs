@@ -118,6 +118,31 @@ const sectionBetweenAny = (content, starts, ends = []) => {
     .trim();
 };
 
+const sectionBetweenAnyWithHeadings = (content, starts, ends = []) => {
+  const matches = starts
+    .map((start) => ({ start, index: content.indexOf(start) }))
+    .filter(({ index }) => index !== -1)
+    .sort((a, b) => a.index - b.index);
+
+  if (!matches[0]) {
+    return "";
+  }
+
+  const bodyStart = matches[0].index;
+  const endIndex = ends
+    .map((end) => content.indexOf(end, bodyStart + matches[0].start.length))
+    .filter((index) => index !== -1)
+    .sort((a, b) => a - b)[0];
+
+  return (
+    typeof endIndex === "number"
+      ? content.slice(bodyStart, endIndex)
+      : content.slice(bodyStart)
+  )
+    .replace(/^>\s?.+$/gm, "")
+    .trim();
+};
+
 const cleanSummary = (text) =>
   text
     .replace(/\s+/g, " ")
@@ -156,7 +181,7 @@ const sectionBetweenHeadings = (content, heading, nextHeadings = []) => {
     .trim();
 };
 
-const evaluateSopQuality = (bodyZh, bodyEn) => {
+const _evaluateSopQuality = (bodyZh, bodyEn) => {
   const issues = [];
   const requiredHeadings = [
     "### 研究背景",
@@ -229,6 +254,98 @@ const evaluateSopQuality = (bodyZh, bodyEn) => {
     issues.push("English plain-language version is too short.");
   }
   if (englishWords > 240) {
+    issues.push("English plain-language version is too long.");
+  }
+
+  return issues;
+};
+
+const sectionByHeadingPattern = (content, labelPattern) => {
+  const heading = content.match(
+    new RegExp(`^#{2,4}\\s*.*(?:${labelPattern}).*$`, "m"),
+  );
+
+  if (!heading || typeof heading.index !== "number") {
+    return "";
+  }
+
+  const start = heading.index + heading[0].length;
+  const rest = content.slice(start);
+  const nextHeading = rest.match(/^#{2,4}\s+.+$/m);
+  const end = nextHeading?.index ?? rest.length;
+
+  return rest
+    .slice(0, end)
+    .replace(/^>\s?.+$/gm, "")
+    .trim();
+};
+
+const hasHeading = (content, labelPattern) =>
+  new RegExp(`^#{2,4}\\s*.*(?:${labelPattern}).*$`, "m").test(content);
+
+const evaluateSopQualityV2 = (bodyZh, bodyEn) => {
+  const issues = [];
+  const headingPatterns = {
+    background: "\\u7814\\u7a76\\u80cc\\u666f",
+    finding: "\\u6838\\u5fc3\\u53d1\\u73b0",
+    critique: "(?:\\u4f60\\u7684)?\\u89e3\\u8bfb\\u4e0e\\u6279\\u5224",
+    insight: "\\u4e34\\u5e8a\\s*[/／]\\s*\\u5546\\u4e1a",
+  };
+
+  [
+    ["Research background", headingPatterns.background],
+    ["Core findings", headingPatterns.finding],
+    ["Interpretation and critique", headingPatterns.critique],
+    ["Clinical/business insight", headingPatterns.insight],
+  ].forEach(([label, pattern]) => {
+    if (!hasHeading(bodyZh, pattern)) {
+      issues.push(`Missing required section: ${label}`);
+    }
+  });
+
+  const background = sectionByHeadingPattern(
+    bodyZh,
+    headingPatterns.background,
+  );
+  const finding = sectionByHeadingPattern(bodyZh, headingPatterns.finding);
+  const critique = sectionByHeadingPattern(bodyZh, headingPatterns.critique);
+  const insight = sectionByHeadingPattern(bodyZh, headingPatterns.insight);
+
+  if (countCjk(bodyZh) < 1800) {
+    issues.push(
+      "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
+    );
+  }
+  if (countCjk(background) < 80) {
+    issues.push("Research background is too short.");
+  }
+  if (countCjk(finding) < 120) {
+    issues.push("Core findings are too short or too vague.");
+  }
+  if (countCjk(critique) < 300) {
+    issues.push("Chinese interpretation and critique section is short.");
+  }
+  if (countCjk(insight) < 350) {
+    issues.push("Chinese clinical/business insight section is short.");
+  }
+  if (!/A[.、：:]\s*给糖前读者/.test(insight)) {
+    issues.push("Clinical action subsection A is missing.");
+  }
+  if (!/B[.、：:]\s*给健康科技行业/.test(insight)) {
+    issues.push("Business insight subsection B is missing.");
+  }
+  if (/^[-*]\s*$/m.test(bodyZh)) {
+    issues.push("Article contains empty bullet points.");
+  }
+  if (/治愈|保证逆转|必然逆转|替代医生/.test(bodyZh)) {
+    issues.push("Article contains overclaimed medical language.");
+  }
+
+  const englishWords = countEnglishWords(bodyEn);
+  if (englishWords < 80) {
+    issues.push("English plain-language version is too short.");
+  }
+  if (englishWords > 500) {
     issues.push("English plain-language version is too long.");
   }
 
@@ -313,6 +430,11 @@ const readArticle = (slug) => {
     ["## English Plain-Language Version", "## Plain-English Version"],
     ["## Source", "## 原文与文件"],
   );
+  const bodyZhForQuality = sectionBetweenAnyWithHeadings(
+    content,
+    ["## 原文精华摘要", "## 中文白话版", "## 中文白话全文"],
+    ["## English Plain-Language Version", "## Plain-English Version"],
+  );
   const publishedAt = clampFutureDate(
     frontmatterValue(frontmatter, "publishedAt") || todayIso(),
   );
@@ -320,7 +442,7 @@ const readArticle = (slug) => {
   const qualityIssues = Array.from(
     new Set([
       ...frontmatterArray(frontmatter, "qualityIssues"),
-      ...evaluateSopQuality(bodyZh, bodyEn),
+      ...evaluateSopQualityV2(bodyZhForQuality || bodyZh, bodyEn),
     ]),
   );
   const reviewRequired =
