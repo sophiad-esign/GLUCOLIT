@@ -342,9 +342,9 @@ const evaluateRevisedArticle = (revised: RevisedArticle): QualityEvaluation => {
   ]);
   const insight = sectionBetweenHeadings(bodyZh, "### 临床/商业启发", []);
 
-  if (countCjk(bodyZh) < 1400) {
+  if (countCjk(bodyZh) < 1800) {
     issues.push(
-      "Chinese SOP article is too short; it needs at least 1400 Chinese characters.",
+      "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
     );
   }
   if (countCjk(background) < 80) {
@@ -406,8 +406,36 @@ const evaluateRawDraft = (raw: string): QualityEvaluation => {
   return evaluateRevisedArticle({ bodyEn, bodyZh });
 };
 
-const revisionScore = (article: RevisedArticle) =>
-  countCjk(article.bodyZh ?? "") + countEnglishWords(article.bodyEn ?? "") * 2;
+const revisionScore = (
+  article: RevisedArticle,
+  evaluation?: QualityEvaluation,
+) =>
+  countCjk(article.bodyZh ?? "") +
+  countEnglishWords(article.bodyEn ?? "") * 2 -
+  (evaluation?.issues.length ?? 0) * 300;
+
+const buildRevisionAttemptRaw = (
+  originalRaw: string,
+  revised: RevisedArticle,
+  evaluation: QualityEvaluation,
+) =>
+  [
+    stripFrontmatter(originalRaw),
+    "",
+    "## Previous SOP revision attempt",
+    "",
+    "The previous attempt was saved but still failed the quality gate. Continue from it, expand it, and fix the listed issues. Do not restart with another short summary.",
+    "",
+    `Failed checks: ${evaluation.issues.join("; ")}`,
+    "",
+    "### Previous Chinese body",
+    "",
+    revised.bodyZh,
+    "",
+    "### Previous English body",
+    "",
+    revised.bodyEn,
+  ].join("\n");
 
 const buildSopRevisionPrompt = (raw: string, qualityFeedback?: string[]) => {
   const existingBody = stripFrontmatter(raw).slice(0, 12000);
@@ -434,7 +462,7 @@ const buildSopRevisionPrompt = (raw: string, qualityFeedback?: string[]) => {
   return `
 Rewrite this GLUCOLIT draft into a publishable review draft. The current draft is too thin and still looks like metadata plus translation.
 
-${qualityFeedback?.length ? `The previous attempt failed these quality checks. Fix every item:\n- ${qualityFeedback.join("\n- ")}\n` : ""}
+${qualityFeedback?.length ? `The previous attempt failed these quality checks. Fix every item before returning JSON:\n- ${qualityFeedback.join("\n- ")}\n` : ""}
 
 Hard rules:
 - Use only the supplied source metadata, abstract/commentary fragments, DOI/PubMed links, and existing draft text. Do not invent sample sizes, statistics, populations, interventions, or outcomes that are not present.
@@ -443,7 +471,8 @@ Hard rules:
 - Chinese article should read like a helpful medical science column, not like a peer reviewer. Avoid repeated openings such as "这项研究", "这篇论文", "研究者发现".
 - Paragraphs must be short. Each paragraph should be at most 5 visual lines on mobile, usually 80-140 Chinese characters. No giant blocks. No empty bullets.
 - Keep uncertainty and causality boundaries clear. Do not say cure, reverse, guaranteed, or personalized treatment unless the evidence actually supports it.
-- The final Chinese article must be long enough to publish: at least 1400 Chinese characters across the required sections.
+- The final Chinese article must be long enough to publish: at least 1800 Chinese characters across the required sections. If your answer is shorter, it is a failed answer.
+- The output must look materially different from the input draft. Expand the analysis, split paragraphs, and add source-bounded explanation.
 - If the source does not provide exact numbers, explicitly say the source does not provide enough detail instead of inventing data.
 
 Required Chinese body structure:
@@ -451,13 +480,13 @@ Required Chinese body structure:
 100-180 Chinese characters. Start from the reader's real-life problem.
 
 ### 核心发现
-Within 300 Chinese characters. Summarize only the strongest source-bounded finding.
+300-450 Chinese characters. Summarize only the strongest source-bounded finding. Explain what the finding means in daily language.
 
 ### 你的解读与批判
-At least 900 Chinese characters. Explain meaning, limits, what ordinary readers should not overclaim, and where the evidence is weak.
+At least 900 Chinese characters. Explain meaning, limits, what ordinary readers should not overclaim, and where the evidence is weak. This section must be the deepest part of the article.
 
 ### 临床/商业启发
-At least 450 Chinese characters. Include:
+At least 550 Chinese characters. Include:
 A. 给糖前读者的行动建议
 B. 给健康科技行业的启发
 
@@ -752,24 +781,23 @@ export async function reviseDraftWithSopAction(formData: FormData) {
     redirectWithError("Only draft articles can be revised.");
   }
 
-  const firstRevision = await reviseWithLlm(current.raw);
-  const firstEvaluation = evaluateRevisedArticle(firstRevision);
-  let revised = firstRevision;
-  let evaluation = firstEvaluation;
+  let attemptRaw = current.raw;
+  let revised = await reviseWithLlm(attemptRaw);
+  let evaluation = evaluateRevisedArticle(revised);
 
-  if (!firstEvaluation.ready) {
-    const secondRevision = await reviseWithLlm(
-      current.raw,
-      firstEvaluation.issues,
-    );
-    const secondEvaluation = evaluateRevisedArticle(secondRevision);
+  for (let attempt = 2; attempt <= 3 && !evaluation.ready; attempt += 1) {
+    attemptRaw = buildRevisionAttemptRaw(current.raw, revised, evaluation);
+
+    const nextRevision = await reviseWithLlm(attemptRaw, evaluation.issues);
+    const nextEvaluation = evaluateRevisedArticle(nextRevision);
 
     if (
-      secondEvaluation.ready ||
-      revisionScore(secondRevision) >= revisionScore(firstRevision)
+      nextEvaluation.ready ||
+      revisionScore(nextRevision, nextEvaluation) >=
+        revisionScore(revised, evaluation)
     ) {
-      revised = secondRevision;
-      evaluation = secondEvaluation;
+      revised = nextRevision;
+      evaluation = nextEvaluation;
     }
   }
 

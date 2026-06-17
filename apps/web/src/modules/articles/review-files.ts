@@ -204,13 +204,48 @@ const evaluateSopQuality = (bodyZh: string, bodyEn: string) => {
     }
   });
 
-  if (countCjk(bodyZh) < 1400) {
+  const sectionBody = (heading: string, nextHeadings: string[] = []) =>
+    sectionBetweenAny(bodyZh, [heading], nextHeadings);
+  const background = sectionBody("### 研究背景", [
+    "### 核心发现",
+    "### 你的解读与批判",
+    "### 临床/商业启发",
+  ]);
+  const finding = sectionBody("### 核心发现", [
+    "### 你的解读与批判",
+    "### 临床/商业启发",
+  ]);
+  const critique = sectionBody("### 你的解读与批判", ["### 临床/商业启发"]);
+  const insight = sectionBody("### 临床/商业启发");
+
+  if (countCjk(bodyZh) < 1800) {
     issues.push(
-      "Chinese SOP article is too short; it needs at least 1400 Chinese characters.",
+      "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
     );
+  }
+  if (countCjk(background) < 80) {
+    issues.push("Research background is too short.");
+  }
+  if (countCjk(finding) < 120) {
+    issues.push("Core findings are too short or too vague.");
+  }
+  if (countCjk(critique) < 650) {
+    issues.push("Chinese interpretation and critique section is short.");
+  }
+  if (countCjk(insight) < 350) {
+    issues.push("Chinese clinical/business insight section is short.");
+  }
+  if (!/A[.、：:]\s*给糖前读者/.test(insight)) {
+    issues.push("Clinical action subsection A is missing.");
+  }
+  if (!/B[.、：:]\s*给健康科技行业/.test(insight)) {
+    issues.push("Business insight subsection B is missing.");
   }
   if (countEnglishWords(bodyEn) < 80) {
     issues.push("English plain-language version is too short.");
+  }
+  if (countEnglishWords(bodyEn) > 240) {
+    issues.push("English plain-language version is too long.");
   }
   if (
     /Original title:|Authors:|Journal\/source:|PubMed\/source link:|Evidence used:/i.test(

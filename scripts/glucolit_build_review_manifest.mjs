@@ -187,9 +187,9 @@ const evaluateSopQuality = (bodyZh, bodyEn) => {
   ]);
   const insight = sectionBetweenHeadings(bodyZh, "### 临床/商业启发");
 
-  if (countCjk(bodyZh) < 1400) {
+  if (countCjk(bodyZh) < 1800) {
     issues.push(
-      "Chinese SOP article is too short; it needs at least 1400 Chinese characters.",
+      "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
     );
   }
   if (countCjk(background) < 80) {
