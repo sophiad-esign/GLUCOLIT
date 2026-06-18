@@ -270,8 +270,15 @@ export default async function AdminDraftsPage({
                         className={`${actionButtonClass} bg-[#1e3a5f] hover:bg-[#2d5a87]`}
                         pendingText="正在发布..."
                       >
-                        {article.reviewRequired ? "先完成修订" : "一键发布"}
+                        {article.reviewRequired
+                          ? "未达标，不能发布"
+                          : "一键发布"}
                       </SubmitActionButton>
+                      {article.reviewRequired ? (
+                        <p className="mt-2 max-w-[180px] text-center text-xs leading-5 text-slate-500 dark:text-slate-400">
+                          SOP 通过后才会开放发布。
+                        </p>
+                      ) : null}
                     </form>
                   </div>
                 </CardHeader>

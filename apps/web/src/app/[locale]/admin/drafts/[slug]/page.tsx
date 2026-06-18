@@ -122,9 +122,14 @@ export default async function DraftPreviewPage({
               className={`${actionButtonClass} bg-[#1e3a5f] hover:bg-[#2d5a87]`}
               pendingText="正在发布..."
             >
-              {article.reviewRequired ? "先完成 SOP 修订" : "一键发布这篇文章"}
+              {article.reviewRequired ? "未达标，不能发布" : "一键发布这篇文章"}
             </SubmitActionButton>
           </form>
+          {article.reviewRequired ? (
+            <p className="max-w-[220px] text-center text-xs leading-5 text-slate-500 dark:text-slate-400">
+              SOP 通过后，这里会变成蓝色可点击的一键发布按钮。
+            </p>
+          ) : null}
         </div>
       </div>
 
