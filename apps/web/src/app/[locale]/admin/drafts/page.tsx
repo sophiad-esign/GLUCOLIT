@@ -265,18 +265,19 @@ export default async function AdminDraftsPage({
                         name="title"
                         value={article.titleEn || article.titleZh}
                       />
+                      {article.reviewRequired ? (
+                        <input type="hidden" name="forcePublish" value="true" />
+                      ) : null}
                       <SubmitActionButton
-                        disabled={!canPublish || article.reviewRequired}
+                        disabled={!canPublish}
                         className={`${actionButtonClass} bg-[#1e3a5f] hover:bg-[#2d5a87]`}
                         pendingText="正在发布..."
                       >
-                        {article.reviewRequired
-                          ? "未达标，不能发布"
-                          : "一键发布"}
+                        {article.reviewRequired ? "人工确认发布" : "一键发布"}
                       </SubmitActionButton>
                       {article.reviewRequired ? (
                         <p className="mt-2 max-w-[180px] text-center text-xs leading-5 text-slate-500 dark:text-slate-400">
-                          SOP 通过后才会开放发布。
+                          会跳过 SOP 质量门并直接发布。
                         </p>
                       ) : null}
                     </form>

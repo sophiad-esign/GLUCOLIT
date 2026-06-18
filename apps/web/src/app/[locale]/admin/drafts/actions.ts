@@ -294,6 +294,23 @@ const replaceFrontmatterValue = (
     : `${frontmatter.trimEnd()}\n${line}`;
 };
 
+const replaceRawFrontmatterLiteral = (
+  raw: string,
+  key: string,
+  value: string,
+) => {
+  const line = `${key}: ${value}`;
+
+  return new RegExp(`^${key}:.*$`, "m").test(raw)
+    ? raw.replace(new RegExp(`^${key}:.*$`, "m"), line)
+    : raw.replace(/^---\r?\n/, `---\n${line}\n`);
+};
+
+const removeRawQualityIssues = (raw: string) =>
+  raw
+    .replace(/^qualityIssues:\s*\[[^\n]*\]\r?\n?/m, "")
+    .replace(/^qualityIssues:\s*\r?\n(?:\s+-\s+.*\r?\n?)+/m, "");
+
 const countCjk = (value: string) =>
   (value.match(/[\u3400-\u9fff]/g) ?? []).length;
 
@@ -829,6 +846,7 @@ export async function publishDraftAction(formData: FormData) {
   const token = requireGithubWriteToken();
 
   const contentPath = getFormString(formData, "contentPath");
+  const forcePublish = getFormString(formData, "forcePublish") === "true";
   const slug = getFormString(formData, "slug");
   const title = getFormString(formData, "title") || slug;
 
@@ -841,13 +859,13 @@ export async function publishDraftAction(formData: FormData) {
     redirectWithError("This article is no longer a draft.");
   }
 
-  if (/^reviewRequired:\s*true\s*$/m.test(raw)) {
+  if (!forcePublish && /^reviewRequired:\s*true\s*$/m.test(raw)) {
     redirectWithError(
       "This draft still needs SOP revision. Please run SOP revision again or edit the draft before publishing.",
     );
   }
 
-  if (/^qualityStatus:\s*needs_revision\s*$/m.test(raw)) {
+  if (!forcePublish && /^qualityStatus:\s*needs_revision\s*$/m.test(raw)) {
     redirectWithError(
       "This draft is marked needs_revision. Finish the SOP rewrite before publishing.",
     );
@@ -855,22 +873,31 @@ export async function publishDraftAction(formData: FormData) {
 
   const quality = evaluateRawDraft(raw);
 
-  if (!quality.ready) {
+  if (!forcePublish && !quality.ready) {
     redirectWithError(
       `This draft still fails the SOP quality gate: ${quality.issues.join("; ")}`,
     );
   }
 
-  const updated = raw
-    .replace(/^draft:\s*true\s*$/m, "draft: false")
-    .replace(/^qualityStatus:\s*ready\s*$/m, "qualityStatus: ready");
+  const updated = [
+    ["draft", "false"],
+    ["reviewRequired", "false"],
+    ["qualityStatus", "ready"],
+    ...(forcePublish ? ([["manualOverride", "true"]] as const) : []),
+  ].reduce(
+    (content, [key, value]) =>
+      replaceRawFrontmatterLiteral(content, key, value),
+    removeRawQualityIssues(raw),
+  );
 
   await writeGithubFile({
     apiUrl: current.apiUrl,
     branch: current.repoBranch,
     content: updated,
     headers: current.headers,
-    message: `publish: ${title}`,
+    message: forcePublish
+      ? `publish: ${title} (manual override)`
+      : `publish: ${title}`,
     sha: current.sha,
   });
 

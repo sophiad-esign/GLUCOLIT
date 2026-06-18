@@ -117,17 +117,20 @@ export default async function DraftPreviewPage({
               name="title"
               value={article.titleEn || article.titleZh}
             />
+            {article.reviewRequired ? (
+              <input type="hidden" name="forcePublish" value="true" />
+            ) : null}
             <SubmitActionButton
-              disabled={!canPublish || article.reviewRequired}
+              disabled={!canPublish}
               className={`${actionButtonClass} bg-[#1e3a5f] hover:bg-[#2d5a87]`}
               pendingText="正在发布..."
             >
-              {article.reviewRequired ? "未达标，不能发布" : "一键发布这篇文章"}
+              {article.reviewRequired ? "人工确认发布" : "一键发布这篇文章"}
             </SubmitActionButton>
           </form>
           {article.reviewRequired ? (
             <p className="max-w-[220px] text-center text-xs leading-5 text-slate-500 dark:text-slate-400">
-              SOP 通过后，这里会变成蓝色可点击的一键发布按钮。
+              会跳过 SOP 质量门，按你的人工判断直接发布。
             </p>
           ) : null}
         </div>
