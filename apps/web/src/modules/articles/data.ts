@@ -649,6 +649,13 @@ const topicScore = (article: Article, topic: TopicCluster) => {
 export const getTopicClusterBySlug = (slug: string) =>
   TOPIC_CLUSTERS.find((topic) => topic.slug === slug);
 
+const getTopicClusterScores = (article: Article) =>
+  TOPIC_CLUSTERS.map((topic, index) => ({
+    topic,
+    index,
+    score: topicScore(article, topic),
+  })).sort((a, b) => b.score - a.score || a.index - b.index);
+
 export const getTopicClusterArticles = (slug: string, limit?: number) => {
   const topic = getTopicClusterBySlug(slug);
 
@@ -660,8 +667,13 @@ export const getTopicClusterArticles = (slug: string, limit?: number) => {
     .map((article) => ({
       article,
       score: topicScore(article, topic),
+      primaryTopic: getTopicClusterScores(article).find(
+        ({ score }) => score > 0,
+      )?.topic,
     }))
-    .filter(({ score }) => score > 0)
+    .filter(
+      ({ primaryTopic, score }) => score > 0 && primaryTopic?.slug === slug,
+    )
     .sort((a, b) => b.score - a.score)
     .map(({ article }) => article);
 
@@ -669,12 +681,8 @@ export const getTopicClusterArticles = (slug: string, limit?: number) => {
 };
 
 export const getPrimaryTopicCluster = (article: Article) =>
-  TOPIC_CLUSTERS.map((topic) => ({
-    topic,
-    score: topicScore(article, topic),
-  }))
-    .sort((a, b) => b.score - a.score)
-    .find(({ score }) => score > 0)?.topic ?? TOPIC_CLUSTERS[0]!;
+  getTopicClusterScores(article).find(({ score }) => score > 0)?.topic ??
+  TOPIC_CLUSTERS[0]!;
 
 export const getReviewArticles = () => {
   const { items } = getContentItems({
