@@ -58,6 +58,9 @@ export type TopicCluster = {
   searchKeywords: string[];
   interventions: string[];
   articleKeywords: string[];
+  titleKeywords?: string[];
+  minTitleMatches?: number;
+  minTotalMatches?: number;
 };
 
 export const TOPIC_CLUSTERS: TopicCluster[] = [
@@ -82,27 +85,6 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
     articleKeywords: ["糖尿病前期", "prediabetes", "diabetes prevention"],
   },
   {
-    slug: "insulin-resistance",
-    title: "胰岛素抵抗",
-    kicker: "Insulin resistance",
-    description:
-      "围绕空腹胰岛素、HOMA-IR、脂肪肝、腰围和餐后血糖，建立一套普通人能理解的胰岛素抵抗地图。",
-    intent:
-      "适合搜索“空腹胰岛素高怎么办”“how to lower fasting insulin”的读者。",
-    searchKeywords: [
-      "空腹胰岛素高怎么办",
-      "胰岛素抵抗怎么改善",
-      "how to lower fasting insulin",
-      "insulin resistance diet plan",
-    ],
-    interventions: [
-      "减少液体糖和高精制碳水",
-      "加入抗阻训练和饭后步行",
-      "同时追踪腰围、甘油三酯和餐后血糖",
-    ],
-    articleKeywords: ["胰岛素抵抗", "insulin", "homa-ir", "fasting insulin"],
-  },
-  {
     slug: "cgm",
     title: "CGM 监测",
     kicker: "Glucose tracking",
@@ -122,6 +104,7 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
       "把 CGM 当作短期学习工具，而不是长期焦虑来源",
     ],
     articleKeywords: ["CGM", "动态血糖", "连续血糖", "continuous glucose"],
+    titleKeywords: ["CGM", "动态血糖", "连续血糖", "continuous glucose"],
   },
   {
     slug: "diet",
@@ -144,12 +127,31 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
     articleKeywords: [
       "饮食",
       "营养",
+      "膳食",
+      "早餐",
+      "主食",
+      "蛋白质",
+      "纤维",
+      "镁",
       "diet",
       "nutrition",
       "protein",
       "fiber",
       "magnesium",
-      "weight",
+    ],
+    titleKeywords: [
+      "饮食",
+      "营养",
+      "膳食",
+      "早餐",
+      "蛋白质",
+      "纤维",
+      "镁",
+      "diet",
+      "nutrition",
+      "protein",
+      "fiber",
+      "magnesium",
     ],
   },
   {
@@ -157,12 +159,12 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
     title: "运动睡眠",
     kicker: "Exercise & sleep",
     description:
-      "把饭后步行、Zone 2、有氧、抗阻训练、睡眠节律和压力管理放在同一张代谢改善路线图里。",
+      "聚焦饭后步行、有氧、抗阻训练、肌肉量、身体成分、睡眠节律和恢复，把运动睡眠拆成可执行路线。",
     intent: "适合搜索“糖尿病前期运动多久有效”“饭后走路降血糖”的读者。",
     searchKeywords: [
       "糖尿病前期运动多久有效",
       "饭后走路降血糖",
-      "Zone 2 training insulin resistance",
+      "抗阻训练 糖尿病前期",
       "sleep and insulin resistance",
     ],
     interventions: [
@@ -173,55 +175,132 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
     articleKeywords: [
       "运动",
       "睡眠",
-      "压力",
+      "步行",
+      "有氧",
+      "抗阻",
+      "力量训练",
+      "肌肉",
+      "内脏脂肪",
+      "身体成分",
+      "骨骼肌",
       "exercise",
-      "activity",
       "walking",
       "sleep",
-      "stress",
       "muscle",
       "visceral fat",
       "skeletal muscle",
       "body composition",
       "strength training",
       "resistance training",
-      "svr",
       "muscle-to-visceral",
+    ],
+    titleKeywords: [
+      "运动",
+      "睡眠",
+      "步行",
+      "有氧",
+      "抗阻",
+      "力量训练",
       "肌肉",
       "内脏脂肪",
       "身体成分",
-      "力量训练",
-      "抗阻训练",
+      "骨骼肌",
+      "exercise",
+      "walking",
+      "sleep",
+      "muscle",
+      "visceral fat",
+      "skeletal muscle",
+      "body composition",
+      "strength training",
+      "resistance training",
+      "muscle-to-visceral",
     ],
+    minTitleMatches: 1,
   },
   {
-    slug: "supplements-medications",
-    title: "药物与补剂前沿",
-    kicker: "Supplements & medications",
+    slug: "stress-emotion",
+    title: "情绪管理",
+    kicker: "Stress & emotion",
     description:
-      "追踪二甲双胍、GLP-1、镁、维生素 D、肌酸等干预的证据等级、适用人群、成本和安全边界。",
-    intent: "适合搜索“糖尿病前期需要吃二甲双胍吗”“糖前补剂有用吗”的读者。",
+      "追踪压力、情绪、睡眠质量、皮质醇和行为坚持度，帮助读者理解心理状态如何影响血糖与代谢。",
+    intent: "适合搜索“压力会让血糖升高吗”“情绪和胰岛素抵抗”的读者。",
     searchKeywords: [
-      "糖尿病前期需要吃二甲双胍吗",
-      "糖尿病前期补剂",
-      "metformin for prediabetes",
-      "magnesium supplementation prediabetes",
+      "压力会让血糖升高吗",
+      "情绪和胰岛素抵抗",
+      "stress glucose metabolism",
+      "stress management prediabetes",
     ],
     interventions: [
-      "先确认是否存在缺乏或明确适应证",
-      "核查剂量、安全性和药物相互作用",
-      "不要用补剂替代饮食、运动和医生随访",
+      "记录压力场景和餐后血糖波动",
+      "建立可持续的睡前放松和恢复流程",
+      "把情绪触发的加餐、熬夜和久坐纳入干预计划",
     ],
     articleKeywords: [
-      "药物",
-      "补剂",
-      "metformin",
-      "glp",
-      "semaglutide",
-      "magnesium",
-      "supplement",
-      "medication",
+      "压力",
+      "情绪",
+      "焦虑",
+      "抑郁",
+      "皮质醇",
+      "心理",
+      "stress",
+      "emotion",
+      "anxiety",
+      "depression",
+      "cortisol",
+      "mental health",
     ],
+    titleKeywords: [
+      "压力",
+      "情绪",
+      "焦虑",
+      "抑郁",
+      "皮质醇",
+      "心理",
+      "stress",
+      "emotion",
+      "anxiety",
+      "depression",
+      "cortisol",
+      "mental health",
+    ],
+    minTitleMatches: 1,
+  },
+  {
+    slug: "metabolic-health",
+    title: "代谢健康",
+    kicker: "Metabolic health",
+    description:
+      "把肝脏脂肪、胰岛素敏感性、血脂、炎症、身体成分和长期疾病风险放在同一张代谢地图里。",
+    intent: "适合搜索“代谢健康怎么改善”“糖尿病前期和脂肪肝”的读者。",
+    searchKeywords: [
+      "代谢健康怎么改善",
+      "糖尿病前期和脂肪肝",
+      "metabolic health prediabetes",
+      "metabolic syndrome insulin resistance",
+    ],
+    interventions: [
+      "同时看血糖、血脂、腰围、肝酶和炎症指标",
+      "区分体重、脂肪分布、胰岛素敏感性和 β 细胞功能",
+      "把单篇研究放回整体代谢风险框架里判断",
+    ],
+    articleKeywords: [
+      "代谢",
+      "脂肪肝",
+      "肝脏",
+      "血脂",
+      "炎症",
+      "心血管",
+      "胰岛素抵抗",
+      "metabolic",
+      "metabolism",
+      "fatty liver",
+      "liver",
+      "cardiovascular",
+      "inflammation",
+      "insulin resistance",
+    ],
+    minTotalMatches: 2,
   },
 ];
 
@@ -521,23 +600,50 @@ export const getRelatedPublishedArticles = (article: Article, limit = 3) => {
 };
 
 const topicScore = (article: Article, topic: TopicCluster) => {
-  const haystack = [
+  const titleHaystack = [article.titleZh, article.titleEn]
+    .join(" ")
+    .toLowerCase();
+
+  const primaryHaystack = [
     article.titleZh,
     article.titleEn,
     article.summaryZh,
     article.summaryEn,
-    article.bodyZh,
-    article.bodyEn,
-    article.categoryLabels.join(" "),
   ]
     .join(" ")
     .toLowerCase();
 
-  return topic.articleKeywords.reduce(
-    (score, keyword) =>
-      haystack.includes(keyword.toLowerCase()) ? score + 1 : score,
-    0,
-  );
+  const secondaryHaystack = [
+    article.bodyZh,
+    article.bodyEn,
+    article.categoryLabels.join(" "),
+    article.tags.join(" "),
+  ]
+    .join(" ")
+    .toLowerCase();
+
+  const titleKeywords = topic.titleKeywords ?? topic.articleKeywords;
+  const titleMatches = titleKeywords.filter((keyword) =>
+    titleHaystack.includes(keyword.toLowerCase()),
+  ).length;
+  const totalMatches = topic.articleKeywords.filter((keyword) => {
+    const normalized = keyword.toLowerCase();
+
+    return (
+      primaryHaystack.includes(normalized) ||
+      secondaryHaystack.includes(normalized)
+    );
+  }).length;
+
+  if (titleMatches < (topic.minTitleMatches ?? 0)) {
+    return 0;
+  }
+
+  if (totalMatches < (topic.minTotalMatches ?? 1)) {
+    return 0;
+  }
+
+  return titleMatches * 4 + totalMatches;
 };
 
 export const getTopicClusterBySlug = (slug: string) =>
