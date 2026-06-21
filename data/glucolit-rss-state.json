@@ -2468,7 +2468,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-20T17:51:49.676361+00:00",
+      "last_seen_at": "2026-06-21T17:57:46.775943+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -3056,6 +3056,74 @@
       "attempts": 1,
       "generated": true,
       "path": "packages/cms/src/collections/blog/content/staging-intermediate-hyperglycaemia-for-type-2-diabetes-prevention-the-e-22f29694/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "40d69bf0a915ab70": {
+      "title": "Lifestyle and Metformin Interventions and Risk of Multimorbidity in Adults With Prediabetes.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (JAMA)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42295772/",
+      "pmid": "42295772",
+      "pmcid": "PMC13270327",
+      "doi": "10.1001/jama.2026.8492",
+      "oa_url": "https://doi.org/10.1001/jama.2026.8492",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 3594,
+      "published_at": "2026-06-15",
+      "score": 19,
+      "matched": [
+        "prediabetes",
+        "diabetes prevention",
+        "lifestyle intervention"
+      ],
+      "created_at": "2026-06-21T17:57:46.776108+00:00",
+      "last_seen_at": "2026-06-21T17:57:46.776110+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/lifestyle-and-metformin-interventions-and-risk-of-multimorbidity-in-adul-40d69bf0/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "fc1baeee2365976b": {
+      "title": "Social Partner Effects on Type 2 Diabetes Prevention, Management, and Spillover Health Outcomes: Single-Arm Pre-Post Pilot Intervention.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (JMIR formative research)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42258366/",
+      "pmid": "42258366",
+      "pmcid": "PMC13245547",
+      "doi": "10.2196/82438",
+      "oa_url": "https://europepmc.org/articles/PMC13245547",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-08",
+      "score": 43,
+      "matched": [
+        "prediabetes",
+        "type 2 diabetes prevention",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "weight loss",
+        "diet",
+        "nutrition",
+        "exercise",
+        "physical activity",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-06-21T17:58:19.586475+00:00",
+      "last_seen_at": "2026-06-21T17:58:19.586484+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/social-partner-effects-on-type-2-diabetes-prevention-management-and-spil-fc1baeee/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
