@@ -1,94 +1,71 @@
 # GLUCOLIT Research Rewrite SOP
 
-This SOP turns scholarly records into reviewable GLUCOLIT drafts. The goal is not literal translation or source replacement. The goal is a faithful, useful, source-bounded third-party commentary for people with prediabetes, insulin resistance, or early metabolic risk.
+This SOP turns academic evidence into useful, reviewable health education. It is not literal translation and must never replace the original paper.
 
 ## Source Rules
 
-- Prioritize Open Access papers, especially papers marked CC BY or with a clearly legal open-access full-text link.
-- Use PubMed, Europe PMC, Unpaywall metadata, abstracts, and legal open-access links.
-- Do not scrape or reproduce paywalled full text.
-- If only metadata or an abstract is available, treat the post as an abstract-based commentary. Do not imply that GLUCOLIT read or reproduced the full paper.
-- Do not invent sample size, results, methods, harms, or causal claims.
-- If only a title is available, do not generate an article.
-- Always link to the PubMed page, DOI page, or publisher page so readers can access the complete original content themselves.
+- Prioritize Open Access papers, especially CC BY publications.
+- Use PubMed, Europe PMC, Unpaywall, abstracts, and legal open-access full text.
+- Never scrape or reproduce paywalled full text.
+- State clearly when an article is based on an abstract rather than full text.
+- Never invent methods, sample sizes, effect sizes, harms, or causal claims.
+- Do not generate an article when only a title is available.
+- Preserve DOI, PubMed, and publisher links for verification.
 
-## Required Workflow
+## Evidence Workflow
 
-1. Extract the evidence card:
-   - research question
-   - population
-   - intervention or exposure
-   - comparison
-   - outcomes
-   - main findings
-   - limits
-   - reader meaning
-2. Write the Chinese `原文精华摘要` first.
-3. Write the English version as the same meaning, not a separate article.
-4. Add practical takeaways without giving personal medical advice.
-5. Run quality gates before saving an MDX draft.
-6. Keep every generated article as `draft: true` until human review.
+1. Extract the research question, population, exposure or intervention, comparison, outcomes, findings, and limitations.
+2. Separate facts reported by the source from GLUCOLIT interpretation.
+3. Write the Chinese article first, then write a concise English version with the same factual boundaries.
+4. Run the quality gate before saving the draft.
+5. Keep every generated article as `draft: true` until human review.
 
-## Article Shape
+## Reader-Facing Article Structure
 
-Every draft must contain:
+Use the following labels as plain text, each on its own line. Do not prefix them with Markdown hashes.
 
-- a clear title in Chinese and English
-- a short description in Chinese and English
-- an original information box: title, authors when available, journal/source, DOI, PubMed/DOI/source link, publication date, evidence type, and open-access link when available
-- an evidence card for review
-- a Chinese `原文精华摘要` using this exact structure:
-  - `### 研究背景` in the author's own words, about 100 Chinese characters
-  - `### 核心发现` rewritten in the author's own words, no more than 300 Chinese characters
-  - `### 你的解读与批判` as the main original commentary, at least 1500 Chinese characters
-  - `### 临床/商业启发` as original GLUCOLIT insight, at least 500 Chinese characters
-- an English plain-language article of at least 700 English characters
-- at least 4 Chinese takeaways and 4 English takeaways
-- source links, DOI, and publication date where available
-- the line: `如需阅读原文，请点击链接获取完整内容。`
-- the copyright disclaimer: `本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。`
+- `先说结论`: give the useful takeaway immediately in 80-140 Chinese characters.
+- `为什么值得关注`: connect the topic to a concrete reader problem in 120-220 characters.
+- `证据告诉我们什么`: explain methods and the strongest source-bounded finding in 300-450 characters. Use numbers only when the source provides them.
+- `应该怎样理解`: explain meaning, uncertainty, applicability, and important limitations. This is the deepest section and should contain at least 900 Chinese characters.
+- `可以怎么做`: turn evidence into cautious, practical next steps. Include `给糖前读者` and `给健康科技行业` and write at least 550 Chinese characters.
 
 ## Writing Standard
 
-- Put the most important point first.
-- Use ordinary words and short paragraphs.
-- Keep Chinese paragraphs to about 2-4 sentences and roughly 90-150 Chinese characters.
-- Keep English paragraphs to about 2-4 sentences and roughly 120-180 words.
-- Each paragraph should explain one idea only. If the topic changes, start a new paragraph.
-- Define medical terms when they first appear.
-- Explain uncertainty: what the study suggests, what it does not prove, and who it may or may not apply to.
-- Avoid hype, miracle language, fear language, and personal medical instructions.
-- Avoid reviewer voice. Do not repeatedly say "this study", "this paper", "the researchers", "这篇研究", "这项研究", "这篇报告", or "研究者发现".
-- Write from the source topic and reader problem, not from a manuscript-review perspective.
-- Use numbers only when they help the reader understand the result.
-- Never turn association into causation.
-- Do not copy long sentences from the abstract. Short factual terms, titles, DOI, and journal names are allowed; the explanation must be rewritten.
+- Lead with the answer, not the research process.
+- Build the article as answer, context, evidence, limits, and action.
+- Use familiar words, concrete examples, and one idea per paragraph.
+- Keep Chinese paragraphs to 2-4 sentences and roughly 90-150 characters.
+- Define medical terms at first use.
+- Explain absolute meaning when a relative risk is provided and the source supports the calculation.
+- Distinguish association from causation.
+- State who the evidence may not apply to.
+- Avoid hype, fear, miracle language, and personal medical instructions.
+- Avoid manuscript-review narration such as repeated references to the paper or researchers.
+- Never expose internal editorial labels or visible Markdown heading markers in article prose.
+- Do not use internal review labels in public copy.
 
 ## Quality Gate
 
-Reject the draft if any of these are true:
+Reject or retain for revision when any of the following is true:
 
-- missing evidence card fields
-- Chinese article is too short
-- English article is too short
-- fewer than 4 takeaways per language
-- contains empty bullet points
-- contains mojibake or broken encoding
-- contains screening notes instead of article prose
-- misses one of the required Chinese section headings
-- Chinese commentary is too short for the required structure
-- overuses reviewer voice or starts like a manuscript review
-- claims medical advice, cure, guaranteed reversal, or unsupported causality
-- fails to mention important limits or uncertainty
-- does not include source links and the copyright disclaimer
+- evidence-card or source links are missing
+- Chinese article has fewer than 1800 Chinese characters
+- English comparison version is missing or outside its allowed length
+- any reader-facing section is missing or too short
+- exact numbers appear without source support
+- metadata is mixed into the public article body
+- empty bullets, broken encoding, or visible Markdown hashes remain
+- internal editorial language appears in reader-facing prose
+- uncertainty or major limitations are omitted
+- association is presented as causation
+- medical cure, guaranteed reversal, or replacement of professional care is implied
 
 ## Human Review Checklist
 
-Before publishing:
-
-- Does the title match the study?
-- Is the main conclusion faithful to the abstract?
-- Are the limitations visible?
-- Would a non-medical reader understand the article?
-- Are the takeaways useful but not prescriptive medical advice?
-- Are the DOI and source links correct?
+- Does the title match the source?
+- Is every key claim traceable to the abstract or legal full text?
+- Are evidence limits prominent and understandable?
+- Can a non-medical reader understand the first screen?
+- Are next steps useful without becoming personal medical advice?
+- Are DOI and source links correct?

@@ -317,47 +317,59 @@ const countCjk = (value: string) =>
 const countEnglishWords = (value: string) =>
   (value.match(/\b[A-Za-z][A-Za-z'-]*\b/g) ?? []).length;
 
-const sectionBetweenHeadings = (
-  content: string,
-  heading: string,
-  nextHeadings: string[],
-) =>
-  sectionText(content, heading, nextHeadings)
-    .replace(/^#+\s+/gm, "")
+const readerSectionLabels = [
+  "先说结论",
+  "为什么值得关注",
+  "证据告诉我们什么",
+  "应该怎样理解",
+  "可以怎么做",
+];
+
+const normalizeReaderArticle = (value: string) =>
+  value
+    .replace(/^#{1,6}\s*/gm, "")
+    .replace(/研究背景/g, "为什么值得关注")
+    .replace(/核心发现/g, "证据告诉我们什么")
+    .replace(/你的解读与批判/g, "应该怎样理解")
+    .replace(/临床\/商业启发/g, "可以怎么做")
+    .replace(/A[.、．：:]\s*给糖前读者的行动建议/g, "给糖前读者")
+    .replace(/B[.、．：:]\s*给健康科技行业的启发/g, "给健康科技行业")
+    .replace(/\n{3,}/g, "\n\n")
     .trim();
 
+const readerSection = (content: string, label: string) => {
+  const start = content.indexOf(label);
+
+  if (start < 0) {
+    return "";
+  }
+
+  const after = content.slice(start + label.length);
+  const nextIndexes = readerSectionLabels
+    .filter((next) => next !== label)
+    .map((next) => after.indexOf(next))
+    .filter((index) => index >= 0);
+  const end = nextIndexes.length > 0 ? Math.min(...nextIndexes) : after.length;
+
+  return after.slice(0, end).trim();
+};
+
 const evaluateRevisedArticle = (revised: RevisedArticle): QualityEvaluation => {
-  const bodyZh = cleanMarkdown(revised.bodyZh ?? "");
+  const bodyZh = normalizeReaderArticle(cleanMarkdown(revised.bodyZh ?? ""));
   const bodyEn = cleanMarkdown(revised.bodyEn ?? "");
   const issues: string[] = [];
-  const headings = [
-    "### 研究背景",
-    "### 核心发现",
-    "### 你的解读与批判",
-    "### 临床/商业启发",
-  ];
+  const headings = readerSectionLabels;
 
   headings.forEach((heading) => {
     if (!bodyZh.includes(heading)) {
-      issues.push(
-        `Missing required section: ${heading.replace(/^###\s*/, "")}`,
-      );
+      issues.push(`Missing required section: ${heading}`);
     }
   });
 
-  const background = sectionBetweenHeadings(bodyZh, "### 研究背景", [
-    "### 核心发现",
-    "### 你的解读与批判",
-    "### 临床/商业启发",
-  ]);
-  const finding = sectionBetweenHeadings(bodyZh, "### 核心发现", [
-    "### 你的解读与批判",
-    "### 临床/商业启发",
-  ]);
-  const critique = sectionBetweenHeadings(bodyZh, "### 你的解读与批判", [
-    "### 临床/商业启发",
-  ]);
-  const insight = sectionBetweenHeadings(bodyZh, "### 临床/商业启发", []);
+  const background = readerSection(bodyZh, "为什么值得关注");
+  const finding = readerSection(bodyZh, "证据告诉我们什么");
+  const critique = readerSection(bodyZh, "应该怎样理解");
+  const insight = readerSection(bodyZh, "可以怎么做");
 
   if (countCjk(bodyZh) < 1800) {
     issues.push(
@@ -376,10 +388,10 @@ const evaluateRevisedArticle = (revised: RevisedArticle): QualityEvaluation => {
   if (countCjk(insight) < 350) {
     issues.push("Clinical/business insight section is too short.");
   }
-  if (!/A[.、．：:]\s*给糖前读者/.test(insight)) {
+  if (!/给糖前读者/.test(insight)) {
     issues.push("Clinical action subsection A is missing.");
   }
-  if (!/B[.、．：:]\s*给健康科技行业/.test(insight)) {
+  if (!/给健康科技行业/.test(insight)) {
     issues.push("Business insight subsection B is missing.");
   }
   if (
@@ -445,11 +457,11 @@ const buildRevisionAttemptRaw = (
     "",
     `Failed checks: ${evaluation.issues.join("; ")}`,
     "",
-    "### Previous Chinese body",
+    "Previous Chinese body",
     "",
     revised.bodyZh,
     "",
-    "### Previous English body",
+    "Previous English body",
     "",
     revised.bodyEn,
   ].join("\n");
@@ -492,20 +504,28 @@ Hard rules:
 - The output must look materially different from the input draft. Expand the analysis, split paragraphs, and add source-bounded explanation.
 - If the source does not provide exact numbers, explicitly say the source does not provide enough detail instead of inventing data.
 
-Required Chinese body structure:
-### 研究背景
-100-180 Chinese characters. Start from the reader's real-life problem.
+Required reader-facing Chinese body structure. Put each label on a separate
+line. Never prefix labels with #, ##, ###, or ####:
+先说结论
+80-140 Chinese characters. Give the useful takeaway immediately.
 
-### 核心发现
-300-450 Chinese characters. Summarize only the strongest source-bounded finding. Explain what the finding means in daily language.
+为什么值得关注
+120-220 Chinese characters. Start from the reader's real-life problem.
 
-### 你的解读与批判
-At least 900 Chinese characters. Explain meaning, limits, what ordinary readers should not overclaim, and where the evidence is weak. This section must be the deepest part of the article.
+证据告诉我们什么
+300-450 Chinese characters. Explain the strongest source-bounded finding in daily language.
 
-### 临床/商业启发
-At least 550 Chinese characters. Include:
-A. 给糖前读者的行动建议
-B. 给健康科技行业的启发
+应该怎样理解
+At least 900 Chinese characters. Explain meaning, limits, applicability, and what readers should not overclaim. This is the deepest section.
+
+可以怎么做
+At least 550 Chinese characters. Include the plain-text labels:
+给糖前读者
+给健康科技行业
+
+Forbidden reader-facing text:
+- Any visible Markdown heading marker such as #, ##, ###, or ####.
+- 你的解读与批判, 临床/商业启发, or other internal editorial language.
 
 English body:
 - Under 220 English words.
@@ -756,9 +776,9 @@ const buildRevisedMdx = (
     "",
     "## 原文精华摘要",
     "",
-    cleanMarkdown(revised.bodyZh ?? ""),
+    normalizeReaderArticle(cleanMarkdown(revised.bodyZh ?? "")),
     "",
-    "### 你可以带走的重点",
+    "你可以带走的重点",
     "",
     ...(revised.takeawaysZh ?? []).map((item) => `- ${item}`),
     "",
@@ -766,7 +786,7 @@ const buildRevisedMdx = (
     "",
     cleanMarkdown(revised.bodyEn ?? ""),
     "",
-    "### Practical Takeaways",
+    "Practical Takeaways",
     "",
     ...(revised.takeawaysEn ?? []).map((item) => `- ${item}`),
     "",
@@ -794,8 +814,12 @@ export async function reviseDraftWithSopAction(formData: FormData) {
 
   const current = await readGithubFile(contentPath, token);
 
-  if (!/^draft:\s*true\s*$/m.test(current.raw)) {
-    redirectWithError("Only draft articles can be revised.");
+  if (
+    !/^draft:\s*true\s*$/m.test(current.raw) &&
+    !/^reviewRequired:\s*true\s*$/m.test(current.raw) &&
+    !/^qualityStatus:\s*needs_revision\s*$/m.test(current.raw)
+  ) {
+    redirectWithError("Only review articles can be revised.");
   }
 
   let attemptRaw = current.raw;

@@ -187,36 +187,55 @@ const countCjk = (value: string) =>
 const countEnglishWords = (value: string) =>
   (value.match(/\b[A-Za-z][A-Za-z'-]*\b/g) ?? []).length;
 
+const readerSectionLabels = [
+  "先说结论",
+  "为什么值得关注",
+  "证据告诉我们什么",
+  "应该怎样理解",
+  "可以怎么做",
+];
+
+const normalizeReaderArticle = (value: string) =>
+  value
+    .replace(/^#{1,6}\s*/gm, "")
+    .replace(/研究背景/g, "为什么值得关注")
+    .replace(/核心发现/g, "证据告诉我们什么")
+    .replace(/你的解读与批判/g, "应该怎样理解")
+    .replace(/临床\/商业启发/g, "可以怎么做")
+    .replace(/A[.、．：:]\s*给糖前读者的行动建议/g, "给糖前读者")
+    .replace(/B[.、．：:]\s*给健康科技行业的启发/g, "给健康科技行业")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+
+const readerSection = (content: string, label: string) => {
+  const start = content.indexOf(label);
+  if (start < 0) return "";
+
+  const after = content.slice(start + label.length);
+  const nextIndexes = readerSectionLabels
+    .filter((next) => next !== label)
+    .map((next) => after.indexOf(next))
+    .filter((index) => index >= 0);
+  const end = nextIndexes.length > 0 ? Math.min(...nextIndexes) : after.length;
+
+  return after.slice(0, end).trim();
+};
+
 const evaluateSopQuality = (bodyZh: string, bodyEn: string) => {
+  bodyZh = normalizeReaderArticle(bodyZh);
   const issues: string[] = [];
-  const requiredHeadings = [
-    "### 研究背景",
-    "### 核心发现",
-    "### 你的解读与批判",
-    "### 临床/商业启发",
-  ];
+  const requiredHeadings = readerSectionLabels;
 
   requiredHeadings.forEach((heading) => {
     if (!bodyZh.includes(heading)) {
-      issues.push(
-        `Missing required section: ${heading.replace(/^###\s*/, "")}`,
-      );
+      issues.push(`Missing required section: ${heading}`);
     }
   });
 
-  const sectionBody = (heading: string, nextHeadings: string[] = []) =>
-    sectionBetweenAny(bodyZh, [heading], nextHeadings);
-  const background = sectionBody("### 研究背景", [
-    "### 核心发现",
-    "### 你的解读与批判",
-    "### 临床/商业启发",
-  ]);
-  const finding = sectionBody("### 核心发现", [
-    "### 你的解读与批判",
-    "### 临床/商业启发",
-  ]);
-  const critique = sectionBody("### 你的解读与批判", ["### 临床/商业启发"]);
-  const insight = sectionBody("### 临床/商业启发");
+  const background = readerSection(bodyZh, "为什么值得关注");
+  const finding = readerSection(bodyZh, "证据告诉我们什么");
+  const critique = readerSection(bodyZh, "应该怎样理解");
+  const insight = readerSection(bodyZh, "可以怎么做");
 
   if (countCjk(bodyZh) < 1800) {
     issues.push(
@@ -235,10 +254,10 @@ const evaluateSopQuality = (bodyZh: string, bodyEn: string) => {
   if (countCjk(insight) < 350) {
     issues.push("Chinese clinical/business insight section is short.");
   }
-  if (!/A[.、：:]\s*给糖前读者/.test(insight)) {
+  if (!/给糖前读者/.test(insight)) {
     issues.push("Clinical action subsection A is missing.");
   }
-  if (!/B[.、：:]\s*给健康科技行业/.test(insight)) {
+  if (!/给健康科技行业/.test(insight)) {
     issues.push("Business insight subsection B is missing.");
   }
   if (countEnglishWords(bodyEn) < 80) {
@@ -338,6 +357,12 @@ const readLiveArticle = (slug: string, raw: string): ReviewRecord | null => {
   const publishedAt = clampFutureDate(
     frontmatterValue(frontmatter, "publishedAt") || todayIso(),
   );
+  const draft = frontmatterBool(frontmatter, "draft");
+  const manualOverride = frontmatterBool(frontmatter, "manualOverride");
+  const frontmatterReviewRequired = frontmatterBool(
+    frontmatter,
+    "reviewRequired",
+  );
   const qualityIssues = Array.from(
     new Set([
       ...frontmatterArray(frontmatter, "qualityIssues"),
@@ -345,7 +370,9 @@ const readLiveArticle = (slug: string, raw: string): ReviewRecord | null => {
     ]),
   );
   const computedReviewRequired =
-    frontmatterBool(frontmatter, "reviewRequired") || qualityIssues.length > 0;
+    draft &&
+    !manualOverride &&
+    (frontmatterReviewRequired || qualityIssues.length > 0);
 
   return {
     slug,
@@ -367,7 +394,7 @@ const readLiveArticle = (slug: string, raw: string): ReviewRecord | null => {
     ]),
     publishedAt,
     publishedAtLabel: publishedAt,
-    draft: frontmatterBool(frontmatter, "draft"),
+    draft,
     reviewRequired: computedReviewRequired,
     qualityStatus: computedReviewRequired
       ? "needs_revision"
@@ -431,10 +458,18 @@ const getReviewArticlesFromGithub = async () => {
     .sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
 };
 
+const needsAdminReview = (article: Article) =>
+  article.draft ||
+  article.reviewRequired ||
+  article.qualityStatus === "needs_revision";
+
 export const getAdminReviewArticles = async () => {
   const liveArticles = await getReviewArticlesFromGithub();
 
-  return liveArticles.length > 0 ? liveArticles : getReviewArticlesFromFiles();
+  const source =
+    liveArticles.length > 0 ? liveArticles : getReviewArticlesFromFiles();
+
+  return source.filter(needsAdminReview);
 };
 
 export const getAdminReviewArticleBySlug = async (slug: string) =>

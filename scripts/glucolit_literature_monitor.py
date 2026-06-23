@@ -747,25 +747,28 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
           "这项研究", "这篇报告", or "研究者发现". Start from the reader's
           problem and the source topic, not from manuscript-review narration.
 
-        Required structure inside plain_zh, using these exact Markdown headings:
-        ### 研究背景
-        100-180 Chinese characters, in GLUCOLIT's own words. Start from the
-        reader's real-life problem, not from "this study".
+        Required reader-facing structure inside plain_zh. Put each label on a
+        separate line, but NEVER prefix it with #, ##, ###, or ####:
+        先说结论
+        80-140 Chinese characters. Give the useful takeaway immediately.
 
-        ### 核心发现
-        No more than 300 Chinese characters. Rewrite the core finding only,
-        without replacing the original abstract.
+        为什么值得关注
+        120-220 Chinese characters. Start from the reader's real-life problem,
+        not from "this study".
 
-        ### 你的解读与批判
-        At least 1200 Chinese characters. This is the main original commentary:
-        explain meaning, uncertainty, blind spots, reader relevance, and what
-        not to overclaim.
+        证据告诉我们什么
+        300-450 Chinese characters. Explain the source-bounded result in daily
+        language. Include useful numbers only when they exist in the source.
 
-        ### 临床/商业启发
-        At least 500 Chinese characters. Use two subheadings inside this
-        section:
-        #### A. 给糖前读者的行动建议
-        #### B. 给健康科技行业的启发
+        应该怎样理解
+        At least 1100 Chinese characters. Explain meaning, uncertainty,
+        applicability, blind spots, and what readers should not overclaim.
+
+        可以怎么做
+        At least 500 Chinese characters. Use two plain-text labels without any
+        Markdown heading markers:
+        给糖前读者
+        给健康科技行业
         Original GLUCOLIT insight about care, behavior design, product
         opportunities, or patient education. No personal medical advice.
 
@@ -824,13 +827,19 @@ def build_revision_prompt(
         - Chinese paragraphs must be short and readable. One paragraph should
           usually contain 2-4 sentences and stay under about 150 Chinese
           characters. Break long blocks aggressively.
-        - Use the required Chinese section headings exactly:
-          ### 研究背景
-          ### 核心发现
-          ### 你的解读与批判
-          ### 临床/商业启发
-        - `核心发现` must stay within 300 Chinese characters.
-        - `你的解读与批判` should be the main original commentary, not a
+        - Use these reader-facing Chinese section labels exactly, each on its
+          own line and without #, ##, ###, or ####:
+          先说结论
+          为什么值得关注
+          证据告诉我们什么
+          应该怎样理解
+          可以怎么做
+          给糖前读者
+          给健康科技行业
+        - Never use the phrases `你的解读与批判`, `临床/商业启发`, or visible
+          Markdown heading markers in the article body.
+        - `证据告诉我们什么` must stay within 450 Chinese characters.
+        - `应该怎样理解` should be the main original commentary, not a
           rewritten abstract.
         - Remove empty bullets and any human-review warning from the article
           body.
@@ -1052,10 +1061,11 @@ def has_empty_markdown_bullets(value: str) -> bool:
 
 
 REQUIRED_ZH_SECTIONS = [
-    "### 研究背景",
-    "### 核心发现",
-    "### 你的解读与批判",
-    "### 临床/商业启发",
+    "先说结论",
+    "为什么值得关注",
+    "证据告诉我们什么",
+    "应该怎样理解",
+    "可以怎么做",
 ]
 
 REVIEWER_VOICE_PHRASES = [
@@ -1073,7 +1083,8 @@ REVIEWER_VOICE_PHRASES = [
 
 
 def section_text(markdown: str, heading: str) -> str:
-    pattern = rf"(?s){re.escape(heading)}\s*(.*?)(?=\n### |\Z)"
+    next_labels = "|".join(re.escape(label) for label in REQUIRED_ZH_SECTIONS)
+    pattern = rf"(?s)(?:^|\n)\s*{re.escape(heading)}\s*\n(.*?)(?=\n\s*(?:{next_labels})\s*\n|\Z)"
     match = re.search(pattern, markdown)
     return match.group(1).strip() if match else ""
 
@@ -1171,13 +1182,17 @@ def article_quality_issues(article: dict[str, Any] | None) -> list[str]:
     ]
     if missing_sections:
         issues.append(f"missing Chinese SOP sections: {', '.join(missing_sections)}")
-    core = section_text(plain_zh, "### 核心发现")
-    if core and count_cjk(core) > 360:
-        issues.append("Chinese core finding section is longer than the 300-character target")
-    critique = section_text(plain_zh, "### 你的解读与批判")
+    if re.search(r"(?m)^\s*#{1,6}\s+", plain_zh):
+        issues.append("contains visible Markdown heading markers")
+    if "你的解读与批判" in plain_zh or "临床/商业启发" in plain_zh:
+        issues.append("contains internal editorial labels")
+    core = section_text(plain_zh, "证据告诉我们什么")
+    if core and count_cjk(core) > 480:
+        issues.append("Chinese evidence section is longer than the 450-character target")
+    critique = section_text(plain_zh, "应该怎样理解")
     if critique and count_cjk(critique) < 1300:
         issues.append("Chinese interpretation and critique section is short")
-    insight = section_text(plain_zh, "### 临床/商业启发")
+    insight = section_text(plain_zh, "可以怎么做")
     if insight and count_cjk(insight) < 420:
         issues.append("Chinese clinical/business insight section is short")
     if reviewer_voice_count(plain_text) > 4:
@@ -1377,7 +1392,7 @@ def article_to_mdx(
                 [
                     "> **待修订提醒：** 这篇草稿已进入后台，但还没有完全通过 GLUCOLIT 发布质量门。请按下方 SOP 检查并人工改稿后再发布。",
                     "",
-                    "### 待修订问题",
+                    "待修订问题",
                     "",
                     bullet_list(quality_issues),
                     "",
@@ -1395,11 +1410,11 @@ def article_to_mdx(
             "",
             format_plain_article(article["plain_zh"], language="zh"),
             "",
-            "### 为什么和糖尿病前期有关？",
+            "为什么和糖尿病前期有关？",
             "",
             format_plain_article(article["why_relevant_zh"], language="zh"),
             "",
-            "### 你可以带走的重点",
+            "你可以带走的重点",
             "",
             bullet_list(article.get("takeaways_zh", [])),
             "",
@@ -1407,11 +1422,11 @@ def article_to_mdx(
             "",
             format_plain_article(article["plain_en"], language="en"),
             "",
-            "### Why This Matters for Prediabetes",
+            "Why This Matters for Prediabetes",
             "",
             format_plain_article(article["why_relevant_en"], language="en"),
             "",
-            "### Practical Takeaways",
+            "Practical Takeaways",
             "",
             bullet_list(article.get("takeaways_en", [])),
             "",

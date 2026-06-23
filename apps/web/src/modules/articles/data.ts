@@ -63,6 +63,16 @@ export type TopicCluster = {
   minTotalMatches?: number;
 };
 
+const todayIso = () => new Date().toISOString().slice(0, 10);
+
+const clampFutureDate = (value?: Date | string) => {
+  const date = dayjs(value).isValid()
+    ? dayjs(value).format("YYYY-MM-DD")
+    : todayIso();
+
+  return date > todayIso() ? todayIso() : date;
+};
+
 export const TOPIC_CLUSTERS: TopicCluster[] = [
   {
     slug: "prediabetes",
@@ -509,6 +519,7 @@ const toArticle = (
     metadataLine(item.content, "Original title") || item.title;
   const textForLabels = `${item.title} ${item.description} ${bodyZh} ${bodyEn}`;
   const evidenceText = `${item.title} ${item.description} ${referenceTitle} ${bodyEn}`;
+  const publishedAtLabel = clampFutureDate(item.publishedAt);
 
   return {
     slug: item.slug,
@@ -522,8 +533,8 @@ const toArticle = (
     source,
     doi,
     originalUrl,
-    publishedAt: item.publishedAt,
-    publishedAtLabel: dayjs(item.publishedAt).format("YYYY-MM-DD"),
+    publishedAt: new Date(`${publishedAtLabel}T00:00:00.000Z`),
+    publishedAtLabel,
     draft: item.draft,
     reviewRequired: item.reviewRequired,
     qualityStatus: item.qualityStatus,
@@ -560,6 +571,12 @@ export const getPublishedArticles = ({
     .filter((item) => isResearchArticle(item.tags))
     .filter(
       (item) =>
+        !item.draft &&
+        !item.reviewRequired &&
+        item.qualityStatus !== "needs_revision",
+    )
+    .filter(
+      (item) =>
         category === "all" || item.tags.includes(category as ContentTag),
     )
     .map(toArticle);
@@ -575,7 +592,13 @@ export const getPublishedArticleBySlug = (slug: string) => {
     locale: "en",
   });
 
-  if (!item || !isResearchArticle(item.tags)) {
+  if (
+    !item ||
+    !isResearchArticle(item.tags) ||
+    item.draft ||
+    item.reviewRequired ||
+    item.qualityStatus === "needs_revision"
+  ) {
     return null;
   }
 

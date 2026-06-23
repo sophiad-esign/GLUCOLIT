@@ -162,193 +162,81 @@ const countCjk = (value) => (value.match(/[\u3400-\u9fff]/g) ?? []).length;
 const countEnglishWords = (value) =>
   (value.match(/\b[A-Za-z][A-Za-z'-]*\b/g) ?? []).length;
 
-const sectionBetweenHeadings = (content, heading, nextHeadings = []) => {
-  const start = content.indexOf(heading);
+const readerSectionLabels = [
+  "先说结论",
+  "为什么值得关注",
+  "证据告诉我们什么",
+  "应该怎样理解",
+  "可以怎么做",
+];
 
-  if (start < 0) {
-    return "";
-  }
+const normalizeReaderArticle = (value) =>
+  value
+    .replace(/^#{1,6}\s*/gm, "")
+    .replace(/研究背景/g, "为什么值得关注")
+    .replace(/核心发现/g, "证据告诉我们什么")
+    .replace(/你的解读与批判/g, "应该怎样理解")
+    .replace(/临床\/商业启发/g, "可以怎么做")
+    .replace(/A[.、．：:]\s*给糖前读者的行动建议/g, "给糖前读者")
+    .replace(/B[.、．：:]\s*给健康科技行业的启发/g, "给健康科技行业")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
 
-  const after = content.slice(start + heading.length);
-  const nextIndexes = nextHeadings
+const readerSection = (content, label) => {
+  const start = content.indexOf(label);
+  if (start < 0) return "";
+  const after = content.slice(start + label.length);
+  const nextIndexes = readerSectionLabels
+    .filter((next) => next !== label)
     .map((next) => after.indexOf(next))
     .filter((index) => index >= 0);
   const end = nextIndexes.length > 0 ? Math.min(...nextIndexes) : after.length;
-
-  return after
-    .slice(0, end)
-    .replace(/^#+\s+.+$/gm, "")
-    .trim();
+  return after.slice(0, end).trim();
 };
 
-const _evaluateSopQuality = (bodyZh, bodyEn) => {
+const evaluateReaderSopQuality = (rawBodyZh, bodyEn) => {
+  const bodyZh = normalizeReaderArticle(rawBodyZh);
   const issues = [];
-  const requiredHeadings = [
-    "### 研究背景",
-    "### 核心发现",
-    "### 你的解读与批判",
-    "### 临床/商业启发",
-  ];
 
-  requiredHeadings.forEach((heading) => {
-    if (!bodyZh.includes(heading)) {
-      issues.push(
-        `Missing required section: ${heading.replace(/^###\s*/, "")}`,
-      );
-    }
-  });
-
-  const background = sectionBetweenHeadings(bodyZh, "### 研究背景", [
-    "### 核心发现",
-    "### 你的解读与批判",
-    "### 临床/商业启发",
-  ]);
-  const finding = sectionBetweenHeadings(bodyZh, "### 核心发现", [
-    "### 你的解读与批判",
-    "### 临床/商业启发",
-  ]);
-  const critique = sectionBetweenHeadings(bodyZh, "### 你的解读与批判", [
-    "### 临床/商业启发",
-  ]);
-  const insight = sectionBetweenHeadings(bodyZh, "### 临床/商业启发");
-
-  if (countCjk(bodyZh) < 1800) {
-    issues.push(
-      "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-    );
-  }
-  if (countCjk(background) < 80) {
-    issues.push("Research background is too short.");
-  }
-  if (countCjk(finding) < 120) {
-    issues.push("Core findings are too short or too vague.");
-  }
-  if (countCjk(critique) < 650) {
-    issues.push("Chinese interpretation and critique section is short.");
-  }
-  if (countCjk(insight) < 350) {
-    issues.push("Chinese clinical/business insight section is short.");
-  }
-  if (!/A[.、：:]\s*给糖前读者/.test(insight)) {
-    issues.push("Clinical action subsection A is missing.");
-  }
-  if (!/B[.、：:]\s*给健康科技行业/.test(insight)) {
-    issues.push("Business insight subsection B is missing.");
-  }
-  if (
-    /Original title:|Authors:|Journal\/source:|PubMed\/source link:|Evidence used:/i.test(
-      bodyZh,
-    )
-  ) {
-    issues.push("Metadata is still mixed into the Chinese article body.");
-  }
-  if (/^[-*]\s*$/m.test(bodyZh)) {
-    issues.push("Article contains empty bullet points.");
-  }
-  if (/治愈|保证逆转|必然逆转|替代医生/.test(bodyZh)) {
-    issues.push("Article contains overclaimed medical language.");
-  }
-
-  const englishWords = countEnglishWords(bodyEn);
-  if (englishWords < 80) {
-    issues.push("English plain-language version is too short.");
-  }
-  if (englishWords > 240) {
-    issues.push("English plain-language version is too long.");
-  }
-
-  return issues;
-};
-
-const sectionByHeadingPattern = (content, labelPattern) => {
-  const heading = content.match(
-    new RegExp(`^#{2,4}\\s*.*(?:${labelPattern}).*$`, "m"),
-  );
-
-  if (!heading || typeof heading.index !== "number") {
-    return "";
-  }
-
-  const start = heading.index + heading[0].length;
-  const rest = content.slice(start);
-  const nextHeading = rest.match(/^#{2,4}\s+.+$/m);
-  const end = nextHeading?.index ?? rest.length;
-
-  return rest
-    .slice(0, end)
-    .replace(/^>\s?.+$/gm, "")
-    .trim();
-};
-
-const hasHeading = (content, labelPattern) =>
-  new RegExp(`^#{2,4}\\s*.*(?:${labelPattern}).*$`, "m").test(content);
-
-const evaluateSopQualityV2 = (bodyZh, bodyEn) => {
-  const issues = [];
-  const headingPatterns = {
-    background: "\\u7814\\u7a76\\u80cc\\u666f",
-    finding: "\\u6838\\u5fc3\\u53d1\\u73b0",
-    critique: "(?:\\u4f60\\u7684)?\\u89e3\\u8bfb\\u4e0e\\u6279\\u5224",
-    insight: "\\u4e34\\u5e8a\\s*[/／]\\s*\\u5546\\u4e1a",
-  };
-
-  [
-    ["Research background", headingPatterns.background],
-    ["Core findings", headingPatterns.finding],
-    ["Interpretation and critique", headingPatterns.critique],
-    ["Clinical/business insight", headingPatterns.insight],
-  ].forEach(([label, pattern]) => {
-    if (!hasHeading(bodyZh, pattern)) {
+  readerSectionLabels.forEach((label) => {
+    if (!bodyZh.includes(label))
       issues.push(`Missing required section: ${label}`);
-    }
   });
 
-  const background = sectionByHeadingPattern(
-    bodyZh,
-    headingPatterns.background,
-  );
-  const finding = sectionByHeadingPattern(bodyZh, headingPatterns.finding);
-  const critique = sectionByHeadingPattern(bodyZh, headingPatterns.critique);
-  const insight = sectionByHeadingPattern(bodyZh, headingPatterns.insight);
+  const background = readerSection(bodyZh, "为什么值得关注");
+  const finding = readerSection(bodyZh, "证据告诉我们什么");
+  const critique = readerSection(bodyZh, "应该怎样理解");
+  const insight = readerSection(bodyZh, "可以怎么做");
 
-  if (countCjk(bodyZh) < 1800) {
+  if (countCjk(bodyZh) < 1800)
     issues.push(
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
     );
-  }
-  if (countCjk(background) < 80) {
-    issues.push("Research background is too short.");
-  }
-  if (countCjk(finding) < 120) {
-    issues.push("Core findings are too short or too vague.");
-  }
-  if (countCjk(critique) < 300) {
-    issues.push("Chinese interpretation and critique section is short.");
-  }
-  if (countCjk(insight) < 350) {
-    issues.push("Chinese clinical/business insight section is short.");
-  }
-  if (!/A[.、：:]\s*给糖前读者/.test(insight)) {
-    issues.push("Clinical action subsection A is missing.");
-  }
-  if (!/B[.、：:]\s*给健康科技行业/.test(insight)) {
-    issues.push("Business insight subsection B is missing.");
-  }
-  if (/^[-*]\s*$/m.test(bodyZh)) {
+  if (countCjk(background) < 80)
+    issues.push("Why-this-matters section is too short.");
+  if (countCjk(finding) < 120)
+    issues.push("Evidence section is too short or too vague.");
+  if (countCjk(critique) < 650)
+    issues.push("Meaning and limitations section is too short.");
+  if (countCjk(insight) < 350) issues.push("Action section is too short.");
+  if (!/给糖前读者/.test(insight))
+    issues.push("Reader action subsection is missing.");
+  if (!/给健康科技行业/.test(insight))
+    issues.push("Health-tech insight subsection is missing.");
+  if (/^\s*#{1,6}\s+/m.test(rawBodyZh))
+    issues.push("Article contains visible Markdown heading markers.");
+  if (/你的解读与批判|临床\/商业启发/.test(rawBodyZh))
+    issues.push("Article contains internal editorial labels.");
+  if (/^[-*]\s*$/m.test(bodyZh))
     issues.push("Article contains empty bullet points.");
-  }
-  if (/治愈|保证逆转|必然逆转|替代医生/.test(bodyZh)) {
+  if (/治愈|保证逆转|必然逆转|替代医生/.test(bodyZh))
     issues.push("Article contains overclaimed medical language.");
-  }
 
   const englishWords = countEnglishWords(bodyEn);
-  if (englishWords < 80) {
+  if (englishWords < 80)
     issues.push("English plain-language version is too short.");
-  }
-  if (englishWords > 500) {
+  if (englishWords > 500)
     issues.push("English plain-language version is too long.");
-  }
-
   return issues;
 };
 
@@ -439,14 +327,22 @@ const readArticle = (slug) => {
     frontmatterValue(frontmatter, "publishedAt") || todayIso(),
   );
   const textForLabels = `${title} ${description} ${bodyZh} ${bodyEn}`;
+  const draft = frontmatterBool(frontmatter, "draft");
+  const manualOverride = frontmatterBool(frontmatter, "manualOverride");
+  const frontmatterReviewRequired = frontmatterBool(
+    frontmatter,
+    "reviewRequired",
+  );
   const qualityIssues = Array.from(
     new Set([
       ...frontmatterArray(frontmatter, "qualityIssues"),
-      ...evaluateSopQualityV2(bodyZhForQuality || bodyZh, bodyEn),
+      ...evaluateReaderSopQuality(bodyZhForQuality || bodyZh, bodyEn),
     ]),
   );
   const reviewRequired =
-    frontmatterBool(frontmatter, "reviewRequired") || qualityIssues.length > 0;
+    draft &&
+    !manualOverride &&
+    (frontmatterReviewRequired || qualityIssues.length > 0);
 
   return {
     slug,
@@ -467,7 +363,7 @@ const readArticle = (slug) => {
     ]),
     publishedAt,
     publishedAtLabel: publishedAt,
-    draft: frontmatterBool(frontmatter, "draft"),
+    draft,
     reviewRequired,
     qualityStatus: reviewRequired
       ? "needs_revision"

@@ -76,8 +76,19 @@ const normalizeLooseBullets = (content: string) =>
     .replace(/([。！？!?；;])\s+[-*]\s+/g, "$1\n- ")
     .replace(/\n[ \t]*[-*]\s+/g, "\n- ");
 
+const sanitizeReaderText = (content: string) =>
+  content
+    .replace(/^#{1,6}\s*/gm, "")
+    .replace(/研究背景/g, "为什么值得关注")
+    .replace(/核心发现/g, "证据告诉我们什么")
+    .replace(/你的解读与批判/g, "应该怎样理解")
+    .replace(/临床\/商业启发/g, "可以怎么做")
+    .replace(/A[.、．：:]\s*给糖前读者的行动建议/g, "给糖前读者")
+    .replace(/B[.、．：:]\s*给健康科技行业的启发/g, "给健康科技行业")
+    .replace(/\n{3,}/g, "\n\n");
+
 export const readingBlocks = (content: string): ReadingBlock[] =>
-  normalizeLooseBullets(content)
+  normalizeLooseBullets(sanitizeReaderText(content))
     .split(/\n{2,}/)
     .map((block) => block.trim())
     .filter(Boolean)
