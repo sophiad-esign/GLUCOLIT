@@ -2468,7 +2468,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-22T19:52:19.070116+00:00",
+      "last_seen_at": "2026-06-23T18:18:18.735224+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -3200,6 +3200,77 @@
         "Chinese commentary is short for the required SOP structure",
         "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "03a6279d9248b0e1": {
+      "title": "Effects of high-intensity interval training on glycemic control and cardiometabolic risk factors in adults with prediabetes: a systematic review and meta-analysis.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Frontiers in endocrinology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42222064/",
+      "pmid": "42222064",
+      "pmcid": "PMC13215823",
+      "doi": "10.3389/fendo.2026.1837386",
+      "oa_url": "https://europepmc.org/articles/PMC13215823",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 57,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "lifestyle intervention",
+        "exercise",
+        "physical activity",
+        "glucose",
+        "glycaemic",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-06-23T18:18:18.735606+00:00",
+      "last_seen_at": "2026-06-23T18:18:18.735610+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effects-of-high-intensity-interval-training-on-glycemic-control-and-card-03a6279d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "0e2085a0cce3812a": {
+      "title": "Modified Huanglian Wendan Decoction improves prediabetic renal injury by activating the AMPK/ULK1 pathway to restore autophagy and suppress inflammation.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (International immunopharmacology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42259235/",
+      "pmid": "42259235",
+      "pmcid": "",
+      "doi": "10.1016/j.intimp.2026.116966",
+      "oa_url": "https://doi.org/10.1016/j.intimp.2026.116966",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-08",
+      "score": 30,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-06-23T18:18:58.696469+00:00",
+      "last_seen_at": "2026-06-23T18:18:58.696492+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/modified-huanglian-wendan-decoction-improves-prediabetic-renal-injury-by-0e2085a0/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "uses reviewer voice too often"
       ],
       "skip_reason": "saved as needs-revision draft"
     }
