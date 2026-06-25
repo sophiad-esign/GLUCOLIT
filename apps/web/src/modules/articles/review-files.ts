@@ -187,6 +187,12 @@ const countCjk = (value: string) =>
 const countEnglishWords = (value: string) =>
   (value.match(/\b[A-Za-z][A-Za-z'-]*\b/g) ?? []).length;
 
+const countReadableParagraphs = (value: string) =>
+  value
+    .split(/\n{2,}/)
+    .map((part) => part.trim())
+    .filter((part) => countCjk(part) >= 35).length;
+
 const readerSectionLabels = [
   "先说结论",
   "为什么值得关注",
@@ -240,6 +246,11 @@ const evaluateSopQuality = (bodyZh: string, bodyEn: string) => {
   if (countCjk(bodyZh) < 1800) {
     issues.push(
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
+    );
+  }
+  if (countReadableParagraphs(bodyZh) < 12) {
+    issues.push(
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
     );
   }
   if (countCjk(background) < 80) {

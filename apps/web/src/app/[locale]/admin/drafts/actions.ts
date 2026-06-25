@@ -1,5 +1,6 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 import { pathsConfig } from "~/config/paths";
@@ -7,7 +8,7 @@ import { pathsConfig } from "~/config/paths";
 const CONTENT_ROOT = "packages/cms/src/collections/blog/content/";
 const PUBLISH_WORKFLOW_FILE = "publish-web.yml";
 const REVISION_SYSTEM_PROMPT =
-  "You are a bilingual medical science editor for GLUCOLIT. Return only valid JSON.";
+  "You are a senior bilingual medical science editor for GLUCOLIT. Write reader-facing Chinese health journalism, not academic translation. Return only valid JSON.";
 
 type LlmConfig = {
   apiKey: string;
@@ -117,6 +118,14 @@ const triggerPublishWorkflow = async (token: string) => {
   );
 
   return response.ok;
+};
+
+const revalidateAdminDrafts = (slug?: string) => {
+  revalidatePath(pathsConfig.admin.drafts.index);
+
+  if (slug) {
+    revalidatePath(pathsConfig.admin.drafts.draft(slug));
+  }
 };
 
 const readGithubFile = async (contentPath: string, token: string) => {
@@ -317,6 +326,12 @@ const countCjk = (value: string) =>
 const countEnglishWords = (value: string) =>
   (value.match(/\b[A-Za-z][A-Za-z'-]*\b/g) ?? []).length;
 
+const countReadableParagraphs = (value: string) =>
+  value
+    .split(/\n{2,}/)
+    .map((part) => part.trim())
+    .filter((part) => countCjk(part) >= 35).length;
+
 const readerSectionLabels = [
   "先说结论",
   "为什么值得关注",
@@ -374,6 +389,11 @@ const evaluateRevisedArticle = (revised: RevisedArticle): QualityEvaluation => {
   if (countCjk(bodyZh) < 1800) {
     issues.push(
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
+    );
+  }
+  if (countReadableParagraphs(bodyZh) < 12) {
+    issues.push(
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
     );
   }
   if (countCjk(background) < 80) {
@@ -453,7 +473,7 @@ const buildRevisionAttemptRaw = (
     "",
     "## Previous SOP revision attempt",
     "",
-    "The previous attempt was saved but still failed the quality gate. Continue from it, expand it, and fix the listed issues. Do not restart with another short summary.",
+    "The previous attempt was still too thin. Continue from it, expand every weak section, and fix the listed issues. Do not restart with another short summary. The next answer must be substantially longer and more useful.",
     "",
     `Failed checks: ${evaluation.issues.join("; ")}`,
     "",
@@ -500,7 +520,9 @@ Hard rules:
 - Chinese article should read like a helpful medical science column, not like a peer reviewer. Avoid repeated openings such as "这项研究", "这篇论文", "研究者发现".
 - Paragraphs must be short. Each paragraph should be at most 5 visual lines on mobile, usually 80-140 Chinese characters. No giant blocks. No empty bullets.
 - Keep uncertainty and causality boundaries clear. Do not say cure, reverse, guaranteed, or personalized treatment unless the evidence actually supports it.
-- The final Chinese article must be long enough to publish: at least 1800 Chinese characters across the required sections. If your answer is shorter, it is a failed answer.
+- The final Chinese article must be long enough to publish: 1900-2600 Chinese characters across the required sections. If your answer is shorter, it is a failed answer.
+- The Chinese article must contain at least 12 short paragraphs across the five required sections. Do not collapse multiple ideas into one block.
+- Do not merely translate the abstract. Turn the evidence into a reader-friendly guide: what changed, why it matters, what can and cannot be concluded, and what a cautious reader can do next.
 - The output must look materially different from the input draft. Expand the analysis, split paragraphs, and add source-bounded explanation.
 - If the source does not provide exact numbers, explicitly say the source does not provide enough detail instead of inventing data.
 
@@ -510,16 +532,16 @@ line. Never prefix labels with #, ##, ###, or ####:
 80-140 Chinese characters. Give the useful takeaway immediately.
 
 为什么值得关注
-120-220 Chinese characters. Start from the reader's real-life problem.
+180-260 Chinese characters. Start from the reader's real-life problem, not from the paper.
 
 证据告诉我们什么
-300-450 Chinese characters. Explain the strongest source-bounded finding in daily language.
+420-620 Chinese characters. Explain the strongest source-bounded finding in daily language. If exact numbers are unavailable, explain the direction and boundary.
 
 应该怎样理解
-At least 900 Chinese characters. Explain meaning, limits, applicability, and what readers should not overclaim. This is the deepest section.
+At least 900 Chinese characters. Explain meaning, limits, applicability, and what readers should not overclaim. This is the deepest section and should include 5-7 short paragraphs.
 
 可以怎么做
-At least 550 Chinese characters. Include the plain-text labels:
+At least 650 Chinese characters. Include the plain-text labels and give concrete but cautious actions:
 给糖前读者
 给健康科技行业
 
@@ -689,8 +711,8 @@ const reviseWithLlm = async (
       { role: "user", content: buildSopRevisionPrompt(raw, qualityFeedback) },
     ],
     response_format: { type: "json_object" },
-    temperature: 0.35,
-    max_tokens: 7600,
+    temperature: 0.25,
+    max_tokens: 12000,
   });
 
   const data = (await response.json()) as {
@@ -826,7 +848,7 @@ export async function reviseDraftWithSopAction(formData: FormData) {
   let revised = await reviseWithLlm(attemptRaw);
   let evaluation = evaluateRevisedArticle(revised);
 
-  for (let attempt = 2; attempt <= 3 && !evaluation.ready; attempt += 1) {
+  for (let attempt = 2; attempt <= 5 && !evaluation.ready; attempt += 1) {
     attemptRaw = buildRevisionAttemptRaw(current.raw, revised, evaluation);
 
     const nextRevision = await reviseWithLlm(attemptRaw, evaluation.issues);
@@ -854,6 +876,7 @@ export async function reviseDraftWithSopAction(formData: FormData) {
   });
 
   await triggerPublishWorkflow(token);
+  revalidateAdminDrafts(slug);
 
   if (!evaluation.ready) {
     redirect(
@@ -926,6 +949,7 @@ export async function publishDraftAction(formData: FormData) {
   });
 
   await triggerPublishWorkflow(token);
+  revalidateAdminDrafts(slug);
 
   redirect(
     `${pathsConfig.admin.drafts.index}?published=${encodeURIComponent(slug)}`,
