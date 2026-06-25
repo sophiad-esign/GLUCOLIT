@@ -2470,7 +2470,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-24T18:13:32.789516+00:00",
+      "last_seen_at": "2026-06-25T18:30:14.721312+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -3304,6 +3304,69 @@
       "attempts": 1,
       "generated": true,
       "path": "packages/cms/src/collections/blog/content/progress-in-research-on-the-association-between-glucose-metabolism-disor-0cfe4d80/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "edc1b1220146f899": {
+      "title": "Serum advanced glycation end-products as a biomarker of cumulative glycaemic burden and complications in type 2 diabetes: a pilot study.",
+      "source": "PubMed nutrition and glycemic control via PubMed (Annals of medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42159221/",
+      "pmid": "42159221",
+      "pmcid": "PMC13195711",
+      "doi": "10.1080/07853890.2026.2671517",
+      "oa_url": "https://europepmc.org/articles/PMC13195711",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-25",
+      "score": 22,
+      "matched": [
+        "prediabetes",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "diet",
+        "glucose",
+        "glycaemic",
+        "hba1c"
+      ],
+      "created_at": "2026-06-25T18:30:14.721632+00:00",
+      "last_seen_at": "2026-06-25T18:30:14.721636+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/serum-advanced-glycation-end-products-as-a-biomarker-of-cumulative-glyca-edc1b122/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "English plain-language article is short",
+        "Chinese commentary is short for the required SOP structure"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "7486d2cb06040efb": {
+      "title": "Diabetes and cancer incidence among adults in the Hispanic Community Health Study/Study of Latinos.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Cancer)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42118574/",
+      "pmid": "42118574",
+      "pmcid": "",
+      "doi": "10.1002/cncr.70430",
+      "oa_url": "https://doi.org/10.1002/cncr.70430",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-05-15",
+      "score": 25,
+      "matched": [
+        "pre-diabetes",
+        "insulin resistance",
+        "diabetes prevention",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-06-25T18:30:40.922687+00:00",
+      "last_seen_at": "2026-06-25T18:30:40.922706+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/diabetes-and-cancer-incidence-among-adults-in-the-hispanic-community-hea-7486d2cb/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure"
