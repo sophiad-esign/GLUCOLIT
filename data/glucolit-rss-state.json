@@ -2470,7 +2470,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-25T18:30:14.721312+00:00",
+      "last_seen_at": "2026-06-26T18:07:43.559281+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -3367,6 +3367,66 @@
       "attempts": 1,
       "generated": true,
       "path": "packages/cms/src/collections/blog/content/diabetes-and-cancer-incidence-among-adults-in-the-hispanic-community-hea-7486d2cb/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "59a02f0f99a26bb8": {
+      "title": "Sex-Specific and Reproductive Status-Dependent Effects of Liraglutide on Metabolic Disorders Associated with Prediabetes.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Antioxidants (Basel, Switzerland))",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42352035/",
+      "pmid": "42352035",
+      "pmcid": "",
+      "doi": "10.3390/antiox15060729",
+      "oa_url": "https://doi.org/10.3390/antiox15060729",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-09",
+      "score": 27,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "impaired glucose tolerance",
+        "insulin sensitivity",
+        "glucose"
+      ],
+      "created_at": "2026-06-26T18:07:43.559406+00:00",
+      "last_seen_at": "2026-06-26T18:07:43.559410+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/sex-specific-and-reproductive-status-dependent-effects-of-liraglutide-on-59a02f0f/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "13bf3670f965f809": {
+      "title": "Effect of pasteurized Akkermansia muciniphila MucT on insulin sensitivity, body composition, and GLP-1 production in subjects with metabolic syndrome: impact of low baseline gut Akkermansia levels.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Gut microbes)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42343233/",
+      "pmid": "42343233",
+      "pmcid": "",
+      "doi": "10.1080/19490976.2026.2690689",
+      "oa_url": "https://doi.org/10.1080/19490976.2026.2690689",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-26",
+      "score": 24,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "insulin sensitivity",
+        "metabolic syndrome",
+        "glycemic"
+      ],
+      "created_at": "2026-06-26T18:08:16.588041+00:00",
+      "last_seen_at": "2026-06-26T18:08:16.588058+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effect-of-pasteurized-akkermansia-muciniphila-muct-on-insulin-sensitivit-13bf3670/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure"
