@@ -2141,12 +2141,14 @@
     },
     "a55fa88b56c2cfec": {
       "title": "Aurantio-obtusin ameliorates prediabetes in a gut microbiota-dependent manner via regulating LPS-TLR4 axis and Akt/GLUT4 signaling.",
-      "source": "PubMed high-yield prediabetes via PubMed (Journal of ethnopharmacology)",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Journal of ethnopharmacology)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42248376/",
       "pmid": "42248376",
+      "pmcid": "",
       "doi": "10.1016/j.jep.2026.121970",
       "oa_url": "https://doi.org/10.1016/j.jep.2026.121970",
-      "evidence": "PubMed abstract + open-access full-text link",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
       "published_at": "2026-06-04",
       "score": 23,
       "matched": [
@@ -2157,15 +2159,15 @@
         "glucose"
       ],
       "created_at": "2026-06-06T17:43:01.383821+00:00",
-      "last_seen_at": "2026-06-06T17:43:01.383837+00:00",
-      "attempts": 1,
-      "generated": false,
+      "last_seen_at": "2026-06-27T17:36:17.899116+00:00",
+      "attempts": 2,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/aurantio-obtusin-ameliorates-prediabetes-in-a-gut-microbiota-dependent-m-a55fa88b/en.mdx",
+      "quality_status": "needs_revision",
       "quality_issues": [
-        "Chinese commentary is short for the required SOP structure",
-        "Chinese interpretation and critique section is short",
-        "Chinese clinical/business insight section is short"
+        "Chinese commentary is short for the required SOP structure"
       ],
-      "skip_reason": "generated article failed quality gate"
+      "skip_reason": "saved as needs-revision draft"
     },
     "c1c343543b22b851": {
       "title": "\"Preventing the Progression: The Power of Lifestyle Interventions in Prediabetic Individuals-A Systematic Review\".",
@@ -2470,7 +2472,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-26T18:07:43.559281+00:00",
+      "last_seen_at": "2026-06-27T17:35:52.178409+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -3429,6 +3431,37 @@
       "path": "packages/cms/src/collections/blog/content/effect-of-pasteurized-akkermansia-muciniphila-muct-on-insulin-sensitivit-13bf3670/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
+        "Chinese commentary is short for the required SOP structure"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "efb885b16167cf7e": {
+      "title": "Prediabetes and Obstructive Sleep Apnea: A review of the pathophysiological interaction and the role of CPAP.",
+      "source": "PubMed insulin resistance interventions via PubMed (Sleep medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42217267/",
+      "pmid": "42217267",
+      "pmcid": "",
+      "doi": "10.1016/j.sleep.2026.109042",
+      "oa_url": "https://doi.org/10.1016/j.sleep.2026.109042",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-27",
+      "score": 24,
+      "matched": [
+        "prediabetes",
+        "impaired glucose tolerance",
+        "insulin sensitivity",
+        "sleep",
+        "glucose"
+      ],
+      "created_at": "2026-06-27T17:35:52.178537+00:00",
+      "last_seen_at": "2026-06-27T17:35:52.178541+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/prediabetes-and-obstructive-sleep-apnea-a-review-of-the-pathophysiologic-efb885b1/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "English plain-language article is short",
         "Chinese commentary is short for the required SOP structure"
       ],
       "skip_reason": "saved as needs-revision draft"
