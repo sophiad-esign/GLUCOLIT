@@ -2472,7 +2472,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-27T17:35:52.178409+00:00",
+      "last_seen_at": "2026-06-28T17:39:05.549116+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -3462,6 +3462,70 @@
       "quality_status": "needs_revision",
       "quality_issues": [
         "English plain-language article is short",
+        "Chinese commentary is short for the required SOP structure"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "9f75479dffc442dc": {
+      "title": "Glycated Hemoglobin and Prediabetes: A Systematic Review of HbA1c Thresholds for Type 2 Diabetes Prevention.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Journal of clinical medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42355858/",
+      "pmid": "42355858",
+      "pmcid": "PMC13301490",
+      "doi": "10.3390/jcm15124690",
+      "oa_url": "https://doi.org/10.3390/jcm15124690",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-17",
+      "score": 44,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "type 2 diabetes prevention",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-06-28T17:39:05.549489+00:00",
+      "last_seen_at": "2026-06-28T17:39:05.549495+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/glycated-hemoglobin-and-prediabetes-a-systematic-review-of-hba1c-thresho-9f75479d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "676a98b60a346f15": {
+      "title": "A Qualitative Study Exploring Diabetes Prevention Intervention Needs and Ideas Among Young Adults at High Risk for Diabetes.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Journal of nutrition education and behavior)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41706078/",
+      "pmid": "41706078",
+      "pmcid": "",
+      "doi": "10.1016/j.jneb.2026.01.014",
+      "oa_url": "https://doi.org/10.1016/j.jneb.2026.01.014",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-01",
+      "score": 23,
+      "matched": [
+        "prediabetes",
+        "diabetes prevention",
+        "diet",
+        "nutrition",
+        "exercise"
+      ],
+      "created_at": "2026-06-28T17:39:36.451131+00:00",
+      "last_seen_at": "2026-06-28T17:39:36.451165+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/a-qualitative-study-exploring-diabetes-prevention-intervention-needs-and-676a98b6/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
         "Chinese commentary is short for the required SOP structure"
       ],
       "skip_reason": "saved as needs-revision draft"
