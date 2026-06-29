@@ -2113,12 +2113,14 @@
     },
     "41a1d06484207ea7": {
       "title": "[Study on the underlying mechanisms of electroacupuncture at \"Zusanli\" (ST36) in restoring blood glucose homeostasis in prediabetes mice].",
-      "source": "PubMed high-yield prediabetes via PubMed (Zhen ci yan jiu = Acupuncture research)",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Zhen ci yan jiu = Acupuncture research)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42185055/",
       "pmid": "42185055",
+      "pmcid": "",
       "doi": "10.13702/j.1000-0607.20250584",
       "oa_url": "https://doi.org/10.13702/j.1000-0607.20250584",
       "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
       "published_at": "2026-05-25",
       "score": 22,
       "matched": [
@@ -2129,15 +2131,17 @@
         "hba1c"
       ],
       "created_at": "2026-06-05T18:17:24.092492+00:00",
-      "last_seen_at": "2026-06-06T17:43:17.857649+00:00",
-      "attempts": 2,
-      "generated": false,
+      "last_seen_at": "2026-06-29T18:28:25.776527+00:00",
+      "attempts": 3,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/study-on-the-underlying-mechanisms-of-electroacupuncture-at-zusanli-st36-41a1d064/en.mdx",
+      "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
       ],
-      "skip_reason": "generated article failed quality gate"
+      "skip_reason": "saved as needs-revision draft"
     },
     "a55fa88b56c2cfec": {
       "title": "Aurantio-obtusin ameliorates prediabetes in a gut microbiota-dependent manner via regulating LPS-TLR4 axis and Akt/GLUT4 signaling.",
@@ -2472,7 +2476,7 @@
         "glucose"
       ],
       "created_at": "2026-06-11T19:19:58.106483+00:00",
-      "last_seen_at": "2026-06-28T17:39:05.549116+00:00",
+      "last_seen_at": "2026-06-29T18:28:25.776233+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -3524,6 +3528,35 @@
       "attempts": 1,
       "generated": true,
       "path": "packages/cms/src/collections/blog/content/a-qualitative-study-exploring-diabetes-prevention-intervention-needs-and-676a98b6/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "cd0a0de92c017396": {
+      "title": "The triglyceride-glucose index and C-reactive protein-triglyceride-glucose index as surrogate markers of vascular stiffness in prediabetes: a cross-sectional study.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (BMC cardiovascular disorders)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42288731/",
+      "pmid": "42288731",
+      "pmcid": "",
+      "doi": "10.1186/s12872-026-06111-1",
+      "oa_url": "https://doi.org/10.1186/s12872-026-06111-1",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-13",
+      "score": 22,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "insulin resistance",
+        "glucose"
+      ],
+      "created_at": "2026-06-29T18:28:59.655882+00:00",
+      "last_seen_at": "2026-06-29T18:28:59.655901+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/the-triglyceride-glucose-index-and-c-reactive-protein-triglyceride-gluco-cd0a0de9/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure"
