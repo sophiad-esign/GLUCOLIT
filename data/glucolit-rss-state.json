@@ -3562,6 +3562,212 @@
         "Chinese commentary is short for the required SOP structure"
       ],
       "skip_reason": "saved as needs-revision draft"
+    },
+    "5b29ba0c4d379ea5": {
+      "title": "Exploration of the longitudinal associations between sleep behaviours, anthropometric measurements and body composition in adults with prediabetes.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Chronobiology international)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41810501/",
+      "pmid": "41810501",
+      "pmcid": "",
+      "doi": "10.1080/07420528.2026.2638533",
+      "oa_url": "https://doi.org/10.1080/07420528.2026.2638533",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-01",
+      "score": 25,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "lifestyle intervention",
+        "diet",
+        "sleep"
+      ],
+      "created_at": "2026-06-30T18:22:36.381288+00:00",
+      "last_seen_at": "2026-06-30T18:22:36.381308+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/exploration-of-the-longitudinal-associations-between-sleep-behaviours-an-5b29ba0c/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "54c89bad555cba39": {
+      "title": "The beta cell glucocorticoid receptor protects against hyperglycaemia by modulating insulin secretion during glucocorticoid rhythm disruption in mice.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (bioRxiv : the preprint server for biology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42327065/",
+      "pmid": "42327065",
+      "pmcid": "PMC13277995",
+      "doi": "10.64898/2026.06.03.730005",
+      "oa_url": "https://europepmc.org/articles/PMC13277995",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 8793,
+      "published_at": "2026-06-08",
+      "score": 29,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "sleep",
+        "glucose",
+        "glycaemic"
+      ],
+      "created_at": "2026-06-30T18:23:09.708274+00:00",
+      "last_seen_at": "2026-06-30T18:23:09.708293+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/the-beta-cell-glucocorticoid-receptor-protects-against-hyperglycaemia-by-54c89bad/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "e4e1f395e6589c76": {
+      "title": "The body mass index-glucose index as a new tool for early detection of the risk of dysglycemia in patients with hypertension and obstructive sleep apnea.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (BMC endocrine disorders)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41857713/",
+      "pmid": "41857713",
+      "pmcid": "PMC13122913",
+      "doi": "10.1186/s12902-026-02226-w",
+      "oa_url": "https://europepmc.org/articles/PMC13122913",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-03-19",
+      "score": 13,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "sleep",
+        "glucose"
+      ],
+      "created_at": "2026-06-30T18:23:47.723836+00:00",
+      "last_seen_at": "2026-06-30T18:23:47.723855+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/the-body-mass-index-glucose-index-as-a-new-tool-for-early-detection-of-t-e4e1f395/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "656327a6fbad236b": {
+      "title": "The cross-sectional and prospective associations between time-restricted eating and cardiometabolic health in community-dwelling adults: A systematic review and meta-analysis of observational studies.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (European journal of clinical nutrition)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42177340/",
+      "pmid": "42177340",
+      "pmcid": "5682337",
+      "doi": "10.1038/s41430-026-01755-w",
+      "oa_url": "https://doi.org/10.1038/s41430-026-01755-w",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-05-23",
+      "score": 37,
+      "matched": [
+        "prediabetes",
+        "pre-diabetes",
+        "insulin resistance",
+        "diet",
+        "physical activity",
+        "sleep",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-06-30T18:24:23.798380+00:00",
+      "last_seen_at": "2026-06-30T18:24:23.798399+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/the-cross-sectional-and-prospective-associations-between-time-restricted-656327a6/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "1b7df059c93db9f7": {
+      "title": "Exploring the Association of Sleep Profiles With Plasma Glycaemic Outcomes and 24-h Interstitial Glucose Levels in Adults With Prediabetes: Findings From Chrono-DM Study.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Journal of sleep research)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41084985/",
+      "pmid": "41084985",
+      "pmcid": "",
+      "doi": "10.1111/jsr.70218",
+      "oa_url": "https://doi.org/10.1111/jsr.70218",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-04-01",
+      "score": 26,
+      "matched": [
+        "prediabetes",
+        "lifestyle intervention",
+        "sleep",
+        "glucose",
+        "glycaemic",
+        "hba1c",
+        "continuous glucose"
+      ],
+      "created_at": "2026-06-30T18:25:03.429579+00:00",
+      "last_seen_at": "2026-06-30T18:25:03.429591+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/exploring-the-association-of-sleep-profiles-with-plasma-glycaemic-outcom-1b7df059/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "837b97a8588d2078": {
+      "title": "RYR1+ skeletal muscle-derived extracellular vesicles are exercise responsive and associated with insulin action.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Journal of translational medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42192466/",
+      "pmid": "42192466",
+      "pmcid": "PMC13217694",
+      "doi": "10.1186/s12967-026-08215-w",
+      "oa_url": "https://europepmc.org/articles/PMC13217694",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-05-26",
+      "score": 25,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "insulin sensitivity",
+        "exercise",
+        "glucose"
+      ],
+      "created_at": "2026-06-30T18:25:36.139837+00:00",
+      "last_seen_at": "2026-06-30T18:25:36.139855+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/ryr1-skeletal-muscle-derived-extracellular-vesicles-are-exercise-respons-837b97a8/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
     }
   }
 }
