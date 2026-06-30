@@ -47,7 +47,7 @@ export function AutoUpdateStatus({ canPublish }: { canPublish: boolean }) {
             </CardDescription>
           </div>
           <Badge variant="secondary">
-            Daily 09:15 Los Angeles, target 2 drafts
+            Daily 09:15 Los Angeles, up to 6 focused drafts
           </Badge>
         </div>
       </CardHeader>
@@ -62,12 +62,12 @@ export function AutoUpdateStatus({ canPublish }: { canPublish: boolean }) {
         <div className="rounded-xl border bg-slate-50 p-4 dark:bg-slate-900">
           <div className="text-sm font-semibold">Safety rule</div>
           <p className="text-muted-foreground mt-2 text-sm leading-7">
-            New posts are always generated as draft: true. The daily target is 2
-            review drafts, but low-quality model output, missing abstracts, or
-            weak relevance are skipped instead of being shown for review. The
-            monitor uses abstracts or legal open-access links, never scraped
-            paywalled full text. Posts only become public after manual review
-            and one-click publishing.
+            New posts are always generated as draft: true. Candidates rotate
+            across diet, sleep, and exercise, with a daily ceiling of 6 review
+            drafts. Low-quality model output, missing abstracts, or weak
+            relevance can reduce the actual count. The monitor uses abstracts or
+            legal open-access links, never scraped paywalled full text. Posts
+            only become public after manual review and one-click publishing.
           </p>
         </div>
 

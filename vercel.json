@@ -1,6 +1,6 @@
 {
   "framework": "nextjs",
   "installCommand": "pnpm install --frozen-lockfile=false --force",
-  "buildCommand": "pnpm --filter web build",
+  "buildCommand": "node scripts/vercel_build.mjs",
   "outputDirectory": "apps/web/.next"
 }

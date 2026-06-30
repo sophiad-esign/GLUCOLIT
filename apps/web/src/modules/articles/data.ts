@@ -39,6 +39,7 @@ export type Article = {
   reviewRequired: boolean;
   qualityStatus: string;
   qualityIssues: string[];
+  topic?: string;
   contentPath: string;
   tags: string[];
   categoryLabels: string[];
@@ -539,6 +540,7 @@ const toArticle = (
     reviewRequired: item.reviewRequired,
     qualityStatus: item.qualityStatus,
     qualityIssues: item.qualityIssues,
+    topic: item.topic,
     contentPath: `packages/cms/src/collections/blog/content/${item.slug}/en.mdx`,
     tags: item.tags,
     categoryLabels: inferCategoryLabels(textForLabels, item.tags),
@@ -689,10 +691,10 @@ export const getTopicClusterArticles = (slug: string, limit?: number) => {
   const articles = getPublishedArticles()
     .map((article) => ({
       article,
-      score: topicScore(article, topic),
-      primaryTopic: getTopicClusterScores(article).find(
-        ({ score }) => score > 0,
-      )?.topic,
+      score: article.topic === slug ? 1000 : topicScore(article, topic),
+      primaryTopic: article.topic
+        ? getTopicClusterBySlug(article.topic)
+        : getTopicClusterScores(article).find(({ score }) => score > 0)?.topic,
     }))
     .filter(
       ({ primaryTopic, score }) => score > 0 && primaryTopic?.slug === slug,
@@ -704,6 +706,7 @@ export const getTopicClusterArticles = (slug: string, limit?: number) => {
 };
 
 export const getPrimaryTopicCluster = (article: Article) =>
+  (article.topic ? getTopicClusterBySlug(article.topic) : undefined) ??
   getTopicClusterScores(article).find(({ score }) => score > 0)?.topic ??
   TOPIC_CLUSTERS[0]!;
 

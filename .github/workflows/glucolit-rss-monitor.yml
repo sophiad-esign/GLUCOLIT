@@ -18,7 +18,7 @@ jobs:
   monitor:
     name: Fetch research RSS feeds
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
 
     steps:
       - name: Checkout
@@ -49,7 +49,7 @@ jobs:
           KIMI_MODEL: ${{ vars.KIMI_MODEL || 'moonshot-v1-8k' }}
           KIMI_BASE_URL: ${{ vars.KIMI_BASE_URL || 'https://api.moonshot.ai/v1' }}
           UNPAYWALL_EMAIL: ${{ vars.UNPAYWALL_EMAIL || 'contact@glucolit.vercel.app' }}
-        run: python scripts/glucolit_literature_monitor.py --status published --draft --limit-per-feed 20 --max-candidates 120 --min-score 3 --min-abstract-chars 220 --max-created 2 --max-llm-attempts 20 --require-openai
+        run: python scripts/glucolit_literature_monitor.py --status published --draft --limit-per-feed 20 --max-candidates 180 --min-score 3 --min-abstract-chars 220 --max-created 6 --max-llm-attempts 30 --require-openai
 
       - name: Write run summary
         if: always()
@@ -58,7 +58,7 @@ jobs:
             echo "## GLUCOLIT literature monitor"
             echo ""
             echo "- Schedule: daily at 09:15 Los Angeles time during PDT"
-            echo "- Daily target: 2 review drafts. Candidate thresholds are intentionally broad; drafts that need more work are saved with reviewRequired: true instead of being discarded."
+            echo "- Daily target: up to 6 review drafts, balanced across diet, sleep, and exercise. Candidates are interleaved by editorial focus; drafts that need more work are saved with reviewRequired: true instead of being discarded."
             echo "- Discovery: PubMed first, PubMed Central open full-text excerpts when available, plus Europe PMC and Unpaywall enrichment"
             echo "- Output: MDX drafts under \`packages/cms/src/collections/blog/content\`"
             echo "- Public safety: generated posts keep \`draft: true\` until manually reviewed"

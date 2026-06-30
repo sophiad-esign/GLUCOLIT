@@ -66,6 +66,30 @@ JOURNALS = [
 
 BROAD_SOURCES = [
     (
+        "PubMed prediabetes diet intervention",
+        (
+            '(prediabetes OR "impaired glucose tolerance" OR "insulin resistance") '
+            'AND (diet OR nutrition OR meal OR breakfast OR fiber OR protein OR '
+            '"Mediterranean diet" OR "glycemic index" OR "eating order")'
+        ),
+    ),
+    (
+        "PubMed prediabetes exercise intervention",
+        (
+            '(prediabetes OR "impaired glucose tolerance" OR "insulin resistance") '
+            'AND (exercise OR "physical activity" OR walking OR aerobic OR '
+            '"resistance training" OR "strength training" OR sedentary)'
+        ),
+    ),
+    (
+        "PubMed prediabetes sleep intervention",
+        (
+            '(prediabetes OR "impaired glucose tolerance" OR "insulin resistance") '
+            'AND (sleep OR insomnia OR "sleep duration" OR "sleep quality" OR '
+            '"sleep apnea" OR circadian OR chronotype)'
+        ),
+    ),
+    (
         "PubMed prediabetes lifestyle intervention",
         (
             '(prediabetes OR "prediabetic state" OR "impaired fasting glucose" OR '
@@ -204,6 +228,41 @@ PRIORITY_TOPIC_TERMS = (
     "diabetes prevention",
     "national diabetes prevention program",
 )
+
+EDITORIAL_FOCUS_TERMS = {
+    "diet": (
+        "diet",
+        "nutrition",
+        "meal",
+        "breakfast",
+        "food",
+        "fiber",
+        "protein",
+        "carbohydrate",
+        "glycemic index",
+        "mediterranean diet",
+        "eating order",
+    ),
+    "sleep": (
+        "sleep",
+        "insomnia",
+        "sleep duration",
+        "sleep quality",
+        "sleep apnea",
+        "circadian",
+        "chronotype",
+    ),
+    "exercise": (
+        "exercise",
+        "physical activity",
+        "walking",
+        "aerobic",
+        "resistance training",
+        "strength training",
+        "sedentary",
+        "muscle",
+    ),
+}
 
 ARTICLE_SCHEMA = {
     "type": "object",
@@ -669,6 +728,26 @@ def priority_topic_score(paper: PaperItem) -> int:
     return score
 
 
+def editorial_focus(paper: PaperItem) -> str:
+    title = paper.title.lower()
+    evidence = evidence_text(paper).lower()
+    scores = {
+        focus: sum(5 for term in terms if term in title)
+        + sum(1 for term in terms if term in evidence)
+        for focus, terms in EDITORIAL_FOCUS_TERMS.items()
+    }
+    focus, score = max(scores.items(), key=lambda item: item[1])
+    return focus if score > 0 else "general"
+
+
+def destination_topic(paper: PaperItem) -> str:
+    return "diet" if editorial_focus(paper) == "diet" else (
+        "exercise-sleep"
+        if editorial_focus(paper) in {"sleep", "exercise"}
+        else "prediabetes"
+    )
+
+
 def stable_id(link: str, title: str) -> str:
     return hashlib.sha256((link or title).encode("utf-8")).hexdigest()[:16]
 
@@ -700,9 +779,18 @@ def thumbnail_for_paper(paper: PaperItem) -> str:
 
 
 def build_prompt(paper: PaperItem, matched: list[str]) -> str:
+    focus = editorial_focus(paper)
     return textwrap.dedent(
         f"""
         You are the GLUCOLIT medical research editor.
+
+        Editorial focus for this draft: {focus}. Keep the article centered on
+        this focus. For diet, translate evidence into realistic meal structure,
+        food swaps, portions, and eating scenarios. For exercise, explain
+        frequency, intensity, progression, safety, and adherence without
+        inventing a prescription. For sleep, explain schedule, duration,
+        quality, sleep-disorder signals, and practical sleep routines. Do not
+        dilute the article into a generic prediabetes overview.
 
         Follow the GLUCOLIT two-step editorial SOP:
         1. First extract an evidence card from the source.
@@ -1399,6 +1487,7 @@ def article_to_mdx(
         f"draft: {str(draft).lower()}",
         f"reviewRequired: {str(bool(quality_issues)).lower()}",
         f"qualityStatus: {quality_status}",
+        f"topic: {destination_topic(paper)}",
     ]
     if quality_issues:
         frontmatter.append(f"qualityIssues: {yaml_string_list(quality_issues)}")
@@ -1554,7 +1643,7 @@ def candidate_papers(limit_per_journal: int, max_candidates: int) -> list[PaperI
             print(f"Open-access enrichment failed for {paper.title}: {exc}")
             enriched.append(paper)
 
-    return sorted(
+    ranked = sorted(
         enriched,
         key=lambda paper: (
             priority_topic_score(paper),
@@ -1566,6 +1655,21 @@ def candidate_papers(limit_per_journal: int, max_candidates: int) -> list[PaperI
         ),
         reverse=True,
     )
+    buckets = {
+        focus: [paper for paper in ranked if editorial_focus(paper) == focus]
+        for focus in ("diet", "sleep", "exercise")
+    }
+    other = [
+        paper
+        for paper in ranked
+        if editorial_focus(paper) not in {"diet", "sleep", "exercise"}
+    ]
+    balanced: list[PaperItem] = []
+    while any(buckets.values()):
+        for focus in ("diet", "sleep", "exercise"):
+            if buckets[focus]:
+                balanced.append(buckets[focus].pop(0))
+    return (balanced + other)[:max_candidates]
 
 
 def run(args: argparse.Namespace) -> int:

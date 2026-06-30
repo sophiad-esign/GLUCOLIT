@@ -397,6 +397,7 @@ const readArticle = (slug) => {
       ? "needs_revision"
       : frontmatterValue(frontmatter, "qualityStatus") || "ready",
     qualityIssues,
+    topic: frontmatterValue(frontmatter, "topic") || undefined,
     contentPath: `packages/cms/src/collections/blog/content/${slug}/en.mdx`,
     tags,
     categoryLabels: inferCategoryLabels(textForLabels, tags),
@@ -433,6 +434,7 @@ export type ReviewArticleManifestItem = {
   reviewRequired: boolean;
   qualityStatus: string;
   qualityIssues: string[];
+  topic?: string;
   contentPath: string;
   tags: string[];
   categoryLabels: string[];

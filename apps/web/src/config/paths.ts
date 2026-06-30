@@ -26,6 +26,9 @@ const pathsConfig = {
     articles: {
       index: `${ADMIN_PREFIX}/articles`,
     },
+    ogtt: {
+      index: `${ADMIN_PREFIX}/ogtt`,
+    },
     drafts: {
       index: `${ADMIN_PREFIX}/drafts`,
       draft: (slug: string) => `${ADMIN_PREFIX}/drafts/${slug}`,

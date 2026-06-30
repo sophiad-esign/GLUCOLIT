@@ -20,6 +20,7 @@ type ReviewRecord = {
   reviewRequired: boolean;
   qualityStatus: string;
   qualityIssues: string[];
+  topic?: string;
   contentPath: string;
   tags: string[];
   categoryLabels: string[];
@@ -431,6 +432,7 @@ const readLiveArticle = (slug: string, raw: string): ReviewRecord | null => {
       ? "needs_revision"
       : frontmatterValue(frontmatter, "qualityStatus") || "ready",
     qualityIssues,
+    topic: frontmatterValue(frontmatter, "topic") || undefined,
     contentPath: `${CONTENT_ROOT}/${slug}/en.mdx`,
     tags,
     categoryLabels: categoryLabelsFromTags(tags),

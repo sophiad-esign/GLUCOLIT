@@ -908,6 +908,19 @@ export async function publishDraftAction(formData: FormData) {
   const forcePublish = getFormString(formData, "forcePublish") === "true";
   const slug = getFormString(formData, "slug");
   const title = getFormString(formData, "title") || slug;
+  const topic = getFormString(formData, "topic");
+
+  const allowedTopics = new Set([
+    "prediabetes",
+    "cgm",
+    "diet",
+    "exercise-sleep",
+    "stress-emotion",
+    "metabolic-health",
+  ]);
+  if (!allowedTopics.has(topic)) {
+    redirectWithError("Please choose a valid destination section.");
+  }
 
   assertContentPath(contentPath);
 
@@ -942,6 +955,7 @@ export async function publishDraftAction(formData: FormData) {
     ["draft", "false"],
     ["reviewRequired", "false"],
     ["qualityStatus", "ready"],
+    ["topic", topic],
     ...(forcePublish ? ([["manualOverride", "true"]] as const) : []),
   ].reduce(
     (content, [key, value]) =>

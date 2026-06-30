@@ -14,6 +14,10 @@ import { Icons } from "@workspace/ui-web/icons";
 
 import { pathsConfig } from "~/config/paths";
 import { getMetadata } from "~/lib/metadata";
+import {
+  getPrimaryTopicCluster,
+  TOPIC_CLUSTERS,
+} from "~/modules/articles/data";
 import { readingBlocks } from "~/modules/articles/reading-blocks";
 import { getAdminReviewArticleBySlug } from "~/modules/articles/review-files";
 import { TurboLink } from "~/modules/common/turbo-link";
@@ -117,6 +121,21 @@ export default async function DraftPreviewPage({
               name="title"
               value={article.titleEn || article.titleZh}
             />
+            <label className="mb-2 block text-left text-xs font-semibold text-slate-600 dark:text-slate-300">
+              发布到板块
+              <select
+                name="topic"
+                defaultValue={getPrimaryTopicCluster(article).slug}
+                required
+                className="mt-1 h-10 w-full rounded-md border bg-white px-2 text-sm text-slate-900 dark:bg-slate-950 dark:text-white"
+              >
+                {TOPIC_CLUSTERS.map((topic) => (
+                  <option key={topic.slug} value={topic.slug}>
+                    {topic.title}
+                  </option>
+                ))}
+              </select>
+            </label>
             {article.reviewRequired ? (
               <input type="hidden" name="forcePublish" value="true" />
             ) : null}

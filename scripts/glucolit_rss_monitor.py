@@ -341,8 +341,11 @@ def build_prompt(item: FeedItem, matched: list[str]) -> str:
         what the study did, what it did not prove, and what a reader can
         cautiously take away. Avoid academic jargon when possible.
 
-        The Chinese section should follow this structure when the abstract has
-        enough substance: 研究背景, 核心发现, 你的解读与批判, 临床/商业启发.
+        The Chinese section should follow this reader-facing structure when the
+        abstract has enough substance: 先说结论, 为什么值得关注,
+        证据告诉我们什么, 应该怎样理解, 可以怎么做. Do not expose Markdown
+        heading markers or editorial labels such as "你的解读与批判" and
+        "临床/商业启发" in public-facing copy.
         The English version should be a real plain-language commentary, not a
         keyword screening note.
 

@@ -17,6 +17,11 @@ const links = [
     icon: Icons.BookOpen,
   },
   {
+    href: pathsConfig.admin.ogtt.index,
+    label: "OGTT 分析",
+    icon: Icons.TrendingUp,
+  },
+  {
     href: pathsConfig.marketing.articles.index,
     label: "公开文章",
     icon: Icons.ArrowUpRight,

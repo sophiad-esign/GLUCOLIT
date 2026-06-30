@@ -11,6 +11,8 @@ import {
   TOPIC_CLUSTERS,
 } from "~/modules/articles/data";
 import { TurboLink } from "~/modules/common/turbo-link";
+import { FoodAnalyzer } from "~/modules/food/food-analyzer";
+import { OgttAnalyzer } from "~/modules/ogtt/ogtt-analyzer";
 
 export function generateStaticParams() {
   return TOPIC_CLUSTERS.map((topic) => ({ topic: topic.slug }));
@@ -120,6 +122,42 @@ export default async function TopicGuidePage({
           </ul>
         </div>
       </section>
+
+      {topic.slug === "prediabetes" ? (
+        <section className="mt-10" id="ogtt-analyzer">
+          <div className="mb-6 max-w-3xl">
+            <p className="text-sm font-semibold tracking-[0.16em] text-[#2d5a87] uppercase">
+              OGTT report analyzer
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-normal text-slate-950 dark:text-white">
+              上传报告，一键解读 OGTT 指标
+            </h2>
+            <p className="mt-3 text-base leading-8 text-slate-600 dark:text-slate-300">
+              自动识别空腹与服糖后血糖、胰岛素和
+              HbA1c，先提示需要人工校对的字段，再给出风险分层与生活方式行动方案。
+            </p>
+          </div>
+          <OgttAnalyzer />
+        </section>
+      ) : null}
+
+      {topic.slug === "diet" ? (
+        <section className="mt-10" id="food-analyzer">
+          <div className="mb-6 max-w-3xl">
+            <p className="text-sm font-semibold tracking-[0.16em] text-[#2d5a87] uppercase">
+              AI meal analyzer
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-normal text-slate-950 dark:text-white">
+              拍下这一餐，获得糖前期饮食建议
+            </h2>
+            <p className="mt-3 text-base leading-8 text-slate-600 dark:text-slate-300">
+              AI
+              识别餐盘中的食物和目测份量，分析碳水质量、蛋白质、蔬菜与纤维搭配，并给出下一餐可以直接执行的调整建议。
+            </p>
+          </div>
+          <FoodAnalyzer />
+        </section>
+      ) : null}
 
       <section className="mt-10">
         <div className="mb-6 flex flex-col justify-between gap-3 sm:flex-row sm:items-end">

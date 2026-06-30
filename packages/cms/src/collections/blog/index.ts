@@ -26,6 +26,7 @@ export const blog = defineCollection({
       .default("ready"),
     qualityIssues: z.array(z.string()).optional().default([]),
     manualOverride: z.boolean().optional().default(false),
+    topic: z.string().optional(),
     content: z.string(),
   }),
   transform: async (document, context) => {
