@@ -59,6 +59,7 @@ jobs:
             echo ""
             echo "- Schedule: daily at 09:15 Los Angeles time during PDT"
             echo "- Daily target: up to 6 review drafts, balanced across diet, sleep, and exercise. Candidates are interleaved by editorial focus; drafts that need more work are saved with reviewRequired: true instead of being discarded."
+            echo "- Editorial priority: lifestyle education first. Drug-dominant trials and medication articles are strongly down-ranked or skipped."
             echo "- Discovery: PubMed first, PubMed Central open full-text excerpts when available, plus Europe PMC and Unpaywall enrichment"
             echo "- Output: MDX drafts under \`packages/cms/src/collections/blog/content\`"
             echo "- Public safety: generated posts keep \`draft: true\` until manually reviewed"

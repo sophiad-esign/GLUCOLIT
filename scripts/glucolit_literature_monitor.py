@@ -187,7 +187,34 @@ NEGATIVE_KEYWORDS = {
     "diabetic ketoacidosis": -4,
     "retinopathy": -2,
     "nephropathy": -2,
+    "pharmacological": -8,
+    "pharmacotherapy": -8,
+    "drug therapy": -8,
+    "medication": -6,
+    "metformin": -7,
+    "semaglutide": -9,
+    "liraglutide": -9,
+    "tirzepatide": -9,
+    "glp-1 receptor agonist": -9,
+    "sglt2 inhibitor": -9,
+    "dpp-4 inhibitor": -9,
 }
+
+DRUG_DOMINANT_TERMS = (
+    "pharmacological",
+    "pharmacotherapy",
+    "drug therapy",
+    "medication",
+    "metformin",
+    "semaglutide",
+    "liraglutide",
+    "tirzepatide",
+    "glp-1",
+    "sglt2",
+    "dpp-4",
+    "pioglitazone",
+    "insulin therapy",
+)
 
 CORE_TOPIC_TERMS = (
     "prediabetes",
@@ -716,6 +743,13 @@ def is_direct_glucolit_topic(title: str, evidence: str) -> bool:
     has_core = any(term in text for term in CORE_TOPIC_TERMS)
     has_action = any(term in text for term in ACTION_OR_PREVENTION_TERMS)
     return has_core and has_action
+
+
+def is_drug_dominant(paper: PaperItem) -> bool:
+    title = paper.title.lower()
+    has_drug_title = any(term in title for term in DRUG_DOMINANT_TERMS)
+    has_lifestyle_focus = editorial_focus(paper) in {"diet", "sleep", "exercise"}
+    return has_drug_title and not has_lifestyle_focus
 
 
 def priority_topic_score(paper: PaperItem) -> int:
@@ -1682,6 +1716,7 @@ def run(args: argparse.Namespace) -> int:
     created_count = 0
     scanned = 0
     skipped_score = 0
+    skipped_drug = 0
     skipped_no_abstract = 0
     skipped_openai = 0
     skipped_quality = 0
@@ -1730,6 +1765,13 @@ def run(args: argparse.Namespace) -> int:
             print(f"Skip not direct GLUCOLIT topic: {paper.title}")
             state["items"][item_id]["skip_reason"] = "not directly about prediabetes prevention or insulin resistance"
             skipped_score += 1
+            continue
+        if is_drug_dominant(paper):
+            print(f"Skip drug-dominant paper: {paper.title}")
+            state["items"][item_id]["skip_reason"] = (
+                "drug-dominant topic; lifestyle education is prioritized"
+            )
+            skipped_drug += 1
             continue
         if score < args.min_score:
             print(f"Skip score={score}: {paper.title}")
@@ -1836,6 +1878,7 @@ def run(args: argparse.Namespace) -> int:
                 f"- LLM generation attempts: {llm_attempts}\n"
                 f"- Skipped because abstract was missing/short: {skipped_no_abstract}\n"
                 f"- Skipped by relevance score: {skipped_score}\n"
+                f"- Skipped because drug treatment dominated the topic: {skipped_drug}\n"
                 f"- Skipped because OpenAI returned no article: {skipped_openai}\n"
                 f"- Saved as needs-revision drafts: {saved_needs_revision}\n"
                 f"- Still carrying quality issues: {skipped_quality}\n"

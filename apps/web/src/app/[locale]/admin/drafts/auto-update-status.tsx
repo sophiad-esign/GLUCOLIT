@@ -66,8 +66,10 @@ export function AutoUpdateStatus({ canPublish }: { canPublish: boolean }) {
             across diet, sleep, and exercise, with a daily ceiling of 6 review
             drafts. Low-quality model output, missing abstracts, or weak
             relevance can reduce the actual count. The monitor uses abstracts or
-            legal open-access links, never scraped paywalled full text. Posts
-            only become public after manual review and one-click publishing.
+            legal open-access links, never scraped paywalled full text.
+            Drug-dominant studies are down-ranked or skipped so practical
+            lifestyle education stays the priority. Posts only become public
+            after manual review and one-click publishing.
           </p>
         </div>
 
