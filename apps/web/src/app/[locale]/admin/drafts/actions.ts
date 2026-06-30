@@ -332,87 +332,87 @@ const countReadableParagraphs = (value: string) =>
     .map((part) => part.trim())
     .filter((part) => countCjk(part) >= 35).length;
 
-const readerSectionLabels = [
-  "先说结论",
-  "为什么值得关注",
-  "证据告诉我们什么",
-  "应该怎样理解",
-  "可以怎么做",
+const forbiddenPublicPhrases = [
+  "\u5148\u8bf4\u7ed3\u8bba",
+  "\u4e3a\u4ec0\u4e48\u503c\u5f97\u5173\u6ce8",
+  "\u8bc1\u636e\u544a\u8bc9\u6211\u4eec\u4ec0\u4e48",
+  "\u5e94\u8be5\u600e\u6837\u7406\u89e3",
+  "\u53ef\u4ee5\u600e\u4e48\u505a",
+  "\u7ed9\u7cd6\u524d\u8bfb\u8005",
+  "\u7ed9\u5065\u5eb7\u79d1\u6280\u884c\u4e1a",
+  "\u4f60\u7684\u6279\u5224\u4e0e\u89e3\u8bfb",
+  "\u4f60\u7684\u89e3\u8bfb\u4e0e\u6279\u5224",
+  "\u4e34\u5e8a/\u5546\u4e1a\u542f\u53d1",
 ];
 
 const normalizeReaderArticle = (value: string) =>
   value
     .replace(/^#{1,6}\s*/gm, "")
-    .replace(/研究背景/g, "为什么值得关注")
-    .replace(/核心发现/g, "证据告诉我们什么")
-    .replace(/你的解读与批判/g, "应该怎样理解")
-    .replace(/临床\/商业启发/g, "可以怎么做")
-    .replace(/A[.、．：:]\s*给糖前读者的行动建议/g, "给糖前读者")
-    .replace(/B[.、．：:]\s*给健康科技行业的启发/g, "给健康科技行业")
+    .replace(
+      /^(\u7814\u7a76\u80cc\u666f|\u6838\u5fc3\u53d1\u73b0|\u4f60\u7684\u6279\u5224\u4e0e\u89e3\u8bfb|\u4f60\u7684\u89e3\u8bfb\u4e0e\u6279\u5224|\u4e34\u5e8a\/\u5546\u4e1a\u542f\u53d1)\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(
+      /^(\u5148\u8bf4\u7ed3\u8bba|\u4e3a\u4ec0\u4e48\u503c\u5f97\u5173\u6ce8|\u8bc1\u636e\u544a\u8bc9\u6211\u4eec\u4ec0\u4e48|\u5e94\u8be5\u600e\u6837\u7406\u89e3|\u53ef\u4ee5\u600e\u4e48\u505a)\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(
+      /^A[.\u3001\uff0e\uff1a:]\s*\u7ed9\u7cd6\u524d\u8bfb\u8005\u7684\u884c\u52a8\u5efa\u8bae\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(
+      /^B[.\u3001\uff0e\uff1a:]\s*\u7ed9\u5065\u5eb7\u79d1\u6280\u884c\u4e1a\u7684\u542f\u53d1\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(/^\u7ed9\u7cd6\u524d\u8bfb\u8005\s*[:\uff1a]?/gm, "")
+    .replace(/^\u7ed9\u5065\u5eb7\u79d1\u6280\u884c\u4e1a\s*[:\uff1a]?/gm, "")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
 
-const readerSection = (content: string, label: string) => {
-  const start = content.indexOf(label);
-
-  if (start < 0) {
-    return "";
-  }
-
-  const after = content.slice(start + label.length);
-  const nextIndexes = readerSectionLabels
-    .filter((next) => next !== label)
-    .map((next) => after.indexOf(next))
-    .filter((index) => index >= 0);
-  const end = nextIndexes.length > 0 ? Math.min(...nextIndexes) : after.length;
-
-  return after.slice(0, end).trim();
-};
-
 const evaluateRevisedArticle = (revised: RevisedArticle): QualityEvaluation => {
-  const bodyZh = normalizeReaderArticle(cleanMarkdown(revised.bodyZh ?? ""));
+  const rawBodyZh = cleanMarkdown(revised.bodyZh ?? "");
+  const bodyZh = normalizeReaderArticle(rawBodyZh);
   const bodyEn = cleanMarkdown(revised.bodyEn ?? "");
   const issues: string[] = [];
-  const headings = readerSectionLabels;
-
-  headings.forEach((heading) => {
-    if (!bodyZh.includes(heading)) {
-      issues.push(`Missing required section: ${heading}`);
-    }
-  });
-
-  const background = readerSection(bodyZh, "为什么值得关注");
-  const finding = readerSection(bodyZh, "证据告诉我们什么");
-  const critique = readerSection(bodyZh, "应该怎样理解");
-  const insight = readerSection(bodyZh, "可以怎么做");
+  const paragraphCount = countReadableParagraphs(bodyZh);
+  const evidenceSignals =
+    /(\u7814\u7a76|\u6570\u636e|\u6837\u672c|\u968f\u8bbf|\u961f\u5217|\u968f\u673a|\u89c2\u5bdf|\u7cfb\u7edf\u56de\u987e|\u8363\u8403|\u98ce\u9669|\u7ed3\u679c|\u53d1\u73b0|PubMed|DOI)/i.test(
+      bodyZh,
+    );
+  const boundarySignals =
+    /(\u4e0d\u80fd\u8bc1\u660e|\u76f8\u5173|\u56e0\u679c|\u5c40\u9650|\u4e0d\u4ee3\u8868|\u4ecd\u9700|\u6837\u672c|\u5916\u63a8|\u89c2\u5bdf\u6027|\u4e0d\u9002\u7528|\u4e0d\u80fd\u7b49\u540c)/.test(
+      bodyZh,
+    );
+  const actionSignals =
+    /(\u5efa\u8bae|\u53ef\u4ee5|\u4f18\u5148|\u8bb0\u5f55|\u76d1\u6d4b|\u590d\u67e5|\u8fd0\u52a8|\u996e\u98df|\u7761\u7720|\u54a8\u8be2|\u533b\u751f|\u4f53\u68c0|CGM|OGTT|HbA1c)/i.test(
+      bodyZh,
+    );
+  const insightSignals =
+    /(\u5065\u5eb7\u79d1\u6280|\u4ea7\u54c1|\u5e73\u53f0|\u5de5\u5177|\u6570\u636e|\u98ce\u9669\u5206\u5c42|\u670d\u52a1|\u4f9d\u4ece\u6027|\u7ba1\u7406|\u7cfb\u7edf|CGM|\u5e94\u7528)/i.test(
+      bodyZh,
+    );
 
   if (countCjk(bodyZh) < 1800) {
     issues.push(
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
     );
   }
-  if (countReadableParagraphs(bodyZh) < 12) {
+  if (paragraphCount < 12) {
     issues.push(
       "Chinese SOP article needs at least 12 short readable paragraphs.",
     );
   }
-  if (countCjk(background) < 80) {
-    issues.push("Research background is too short.");
+  if (!evidenceSignals) {
+    issues.push("Evidence narrative is too thin or missing.");
   }
-  if (countCjk(finding) < 120) {
-    issues.push("Core findings are too short or too vague.");
+  if (!boundarySignals) {
+    issues.push("Evidence limits and causality boundaries are missing.");
   }
-  if (countCjk(critique) < 650) {
-    issues.push("Interpretation and critique section is too short.");
+  if (!actionSignals) {
+    issues.push("Reader action guidance is missing.");
   }
-  if (countCjk(insight) < 350) {
-    issues.push("Clinical/business insight section is too short.");
-  }
-  if (!/给糖前读者/.test(insight)) {
-    issues.push("Clinical action subsection A is missing.");
-  }
-  if (!/给健康科技行业/.test(insight)) {
-    issues.push("Business insight subsection B is missing.");
+  if (!insightSignals) {
+    issues.push("Original GLUCOLIT system or health-tech insight is missing.");
   }
   if (
     /Original title:|Authors:|Journal\/source:|PubMed\/source link:|Evidence used:/i.test(
@@ -424,7 +424,19 @@ const evaluateRevisedArticle = (revised: RevisedArticle): QualityEvaluation => {
   if (/^[-*]\s*$/m.test(bodyZh)) {
     issues.push("Article contains empty bullet points.");
   }
-  if (/治愈|保证逆转|必然逆转|替代医生/.test(bodyZh)) {
+  if (/^\s*#{1,6}\s+/m.test(rawBodyZh)) {
+    issues.push("Article contains visible Markdown heading markers.");
+  }
+  forbiddenPublicPhrases.forEach((phrase) => {
+    if (rawBodyZh.includes(phrase)) {
+      issues.push("Article contains internal workflow label: " + phrase + ".");
+    }
+  });
+  if (
+    /(\u6cbb\u6108|\u6839\u6cbb|\u4fdd\u8bc1\u9006\u8f6c|\u5fc5\u7136\u9006\u8f6c|\u767e\u5206\u767e|\u66ff\u4ee3\u533b\u751f)/.test(
+      bodyZh,
+    )
+  ) {
     issues.push("Article contains overclaimed medical language.");
   }
   const englishWords = countEnglishWords(bodyEn);
@@ -442,7 +454,7 @@ const evaluateRevisedArticle = (revised: RevisedArticle): QualityEvaluation => {
 };
 
 const evaluateRawDraft = (raw: string): QualityEvaluation => {
-  const bodyZh = sectionText(raw, "## 原文精华摘要", [
+  const bodyZh = sectionText(raw, "## \u539f\u6587\u7cbe\u534e\u6458\u8981", [
     "## English Plain-Language Version",
     "## Source",
     "## Research Primer",
@@ -473,9 +485,9 @@ const buildRevisionAttemptRaw = (
     "",
     "## Previous SOP revision attempt",
     "",
-    "The previous attempt was still too thin. Continue from it, expand every weak section, and fix the listed issues. Do not restart with another short summary. The next answer must be substantially longer and more useful.",
+    "The previous attempt was still too thin. Continue from it, expand every weak part, and fix the listed issues. Do not restart with another short summary. The next answer must be substantially longer, more specific, and more useful.",
     "",
-    `Failed checks: ${evaluation.issues.join("; ")}`,
+    "Failed checks: " + evaluation.issues.join("; "),
     "",
     "Previous Chinese body",
     "",
@@ -499,91 +511,91 @@ const buildSopRevisionPrompt = (raw: string, qualityFeedback?: string[]) => {
   const date =
     metadataLine(raw, "Published or indexed date") ||
     frontmatterValue(raw, "publishedAt");
-  const currentZh = sectionText(raw, "## 原文精华摘要", [
-    "## English Plain-Language Version",
-    "## Source",
-  ]);
+  const currentZh = sectionText(
+    raw,
+    "## \u539f\u6587\u7cbe\u534e\u6458\u8981",
+    ["## English Plain-Language Version", "## Source"],
+  );
   const currentEn = sectionText(raw, "## English Plain-Language Version", [
     "## Source",
     "## Research Primer",
   ]);
+  const feedbackLines = qualityFeedback?.length
+    ? [
+        "The previous attempt failed these quality checks. Fix every item before returning JSON:",
+        "- " + qualityFeedback.join("\n- "),
+        "",
+      ]
+    : [];
 
-  return `
-Rewrite this GLUCOLIT draft into a publishable review draft. The current draft is too thin and still looks like metadata plus translation.
-
-${qualityFeedback?.length ? `The previous attempt failed these quality checks. Fix every item before returning JSON:\n- ${qualityFeedback.join("\n- ")}\n` : ""}
-
-Hard rules:
-- Use only the supplied source metadata, abstract/commentary fragments, DOI/PubMed links, and existing draft text. Do not invent sample sizes, statistics, populations, interventions, or outcomes that are not present.
-- Do not scrape or imply access to paywalled full text.
-- Move all metadata into the Research Primer. Do not put "Original title", "Authors", "Journal/source", "DOI", or "PubMed/source link" inside the Chinese article body.
-- Chinese article should read like a helpful medical science column, not like a peer reviewer. Avoid repeated openings such as "这项研究", "这篇论文", "研究者发现".
-- Paragraphs must be short. Each paragraph should be at most 5 visual lines on mobile, usually 80-140 Chinese characters. No giant blocks. No empty bullets.
-- Keep uncertainty and causality boundaries clear. Do not say cure, reverse, guaranteed, or personalized treatment unless the evidence actually supports it.
-- The final Chinese article must be long enough to publish: 1900-2600 Chinese characters across the required sections. If your answer is shorter, it is a failed answer.
-- The Chinese article must contain at least 12 short paragraphs across the five required sections. Do not collapse multiple ideas into one block.
-- Do not merely translate the abstract. Turn the evidence into a reader-friendly guide: what changed, why it matters, what can and cannot be concluded, and what a cautious reader can do next.
-- The output must look materially different from the input draft. Expand the analysis, split paragraphs, and add source-bounded explanation.
-- If the source does not provide exact numbers, explicitly say the source does not provide enough detail instead of inventing data.
-
-Required reader-facing Chinese body structure. Put each label on a separate
-line. Never prefix labels with #, ##, ###, or ####:
-先说结论
-80-140 Chinese characters. Give the useful takeaway immediately.
-
-为什么值得关注
-180-260 Chinese characters. Start from the reader's real-life problem, not from the paper.
-
-证据告诉我们什么
-420-620 Chinese characters. Explain the strongest source-bounded finding in daily language. If exact numbers are unavailable, explain the direction and boundary.
-
-应该怎样理解
-At least 900 Chinese characters. Explain meaning, limits, applicability, and what readers should not overclaim. This is the deepest section and should include 5-7 short paragraphs.
-
-可以怎么做
-At least 650 Chinese characters. Include the plain-text labels and give concrete but cautious actions:
-给糖前读者
-给健康科技行业
-
-Forbidden reader-facing text:
-- Any visible Markdown heading marker such as #, ##, ###, or ####.
-- 你的解读与批判, 临床/商业启发, or other internal editorial language.
-
-English body:
-- Under 220 English words.
-- Plain language, same conclusion, no long detail.
-
-Return JSON only:
-{
-  "titleZh": "...",
-  "titleEn": "...",
-  "descriptionZh": "...",
-  "descriptionEn": "...",
-  "bodyZh": "Markdown with the required Chinese headings",
-  "bodyEn": "Plain English paragraphs",
-  "takeawaysZh": ["...", "...", "...", "..."],
-  "takeawaysEn": ["...", "...", "...", "..."]
-}
-
-Source metadata:
-Original title: ${originalTitle}
-Authors: ${authors}
-Journal/source: ${source}
-DOI: ${doi}
-PubMed/source link: ${pubmed}
-Open-access link: ${openAccess}
-Evidence used: ${evidence}
-Published or indexed date: ${date}
-
-Current Chinese fragment:
-${currentZh}
-
-Current English fragment:
-${currentEn}
-
-Full current draft excerpt:
-${existingBody}
-`.trim();
+  return [
+    "Rewrite this GLUCOLIT draft into a publishable public science article. The current draft is too thin, too templated, or too close to metadata plus translation.",
+    "",
+    ...feedbackLines,
+    "Hard rules:",
+    "- Use only the supplied source metadata, abstract/commentary fragments, DOI/PubMed links, and existing draft text. Do not invent sample sizes, statistics, populations, interventions, or outcomes that are not present.",
+    "- Do not scrape or imply access to paywalled full text.",
+    "- Move all metadata into Research Primer. Do not put Original title, Authors, Journal/source, DOI, or PubMed/source link inside the Chinese body.",
+    "- The Chinese body must read like a finished medical science column for ordinary readers, not a reviewer note and not a labeled outline.",
+    "- Paragraphs must be short: usually 80-140 Chinese characters, with blank lines between paragraphs. No giant blocks. No empty bullets.",
+    "- Keep uncertainty and causality boundaries clear. Do not say cure, reverse, guaranteed, or personalized treatment unless the source supports it.",
+    "- The final Chinese body must be 1900-2600 Chinese characters and at least 12 short paragraphs.",
+    "- Do not merely translate the abstract. Explain the reader problem, the evidence, the limits, and the practical meaning.",
+    "- The output must look materially different from the input draft. Expand the analysis, split paragraphs, and add source-bounded explanation.",
+    "- If the source does not provide exact numbers, say the source does not provide enough detail instead of inventing data.",
+    "",
+    "Best-practice public science article SOP. This architecture is invisible to readers and must not be printed as labels:",
+    "1. Open with a real reader scene or decision that makes the research matter.",
+    "2. Give the useful takeaway naturally in the first two paragraphs, without a label.",
+    "3. Tell the evidence story: what question the paper asked, what population or data it used, and what direction the result points to.",
+    "4. Translate the mechanism into everyday language so readers understand why the result may matter.",
+    "5. Explain the boundary: association versus causation, sample limits, population limits, and what the paper cannot prove.",
+    "6. Turn the finding into cautious, practical next steps for people with prediabetes or metabolic risk.",
+    "7. Add a GLUCOLIT-style systems insight about measurement, adherence, risk stratification, product design, or care delivery.",
+    "8. Close with 3-5 memorable reader notes written as natural prose or concise bullets.",
+    "",
+    "Never print these internal workflow labels inside bodyZh: " +
+      forbiddenPublicPhrases.join(", ") +
+      ".",
+    "Never use visible Markdown heading markers inside bodyZh.",
+    "",
+    "English body:",
+    "- 80-220 English words.",
+    "- Plain language, same conclusion, no long detail.",
+    "",
+    "Return JSON only:",
+    "{",
+    '  "titleZh": "...",',
+    '  "titleEn": "...",',
+    '  "descriptionZh": "...",',
+    '  "descriptionEn": "...",',
+    '  "bodyZh": "Reader-facing Chinese article body without visible section labels or heading markers",',
+    '  "bodyEn": "Plain English paragraphs",',
+    '  "takeawaysZh": ["...", "...", "...", "..."],',
+    '  "takeawaysEn": ["...", "...", "...", "..."]',
+    "}",
+    "",
+    "Source metadata:",
+    "Original title: " + originalTitle,
+    "Authors: " + authors,
+    "Journal/source: " + source,
+    "DOI: " + doi,
+    "PubMed/source link: " + pubmed,
+    "Open-access link: " + openAccess,
+    "Evidence used: " + evidence,
+    "Published or indexed date: " + date,
+    "",
+    "Current Chinese fragment:",
+    currentZh,
+    "",
+    "Current English fragment:",
+    currentEn,
+    "",
+    "Full current draft excerpt:",
+    existingBody,
+  ]
+    .join("\n")
+    .trim();
 };
 
 const llmConfig = (): LlmConfig | null => {

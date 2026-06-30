@@ -747,30 +747,27 @@ def build_prompt(paper: PaperItem, matched: list[str]) -> str:
           "这项研究", "这篇报告", or "研究者发现". Start from the reader's
           problem and the source topic, not from manuscript-review narration.
 
-        Required reader-facing structure inside plain_zh. Put each label on a
-        separate line, but NEVER prefix it with #, ##, ###, or ####:
-        先说结论
-        80-140 Chinese characters. Give the useful takeaway immediately.
-
-        为什么值得关注
-        120-220 Chinese characters. Start from the reader's real-life problem,
-        not from "this study".
-
-        证据告诉我们什么
-        300-450 Chinese characters. Explain the source-bounded result in daily
-        language. Include useful numbers only when they exist in the source.
-
-        应该怎样理解
-        At least 1100 Chinese characters. Explain meaning, uncertainty,
-        applicability, blind spots, and what readers should not overclaim.
-
-        可以怎么做
-        At least 500 Chinese characters. Use two plain-text labels without any
-        Markdown heading markers:
-        给糖前读者
-        给健康科技行业
-        Original GLUCOLIT insight about care, behavior design, product
-        opportunities, or patient education. No personal medical advice.
+        Invisible article architecture for plain_zh. This is a writing plan,
+        not public copy. Do NOT print these steps as labels:
+        - Open with a concrete reader scene and a useful takeaway in the first
+          two paragraphs.
+        - Explain why the topic matters with a daily-life analogy.
+        - Translate the source evidence: question, population,
+          intervention/exposure, comparison, outcomes, and strongest
+          source-bounded finding. Use numbers only when the source provides
+          them.
+        - Explain mechanism in plain language, then explain uncertainty and
+          limits: association vs causation, sample applicability, missing data,
+          and what readers should not overclaim.
+        - Convert evidence into cautious, practical actions a reader can
+          discuss with a clinician. Do not give personal medical advice.
+        - Add original GLUCOLIT insight for behavior design, care workflow,
+          product/data opportunities, or patient education when relevant.
+        - End with 3-5 memorable takeaways in natural language.
+        Do not print internal workflow labels, editor notes, checklist labels,
+        or review-template language in plain_zh or plain_en.
+        Never use visible Markdown heading markers inside
+        plain_zh or plain_en.
 
         Return strict JSON with:
         title_en, title_zh, description_en, description_zh,
@@ -827,20 +824,17 @@ def build_revision_prompt(
         - Chinese paragraphs must be short and readable. One paragraph should
           usually contain 2-4 sentences and stay under about 150 Chinese
           characters. Break long blocks aggressively.
-        - Use these reader-facing Chinese section labels exactly, each on its
-          own line and without #, ##, ###, or ####:
-          先说结论
-          为什么值得关注
-          证据告诉我们什么
-          应该怎样理解
-          可以怎么做
-          给糖前读者
-          给健康科技行业
-        - Never use the phrases `你的解读与批判`, `临床/商业启发`, or visible
-          Markdown heading markers in the article body.
-        - `证据告诉我们什么` must stay within 450 Chinese characters.
-        - `应该怎样理解` should be the main original commentary, not a
-          rewritten abstract.
+        - Use an invisible article architecture, not visible template labels:
+          reader scene, evidence story, mechanism explanation, uncertainty and
+          limits, cautious actions, original GLUCOLIT insight, and memorable
+          closing takeaways.
+        - Never print internal workflow labels, editor notes, checklist labels,
+          or review-template language in the public article body.
+        - Never use visible Markdown heading markers in
+          plain_zh or plain_en.
+        - The evidence story should be compact and source-bounded. The
+          interpretation and action parts should be the main original
+          commentary, not a rewritten abstract.
         - Remove empty bullets and any human-review warning from the article
           body.
         - Return strict JSON with the same schema as the draft.
@@ -1060,12 +1054,17 @@ def has_empty_markdown_bullets(value: str) -> bool:
     return bool(re.search(r"(?m)^\s*[-*]\s*$", value))
 
 
-REQUIRED_ZH_SECTIONS = [
-    "先说结论",
-    "为什么值得关注",
-    "证据告诉我们什么",
-    "应该怎样理解",
-    "可以怎么做",
+FORBIDDEN_PUBLIC_PHRASES = [
+    "\u5148\u8bf4\u7ed3\u8bba",
+    "\u4e3a\u4ec0\u4e48\u503c\u5f97\u5173\u6ce8",
+    "\u8bc1\u636e\u544a\u8bc9\u6211\u4eec\u4ec0\u4e48",
+    "\u5e94\u8be5\u600e\u6837\u7406\u89e3",
+    "\u53ef\u4ee5\u600e\u4e48\u505a",
+    "\u7ed9\u7cd6\u524d\u8bfb\u8005",
+    "\u7ed9\u5065\u5eb7\u79d1\u6280\u884c\u4e1a",
+    "\u4f60\u7684\u6279\u5224\u4e0e\u89e3\u8bfb",
+    "\u4f60\u7684\u89e3\u8bfb\u4e0e\u6279\u5224",
+    "\u4e34\u5e8a/\u5546\u4e1a\u542f\u53d1",
 ]
 
 REVIEWER_VOICE_PHRASES = [
@@ -1081,12 +1080,33 @@ REVIEWER_VOICE_PHRASES = [
     "研究者发现",
 ]
 
+def count_readable_paragraphs(value: str) -> int:
+    paragraphs = [
+        part.strip()
+        for part in re.split(r"\n{2,}", value.replace("\r\n", "\n").replace("\r", "\n"))
+        if part.strip()
+    ]
+    return sum(1 for paragraph in paragraphs if count_cjk(paragraph) >= 35)
 
-def section_text(markdown: str, heading: str) -> str:
-    next_labels = "|".join(re.escape(label) for label in REQUIRED_ZH_SECTIONS)
-    pattern = rf"(?s)(?:^|\n)\s*{re.escape(heading)}\s*\n(.*?)(?=\n\s*(?:{next_labels})\s*\n|\Z)"
-    match = re.search(pattern, markdown)
-    return match.group(1).strip() if match else ""
+
+def has_evidence_signals(value: str) -> bool:
+    signals = ["人群", "样本", "研究", "结果", "风险", "数据", "观察", "分析", "发现"]
+    return sum(1 for signal in signals if signal in value) >= 3
+
+
+def has_boundary_signals(value: str) -> bool:
+    signals = ["不能证明", "相关", "因果", "局限", "不代表", "仍需要", "适用", "可能"]
+    return sum(1 for signal in signals if signal in value) >= 2
+
+
+def has_action_signals(value: str) -> bool:
+    signals = ["可以", "建议", "优先", "记录", "复查", "咨询", "运动", "饮食", "睡眠", "体重"]
+    return sum(1 for signal in signals if signal in value) >= 3
+
+
+def has_original_insight(value: str) -> bool:
+    signals = ["干预", "依从", "行为", "工具", "监测", "产品", "流程", "管理", "数据", "反馈"]
+    return sum(1 for signal in signals if signal in value) >= 3
 
 
 def reviewer_voice_count(text: str) -> int:
@@ -1177,23 +1197,22 @@ def article_quality_issues(article: dict[str, Any] | None) -> list[str]:
         issues.append("English plain-language article is short")
     if count_cjk(plain_zh) < 2200:
         issues.append("Chinese commentary is short for the required SOP structure")
-    missing_sections = [
-        heading for heading in REQUIRED_ZH_SECTIONS if heading not in plain_zh
+    if count_readable_paragraphs(plain_zh) < 10:
+        issues.append("Chinese article needs more short readable paragraphs")
+    leaked_labels = [
+        phrase for phrase in FORBIDDEN_PUBLIC_PHRASES if phrase in plain_text
     ]
-    if missing_sections:
-        issues.append(f"missing Chinese SOP sections: {', '.join(missing_sections)}")
-    if re.search(r"(?m)^\s*#{1,6}\s+", plain_zh):
+    if leaked_labels:
+        issues.append(f"contains public-facing template labels: {', '.join(leaked_labels)}")
+    if re.search(r"(?m)^\s*#{1,6}\s+", plain_text):
         issues.append("contains visible Markdown heading markers")
-    if "你的解读与批判" in plain_zh or "临床/商业启发" in plain_zh:
-        issues.append("contains internal editorial labels")
-    core = section_text(plain_zh, "证据告诉我们什么")
-    if core and count_cjk(core) > 480:
-        issues.append("Chinese evidence section is longer than the 450-character target")
-    critique = section_text(plain_zh, "应该怎样理解")
-    if critique and count_cjk(critique) < 1300:
+    if not has_evidence_signals(plain_zh):
+        issues.append("Chinese evidence story is too thin")
+    if not has_boundary_signals(plain_zh):
         issues.append("Chinese interpretation and critique section is short")
-    insight = section_text(plain_zh, "可以怎么做")
-    if insight and count_cjk(insight) < 420:
+    if not has_action_signals(plain_zh):
+        issues.append("Chinese practical action guidance is too thin")
+    if not has_original_insight(plain_zh):
         issues.append("Chinese clinical/business insight section is short")
     if reviewer_voice_count(plain_text) > 4:
         issues.append("uses reviewer voice too often")
@@ -1707,7 +1726,7 @@ def run(args: argparse.Namespace) -> int:
     if summary_path:
         with open(summary_path, "a", encoding="utf-8") as summary_file:
             summary_file.write(
-                "\n### Run result\n\n"
+                "\n## Run result\n\n"
                 f"- Scanned candidate papers: {scanned}\n"
                 f"- Created draft articles: {reported_created}\n"
                 f"- LLM generation attempts: {llm_attempts}\n"
@@ -1718,7 +1737,7 @@ def run(args: argparse.Namespace) -> int:
                 f"- Still carrying quality issues: {skipped_quality}\n"
             )
             if LLM_ERRORS:
-                summary_file.write("\n### LLM error samples\n\n")
+                summary_file.write("\n## LLM error samples\n\n")
                 for error in LLM_ERRORS[:3]:
                     summary_file.write(f"- `{error[:500]}`\n")
     if skipped_openai > 0 and reported_created == 0:

@@ -193,55 +193,66 @@ const countReadableParagraphs = (value: string) =>
     .map((part) => part.trim())
     .filter((part) => countCjk(part) >= 35).length;
 
-const readerSectionLabels = [
-  "先说结论",
-  "为什么值得关注",
-  "证据告诉我们什么",
-  "应该怎样理解",
-  "可以怎么做",
+const forbiddenPublicPhrases = [
+  "\u5148\u8bf4\u7ed3\u8bba",
+  "\u4e3a\u4ec0\u4e48\u503c\u5f97\u5173\u6ce8",
+  "\u8bc1\u636e\u544a\u8bc9\u6211\u4eec\u4ec0\u4e48",
+  "\u5e94\u8be5\u600e\u6837\u7406\u89e3",
+  "\u53ef\u4ee5\u600e\u4e48\u505a",
+  "\u7ed9\u7cd6\u524d\u8bfb\u8005",
+  "\u7ed9\u5065\u5eb7\u79d1\u6280\u884c\u4e1a",
+  "\u4f60\u7684\u6279\u5224\u4e0e\u89e3\u8bfb",
+  "\u4f60\u7684\u89e3\u8bfb\u4e0e\u6279\u5224",
+  "\u4e34\u5e8a/\u5546\u4e1a\u542f\u53d1",
 ];
 
 const normalizeReaderArticle = (value: string) =>
   value
     .replace(/^#{1,6}\s*/gm, "")
-    .replace(/研究背景/g, "为什么值得关注")
-    .replace(/核心发现/g, "证据告诉我们什么")
-    .replace(/你的解读与批判/g, "应该怎样理解")
-    .replace(/临床\/商业启发/g, "可以怎么做")
-    .replace(/A[.、．：:]\s*给糖前读者的行动建议/g, "给糖前读者")
-    .replace(/B[.、．：:]\s*给健康科技行业的启发/g, "给健康科技行业")
+    .replace(
+      /^(\u7814\u7a76\u80cc\u666f|\u6838\u5fc3\u53d1\u73b0|\u4f60\u7684\u6279\u5224\u4e0e\u89e3\u8bfb|\u4f60\u7684\u89e3\u8bfb\u4e0e\u6279\u5224|\u4e34\u5e8a\/\u5546\u4e1a\u542f\u53d1)\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(
+      /^(\u5148\u8bf4\u7ed3\u8bba|\u4e3a\u4ec0\u4e48\u503c\u5f97\u5173\u6ce8|\u8bc1\u636e\u544a\u8bc9\u6211\u4eec\u4ec0\u4e48|\u5e94\u8be5\u600e\u6837\u7406\u89e3|\u53ef\u4ee5\u600e\u4e48\u505a)\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(
+      /^A[.\u3001\uff0e\uff1a:]\s*\u7ed9\u7cd6\u524d\u8bfb\u8005\u7684\u884c\u52a8\u5efa\u8bae\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(
+      /^B[.\u3001\uff0e\uff1a:]\s*\u7ed9\u5065\u5eb7\u79d1\u6280\u884c\u4e1a\u7684\u542f\u53d1\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(/^\u7ed9\u7cd6\u524d\u8bfb\u8005\s*[:\uff1a]?/gm, "")
+    .replace(/^\u7ed9\u5065\u5eb7\u79d1\u6280\u884c\u4e1a\s*[:\uff1a]?/gm, "")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
 
-const readerSection = (content: string, label: string) => {
-  const start = content.indexOf(label);
-  if (start < 0) return "";
+const hasEvidenceSignals = (value: string) =>
+  /(\u7814\u7a76|\u4eba\u7fa4|\u6837\u672c|\u6570\u636e|\u7ed3\u679c|\u98ce\u9669|\u89c2\u5bdf|\u5206\u6790|\u961f\u5217|\u8bd5\u9a8c|\u5bf9\u7167|\u6307\u6807|\u6548\u5e94|\u53d1\u73b0|P\u503c|\u7f6e\u4fe1\u533a\u95f4|\u6458\u8981|PubMed|DOI)/i.test(
+    value,
+  );
 
-  const after = content.slice(start + label.length);
-  const nextIndexes = readerSectionLabels
-    .filter((next) => next !== label)
-    .map((next) => after.indexOf(next))
-    .filter((index) => index >= 0);
-  const end = nextIndexes.length > 0 ? Math.min(...nextIndexes) : after.length;
+const hasBoundarySignals = (value: string) =>
+  /(\u4e0d\u80fd\u8bc1\u660e|\u4e0d\u80fd\u8bf4\u660e|\u76f8\u5173\u4e0d\u7b49\u4e8e\u56e0\u679c|\u76f8\u5173|\u56e0\u679c|\u5c40\u9650|\u9650\u5236|\u4e0d\u4ee3\u8868|\u4ecd\u9700\u8981|\u53ef\u80fd|\u9002\u7528|\u4e0d\u80fd\u66ff\u4ee3|\u5c1a\u672a\u8bc1\u660e|\u89c2\u5bdf\u6027\u7814\u7a76|\u6837\u672c)/.test(
+    value,
+  );
 
-  return after.slice(0, end).trim();
-};
+const hasActionSignals = (value: string) =>
+  /(\u5efa\u8bae|\u53ef\u4ee5|\u4f18\u5148|\u8bb0\u5f55|\u76d1\u6d4b|\u590d\u67e5|\u54a8\u8be2|\u8fd0\u52a8|\u996e\u98df|\u7761\u7720|\u4f53\u91cd|OGTT|HbA1c|\u8170\u56f4|\u9910\u540e|\u533b\u751f|\u6b65\u884c|\u529b\u91cf|\u86cb\u767d)/i.test(
+    value,
+  );
+
+const hasIndustrySignals = (value: string) =>
+  /(\u4ea7\u54c1|\u5de5\u5177|\u7528\u6237|\u98ce\u9669\u5206\u5c42|\u4e2a\u6027\u5316|APP|\u5e94\u7528|CGM|\u76d1\u6d4b|\u6570\u636e|\u53cd\u9988|\u4f9d\u4ece|\u670d\u52a1|\u573a\u666f|\u6d41\u7a0b|\u5546\u4e1a|\u5065\u5eb7\u79d1\u6280)/i.test(
+    value,
+  );
 
 const evaluateSopQuality = (bodyZh: string, bodyEn: string) => {
   bodyZh = normalizeReaderArticle(bodyZh);
   const issues: string[] = [];
-  const requiredHeadings = readerSectionLabels;
-
-  requiredHeadings.forEach((heading) => {
-    if (!bodyZh.includes(heading)) {
-      issues.push(`Missing required section: ${heading}`);
-    }
-  });
-
-  const background = readerSection(bodyZh, "为什么值得关注");
-  const finding = readerSection(bodyZh, "证据告诉我们什么");
-  const critique = readerSection(bodyZh, "应该怎样理解");
-  const insight = readerSection(bodyZh, "可以怎么做");
 
   if (countCjk(bodyZh) < 1800) {
     issues.push(
@@ -253,23 +264,25 @@ const evaluateSopQuality = (bodyZh: string, bodyEn: string) => {
       "Chinese SOP article needs at least 12 short readable paragraphs.",
     );
   }
-  if (countCjk(background) < 80) {
-    issues.push("Research background is too short.");
+  if (!hasEvidenceSignals(bodyZh)) {
+    issues.push("Chinese article does not clearly explain the evidence.");
   }
-  if (countCjk(finding) < 120) {
-    issues.push("Core findings are too short or too vague.");
+  if (!hasBoundarySignals(bodyZh)) {
+    issues.push("Chinese article does not clearly explain evidence limits.");
   }
-  if (countCjk(critique) < 650) {
-    issues.push("Chinese interpretation and critique section is short.");
+  if (!hasActionSignals(bodyZh)) {
+    issues.push("Chinese article lacks practical reader-facing actions.");
   }
-  if (countCjk(insight) < 350) {
-    issues.push("Chinese clinical/business insight section is short.");
+  if (!hasIndustrySignals(bodyZh)) {
+    issues.push("Chinese article lacks health-tech or system insight.");
   }
-  if (!/给糖前读者/.test(insight)) {
-    issues.push("Clinical action subsection A is missing.");
-  }
-  if (!/给健康科技行业/.test(insight)) {
-    issues.push("Business insight subsection B is missing.");
+  forbiddenPublicPhrases.forEach((phrase) => {
+    if (bodyZh.includes(phrase)) {
+      issues.push("Article exposes internal SOP label: " + phrase);
+    }
+  });
+  if (/^\s*#{1,6}\s+/m.test(bodyZh)) {
+    issues.push("Article contains visible Markdown heading markers.");
   }
   if (countEnglishWords(bodyEn) < 80) {
     issues.push("English plain-language version is too short.");
@@ -286,6 +299,13 @@ const evaluateSopQuality = (bodyZh: string, bodyEn: string) => {
   }
   if (/^[-*]\s*$/m.test(bodyZh)) {
     issues.push("Article contains empty bullet points.");
+  }
+  if (
+    /(\u6cbb\u6108|\u6839\u6cbb|\u9006\u8f6c\u7cd6\u5c3f\u75c5|\u4fdd\u8bc1|\u767e\u5206\u767e)/.test(
+      bodyZh,
+    )
+  ) {
+    issues.push("Article contains overclaimed medical language.");
   }
 
   return issues;

@@ -1,11 +1,11 @@
 # GLUCOLIT Research Rewrite SOP
 
-This SOP turns academic evidence into useful, reviewable health education. It is not literal translation and must never replace the original paper.
+This SOP turns academic evidence into public health education for readers who care about prediabetes, insulin resistance, and metabolic health. It is not literal translation and must never replace the original paper.
 
 ## Source Rules
 
 - Prioritize Open Access papers, especially CC BY publications.
-- Use PubMed, Europe PMC, Unpaywall, abstracts, and legal open-access full text.
+- Use PubMed, PubMed Central, Europe PMC, Unpaywall, abstracts, and legal open-access full text.
 - Never scrape or reproduce paywalled full text.
 - State clearly when an article is based on an abstract rather than full text.
 - Never invent methods, sample sizes, effect sizes, harms, or causal claims.
@@ -20,46 +20,53 @@ This SOP turns academic evidence into useful, reviewable health education. It is
 4. Run the quality gate before saving the draft.
 5. Keep every generated article as `draft: true` until human review.
 
-## Reader-Facing Article Structure
+## Public Writing Architecture
 
-Use the following labels as plain text, each on its own line. Do not prefix them with Markdown hashes.
+The structure below is invisible. It is a writing plan, not public copy. Do not print the step names as headings or labels in the article.
 
-- `先说结论`: give the useful takeaway immediately in 80-140 Chinese characters.
-- `为什么值得关注`: connect the topic to a concrete reader problem in 120-220 characters.
-- `证据告诉我们什么`: explain methods and the strongest source-bounded finding in 300-450 characters. Use numbers only when the source provides them.
-- `应该怎样理解`: explain meaning, uncertainty, applicability, and important limitations. This is the deepest section and should contain at least 900 Chinese characters.
-- `可以怎么做`: turn evidence into cautious, practical next steps. Include `给糖前读者` and `给健康科技行业` and write at least 550 Chinese characters.
+1. Reader scene: open with a concrete daily-life problem the reader recognizes.
+2. Useful takeaway: state the practical meaning early, without hype.
+3. Evidence story: explain what question the source asked, who was studied, what was measured or tested, and what changed.
+4. Mechanism translation: explain the likely biological logic with ordinary words and one simple analogy when useful.
+5. Boundary setting: explain uncertainty, who the evidence may not apply to, and why association is not the same as causation.
+6. Action translation: turn the evidence into cautious options a reader can discuss with a clinician or use for self-monitoring.
+7. System insight: add original GLUCOLIT analysis about behavior design, care workflow, data tools, or product opportunities when relevant.
+8. Memorable close: end with 3-5 natural takeaways that help the reader remember what matters.
+
+## Forbidden Public Copy
+
+Do not put internal workflow labels in public article prose. The article should read like a finished column, not a prompt template, reviewer checklist, or editorial worksheet.
+
+Do not expose visible Markdown heading markers in public article prose. If a transition is needed, write it as a natural sentence.
 
 ## Writing Standard
 
-- Lead with the answer, not the research process.
-- Build the article as answer, context, evidence, limits, and action.
+- Lead with a human problem, not the research process.
 - Use familiar words, concrete examples, and one idea per paragraph.
 - Keep Chinese paragraphs to 2-4 sentences and roughly 90-150 characters.
 - Define medical terms at first use.
+- Use numbers only when the source provides them.
 - Explain absolute meaning when a relative risk is provided and the source supports the calculation.
 - Distinguish association from causation.
 - State who the evidence may not apply to.
 - Avoid hype, fear, miracle language, and personal medical instructions.
 - Avoid manuscript-review narration such as repeated references to the paper or researchers.
-- Never expose internal editorial labels or visible Markdown heading markers in article prose.
-- Do not use internal review labels in public copy.
+- Keep source metadata in the research primer or reference area, not in the article body.
 
 ## Quality Gate
 
 Reject or retain for revision when any of the following is true:
 
-- evidence-card or source links are missing
-- Chinese article has fewer than 1800 Chinese characters
-- English comparison version is missing or outside its allowed length
-- any reader-facing section is missing or too short
-- exact numbers appear without source support
-- metadata is mixed into the public article body
-- empty bullets, broken encoding, or visible Markdown hashes remain
-- internal editorial language appears in reader-facing prose
-- uncertainty or major limitations are omitted
-- association is presented as causation
-- medical cure, guaranteed reversal, or replacement of professional care is implied
+- Evidence card or source links are missing.
+- Chinese article has fewer than 1800 Chinese characters.
+- Chinese article has fewer than 10 readable paragraphs.
+- English comparison version is missing or outside its allowed length.
+- The body lacks an evidence story, uncertainty boundary, practical action translation, or original insight.
+- Exact numbers appear without source support.
+- Metadata is mixed into the public article body.
+- Empty bullets, broken encoding, forbidden template labels, or visible Markdown hashes remain.
+- Association is presented as causation.
+- Medical cure, guaranteed reversal, or replacement of professional care is implied.
 
 ## Human Review Checklist
 

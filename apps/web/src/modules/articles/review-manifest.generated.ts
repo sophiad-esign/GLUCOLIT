@@ -26,64 +26,97 @@ export type ReviewArticleManifestItem = {
 
 export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
   {
-    slug: "longitudinal-assessment-of-metabolic-and-neurological-decline-in-periphe-d300e663",
-    titleZh: "十年随访：代谢下降与周围神经病变风险",
-    titleEn: "Metabolic Decline and Peripheral Neuropathy Risk Over a Decade",
+    slug: "prevalence-and-factors-associated-with-isolated-systolic-hypertension-am-3bcce78c",
+    titleZh: "了解菲律宾人孤立性收缩期高血压：生活方式的视角",
+    titleEn:
+      "Understanding Isolated Systolic Hypertension Among Filipinos: A Lifestyle Perspective",
     summaryZh:
-      "周围神经病变（PN）是一种损害手和脚神经的疾病，导致麻木和无力等症状。 它通常与肥胖和糖尿病等代谢问题有关。 然而，关于这些状况如何影响中亚地区神经健康的长期研究很少。 十年间，糖尿病前期人数显著增加，许多人发展为周围神经病变。 糖尿病的人发展为周围神经病变的风险要高得多——大约是九倍。 这项研究强调了代谢变化对神经健康的早期影响，突出了早期干预的必要性。 早期发现和管理代谢风险对预防神经损伤至关重要。 这项研究之所以相关，是因为它提供了关于代谢健康与周围神经病变之间关系的纵向数据，提供了关于神经损伤的早期预测因素和可修改决定因素的见解。 - 代谢下降增加了周围神经病变的风险。 - 糖尿病前期和糖尿病是神经损伤的重要风险因素。 - 体重控制和血糖监测对神经健康至关重要。 - 早期预防策略可以减少神经病变的负担。",
+      "本文讨论了菲律宾中年和老年人孤立性收缩期高血压的患病率和相关因素，强调了生活方式改变在管理这一状况中的重要性。 This article discusses the prevalence and associated factors of isolated systolic hypertension among middle-aged and older Filipinos, highlighting the importance of lifestyle modifications in managing thi",
     summaryEn:
-      "Peripheral polyneuropathy (PN) is a condition that damages nerves, especially in the hands and feet, causing symptoms like numbness and weakness. It's often linked to metabolic issues like obesity and diabetes. However, long-term studies on how these conditions affect nerve health in Central Asia are scarce. Over a decade, prediabetes increased significantly, and many developed polyneuropathy. Diabetes raised the risk of PN ninefold. This study underscores early metabolic changes' impact on nerve health, highlighting the need for early intervention. Early detection and management of metabolic risks are crucial for preventing nerve damage. This study is relevant as it provides longitudinal data on the relationship between metabolic health and peripheral neuropathy, offering insights into early predictors and modifiable determinants of nerve damage. - Metabolic decline increases the risk of peripheral neuropathy. - Prediabetes and diabetes are significant risk factors for nerve damage. - Weight control and blood sugar monitoring are crucial for nerve health. - Early prevention strategies can reduce the burden of neuropathy. - Journal/source: PubMed diabetes prevention and remission via PubMed (Future science OA) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Longitudinal assessment of metabolic and neurological decline in peripheral polyneuropathy over ten years. - Authors: Azizkhojayeva D, Nuskabayeva G, Sadykova K, Turmanbayeva A, Kaldarkhan D, Mombekov N et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42081885/](https://pubmed.ncbi.nlm.nih.gov/42081885/) - DOI: [10.1080/20565623.2026.2665758](https://doi.org/10.1080/20565623.2026.2665758) - PubMed Central: [PMC13154949](https://pmc.ncbi.nlm.nih.gov/articles/PMC13154949/) - Open-access link: [https://europepmc.org/articles/PMC13154949](https://europepmc.org/articles/PMC13154949) - Published or indexed date: 2026-06-20 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了菲律宾中年和老年人孤立性收缩期高血压的患病率和相关因素，强调了生活方式改变在管理这一状况中的重要性。 This article discusses the prevalence and associated factors of isolated systolic hypertension among middle-aged and older Filipinos, highlighting the importance of lifestyle modifications in managing thi",
     bodyZh:
-      "周围神经病变（PN）是一种损害手和脚神经的疾病，导致麻木和无力等症状。 它通常与肥胖和糖尿病等代谢问题有关。 然而，关于这些状况如何影响中亚地区神经健康的长期研究很少。\r\n\r\n\r\n\r\n十年间，糖尿病前期人数显著增加，许多人发展为周围神经病变。 糖尿病的人发展为周围神经病变的风险要高得多——大约是九倍。\r\n\r\n\r\n\r\n这项研究强调了代谢变化对神经健康的早期影响，突出了早期干预的必要性。\r\n\r\n\r\n\r\n早期发现和管理代谢风险对预防神经损伤至关重要。\r\n\r\n\r\n\r\n这项研究之所以相关，是因为它提供了关于代谢健康与周围神经病变之间关系的纵向数据，提供了关于神经损伤的早期预测因素和可修改决定因素的见解。\r\n\r\n\r\n\r\n- 代谢下降增加了周围神经病变的风险。\r\n- 糖尿病前期和糖尿病是神经损伤的重要风险因素。\r\n- 体重控制和血糖监测对神经健康至关重要。\r\n- 早期预防策略可以减少神经病变的负担。",
+      "本文讨论了菲律宾中年和老年人孤立性收缩期高血压的患病率和相关因素，强调了生活方式改变在管理这一状况中的重要性。 This article discusses the prevalence and associated factors of isolated systolic hypertension among middle-aged and older Filipinos, highlighting the importance of lifestyle modifications in managing thi",
     bodyEn:
-      "Peripheral polyneuropathy (PN) is a condition that damages nerves, especially in the hands and feet, causing symptoms like numbness and weakness. It's often linked to metabolic issues like obesity and diabetes.\r\n\r\nHowever, long-term studies on how these conditions affect nerve health in Central Asia are scarce.\r\n\r\n\r\n\r\nOver a decade, prediabetes increased significantly, and many developed polyneuropathy. Diabetes raised the risk of PN ninefold.\r\n\r\n\r\n\r\nThis study underscores early metabolic changes' impact on nerve health, highlighting the need for early intervention.\r\n\r\n\r\n\r\nEarly detection and management of metabolic risks are crucial for preventing nerve damage.\r\n\r\n\r\n\r\nThis study is relevant as it provides longitudinal data on the relationship between metabolic health and peripheral neuropathy, offering insights into early predictors and modifiable determinants of nerve damage.\r\n\r\n\r\n\r\n- Metabolic decline increases the risk of peripheral neuropathy.\r\n- Prediabetes and diabetes are significant risk factors for nerve damage.\r\n- Weight control and blood sugar monitoring are crucial for nerve health.\r\n- Early prevention strategies can reduce the burden of neuropathy.\r\n\r\n\r\n\r\n- Journal/source: PubMed diabetes prevention and remission via PubMed (Future science OA)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Longitudinal assessment of metabolic and neurological decline in peripheral polyneuropathy over ten years.\r\n- Authors: Azizkhojayeva D, Nuskabayeva G, Sadykova K, Turmanbayeva A, Kaldarkhan D, Mombekov N et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42081885/](https://pubmed.ncbi.nlm.nih.gov/42081885/)\r\n- DOI: [10.1080/20565623.2026.2665758](https://doi.org/10.1080/20565623.2026.2665758)\r\n- PubMed Central: [PMC13154949](https://pmc.ncbi.nlm.nih.gov/articles/PMC13154949/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13154949](https://europepmc.org/articles/PMC13154949)\r\n- Published or indexed date: 2026-06-20\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了菲律宾中年和老年人孤立性收缩期高血压的患病率和相关因素，强调了生活方式改变在管理这一状况中的重要性。 This article discusses the prevalence and associated factors of isolated systolic hypertension among middle-aged and older Filipinos, highlighting the importance of lifestyle modifications in managing thi",
+    thumbnail:
+      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
+    source: "国际医学期刊",
+    doi: "10.1080/08037051.2026.2629094",
+    originalUrl: "https://pubmed.ncbi.nlm.nih.gov/41666111/",
+    publishedAt: "2026-06-24",
+    publishedAtLabel: "2026-06-24",
+    draft: true,
+    reviewRequired: true,
+    qualityStatus: "needs_revision",
+    qualityIssues: [
+      "Chinese commentary is short for the required SOP structure",
+      "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
+    ],
+    contentPath:
+      "packages/cms/src/collections/blog/content/prevalence-and-factors-associated-with-isolated-systolic-hypertension-am-3bcce78c/en.mdx",
+    tags: ["medical-research", "prediabetes", "lifestyle"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
+  },
+  {
+    slug: "longitudinal-assessment-of-metabolic-and-neurological-decline-in-periphe-d300e663",
+    titleZh: "代谢变化与周围神经病变：十年纵向研究的新见解",
+    titleEn:
+      "Metabolic Changes and Peripheral Neuropathy: Insights from a Decade-Long Study",
+    summaryZh:
+      "本文基于一项哈萨克斯坦成年人群的十年纵向研究，探讨了代谢变化与周围神经病变发展之间的关系，并提供了预防和管理神经损伤的新见解。 This article discusses the relationship between metabolic changes and the development of peripheral neuropathy in a decade-long study of adults in Kazakhstan, offering new insights into the prevention and management of nerve damage.",
+    summaryEn:
+      "本文基于一项哈萨克斯坦成年人群的十年纵向研究，探讨了代谢变化与周围神经病变发展之间的关系，并提供了预防和管理神经损伤的新见解。 This article discusses the relationship between metabolic changes and the development of peripheral neuropathy in a decade-long study of adults in Kazakhstan, offering new insights into the prevention and management of nerve damage.",
+    bodyZh:
+      "本文基于一项哈萨克斯坦成年人群的十年纵向研究，探讨了代谢变化与周围神经病变发展之间的关系，并提供了预防和管理神经损伤的新见解。 This article discusses the relationship between metabolic changes and the development of peripheral neuropathy in a decade-long study of adults in Kazakhstan, offering new insights into the prevention and management of nerve damage.",
+    bodyEn:
+      "本文基于一项哈萨克斯坦成年人群的十年纵向研究，探讨了代谢变化与周围神经病变发展之间的关系，并提供了预防和管理神经损伤的新见解。 This article discusses the relationship between metabolic changes and the development of peripheral neuropathy in a decade-long study of adults in Kazakhstan, offering new insights into the prevention and management of nerve damage.",
     thumbnail:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed diabetes prevention and remission via PubMed (Future science OA)",
+    source: "国际医学期刊",
     doi: "10.1080/20565623.2026.2665758",
-    originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42081885/",
+    originalUrl: "https://europepmc.org/articles/PMC13154949",
     publishedAt: "2026-06-20",
     publishedAtLabel: "2026-06-20",
     draft: true,
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Chinese commentary is short for the required SOP structure",
-      "Chinese interpretation and critique section is short",
-      "Chinese clinical/business insight section is short",
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains internal editorial labels.",
+      "Interpretation and critique section is too short.",
+      "Clinical/business insight section is too short.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/longitudinal-assessment-of-metabolic-and-neurological-decline-in-periphe-d300e663/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "医学研究", "糖尿病前期", "生活方式"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "encouraging-adults-at-risk-for-type-2-diabetes-to-enroll-in-diabetes-pre-bef5dd46",
     titleZh: "媒体运动与糖尿病预防项目参与度",
     titleEn: "Media Campaigns and Diabetes Prevention Program Enrollment",
     summaryZh:
-      "了解媒体运动如何影响健康行为对于制定有效的公共卫生策略至关重要，特别是对于像糖尿病这样的慢性病。 - 媒体运动可以有效提高对糖尿病预防计划的认识和参与意愿。 - 研究强调了针对风险状况更高的特定社区的重要性。 - 对于已经诊断出糖尿病前期的人可能需要不同的策略。 - 公共卫生倡议可以从与健康科技公司的合作中受益，以支持预防工作。",
+      "夏威夷的一项研究评估了媒体运动对鼓励2型糖尿病风险成年人参与国家糖尿病预防计划的影响。 A study in Hawai'i assessed the impact of a media campaign on encouraging adults at risk for type 2 diabetes to enroll in the National Diabetes Prevention Program.",
     summaryEn:
-      "It's a call to action to make lifestyle changes to prevent or delay the onset of diabetes. However, many people at risk are not aware of or do not enroll in prevention programs. However, the study shows no increase in enrollment likelihood among those already diagnosed with prediabetes, indicating different strategies may be needed. Health tech companies can partner with public health campaigns to support diabetes prevention efforts, especially in high-risk communities. Understanding how media campaigns can influence health behaviors is crucial for developing effective public health strategies, especially for chronic conditions like diabetes. - Media campaigns can effectively increase awareness and intention to enroll in diabetes prevention programs. - The study highlights the importance of targeting specific communities with higher risk profiles. - Different strategies may be needed for those already diagnosed with prediabetes. - Public health initiatives can benefit from partnerships with health tech companies to support prevention efforts. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (JMIR public health and surveillance) - Evidence used: PubMed abstract + open-access full-text link - Original title: Encouraging Adults at Risk for Type 2 Diabetes to Enroll in Diabetes Prevention Programs Through a Media Campaign in Hawai'i: Cross-Sectional Study. - Authors: Saiki K, Lim E, Nett B, Ogawa G, Ching LK, Kawasaki RM et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42313762/](https://pubmed.ncbi.nlm.nih.gov/42313762/) - DOI: [10.2196/90880](https://doi.org/10.2196/90880) - Open-access link: [https://doi.org/10.2196/90880](https://doi.org/10.2196/90880) - Published or indexed date: 2026-06-18 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "夏威夷的一项研究评估了媒体运动对鼓励2型糖尿病风险成年人参与国家糖尿病预防计划的影响。 A study in Hawai'i assessed the impact of a media campaign on encouraging adults at risk for type 2 diabetes to enroll in the National Diabetes Prevention Program.",
     bodyZh:
-      "了解媒体运动如何影响健康行为对于制定有效的公共卫生策略至关重要，特别是对于像糖尿病这样的慢性病。\r\n\r\n\r\n\r\n- 媒体运动可以有效提高对糖尿病预防计划的认识和参与意愿。\r\n- 研究强调了针对风险状况更高的特定社区的重要性。\r\n- 对于已经诊断出糖尿病前期的人可能需要不同的策略。\r\n- 公共卫生倡议可以从与健康科技公司的合作中受益，以支持预防工作。",
+      "夏威夷的一项研究评估了媒体运动对鼓励2型糖尿病风险成年人参与国家糖尿病预防计划的影响。 A study in Hawai'i assessed the impact of a media campaign on encouraging adults at risk for type 2 diabetes to enroll in the National Diabetes Prevention Program.",
     bodyEn:
-      "It's a call to action to make lifestyle changes to prevent or delay the onset of diabetes. However, many people at risk are not aware of or do not enroll in prevention programs.\r\n\r\n\r\n\r\n\r\n\r\nHowever, the study shows no increase in enrollment likelihood among those already diagnosed with prediabetes, indicating different strategies may be needed.\r\n\r\n\r\n\r\nHealth tech companies can partner with public health campaigns to support diabetes prevention efforts, especially in high-risk communities.\r\n\r\n\r\n\r\nUnderstanding how media campaigns can influence health behaviors is crucial for developing effective public health strategies, especially for chronic conditions like diabetes.\r\n\r\n\r\n\r\n- Media campaigns can effectively increase awareness and intention to enroll in diabetes prevention programs.\r\n- The study highlights the importance of targeting specific communities with higher risk profiles.\r\n- Different strategies may be needed for those already diagnosed with prediabetes.\r\n- Public health initiatives can benefit from partnerships with health tech companies to support prevention efforts.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (JMIR public health and surveillance)\r\n- Evidence used: PubMed abstract + open-access full-text link\r\n- Original title: Encouraging Adults at Risk for Type 2 Diabetes to Enroll in Diabetes Prevention Programs Through a Media Campaign in Hawai'i: Cross-Sectional Study.\r\n- Authors: Saiki K, Lim E, Nett B, Ogawa G, Ching LK, Kawasaki RM et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42313762/](https://pubmed.ncbi.nlm.nih.gov/42313762/)\r\n- DOI: [10.2196/90880](https://doi.org/10.2196/90880)\r\n\r\n- Open-access link: [https://doi.org/10.2196/90880](https://doi.org/10.2196/90880)\r\n- Published or indexed date: 2026-06-18\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "夏威夷的一项研究评估了媒体运动对鼓励2型糖尿病风险成年人参与国家糖尿病预防计划的影响。 A study in Hawai'i assessed the impact of a media campaign on encouraging adults at risk for type 2 diabetes to enroll in the National Diabetes Prevention Program.",
     thumbnail:
       "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (JMIR public health and surveillance)",
+    source: "国际医学期刊",
     doi: "10.2196/90880",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42313762/",
     publishedAt: "2026-06-18",
@@ -95,15 +128,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
       "Chinese commentary is short for the required SOP structure",
       "Chinese interpretation and critique section is short",
       "Chinese clinical/business insight section is short",
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains internal editorial labels.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/encouraging-adults-at-risk-for-type-2-diabetes-to-enroll-in-diabetes-pre-bef5dd46/en.mdx",
@@ -116,17 +147,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Interplay of Genetics and Environment in Glucose Homeostasis Trajectories Among Youth",
     summaryZh:
-      "为什么值得关注 在快节奏的现代生活中，不健康的饮食和缺乏运动的生活方式使得越来越多的年轻人开始面临血糖控制问题，这可能导致糖尿病前期和2型糖尿病。对于家长和医疗工作者来说，了解这些健康问题的根源是预防和早期干预的关键。 证据告诉我们什么 研究显示，遗传因素显著影响青少年的血糖平衡。此外，环境因素如屏幕使用时间和母亲年龄等与遗传风险相互作用，增加了胰岛素抵抗的风险。然而，体力活动和健康意识可以减轻这种风险，表明通过生活方式的修改是早期预防糖尿病前期和2型糖尿病的可行目标。 应该怎样理解 这项研究提供了对青少年血糖控制问题深层次理解的重要视角。首先，它强调了遗传因素在血糖平衡中的重要性，这对于制定个性化预防策略至关重要。然而，我们也应该认识到，遗传因素并不是命运，环境因素和个人行为同样扮演着关键角色。 研究中提到的基因-环境交互作用特别值得关注。例如，高遗传风险与增加的屏幕时间或年轻的母亲年龄相结合，可能会增加胰岛素抵抗的风险。这提示我们，即使是具有高遗传风险的个体，通过改变生活方式也能降低患病风险。 然而，这项研究也有其局限性。首先，研究仅限于欧洲血统的参与者，这可能影响结果的普遍适用性。其次，由于研究的观察性质，我们不能从中推断因果关系。因此，尽管研究提供了有价值的见解，但在将这些发现应用于临床实践或公共健康策略时，需要谨慎。 可以怎么做 A. 给糖前读者的行动建议 对于普通读者来说，这项研究提醒我们，保持健康的生活方式对于预防糖尿病前期和2型糖尿病至关重要。特别是对于有遗传风险的家庭，增加体力活动和提高健康意识可以作为降低风险的有效手段。 B. 给健康科技行业的启发 对于健康科技行业，这项研究提供了开发个性化预防策略的潜力。通过识别高风险群体并提供定制化的干预措施，可以更有效地预防糖尿病前期和2型糖尿病。此外，这也强调了在青少年中推广健康生活方式的重要性，这可能需要跨学科的合作和创新的解决方案。 你可以带走的重点 - 遗传因素显著影响青少年的血糖平衡。 - 环境因素如屏幕使用时间和母亲年龄与遗传风险相互作用，增加胰岛素抵抗的风险。 - 体力活动和健康意识可以减轻胰岛素抵抗的风险。 - 生活方式的修改是早期预防糖尿病前期和2型糖尿病的可行目标。",
+      "本篇文章基于一项研究，探讨了遗传和环境因素如何共同影响青少年的血糖平衡，并提供了预防糖尿病前期和2型糖尿病的洞见。 This article discusses how genetic and environmental factors interact to influence glucose homeostasis in youth, providing insights into the prevention of prediabetes and type 2 diabetes.",
     summaryEn:
-      "Young people are increasingly facing issues with blood sugar control, which can lead to prediabetes and type 2 diabetes. Understanding the root causes is crucial for prevention and early intervention. The study highlights the significant influence of genetic factors on glucose homeostasis in youth. Moreover, environmental factors such as screen time and maternal age interact with genetic risk, increasing the risk of insulin resistance. However, physical activity and health awareness can mitigate this risk, indicating that lifestyle modifications are a viable target for early prevention of prediabetes and type 2 diabetes. Practical Takeaways - Genetic factors significantly influence glucose homeostasis in youth. - Environmental factors like screen time and maternal age interact with genetic risk, increasing the risk of insulin resistance. - Physical activity and health awareness can mitigate the risk of insulin resistance. - Lifestyle modifications are actionable targets for early prevention of prediabetes and type 2 diabetes. - Original title: Nature vs nurture of glucose homeostasis trajectories in children from the ALSPAC study. - Authors: Gamache I, Fagbemi K, Harnois-Leblanc S, Greenwood CMT, Henderson M, Van Hulst A et al. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Diabetologia) - DOI: [10.1007/s00125-026-06722-5](https://doi.org/10.1007/s00125-026-06722-5) - Open-access link: [https://europepmc.org/articles/PMC13236800](https://europepmc.org/articles/PMC13236800) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Published or indexed date: 2026-06-17 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本篇文章基于一项研究，探讨了遗传和环境因素如何共同影响青少年的血糖平衡，并提供了预防糖尿病前期和2型糖尿病的洞见。 This article discusses how genetic and environmental factors interact to influence glucose homeostasis in youth, providing insights into the prevention of prediabetes and type 2 diabetes.",
     bodyZh:
-      "为什么值得关注\r\n\r\n在快节奏的现代生活中，不健康的饮食和缺乏运动的生活方式使得越来越多的年轻人开始面临血糖控制问题，这可能导致糖尿病前期和2型糖尿病。对于家长和医疗工作者来说，了解这些健康问题的根源是预防和早期干预的关键。\r\n\r\n证据告诉我们什么\r\n\r\n研究显示，遗传因素显著影响青少年的血糖平衡。此外，环境因素如屏幕使用时间和母亲年龄等与遗传风险相互作用，增加了胰岛素抵抗的风险。然而，体力活动和健康意识可以减轻这种风险，表明通过生活方式的修改是早期预防糖尿病前期和2型糖尿病的可行目标。\r\n\r\n应该怎样理解\r\n\r\n这项研究提供了对青少年血糖控制问题深层次理解的重要视角。首先，它强调了遗传因素在血糖平衡中的重要性，这对于制定个性化预防策略至关重要。然而，我们也应该认识到，遗传因素并不是命运，环境因素和个人行为同样扮演着关键角色。\r\n\r\n研究中提到的基因-环境交互作用特别值得关注。例如，高遗传风险与增加的屏幕时间或年轻的母亲年龄相结合，可能会增加胰岛素抵抗的风险。这提示我们，即使是具有高遗传风险的个体，通过改变生活方式也能降低患病风险。\r\n\r\n然而，这项研究也有其局限性。首先，研究仅限于欧洲血统的参与者，这可能影响结果的普遍适用性。其次，由于研究的观察性质，我们不能从中推断因果关系。因此，尽管研究提供了有价值的见解，但在将这些发现应用于临床实践或公共健康策略时，需要谨慎。\r\n\r\n可以怎么做\r\n\r\nA. 给糖前读者的行动建议\r\n\r\n对于普通读者来说，这项研究提醒我们，保持健康的生活方式对于预防糖尿病前期和2型糖尿病至关重要。特别是对于有遗传风险的家庭，增加体力活动和提高健康意识可以作为降低风险的有效手段。\r\n\r\nB. 给健康科技行业的启发\r\n\r\n对于健康科技行业，这项研究提供了开发个性化预防策略的潜力。通过识别高风险群体并提供定制化的干预措施，可以更有效地预防糖尿病前期和2型糖尿病。此外，这也强调了在青少年中推广健康生活方式的重要性，这可能需要跨学科的合作和创新的解决方案。\r\n\r\n你可以带走的重点\r\n\r\n- 遗传因素显著影响青少年的血糖平衡。\r\n- 环境因素如屏幕使用时间和母亲年龄与遗传风险相互作用，增加胰岛素抵抗的风险。\r\n- 体力活动和健康意识可以减轻胰岛素抵抗的风险。\r\n- 生活方式的修改是早期预防糖尿病前期和2型糖尿病的可行目标。",
+      "本篇文章基于一项研究，探讨了遗传和环境因素如何共同影响青少年的血糖平衡，并提供了预防糖尿病前期和2型糖尿病的洞见。 This article discusses how genetic and environmental factors interact to influence glucose homeostasis in youth, providing insights into the prevention of prediabetes and type 2 diabetes.",
     bodyEn:
-      "Young people are increasingly facing issues with blood sugar control, which can lead to prediabetes and type 2 diabetes. Understanding the root causes is crucial for prevention and early intervention. The study highlights the significant influence of genetic factors on glucose homeostasis in youth. Moreover, environmental factors such as screen time and maternal age interact with genetic risk, increasing the risk of insulin resistance. However, physical activity and health awareness can mitigate this risk, indicating that lifestyle modifications are a viable target for early prevention of prediabetes and type 2 diabetes.\r\n\r\nPractical Takeaways\r\n\r\n- Genetic factors significantly influence glucose homeostasis in youth.\r\n- Environmental factors like screen time and maternal age interact with genetic risk, increasing the risk of insulin resistance.\r\n- Physical activity and health awareness can mitigate the risk of insulin resistance.\r\n- Lifestyle modifications are actionable targets for early prevention of prediabetes and type 2 diabetes.\r\n\r\n\r\n\r\n- Original title: Nature vs nurture of glucose homeostasis trajectories in children from the ALSPAC study.\r\n- Authors: Gamache I, Fagbemi K, Harnois-Leblanc S, Greenwood CMT, Henderson M, Van Hulst A et al.\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Diabetologia)\r\n- DOI: [10.1007/s00125-026-06722-5](https://doi.org/10.1007/s00125-026-06722-5)\r\n- Open-access link: [https://europepmc.org/articles/PMC13236800](https://europepmc.org/articles/PMC13236800)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Published or indexed date: 2026-06-17\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本篇文章基于一项研究，探讨了遗传和环境因素如何共同影响青少年的血糖平衡，并提供了预防糖尿病前期和2型糖尿病的洞见。 This article discusses how genetic and environmental factors interact to influence glucose homeostasis in youth, providing insights into the prevention of prediabetes and type 2 diabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Diabetologia)",
+    source: "国际医学期刊",
     doi: "10.1007/s00125-026-06722-5",
     originalUrl: "https://europepmc.org/articles/PMC13236800",
     publishedAt: "2026-06-17",
@@ -135,17 +165,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: false,
     qualityStatus: "ready",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/nature-vs-nurture-of-glucose-homeostasis-trajectories-in-children-from-t-cf7e60fe/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "医学研究", "糖尿病前期"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "association-of-socioeconomic-status-and-lifestyle-factors-with-incident-8821957b",
@@ -153,16 +184,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Socioeconomic Status Linked to Progression from Prediabetes to Diabetes",
     summaryZh:
-      "为什么值得关注 糖尿病前期是一个全球性健康问题，影响着数百万人的生活。我们经常听到关于如何通过饮食和运动来管理这一状况的建议，但这些建议往往忽略了社会经济地位对个体健康行为的影响。一个人的居住环境、工作时间、收入稳定性、附近是否有安全的运动空间以及能否负担得起健康食品，这些因素都可能影响他们遵循健康建议的能力。 证据告诉我们什么 这项研究纳入了超过3.4万名糖尿病前期的成人，并对他们进行了随访，以观察他们是否发展为糖尿病。研究发现，社会经济地位较低的人群未来发生糖尿病的风险更高。此外，研究还分析了生活方式因素在其中扮演的角色，发现BMI等因素解释了部分风险差异。这意味着社会经济处境可能通过影响饮食质量、体重管理、运动机会、睡眠压力和医疗可及性等方面，逐步影响代谢结局。 应该怎样理解 这项研究提醒我们，糖尿病前期的管理不应仅仅被视为个人的责任。社会经济因素对个体遵循健康建议的能力有着重要影响。然而，这项研究也有其局限性。首先，作为一项观察性研究，它不能证明社会经济地位低本身直接导致糖尿病。其次，UK Biobank的样本可能并不完全代表英国普通人口，因此其结论不能机械地外推到所有国家和所有人群。此外，BMI作为一个指标虽然方便，但较为粗糙，可能无法完全解释风险差异。 社会经济地位较低的人群可能面临更多的健康障碍，如不健康的饮食选择、缺乏运动机会和更高的压力水平。这些因素可能共同作用，增加了糖尿病的风险。然而，我们不能忽视个体的努力和改变生活方式的潜力。即使在资源有限的情况下，通过小步骤的积极改变，如增加日常活动量、改善饮食习惯，也能对健康产生积极影响。 可以怎么做 **A. 给糖前读者的行动建议** 对于处于糖尿病前期的读者，重要的是将健康建议分解为更小、更低成本的行动。例如，不必一开始就办健身卡，可以从简单的饭后散步开始；不必一开始就吃昂贵的健康餐，可以先从减少含糖饮料和增加全谷物摄入做起。 **B. 给健康科技行业的启发** 这项研究对健康科技产品的设计提供了启示：真正的糖前管理需要识别并解决执行障碍。未来的产品可以根据不同用户的执行画像提供定制化的解决方案，从而更接近真实用户的需求。 你可以带走的重点 - 糖尿病前期风险不只由个人选择决定，也受到资源、环境和执行条件影响。 - 社会经济地位较低的人群，进展为糖尿病的风险可能更高，BMI 等生活方式因素解释了部分差异。 - 这项研究是观察性研究，只能提示关联，不能证明因果。 - 对个人最实用的策略，是把健康建议拆成低成本、可持续的小行动。 - 好的糖前干预不应该只问“你愿不愿意改变”，还要问“你的现实环境允许你怎么改变”。",
+      "一项来自UK Biobank的前瞻性队列研究探讨了社会经济地位与糖尿病前期人群进展为糖尿病风险之间的关系，并分析了生活方式因素的作用。 A prospective cohort study from UK Biobank examines the link between socioeconomic status and the risk of progressing from prediabetes to diabetes, with a focus on lifestyle factors.",
     summaryEn:
-      "This UK Biobank study highlights the impact of socioeconomic status on the risk of progressing from prediabetes to diabetes. It suggests that individuals with lower socioeconomic status are at a higher risk, with lifestyle factors like BMI playing a role in explaining part of this risk. The study reminds us that managing prediabetes is not just about individual choices but is also influenced by social and economic factors. It's important to consider the practical barriers that individuals may face when trying to follow health advice, such as access to healthy food, time for exercise, and financial constraints. Practical Takeaways - The risk of progressing from prediabetes to diabetes is not solely determined by personal choices but is also influenced by resources, environment, and execution conditions. - People with lower socioeconomic status may have a higher risk of progressing to diabetes, with lifestyle factors like BMI explaining part of the difference. - This study is observational and can only suggest associations, not prove causation. - The most practical strategy for individuals is to break down health advice into low-cost, sustainable actions. - Good prediabetes interventions should not only ask 'are you willing to change?' but also 'how does your real environment allow you to change?'. - Original title: Association of socioeconomic status and lifestyle factors with incident diabetes among individuals with prediabetes: a prospective cohort study from UK Biobank. - Authors: Liu X, Ruan X, Long Q, Jing F, Xie W, Chen J et al. - Journal/source: Preventive Medicine Reports. - DOI: [10.1016/j.pmedr.2026.103506](https://doi.org/10.1016/j.pmedr.2026.103506) - Open-access link: [https://europepmc.org/articles/PMC13235497](https://europepmc.org/articles/PMC13235497) - Evidence used: Europe PMC abstract plus PubMed Central open full-text excerpt. - Published or indexed date: 2026-06-16 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项来自UK Biobank的前瞻性队列研究探讨了社会经济地位与糖尿病前期人群进展为糖尿病风险之间的关系，并分析了生活方式因素的作用。 A prospective cohort study from UK Biobank examines the link between socioeconomic status and the risk of progressing from prediabetes to diabetes, with a focus on lifestyle factors.",
     bodyZh:
-      "为什么值得关注\r\n\r\n糖尿病前期是一个全球性健康问题，影响着数百万人的生活。我们经常听到关于如何通过饮食和运动来管理这一状况的建议，但这些建议往往忽略了社会经济地位对个体健康行为的影响。一个人的居住环境、工作时间、收入稳定性、附近是否有安全的运动空间以及能否负担得起健康食品，这些因素都可能影响他们遵循健康建议的能力。\r\n\r\n证据告诉我们什么\r\n\r\n这项研究纳入了超过3.4万名糖尿病前期的成人，并对他们进行了随访，以观察他们是否发展为糖尿病。研究发现，社会经济地位较低的人群未来发生糖尿病的风险更高。此外，研究还分析了生活方式因素在其中扮演的角色，发现BMI等因素解释了部分风险差异。这意味着社会经济处境可能通过影响饮食质量、体重管理、运动机会、睡眠压力和医疗可及性等方面，逐步影响代谢结局。\r\n\r\n应该怎样理解\r\n\r\n这项研究提醒我们，糖尿病前期的管理不应仅仅被视为个人的责任。社会经济因素对个体遵循健康建议的能力有着重要影响。然而，这项研究也有其局限性。首先，作为一项观察性研究，它不能证明社会经济地位低本身直接导致糖尿病。其次，UK Biobank的样本可能并不完全代表英国普通人口，因此其结论不能机械地外推到所有国家和所有人群。此外，BMI作为一个指标虽然方便，但较为粗糙，可能无法完全解释风险差异。\r\n\r\n社会经济地位较低的人群可能面临更多的健康障碍，如不健康的饮食选择、缺乏运动机会和更高的压力水平。这些因素可能共同作用，增加了糖尿病的风险。然而，我们不能忽视个体的努力和改变生活方式的潜力。即使在资源有限的情况下，通过小步骤的积极改变，如增加日常活动量、改善饮食习惯，也能对健康产生积极影响。\r\n\r\n可以怎么做\r\n\r\n**A. 给糖前读者的行动建议**\r\n\r\n对于处于糖尿病前期的读者，重要的是将健康建议分解为更小、更低成本的行动。例如，不必一开始就办健身卡，可以从简单的饭后散步开始；不必一开始就吃昂贵的健康餐，可以先从减少含糖饮料和增加全谷物摄入做起。\r\n\r\n**B. 给健康科技行业的启发**\r\n\r\n这项研究对健康科技产品的设计提供了启示：真正的糖前管理需要识别并解决执行障碍。未来的产品可以根据不同用户的执行画像提供定制化的解决方案，从而更接近真实用户的需求。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期风险不只由个人选择决定，也受到资源、环境和执行条件影响。\r\n- 社会经济地位较低的人群，进展为糖尿病的风险可能更高，BMI 等生活方式因素解释了部分差异。\r\n- 这项研究是观察性研究，只能提示关联，不能证明因果。\r\n- 对个人最实用的策略，是把健康建议拆成低成本、可持续的小行动。\r\n- 好的糖前干预不应该只问“你愿不愿意改变”，还要问“你的现实环境允许你怎么改变”。",
+      "一项来自UK Biobank的前瞻性队列研究探讨了社会经济地位与糖尿病前期人群进展为糖尿病风险之间的关系，并分析了生活方式因素的作用。 A prospective cohort study from UK Biobank examines the link between socioeconomic status and the risk of progressing from prediabetes to diabetes, with a focus on lifestyle factors.",
     bodyEn:
-      "This UK Biobank study highlights the impact of socioeconomic status on the risk of progressing from prediabetes to diabetes. It suggests that individuals with lower socioeconomic status are at a higher risk, with lifestyle factors like BMI playing a role in explaining part of this risk. The study reminds us that managing prediabetes is not just about individual choices but is also influenced by social and economic factors. It's important to consider the practical barriers that individuals may face when trying to follow health advice, such as access to healthy food, time for exercise, and financial constraints.\r\n\r\nPractical Takeaways\r\n\r\n- The risk of progressing from prediabetes to diabetes is not solely determined by personal choices but is also influenced by resources, environment, and execution conditions.\r\n- People with lower socioeconomic status may have a higher risk of progressing to diabetes, with lifestyle factors like BMI explaining part of the difference.\r\n- This study is observational and can only suggest associations, not prove causation.\r\n- The most practical strategy for individuals is to break down health advice into low-cost, sustainable actions.\r\n- Good prediabetes interventions should not only ask 'are you willing to change?' but also 'how does your real environment allow you to change?'.\r\n\r\n\r\n\r\n- Original title: Association of socioeconomic status and lifestyle factors with incident diabetes among individuals with prediabetes: a prospective cohort study from UK Biobank.\r\n- Authors: Liu X, Ruan X, Long Q, Jing F, Xie W, Chen J et al.\r\n- Journal/source: Preventive Medicine Reports.\r\n- DOI: [10.1016/j.pmedr.2026.103506](https://doi.org/10.1016/j.pmedr.2026.103506)\r\n- Open-access link: [https://europepmc.org/articles/PMC13235497](https://europepmc.org/articles/PMC13235497)\r\n- Evidence used: Europe PMC abstract plus PubMed Central open full-text excerpt.\r\n- Published or indexed date: 2026-06-16\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项来自UK Biobank的前瞻性队列研究探讨了社会经济地位与糖尿病前期人群进展为糖尿病风险之间的关系，并分析了生活方式因素的作用。 A prospective cohort study from UK Biobank examines the link between socioeconomic status and the risk of progressing from prediabetes to diabetes, with a focus on lifestyle factors.",
     thumbnail:
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1800&auto=format&fit=crop",
-    source: "Preventive Medicine Reports.",
+    source: "国际医学期刊",
     doi: "10.1016/j.pmedr.2026.103506",
     originalUrl: "https://europepmc.org/articles/PMC13235497",
     publishedAt: "2026-06-16",
@@ -171,32 +202,34 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: false,
     qualityStatus: "ready",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/association-of-socioeconomic-status-and-lifestyle-factors-with-incident-8821957b/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "higher-appendicular-skeletal-muscle-mass-to-visceral-fat-area-ratio-asso-cf57bdc8",
     titleZh: "肌肉与内脏脂肪比例对糖尿病前期风险的影响",
     titleEn: "The Impact of Muscle-to-Visceral Fat Ratio on Prediabetes Risk",
     summaryZh:
-      "为什么值得关注 在现代社会，糖尿病前期已成为一个不容忽视的健康问题。许多人在关注体重管理的同时，可能忽略了身体成分的重要性。肌肉和内脏脂肪的比例，即肌肉与内脏脂肪比例（SVR），可能是影响血糖水平的关键因素。肌肉不仅是葡萄糖代谢的重要场所，而且与内脏脂肪相比，后者与代谢炎症压力的关系更为密切。这项研究为我们提供了一个新的视角，即在预防糖尿病前期时，我们可能需要更多地关注身体成分而非单纯的体重。 证据告诉我们什么 研究发现，较高的肌肉与内脏脂肪比例（SVR）与较低的糖尿病前期风险相关。这意味着，即使在体重相同的情况下，肌肉量较多的个体可能面临较低的糖尿病前期风险。这一发现提示我们，肌肉和内脏脂肪的相对比例，可能比单纯的体重或BMI更能反映个体的代谢健康状况。这种比例的调整可能有助于我们更准确地评估糖尿病前期的风险。 应该怎样理解 这项研究为我们提供了一个重要的启示：在糖尿病前期的预防和管理中，我们可能需要重新评估身体成分的重要性。然而，我们也必须认识到，这种关联并不意味着因果关系。提高SVR并不一定直接降低糖尿病前期风险，可能还有其他健康生活方式因素在起作用。例如，饮食习惯、运动量和睡眠质量都可能对糖尿病前期的风险产生影响。 此外，SVR的测量需要专业的身体成分分析，普通体检可能无法提供这些数据。因此，我们不能简单地将一次测量结果作为健康诊断的依据。更重要的是，研究样本的代表性和普遍性也值得我们关注。亚洲人群，尤其是中国人群，可能在较低BMI下就出现内脏脂肪堆积和胰岛素抵抗，这需要我们结合本土数据进行验证。因此，这项研究虽然为我们提供了有价值的方向，但在实际应用中还需要更多的本土化研究支持。 可以怎么做 **A. 给糖前读者的行动建议** 对于糖尿病前期患者来说，理解肌肉和内脏脂肪的平衡比单纯关注体重更为重要。力量训练、有氧运动和饮食调整都是可行的第一步。力量训练可以帮助增加肌肉量，有氧运动有助于控制内脏脂肪，而合理的饮食结构则可以支持这两者的平衡。此外，定期监测血糖和血脂水平也是预防糖尿病前期的重要措施。 **B. 给健康科技行业的启发** 健康科技产品在设计时，应考虑用户的个体差异，提供更个性化的健康管理方案。例如，针对内脏脂肪较多的用户，可以推荐减脂和餐后步行；而对于肌肉量不足的用户，则可以推荐力量训练和蛋白质摄入。通过结合体检数据、运动记录和饮食日志，可以为用户提供更精准的健康指导。此外，开发能够便捷测量SVR的设备或应用，也将有助于用户更好地管理自己的健康风险。 你可以带走的重点 - 糖尿病前期不只是体重问题，肌肉和内脏脂肪的比例可能更接近代谢风险本身。 - 肌肉是处理葡萄糖的重要组织，内脏脂肪则常和胰岛素抵抗、脂肪肝和炎症压力相关。 - 这项研究发现的是关联，不是因果证明，不能夸大成“练肌肉就能逆转糖前”。 - 对普通人最稳的行动是：减少腰围、增加力量训练、饭后活动、定期复查血糖和血脂。",
+      "一项新研究发现，肌肉与内脏脂肪的比例（SVR）可能比体重更能预测糖尿病前期的风险。 A new study finds that the ratio of muscle to visceral fat (SVR) may be a better predictor of prediabetes risk than weight alone.",
     summaryEn:
-      "This study suggests that the balance between skeletal muscle and visceral fat may matter more than just weight when it comes to prediabetes risk. People with relatively more limb muscle and less visceral fat appear to be less likely to have prediabetes. The finding does not prove that building muscle directly prevents prediabetes, but it gives a useful direction: weight alone is too crude. Waist size, muscle strength, visceral fat, and glucose markers should be viewed together. For everyday prevention, the practical focus is strength training, regular aerobic activity, reducing abdominal fat, and tracking metabolic markers over time. Practical Takeaways - Prediabetes is not just a weight issue; the ratio of muscle to visceral fat may be closer to metabolic risk itself. - Muscle is an important tissue for processing glucose, while visceral fat is often related to insulin resistance, fatty liver, and inflammatory stress. - The study found an association, not a causal proof, so it should not be exaggerated into 'building muscle can reverse prediabetes'. - For ordinary people, the safest actions are: reducing waist circumference, increasing strength training, post-meal activity, and regular blood sugar and lipid tests. - Original title: Higher Appendicular Skeletal Muscle Mass to Visceral Fat Area Ratio Associated With Reduced Risk of Prediabetes. - Authors: Yang H, Zhong W, Shen S, Gao Y, Fu X, Ge S et al. - Journal/source: Diabetes, Obesity and Metabolism. - DOI: [10.1111/dom.70825](https://doi.org/10.1111/dom.70825) - Open-access link: [https://doi.org/10.1111/dom.70825](https://doi.org/10.1111/dom.70825) - Evidence used: Europe PMC abstract plus open-access source link. - Published or indexed date: 2026-06-15 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项新研究发现，肌肉与内脏脂肪的比例（SVR）可能比体重更能预测糖尿病前期的风险。 A new study finds that the ratio of muscle to visceral fat (SVR) may be a better predictor of prediabetes risk than weight alone.",
     bodyZh:
-      "为什么值得关注\r\n\r\n在现代社会，糖尿病前期已成为一个不容忽视的健康问题。许多人在关注体重管理的同时，可能忽略了身体成分的重要性。肌肉和内脏脂肪的比例，即肌肉与内脏脂肪比例（SVR），可能是影响血糖水平的关键因素。肌肉不仅是葡萄糖代谢的重要场所，而且与内脏脂肪相比，后者与代谢炎症压力的关系更为密切。这项研究为我们提供了一个新的视角，即在预防糖尿病前期时，我们可能需要更多地关注身体成分而非单纯的体重。\r\n\r\n证据告诉我们什么\r\n\r\n研究发现，较高的肌肉与内脏脂肪比例（SVR）与较低的糖尿病前期风险相关。这意味着，即使在体重相同的情况下，肌肉量较多的个体可能面临较低的糖尿病前期风险。这一发现提示我们，肌肉和内脏脂肪的相对比例，可能比单纯的体重或BMI更能反映个体的代谢健康状况。这种比例的调整可能有助于我们更准确地评估糖尿病前期的风险。\r\n\r\n应该怎样理解\r\n\r\n这项研究为我们提供了一个重要的启示：在糖尿病前期的预防和管理中，我们可能需要重新评估身体成分的重要性。然而，我们也必须认识到，这种关联并不意味着因果关系。提高SVR并不一定直接降低糖尿病前期风险，可能还有其他健康生活方式因素在起作用。例如，饮食习惯、运动量和睡眠质量都可能对糖尿病前期的风险产生影响。\r\n\r\n此外，SVR的测量需要专业的身体成分分析，普通体检可能无法提供这些数据。因此，我们不能简单地将一次测量结果作为健康诊断的依据。更重要的是，研究样本的代表性和普遍性也值得我们关注。亚洲人群，尤其是中国人群，可能在较低BMI下就出现内脏脂肪堆积和胰岛素抵抗，这需要我们结合本土数据进行验证。因此，这项研究虽然为我们提供了有价值的方向，但在实际应用中还需要更多的本土化研究支持。\r\n\r\n可以怎么做\r\n\r\n**A. 给糖前读者的行动建议**\r\n\r\n对于糖尿病前期患者来说，理解肌肉和内脏脂肪的平衡比单纯关注体重更为重要。力量训练、有氧运动和饮食调整都是可行的第一步。力量训练可以帮助增加肌肉量，有氧运动有助于控制内脏脂肪，而合理的饮食结构则可以支持这两者的平衡。此外，定期监测血糖和血脂水平也是预防糖尿病前期的重要措施。\r\n\r\n**B. 给健康科技行业的启发**\r\n\r\n健康科技产品在设计时，应考虑用户的个体差异，提供更个性化的健康管理方案。例如，针对内脏脂肪较多的用户，可以推荐减脂和餐后步行；而对于肌肉量不足的用户，则可以推荐力量训练和蛋白质摄入。通过结合体检数据、运动记录和饮食日志，可以为用户提供更精准的健康指导。此外，开发能够便捷测量SVR的设备或应用，也将有助于用户更好地管理自己的健康风险。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期不只是体重问题，肌肉和内脏脂肪的比例可能更接近代谢风险本身。\r\n- 肌肉是处理葡萄糖的重要组织，内脏脂肪则常和胰岛素抵抗、脂肪肝和炎症压力相关。\r\n- 这项研究发现的是关联，不是因果证明，不能夸大成“练肌肉就能逆转糖前”。\r\n- 对普通人最稳的行动是：减少腰围、增加力量训练、饭后活动、定期复查血糖和血脂。",
+      "一项新研究发现，肌肉与内脏脂肪的比例（SVR）可能比体重更能预测糖尿病前期的风险。 A new study finds that the ratio of muscle to visceral fat (SVR) may be a better predictor of prediabetes risk than weight alone.",
     bodyEn:
-      "This study suggests that the balance between skeletal muscle and visceral fat may matter more than just weight when it comes to prediabetes risk. People with relatively more limb muscle and less visceral fat appear to be less likely to have prediabetes. The finding does not prove that building muscle directly prevents prediabetes, but it gives a useful direction: weight alone is too crude. Waist size, muscle strength, visceral fat, and glucose markers should be viewed together. For everyday prevention, the practical focus is strength training, regular aerobic activity, reducing abdominal fat, and tracking metabolic markers over time.\r\n\r\nPractical Takeaways\r\n\r\n- Prediabetes is not just a weight issue; the ratio of muscle to visceral fat may be closer to metabolic risk itself.\r\n- Muscle is an important tissue for processing glucose, while visceral fat is often related to insulin resistance, fatty liver, and inflammatory stress.\r\n- The study found an association, not a causal proof, so it should not be exaggerated into 'building muscle can reverse prediabetes'.\r\n- For ordinary people, the safest actions are: reducing waist circumference, increasing strength training, post-meal activity, and regular blood sugar and lipid tests.\r\n\r\n\r\n\r\n- Original title: Higher Appendicular Skeletal Muscle Mass to Visceral Fat Area Ratio Associated With Reduced Risk of Prediabetes.\r\n- Authors: Yang H, Zhong W, Shen S, Gao Y, Fu X, Ge S et al.\r\n- Journal/source: Diabetes, Obesity and Metabolism.\r\n- DOI: [10.1111/dom.70825](https://doi.org/10.1111/dom.70825)\r\n- Open-access link: [https://doi.org/10.1111/dom.70825](https://doi.org/10.1111/dom.70825)\r\n- Evidence used: Europe PMC abstract plus open-access source link.\r\n- Published or indexed date: 2026-06-15\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项新研究发现，肌肉与内脏脂肪的比例（SVR）可能比体重更能预测糖尿病前期的风险。 A new study finds that the ratio of muscle to visceral fat (SVR) may be a better predictor of prediabetes risk than weight alone.",
     thumbnail:
       "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
-    source: "Diabetes, Obesity and Metabolism.",
+    source: "国际医学期刊",
     doi: "10.1111/dom.70825",
     originalUrl: "https://doi.org/10.1111/dom.70825",
     publishedAt: "2026-06-15",
@@ -205,31 +238,34 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: false,
     qualityStatus: "ready",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Meaning and limitations section is too short.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/higher-appendicular-skeletal-muscle-mass-to-visceral-fat-area-ratio-asso-cf57bdc8/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
+    categoryLabels: ["饮食干预", "医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "lifestyle-and-metformin-interventions-and-risk-of-multimorbidity-in-adul-40d69bf0",
     titleZh: "生活方式改变与糖尿病前期患者的多重共病风险",
     titleEn: "Lifestyle Changes and Multimorbidity Risk in Prediabetes",
     summaryZh:
-      "对于糖尿病前期患者来说，预防多重慢性疾病的发生对公共健康至关重要。 这项研究提供了关于生活方式改变和二甲双胍在减少多重共病风险方面的有效性见解。 在对1173名糖尿病前期成人进行21年的随访中，与安慰剂相比，生活方式干预与较低的多重共病风险相关，而二甲双胍则没有显示出显著差异。 这项研究的长期随访值得称赞，为我们提供了关于生活方式改变对健康持久影响的宝贵见解。 然而，这些结果的普遍性可能受到研究的人口构成和考虑的具体疾病条件的限制。 对于糖尿病前期患者来说，采取健康的生活方式可以显著降低发展多重慢性疾病的风险。 健康科技行业可以在开发支持生活方式改变的项目中发挥重要作用。 这项研究之所以相关，是因为它提供了关于生活方式改变和二甲双胍对糖尿病前期成人多重共病影响的长期数据，为公共卫生干预策略提供了见解。 - 生活方式改变可以显著降低糖尿病前期成人的多重共病风险。 - 与安慰剂相比，二甲双胍在降低多重共病方面没有显示出显著差异。 - 长期研究为我们提供了关于干预措施对健康的持久影响的宝贵见解。 - 健康科技行业可以在开发支持生活方式改变的项目中发挥重要作用。",
+      "一项长期研究检验了生活方式改变和二甲双胍对糖尿病前期成人发展多重慢性疾病风险的影响。 A long-term study examines the impact of lifestyle changes and metformin on the risk of developing multiple chronic conditions in adults with prediabetes.",
     summaryEn:
-      "Preventing the onset of multiple chronic conditions is crucial for public health, especially for those with prediabetes. This study provides insights into the effectiveness of lifestyle changes and metformin in reducing multimorbidity. In a 21-year follow-up of 1173 adults with prediabetes, lifestyle intervention was associated with a lower risk of multimorbidity compared to placebo, while metformin showed no significant difference. The long-term follow-up offers valuable insights into the enduring effects of lifestyle changes on health. However, the study's demographic composition and specific conditions considered may limit the generalizability of these results. Adopting a healthy lifestyle can significantly reduce the risk of developing multiple chronic conditions for those with prediabetes. The health tech industry can play a significant role in developing programs that support lifestyle changes. This study is relevant as it provides long-term data on the effects of lifestyle changes and metformin on multimorbidity in adults with prediabetes, offering insights into potential strategies for public health interventions. - Lifestyle changes can significantly reduce the risk of multimorbidity in adults with prediabetes. - Metformin did not show a significant difference in reducing multimorbidity compared to placebo. - Long-term studies provide valuable insights into the enduring effects of interventions on health. - The health tech industry can play a significant role in developing programs that support lifestyle changes. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (JAMA) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Lifestyle and Metformin Interventions and Risk of Multimorbidity in Adults With Prediabetes. - Authors: Salive ME, Tjaden AH, Ames JR, Crandall JP, Dabelea D, Hazuda HP et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42295772/](https://pubmed.ncbi.nlm.nih.gov/42295772/) - DOI: [10.1001/jama.2026.8492](https://doi.org/10.1001/jama.2026.8492) - PubMed Central: [PMC13270327](https://pmc.ncbi.nlm.nih.gov/articles/PMC13270327/) - Open-access link: [https://doi.org/10.1001/jama.2026.8492](https://doi.org/10.1001/jama.2026.8492) - Published or indexed date: 2026-06-15 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项长期研究检验了生活方式改变和二甲双胍对糖尿病前期成人发展多重慢性疾病风险的影响。 A long-term study examines the impact of lifestyle changes and metformin on the risk of developing multiple chronic conditions in adults with prediabetes.",
     bodyZh:
-      "对于糖尿病前期患者来说，预防多重慢性疾病的发生对公共健康至关重要。 这项研究提供了关于生活方式改变和二甲双胍在减少多重共病风险方面的有效性见解。\r\n\r\n\r\n\r\n在对1173名糖尿病前期成人进行21年的随访中，与安慰剂相比，生活方式干预与较低的多重共病风险相关，而二甲双胍则没有显示出显著差异。\r\n\r\n\r\n\r\n这项研究的长期随访值得称赞，为我们提供了关于生活方式改变对健康持久影响的宝贵见解。 然而，这些结果的普遍性可能受到研究的人口构成和考虑的具体疾病条件的限制。\r\n\r\n\r\n\r\n对于糖尿病前期患者来说，采取健康的生活方式可以显著降低发展多重慢性疾病的风险。 健康科技行业可以在开发支持生活方式改变的项目中发挥重要作用。\r\n\r\n\r\n\r\n这项研究之所以相关，是因为它提供了关于生活方式改变和二甲双胍对糖尿病前期成人多重共病影响的长期数据，为公共卫生干预策略提供了见解。\r\n\r\n\r\n\r\n- 生活方式改变可以显著降低糖尿病前期成人的多重共病风险。\r\n- 与安慰剂相比，二甲双胍在降低多重共病方面没有显示出显著差异。\r\n- 长期研究为我们提供了关于干预措施对健康的持久影响的宝贵见解。\r\n- 健康科技行业可以在开发支持生活方式改变的项目中发挥重要作用。",
+      "一项长期研究检验了生活方式改变和二甲双胍对糖尿病前期成人发展多重慢性疾病风险的影响。 A long-term study examines the impact of lifestyle changes and metformin on the risk of developing multiple chronic conditions in adults with prediabetes.",
     bodyEn:
-      "Preventing the onset of multiple chronic conditions is crucial for public health, especially for those with prediabetes. This study provides insights into the effectiveness of lifestyle changes and metformin in reducing multimorbidity.\r\n\r\n\r\n\r\nIn a 21-year follow-up of 1173 adults with prediabetes, lifestyle intervention was associated with a lower risk of multimorbidity compared to placebo, while metformin showed no significant difference.\r\n\r\n\r\n\r\nThe long-term follow-up offers valuable insights into the enduring effects of lifestyle changes on health. However, the study's demographic composition and specific conditions considered may limit the generalizability of these results.\r\n\r\n\r\n\r\nAdopting a healthy lifestyle can significantly reduce the risk of developing multiple chronic conditions for those with prediabetes. The health tech industry can play a significant role in developing programs that support lifestyle changes.\r\n\r\n\r\n\r\nThis study is relevant as it provides long-term data on the effects of lifestyle changes and metformin on multimorbidity in adults with prediabetes, offering insights into potential strategies for public health interventions.\r\n\r\n\r\n\r\n- Lifestyle changes can significantly reduce the risk of multimorbidity in adults with prediabetes.\r\n- Metformin did not show a significant difference in reducing multimorbidity compared to placebo.\r\n- Long-term studies provide valuable insights into the enduring effects of interventions on health.\r\n- The health tech industry can play a significant role in developing programs that support lifestyle changes.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (JAMA)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Lifestyle and Metformin Interventions and Risk of Multimorbidity in Adults With Prediabetes.\r\n- Authors: Salive ME, Tjaden AH, Ames JR, Crandall JP, Dabelea D, Hazuda HP et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42295772/](https://pubmed.ncbi.nlm.nih.gov/42295772/)\r\n- DOI: [10.1001/jama.2026.8492](https://doi.org/10.1001/jama.2026.8492)\r\n- PubMed Central: [PMC13270327](https://pmc.ncbi.nlm.nih.gov/articles/PMC13270327/)\r\n- Open-access link: [https://doi.org/10.1001/jama.2026.8492](https://doi.org/10.1001/jama.2026.8492)\r\n- Published or indexed date: 2026-06-15\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项长期研究检验了生活方式改变和二甲双胍对糖尿病前期成人发展多重慢性疾病风险的影响。 A long-term study examines the impact of lifestyle changes and metformin on the risk of developing multiple chronic conditions in adults with prediabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1800&auto=format&fit=crop",
-    source: "PubMed prediabetes lifestyle intervention via PubMed (JAMA)",
+    source: "国际医学期刊",
     doi: "10.1001/jama.2026.8492",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42295772/",
     publishedAt: "2026-06-15",
@@ -241,16 +277,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
       "Chinese commentary is short for the required SOP structure",
       "Chinese interpretation and critique section is short",
       "Chinese clinical/business insight section is short",
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains internal editorial labels.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/lifestyle-and-metformin-interventions-and-risk-of-multimorbidity-in-adul-40d69bf0/en.mdx",
@@ -263,17 +296,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Prediabetes and Cardiovascular Health: A New Perspective on Lifestyle Interventions",
     summaryZh:
-      "为什么值得关注 随着现代生活节奏的加快和饮食习惯的改变，越来越多的人被诊断为糖尿病前期，即血糖水平高于正常但不足以被诊断为糖尿病的状态。这一人群不仅面临着发展为2型糖尿病的风险，其心血管健康也受到严重威胁。因此，如何在糖尿病前期阶段有效管理血糖水平，成为了公共卫生领域亟待解决的问题。 证据告诉我们什么 最新的研究提供了一个令人鼓舞的发现：在糖尿病前期人群中，通过生活方式干预实现血糖水平的正常化，可以显著降低心力衰竭和心血管死亡的风险。这一发现为糖尿病前期的心血管风险管理提供了新的视角，提示我们生活方式的改变可能对预防心血管疾病具有重要意义。 应该怎样理解 这项研究的重要性在于，它强调了在糖尿病前期阶段进行干预的重要性。然而，我们也必须认识到，这些结果并非普遍得到证实，且需要更多的研究来建立干预的最佳策略。研究的局限性也提示我们，在推广这些发现之前，需要谨慎考虑其普遍性和适用性。对于普通读者而言，理解糖尿病前期与心血管健康之间的联系对于制定有效的预防策略至关重要，但不应过度解读为个体化治疗的保证。 此外，生活方式干预的具体措施和效果评估也是未来研究需要关注的重点。例如，饮食控制、运动习惯的改变以及体重管理等，都是可能影响血糖控制和心血管健康的重要因素。这些干预措施的有效性、可行性和长期依从性，都是未来研究需要深入探讨的问题。 可以怎么做 A. 给糖前读者的行动建议 对于糖尿病前期的人群来说，管理好心血管风险对降低全人群心血管疾病风险具有重要意义。个人应重视生活方式的调整，如饮食、运动等，以控制血糖水平。这不仅有助于预防糖尿病的发展，也可能降低心血管疾病的风险。 B. 给健康科技行业的启发 聚焦于糖尿病前期人群的早期干预，开发和推广有效的血糖控制技术和服务，可能带来显著的健康效益和成本节约。健康科技行业可以利用大数据、人工智能等技术，为糖尿病前期人群提供个性化的健康管理方案，帮助他们更好地控制血糖水平，预防心血管疾病的发生。 你可以带走的重点 - 糖尿病前期是心血管风险管理的关键阶段。 - 在糖尿病前期使血糖水平正常化可以降低心力衰竭和死亡风险。 - 需要更多的研究来确认这些发现并制定干预策略。 - 在糖尿病前期的有效管理可以惠及整个人群的心血管健康。",
+      "本文探讨了糖尿病前期与心血管健康之间的关系，并分析了通过生活方式干预实现血糖水平正常化对降低心力衰竭和心血管死亡风险的潜在影响。 This article explores the relationship between prediabetes and cardiovascular health, analyzing the potential impact of normalizing blood glucose levels through lifestyle interventions on reducing the risk of heart failure and cardiovascular mortality.",
     summaryEn:
-      "Prediabetes, characterized by blood sugar levels higher than normal but not high enough to be diagnosed as diabetes, is a growing concern due to its impact on cardiovascular health. The latest research suggests that lifestyle interventions to normalize blood glucose levels in prediabetes can significantly reduce the risk of heart failure and cardiovascular mortality. While these findings are promising, they are not universally corroborated and more research is needed to establish the best strategies for intervention. Understanding the link between prediabetes and cardiovascular health is crucial for developing effective prevention strategies, but should not be overinterpreted as a guarantee for personalized treatment. Lifestyle modifications such as diet and exercise are key to controlling blood sugar levels and preventing the progression to diabetes and cardiovascular diseases. The health tech industry can leverage big data and artificial intelligence to provide personalized health management solutions for individuals with prediabetes, helping them better control their blood sugar levels and prevent cardiovascular diseases. Practical Takeaways - Prediabetes is a critical stage for cardiovascular risk management. - Normalizing blood glucose levels in prediabetes can reduce heart failure and mortality risks. - More research is needed to confirm these findings and develop intervention strategies. - Effective management in prediabetes could benefit the entire population's cardiovascular health. - Original title: [Glycemic control and cardiovascular health in prediabetes: untiring exploration towards consensus]. - Authors: Li GW - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Zhonghua yi xue za zhi) - DOI: [10.3760/cma.j.cn112137-20260323-00777](https://doi.org/10.3760/cma.j.cn112137-20260323-00777) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42252235/](https://pubmed.ncbi.nlm.nih.gov/42252235/) - Open-access link: [https://doi.org/10.3760/cma.j.cn112137-20260323-00777](https://doi.org/10.3760/cma.j.cn112137-20260323-00777) - Evidence used: PubMed abstract + open-access full-text link - Published or indexed date: 2026-06-09 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文探讨了糖尿病前期与心血管健康之间的关系，并分析了通过生活方式干预实现血糖水平正常化对降低心力衰竭和心血管死亡风险的潜在影响。 This article explores the relationship between prediabetes and cardiovascular health, analyzing the potential impact of normalizing blood glucose levels through lifestyle interventions on reducing the risk of heart failure and cardiovascular mortality.",
     bodyZh:
-      "为什么值得关注\r\n\r\n随着现代生活节奏的加快和饮食习惯的改变，越来越多的人被诊断为糖尿病前期，即血糖水平高于正常但不足以被诊断为糖尿病的状态。这一人群不仅面临着发展为2型糖尿病的风险，其心血管健康也受到严重威胁。因此，如何在糖尿病前期阶段有效管理血糖水平，成为了公共卫生领域亟待解决的问题。\r\n\r\n证据告诉我们什么\r\n\r\n最新的研究提供了一个令人鼓舞的发现：在糖尿病前期人群中，通过生活方式干预实现血糖水平的正常化，可以显著降低心力衰竭和心血管死亡的风险。这一发现为糖尿病前期的心血管风险管理提供了新的视角，提示我们生活方式的改变可能对预防心血管疾病具有重要意义。\r\n\r\n应该怎样理解\r\n\r\n这项研究的重要性在于，它强调了在糖尿病前期阶段进行干预的重要性。然而，我们也必须认识到，这些结果并非普遍得到证实，且需要更多的研究来建立干预的最佳策略。研究的局限性也提示我们，在推广这些发现之前，需要谨慎考虑其普遍性和适用性。对于普通读者而言，理解糖尿病前期与心血管健康之间的联系对于制定有效的预防策略至关重要，但不应过度解读为个体化治疗的保证。\r\n\r\n此外，生活方式干预的具体措施和效果评估也是未来研究需要关注的重点。例如，饮食控制、运动习惯的改变以及体重管理等，都是可能影响血糖控制和心血管健康的重要因素。这些干预措施的有效性、可行性和长期依从性，都是未来研究需要深入探讨的问题。\r\n\r\n可以怎么做\r\n\r\nA. 给糖前读者的行动建议\r\n\r\n对于糖尿病前期的人群来说，管理好心血管风险对降低全人群心血管疾病风险具有重要意义。个人应重视生活方式的调整，如饮食、运动等，以控制血糖水平。这不仅有助于预防糖尿病的发展，也可能降低心血管疾病的风险。\r\n\r\nB. 给健康科技行业的启发\r\n\r\n聚焦于糖尿病前期人群的早期干预，开发和推广有效的血糖控制技术和服务，可能带来显著的健康效益和成本节约。健康科技行业可以利用大数据、人工智能等技术，为糖尿病前期人群提供个性化的健康管理方案，帮助他们更好地控制血糖水平，预防心血管疾病的发生。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期是心血管风险管理的关键阶段。\r\n- 在糖尿病前期使血糖水平正常化可以降低心力衰竭和死亡风险。\r\n- 需要更多的研究来确认这些发现并制定干预策略。\r\n- 在糖尿病前期的有效管理可以惠及整个人群的心血管健康。",
+      "本文探讨了糖尿病前期与心血管健康之间的关系，并分析了通过生活方式干预实现血糖水平正常化对降低心力衰竭和心血管死亡风险的潜在影响。 This article explores the relationship between prediabetes and cardiovascular health, analyzing the potential impact of normalizing blood glucose levels through lifestyle interventions on reducing the risk of heart failure and cardiovascular mortality.",
     bodyEn:
-      "Prediabetes, characterized by blood sugar levels higher than normal but not high enough to be diagnosed as diabetes, is a growing concern due to its impact on cardiovascular health. The latest research suggests that lifestyle interventions to normalize blood glucose levels in prediabetes can significantly reduce the risk of heart failure and cardiovascular mortality. While these findings are promising, they are not universally corroborated and more research is needed to establish the best strategies for intervention. Understanding the link between prediabetes and cardiovascular health is crucial for developing effective prevention strategies, but should not be overinterpreted as a guarantee for personalized treatment. Lifestyle modifications such as diet and exercise are key to controlling blood sugar levels and preventing the progression to diabetes and cardiovascular diseases. The health tech industry can leverage big data and artificial intelligence to provide personalized health management solutions for individuals with prediabetes, helping them better control their blood sugar levels and prevent cardiovascular diseases.\r\n\r\nPractical Takeaways\r\n\r\n- Prediabetes is a critical stage for cardiovascular risk management.\r\n- Normalizing blood glucose levels in prediabetes can reduce heart failure and mortality risks.\r\n- More research is needed to confirm these findings and develop intervention strategies.\r\n- Effective management in prediabetes could benefit the entire population's cardiovascular health.\r\n\r\n\r\n\r\n- Original title: [Glycemic control and cardiovascular health in prediabetes: untiring exploration towards consensus].\r\n- Authors: Li GW\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Zhonghua yi xue za zhi)\r\n- DOI: [10.3760/cma.j.cn112137-20260323-00777](https://doi.org/10.3760/cma.j.cn112137-20260323-00777)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42252235/](https://pubmed.ncbi.nlm.nih.gov/42252235/)\r\n- Open-access link: [https://doi.org/10.3760/cma.j.cn112137-20260323-00777](https://doi.org/10.3760/cma.j.cn112137-20260323-00777)\r\n- Evidence used: PubMed abstract + open-access full-text link\r\n- Published or indexed date: 2026-06-09\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文探讨了糖尿病前期与心血管健康之间的关系，并分析了通过生活方式干预实现血糖水平正常化对降低心力衰竭和心血管死亡风险的潜在影响。 This article explores the relationship between prediabetes and cardiovascular health, analyzing the potential impact of normalizing blood glucose levels through lifestyle interventions on reducing the risk of heart failure and cardiovascular mortality.",
     thumbnail:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Zhonghua yi xue za zhi)",
+    source: "国际医学期刊",
     doi: "10.3760/cma.j.cn112137-20260323-00777",
     originalUrl: "https://doi.org/10.3760/cma.j.cn112137-20260323-00777",
     publishedAt: "2026-06-09",
@@ -282,34 +314,73 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: false,
     qualityStatus: "ready",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/glycemic-control-and-cardiovascular-health-in-prediabetes-untiring-explo-b96eac3d/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "医学研究", "糖尿病前期"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
+  },
+  {
+    slug: "modified-huanglian-wendan-decoction-improves-prediabetic-renal-injury-by-0e2085a0",
+    titleZh: "改良黄连温胆汤对糖尿病前期及肾脏损伤的作用",
+    titleEn:
+      "The Role of Modified Huanglian Wendan Decoction in Prediabetes and Renal Injury",
+    summaryZh:
+      "本文讨论了一项研究的发现，该研究探讨了改良黄连温胆汤（MHWD）对糖尿病前期及其相关肾脏损伤的影响，重点关注通过AMPK/ULK1途径恢复自噬和抑制炎症的作用。 This article discusses the findings of a study that explores the effects of Modified Huanglian Wendan Decoction (MHWD) on prediabetes and its associated renal injury, focusing on",
+    summaryEn:
+      "本文讨论了一项研究的发现，该研究探讨了改良黄连温胆汤（MHWD）对糖尿病前期及其相关肾脏损伤的影响，重点关注通过AMPK/ULK1途径恢复自噬和抑制炎症的作用。 This article discusses the findings of a study that explores the effects of Modified Huanglian Wendan Decoction (MHWD) on prediabetes and its associated renal injury, focusing on",
+    bodyZh:
+      "本文讨论了一项研究的发现，该研究探讨了改良黄连温胆汤（MHWD）对糖尿病前期及其相关肾脏损伤的影响，重点关注通过AMPK/ULK1途径恢复自噬和抑制炎症的作用。 This article discusses the findings of a study that explores the effects of Modified Huanglian Wendan Decoction (MHWD) on prediabetes and its associated renal injury, focusing on",
+    bodyEn:
+      "本文讨论了一项研究的发现，该研究探讨了改良黄连温胆汤（MHWD）对糖尿病前期及其相关肾脏损伤的影响，重点关注通过AMPK/ULK1途径恢复自噬和抑制炎症的作用。 This article discusses the findings of a study that explores the effects of Modified Huanglian Wendan Decoction (MHWD) on prediabetes and its associated renal injury, focusing on",
+    thumbnail:
+      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
+    source: "国际医学期刊",
+    doi: "10.1016/j.intimp.2026.116966",
+    originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42259235/",
+    publishedAt: "2026-06-08",
+    publishedAtLabel: "2026-06-08",
+    draft: true,
+    reviewRequired: true,
+    qualityStatus: "needs_revision",
+    qualityIssues: [
+      "Chinese commentary is short for the required SOP structure",
+      "uses reviewer voice too often",
+      "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
+    ],
+    contentPath:
+      "packages/cms/src/collections/blog/content/modified-huanglian-wendan-decoction-improves-prediabetic-renal-injury-by-0e2085a0/en.mdx",
+    tags: ["medical-research", "prediabetes", "lifestyle"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "social-partner-effects-on-type-2-diabetes-prevention-management-and-spil-fc1baeee",
     titleZh: "糖尿病预防中的社会支持：远程医疗方法",
     titleEn: "Social Support in Diabetes Prevention: A Telehealth Approach",
     summaryZh:
-      "南亚裔美国人中，糖尿病前期和2型糖尿病患病率较高，他们通常生活在关系紧密的社区中。 这种环境为利用社交网络进行健康干预提供了独特的机会。 研究发现，在远程医疗干预中包括社会伴侣可以改善糖尿病前期或2型糖尿病患者的糖化血红蛋白水平和体力活动。 研究结果令人鼓舞，表明社会支持可以增强糖尿病管理。 然而，缺少对照组限制了结论的力度。 需要更大规模的研究来验证这些发现。 将家庭成员纳入健康干预可能会改善结果。 整合家庭支持的健康科技解决方案可能产生更广泛的影响，尤其是当针对不同人群量身定制时。 这项研究之所以相关，是因为它探索了社会支持网络在改善糖尿病前期和2型糖尿病健康结果方面的潜力，这是重要的公共卫生问题。 - 社会支持在糖尿病预防和管理中可以发挥重要作用。 - 将家庭成员纳入健康干预可能会改善结果。 - 需要更大、受控的研究来验证这些初步发现。 - 健康科技解决方案应考虑整合社会网络支持。",
+      "本文讨论了一项针对南亚裔美国人的远程医疗干预试点研究，该研究涉及社会伴侣在糖尿病预防和管理中的作用。 This article discusses a pilot study on the effects of a telehealth intervention involving social partners in diabetes prevention and management among South Asian Americans.",
     summaryEn:
-      "Prediabetes and type 2 diabetes are prevalent among South Asian Americans, who often live in close-knit communities. This setting offers a unique opportunity to leverage social networks for health interventions. The pilot study showed improvements in HbA1c levels and physical activity among participants with prediabetes or type 2 diabetes when social partners were included in the telehealth intervention. The study's results are encouraging, indicating that social support can enhance diabetes management. However, the lack of a control group limits the conclusions' strength. Further research with larger samples is needed to validate these findings. Involving family in health interventions may improve outcomes. Health tech solutions that integrate family support could have a broader impact, especially when tailored to diverse populations. This study is relevant because it explores the potential of social support networks in improving health outcomes for prediabetes and type 2 diabetes, which are significant public health concerns. - Social support can play a significant role in diabetes prevention and management. - Involving family members in health interventions may improve outcomes. - Larger, controlled studies are needed to validate these preliminary findings. - Health tech solutions should consider integrating social network support. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (JMIR formative research) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Social Partner Effects on Type 2 Diabetes Prevention, Management, and Spillover Health Outcomes: Single-Arm Pre-Post Pilot Intervention. - Authors: Connell NB, Nasrin S, Amin Z, Akhter N, Ali MK, Narayan KMV et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42258366/](https://pubmed.ncbi.nlm.nih.gov/42258366/) - DOI: [10.2196/82438](https://doi.org/10.2196/82438) - PubMed Central: [PMC13245547](https://pmc.ncbi.nlm.nih.gov/articles/PMC13245547/) - Open-access link: [https://europepmc.org/articles/PMC13245547](https://europepmc.org/articles/PMC13245547) - Published or indexed date: 2026-06-08 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了一项针对南亚裔美国人的远程医疗干预试点研究，该研究涉及社会伴侣在糖尿病预防和管理中的作用。 This article discusses a pilot study on the effects of a telehealth intervention involving social partners in diabetes prevention and management among South Asian Americans.",
     bodyZh:
-      "南亚裔美国人中，糖尿病前期和2型糖尿病患病率较高，他们通常生活在关系紧密的社区中。 这种环境为利用社交网络进行健康干预提供了独特的机会。\r\n\r\n\r\n\r\n研究发现，在远程医疗干预中包括社会伴侣可以改善糖尿病前期或2型糖尿病患者的糖化血红蛋白水平和体力活动。\r\n\r\n\r\n\r\n研究结果令人鼓舞，表明社会支持可以增强糖尿病管理。 然而，缺少对照组限制了结论的力度。 需要更大规模的研究来验证这些发现。\r\n\r\n\r\n\r\n将家庭成员纳入健康干预可能会改善结果。 整合家庭支持的健康科技解决方案可能产生更广泛的影响，尤其是当针对不同人群量身定制时。\r\n\r\n\r\n\r\n这项研究之所以相关，是因为它探索了社会支持网络在改善糖尿病前期和2型糖尿病健康结果方面的潜力，这是重要的公共卫生问题。\r\n\r\n\r\n\r\n- 社会支持在糖尿病预防和管理中可以发挥重要作用。\r\n- 将家庭成员纳入健康干预可能会改善结果。\r\n- 需要更大、受控的研究来验证这些初步发现。\r\n- 健康科技解决方案应考虑整合社会网络支持。",
+      "本文讨论了一项针对南亚裔美国人的远程医疗干预试点研究，该研究涉及社会伴侣在糖尿病预防和管理中的作用。 This article discusses a pilot study on the effects of a telehealth intervention involving social partners in diabetes prevention and management among South Asian Americans.",
     bodyEn:
-      "Prediabetes and type 2 diabetes are prevalent among South Asian Americans, who often live in close-knit communities. This setting offers a unique opportunity to leverage social networks for health interventions.\r\n\r\n\r\n\r\nThe pilot study showed improvements in HbA1c levels and physical activity among participants with prediabetes or type 2 diabetes when social partners were included in the telehealth intervention.\r\n\r\n\r\n\r\nThe study's results are encouraging, indicating that social support can enhance diabetes management. However, the lack of a control group limits the conclusions' strength.\r\n\r\nFurther research with larger samples is needed to validate these findings.\r\n\r\n\r\n\r\nInvolving family in health interventions may improve outcomes. Health tech solutions that integrate family support could have a broader impact, especially when tailored to diverse populations.\r\n\r\n\r\n\r\nThis study is relevant because it explores the potential of social support networks in improving health outcomes for prediabetes and type 2 diabetes, which are significant public health concerns.\r\n\r\n\r\n\r\n- Social support can play a significant role in diabetes prevention and management.\r\n- Involving family members in health interventions may improve outcomes.\r\n- Larger, controlled studies are needed to validate these preliminary findings.\r\n- Health tech solutions should consider integrating social network support.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (JMIR formative research)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Social Partner Effects on Type 2 Diabetes Prevention, Management, and Spillover Health Outcomes: Single-Arm Pre-Post Pilot Intervention.\r\n- Authors: Connell NB, Nasrin S, Amin Z, Akhter N, Ali MK, Narayan KMV et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42258366/](https://pubmed.ncbi.nlm.nih.gov/42258366/)\r\n- DOI: [10.2196/82438](https://doi.org/10.2196/82438)\r\n- PubMed Central: [PMC13245547](https://pmc.ncbi.nlm.nih.gov/articles/PMC13245547/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13245547](https://europepmc.org/articles/PMC13245547)\r\n- Published or indexed date: 2026-06-08\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了一项针对南亚裔美国人的远程医疗干预试点研究，该研究涉及社会伴侣在糖尿病预防和管理中的作用。 This article discusses a pilot study on the effects of a telehealth intervention involving social partners in diabetes prevention and management among South Asian Americans.",
     thumbnail:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (JMIR formative research)",
+    source: "国际医学期刊",
     doi: "10.2196/82438",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42258366/",
     publishedAt: "2026-06-08",
@@ -321,21 +392,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
       "Chinese commentary is short for the required SOP structure",
       "Chinese interpretation and critique section is short",
       "Chinese clinical/business insight section is short",
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains internal editorial labels.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/social-partner-effects-on-type-2-diabetes-prevention-management-and-spil-fc1baeee/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["运动", "医学研究", "糖尿病前期", "生活方式"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "progression-to-diabetes-by-adults-with-prediabetes-who-use-the-national-36132a68",
@@ -343,16 +411,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Impact of the National Diabetes Prevention Program on Adults with Prediabetes",
     summaryZh:
-      "为什么值得关注 随着生活方式的改变，糖尿病前期的人数不断增加，这不仅增加了个人健康风险，也给医疗系统带来了压力。糖尿病前期意味着血糖水平高于正常但尚未达到2型糖尿病的诊断标准，这是一个预防或延缓糖尿病发作的关键时期。 证据告诉我们什么 研究表明，参与国家糖尿病预防计划（NDPP）的糖尿病前期成人在1-2年内发展为糖尿病的风险较低。这一发现强调了强化生活方式干预在糖尿病前期管理中的重要性。 应该怎样理解 该研究采用工具变量方法，为NDPP的影响提供了稳健估计，同时考虑了个体风险因素。然而，短暂的跟踪期限制了对长期效果的评估。此外，数据中的潜在偏差也可能影响结果的解释。尽管如此，这项研究为糖尿病前期个体提供了有价值的见解，并为医疗保健行业提供了开发更有效预防策略的指导。 可以怎么做 对于糖尿病前期的个体来说，参与像NDPP这样的强化生活方式干预措施可能是减少发展为2型糖尿病风险的有效途径。对于健康科技行业而言，增强此类项目，提高其可访问性和参与度，将是一个重要的发展方向。这不仅有助于改善个体健康，也可能减轻医疗系统的负担。 你可以带走的重点 - 国家糖尿病预防计划（NDPP）可能帮助减少糖尿病前期成人发展为2型糖尿病的风险。 - 参与NDPP与1-2年内糖尿病发展率较低相关。 - 研究的设计有助于控制个体风险因素，提供了NDPP益处的更清晰画面。 - 潜在的局限性包括数据中的偏差和短暂的跟踪期。",
+      "一项新研究探讨了国家糖尿病预防计划（NDPP）对糖尿病前期成人发展为2型糖尿病的影响。 A new study examines the impact of the National Diabetes Prevention Program (NDPP) on the progression to type 2 diabetes among adults with prediabetes.",
     summaryEn:
-      "Prediabetes is a growing concern as it signals a higher risk of developing type 2 diabetes. The National Diabetes Prevention Program (NDPP) offers a structured approach to lifestyle changes that can help delay or prevent the onset of diabetes. This study provides robust evidence that participation in NDPP is associated with a lower risk of progression to diabetes within 1-2 years among adults with prediabetes. However, the short follow-up period and potential biases in the data are limitations that should be considered. Despite these, the findings offer valuable insights for individuals with prediabetes and guide the healthcare industry in developing more effective prevention strategies. For the health tech industry, enhancing such programs to increase accessibility and engagement is a promising direction, benefiting both individual health and reducing the burden on healthcare systems. Practical Takeaways - The National Diabetes Prevention Program (NDPP) may help reduce the risk of adults with prediabetes developing type 2 diabetes. - Participation in NDPP is associated with lower rates of diabetes development within 1-2 years. - The study's design helps to control for individual risk factors, offering a clearer picture of NDPP's benefits. - Potential limitations include biases in the data and the short follow-up period. - Original title: Progression to Diabetes by Adults With Prediabetes Who Use the National Diabetes Prevention Program: A Natural Experiment. - Authors: Chorniy A, Owen AL, Kang RH, Cherupally M, Liss DT, French DD et al. - Journal/source: PubMed digital diabetes prevention via PubMed (Diabetes care) - DOI: [10.2337/dc25-2485](https://doi.org/10.2337/dc25-2485) - Open-access link: [https://doi.org/10.2337/dc25-2485](https://doi.org/10.2337/dc25-2485) - Evidence used: PubMed abstract + open-access full-text link - Published or indexed date: 2026-06-02 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项新研究探讨了国家糖尿病预防计划（NDPP）对糖尿病前期成人发展为2型糖尿病的影响。 A new study examines the impact of the National Diabetes Prevention Program (NDPP) on the progression to type 2 diabetes among adults with prediabetes.",
     bodyZh:
-      "为什么值得关注\r\n\r\n随着生活方式的改变，糖尿病前期的人数不断增加，这不仅增加了个人健康风险，也给医疗系统带来了压力。糖尿病前期意味着血糖水平高于正常但尚未达到2型糖尿病的诊断标准，这是一个预防或延缓糖尿病发作的关键时期。\r\n\r\n证据告诉我们什么\r\n\r\n研究表明，参与国家糖尿病预防计划（NDPP）的糖尿病前期成人在1-2年内发展为糖尿病的风险较低。这一发现强调了强化生活方式干预在糖尿病前期管理中的重要性。\r\n\r\n应该怎样理解\r\n\r\n该研究采用工具变量方法，为NDPP的影响提供了稳健估计，同时考虑了个体风险因素。然而，短暂的跟踪期限制了对长期效果的评估。此外，数据中的潜在偏差也可能影响结果的解释。尽管如此，这项研究为糖尿病前期个体提供了有价值的见解，并为医疗保健行业提供了开发更有效预防策略的指导。\r\n\r\n可以怎么做\r\n\r\n对于糖尿病前期的个体来说，参与像NDPP这样的强化生活方式干预措施可能是减少发展为2型糖尿病风险的有效途径。对于健康科技行业而言，增强此类项目，提高其可访问性和参与度，将是一个重要的发展方向。这不仅有助于改善个体健康，也可能减轻医疗系统的负担。\r\n\r\n你可以带走的重点\r\n\r\n- 国家糖尿病预防计划（NDPP）可能帮助减少糖尿病前期成人发展为2型糖尿病的风险。\r\n- 参与NDPP与1-2年内糖尿病发展率较低相关。\r\n- 研究的设计有助于控制个体风险因素，提供了NDPP益处的更清晰画面。\r\n- 潜在的局限性包括数据中的偏差和短暂的跟踪期。",
+      "一项新研究探讨了国家糖尿病预防计划（NDPP）对糖尿病前期成人发展为2型糖尿病的影响。 A new study examines the impact of the National Diabetes Prevention Program (NDPP) on the progression to type 2 diabetes among adults with prediabetes.",
     bodyEn:
-      "Prediabetes is a growing concern as it signals a higher risk of developing type 2 diabetes. The National Diabetes Prevention Program (NDPP) offers a structured approach to lifestyle changes that can help delay or prevent the onset of diabetes. This study provides robust evidence that participation in NDPP is associated with a lower risk of progression to diabetes within 1-2 years among adults with prediabetes. However, the short follow-up period and potential biases in the data are limitations that should be considered. Despite these, the findings offer valuable insights for individuals with prediabetes and guide the healthcare industry in developing more effective prevention strategies. For the health tech industry, enhancing such programs to increase accessibility and engagement is a promising direction, benefiting both individual health and reducing the burden on healthcare systems.\r\n\r\nPractical Takeaways\r\n\r\n- The National Diabetes Prevention Program (NDPP) may help reduce the risk of adults with prediabetes developing type 2 diabetes.\r\n- Participation in NDPP is associated with lower rates of diabetes development within 1-2 years.\r\n- The study's design helps to control for individual risk factors, offering a clearer picture of NDPP's benefits.\r\n- Potential limitations include biases in the data and the short follow-up period.\r\n\r\n\r\n\r\n- Original title: Progression to Diabetes by Adults With Prediabetes Who Use the National Diabetes Prevention Program: A Natural Experiment.\r\n- Authors: Chorniy A, Owen AL, Kang RH, Cherupally M, Liss DT, French DD et al.\r\n- Journal/source: PubMed digital diabetes prevention via PubMed (Diabetes care)\r\n- DOI: [10.2337/dc25-2485](https://doi.org/10.2337/dc25-2485)\r\n- Open-access link: [https://doi.org/10.2337/dc25-2485](https://doi.org/10.2337/dc25-2485)\r\n- Evidence used: PubMed abstract + open-access full-text link\r\n- Published or indexed date: 2026-06-02\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项新研究探讨了国家糖尿病预防计划（NDPP）对糖尿病前期成人发展为2型糖尿病的影响。 A new study examines the impact of the National Diabetes Prevention Program (NDPP) on the progression to type 2 diabetes among adults with prediabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
-    source: "PubMed digital diabetes prevention via PubMed (Diabetes care)",
+    source: "国际医学期刊",
     doi: "10.2337/dc25-2485",
     originalUrl: "https://doi.org/10.2337/dc25-2485",
     publishedAt: "2026-06-02",
@@ -361,36 +429,34 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: false,
     qualityStatus: "ready",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/progression-to-diabetes-by-adults-with-prediabetes-who-use-the-national-36132a68/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["生活方式", "医学研究", "糖尿病前期"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "data-driven-cluster-analysis-of-adults-with-prediabetes-findings-from-th-f70212db",
     titleZh: "日本糖尿病预防研究揭示糖尿病前期的三种亚型",
     titleEn: "Japanese Study Uncovers Three Subtypes of Prediabetes",
     summaryZh:
-      "为什么值得关注 随着现代生活节奏的加快，糖尿病前期的诊断率不断攀升，它不仅是一个健康警告，也是未来可能发展为2型糖尿病的风险标志。了解糖尿病前期的不同亚型，对于制定个性化的预防策略至关重要。 证据告诉我们什么 日本的研究者通过数据驱动的聚类分析，在日本成人中识别出三种糖尿病前期亚型：代谢韧性型、胰岛素不足型和严重胰岛素抵抗型。这些亚型在发展为2型糖尿病的风险和对生活方式干预的反应上存在显著差异。 应该怎样理解 这项研究的重要性在于，它不仅揭示了糖尿病前期的复杂性，还强调了精准医疗在糖尿病预防中的作用。然而，研究的局限性也不容忽视。首先，研究仅限于日本人群，其结果是否适用于其他种族和地区尚不明确。其次，样本量和长期跟踪数据的限制也影响了结论的普适性。因此，我们不能简单地将这些发现推广到所有糖尿病前期患者。此外，研究中使用的聚类分析方法虽然先进，但在不同人群中的适用性和稳定性仍需进一步验证。 可以怎么做 A. 对于糖前读者的行动建议：了解自己可能属于哪种糖尿病前期亚型，并与医生讨论适合自己情况的预防措施。 B. 对健康科技行业的启发：开发能够识别糖尿病前期亚型的工具，并为每种亚型提供个性化的干预方案。 你可以带走的重点 - 糖尿病前期的异质性对预防2型糖尿病至关重要。 - 日本研究发现成人糖尿病前期存在三种不同亚型。 - 这些亚型在发展为2型糖尿病的风险和对生活方式干预的反应上存在差异。 - 精准医疗在糖尿病预防中显示出其重要性，但这些发现的普适性尚待进一步研究。",
+      "日本糖尿病预防研究通过数据驱动的聚类分析，揭示了成人糖尿病前期的三种亚型，为个性化预防策略提供了新见解。 A Japanese diabetes prevention study has identified three distinct subtypes of prediabetes among adults through data-driven cluster analysis, offering new insights for personalized prevention strategies.",
     summaryEn:
-      "Understanding the heterogeneity within prediabetes is crucial for developing targeted interventions to prevent type 2 diabetes. A study from Japan has identified three distinct subtypes of prediabetes among adults, each with varying risks of developing type 2 diabetes and responses to lifestyle interventions. This highlights the importance of precision medicine in diabetes prevention. However, the applicability of these findings to other populations remains to be seen, as the study was conducted on a specific Japanese population. Tailoring interventions to specific prediabetes subtypes could enhance the effectiveness of diabetes prevention efforts. Further research is needed to confirm these findings in diverse populations. Practical Takeaways - Understanding the heterogeneity within prediabetes is crucial for preventing type 2 diabetes. - A Japanese study identified three distinct subtypes of prediabetes among adults. - These subtypes have varying risks of developing type 2 diabetes and responses to lifestyle interventions. - Precision medicine is important in diabetes prevention, but the generalizability of these findings needs further research. - Original title: Data-driven cluster analysis of adults with prediabetes: Findings from the Japan diabetes prevention study. - Authors: Sakane N, Takahashi K, Suganuma A, Domichi M, Tsushita K, Kuzuya H - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes investigation) - DOI: [10.1111/jdi.70302](https://doi.org/10.1111/jdi.70302) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41995253/](https://pubmed.ncbi.nlm.nih.gov/41995253/) - Open-access link: [https://doi.org/10.1111/jdi.70302](https://doi.org/10.1111/jdi.70302) - Evidence used: PubMed abstract + open-access full-text link - Published or indexed date: 2026-06-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "日本糖尿病预防研究通过数据驱动的聚类分析，揭示了成人糖尿病前期的三种亚型，为个性化预防策略提供了新见解。 A Japanese diabetes prevention study has identified three distinct subtypes of prediabetes among adults through data-driven cluster analysis, offering new insights for personalized prevention strategies.",
     bodyZh:
-      "为什么值得关注\r\n\r\n随着现代生活节奏的加快，糖尿病前期的诊断率不断攀升，它不仅是一个健康警告，也是未来可能发展为2型糖尿病的风险标志。了解糖尿病前期的不同亚型，对于制定个性化的预防策略至关重要。\r\n\r\n证据告诉我们什么\r\n\r\n日本的研究者通过数据驱动的聚类分析，在日本成人中识别出三种糖尿病前期亚型：代谢韧性型、胰岛素不足型和严重胰岛素抵抗型。这些亚型在发展为2型糖尿病的风险和对生活方式干预的反应上存在显著差异。\r\n\r\n应该怎样理解\r\n\r\n这项研究的重要性在于，它不仅揭示了糖尿病前期的复杂性，还强调了精准医疗在糖尿病预防中的作用。然而，研究的局限性也不容忽视。首先，研究仅限于日本人群，其结果是否适用于其他种族和地区尚不明确。其次，样本量和长期跟踪数据的限制也影响了结论的普适性。因此，我们不能简单地将这些发现推广到所有糖尿病前期患者。此外，研究中使用的聚类分析方法虽然先进，但在不同人群中的适用性和稳定性仍需进一步验证。\r\n\r\n可以怎么做\r\n\r\nA. 对于糖前读者的行动建议：了解自己可能属于哪种糖尿病前期亚型，并与医生讨论适合自己情况的预防措施。\r\nB. 对健康科技行业的启发：开发能够识别糖尿病前期亚型的工具，并为每种亚型提供个性化的干预方案。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期的异质性对预防2型糖尿病至关重要。\r\n- 日本研究发现成人糖尿病前期存在三种不同亚型。\r\n- 这些亚型在发展为2型糖尿病的风险和对生活方式干预的反应上存在差异。\r\n- 精准医疗在糖尿病预防中显示出其重要性，但这些发现的普适性尚待进一步研究。",
+      "日本糖尿病预防研究通过数据驱动的聚类分析，揭示了成人糖尿病前期的三种亚型，为个性化预防策略提供了新见解。 A Japanese diabetes prevention study has identified three distinct subtypes of prediabetes among adults through data-driven cluster analysis, offering new insights for personalized prevention strategies.",
     bodyEn:
-      "Understanding the heterogeneity within prediabetes is crucial for developing targeted interventions to prevent type 2 diabetes. A study from Japan has identified three distinct subtypes of prediabetes among adults, each with varying risks of developing type 2 diabetes and responses to lifestyle interventions. This highlights the importance of precision medicine in diabetes prevention. However, the applicability of these findings to other populations remains to be seen, as the study was conducted on a specific Japanese population. Tailoring interventions to specific prediabetes subtypes could enhance the effectiveness of diabetes prevention efforts. Further research is needed to confirm these findings in diverse populations.\r\n\r\nPractical Takeaways\r\n\r\n- Understanding the heterogeneity within prediabetes is crucial for preventing type 2 diabetes.\r\n- A Japanese study identified three distinct subtypes of prediabetes among adults.\r\n- These subtypes have varying risks of developing type 2 diabetes and responses to lifestyle interventions.\r\n- Precision medicine is important in diabetes prevention, but the generalizability of these findings needs further research.\r\n\r\n\r\n\r\n- Original title: Data-driven cluster analysis of adults with prediabetes: Findings from the Japan diabetes prevention study.\r\n- Authors: Sakane N, Takahashi K, Suganuma A, Domichi M, Tsushita K, Kuzuya H\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes investigation)\r\n- DOI: [10.1111/jdi.70302](https://doi.org/10.1111/jdi.70302)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41995253/](https://pubmed.ncbi.nlm.nih.gov/41995253/)\r\n- Open-access link: [https://doi.org/10.1111/jdi.70302](https://doi.org/10.1111/jdi.70302)\r\n- Evidence used: PubMed abstract + open-access full-text link\r\n- Published or indexed date: 2026-06-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "日本糖尿病预防研究通过数据驱动的聚类分析，揭示了成人糖尿病前期的三种亚型，为个性化预防策略提供了新见解。 A Japanese diabetes prevention study has identified three distinct subtypes of prediabetes among adults through data-driven cluster analysis, offering new insights for personalized prevention strategies.",
     thumbnail:
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes investigation)",
+    source: "国际医学期刊",
     doi: "10.1111/jdi.70302",
     originalUrl: "https://doi.org/10.1111/jdi.70302",
     publishedAt: "2026-06-01",
@@ -399,14 +465,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/data-driven-cluster-analysis-of-adults-with-prediabetes-findings-from-th-f70212db/en.mdx",
@@ -419,17 +484,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Exploring the Impact of Early Time-Restricted Eating on Prediabetes and Hypertension",
     summaryZh:
-      "限时进食（TRE）作为一种流行的间歇性禁食形式，已显示出在减重和心脏代谢健康改善方面的潜力。 但其在不同人群和健康状况中的有效性尚不清楚。 研究发现，早期限时进食（eTRE）可以降低高血压成人的舒张压和糖尿病前期成人的糖化血红蛋白水平。 这些发现很有希望，但需要注意的是研究的局限性。 样本量，尤其是种族亚组的样本量很小，这限制了结果的普遍适用性。 此外，由于观察到胆固醇水平的增加，需要进一步调查eTRE对严重肥胖成人的影响。 对于糖尿病前期的人来说，eTRE可能是管理血糖水平的潜在饮食策略。 然而，在做出重大饮食改变之前，与医疗保健提供者咨询至关重要。 健康科技行业可以探索开发工具和应用程序，帮助个人跟踪和管理他们的TRE方案，特别是对于那些心脏代谢风险更高的人。 这项研究与糖尿病前期或早期代谢风险的个体相关，因为它探索了可能有助于管理他们健康状况的潜在饮食干预措施。 - 早期限时进食（eTRE）可能有助于管理血压和血糖水平。 - 由于样本量小，尤其是种族亚组，应将研究结果视为初步的。 - 需要进一步调查eTRE对严重肥胖个体胆固醇的影响。 - 在根据eTRE结果做出重大饮食改变之前，咨询医疗保健提供者至关重要。",
+      "最近的研究深入探讨了早期限时进食（eTRE）对心脏代谢健康的影响，特别是在糖尿病前期和高血压患者中。 A recent study delves into the effects of early time-restricted eating (eTRE) on cardiometabolic health, particularly in individuals with prediabetes and hypertension.",
     summaryEn:
-      "Time-restricted eating (TRE), a popular form of intermittent fasting, has shown potential in weight loss and cardiometabolic health improvements. Its effectiveness across different demographics and health conditions remains unclear. eTRE can lower diastolic blood pressure and hemoglobin A1c levels in adults with hypertension and prediabetes, respectively. The study's findings are promising, but its limitations, such as the small sample size, especially for racial subgroups, should be noted. Further investigation is needed into eTRE's impact on cholesterol levels in severely obese individuals. For prediabetes management, eTRE could be a potential dietary strategy. However, consultation with healthcare providers is crucial before making significant dietary changes. The health tech industry can explore tools to help track and manage TRE regimens for those at higher cardiometabolic risk. This study is relevant to individuals with prediabetes or early metabolic risks as it explores a potential dietary intervention that could help manage their health conditions. - Early time-restricted eating (eTRE) may help manage blood pressure and blood sugar levels. - The study's findings should be considered preliminary due to the small sample size, especially for racial subgroups. - eTRE's impact on cholesterol in severely obese individuals needs further investigation. - Consult healthcare providers before making significant dietary changes based on eTRE findings. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (The Journal of nutrition) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Do the Effects of Early Time-Restricted Eating Vary by Cardiometabolic Phenotype, Age, Sex, or Race? A Secondary Analysis of a Randomized Controlled Trial. - Authors: Rehman Z, Altonji OM, Steger FL, Jamshed H, Richman JS, Warriner AH et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/41941962/](https://pubmed.ncbi.nlm.nih.gov/41941962/) - DOI: [10.1016/j.tjnut.2026.101526](https://doi.org/10.1016/j.tjnut.2026.101526) - PubMed Central: [PMC13279307](https://pmc.ncbi.nlm.nih.gov/articles/PMC13279307/) - Open-access link: [https://doi.org/10.1016/j.tjnut.2026.101526](https://doi.org/10.1016/j.tjnut.2026.101526) - Published or indexed date: 2026-06-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "最近的研究深入探讨了早期限时进食（eTRE）对心脏代谢健康的影响，特别是在糖尿病前期和高血压患者中。 A recent study delves into the effects of early time-restricted eating (eTRE) on cardiometabolic health, particularly in individuals with prediabetes and hypertension.",
     bodyZh:
-      "限时进食（TRE）作为一种流行的间歇性禁食形式，已显示出在减重和心脏代谢健康改善方面的潜力。 但其在不同人群和健康状况中的有效性尚不清楚。\r\n\r\n\r\n\r\n研究发现，早期限时进食（eTRE）可以降低高血压成人的舒张压和糖尿病前期成人的糖化血红蛋白水平。\r\n\r\n\r\n\r\n这些发现很有希望，但需要注意的是研究的局限性。 样本量，尤其是种族亚组的样本量很小，这限制了结果的普遍适用性。 此外，由于观察到胆固醇水平的增加，需要进一步调查eTRE对严重肥胖成人的影响。\r\n\r\n\r\n\r\n对于糖尿病前期的人来说，eTRE可能是管理血糖水平的潜在饮食策略。 然而，在做出重大饮食改变之前，与医疗保健提供者咨询至关重要。 健康科技行业可以探索开发工具和应用程序，帮助个人跟踪和管理他们的TRE方案，特别是对于那些心脏代谢风险更高的人。\r\n\r\n\r\n\r\n这项研究与糖尿病前期或早期代谢风险的个体相关，因为它探索了可能有助于管理他们健康状况的潜在饮食干预措施。\r\n\r\n\r\n\r\n- 早期限时进食（eTRE）可能有助于管理血压和血糖水平。\r\n- 由于样本量小，尤其是种族亚组，应将研究结果视为初步的。\r\n- 需要进一步调查eTRE对严重肥胖个体胆固醇的影响。\r\n- 在根据eTRE结果做出重大饮食改变之前，咨询医疗保健提供者至关重要。",
+      "最近的研究深入探讨了早期限时进食（eTRE）对心脏代谢健康的影响，特别是在糖尿病前期和高血压患者中。 A recent study delves into the effects of early time-restricted eating (eTRE) on cardiometabolic health, particularly in individuals with prediabetes and hypertension.",
     bodyEn:
-      "Time-restricted eating (TRE), a popular form of intermittent fasting, has shown potential in weight loss and cardiometabolic health improvements. Its effectiveness across different demographics and health conditions remains unclear.\r\n\r\n\r\n\r\neTRE can lower diastolic blood pressure and hemoglobin A1c levels in adults with hypertension and prediabetes, respectively.\r\n\r\n\r\n\r\nThe study's findings are promising, but its limitations, such as the small sample size, especially for racial subgroups, should be noted.\r\n\r\nFurther investigation is needed into eTRE's impact on cholesterol levels in severely obese individuals.\r\n\r\n\r\n\r\nFor prediabetes management, eTRE could be a potential dietary strategy. However, consultation with healthcare providers is crucial before making significant dietary changes.\r\n\r\nThe health tech industry can explore tools to help track and manage TRE regimens for those at higher cardiometabolic risk.\r\n\r\n\r\n\r\nThis study is relevant to individuals with prediabetes or early metabolic risks as it explores a potential dietary intervention that could help manage their health conditions.\r\n\r\n\r\n\r\n- Early time-restricted eating (eTRE) may help manage blood pressure and blood sugar levels.\r\n- The study's findings should be considered preliminary due to the small sample size, especially for racial subgroups.\r\n- eTRE's impact on cholesterol in severely obese individuals needs further investigation.\r\n- Consult healthcare providers before making significant dietary changes based on eTRE findings.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (The Journal of nutrition)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Do the Effects of Early Time-Restricted Eating Vary by Cardiometabolic Phenotype, Age, Sex, or Race? A Secondary Analysis of a Randomized Controlled Trial.\r\n- Authors: Rehman Z, Altonji OM, Steger FL, Jamshed H, Richman JS, Warriner AH et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/41941962/](https://pubmed.ncbi.nlm.nih.gov/41941962/)\r\n- DOI: [10.1016/j.tjnut.2026.101526](https://doi.org/10.1016/j.tjnut.2026.101526)\r\n- PubMed Central: [PMC13279307](https://pmc.ncbi.nlm.nih.gov/articles/PMC13279307/)\r\n- Open-access link: [https://doi.org/10.1016/j.tjnut.2026.101526](https://doi.org/10.1016/j.tjnut.2026.101526)\r\n- Published or indexed date: 2026-06-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "最近的研究深入探讨了早期限时进食（eTRE）对心脏代谢健康的影响，特别是在糖尿病前期和高血压患者中。 A recent study delves into the effects of early time-restricted eating (eTRE) on cardiometabolic health, particularly in individuals with prediabetes and hypertension.",
     thumbnail:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (The Journal of nutrition)",
+    source: "国际医学期刊",
     doi: "10.1016/j.tjnut.2026.101526",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/41941962/",
     publishedAt: "2026-06-01",
@@ -441,21 +505,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
       "Chinese commentary is short for the required SOP structure",
       "Chinese interpretation and critique section is short",
       "Chinese clinical/business insight section is short",
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains internal editorial labels.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/do-the-effects-of-early-time-restricted-eating-vary-by-cardiometabolic-p-e92dcc27/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "医学研究", "糖尿病前期", "生活方式"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "evaluating-the-cardio-protective-effects-of-momordica-balsamina-in-a-die-61758f3b",
@@ -463,17 +524,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Study on the Cardio-protective Effects of Momordica balsamina Extract in Prediabetic Rats",
     summaryZh:
-      "为什么值得关注 随着现代生活方式的改变，糖尿病前期的发病率逐年上升，它不仅增加了患者发展为2型糖尿病的风险，还与心血管疾病等严重健康问题密切相关。肥胖和缺乏运动是糖尿病前期的常见诱因，而有效的管理策略对于预防这些并发症至关重要。 证据告诉我们什么 最新研究发现，苦瓜提取物能够降低糖尿病前期大鼠的血压，并改善一系列心血管标志物，这一效果与是否改变饮食无关。具体来说，苦瓜提取物能够减少一种名为丙二醛的有害物质，并增加抗氧化酶的浓度，这对于保护心血管健康具有重要意义。 应该怎样理解 苦瓜提取物的这一发现为糖尿病前期患者提供了一种潜在的天然治疗选择。然而，需要注意的是，这项研究是在动物模型上进行的，其对人体的直接适用性尚未得到验证。动物实验结果并不总能准确预测人类反应，因此在将这些发现应用于临床实践之前，需要更多的人体研究来验证其安全性和有效性。此外，研究中并未提及苦瓜提取物与其他治疗方法的比较，例如传统药物治疗或生活方式干预，这限制了我们对其治疗潜力的全面评估。 可以怎么做 对于糖尿病患者而言，改变生活方式始终是管理糖尿病前期的关键。然而，苦瓜提取物的研究为探索新的治疗途径提供了希望。对于健康科技行业来说，这一发现可能激发对天然植物提取物的研究兴趣，以开发新的治疗糖尿病前期及其相关心血管风险的产品。同时，这也提醒我们，在推广任何新疗法之前，必须经过严格的科学验证。 A. 对于糖前读者的行动建议 对于处于糖尿病前期的读者来说，保持健康的生活方式，包括均衡饮食和规律运动，仍然是预防糖尿病及其并发症的最佳策略。在考虑任何补充疗法之前，应咨询医生或医疗专业人员的意见。 B. 对健康科技行业的启发 苦瓜提取物的研究结果为健康科技行业提供了新的研究方向。企业可以考虑投资于进一步的研究，以探索苦瓜提取物在人类中的潜在应用，并开发新的治疗糖尿病前期的产品。同时，这也强调了在开发新疗法时，必须遵循严格的科学和伦理标准。 你可以带走的重点 - 苦瓜提取物可能为糖尿病前期提供心脏保护益处。 - 该研究在大鼠上进行，人类的效果尚不确定。 - 生活方式的改变仍然是糖尿病前期的主要管理策略。 - 需要进一步的研究来确认苦瓜的治疗潜力。",
+      "本篇文章基于一项研究，探讨苦瓜提取物对糖尿病前期大鼠的心血管保护作用，并提供对这一发现的解读和临床启示。 This article discusses a study on the cardio-protective effects of Momordica balsamina extract in prediabetic rats and provides an interpretation and clinical insights of the findings.",
     summaryEn:
-      "Cardiovascular disease is a leading cause of death among diabetics, and prediabetes, often linked with obesity and physical inactivity, can lead to serious health complications including cardiovascular diseases. Effective management strategies are crucial for preventing these complications. A recent study has found that Momordica balsamina extract can reduce blood pressure and improve several cardiovascular markers in prediabetic rats, irrespective of dietary changes. Specifically, the extract was able to decrease malondialdehyde, a harmful substance, and increase the concentration of antioxidant enzymes, which is significant for cardiovascular health. While this discovery provides a potential natural treatment option for prediabetes patients, it is important to note that the study was conducted on animal models, and its direct applicability to humans has not been verified. Animal experiment results do not always accurately predict human responses, so more human studies are needed to verify its safety and efficacy before applying these findings to clinical practice. Additionally, the study did not mention comparisons of Momordica balsamina extract with other treatment methods, such as traditional drug treatments or lifestyle interventions, which limits a comprehensive assessment of its therapeutic potential. Lifestyle modifications remain key in prediabetes management, but the study on Momordica balsamina extract offers hope for exploring new treatment avenues. For the health technology industry, the findings may spark interest in researching natural plant extracts to develop new products for managing prediabetes and its associated cardiovascular risks. It also reminds us that any new therapy must be scientifically validated before promotion. For prediabetes readers, maintaining a healthy lifestyle, including a balanced diet and regular exercise, remains the best strategy for preventing diabetes and its complications. Any consideration of supplementary therapies should be preceded by consulting a doctor or healthcare professional. The study results on Momordica balsamina extract provide new research directions for the health technology industry. Companies may consider investing in further research to explore the potential applications of Momordica balsamina extract in humans and develop new products for managing prediabetes. It also emphasizes the need to follow strict scientific and ethical standards when developing new therapies. Practical Takeaways - Momordica balsamina extract may offer cardio-protective benefits in prediabetes. - The study was conducted on rats, and human effectiveness is still uncertain. - Lifestyle modifications remain the primary management strategy for prediabetes. - Further research is needed to confirm the therapeutic potential of Momordica balsamina. - Original title: Evaluating the cardio-protective effects of Momordica balsamina in a diet-induced prediabetic rats. - Authors: Khumalo B, Siboto A, Akinnuga AM, Sibiya N, Khathi A, Ngubane PS - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular endocrinology & metabolism) - DOI: [10.1097/XCE.0000000000000359](https://doi.org/10.1097/XCE.0000000000000359) - Open-access link: [https://europepmc.org/articles/PMC13090081](https://europepmc.org/articles/PMC13090081) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Published or indexed date: 2026-06-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本篇文章基于一项研究，探讨苦瓜提取物对糖尿病前期大鼠的心血管保护作用，并提供对这一发现的解读和临床启示。 This article discusses a study on the cardio-protective effects of Momordica balsamina extract in prediabetic rats and provides an interpretation and clinical insights of the findings.",
     bodyZh:
-      "为什么值得关注\r\n\r\n随着现代生活方式的改变，糖尿病前期的发病率逐年上升，它不仅增加了患者发展为2型糖尿病的风险，还与心血管疾病等严重健康问题密切相关。肥胖和缺乏运动是糖尿病前期的常见诱因，而有效的管理策略对于预防这些并发症至关重要。\r\n\r\n证据告诉我们什么\r\n\r\n最新研究发现，苦瓜提取物能够降低糖尿病前期大鼠的血压，并改善一系列心血管标志物，这一效果与是否改变饮食无关。具体来说，苦瓜提取物能够减少一种名为丙二醛的有害物质，并增加抗氧化酶的浓度，这对于保护心血管健康具有重要意义。\r\n\r\n应该怎样理解\r\n\r\n苦瓜提取物的这一发现为糖尿病前期患者提供了一种潜在的天然治疗选择。然而，需要注意的是，这项研究是在动物模型上进行的，其对人体的直接适用性尚未得到验证。动物实验结果并不总能准确预测人类反应，因此在将这些发现应用于临床实践之前，需要更多的人体研究来验证其安全性和有效性。此外，研究中并未提及苦瓜提取物与其他治疗方法的比较，例如传统药物治疗或生活方式干预，这限制了我们对其治疗潜力的全面评估。\r\n\r\n可以怎么做\r\n\r\n对于糖尿病患者而言，改变生活方式始终是管理糖尿病前期的关键。然而，苦瓜提取物的研究为探索新的治疗途径提供了希望。对于健康科技行业来说，这一发现可能激发对天然植物提取物的研究兴趣，以开发新的治疗糖尿病前期及其相关心血管风险的产品。同时，这也提醒我们，在推广任何新疗法之前，必须经过严格的科学验证。\r\n\r\nA. 对于糖前读者的行动建议\r\n\r\n对于处于糖尿病前期的读者来说，保持健康的生活方式，包括均衡饮食和规律运动，仍然是预防糖尿病及其并发症的最佳策略。在考虑任何补充疗法之前，应咨询医生或医疗专业人员的意见。\r\n\r\nB. 对健康科技行业的启发\r\n\r\n苦瓜提取物的研究结果为健康科技行业提供了新的研究方向。企业可以考虑投资于进一步的研究，以探索苦瓜提取物在人类中的潜在应用，并开发新的治疗糖尿病前期的产品。同时，这也强调了在开发新疗法时，必须遵循严格的科学和伦理标准。\r\n\r\n你可以带走的重点\r\n\r\n- 苦瓜提取物可能为糖尿病前期提供心脏保护益处。\r\n- 该研究在大鼠上进行，人类的效果尚不确定。\r\n- 生活方式的改变仍然是糖尿病前期的主要管理策略。\r\n- 需要进一步的研究来确认苦瓜的治疗潜力。",
+      "本篇文章基于一项研究，探讨苦瓜提取物对糖尿病前期大鼠的心血管保护作用，并提供对这一发现的解读和临床启示。 This article discusses a study on the cardio-protective effects of Momordica balsamina extract in prediabetic rats and provides an interpretation and clinical insights of the findings.",
     bodyEn:
-      "Cardiovascular disease is a leading cause of death among diabetics, and prediabetes, often linked with obesity and physical inactivity, can lead to serious health complications including cardiovascular diseases. Effective management strategies are crucial for preventing these complications.\r\n\r\nA recent study has found that Momordica balsamina extract can reduce blood pressure and improve several cardiovascular markers in prediabetic rats, irrespective of dietary changes. Specifically, the extract was able to decrease malondialdehyde, a harmful substance, and increase the concentration of antioxidant enzymes, which is significant for cardiovascular health.\r\n\r\nWhile this discovery provides a potential natural treatment option for prediabetes patients, it is important to note that the study was conducted on animal models, and its direct applicability to humans has not been verified. Animal experiment results do not always accurately predict human responses, so more human studies are needed to verify its safety and efficacy before applying these findings to clinical practice. Additionally, the study did not mention comparisons of Momordica balsamina extract with other treatment methods, such as traditional drug treatments or lifestyle interventions, which limits a comprehensive assessment of its therapeutic potential.\r\n\r\nLifestyle modifications remain key in prediabetes management, but the study on Momordica balsamina extract offers hope for exploring new treatment avenues. For the health technology industry, the findings may spark interest in researching natural plant extracts to develop new products for managing prediabetes and its associated cardiovascular risks. It also reminds us that any new therapy must be scientifically validated before promotion.\r\n\r\nFor prediabetes readers, maintaining a healthy lifestyle, including a balanced diet and regular exercise, remains the best strategy for preventing diabetes and its complications. Any consideration of supplementary therapies should be preceded by consulting a doctor or healthcare professional.\r\n\r\nThe study results on Momordica balsamina extract provide new research directions for the health technology industry. Companies may consider investing in further research to explore the potential applications of Momordica balsamina extract in humans and develop new products for managing prediabetes. It also emphasizes the need to follow strict scientific and ethical standards when developing new therapies.\r\n\r\nPractical Takeaways\r\n\r\n- Momordica balsamina extract may offer cardio-protective benefits in prediabetes.\r\n- The study was conducted on rats, and human effectiveness is still uncertain.\r\n- Lifestyle modifications remain the primary management strategy for prediabetes.\r\n- Further research is needed to confirm the therapeutic potential of Momordica balsamina.\r\n\r\n\r\n\r\n- Original title: Evaluating the cardio-protective effects of Momordica balsamina in a diet-induced prediabetic rats.\r\n- Authors: Khumalo B, Siboto A, Akinnuga AM, Sibiya N, Khathi A, Ngubane PS\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular endocrinology & metabolism)\r\n- DOI: [10.1097/XCE.0000000000000359](https://doi.org/10.1097/XCE.0000000000000359)\r\n- Open-access link: [https://europepmc.org/articles/PMC13090081](https://europepmc.org/articles/PMC13090081)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Published or indexed date: 2026-06-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本篇文章基于一项研究，探讨苦瓜提取物对糖尿病前期大鼠的心血管保护作用，并提供对这一发现的解读和临床启示。 This article discusses a study on the cardio-protective effects of Momordica balsamina extract in prediabetic rats and provides an interpretation and clinical insights of the findings.",
     thumbnail:
       "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular endocrinology & metabolism)",
+    source: "国际医学期刊",
     doi: "10.1097/XCE.0000000000000359",
     originalUrl: "https://europepmc.org/articles/PMC13090081",
     publishedAt: "2026-06-01",
@@ -482,18 +542,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/evaluating-the-cardio-protective-effects-of-momordica-balsamina-in-a-die-61758f3b/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "药物", "医学研究"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "geographic-analysis-of-access-to-the-national-diabetes-prevention-progra-3d1e95da",
@@ -501,17 +561,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Geographic Accessibility of the National Diabetes Prevention Program in New York State",
     summaryZh:
-      "为什么值得关注 糖尿病前期是一个影响许多成年人的健康问题，尤其在某些种族/族裔群体和低社会经济地位人群中更为普遍。对于这些高风险人群，及时获得有效的预防措施至关重要。国家糖尿病预防项目（DPP）旨在帮助预防或延缓2型糖尿病的发病，但其效果很大程度上取决于项目的可达性。 证据告诉我们什么 研究发现，84.3%的纽约州糖尿病前期居民居住在DPP场所30分钟车程内，显示了广泛的可达性。然而，这也突出了不可用区域的存在，特别是在一些糖尿病前期高发的县。 应该怎样理解 这项研究强调了地理可达性对DPP的重要性，但并未涉及这些项目的质量或效果。它还指出了基于种族和民族的可达性差异，表明需要有针对性的扩展努力。例如，黑人、亚裔和西班牙裔居民的可达性大于白人居民，这可能与社会经济地位和居住区域有关。此外，研究并未考虑个体参与DPP的障碍，如时间、费用和文化差异。因此，尽管地理可达性是一个重要因素，但提高DPP的整体参与度还需要综合考虑其他因素。 可以怎么做 研究结果表明，尽管大多数糖尿病前期居民可以获得DPP，但在一些地区，特别是在糖尿病前期高发的县，需要增加项目可用性。这为健康科技公司与社区合作以提高可访问性提供了机会。例如，通过开发移动健康应用或在线平台，可以为那些居住在偏远地区或有交通障碍的居民提供更便捷的DPP服务。同时，针对不同种族和民族群体的文化敏感性培训，也有助于提高DPP的参与度和效果。 你可以带走的重点 - 纽约州大多数糖尿病前期居民可以获得DPP。 - 仍有一些地区对DPP的可达性有限，特别是在糖尿病前期高发的县。 - DPP的可达性因种族和民族而异，黑人、亚裔和西班牙裔居民的可达性大于白人居民。 - 需要进一步扩展DPP场所，以增加可达性。",
+      "本文分析了纽约州国家糖尿病预防项目（DPP）的地理可达性，并探讨了其对公共卫生和健康科技行业的启示。 This article analyzes the geographic accessibility of the National Diabetes Prevention Program (DPP) in New York State and discusses its implications for public health and the health tech industry.",
     summaryEn:
-      "Prediabetes is a health condition that affects many adults, particularly among certain racial/ethnic groups and those with lower socioeconomic status. Timely access to effective prevention measures is crucial for these high-risk populations. The National Diabetes Prevention Program (DPP) aims to help prevent or delay the onset of type 2 diabetes, but its effectiveness largely depends on the accessibility of the program. The study reveals that 84.3% of residents with prediabetes in New York State live within a 30-minute drive of a DPP site, indicating widespread access. However, this also highlights areas of unavailability, especially in counties with high prediabetes rates. The study underscores the importance of geographical access to DPP, yet it does not address the quality or effectiveness of these programs. It also points to disparities in access based on race and ethnicity, suggesting a need for targeted expansion efforts. For instance, greater access among Black, Asian, and Hispanic residents compared to White residents may be related to socioeconomic status and residential areas. Moreover, the study does not consider individual barriers to participation in DPP, such as time, cost, and cultural differences. Therefore, while geographical accessibility is an important factor, improving overall participation in DPP also requires a comprehensive consideration of other factors. The study's findings suggest that while most residents with prediabetes have access to DPP, there are areas, particularly in high prediabetes prevalence counties, that require increased program availability. This presents an opportunity for health tech companies to partner with communities to enhance accessibility. For example, by developing mobile health apps or online platforms, more convenient DPP services can be provided for residents living in remote areas or with transportation barriers. At the same time, cultural sensitivity training targeted at different racial and ethnic groups can also help increase participation and effectiveness of DPP. Practical Takeaways - Most residents with prediabetes in New York State have access to the DPP. - There are still areas with limited access to DPP, particularly in counties with high prediabetes rates. - Access to DPP varies by race and ethnicity, with greater access among Black, Asian, and Hispanic residents compared to White residents. - Further expansion of DPP sites is needed to increase accessibility. - Original title: Geographic Analysis of Access to the National Diabetes Prevention Program in New York State. - Authors: Vrany EA, Chiuzan C, Oh EJ, Ephraim PL, Austin RA, Brissette IF et al. - Journal/source: PubMed digital diabetes prevention via PubMed (Preventive medicine reports) - DOI: [10.1016/j.pmedr.2026.103500](https://doi.org/10.1016/j.pmedr.2026.103500) - Open-access link: [https://doi.org/10.1016/j.pmedr.2026.103500](https://doi.org/10.1016/j.pmedr.2026.103500) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Published or indexed date: 2026-06-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文分析了纽约州国家糖尿病预防项目（DPP）的地理可达性，并探讨了其对公共卫生和健康科技行业的启示。 This article analyzes the geographic accessibility of the National Diabetes Prevention Program (DPP) in New York State and discusses its implications for public health and the health tech industry.",
     bodyZh:
-      "为什么值得关注\r\n\r\n糖尿病前期是一个影响许多成年人的健康问题，尤其在某些种族/族裔群体和低社会经济地位人群中更为普遍。对于这些高风险人群，及时获得有效的预防措施至关重要。国家糖尿病预防项目（DPP）旨在帮助预防或延缓2型糖尿病的发病，但其效果很大程度上取决于项目的可达性。\r\n\r\n证据告诉我们什么\r\n\r\n研究发现，84.3%的纽约州糖尿病前期居民居住在DPP场所30分钟车程内，显示了广泛的可达性。然而，这也突出了不可用区域的存在，特别是在一些糖尿病前期高发的县。\r\n\r\n应该怎样理解\r\n\r\n这项研究强调了地理可达性对DPP的重要性，但并未涉及这些项目的质量或效果。它还指出了基于种族和民族的可达性差异，表明需要有针对性的扩展努力。例如，黑人、亚裔和西班牙裔居民的可达性大于白人居民，这可能与社会经济地位和居住区域有关。此外，研究并未考虑个体参与DPP的障碍，如时间、费用和文化差异。因此，尽管地理可达性是一个重要因素，但提高DPP的整体参与度还需要综合考虑其他因素。\r\n\r\n可以怎么做\r\n\r\n研究结果表明，尽管大多数糖尿病前期居民可以获得DPP，但在一些地区，特别是在糖尿病前期高发的县，需要增加项目可用性。这为健康科技公司与社区合作以提高可访问性提供了机会。例如，通过开发移动健康应用或在线平台，可以为那些居住在偏远地区或有交通障碍的居民提供更便捷的DPP服务。同时，针对不同种族和民族群体的文化敏感性培训，也有助于提高DPP的参与度和效果。\r\n\r\n你可以带走的重点\r\n\r\n- 纽约州大多数糖尿病前期居民可以获得DPP。\r\n- 仍有一些地区对DPP的可达性有限，特别是在糖尿病前期高发的县。\r\n- DPP的可达性因种族和民族而异，黑人、亚裔和西班牙裔居民的可达性大于白人居民。\r\n- 需要进一步扩展DPP场所，以增加可达性。",
+      "本文分析了纽约州国家糖尿病预防项目（DPP）的地理可达性，并探讨了其对公共卫生和健康科技行业的启示。 This article analyzes the geographic accessibility of the National Diabetes Prevention Program (DPP) in New York State and discusses its implications for public health and the health tech industry.",
     bodyEn:
-      "Prediabetes is a health condition that affects many adults, particularly among certain racial/ethnic groups and those with lower socioeconomic status. Timely access to effective prevention measures is crucial for these high-risk populations. The National Diabetes Prevention Program (DPP) aims to help prevent or delay the onset of type 2 diabetes, but its effectiveness largely depends on the accessibility of the program.\r\n\r\nThe study reveals that 84.3% of residents with prediabetes in New York State live within a 30-minute drive of a DPP site, indicating widespread access. However, this also highlights areas of unavailability, especially in counties with high prediabetes rates.\r\n\r\nThe study underscores the importance of geographical access to DPP, yet it does not address the quality or effectiveness of these programs. It also points to disparities in access based on race and ethnicity, suggesting a need for targeted expansion efforts. For instance, greater access among Black, Asian, and Hispanic residents compared to White residents may be related to socioeconomic status and residential areas. Moreover, the study does not consider individual barriers to participation in DPP, such as time, cost, and cultural differences. Therefore, while geographical accessibility is an important factor, improving overall participation in DPP also requires a comprehensive consideration of other factors.\r\n\r\nThe study's findings suggest that while most residents with prediabetes have access to DPP, there are areas, particularly in high prediabetes prevalence counties, that require increased program availability. This presents an opportunity for health tech companies to partner with communities to enhance accessibility. For example, by developing mobile health apps or online platforms, more convenient DPP services can be provided for residents living in remote areas or with transportation barriers. At the same time, cultural sensitivity training targeted at different racial and ethnic groups can also help increase participation and effectiveness of DPP.\r\n\r\nPractical Takeaways\r\n\r\n- Most residents with prediabetes in New York State have access to the DPP.\r\n- There are still areas with limited access to DPP, particularly in counties with high prediabetes rates.\r\n- Access to DPP varies by race and ethnicity, with greater access among Black, Asian, and Hispanic residents compared to White residents.\r\n- Further expansion of DPP sites is needed to increase accessibility.\r\n\r\n\r\n\r\n- Original title: Geographic Analysis of Access to the National Diabetes Prevention Program in New York State.\r\n- Authors: Vrany EA, Chiuzan C, Oh EJ, Ephraim PL, Austin RA, Brissette IF et al.\r\n- Journal/source: PubMed digital diabetes prevention via PubMed (Preventive medicine reports)\r\n- DOI: [10.1016/j.pmedr.2026.103500](https://doi.org/10.1016/j.pmedr.2026.103500)\r\n- Open-access link: [https://doi.org/10.1016/j.pmedr.2026.103500](https://doi.org/10.1016/j.pmedr.2026.103500)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Published or indexed date: 2026-06-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文分析了纽约州国家糖尿病预防项目（DPP）的地理可达性，并探讨了其对公共卫生和健康科技行业的启示。 This article analyzes the geographic accessibility of the National Diabetes Prevention Program (DPP) in New York State and discusses its implications for public health and the health tech industry.",
     thumbnail:
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed digital diabetes prevention via PubMed (Preventive medicine reports)",
+    source: "国际医学期刊",
     doi: "10.1016/j.pmedr.2026.103500",
     originalUrl: "https://doi.org/10.1016/j.pmedr.2026.103500",
     publishedAt: "2026-06-01",
@@ -520,14 +579,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/geographic-analysis-of-access-to-the-national-diabetes-prevention-progra-3d1e95da/en.mdx",
@@ -539,17 +597,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleZh: "糖尿病前期生活方式项目，哪些做法更可能有效？",
     titleEn: "What Makes Lifestyle Programs Work Better for Prediabetes?",
     summaryZh:
-      "原文信息栏 - Original title: Identifying Promising Practices in Lifestyle Intervention Programs for the Prediabetes Population: A Meta-Analysis and Meta-Regression of Randomized Controlled Trials. - Journal/source: PubMed high-yield prediabetes via PubMed (Worldviews on Evidence-Based Nursing) - DOI: [10.1111/wvn.70152](https://doi.org/10.1111/wvn.70152) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42163067/](https://pubmed.ncbi.nlm.nih.gov/42163067/) - Open-access link: [https://doi.org/10.1111/wvn.70152](https://doi.org/10.1111/wvn.70152) - Evidence used: PubMed abstract + Europe PMC metadata - Published or indexed date: 2026-06-01 为什么值得关注 糖尿病前期的人最常听到的建议，大概就是“控制饮食、增加运动、减轻体重”。这句话没错，但它太笼统了。真正的问题是：什么样的生活方式项目更容易有效？是只发一本饮食手册？是每周有人带着运动？是设定明确减重目标？还是越早开始越好？ 证据告诉我们什么 这篇发表在 Worldviews on Evidence-Based Nursing 的荟萃分析，试图回答的正是这个问题。研究者汇总了 77 项随机对照试验，一共包括 22,629 名糖尿病前期成年人。纳入的干预主要围绕饮食和体力活动，对照组则包括常规照护、无干预或等待名单。研究者不仅看“有没有降低糖尿病发生率”，还看恢复正常血糖、空腹血糖、2 小时血糖、HbA1c、空腹胰岛素和 HOMA-IR 等指标。 结果很有现实意义。第一，减重幅度越大，糖尿病发生率下降越明显。第二，达到至少 5% 减重的人，恢复正常血糖的比例更高。第三，带有监督运动训练的项目，比没有监督运动的项目，在降低糖尿病发生率方面表现更好。第四，较年轻的人，以及一开始 HbA1c 水平较低的人，可能更容易从早期生活方式干预中获得代谢改善。 应该怎样理解 这听起来像是给“减重”和“运动”投了赞成票，但重点其实更细。研究不是在说每个人都必须追求同一个体重数字，也不是说运动越狠越好。它提醒我们：生活方式项目如果想真正起作用，可能需要明确目标、过程反馈和陪伴。比如“减重 5%”不是一句审美要求，而是一个在研究中经常被拿来观察代谢改善的门槛；“监督运动”也不是为了制造压力，而是因为有人指导、有人纠正、有人跟进时，普通人更容易坚持。 对糖尿病前期读者来说，这篇研究最有用的地方，是把“改变生活方式”拆成了可以检查的项目。如果一个课程只告诉你“健康饮食、规律运动”，但没有目标设定、没有进度监测、没有运动指导、没有复盘，那它可能很难改变长期结果。相反，一个更靠谱的项目，应该能回答：目标是什么？多久复盘一次？遇到平台期怎么办？运动是否安全合适？饮食建议是否能放进真实生活？ 当然，这篇研究也不能被夸大。它是把许多试验放在一起分析，不代表每个人都会得到同样结果。年龄、基础血糖、体重、睡眠、压力、用药、经济条件和家庭支持，都会影响实际效果。它能告诉我们的不是“某个方案包治百病”，而是：在糖尿病前期阶段，早一点开始、有目标地减重、加入被指导的运动训练，可能让生活方式干预更有抓手。 可以怎么做 这类证据对诊所、健康管理平台和数字健康产品都有一个共同提醒：用户需要的不是更多口号，而是更清楚的行为系统。一个面向糖尿病前期人群的产品，如果只是记录体重、步数和饮食，很容易变成又一个打卡工具。真正有价值的设计，是把“目标设定、进度反馈、监督运动、复盘调整、风险边界”串起来，让用户知道下一步为什么做、做到什么程度、遇到困难时怎么修正。 商业上也不能把“逆转糖前”包装成保证结果。更稳妥的表达，是帮助用户建立可持续的代谢改善项目：比如把 5% 减重作为可讨论的阶段性目标，把运动训练做成可评估的指导流程，把饮食建议改造成真实生活里的选择辅助。临床上，医生和营养师也可以用这类证据筛选项目质量：是否有明确目标、是否有监督和反馈、是否能处理依从性问题，而不是只看项目名字是否写着“糖尿病预防”。 为什么和糖尿病前期有关？ 这篇研究直接聚焦糖尿病前期人群，而且不只是问“生活方式有没有用”，而是进一步追问“什么样的生活方式项目更可能有用”。这正是糖前卫士需要关心的问题：把医学研究翻译成普通人能判断、能提问、能和医生讨论的行动线索。 你可以带走的重点 - 生活方式干预的关键不是口号，而是目标、执行和持续反馈。 - 至少 5% 的减重目标，在研究中与更高的恢复正常血糖比例相关，但具体目标仍需结合个人情况。 - 有监督的运动训练可能比单纯建议“多运动”更有效，因为它提供了指导和坚持机制。 - 越早在糖尿病前期阶段介入，可能越容易保护代谢弹性。 - 这篇研究不能替代个人医疗建议，也不能保证某一种项目适合所有人。",
+      "一项纳入 77 项随机对照试验的荟萃分析显示，减重幅度、至少 5% 减重目标、监督运动训练，以及更早干预，可能是糖尿病前期生活方式项目更有效的关键。 A meta-analysis of randomized trials suggests that weight-loss goals, supervised exercise, and earlier intervention may strengthen lifestyle programs.",
     summaryEn:
-      'People with prediabetes often hear the same broad advice: eat better, move more, and lose weight. That advice is not wrong, but it is incomplete. The practical question is more specific: what makes a lifestyle program more likely to work? Is it a written diet guide, weekly exercise support, a clear weight-loss target, earlier intervention, or some combination of these? This meta-analysis looked at that question by combining evidence from 77 randomized controlled trials with 22,629 adults with prediabetes. The lifestyle programs included diet and/or physical activity interventions. Comparison groups included usual care, no intervention, or wait-list control. The researchers looked at several outcomes, including type 2 diabetes incidence, return to normal blood glucose, fasting glucose, 2-hour glucose, HbA1c, fasting insulin, and HOMA-IR, a marker related to insulin resistance. The findings point toward several promising practices. Greater weight loss was linked with larger reductions in diabetes incidence. Programs where participants achieved at least 5% weight loss were associated with higher rates of returning to normal blood glucose. Programs that included supervised exercise training appeared more effective at reducing diabetes incidence than programs without that component. Younger participants, and people starting with lower HbA1c levels, seemed more likely to show improvements in several metabolic markers. The important point is not that everyone should chase the same number or exercise as intensely as possible. The more useful message is that lifestyle change works better when it is structured. A 5% weight-loss goal is not a beauty standard; it is a measurable target often used in metabolic research. Supervised exercise is not about pressure; it is about guidance, safety, feedback, and accountability. Many people know the general advice. The difficult part is turning that advice into repeatable behavior. For someone with prediabetes, this study helps turn a vague phrase into better questions. If a program only says "eat healthy and exercise," it may not be enough. A stronger program should explain the goal, track progress, offer support, adjust when barriers appear, and make the plan realistic for daily life. It should also be clear about what the evidence can and cannot promise. This study should still be read with caution. It combines many trials, and people do not all respond in the same way. Age, starting glucose level, body weight, sleep, stress, medication, income, food environment, and family support can all shape results. The article does not prove that one program is best for everyone. It suggests that earlier, structured, supported lifestyle programs may give people with prediabetes a better chance of meaningful metabolic improvement. Why This Matters for Prediabetes This study focuses directly on adults with prediabetes and asks a practical implementation question: not just whether lifestyle intervention can help, but which pieces may make it more effective. That is central to GLUCOLIT\'s mission of turning research into questions ordinary readers can understand and discuss with clinicians. Practical Takeaways - Lifestyle intervention is not just a slogan; structure, tracking, and support matter. - Achieving at least 5% weight loss was associated with better return-to-normal-glucose outcomes in this analysis, but personal goals should be individualized. - Supervised exercise may work better than a simple instruction to exercise because it adds guidance and follow-up. - Earlier intervention during the prediabetes stage may preserve more metabolic flexibility. - This article is educational and does not guarantee that any specific program is right for every person.',
+      "一项纳入 77 项随机对照试验的荟萃分析显示，减重幅度、至少 5% 减重目标、监督运动训练，以及更早干预，可能是糖尿病前期生活方式项目更有效的关键。 A meta-analysis of randomized trials suggests that weight-loss goals, supervised exercise, and earlier intervention may strengthen lifestyle programs.",
     bodyZh:
-      "原文信息栏\r\n\r\n- Original title: Identifying Promising Practices in Lifestyle Intervention Programs for the Prediabetes Population: A Meta-Analysis and Meta-Regression of Randomized Controlled Trials.\r\n- Journal/source: PubMed high-yield prediabetes via PubMed (Worldviews on Evidence-Based Nursing)\r\n- DOI: [10.1111/wvn.70152](https://doi.org/10.1111/wvn.70152)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42163067/](https://pubmed.ncbi.nlm.nih.gov/42163067/)\r\n- Open-access link: [https://doi.org/10.1111/wvn.70152](https://doi.org/10.1111/wvn.70152)\r\n- Evidence used: PubMed abstract + Europe PMC metadata\r\n- Published or indexed date: 2026-06-01\r\n\r\n为什么值得关注\r\n\r\n糖尿病前期的人最常听到的建议，大概就是“控制饮食、增加运动、减轻体重”。这句话没错，但它太笼统了。真正的问题是：什么样的生活方式项目更容易有效？是只发一本饮食手册？是每周有人带着运动？是设定明确减重目标？还是越早开始越好？\r\n\r\n证据告诉我们什么\r\n\r\n这篇发表在 Worldviews on Evidence-Based Nursing 的荟萃分析，试图回答的正是这个问题。研究者汇总了 77 项随机对照试验，一共包括 22,629 名糖尿病前期成年人。纳入的干预主要围绕饮食和体力活动，对照组则包括常规照护、无干预或等待名单。研究者不仅看“有没有降低糖尿病发生率”，还看恢复正常血糖、空腹血糖、2 小时血糖、HbA1c、空腹胰岛素和 HOMA-IR 等指标。\r\n\r\n结果很有现实意义。第一，减重幅度越大，糖尿病发生率下降越明显。第二，达到至少 5% 减重的人，恢复正常血糖的比例更高。第三，带有监督运动训练的项目，比没有监督运动的项目，在降低糖尿病发生率方面表现更好。第四，较年轻的人，以及一开始 HbA1c 水平较低的人，可能更容易从早期生活方式干预中获得代谢改善。\r\n\r\n应该怎样理解\r\n\r\n这听起来像是给“减重”和“运动”投了赞成票，但重点其实更细。研究不是在说每个人都必须追求同一个体重数字，也不是说运动越狠越好。它提醒我们：生活方式项目如果想真正起作用，可能需要明确目标、过程反馈和陪伴。比如“减重 5%”不是一句审美要求，而是一个在研究中经常被拿来观察代谢改善的门槛；“监督运动”也不是为了制造压力，而是因为有人指导、有人纠正、有人跟进时，普通人更容易坚持。\r\n\r\n对糖尿病前期读者来说，这篇研究最有用的地方，是把“改变生活方式”拆成了可以检查的项目。如果一个课程只告诉你“健康饮食、规律运动”，但没有目标设定、没有进度监测、没有运动指导、没有复盘，那它可能很难改变长期结果。相反，一个更靠谱的项目，应该能回答：目标是什么？多久复盘一次？遇到平台期怎么办？运动是否安全合适？饮食建议是否能放进真实生活？\r\n\r\n当然，这篇研究也不能被夸大。它是把许多试验放在一起分析，不代表每个人都会得到同样结果。年龄、基础血糖、体重、睡眠、压力、用药、经济条件和家庭支持，都会影响实际效果。它能告诉我们的不是“某个方案包治百病”，而是：在糖尿病前期阶段，早一点开始、有目标地减重、加入被指导的运动训练，可能让生活方式干预更有抓手。\r\n\r\n可以怎么做\r\n\r\n这类证据对诊所、健康管理平台和数字健康产品都有一个共同提醒：用户需要的不是更多口号，而是更清楚的行为系统。一个面向糖尿病前期人群的产品，如果只是记录体重、步数和饮食，很容易变成又一个打卡工具。真正有价值的设计，是把“目标设定、进度反馈、监督运动、复盘调整、风险边界”串起来，让用户知道下一步为什么做、做到什么程度、遇到困难时怎么修正。\r\n\r\n商业上也不能把“逆转糖前”包装成保证结果。更稳妥的表达，是帮助用户建立可持续的代谢改善项目：比如把 5% 减重作为可讨论的阶段性目标，把运动训练做成可评估的指导流程，把饮食建议改造成真实生活里的选择辅助。临床上，医生和营养师也可以用这类证据筛选项目质量：是否有明确目标、是否有监督和反馈、是否能处理依从性问题，而不是只看项目名字是否写着“糖尿病预防”。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n这篇研究直接聚焦糖尿病前期人群，而且不只是问“生活方式有没有用”，而是进一步追问“什么样的生活方式项目更可能有用”。这正是糖前卫士需要关心的问题：把医学研究翻译成普通人能判断、能提问、能和医生讨论的行动线索。\r\n\r\n你可以带走的重点\r\n\r\n- 生活方式干预的关键不是口号，而是目标、执行和持续反馈。\r\n- 至少 5% 的减重目标，在研究中与更高的恢复正常血糖比例相关，但具体目标仍需结合个人情况。\r\n- 有监督的运动训练可能比单纯建议“多运动”更有效，因为它提供了指导和坚持机制。\r\n- 越早在糖尿病前期阶段介入，可能越容易保护代谢弹性。\r\n- 这篇研究不能替代个人医疗建议，也不能保证某一种项目适合所有人。",
+      "一项纳入 77 项随机对照试验的荟萃分析显示，减重幅度、至少 5% 减重目标、监督运动训练，以及更早干预，可能是糖尿病前期生活方式项目更有效的关键。 A meta-analysis of randomized trials suggests that weight-loss goals, supervised exercise, and earlier intervention may strengthen lifestyle programs.",
     bodyEn:
-      'People with prediabetes often hear the same broad advice: eat better, move more, and lose weight. That advice is not wrong, but it is incomplete. The practical question is more specific: what makes a lifestyle program more likely to work? Is it a written diet guide, weekly exercise support, a clear weight-loss target, earlier intervention, or some combination of these?\r\n\r\nThis meta-analysis looked at that question by combining evidence from 77 randomized controlled trials with 22,629 adults with prediabetes. The lifestyle programs included diet and/or physical activity interventions. Comparison groups included usual care, no intervention, or wait-list control. The researchers looked at several outcomes, including type 2 diabetes incidence, return to normal blood glucose, fasting glucose, 2-hour glucose, HbA1c, fasting insulin, and HOMA-IR, a marker related to insulin resistance.\r\n\r\nThe findings point toward several promising practices. Greater weight loss was linked with larger reductions in diabetes incidence. Programs where participants achieved at least 5% weight loss were associated with higher rates of returning to normal blood glucose. Programs that included supervised exercise training appeared more effective at reducing diabetes incidence than programs without that component. Younger participants, and people starting with lower HbA1c levels, seemed more likely to show improvements in several metabolic markers.\r\n\r\nThe important point is not that everyone should chase the same number or exercise as intensely as possible. The more useful message is that lifestyle change works better when it is structured. A 5% weight-loss goal is not a beauty standard; it is a measurable target often used in metabolic research. Supervised exercise is not about pressure; it is about guidance, safety, feedback, and accountability. Many people know the general advice. The difficult part is turning that advice into repeatable behavior.\r\n\r\nFor someone with prediabetes, this study helps turn a vague phrase into better questions. If a program only says "eat healthy and exercise," it may not be enough. A stronger program should explain the goal, track progress, offer support, adjust when barriers appear, and make the plan realistic for daily life. It should also be clear about what the evidence can and cannot promise.\r\n\r\nThis study should still be read with caution. It combines many trials, and people do not all respond in the same way. Age, starting glucose level, body weight, sleep, stress, medication, income, food environment, and family support can all shape results. The article does not prove that one program is best for everyone. It suggests that earlier, structured, supported lifestyle programs may give people with prediabetes a better chance of meaningful metabolic improvement.\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nThis study focuses directly on adults with prediabetes and asks a practical implementation question: not just whether lifestyle intervention can help, but which pieces may make it more effective. That is central to GLUCOLIT\'s mission of turning research into questions ordinary readers can understand and discuss with clinicians.\r\n\r\nPractical Takeaways\r\n\r\n- Lifestyle intervention is not just a slogan; structure, tracking, and support matter.\r\n- Achieving at least 5% weight loss was associated with better return-to-normal-glucose outcomes in this analysis, but personal goals should be individualized.\r\n- Supervised exercise may work better than a simple instruction to exercise because it adds guidance and follow-up.\r\n- Earlier intervention during the prediabetes stage may preserve more metabolic flexibility.\r\n- This article is educational and does not guarantee that any specific program is right for every person.',
+      "一项纳入 77 项随机对照试验的荟萃分析显示，减重幅度、至少 5% 减重目标、监督运动训练，以及更早干预，可能是糖尿病前期生活方式项目更有效的关键。 A meta-analysis of randomized trials suggests that weight-loss goals, supervised exercise, and earlier intervention may strengthen lifestyle programs.",
     thumbnail:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed high-yield prediabetes via PubMed (Worldviews on Evidence-Based Nursing)",
+    source: "国际医学期刊",
     doi: "10.1111/wvn.70152",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42163067/",
     publishedAt: "2026-06-01",
@@ -558,18 +615,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: false,
     qualityStatus: "ready",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Meaning and limitations section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
-      "English plain-language version is too long.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/identifying-promising-practices-in-lifestyle-intervention-programs-for-t-1f73adae/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "药物", "生活方式"],
+    categoryLabels: ["饮食干预", "运动", "医学研究", "糖尿病前期"],
   },
   {
     slug: "impact-of-oral-magnesium-supplementation-on-glycemic-and-cardiometabolic-8f314aee",
@@ -578,17 +635,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Impact of Oral Magnesium Supplementation on Glycemic and Cardiometabolic Outcomes in Prediabetic Adults: A Systematic Review and Meta-Analysis",
     summaryZh:
-      "为什么值得关注 糖尿病前期是一个不容忽视的健康警示，它意味着血糖水平已经超出正常范围，但尚未达到糖尿病的诊断标准。如果不及时干预，糖尿病前期可能会进展为2型糖尿病，进而引发一系列心血管并发症。镁，作为一种关键矿物质，参与了包括胰岛素信号传导和葡萄糖代谢在内的多种生理过程，对于糖尿病前期的管理可能具有潜在价值。 证据告诉我们什么 最新的系统回顾和元分析聚焦于评估口服镁补充与安慰剂在糖尿病前期成人中的效果对比。研究发现，尽管镁补充未能显著降低空腹血糖水平，但在改善餐后血糖处理、胰岛素抵抗以及脂质水平方面显示出积极效果，这些都是影响心脏健康的重要因素。 应该怎样理解 这项研究提供了镁补充对于糖尿病前期成人潜在益处的证据，但也揭示了一些局限性。首先，尽管镁补充对于改善胰岛素抵抗和脂质水平有积极作用，但对于空腹血糖的影响并不显著，这限制了其在糖尿病前期管理中的作用。其次，纳入的研究样本量相对较小，这可能影响了结果的普遍性和可靠性。因此，虽然镁补充可能成为糖尿病前期管理的辅助手段，但目前的证据尚不足以支持其作为主要干预措施。此外，研究中镁的最佳形式和剂量尚未明确，这也是未来研究需要解决的问题。 可以怎么做 给糖前读者 对于糖尿病前期患者而言，镁补充可能是改善血糖控制和心血管健康的有益补充。然而，重要的是要认识到，镁补充并不能替代健康饮食和规律运动的重要性。患者应该在医生的指导下，将镁补充作为综合生活方式改变计划的一部分。 给健康科技行业 对于健康科技行业而言，这项研究提供了开发和推广针对糖尿病前期管理的补充品的潜在机会，但同时也需要更多的研究来支持这些产品的安全性和有效性。行业可以考虑投资于大规模的临床试验，以确定镁补充的最佳形式、剂量和长期效果。 你可以带走的重点 - 糖尿病前期是2型糖尿病的风险因素。 - 镁可能有助于管理糖尿病前期的某些方面。 - 对空腹血糖的影响并不显著。 - 需要更多的研究来完全理解镁的作用。",
+      "本综述旨在评估口服镁补充对糖尿病前期成人血糖控制和心血管代谢结果的影响。 This review aims to assess the impact of oral magnesium supplementation on glycemic control and cardiometabolic outcomes in adults with prediabetes.",
     summaryEn:
-      "Prediabetes is a health warning that blood sugar levels are elevated but not yet at the diagnostic threshold for diabetes. If left unaddressed, it can progress to type 2 diabetes and lead to cardiovascular complications. Magnesium, a key mineral involved in physiological processes including insulin signaling and glucose metabolism, may play a role in managing prediabetes. A recent systematic review and meta-analysis has shed light on the effects of oral magnesium supplementation compared to a placebo in adults with prediabetes. While magnesium supplementation did not significantly lower fasting blood sugar levels, it showed positive effects on postprandial glucose handling, insulin resistance, and lipid levels—factors that significantly impact heart health. This study provides evidence for the potential benefits of magnesium supplementation in adults with prediabetes but also reveals some limitations. Firstly, the lack of significant impact on fasting blood sugar levels limits the role of magnesium in prediabetes management. Secondly, the relatively small sample size across included studies may affect the generalizability and reliability of the results. Therefore, while magnesium supplementation may serve as an adjunct in managing prediabetes, current evidence is insufficient to support it as a primary intervention. Additionally, the optimal form and dosage of magnesium in the context of the study have yet to be determined, which are questions for future research to address. For the health tech industry, this study presents potential opportunities for developing and promoting supplements aimed at managing prediabetes, but more research is needed to support the safety and efficacy of these products. Practical Takeaways - Prediabetes is a risk factor for type 2 diabetes. - Magnesium might help manage some aspects of prediabetes. - Effects on fasting blood sugar were not significant. - More research is needed to fully understand magnesium's role. - Original title: Impact of oral magnesium supplementation on glycemic and cardiometabolic outcomes in prediabetic adults: a systematic review and meta-analysis. - Authors: Basit A, Kumar S, Ahmed H, Babar R, Saeed SS, Siddiqui TA et al. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes and metabolic disorders) - DOI: [10.1007/s40200-025-01853-9](https://doi.org/10.1007/s40200-025-01853-9) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41641401/](https://pubmed.ncbi.nlm.nih.gov/41641401/) - Open-access link: [https://doi.org/10.1007/s40200-025-01853-9](https://doi.org/10.1007/s40200-025-01853-9) - Evidence used: PubMed abstract + open-access full-text link - Published or indexed date: 2026-06-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本综述旨在评估口服镁补充对糖尿病前期成人血糖控制和心血管代谢结果的影响。 This review aims to assess the impact of oral magnesium supplementation on glycemic control and cardiometabolic outcomes in adults with prediabetes.",
     bodyZh:
-      "为什么值得关注\r\n糖尿病前期是一个不容忽视的健康警示，它意味着血糖水平已经超出正常范围，但尚未达到糖尿病的诊断标准。如果不及时干预，糖尿病前期可能会进展为2型糖尿病，进而引发一系列心血管并发症。镁，作为一种关键矿物质，参与了包括胰岛素信号传导和葡萄糖代谢在内的多种生理过程，对于糖尿病前期的管理可能具有潜在价值。\r\n\r\n证据告诉我们什么\r\n最新的系统回顾和元分析聚焦于评估口服镁补充与安慰剂在糖尿病前期成人中的效果对比。研究发现，尽管镁补充未能显著降低空腹血糖水平，但在改善餐后血糖处理、胰岛素抵抗以及脂质水平方面显示出积极效果，这些都是影响心脏健康的重要因素。\r\n\r\n应该怎样理解\r\n这项研究提供了镁补充对于糖尿病前期成人潜在益处的证据，但也揭示了一些局限性。首先，尽管镁补充对于改善胰岛素抵抗和脂质水平有积极作用，但对于空腹血糖的影响并不显著，这限制了其在糖尿病前期管理中的作用。其次，纳入的研究样本量相对较小，这可能影响了结果的普遍性和可靠性。因此，虽然镁补充可能成为糖尿病前期管理的辅助手段，但目前的证据尚不足以支持其作为主要干预措施。此外，研究中镁的最佳形式和剂量尚未明确，这也是未来研究需要解决的问题。\r\n\r\n可以怎么做\r\n给糖前读者\r\n对于糖尿病前期患者而言，镁补充可能是改善血糖控制和心血管健康的有益补充。然而，重要的是要认识到，镁补充并不能替代健康饮食和规律运动的重要性。患者应该在医生的指导下，将镁补充作为综合生活方式改变计划的一部分。\r\n给健康科技行业\r\n对于健康科技行业而言，这项研究提供了开发和推广针对糖尿病前期管理的补充品的潜在机会，但同时也需要更多的研究来支持这些产品的安全性和有效性。行业可以考虑投资于大规模的临床试验，以确定镁补充的最佳形式、剂量和长期效果。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期是2型糖尿病的风险因素。\r\n- 镁可能有助于管理糖尿病前期的某些方面。\r\n- 对空腹血糖的影响并不显著。\r\n- 需要更多的研究来完全理解镁的作用。",
+      "本综述旨在评估口服镁补充对糖尿病前期成人血糖控制和心血管代谢结果的影响。 This review aims to assess the impact of oral magnesium supplementation on glycemic control and cardiometabolic outcomes in adults with prediabetes.",
     bodyEn:
-      "Prediabetes is a health warning that blood sugar levels are elevated but not yet at the diagnostic threshold for diabetes. If left unaddressed, it can progress to type 2 diabetes and lead to cardiovascular complications. Magnesium, a key mineral involved in physiological processes including insulin signaling and glucose metabolism, may play a role in managing prediabetes.\r\n\r\nA recent systematic review and meta-analysis has shed light on the effects of oral magnesium supplementation compared to a placebo in adults with prediabetes. While magnesium supplementation did not significantly lower fasting blood sugar levels, it showed positive effects on postprandial glucose handling, insulin resistance, and lipid levels—factors that significantly impact heart health.\r\n\r\nThis study provides evidence for the potential benefits of magnesium supplementation in adults with prediabetes but also reveals some limitations. Firstly, the lack of significant impact on fasting blood sugar levels limits the role of magnesium in prediabetes management. Secondly, the relatively small sample size across included studies may affect the generalizability and reliability of the results. Therefore, while magnesium supplementation may serve as an adjunct in managing prediabetes, current evidence is insufficient to support it as a primary intervention. Additionally, the optimal form and dosage of magnesium in the context of the study have yet to be determined, which are questions for future research to address.\r\n\r\nFor the health tech industry, this study presents potential opportunities for developing and promoting supplements aimed at managing prediabetes, but more research is needed to support the safety and efficacy of these products.\r\n\r\nPractical Takeaways\r\n\r\n- Prediabetes is a risk factor for type 2 diabetes.\r\n- Magnesium might help manage some aspects of prediabetes.\r\n- Effects on fasting blood sugar were not significant.\r\n- More research is needed to fully understand magnesium's role.\r\n\r\n\r\n\r\n- Original title: Impact of oral magnesium supplementation on glycemic and cardiometabolic outcomes in prediabetic adults: a systematic review and meta-analysis.\r\n- Authors: Basit A, Kumar S, Ahmed H, Babar R, Saeed SS, Siddiqui TA et al.\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes and metabolic disorders)\r\n- DOI: [10.1007/s40200-025-01853-9](https://doi.org/10.1007/s40200-025-01853-9)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41641401/](https://pubmed.ncbi.nlm.nih.gov/41641401/)\r\n- Open-access link: [https://doi.org/10.1007/s40200-025-01853-9](https://doi.org/10.1007/s40200-025-01853-9)\r\n- Evidence used: PubMed abstract + open-access full-text link\r\n- Published or indexed date: 2026-06-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本综述旨在评估口服镁补充对糖尿病前期成人血糖控制和心血管代谢结果的影响。 This review aims to assess the impact of oral magnesium supplementation on glycemic control and cardiometabolic outcomes in adults with prediabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes and metabolic disorders)",
+    source: "国际医学期刊",
     doi: "10.1007/s40200-025-01853-9",
     originalUrl: "https://doi.org/10.1007/s40200-025-01853-9",
     publishedAt: "2026-06-01",
@@ -597,17 +653,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/impact-of-oral-magnesium-supplementation-on-glycemic-and-cardiometabolic-8f314aee/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "医学研究", "糖尿病前期"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "the-effectiveness-of-diabetes-prevention-programs-delivered-in-primary-c-787ac548",
@@ -615,16 +672,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Diabetes Prevention Programs in Primary Care May Need Stronger Support",
     summaryZh:
-      "原文信息栏 - Original title: The Effectiveness of Diabetes Prevention Programs Delivered in Primary Care for Individuals With Prediabetes or at Risk of Developing Type 2 Diabetes: A Systematic Review and Meta-analysis. - Journal/source: PubMed high-yield prediabetes via PubMed (Diabetes Care) - DOI: [10.2337/dc25-1877](https://doi.org/10.2337/dc25-1877) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42030121/](https://pubmed.ncbi.nlm.nih.gov/42030121/) - Open-access link: [https://doi.org/10.2337/dc25-1877](https://doi.org/10.2337/dc25-1877) - Evidence used: PubMed abstract + Europe PMC metadata - Published or indexed date: 2026-06-01 为什么值得关注 很多人一听到“糖尿病前期”，第一反应就是：那我是不是只要少吃一点、多运动一点，就能把风险降下来？方向当然没错。大量研究都说明，生活方式改变是预防 2 型糖尿病的重要路径。但这篇发表在 Diabetes Care 的系统综述提醒我们：真正困难的地方，不是把建议写在纸上，而是让这些建议在日常医疗场景里持续发生。 证据告诉我们什么 研究者关心的问题很具体：如果把糖尿病预防项目放在初级保健中，也就是家庭医生、社区诊所、基层医疗这些更接近普通人的地方，它到底有没有稳定效果？他们检索了 Medline 和 Embase，最后纳入 14 项符合条件的研究。这些研究的对象包括糖尿病前期人群，或通过风险评分被认为更容易发展为 2 型糖尿病的人群。项目内容大多和饮食、运动、体重管理、行为改变有关。 结果并没有像宣传语里那么漂亮。合并分析没有发现糖尿病发生率出现明确显著下降；HbA1c、空腹血糖、2 小时血糖、体重、BMI、腰围和血压等指标，也没有显示出稳定的显著改善。比如糖尿病发生率的相对风险是 0.82，看起来方向上像是降低了风险，但 95% 置信区间是 0.65 到 1.02，跨过了 1，所以不能说这个结果已经足够确定。 应该怎样理解 这并不等于“饮食和运动没用”。更准确的理解是：在真实基层医疗里，一个项目是否有效，取决于它是不是只有一次性建议，还是有筛查、转介、目标设定、跟进、反馈、家庭和社区支持。很多人不是不知道该吃得健康、该动起来，而是生活压力、工作节奏、经济条件、照护责任和环境限制，让改变很难长期坚持。 这篇研究对糖尿病前期读者的价值，是帮我们降低对“万能项目”的期待。一个写着“糖尿病预防”的课程，不一定自动有效；一个医生说“你要减重、要运动”，也不等于改变会自然发生。真正值得关注的是：有没有具体目标？有没有人帮你复盘？有没有持续追踪？有没有处理睡眠、压力、饮食环境和运动条件这些现实障碍？ 所以，普通读者可以把这篇研究理解为一句话：生活方式改变仍然是核心，但它需要被认真设计和持续支持。对于糖尿病前期来说，关键不是听到一句“改变生活方式”，而是找到一个能让改变真正落地的系统。 可以怎么做 这篇综述对数字健康产品尤其有提醒意义：把糖尿病预防项目搬到“基层医疗”或“线上平台”，并不会自动产生效果。真正决定结果的，可能是转介是否顺畅、用户是否被持续跟进、目标是否足够具体、数据是否能变成反馈，以及家庭和社区是否能参与支持。换句话说，渠道本身不是疗效，流程设计才可能影响行为。 如果 GLUCOLIT 未来做成产品，不能只做内容分发或提醒打卡。更值得尝试的是把用户分层：谁需要医生确认风险，谁需要营养师调整饮食，谁需要运动安全评估，谁卡在睡眠压力或工作节奏上。商业上，可信的机会不在于承诺“快速逆转”，而在于建立一个能帮助用户持续复盘、减少放弃、及时转向专业服务的支持系统。临床上，这也提示医生：一句“回去减重运动”往往不够，真正需要的是后续路径。 为什么和糖尿病前期有关？ 糖尿病前期正处在一个可以争取改变的阶段，但这个阶段最容易被一句笼统建议带过。本文直接研究了糖尿病前期或高风险人群的生活方式预防项目，并提醒我们：基层医疗是重要入口，但如果缺少转介、随访和社会支持，项目效果可能不稳定。 你可以带走的重点 - 这篇综述不是在否定生活方式改变，而是在提醒：项目设计和执行质量很重要。 - 初级保健场景更接近普通人，但单靠一次性建议，可能很难带来稳定改变。 - 糖尿病发生率的结果方向上可能有帮助，但统计不确定性仍然存在，不能夸大。 - 对糖尿病前期人群来说，持续跟进、目标设定和现实支持，可能和“知道该怎么做”一样重要。 - 本文不能替代医生建议，也不能说明某个具体饮食或运动方案适合所有人。",
+      "一项系统综述和荟萃分析发现，放在初级保健场景里的生活方式糖尿病预防项目，并没有在糖尿病发生率、血糖和体重等指标上显示出稳定显著改善。 This review suggests that primary-care lifestyle prevention programs may need stronger referral, follow-up, and social support.",
     summaryEn:
-      "When people hear the word prediabetes, the advice often sounds simple: eat better, move more, and lose some weight. That direction is still important. Lifestyle change remains one of the main ways to reduce the risk of type 2 diabetes. But this systematic review in Diabetes Care adds an important reality check: putting a diabetes-prevention program into primary care does not automatically make it effective. The researchers asked a practical question. If lifestyle programs are delivered through primary care, such as family medicine clinics or community health settings, do they reduce the chance of developing type 2 diabetes or improve markers such as HbA1c, fasting glucose, weight, waist size, and blood pressure? They searched medical databases and included 14 eligible studies of lifestyle-based diabetes-prevention programs. Participants had prediabetes or were considered at high risk of developing diabetes. The pooled results were cautious rather than dramatic. The review did not find a statistically clear reduction in diabetes incidence. It also did not find stable significant improvements in HbA1c, fasting glucose, 2-hour glucose, body weight, BMI, waist circumference, or blood pressure. For diabetes incidence, the relative risk was 0.82, which points in a favorable direction, but the confidence interval crossed 1. That means the evidence is not strong enough to say the intervention clearly reduced diabetes risk in these studies. This does not mean diet and exercise are useless. A better reading is that real-world support matters. Many people already know they should eat differently or move more. The hard part is turning that knowledge into repeatable habits while dealing with work, sleep, stress, food access, family responsibilities, and limited time. A prevention program may need more than a handout or one clinic conversation. It may need screening, referral, coaching, progress tracking, and social support that continue over time. For readers with prediabetes, the useful takeaway is not despair. It is discernment. A program labeled diabetes prevention is not automatically strong. A brief instruction to change lifestyle is not the same as a system that helps someone change. The better question is: does the program set specific goals, follow up, adapt to barriers, and help the person keep going? Why This Matters for Prediabetes Prediabetes is a stage where prevention still matters, but it is also a stage where advice is often too vague. This review focuses directly on people with prediabetes or high diabetes risk and shows that primary care is an important entry point, but not a magic solution by itself. Practical Takeaways - The review does not show that lifestyle change is useless; it shows that program design and follow-up matter. - Primary care is a convenient setting, but a brief recommendation may not be enough to change long-term outcomes. - The diabetes-incidence result pointed in a favorable direction, but uncertainty remained, so the finding should not be overstated. - For people with prediabetes, support systems, goal setting, and realistic follow-up may be as important as knowing what to do. - This article is for education only and should not replace advice from a qualified clinician.",
+      "一项系统综述和荟萃分析发现，放在初级保健场景里的生活方式糖尿病预防项目，并没有在糖尿病发生率、血糖和体重等指标上显示出稳定显著改善。 This review suggests that primary-care lifestyle prevention programs may need stronger referral, follow-up, and social support.",
     bodyZh:
-      "原文信息栏\r\n\r\n- Original title: The Effectiveness of Diabetes Prevention Programs Delivered in Primary Care for Individuals With Prediabetes or at Risk of Developing Type 2 Diabetes: A Systematic Review and Meta-analysis.\r\n- Journal/source: PubMed high-yield prediabetes via PubMed (Diabetes Care)\r\n- DOI: [10.2337/dc25-1877](https://doi.org/10.2337/dc25-1877)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42030121/](https://pubmed.ncbi.nlm.nih.gov/42030121/)\r\n- Open-access link: [https://doi.org/10.2337/dc25-1877](https://doi.org/10.2337/dc25-1877)\r\n- Evidence used: PubMed abstract + Europe PMC metadata\r\n- Published or indexed date: 2026-06-01\r\n\r\n为什么值得关注\r\n\r\n很多人一听到“糖尿病前期”，第一反应就是：那我是不是只要少吃一点、多运动一点，就能把风险降下来？方向当然没错。大量研究都说明，生活方式改变是预防 2 型糖尿病的重要路径。但这篇发表在 Diabetes Care 的系统综述提醒我们：真正困难的地方，不是把建议写在纸上，而是让这些建议在日常医疗场景里持续发生。\r\n\r\n证据告诉我们什么\r\n\r\n研究者关心的问题很具体：如果把糖尿病预防项目放在初级保健中，也就是家庭医生、社区诊所、基层医疗这些更接近普通人的地方，它到底有没有稳定效果？他们检索了 Medline 和 Embase，最后纳入 14 项符合条件的研究。这些研究的对象包括糖尿病前期人群，或通过风险评分被认为更容易发展为 2 型糖尿病的人群。项目内容大多和饮食、运动、体重管理、行为改变有关。\r\n\r\n结果并没有像宣传语里那么漂亮。合并分析没有发现糖尿病发生率出现明确显著下降；HbA1c、空腹血糖、2 小时血糖、体重、BMI、腰围和血压等指标，也没有显示出稳定的显著改善。比如糖尿病发生率的相对风险是 0.82，看起来方向上像是降低了风险，但 95% 置信区间是 0.65 到 1.02，跨过了 1，所以不能说这个结果已经足够确定。\r\n\r\n应该怎样理解\r\n\r\n这并不等于“饮食和运动没用”。更准确的理解是：在真实基层医疗里，一个项目是否有效，取决于它是不是只有一次性建议，还是有筛查、转介、目标设定、跟进、反馈、家庭和社区支持。很多人不是不知道该吃得健康、该动起来，而是生活压力、工作节奏、经济条件、照护责任和环境限制，让改变很难长期坚持。\r\n\r\n这篇研究对糖尿病前期读者的价值，是帮我们降低对“万能项目”的期待。一个写着“糖尿病预防”的课程，不一定自动有效；一个医生说“你要减重、要运动”，也不等于改变会自然发生。真正值得关注的是：有没有具体目标？有没有人帮你复盘？有没有持续追踪？有没有处理睡眠、压力、饮食环境和运动条件这些现实障碍？\r\n\r\n所以，普通读者可以把这篇研究理解为一句话：生活方式改变仍然是核心，但它需要被认真设计和持续支持。对于糖尿病前期来说，关键不是听到一句“改变生活方式”，而是找到一个能让改变真正落地的系统。\r\n\r\n可以怎么做\r\n\r\n这篇综述对数字健康产品尤其有提醒意义：把糖尿病预防项目搬到“基层医疗”或“线上平台”，并不会自动产生效果。真正决定结果的，可能是转介是否顺畅、用户是否被持续跟进、目标是否足够具体、数据是否能变成反馈，以及家庭和社区是否能参与支持。换句话说，渠道本身不是疗效，流程设计才可能影响行为。\r\n\r\n如果 GLUCOLIT 未来做成产品，不能只做内容分发或提醒打卡。更值得尝试的是把用户分层：谁需要医生确认风险，谁需要营养师调整饮食，谁需要运动安全评估，谁卡在睡眠压力或工作节奏上。商业上，可信的机会不在于承诺“快速逆转”，而在于建立一个能帮助用户持续复盘、减少放弃、及时转向专业服务的支持系统。临床上，这也提示医生：一句“回去减重运动”往往不够，真正需要的是后续路径。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n糖尿病前期正处在一个可以争取改变的阶段，但这个阶段最容易被一句笼统建议带过。本文直接研究了糖尿病前期或高风险人群的生活方式预防项目，并提醒我们：基层医疗是重要入口，但如果缺少转介、随访和社会支持，项目效果可能不稳定。\r\n\r\n你可以带走的重点\r\n\r\n- 这篇综述不是在否定生活方式改变，而是在提醒：项目设计和执行质量很重要。\r\n- 初级保健场景更接近普通人，但单靠一次性建议，可能很难带来稳定改变。\r\n- 糖尿病发生率的结果方向上可能有帮助，但统计不确定性仍然存在，不能夸大。\r\n- 对糖尿病前期人群来说，持续跟进、目标设定和现实支持，可能和“知道该怎么做”一样重要。\r\n- 本文不能替代医生建议，也不能说明某个具体饮食或运动方案适合所有人。",
+      "一项系统综述和荟萃分析发现，放在初级保健场景里的生活方式糖尿病预防项目，并没有在糖尿病发生率、血糖和体重等指标上显示出稳定显著改善。 This review suggests that primary-care lifestyle prevention programs may need stronger referral, follow-up, and social support.",
     bodyEn:
-      "When people hear the word prediabetes, the advice often sounds simple: eat better, move more, and lose some weight. That direction is still important. Lifestyle change remains one of the main ways to reduce the risk of type 2 diabetes. But this systematic review in Diabetes Care adds an important reality check: putting a diabetes-prevention program into primary care does not automatically make it effective.\r\n\r\nThe researchers asked a practical question. If lifestyle programs are delivered through primary care, such as family medicine clinics or community health settings, do they reduce the chance of developing type 2 diabetes or improve markers such as HbA1c, fasting glucose, weight, waist size, and blood pressure? They searched medical databases and included 14 eligible studies of lifestyle-based diabetes-prevention programs. Participants had prediabetes or were considered at high risk of developing diabetes.\r\n\r\nThe pooled results were cautious rather than dramatic. The review did not find a statistically clear reduction in diabetes incidence. It also did not find stable significant improvements in HbA1c, fasting glucose, 2-hour glucose, body weight, BMI, waist circumference, or blood pressure. For diabetes incidence, the relative risk was 0.82, which points in a favorable direction, but the confidence interval crossed 1. That means the evidence is not strong enough to say the intervention clearly reduced diabetes risk in these studies.\r\n\r\nThis does not mean diet and exercise are useless. A better reading is that real-world support matters. Many people already know they should eat differently or move more. The hard part is turning that knowledge into repeatable habits while dealing with work, sleep, stress, food access, family responsibilities, and limited time. A prevention program may need more than a handout or one clinic conversation. It may need screening, referral, coaching, progress tracking, and social support that continue over time.\r\n\r\nFor readers with prediabetes, the useful takeaway is not despair. It is discernment. A program labeled diabetes prevention is not automatically strong. A brief instruction to change lifestyle is not the same as a system that helps someone change. The better question is: does the program set specific goals, follow up, adapt to barriers, and help the person keep going?\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nPrediabetes is a stage where prevention still matters, but it is also a stage where advice is often too vague. This review focuses directly on people with prediabetes or high diabetes risk and shows that primary care is an important entry point, but not a magic solution by itself.\r\n\r\nPractical Takeaways\r\n\r\n- The review does not show that lifestyle change is useless; it shows that program design and follow-up matter.\r\n- Primary care is a convenient setting, but a brief recommendation may not be enough to change long-term outcomes.\r\n- The diabetes-incidence result pointed in a favorable direction, but uncertainty remained, so the finding should not be overstated.\r\n- For people with prediabetes, support systems, goal setting, and realistic follow-up may be as important as knowing what to do.\r\n- This article is for education only and should not replace advice from a qualified clinician.",
+      "一项系统综述和荟萃分析发现，放在初级保健场景里的生活方式糖尿病预防项目，并没有在糖尿病发生率、血糖和体重等指标上显示出稳定显著改善。 This review suggests that primary-care lifestyle prevention programs may need stronger referral, follow-up, and social support.",
     thumbnail:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1800&auto=format&fit=crop",
-    source: "PubMed high-yield prediabetes via PubMed (Diabetes Care)",
+    source: "国际医学期刊",
     doi: "10.2337/dc25-1877",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42030121/",
     publishedAt: "2026-06-01",
@@ -633,34 +690,34 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: false,
     qualityStatus: "ready",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Meaning and limitations section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains overclaimed medical language.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/the-effectiveness-of-diabetes-prevention-programs-delivered-in-primary-c-787ac548/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
+    categoryLabels: ["饮食干预", "医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "experiences-and-preferences-of-hispanic-men-in-the-national-diabetes-pre-902dce34",
     titleZh: "西班牙裔男性在糖尿病预防项目中的经历",
     titleEn: "Hispanic Men's Experiences in Diabetes Prevention Program",
     summaryZh:
-      "原文信息栏 - Original title: Experiences and preferences of Hispanic men in the National Diabetes Prevention Program: a qualitative study guided by the COM-B framework. - Authors: Gonzalez CJ, Hernandez NG, Perez-Mejia CN, Flaxman H, Stephenson-Hunter C, Gil E et al. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (BMJ open) - DOI: [10.1136/bmjopen-2025-114268](https://doi.org/10.1136/bmjopen-2025-114268) - PubMed Central: [PMC13182434](https://pmc.ncbi.nlm.nih.gov/articles/PMC13182434/) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42152451/](https://pubmed.ncbi.nlm.nih.gov/42152451/) - Open-access link: [https://europepmc.org/articles/PMC13182434](https://europepmc.org/articles/PMC13182434) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Published or indexed date: 2026-05-15 为什么值得关注 西班牙裔男性受糖尿病影响较大，但在预防项目中代表性不足，了解他们的经历至关重要。 证据告诉我们什么 参与者对NDPP的资源和结构表示赞赏，认为它们对糖尿病预防知识很有价值。 应该怎样理解 对糖尿病的恐惧是报名的关键动力。 项目的文化和性别考量受到赞赏，但虚拟格式评价不一。 可以怎么做 强调减少糖尿病前期的不确定性和清晰传达项目结构可以改善项目招募。 提供多样化的交付格式可能增强持续参与度。 为什么和糖尿病前期有关？ 了解西班牙裔男性在糖尿病预防项目中的经历对于定制有效的干预措施至关重要，这些措施可以减少健康差异。 你可以带走的重点 - 西班牙裔男性重视从糖尿病预防项目中获得的知识和技能。 - 参与者赞赏文化定制的内容和性别定制的结构。 - 西班牙裔男性对虚拟项目格式的接受度褒贬不一。 - 为了提高招募，需要清晰地传达项目结构。",
+      "一项定性研究，探索西班牙裔男性在国家糖尿病预防项目中的体验和偏好。 A qualitative study exploring Hispanic men's experiences and preferences in the National Diabetes Prevention Program.",
     summaryEn:
-      "Why it matters Hispanic men are disproportionately affected by diabetes and underrepresented in prevention programs, highlighting the need for understanding their experiences. What the evidence says Participants appreciated the NDPP's resources and structure, finding them valuable for diabetes prevention knowledge. What this means Fear of diabetes was a key motivator for enrollment. The program's cultural and gender considerations were appreciated, yet the virtual format received mixed reviews. What readers can do Program recruitment could be improved by emphasizing the reduction of prediabetes uncertainty and clear communication of the program's structure. Offering diverse delivery formats may enhance sustained engagement. Why This Matters for Prediabetes Understanding the experiences of Hispanic men in diabetes prevention programs is essential for tailoring effective interventions that can reduce health disparities. Practical Takeaways - Hispanic men value the knowledge and skills gained from diabetes prevention programs. - Culturally tailored content and gender-tailored structure are appreciated by participants. - There is a mixed reception to virtual program formats among Hispanic men. - Clear communication about the program structure is necessary to improve recruitment.",
+      "一项定性研究，探索西班牙裔男性在国家糖尿病预防项目中的体验和偏好。 A qualitative study exploring Hispanic men's experiences and preferences in the National Diabetes Prevention Program.",
     bodyZh:
-      "原文信息栏\r\n\r\n- Original title: Experiences and preferences of Hispanic men in the National Diabetes Prevention Program: a qualitative study guided by the COM-B framework.\r\n- Authors: Gonzalez CJ, Hernandez NG, Perez-Mejia CN, Flaxman H, Stephenson-Hunter C, Gil E et al.\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (BMJ open)\r\n- DOI: [10.1136/bmjopen-2025-114268](https://doi.org/10.1136/bmjopen-2025-114268)\r\n- PubMed Central: [PMC13182434](https://pmc.ncbi.nlm.nih.gov/articles/PMC13182434/)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42152451/](https://pubmed.ncbi.nlm.nih.gov/42152451/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13182434](https://europepmc.org/articles/PMC13182434)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Published or indexed date: 2026-05-15\r\n\r\n为什么值得关注 西班牙裔男性受糖尿病影响较大，但在预防项目中代表性不足，了解他们的经历至关重要。\r\n\r\n证据告诉我们什么 参与者对NDPP的资源和结构表示赞赏，认为它们对糖尿病预防知识很有价值。\r\n\r\n应该怎样理解 对糖尿病的恐惧是报名的关键动力。 项目的文化和性别考量受到赞赏，但虚拟格式评价不一。\r\n\r\n可以怎么做 强调减少糖尿病前期的不确定性和清晰传达项目结构可以改善项目招募。 提供多样化的交付格式可能增强持续参与度。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n了解西班牙裔男性在糖尿病预防项目中的经历对于定制有效的干预措施至关重要，这些措施可以减少健康差异。\r\n\r\n你可以带走的重点\r\n\r\n- 西班牙裔男性重视从糖尿病预防项目中获得的知识和技能。\r\n- 参与者赞赏文化定制的内容和性别定制的结构。\r\n- 西班牙裔男性对虚拟项目格式的接受度褒贬不一。\r\n- 为了提高招募，需要清晰地传达项目结构。",
+      "一项定性研究，探索西班牙裔男性在国家糖尿病预防项目中的体验和偏好。 A qualitative study exploring Hispanic men's experiences and preferences in the National Diabetes Prevention Program.",
     bodyEn:
-      "Why it matters Hispanic men are disproportionately affected by diabetes and underrepresented in prevention programs, highlighting the need for understanding their experiences.\r\n\r\nWhat the evidence says Participants appreciated the NDPP's resources and structure, finding them valuable for diabetes prevention knowledge.\r\n\r\nWhat this means Fear of diabetes was a key motivator for enrollment. The program's cultural and gender considerations were appreciated, yet the virtual format received mixed reviews.\r\n\r\nWhat readers can do Program recruitment could be improved by emphasizing the reduction of prediabetes uncertainty and clear communication of the program's structure.\r\n\r\nOffering diverse delivery formats may enhance sustained engagement.\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nUnderstanding the experiences of Hispanic men in diabetes prevention programs is essential for tailoring effective interventions that can reduce health disparities.\r\n\r\nPractical Takeaways\r\n\r\n- Hispanic men value the knowledge and skills gained from diabetes prevention programs.\r\n- Culturally tailored content and gender-tailored structure are appreciated by participants.\r\n- There is a mixed reception to virtual program formats among Hispanic men.\r\n- Clear communication about the program structure is necessary to improve recruitment.",
+      "一项定性研究，探索西班牙裔男性在国家糖尿病预防项目中的体验和偏好。 A qualitative study exploring Hispanic men's experiences and preferences in the National Diabetes Prevention Program.",
     thumbnail:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
-    source: "PubMed prediabetes lifestyle intervention via PubMed (BMJ open)",
+    source: "国际医学期刊",
     doi: "10.1136/bmjopen-2025-114268",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42152451/",
     publishedAt: "2026-05-15",
@@ -669,15 +726,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/experiences-and-preferences-of-hispanic-men-in-the-national-diabetes-pre-902dce34/en.mdx",
@@ -690,17 +745,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "The Role of Konjac Glucomannan in Modulating Gut Microbiota and Alleviating Prediabetes",
     summaryZh:
-      "为什么值得关注 糖尿病前期是一种血糖水平高于正常但不足以被归类为2型糖尿病的状态。 这是预防糖尿病发病的关键时期。 魔芋葡甘聚糖（KGM）被认为有助于糖尿病管理，但其结构如何影响其功能尚不清楚。 证据告诉我们什么 研究发现，乙酰化度（DS）较高的魔芋葡甘聚糖在丰富有益肠道细菌和改善糖尿病前期条件下的葡萄糖和脂质代谢方面更为有效。 应该怎样理解 研究结果强调了KGM的乙酰化度在调节肠道菌群中的重要性，这对糖尿病预防至关重要。 然而，该研究的局限性在于其侧重于动物模型和体外实验。 需要更多的研究来证实这些效果在人类中是否成立。 可以怎么做 对于糖尿病前期患者，考虑将富含魔芋葡甘聚糖的食物纳入您的饮食中，因为它可能有助于改善肠道健康和管理血糖水平。 这些发现为开发针对特定乙酰化度的KGM基础治疗药物提供了机会，以优化其在管理糖尿病前期和相关代谢状况中的效力。 为什么和糖尿病前期有关？ 了解像魔芋葡甘聚糖这样的饮食成分如何影响肠道健康和代谢状况，对于为糖尿病前期和糖尿病开发有效的饮食和治疗干预措施至关重要。 你可以带走的重点 - 魔芋葡甘聚糖的结构，特别是其乙酰化度，在调节肠道菌群的能力中起着关键作用。 - KGM中较高的乙酰化度与更好地丰富有益肠道细菌相关联。 - 研究表明，在糖尿病前期条件下，DS较高的KGM可以改善葡萄糖和脂质代谢。 - 需要更多的研究来证实这些发现在人类临床试验中的效果。",
+      "本文讨论了一项研究的发现，该研究探讨了不同乙酰化度的魔芋葡甘聚糖对肠道菌群的影响及其缓解糖尿病前期的潜力。 This article discusses the findings of a study that explores the impact of konjac glucomannan with varying acetylation degrees on gut microbiota and its potential to alleviate prediabetes.",
     summaryEn:
-      "Why it matters Prediabetes is a condition characterized by elevated blood glucose levels, offering a critical window for diabetes prevention. The structure-function relationship of Konjac glucomannan (KGM) in diabetes management is not well understood. What the evidence says The study indicates that KGM with higher acetylation degrees (DS) enriches beneficial gut bacteria and improves glucose and lipid metabolism in prediabetic conditions. What this means The findings highlight the importance of KGM's acetylation degree in modulating gut microbiota, crucial for diabetes prevention. However, the reliance on animal models and in vitro experiments suggests the need for further human studies. What readers can do Incorporating KGM into diets may benefit prediabetic individuals by improving gut health and blood sugar levels. There's potential for developing KGM-based therapeutics optimized for specific acetylation degrees. Why This Matters for Prediabetes Understanding how dietary components like konjac glucomannan can influence gut health and metabolic conditions is crucial for developing effective dietary and therapeutic interventions for prediabetes and diabetes. Practical Takeaways - Konjac glucomannan's structure, specifically its acetylation degree, plays a crucial role in its ability to modulate gut microbiota. - Higher acetylation degrees in KGM were associated with better enrichment of beneficial gut bacteria. - The study suggests that KGM with higher DS can improve glucose and lipid metabolism in prediabetic conditions. - More research is needed to confirm these findings in human clinical trials. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Carbohydrate polymers) - Evidence used: PubMed abstract + open-access full-text link - Original title: Structure-function relationship of Konjac glucomannan with varying acetylation degrees in modulating gut microbiota and alleviating prediabetes. - Authors: Wang H, Zhao Y, Dang D, Huang L, Pei Z, Zhao J et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/41832011/](https://pubmed.ncbi.nlm.nih.gov/41832011/) - DOI: [10.1016/j.carbpol.2026.125103](https://doi.org/10.1016/j.carbpol.2026.125103) - Open-access link: [https://doi.org/10.1016/j.carbpol.2026.125103](https://doi.org/10.1016/j.carbpol.2026.125103) - Published or indexed date: 2026-05-15 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了一项研究的发现，该研究探讨了不同乙酰化度的魔芋葡甘聚糖对肠道菌群的影响及其缓解糖尿病前期的潜力。 This article discusses the findings of a study that explores the impact of konjac glucomannan with varying acetylation degrees on gut microbiota and its potential to alleviate prediabetes.",
     bodyZh:
-      "为什么值得关注 糖尿病前期是一种血糖水平高于正常但不足以被归类为2型糖尿病的状态。 这是预防糖尿病发病的关键时期。 魔芋葡甘聚糖（KGM）被认为有助于糖尿病管理，但其结构如何影响其功能尚不清楚。\r\n\r\n证据告诉我们什么 研究发现，乙酰化度（DS）较高的魔芋葡甘聚糖在丰富有益肠道细菌和改善糖尿病前期条件下的葡萄糖和脂质代谢方面更为有效。\r\n\r\n应该怎样理解 研究结果强调了KGM的乙酰化度在调节肠道菌群中的重要性，这对糖尿病预防至关重要。 然而，该研究的局限性在于其侧重于动物模型和体外实验。 需要更多的研究来证实这些效果在人类中是否成立。\r\n\r\n可以怎么做 对于糖尿病前期患者，考虑将富含魔芋葡甘聚糖的食物纳入您的饮食中，因为它可能有助于改善肠道健康和管理血糖水平。 这些发现为开发针对特定乙酰化度的KGM基础治疗药物提供了机会，以优化其在管理糖尿病前期和相关代谢状况中的效力。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n了解像魔芋葡甘聚糖这样的饮食成分如何影响肠道健康和代谢状况，对于为糖尿病前期和糖尿病开发有效的饮食和治疗干预措施至关重要。\r\n\r\n你可以带走的重点\r\n\r\n- 魔芋葡甘聚糖的结构，特别是其乙酰化度，在调节肠道菌群的能力中起着关键作用。\r\n- KGM中较高的乙酰化度与更好地丰富有益肠道细菌相关联。\r\n- 研究表明，在糖尿病前期条件下，DS较高的KGM可以改善葡萄糖和脂质代谢。\r\n- 需要更多的研究来证实这些发现在人类临床试验中的效果。",
+      "本文讨论了一项研究的发现，该研究探讨了不同乙酰化度的魔芋葡甘聚糖对肠道菌群的影响及其缓解糖尿病前期的潜力。 This article discusses the findings of a study that explores the impact of konjac glucomannan with varying acetylation degrees on gut microbiota and its potential to alleviate prediabetes.",
     bodyEn:
-      "Why it matters Prediabetes is a condition characterized by elevated blood glucose levels, offering a critical window for diabetes prevention.\r\n\r\nThe structure-function relationship of Konjac glucomannan (KGM) in diabetes management is not well understood.\r\n\r\nWhat the evidence says The study indicates that KGM with higher acetylation degrees (DS) enriches beneficial gut bacteria and improves glucose and lipid metabolism in prediabetic conditions.\r\n\r\nWhat this means The findings highlight the importance of KGM's acetylation degree in modulating gut microbiota, crucial for diabetes prevention.\r\n\r\nHowever, the reliance on animal models and in vitro experiments suggests the need for further human studies.\r\n\r\nWhat readers can do Incorporating KGM into diets may benefit prediabetic individuals by improving gut health and blood sugar levels.\r\n\r\nThere's potential for developing KGM-based therapeutics optimized for specific acetylation degrees.\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nUnderstanding how dietary components like konjac glucomannan can influence gut health and metabolic conditions is crucial for developing effective dietary and therapeutic interventions for prediabetes and diabetes.\r\n\r\nPractical Takeaways\r\n\r\n- Konjac glucomannan's structure, specifically its acetylation degree, plays a crucial role in its ability to modulate gut microbiota.\r\n- Higher acetylation degrees in KGM were associated with better enrichment of beneficial gut bacteria.\r\n- The study suggests that KGM with higher DS can improve glucose and lipid metabolism in prediabetic conditions.\r\n- More research is needed to confirm these findings in human clinical trials.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Carbohydrate polymers)\r\n- Evidence used: PubMed abstract + open-access full-text link\r\n- Original title: Structure-function relationship of Konjac glucomannan with varying acetylation degrees in modulating gut microbiota and alleviating prediabetes.\r\n- Authors: Wang H, Zhao Y, Dang D, Huang L, Pei Z, Zhao J et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/41832011/](https://pubmed.ncbi.nlm.nih.gov/41832011/)\r\n- DOI: [10.1016/j.carbpol.2026.125103](https://doi.org/10.1016/j.carbpol.2026.125103)\r\n\r\n- Open-access link: [https://doi.org/10.1016/j.carbpol.2026.125103](https://doi.org/10.1016/j.carbpol.2026.125103)\r\n- Published or indexed date: 2026-05-15\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了一项研究的发现，该研究探讨了不同乙酰化度的魔芋葡甘聚糖对肠道菌群的影响及其缓解糖尿病前期的潜力。 This article discusses the findings of a study that explores the impact of konjac glucomannan with varying acetylation degrees on gut microbiota and its potential to alleviate prediabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Carbohydrate polymers)",
+    source: "国际医学期刊",
     doi: "10.1016/j.carbpol.2026.125103",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/41832011/",
     publishedAt: "2026-05-15",
@@ -709,20 +763,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/structure-function-relationship-of-konjac-glucomannan-with-varying-acety-091c7083/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "药物", "医学研究", "糖尿病前期"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "association-between-sleep-duration-and-glycemic-levels-in-adults-with-pr-f509fb5d",
@@ -730,17 +782,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Study on the Association between Sleep Duration and Glycemic Levels in Adults with Prediabetes",
     summaryZh:
-      "为什么值得关注 对于许多人来说，糖尿病前期是一个无声的斗争，通常在为时已晚之前很难察觉。睡眠，作为健康的关键组成部分，可能在管理血糖水平方面扮演着比我们意识到的更重要的角色。 证据告诉我们什么 研究发现睡眠时长与空腹血糖水平之间存在非线性关系，拐点在每晚6小时睡眠。低于这个阈值时，更多的睡眠与更低的血糖水平相关联。 应该怎样理解 这项研究提供了宝贵的见解，但也存在局限性。样本量虽然具有全国代表性，但可能无法捕捉到所有细微差别。研究结果表明，短睡眠时长可能是糖尿病前期患者血糖水平升高的一个风险因素，但需要更多的研究来确定因果关系。研究的设计不允许对睡眠对糖尿病进展的长期影响得出结论。因此，我们不能简单地将睡眠时长与血糖管理直接等同起来，还需要考虑其他生活方式因素和个体差异。 可以怎么做 给糖前读者 如果你有糖尿病前期，考虑你的睡眠质量。目标是每晚至少6小时，因为它可能有助于管理你的血糖水平。同时，也要注意饮食和运动等其他生活方式因素。 给健康科技行业 有机会开发帮助追踪睡眠模式并为糖尿病前期患者提供个性化反馈的工具，以改善他们的睡眠，并可能改善他们的血糖管理。 你可以带走的重点 - 睡眠时长可能会影响糖尿病前期患者的血糖水平。 - 研究确定了每晚6小时睡眠对血糖水平的影响阈值。 - 超过6小时的睡眠并未显示出与血糖水平的显著关联。 - 该研究强调了对睡眠和糖尿病管理进一步研究的需求。",
+      "一项基于人群的研究探讨了成年人中睡眠时长与糖尿病前期血糖水平之间的关系。 A population-based study explores the relationship between sleep duration and glycemic levels in adults with prediabetes.",
     summaryEn:
-      "For many, the struggle with prediabetes is a silent one, often unnoticed until it's too late. Sleep, a critical component of health, might play a more significant role in managing blood sugar levels than we realize. The study found a nonlinear association between sleep duration and fasting plasma glucose levels, with an inflection point at 6 hours of sleep per night. Below this threshold, more sleep was linked to lower glucose levels. While the study provides valuable insights, it's important to note its limitations. The sample size, though nationally representative, may not capture all nuances. The findings suggest that short sleep duration could be a risk factor for elevated glucose levels in prediabetes, but more research is needed to establish causation. The study's design does not allow for conclusions about the long-term effects of sleep on diabetes progression. Therefore, we cannot simply equate sleep duration with blood sugar management directly; other lifestyle factors and individual differences must also be considered. If you have prediabetes, consider the quality of your sleep. Aim for at least 6 hours per night, as it may help manage your blood sugar levels. Also, pay attention to other lifestyle factors such as diet and exercise. There's an opportunity to develop tools that help track sleep patterns and provide personalized feedback to prediabetes patients to improve their sleep and, potentially, their glucose management. Practical Takeaways - Sleep duration may influence blood sugar levels in prediabetes. - A threshold of 6 hours of sleep per night is identified for its impact on glucose levels. - More sleep than 6 hours did not show significant associations with glucose levels. - The study highlights the need for further research on sleep and diabetes management. - Original title: Association between sleep duration and glycemic levels in adults with prediabetes: a population-based study. - Authors: Mou Z, Zhou Y, Dong Z - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Canadian journal of diabetes) - DOI: [10.1016/j.jcjd.2026.05.001](https://doi.org/10.1016/j.jcjd.2026.05.001) - Open-access link: [https://doi.org/10.1016/j.jcjd.2026.05.001](https://doi.org/10.1016/j.jcjd.2026.05.001) - Evidence used: PubMed abstract + open-access full-text link - Published or indexed date: 2026-05-13 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项基于人群的研究探讨了成年人中睡眠时长与糖尿病前期血糖水平之间的关系。 A population-based study explores the relationship between sleep duration and glycemic levels in adults with prediabetes.",
     bodyZh:
-      "为什么值得关注\r\n对于许多人来说，糖尿病前期是一个无声的斗争，通常在为时已晚之前很难察觉。睡眠，作为健康的关键组成部分，可能在管理血糖水平方面扮演着比我们意识到的更重要的角色。\r\n\r\n证据告诉我们什么\r\n研究发现睡眠时长与空腹血糖水平之间存在非线性关系，拐点在每晚6小时睡眠。低于这个阈值时，更多的睡眠与更低的血糖水平相关联。\r\n\r\n应该怎样理解\r\n这项研究提供了宝贵的见解，但也存在局限性。样本量虽然具有全国代表性，但可能无法捕捉到所有细微差别。研究结果表明，短睡眠时长可能是糖尿病前期患者血糖水平升高的一个风险因素，但需要更多的研究来确定因果关系。研究的设计不允许对睡眠对糖尿病进展的长期影响得出结论。因此，我们不能简单地将睡眠时长与血糖管理直接等同起来，还需要考虑其他生活方式因素和个体差异。\r\n\r\n可以怎么做\r\n给糖前读者\r\n如果你有糖尿病前期，考虑你的睡眠质量。目标是每晚至少6小时，因为它可能有助于管理你的血糖水平。同时，也要注意饮食和运动等其他生活方式因素。\r\n给健康科技行业\r\n有机会开发帮助追踪睡眠模式并为糖尿病前期患者提供个性化反馈的工具，以改善他们的睡眠，并可能改善他们的血糖管理。\r\n\r\n你可以带走的重点\r\n\r\n- 睡眠时长可能会影响糖尿病前期患者的血糖水平。\r\n- 研究确定了每晚6小时睡眠对血糖水平的影响阈值。\r\n- 超过6小时的睡眠并未显示出与血糖水平的显著关联。\r\n- 该研究强调了对睡眠和糖尿病管理进一步研究的需求。",
+      "一项基于人群的研究探讨了成年人中睡眠时长与糖尿病前期血糖水平之间的关系。 A population-based study explores the relationship between sleep duration and glycemic levels in adults with prediabetes.",
     bodyEn:
-      "For many, the struggle with prediabetes is a silent one, often unnoticed until it's too late. Sleep, a critical component of health, might play a more significant role in managing blood sugar levels than we realize.\r\n\r\nThe study found a nonlinear association between sleep duration and fasting plasma glucose levels, with an inflection point at 6 hours of sleep per night. Below this threshold, more sleep was linked to lower glucose levels.\r\n\r\nWhile the study provides valuable insights, it's important to note its limitations. The sample size, though nationally representative, may not capture all nuances. The findings suggest that short sleep duration could be a risk factor for elevated glucose levels in prediabetes, but more research is needed to establish causation. The study's design does not allow for conclusions about the long-term effects of sleep on diabetes progression. Therefore, we cannot simply equate sleep duration with blood sugar management directly; other lifestyle factors and individual differences must also be considered.\r\n\r\nIf you have prediabetes, consider the quality of your sleep. Aim for at least 6 hours per night, as it may help manage your blood sugar levels. Also, pay attention to other lifestyle factors such as diet and exercise. There's an opportunity to develop tools that help track sleep patterns and provide personalized feedback to prediabetes patients to improve their sleep and, potentially, their glucose management.\r\n\r\nPractical Takeaways\r\n\r\n- Sleep duration may influence blood sugar levels in prediabetes.\r\n- A threshold of 6 hours of sleep per night is identified for its impact on glucose levels.\r\n- More sleep than 6 hours did not show significant associations with glucose levels.\r\n- The study highlights the need for further research on sleep and diabetes management.\r\n\r\n\r\n\r\n- Original title: Association between sleep duration and glycemic levels in adults with prediabetes: a population-based study.\r\n- Authors: Mou Z, Zhou Y, Dong Z\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Canadian journal of diabetes)\r\n- DOI: [10.1016/j.jcjd.2026.05.001](https://doi.org/10.1016/j.jcjd.2026.05.001)\r\n- Open-access link: [https://doi.org/10.1016/j.jcjd.2026.05.001](https://doi.org/10.1016/j.jcjd.2026.05.001)\r\n- Evidence used: PubMed abstract + open-access full-text link\r\n- Published or indexed date: 2026-05-13\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项基于人群的研究探讨了成年人中睡眠时长与糖尿病前期血糖水平之间的关系。 A population-based study explores the relationship between sleep duration and glycemic levels in adults with prediabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Canadian journal of diabetes)",
+    source: "国际医学期刊",
     doi: "10.1016/j.jcjd.2026.05.001",
     originalUrl: "https://doi.org/10.1016/j.jcjd.2026.05.001",
     publishedAt: "2026-05-13",
@@ -749,18 +800,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/association-between-sleep-duration-and-glycemic-levels-in-adults-with-pr-f509fb5d/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
+    categoryLabels: ["生活方式", "医学研究", "糖尿病前期"],
   },
   {
     slug: "staging-intermediate-hyperglycaemia-for-type-2-diabetes-prevention-the-e-22f29694",
@@ -768,17 +819,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Staging Hyperglycemia for Diabetes Prevention: Insights and Actions",
     summaryZh:
-      "给健康科技行业的启发 健康科技行业可以利用这些发现开发工具，帮助个人跟踪他们的血糖水平，并就管理糖尿病前期提供个性化建议。 这可以导致更有效的预防策略和更好的健康结果。 这项研究之所以相关，是因为它提供了一个系统的方法来理解从糖尿病前期到2型糖尿病的进展，这对于早期干预和预防策略至关重要。 - 了解高血糖的阶段可以帮助早期识别和预防2型糖尿病。 - 结合空腹血糖和1小时血糖或糖化血红蛋白水平可以提供对糖尿病风险的细致视图。 - 临床评分可以提高糖尿病预测的特异性，并减少实验室测试的需求。 - 对于糖尿病前期的个体来说，饮食和运动等生活方式的改变对于降低发展为2型糖尿病的风险至关重要。",
+      "本文讨论了ELSA-Brasil研究中关于分阶段高血糖对2型糖尿病预防的发现，并为患有糖尿病前期的个体和健康科技行业提供了实用的见解。 This article discusses the findings from the ELSA-Brasil study on staging hyperglycemia for type 2 diabetes prevention and provides practical insights for individuals with prediabetes and the",
     summaryEn:
-      "It's a call to action to make lifestyle changes to prevent or delay the onset of diabetes. The use of a clinical score in staging can reduce the need for laboratory testing and improve the specificity of diabetes prediction. However, the study's findings are based on a specific population and may not be generalizable to all. Regular monitoring and lifestyle modifications, such as diet and exercise, can significantly reduce the risk of progressing to type 2 diabetes. #### B. Insights for the Health Tech Industry The health tech industry can leverage these findings to develop tools that help individuals track their glucose levels and receive personalized advice on managing their prediabetes. This can lead to more effective prevention strategies and better health outcomes. This study is relevant as it provides a systematic approach to understanding the progression from prediabetes to type 2 diabetes, which is crucial for early intervention and prevention strategies. - Understanding the stages of hyperglycemia can help in early identification and prevention of type 2 diabetes. - Combining fasting plasma glucose with 1-hour plasma glucose or HbA1c levels provides a nuanced view of diabetes risk. - A clinical score can improve the specificity of diabetes prediction and reduce the need for laboratory testing. - Lifestyle modifications, such as diet and exercise, are crucial for individuals with prediabetes to reduce the risk of developing type 2 diabetes. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Diabetologia) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Staging intermediate hyperglycaemia for type 2 diabetes prevention: the ELSA-Brasil study. - Authors: Bracco PA, Schmidt MI, de Paula D, Feter JS, Bergman M, Duncan BB - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42118258/](https://pubmed.ncbi.nlm.nih.gov/42118258/) - DOI: [10.1007/s00125-026-06743-0](https://doi.org/10.1007/s00125-026-06743-0) - PubMed Central: [6463613](https://pmc.ncbi.nlm.nih.gov/articles/6463613/) - Open-access link: [https://doi.org/10.1007/s00125-026-06743-0](https://doi.org/10.1007/s00125-026-06743-0) - Published or indexed date: 2026-05-12 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了ELSA-Brasil研究中关于分阶段高血糖对2型糖尿病预防的发现，并为患有糖尿病前期的个体和健康科技行业提供了实用的见解。 This article discusses the findings from the ELSA-Brasil study on staging hyperglycemia for type 2 diabetes prevention and provides practical insights for individuals with prediabetes and the",
     bodyZh:
-      "给健康科技行业的启发 健康科技行业可以利用这些发现开发工具，帮助个人跟踪他们的血糖水平，并就管理糖尿病前期提供个性化建议。 这可以导致更有效的预防策略和更好的健康结果。\r\n\r\n\r\n\r\n这项研究之所以相关，是因为它提供了一个系统的方法来理解从糖尿病前期到2型糖尿病的进展，这对于早期干预和预防策略至关重要。\r\n\r\n\r\n\r\n- 了解高血糖的阶段可以帮助早期识别和预防2型糖尿病。\r\n- 结合空腹血糖和1小时血糖或糖化血红蛋白水平可以提供对糖尿病风险的细致视图。\r\n- 临床评分可以提高糖尿病预测的特异性，并减少实验室测试的需求。\r\n- 对于糖尿病前期的个体来说，饮食和运动等生活方式的改变对于降低发展为2型糖尿病的风险至关重要。",
+      "本文讨论了ELSA-Brasil研究中关于分阶段高血糖对2型糖尿病预防的发现，并为患有糖尿病前期的个体和健康科技行业提供了实用的见解。 This article discusses the findings from the ELSA-Brasil study on staging hyperglycemia for type 2 diabetes prevention and provides practical insights for individuals with prediabetes and the",
     bodyEn:
-      "It's a call to action to make lifestyle changes to prevent or delay the onset of diabetes.\r\n\r\n\r\n\r\n\r\n\r\nThe use of a clinical score in staging can reduce the need for laboratory testing and improve the specificity of diabetes prediction. However, the study's findings are based on a specific population and may not be generalizable to all.\r\n\r\n\r\n\r\nRegular monitoring and lifestyle modifications, such as diet and exercise, can significantly reduce the risk of progressing to type 2 diabetes. #### B.\r\n\r\nInsights for the Health Tech Industry The health tech industry can leverage these findings to develop tools that help individuals track their glucose levels and receive personalized advice on managing their prediabetes.\r\n\r\nThis can lead to more effective prevention strategies and better health outcomes.\r\n\r\n\r\n\r\nThis study is relevant as it provides a systematic approach to understanding the progression from prediabetes to type 2 diabetes, which is crucial for early intervention and prevention strategies.\r\n\r\n\r\n\r\n- Understanding the stages of hyperglycemia can help in early identification and prevention of type 2 diabetes.\r\n- Combining fasting plasma glucose with 1-hour plasma glucose or HbA1c levels provides a nuanced view of diabetes risk.\r\n- A clinical score can improve the specificity of diabetes prediction and reduce the need for laboratory testing.\r\n- Lifestyle modifications, such as diet and exercise, are crucial for individuals with prediabetes to reduce the risk of developing type 2 diabetes.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Diabetologia)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Staging intermediate hyperglycaemia for type 2 diabetes prevention: the ELSA-Brasil study.\r\n- Authors: Bracco PA, Schmidt MI, de Paula D, Feter JS, Bergman M, Duncan BB\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42118258/](https://pubmed.ncbi.nlm.nih.gov/42118258/)\r\n- DOI: [10.1007/s00125-026-06743-0](https://doi.org/10.1007/s00125-026-06743-0)\r\n- PubMed Central: [6463613](https://pmc.ncbi.nlm.nih.gov/articles/6463613/)\r\n- Open-access link: [https://doi.org/10.1007/s00125-026-06743-0](https://doi.org/10.1007/s00125-026-06743-0)\r\n- Published or indexed date: 2026-05-12\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了ELSA-Brasil研究中关于分阶段高血糖对2型糖尿病预防的发现，并为患有糖尿病前期的个体和健康科技行业提供了实用的见解。 This article discusses the findings from the ELSA-Brasil study on staging hyperglycemia for type 2 diabetes prevention and provides practical insights for individuals with prediabetes and the",
     thumbnail:
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Diabetologia)",
+    source: "国际医学期刊",
     doi: "10.1007/s00125-026-06743-0",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42118258/",
     publishedAt: "2026-05-12",
@@ -790,19 +840,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
       "Chinese commentary is short for the required SOP structure",
       "Chinese interpretation and critique section is short",
       "Chinese clinical/business insight section is short",
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains internal editorial labels.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/staging-intermediate-hyperglycaemia-for-type-2-diabetes-prevention-the-e-22f29694/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "医学研究", "糖尿病前期"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "effects-of-pharmacological-treatment-and-lifestyle-modification-on-predi-85c8f319",
@@ -810,17 +859,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "The Combined Impact of Medication and Lifestyle Changes on Prediabetes",
     summaryZh:
-      "为什么和糖尿病前期有关？ 这项研究之所以相关，是因为它为糖尿病前期提供了系统综述，这是一种影响相当一部分人群的状况，如果管理不当，可能会导致糖尿病。 你可以带走的重点 - 将药物与生活方式改变相结合可以降低发展为糖尿病的风险。 - 生活方式的改变是逆转糖尿病前期最有效的策略。 - 干预措施的有效性可能因人群和干预类型而异。 - 管理糖尿病前期需要个性化策略。",
+      "一项系统综述和随机对照试验（RCT）的荟萃分析表明，将药物治疗与生活方式改变相结合，可以显著降低糖尿病的发病率，并提高糖尿病前期个体实现正常血糖的可能性。 A systematic review and meta-analysis of randomized controlled trials (RCTs) suggests that combining pharmacological treatment with lifestyle modifications can significantly reduce t",
     summaryEn:
-      "Why This Matters for Prediabetes This study is relevant because it provides a systematic review of interventions for prediabetes, a condition that affects a significant portion of the population and can lead to diabetes if not managed properly. Practical Takeaways - Combining medication with lifestyle changes can reduce the risk of developing diabetes. - Lifestyle modifications are the most effective strategy for reversing prediabetes. - The effectiveness of interventions may vary based on the population and type of intervention. - Personalized strategies are needed for managing prediabetes. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Naunyn-Schmiedeberg's archives of pharmacology) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Effects of pharmacological treatment and lifestyle modification on prediabetes: a systematic review and meta-analysis of randomized controlled trials (RCTS). - Authors: Lu S, Ge R, Yu X, Sha Y, Xu Y, Chang J - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42108364/](https://pubmed.ncbi.nlm.nih.gov/42108364/) - DOI: [10.1007/s00210-026-05369-8](https://doi.org/10.1007/s00210-026-05369-8) - PubMed Central: [10420389](https://pmc.ncbi.nlm.nih.gov/articles/10420389/) - Open-access link: [https://doi.org/10.1007/s00210-026-05369-8](https://doi.org/10.1007/s00210-026-05369-8) - Published or indexed date: 2026-05-11 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项系统综述和随机对照试验（RCT）的荟萃分析表明，将药物治疗与生活方式改变相结合，可以显著降低糖尿病的发病率，并提高糖尿病前期个体实现正常血糖的可能性。 A systematic review and meta-analysis of randomized controlled trials (RCTs) suggests that combining pharmacological treatment with lifestyle modifications can significantly reduce t",
     bodyZh:
-      "为什么和糖尿病前期有关？\r\n\r\n这项研究之所以相关，是因为它为糖尿病前期提供了系统综述，这是一种影响相当一部分人群的状况，如果管理不当，可能会导致糖尿病。\r\n\r\n你可以带走的重点\r\n\r\n- 将药物与生活方式改变相结合可以降低发展为糖尿病的风险。\r\n- 生活方式的改变是逆转糖尿病前期最有效的策略。\r\n- 干预措施的有效性可能因人群和干预类型而异。\r\n- 管理糖尿病前期需要个性化策略。",
+      "一项系统综述和随机对照试验（RCT）的荟萃分析表明，将药物治疗与生活方式改变相结合，可以显著降低糖尿病的发病率，并提高糖尿病前期个体实现正常血糖的可能性。 A systematic review and meta-analysis of randomized controlled trials (RCTs) suggests that combining pharmacological treatment with lifestyle modifications can significantly reduce t",
     bodyEn:
-      "Why This Matters for Prediabetes\r\n\r\nThis study is relevant because it provides a systematic review of interventions for prediabetes, a condition that affects a significant portion of the population and can lead to diabetes if not managed properly.\r\n\r\nPractical Takeaways\r\n\r\n- Combining medication with lifestyle changes can reduce the risk of developing diabetes.\r\n- Lifestyle modifications are the most effective strategy for reversing prediabetes.\r\n- The effectiveness of interventions may vary based on the population and type of intervention.\r\n- Personalized strategies are needed for managing prediabetes.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Naunyn-Schmiedeberg's archives of pharmacology)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Effects of pharmacological treatment and lifestyle modification on prediabetes: a systematic review and meta-analysis of randomized controlled trials (RCTS).\r\n- Authors: Lu S, Ge R, Yu X, Sha Y, Xu Y, Chang J\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42108364/](https://pubmed.ncbi.nlm.nih.gov/42108364/)\r\n- DOI: [10.1007/s00210-026-05369-8](https://doi.org/10.1007/s00210-026-05369-8)\r\n- PubMed Central: [10420389](https://pmc.ncbi.nlm.nih.gov/articles/10420389/)\r\n- Open-access link: [https://doi.org/10.1007/s00210-026-05369-8](https://doi.org/10.1007/s00210-026-05369-8)\r\n- Published or indexed date: 2026-05-11\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项系统综述和随机对照试验（RCT）的荟萃分析表明，将药物治疗与生活方式改变相结合，可以显著降低糖尿病的发病率，并提高糖尿病前期个体实现正常血糖的可能性。 A systematic review and meta-analysis of randomized controlled trials (RCTs) suggests that combining pharmacological treatment with lifestyle modifications can significantly reduce t",
     thumbnail:
       "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Naunyn-Schmiedeberg's archives of pharmacology)",
+    source: "国际医学期刊",
     doi: "10.1007/s00210-026-05369-8",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42108364/",
     publishedAt: "2026-05-11",
@@ -829,19 +877,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
-      "Missing required section: 为什么值得关注",
-      "Missing required section: 证据告诉我们什么",
-      "Missing required section: 应该怎样理解",
-      "Missing required section: 可以怎么做",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/effects-of-pharmacological-treatment-and-lifestyle-modification-on-predi-85c8f319/en.mdx",
@@ -854,17 +896,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Prediabetes and Islet Proteome: Early Markers of Beta Cell Dysfunction",
     summaryZh:
-      "为什么值得关注 糖尿病前期提示血糖水平高于正常但尚未达到糖尿病范围，需要采取行动以预防2型糖尿病。 了解胰腺的早期变化对预防策略至关重要。 证据告诉我们什么 与正常糖耐量个体相比，糖耐量受损个体中调节糖酵解、脂质代谢、葡萄糖转运和胰岛素分泌的蛋白质减少。 应该怎样理解 该研究提供了糖尿病前期的早期代谢见解，提示可能的糖尿病预测标志物。 然而，样本量小限制了其普遍性，需要进一步研究。 可以怎么做 了解这些蛋白质标志物可能有助于糖尿病前期的积极健康策略。 健康科技行业可以基于这些发现开发诊断工具。 为什么和糖尿病前期有关？ 了解胰岛功能的早期变化对于制定预防糖尿病前期发展为2型糖尿病的策略至关重要。 你可以带走的重点 - 糖尿病前期是一个关键阶段，早期代谢变化可以预测糖尿病的进展。 - 糖耐量受损个体中调节糖酵解、脂质代谢和胰岛素分泌的蛋白质减少。 - 需要进一步的研究来证实这些发现并探索临床应用。 - 健康科技行业可以利用这些见解开发诊断工具和治疗方案。",
+      "一项研究探讨了可能预测糖尿病前期个体糖尿病发病的胰岛蛋白组变化。 A study explores the changes in pancreatic islet proteome that could predict the onset of diabetes in individuals with prediabetes.",
     summaryEn:
-      "Study Background Prediabetes indicates higher blood sugar levels than normal but not yet diabetic, signaling the need for action to prevent type 2 diabetes. Early pancreatic changes are crucial for prevention strategies. What the evidence says Proteins regulating glycolysis, lipid metabolism, glucose transport, and insulin secretion are reduced in individuals with impaired glucose tolerance compared to those with normal glucose tolerance. What this means The study provides early metabolic insights in prediabetes, suggesting potential predictive markers for diabetes. However, the small sample size limits generalizability, and further research is essential. What readers can do Understanding these protein markers could aid in proactive health strategies for prediabetes. The health tech industry may develop diagnostic tools based on these findings. Why This Matters for Prediabetes Understanding the early changes in pancreatic islet function is crucial for developing strategies to prevent the progression from prediabetes to type 2 diabetes. Practical Takeaways - Prediabetes is a critical phase where early metabolic changes can predict diabetes progression. - Proteins regulating glycolysis, lipid metabolism, and insulin secretion are reduced in individuals with impaired glucose tolerance. - Further research is needed to confirm these findings and explore clinical applications. - The health tech industry can leverage these insights to develop diagnostic tools and therapeutic interventions. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (JCI insight) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Proteomic analyses of human islets reveal potential markers of β cell dysfunction during prediabetes. - Authors: Cefalo CMA, Mezza T, Quero G, Alfieri S, Lucchetti D, Colella F et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/41854718/](https://pubmed.ncbi.nlm.nih.gov/41854718/) - DOI: [10.1172/jci.insight.182135](https://doi.org/10.1172/jci.insight.182135) - PubMed Central: [PMC13232019](https://pmc.ncbi.nlm.nih.gov/articles/PMC13232019/) - Open-access link: [https://europepmc.org/articles/PMC13232019](https://europepmc.org/articles/PMC13232019) - Published or indexed date: 2026-05-08 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项研究探讨了可能预测糖尿病前期个体糖尿病发病的胰岛蛋白组变化。 A study explores the changes in pancreatic islet proteome that could predict the onset of diabetes in individuals with prediabetes.",
     bodyZh:
-      "为什么值得关注 糖尿病前期提示血糖水平高于正常但尚未达到糖尿病范围，需要采取行动以预防2型糖尿病。 了解胰腺的早期变化对预防策略至关重要。\r\n\r\n证据告诉我们什么 与正常糖耐量个体相比，糖耐量受损个体中调节糖酵解、脂质代谢、葡萄糖转运和胰岛素分泌的蛋白质减少。\r\n\r\n应该怎样理解 该研究提供了糖尿病前期的早期代谢见解，提示可能的糖尿病预测标志物。 然而，样本量小限制了其普遍性，需要进一步研究。\r\n\r\n可以怎么做 了解这些蛋白质标志物可能有助于糖尿病前期的积极健康策略。 健康科技行业可以基于这些发现开发诊断工具。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n了解胰岛功能的早期变化对于制定预防糖尿病前期发展为2型糖尿病的策略至关重要。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期是一个关键阶段，早期代谢变化可以预测糖尿病的进展。\r\n- 糖耐量受损个体中调节糖酵解、脂质代谢和胰岛素分泌的蛋白质减少。\r\n- 需要进一步的研究来证实这些发现并探索临床应用。\r\n- 健康科技行业可以利用这些见解开发诊断工具和治疗方案。",
+      "一项研究探讨了可能预测糖尿病前期个体糖尿病发病的胰岛蛋白组变化。 A study explores the changes in pancreatic islet proteome that could predict the onset of diabetes in individuals with prediabetes.",
     bodyEn:
-      "Study Background Prediabetes indicates higher blood sugar levels than normal but not yet diabetic, signaling the need for action to prevent type 2 diabetes. Early pancreatic changes are crucial for prevention strategies.\r\n\r\nWhat the evidence says Proteins regulating glycolysis, lipid metabolism, glucose transport, and insulin secretion are reduced in individuals with impaired glucose tolerance compared to those with normal glucose tolerance.\r\n\r\nWhat this means The study provides early metabolic insights in prediabetes, suggesting potential predictive markers for diabetes.\r\n\r\nHowever, the small sample size limits generalizability, and further research is essential.\r\n\r\nWhat readers can do Understanding these protein markers could aid in proactive health strategies for prediabetes. The health tech industry may develop diagnostic tools based on these findings.\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nUnderstanding the early changes in pancreatic islet function is crucial for developing strategies to prevent the progression from prediabetes to type 2 diabetes.\r\n\r\nPractical Takeaways\r\n\r\n- Prediabetes is a critical phase where early metabolic changes can predict diabetes progression.\r\n- Proteins regulating glycolysis, lipid metabolism, and insulin secretion are reduced in individuals with impaired glucose tolerance.\r\n- Further research is needed to confirm these findings and explore clinical applications.\r\n- The health tech industry can leverage these insights to develop diagnostic tools and therapeutic interventions.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (JCI insight)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Proteomic analyses of human islets reveal potential markers of β cell dysfunction during prediabetes.\r\n- Authors: Cefalo CMA, Mezza T, Quero G, Alfieri S, Lucchetti D, Colella F et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/41854718/](https://pubmed.ncbi.nlm.nih.gov/41854718/)\r\n- DOI: [10.1172/jci.insight.182135](https://doi.org/10.1172/jci.insight.182135)\r\n- PubMed Central: [PMC13232019](https://pmc.ncbi.nlm.nih.gov/articles/PMC13232019/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13232019](https://europepmc.org/articles/PMC13232019)\r\n- Published or indexed date: 2026-05-08\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项研究探讨了可能预测糖尿病前期个体糖尿病发病的胰岛蛋白组变化。 A study explores the changes in pancreatic islet proteome that could predict the onset of diabetes in individuals with prediabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (JCI insight)",
+    source: "国际医学期刊",
     doi: "10.1172/jci.insight.182135",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/41854718/",
     publishedAt: "2026-05-08",
@@ -873,15 +914,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/proteomic-analyses-of-human-islets-reveal-potential-markers-of-cell-dysf-aa151f5d/en.mdx",
@@ -894,17 +933,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "The Impact of Diabetes Education on Prediabetes and Early Metabolic Risk",
     summaryZh:
-      "为什么值得关注 糖尿病管理不仅仅是用药，还包括生活方式的改变。 对于糖尿病前期或早期代谢风险人群，将糖尿病管理融入日常生活至关重要。 证据告诉我们什么 结构化糖尿病教育能够改善血糖、糖化血红蛋白、血脂、血压和体重。 强调体育活动、心理健康和健康饮食。 应该怎样理解 糖尿病教育必须可获取，并根据个人需求量身定制。 考虑社会地位、教育水平、年龄、语言和文化背景对个性化赋权至关重要。 可以怎么做 建议糖尿病前期读者定期进行体育活动，监测饮食。 开发个性化糖尿病管理工具可以改善健康结果和治疗依从性。 为什么和糖尿病前期有关？ 了解糖尿病教育的重要性对于任何有糖尿病前期或早期代谢风险的人都很重要，因为它可以显著影响他们管理自己病情和预防糖尿病发病的能力。 你可以带走的重点 - 糖尿病教育在管理糖尿病前期和早期代谢风险中起着关键作用。 - 结构化教育可以改善血糖和其他健康参数。 - 个性化赋权是将糖尿病管理融入日常生活的关键。 - 糖尿病教育计划的长期效果和成本效益尚未完全了解。",
+      "本文讨论了糖尿病教育在管理糖尿病前期和早期代谢风险中的作用，强调了生活方式改变和个性化赋权的重要性。 This article discusses the role of diabetes education in managing prediabetes and early metabolic risk, emphasizing the importance of lifestyle modifications and personalized empowerment.",
     summaryEn:
-      "Why it matters Diabetes management involves more than medication; it requires lifestyle changes. For prediabetes or early metabolic risk individuals, integrating diabetes management into daily life is crucial. What the evidence says Structured diabetes education improves blood glucose, HbA1c, lipids, blood pressure, and body weight. It emphasizes physical activity, mental health, and healthy eating. What this means Diabetes education must be accessible and tailored to individual needs. Considering social status, education, age, language, and cultural background is essential for personalized empowerment. What readers can do Regular physical activity and monitoring diet are advised for prediabetes readers. Developing personalized diabetes management tools can improve health outcomes and adherence. Why This Matters for Prediabetes Understanding the importance of diabetes education is relevant for anyone with prediabetes or early metabolic risk, as it can significantly impact their ability to manage their condition and prevent the onset of diabetes. Practical Takeaways - Diabetes education plays a critical role in managing prediabetes and early metabolic risk. - Structured education can lead to improvements in blood glucose and other health parameters. - Personalized empowerment is key to integrating diabetes management into daily life. - The long-term effects and cost-effectiveness of diabetes education programs are not fully understood. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Wiener klinische Wochenschrift) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: [Diabetes education and counseling in adult patients with diabetes (Update 2026)]. - Authors: Weitgasser R, Ciardi C, Milikovic D, Schauer M, Clodi M, Ludvik B - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42162468/](https://pubmed.ncbi.nlm.nih.gov/42162468/) - DOI: [10.1007/s00508-025-02693-6](https://doi.org/10.1007/s00508-025-02693-6) - PubMed Central: [4107728](https://pmc.ncbi.nlm.nih.gov/articles/4107728/) - Open-access link: [https://doi.org/10.1007/s00508-025-02693-6](https://doi.org/10.1007/s00508-025-02693-6) - Published or indexed date: 2026-05-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了糖尿病教育在管理糖尿病前期和早期代谢风险中的作用，强调了生活方式改变和个性化赋权的重要性。 This article discusses the role of diabetes education in managing prediabetes and early metabolic risk, emphasizing the importance of lifestyle modifications and personalized empowerment.",
     bodyZh:
-      "为什么值得关注\r\n\r\n糖尿病管理不仅仅是用药，还包括生活方式的改变。\r\n\r\n对于糖尿病前期或早期代谢风险人群，将糖尿病管理融入日常生活至关重要。\r\n\r\n证据告诉我们什么\r\n\r\n结构化糖尿病教育能够改善血糖、糖化血红蛋白、血脂、血压和体重。\r\n\r\n强调体育活动、心理健康和健康饮食。\r\n\r\n应该怎样理解\r\n\r\n糖尿病教育必须可获取，并根据个人需求量身定制。\r\n\r\n考虑社会地位、教育水平、年龄、语言和文化背景对个性化赋权至关重要。\r\n\r\n可以怎么做\r\n\r\n建议糖尿病前期读者定期进行体育活动，监测饮食。\r\n\r\n开发个性化糖尿病管理工具可以改善健康结果和治疗依从性。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n了解糖尿病教育的重要性对于任何有糖尿病前期或早期代谢风险的人都很重要，因为它可以显著影响他们管理自己病情和预防糖尿病发病的能力。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病教育在管理糖尿病前期和早期代谢风险中起着关键作用。\r\n- 结构化教育可以改善血糖和其他健康参数。\r\n- 个性化赋权是将糖尿病管理融入日常生活的关键。\r\n- 糖尿病教育计划的长期效果和成本效益尚未完全了解。",
+      "本文讨论了糖尿病教育在管理糖尿病前期和早期代谢风险中的作用，强调了生活方式改变和个性化赋权的重要性。 This article discusses the role of diabetes education in managing prediabetes and early metabolic risk, emphasizing the importance of lifestyle modifications and personalized empowerment.",
     bodyEn:
-      "Why it matters\r\n\r\nDiabetes management involves more than medication; it requires lifestyle changes.\r\n\r\nFor prediabetes or early metabolic risk individuals, integrating diabetes management into daily life is crucial.\r\n\r\nWhat the evidence says\r\n\r\nStructured diabetes education improves blood glucose, HbA1c, lipids, blood pressure, and body weight.\r\n\r\nIt emphasizes physical activity, mental health, and healthy eating.\r\n\r\nWhat this means\r\n\r\nDiabetes education must be accessible and tailored to individual needs.\r\n\r\nConsidering social status, education, age, language, and cultural background is essential for personalized empowerment.\r\n\r\nWhat readers can do\r\n\r\nRegular physical activity and monitoring diet are advised for prediabetes readers.\r\n\r\nDeveloping personalized diabetes management tools can improve health outcomes and adherence.\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nUnderstanding the importance of diabetes education is relevant for anyone with prediabetes or early metabolic risk, as it can significantly impact their ability to manage their condition and prevent the onset of diabetes.\r\n\r\nPractical Takeaways\r\n\r\n- Diabetes education plays a critical role in managing prediabetes and early metabolic risk.\r\n- Structured education can lead to improvements in blood glucose and other health parameters.\r\n- Personalized empowerment is key to integrating diabetes management into daily life.\r\n- The long-term effects and cost-effectiveness of diabetes education programs are not fully understood.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Wiener klinische Wochenschrift)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: [Diabetes education and counseling in adult patients with diabetes (Update 2026)].\r\n- Authors: Weitgasser R, Ciardi C, Milikovic D, Schauer M, Clodi M, Ludvik B\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42162468/](https://pubmed.ncbi.nlm.nih.gov/42162468/)\r\n- DOI: [10.1007/s00508-025-02693-6](https://doi.org/10.1007/s00508-025-02693-6)\r\n- PubMed Central: [4107728](https://pmc.ncbi.nlm.nih.gov/articles/4107728/)\r\n- Open-access link: [https://doi.org/10.1007/s00508-025-02693-6](https://doi.org/10.1007/s00508-025-02693-6)\r\n- Published or indexed date: 2026-05-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了糖尿病教育在管理糖尿病前期和早期代谢风险中的作用，强调了生活方式改变和个性化赋权的重要性。 This article discusses the role of diabetes education in managing prediabetes and early metabolic risk, emphasizing the importance of lifestyle modifications and personalized empowerment.",
     thumbnail:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Wiener klinische Wochenschrift)",
+    source: "国际医学期刊",
     doi: "10.1007/s00508-025-02693-6",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42162468/",
     publishedAt: "2026-05-01",
@@ -913,20 +951,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/diabetes-education-and-counseling-in-adult-patients-with-diabetes-update-84cb8ecb/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "药物", "医学研究"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "enduring-improvements-in-hepatic-insulin-sensitivity-predict-sustained-r-d413dd37",
@@ -934,17 +970,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Sustained Remission of Prediabetes: The Key Role of Lifestyle Interventions",
     summaryZh:
-      "为什么值得关注 对于许多处于糖尿病前期的人来说，如何有效预防2型糖尿病是一个紧迫的问题。糖尿病前期是一个关键的过渡阶段，此时通过适当的干预措施可以有效降低发展为2型糖尿病的风险。 证据告诉我们什么 最新的研究显示，在为期3年的生活方式干预中，仅有12%的参与者实现了糖尿病前期的持续缓解。然而，这些成功缓解的个体展现出了肝脏胰岛素敏感性的显著改善，这一改善与体重变化无关。 应该怎样理解 这项研究的重要性在于，它强调了除了减重之外，改善肝脏胰岛素敏感性可能是管理糖尿病前期和预防2型糖尿病的另一个关键因素。尽管如此，研究的局限性也不容忽视，低缓解率限制了这些发现的普遍适用性。此外，研究并未完全揭示影响糖尿病前期缓解的所有因素，这意味着我们仍需更多的研究来深入理解这一复杂过程。对于普通读者而言，重要的是理解减重和改善肝脏健康都是重要的，但它们并不是唯一的解决方案。 可以怎么做 A. 对于糖前读者的行动建议：除了关注体重管理，还应重视肝脏健康，可能需要通过饮食、运动和避免酒精等生活方式的改变来实现。 B. 给健康科技行业的启发：开发能够监测和改善肝脏胰岛素敏感性的工具和应用程序，可能成为预防2型糖尿病的新途径。 你可以带走的重点 - 糖尿病前期的持续缓解虽然罕见，但通过生活方式干预是可以实现的。 - 肝脏胰岛素敏感性的改善与更好的结果相关，这一改善与体重减轻无关。 - 减重有益，但肝脏健康等其他因素也起着关键作用。 - 需要更多的研究来全面理解影响糖尿病前期缓解的所有因素。",
+      "一项跨国糖尿病预防试验揭示了生活方式干预对糖尿病前期持续缓解的影响。 An international diabetes prevention trial reveals the impact of lifestyle interventions on the sustained remission of prediabetes.",
     summaryEn:
-      "Understanding the factors that contribute to the remission of prediabetes is crucial for developing effective prevention strategies and improving health outcomes for those at risk of developing type 2 diabetes. The latest research indicates that only 12% of participants achieved sustained remission of prediabetes over a 3-year lifestyle intervention, but those who did showed significant improvements in hepatic insulin sensitivity, independent of weight change. This study underscores the importance of improving liver insulin sensitivity as another key factor in managing prediabetes and preventing type 2 diabetes, in addition to weight management. Despite the low remission rate, which limits the generalizability of the findings, the study highlights the need for more research to fully understand the spectrum of factors influencing prediabetes remission. For readers, it's important to understand that while weight management is crucial, it is not the sole solution. Practical Takeaways - Sustained remission of prediabetes is rare but achievable with lifestyle interventions. - Improvements in hepatic insulin sensitivity are linked to better outcomes, independent of weight loss. - Weight loss is beneficial, but other factors, such as liver health, also play a crucial role. - More research is needed to understand the full spectrum of factors influencing prediabetes remission. - Original title: Enduring improvements in hepatic insulin sensitivity predict sustained remission of prediabetes during a 3-year lifestyle intervention: results from the PREVIEW multinational diabetes prevention trial. - Authors: Zhu R, Guo J, Huttunen-Lenz M, Stratton G, Swindell N, Macdonald IA et al. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Metabolism: clinical and experimental) - DOI: [10.1016/j.metabol.2026.156546](https://doi.org/10.1016/j.metabol.2026.156546) - Open-access link: [https://doi.org/10.1016/j.metabol.2026.156546](https://doi.org/10.1016/j.metabol.2026.156546) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Published or indexed date: 2026-05-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项跨国糖尿病预防试验揭示了生活方式干预对糖尿病前期持续缓解的影响。 An international diabetes prevention trial reveals the impact of lifestyle interventions on the sustained remission of prediabetes.",
     bodyZh:
-      "为什么值得关注\r\n\r\n对于许多处于糖尿病前期的人来说，如何有效预防2型糖尿病是一个紧迫的问题。糖尿病前期是一个关键的过渡阶段，此时通过适当的干预措施可以有效降低发展为2型糖尿病的风险。\r\n\r\n证据告诉我们什么\r\n\r\n最新的研究显示，在为期3年的生活方式干预中，仅有12%的参与者实现了糖尿病前期的持续缓解。然而，这些成功缓解的个体展现出了肝脏胰岛素敏感性的显著改善，这一改善与体重变化无关。\r\n\r\n应该怎样理解\r\n\r\n这项研究的重要性在于，它强调了除了减重之外，改善肝脏胰岛素敏感性可能是管理糖尿病前期和预防2型糖尿病的另一个关键因素。尽管如此，研究的局限性也不容忽视，低缓解率限制了这些发现的普遍适用性。此外，研究并未完全揭示影响糖尿病前期缓解的所有因素，这意味着我们仍需更多的研究来深入理解这一复杂过程。对于普通读者而言，重要的是理解减重和改善肝脏健康都是重要的，但它们并不是唯一的解决方案。\r\n\r\n可以怎么做\r\n\r\nA. 对于糖前读者的行动建议：除了关注体重管理，还应重视肝脏健康，可能需要通过饮食、运动和避免酒精等生活方式的改变来实现。\r\nB. 给健康科技行业的启发：开发能够监测和改善肝脏胰岛素敏感性的工具和应用程序，可能成为预防2型糖尿病的新途径。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期的持续缓解虽然罕见，但通过生活方式干预是可以实现的。\r\n- 肝脏胰岛素敏感性的改善与更好的结果相关，这一改善与体重减轻无关。\r\n- 减重有益，但肝脏健康等其他因素也起着关键作用。\r\n- 需要更多的研究来全面理解影响糖尿病前期缓解的所有因素。",
+      "一项跨国糖尿病预防试验揭示了生活方式干预对糖尿病前期持续缓解的影响。 An international diabetes prevention trial reveals the impact of lifestyle interventions on the sustained remission of prediabetes.",
     bodyEn:
-      "Understanding the factors that contribute to the remission of prediabetes is crucial for developing effective prevention strategies and improving health outcomes for those at risk of developing type 2 diabetes. The latest research indicates that only 12% of participants achieved sustained remission of prediabetes over a 3-year lifestyle intervention, but those who did showed significant improvements in hepatic insulin sensitivity, independent of weight change. This study underscores the importance of improving liver insulin sensitivity as another key factor in managing prediabetes and preventing type 2 diabetes, in addition to weight management. Despite the low remission rate, which limits the generalizability of the findings, the study highlights the need for more research to fully understand the spectrum of factors influencing prediabetes remission. For readers, it's important to understand that while weight management is crucial, it is not the sole solution.\r\n\r\nPractical Takeaways\r\n\r\n- Sustained remission of prediabetes is rare but achievable with lifestyle interventions.\r\n- Improvements in hepatic insulin sensitivity are linked to better outcomes, independent of weight loss.\r\n- Weight loss is beneficial, but other factors, such as liver health, also play a crucial role.\r\n- More research is needed to understand the full spectrum of factors influencing prediabetes remission.\r\n\r\n\r\n\r\n- Original title: Enduring improvements in hepatic insulin sensitivity predict sustained remission of prediabetes during a 3-year lifestyle intervention: results from the PREVIEW multinational diabetes prevention trial.\r\n- Authors: Zhu R, Guo J, Huttunen-Lenz M, Stratton G, Swindell N, Macdonald IA et al.\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Metabolism: clinical and experimental)\r\n- DOI: [10.1016/j.metabol.2026.156546](https://doi.org/10.1016/j.metabol.2026.156546)\r\n- Open-access link: [https://doi.org/10.1016/j.metabol.2026.156546](https://doi.org/10.1016/j.metabol.2026.156546)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Published or indexed date: 2026-05-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项跨国糖尿病预防试验揭示了生活方式干预对糖尿病前期持续缓解的影响。 An international diabetes prevention trial reveals the impact of lifestyle interventions on the sustained remission of prediabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Metabolism: clinical and experimental)",
+    source: "国际医学期刊",
     doi: "10.1016/j.metabol.2026.156546",
     originalUrl: "https://doi.org/10.1016/j.metabol.2026.156546",
     publishedAt: "2026-05-01",
@@ -953,19 +988,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/enduring-improvements-in-hepatic-insulin-sensitivity-predict-sustained-r-d413dd37/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "医学研究", "糖尿病前期"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "preventing-the-progression-the-power-of-lifestyle-interventions-in-predi-c1c34354",
@@ -973,17 +1007,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Lifestyle Interventions: Key to Preventing Progression from Prediabetes",
     summaryZh:
-      "为什么值得关注 糖尿病前期是一种常见的代谢状况，它增加了患者发展为2型糖尿病的风险。对于许多患者来说，改变生活方式是预防这一进展的关键。 证据告诉我们什么 研究表明，针对糖尿病前期成人的文化适应性生活方式干预可以显著改善血糖参数，并降低糖尿病的发病率。 应该怎样理解 文化适应性的生活方式干预在预防糖尿病中显示出了潜力，但这些研究结果是否适用于所有人群仍需进一步研究。此外，这些研究的样本可能不足以代表全球糖尿病前期患者群体的多样性。因此，虽然这些发现为预防糖尿病提供了希望，但在推广这些干预措施之前，需要更多的研究来验证其在不同人群中的效果和可行性。 可以怎么做 A. 对于糖前读者的行动建议： 对于处于糖尿病前期的个体来说，采取文化适应性的生活方式改变是一种有效的预防策略。这可能包括改善饮食习惯、增加体育活动以及获得行为支持。 B. 给健康科技行业的启发： 健康科技行业可以开发更多个性化的工具和应用程序，以帮助糖尿病前期患者实施和维持这些生活方式的改变。 你可以带走的重点 - 糖尿病前期患者通过文化适应性的生活方式改变可以降低发展为2型糖尿病的风险。 - 这些研究结果需要在更广泛的人群中进行验证，以确保干预措施的普适性。 - 健康科技行业有机会开发工具，帮助患者更好地管理糖尿病前期。 - 个性化和文化适应性是提高干预措施效果的关键因素。",
+      "本综述研究探讨了针对糖尿病前期个体的生活方式干预措施，及其在预防进展为2型糖尿病中的作用。 This systematic review examines lifestyle interventions for individuals with prediabetes and their role in preventing the progression to type 2 diabetes.",
     summaryEn:
-      'Prediabetes is a common metabolic condition that increases the risk of developing type 2 diabetes. For many patients, lifestyle changes are key to preventing this progression. Culturally adapted lifestyle interventions have shown potential in preventing diabetes, but whether these study results apply to all populations requires further research. Additionally, the samples in these studies may not be large enough to represent the diversity of the global prediabetes patient population. Therefore, while these findings offer hope for diabetes prevention, more research is needed to validate the effects and feasibility of these interventions in different populations. For individuals with prediabetes, adopting culturally adapted lifestyle changes is an effective prevention strategy. This may include improving dietary habits, increasing physical activity, and receiving behavioral support. The health tech industry can develop more personalized tools and applications to help prediabetes patients implement and maintain these lifestyle changes. Practical Takeaways - Individuals with prediabetes can reduce their risk of developing type 2 diabetes through culturally adapted lifestyle changes. - The study results need to be validated in broader populations to ensure the universality of intervention measures. - The health tech industry has opportunities to develop tools to help patients better manage prediabetes. - Personalization and cultural adaptation are key factors in improving the effectiveness of interventions. - Original title: "Preventing the Progression: The Power of Lifestyle Interventions in Prediabetic Individuals-A Systematic Review". - Authors: Bhardwaj Y, Rastogi M - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Clinical endocrinology) - DOI: [10.1111/cen.70077](https://doi.org/10.1111/cen.70077) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41387277/](https://pubmed.ncbi.nlm.nih.gov/41387277/) - Open-access link: [https://doi.org/10.1111/cen.70077](https://doi.org/10.1111/cen.70077) - Evidence used: Europe PMC abstract + open-access full-text link - Published or indexed date: 2026-05-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。',
+      "本综述研究探讨了针对糖尿病前期个体的生活方式干预措施，及其在预防进展为2型糖尿病中的作用。 This systematic review examines lifestyle interventions for individuals with prediabetes and their role in preventing the progression to type 2 diabetes.",
     bodyZh:
-      "为什么值得关注\r\n糖尿病前期是一种常见的代谢状况，它增加了患者发展为2型糖尿病的风险。对于许多患者来说，改变生活方式是预防这一进展的关键。\r\n\r\n证据告诉我们什么\r\n研究表明，针对糖尿病前期成人的文化适应性生活方式干预可以显著改善血糖参数，并降低糖尿病的发病率。\r\n\r\n应该怎样理解\r\n文化适应性的生活方式干预在预防糖尿病中显示出了潜力，但这些研究结果是否适用于所有人群仍需进一步研究。此外，这些研究的样本可能不足以代表全球糖尿病前期患者群体的多样性。因此，虽然这些发现为预防糖尿病提供了希望，但在推广这些干预措施之前，需要更多的研究来验证其在不同人群中的效果和可行性。\r\n\r\n可以怎么做\r\nA. 对于糖前读者的行动建议：\r\n对于处于糖尿病前期的个体来说，采取文化适应性的生活方式改变是一种有效的预防策略。这可能包括改善饮食习惯、增加体育活动以及获得行为支持。\r\nB. 给健康科技行业的启发：\r\n健康科技行业可以开发更多个性化的工具和应用程序，以帮助糖尿病前期患者实施和维持这些生活方式的改变。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期患者通过文化适应性的生活方式改变可以降低发展为2型糖尿病的风险。\r\n- 这些研究结果需要在更广泛的人群中进行验证，以确保干预措施的普适性。\r\n- 健康科技行业有机会开发工具，帮助患者更好地管理糖尿病前期。\r\n- 个性化和文化适应性是提高干预措施效果的关键因素。",
+      "本综述研究探讨了针对糖尿病前期个体的生活方式干预措施，及其在预防进展为2型糖尿病中的作用。 This systematic review examines lifestyle interventions for individuals with prediabetes and their role in preventing the progression to type 2 diabetes.",
     bodyEn:
-      'Prediabetes is a common metabolic condition that increases the risk of developing type 2 diabetes. For many patients, lifestyle changes are key to preventing this progression.\r\n\r\nCulturally adapted lifestyle interventions have shown potential in preventing diabetes, but whether these study results apply to all populations requires further research. Additionally, the samples in these studies may not be large enough to represent the diversity of the global prediabetes patient population. Therefore, while these findings offer hope for diabetes prevention, more research is needed to validate the effects and feasibility of these interventions in different populations.\r\n\r\nFor individuals with prediabetes, adopting culturally adapted lifestyle changes is an effective prevention strategy. This may include improving dietary habits, increasing physical activity, and receiving behavioral support. The health tech industry can develop more personalized tools and applications to help prediabetes patients implement and maintain these lifestyle changes.\r\n\r\nPractical Takeaways\r\n\r\n- Individuals with prediabetes can reduce their risk of developing type 2 diabetes through culturally adapted lifestyle changes.\r\n- The study results need to be validated in broader populations to ensure the universality of intervention measures.\r\n- The health tech industry has opportunities to develop tools to help patients better manage prediabetes.\r\n- Personalization and cultural adaptation are key factors in improving the effectiveness of interventions.\r\n\r\n\r\n\r\n- Original title: "Preventing the Progression: The Power of Lifestyle Interventions in Prediabetic Individuals-A Systematic Review".\r\n- Authors: Bhardwaj Y, Rastogi M\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Clinical endocrinology)\r\n- DOI: [10.1111/cen.70077](https://doi.org/10.1111/cen.70077)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41387277/](https://pubmed.ncbi.nlm.nih.gov/41387277/)\r\n- Open-access link: [https://doi.org/10.1111/cen.70077](https://doi.org/10.1111/cen.70077)\r\n- Evidence used: Europe PMC abstract + open-access full-text link\r\n- Published or indexed date: 2026-05-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。',
+      "本综述研究探讨了针对糖尿病前期个体的生活方式干预措施，及其在预防进展为2型糖尿病中的作用。 This systematic review examines lifestyle interventions for individuals with prediabetes and their role in preventing the progression to type 2 diabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Clinical endocrinology)",
+    source: "国际医学期刊",
     doi: "10.1111/cen.70077",
     originalUrl: "https://doi.org/10.1111/cen.70077",
     publishedAt: "2026-05-01",
@@ -992,36 +1025,34 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/preventing-the-progression-the-power-of-lifestyle-interventions-in-predi-c1c34354/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "医学研究", "糖尿病前期"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "use-of-continuous-glucose-monitoring-with-machine-learning-to-identify-m-9bd9f351",
     titleZh: "连续葡萄糖监测与机器学习用于个性化代谢亚型分类",
     titleEn: "CGM and Machine Learning for Personalized Metabolic Subtyping",
     summaryZh:
-      "原文信息栏 - Original title: Use of Continuous Glucose Monitoring With Machine Learning to Identify Metabolic Subphenotypes and Inform Precision Lifestyle Changes. - Authors: Metwally AA, Park H, Wu Y, McLaughlin T, Snyder MP - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes science and technology) - DOI: [10.1177/19322968261431860](https://doi.org/10.1177/19322968261431860) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41978474/](https://pubmed.ncbi.nlm.nih.gov/41978474/) - Open-access link: [https://doi.org/10.1177/19322968261431860](https://doi.org/10.1177/19322968261431860) - Evidence used: PubMed abstract + open-access full-text link - Published or indexed date: 2026-05-01 为什么值得关注 早期血糖异常的复杂性理解对于糖尿病预防至关重要。 传统使用静态血糖阈值的方法可能无法完全捕捉代谢功能障碍的异质性。 证据告诉我们什么 连续葡萄糖监测（CGM）结合机器学习能预测肌肉胰岛素抵抗和β细胞功能。 个体对餐食的餐后血糖反应可以作为代谢亚型的生物标志物。 应该怎样理解 利用CGM数据提供代谢健康的个性化视角。 它超越了一般的血糖控制，针对特定的代谢缺陷，这可能导致更有效的生活方式干预。 然而，技术的可及性和成本也可能是限制因素。 可以怎么做 识别代谢亚型的能力可以通过允许定制的干预措施来彻底改变糖尿病预防。 这强调了将饮食、睡眠和体力活动等数据点整合到一个全面的代谢档案中的重要性。 为什么和糖尿病前期有关？ 这项研究之所以相关，是因为它提供了管理糖尿病前期的新视角，并可能导致更有针对性的干预措施。 对于糖尿病前期患者来说，了解这些技术的潜在益处和局限性非常重要。 你可以带走的重点 - CGM和机器学习可以提供个性化的代谢档案。 - 个体对食物的反应可以指示代谢亚型。 - 精准的生活方式改变可能在糖尿病预防中更有效。 - 该技术的实际应用和成本是考虑因素。",
+      "本研究探讨了连续葡萄糖监测（CGM）和机器学习在识别代谢亚型以及为糖尿病前期个体提供精准生活方式改变建议中的应用。 This study explores the use of continuous glucose monitoring (CGM) and machine learning to identify metabolic subphenotypes and inform precision lifestyle changes for individuals with prediabetes.",
     summaryEn:
-      "Study Background Understanding early dysglycemia's complexity is crucial for diabetes prevention. Traditional methods using static glucose thresholds may not capture the full heterogeneity of metabolic dysfunctions. What the evidence says CGM combined with machine learning predicts muscle insulin resistance and beta-cell function. Individual postprandial glycemic responses to meals can indicate metabolic subtypes. What this means Leveraging CGM data offers a personalized metabolic health view. It targets specific metabolic defects, potentially leading to more effective lifestyle interventions. However, practical application and cost considerations are important. What readers can do Identifying metabolic subphenotypes could revolutionize diabetes prevention with tailored interventions. This approach emphasizes the importance of integrating diet, sleep, and physical activity data into a comprehensive metabolic profile. Why This Matters for Prediabetes This study is relevant because it provides a new perspective on managing prediabetes and could lead to more targeted interventions. It's important for those with prediabetes to understand the potential benefits and limitations of such technologies. Practical Takeaways - CGM and machine learning can offer personalized metabolic profiles. - Individual responses to food can indicate metabolic subtypes. - Precision lifestyle changes could be more effective in diabetes prevention. - Considerations include the technology's real-world application and cost.",
+      "本研究探讨了连续葡萄糖监测（CGM）和机器学习在识别代谢亚型以及为糖尿病前期个体提供精准生活方式改变建议中的应用。 This study explores the use of continuous glucose monitoring (CGM) and machine learning to identify metabolic subphenotypes and inform precision lifestyle changes for individuals with prediabetes.",
     bodyZh:
-      "原文信息栏\r\n\r\n- Original title: Use of Continuous Glucose Monitoring With Machine Learning to Identify Metabolic Subphenotypes and Inform Precision Lifestyle Changes.\r\n- Authors: Metwally AA, Park H, Wu Y, McLaughlin T, Snyder MP\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes science and technology)\r\n- DOI: [10.1177/19322968261431860](https://doi.org/10.1177/19322968261431860)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/41978474/](https://pubmed.ncbi.nlm.nih.gov/41978474/)\r\n- Open-access link: [https://doi.org/10.1177/19322968261431860](https://doi.org/10.1177/19322968261431860)\r\n- Evidence used: PubMed abstract + open-access full-text link\r\n- Published or indexed date: 2026-05-01\r\n\r\n为什么值得关注 早期血糖异常的复杂性理解对于糖尿病预防至关重要。 传统使用静态血糖阈值的方法可能无法完全捕捉代谢功能障碍的异质性。\r\n\r\n证据告诉我们什么 连续葡萄糖监测（CGM）结合机器学习能预测肌肉胰岛素抵抗和β细胞功能。 个体对餐食的餐后血糖反应可以作为代谢亚型的生物标志物。\r\n\r\n应该怎样理解 利用CGM数据提供代谢健康的个性化视角。 它超越了一般的血糖控制，针对特定的代谢缺陷，这可能导致更有效的生活方式干预。 然而，技术的可及性和成本也可能是限制因素。\r\n\r\n可以怎么做 识别代谢亚型的能力可以通过允许定制的干预措施来彻底改变糖尿病预防。 这强调了将饮食、睡眠和体力活动等数据点整合到一个全面的代谢档案中的重要性。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n这项研究之所以相关，是因为它提供了管理糖尿病前期的新视角，并可能导致更有针对性的干预措施。 对于糖尿病前期患者来说，了解这些技术的潜在益处和局限性非常重要。\r\n\r\n你可以带走的重点\r\n\r\n- CGM和机器学习可以提供个性化的代谢档案。\r\n- 个体对食物的反应可以指示代谢亚型。\r\n- 精准的生活方式改变可能在糖尿病预防中更有效。\r\n- 该技术的实际应用和成本是考虑因素。",
+      "本研究探讨了连续葡萄糖监测（CGM）和机器学习在识别代谢亚型以及为糖尿病前期个体提供精准生活方式改变建议中的应用。 This study explores the use of continuous glucose monitoring (CGM) and machine learning to identify metabolic subphenotypes and inform precision lifestyle changes for individuals with prediabetes.",
     bodyEn:
-      "Study Background Understanding early dysglycemia's complexity is crucial for diabetes prevention. Traditional methods using static glucose thresholds may not capture the full heterogeneity of metabolic dysfunctions.\r\n\r\nWhat the evidence says CGM combined with machine learning predicts muscle insulin resistance and beta-cell function. Individual postprandial glycemic responses to meals can indicate metabolic subtypes.\r\n\r\nWhat this means Leveraging CGM data offers a personalized metabolic health view. It targets specific metabolic defects, potentially leading to more effective lifestyle interventions.\r\n\r\nHowever, practical application and cost considerations are important.\r\n\r\nWhat readers can do Identifying metabolic subphenotypes could revolutionize diabetes prevention with tailored interventions.\r\n\r\nThis approach emphasizes the importance of integrating diet, sleep, and physical activity data into a comprehensive metabolic profile.\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nThis study is relevant because it provides a new perspective on managing prediabetes and could lead to more targeted interventions.\r\n\r\nIt's important for those with prediabetes to understand the potential benefits and limitations of such technologies.\r\n\r\nPractical Takeaways\r\n\r\n- CGM and machine learning can offer personalized metabolic profiles.\r\n- Individual responses to food can indicate metabolic subtypes.\r\n- Precision lifestyle changes could be more effective in diabetes prevention.\r\n- Considerations include the technology's real-world application and cost.",
+      "本研究探讨了连续葡萄糖监测（CGM）和机器学习在识别代谢亚型以及为糖尿病前期个体提供精准生活方式改变建议中的应用。 This study explores the use of continuous glucose monitoring (CGM) and machine learning to identify metabolic subphenotypes and inform precision lifestyle changes for individuals with prediabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Journal of diabetes science and technology)",
+    source: "国际医学期刊",
     doi: "10.1177/19322968261431860",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/41978474/",
     publishedAt: "2026-05-01",
@@ -1030,20 +1061,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/use-of-continuous-glucose-monitoring-with-machine-learning-to-identify-m-9bd9f351/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "multi-axis-reprogramming-of-muscle-metabolic-crosstalk-by-hilo-platinum-feb4d2e7",
@@ -1051,17 +1080,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Muscle Strength Restoration in Prediabetes: A Multi-Axis Nutritional Approach",
     summaryZh:
-      "为什么和糖尿病前期有关？ 这项研究之所以相关，是因为它探索了一种全面的营养方法来应对一种常见但常被忽视的状况，这种状况可能导致重大的健康并发症。 你可以带走的重点 - 糖尿病前期可能导致肌肉减少症，影响肌肉力量和质量。 - HiLo Platinum™在改善糖尿病前期大鼠的肌肉力量和代谢标志物方面显示出潜力。 - 研究表明采用多轴方法管理糖尿病前期，包括肠道健康和炎症。 - 这些发现的长期效果和人类适用性需要进一步研究。",
+      "最新研究探讨了HiLo Platinum™对糖尿病前期大鼠肌肉力量的影响，为管理肌肉减少症提供了营养策略的洞见。 A recent study explores the effects of HiLo Platinum™ on muscle strength in prediabetic rats, offering insights into nutritional strategies for managing sarcopenia.",
     summaryEn:
-      "Why This Matters for Prediabetes This study is relevant because it explores a comprehensive nutritional approach to a common but often overlooked condition that can lead to significant health complications. Practical Takeaways - Prediabetes can lead to sarcopenia, affecting muscle strength and mass. - HiLo Platinum™ showed potential in improving muscle strength and metabolic markers in prediabetic rats. - The study suggests a multi-axis approach to managing prediabetes, including gut health and inflammation. - Long-term effects and human applicability of these findings need further investigation. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (International journal of molecular sciences) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Multi-Axis Reprogramming of Muscle-Metabolic Crosstalk by HiLo Platinum™ Restores Strength in Prediabetes via Mitochondrial Activation and Gut Microbiome Remodeling. - Authors: Sibarani JN, Iqhrammullah M, Hidayat AA, Alfaray RI, Nurkolis F, Santini A - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42123593/](https://pubmed.ncbi.nlm.nih.gov/42123593/) - DOI: [10.3390/ijms27094014](https://doi.org/10.3390/ijms27094014) - PubMed Central: [PMC13163564](https://pmc.ncbi.nlm.nih.gov/articles/PMC13163564/) - Open-access link: [https://europepmc.org/articles/PMC13163564](https://europepmc.org/articles/PMC13163564) - Published or indexed date: 2026-04-30 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "最新研究探讨了HiLo Platinum™对糖尿病前期大鼠肌肉力量的影响，为管理肌肉减少症提供了营养策略的洞见。 A recent study explores the effects of HiLo Platinum™ on muscle strength in prediabetic rats, offering insights into nutritional strategies for managing sarcopenia.",
     bodyZh:
-      "为什么和糖尿病前期有关？\r\n\r\n这项研究之所以相关，是因为它探索了一种全面的营养方法来应对一种常见但常被忽视的状况，这种状况可能导致重大的健康并发症。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期可能导致肌肉减少症，影响肌肉力量和质量。\r\n- HiLo Platinum™在改善糖尿病前期大鼠的肌肉力量和代谢标志物方面显示出潜力。\r\n- 研究表明采用多轴方法管理糖尿病前期，包括肠道健康和炎症。\r\n- 这些发现的长期效果和人类适用性需要进一步研究。",
+      "最新研究探讨了HiLo Platinum™对糖尿病前期大鼠肌肉力量的影响，为管理肌肉减少症提供了营养策略的洞见。 A recent study explores the effects of HiLo Platinum™ on muscle strength in prediabetic rats, offering insights into nutritional strategies for managing sarcopenia.",
     bodyEn:
-      "Why This Matters for Prediabetes\r\n\r\nThis study is relevant because it explores a comprehensive nutritional approach to a common but often overlooked condition that can lead to significant health complications.\r\n\r\nPractical Takeaways\r\n\r\n- Prediabetes can lead to sarcopenia, affecting muscle strength and mass.\r\n- HiLo Platinum™ showed potential in improving muscle strength and metabolic markers in prediabetic rats.\r\n- The study suggests a multi-axis approach to managing prediabetes, including gut health and inflammation.\r\n- Long-term effects and human applicability of these findings need further investigation.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (International journal of molecular sciences)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Multi-Axis Reprogramming of Muscle-Metabolic Crosstalk by HiLo Platinum™ Restores Strength in Prediabetes via Mitochondrial Activation and Gut Microbiome Remodeling.\r\n- Authors: Sibarani JN, Iqhrammullah M, Hidayat AA, Alfaray RI, Nurkolis F, Santini A\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42123593/](https://pubmed.ncbi.nlm.nih.gov/42123593/)\r\n- DOI: [10.3390/ijms27094014](https://doi.org/10.3390/ijms27094014)\r\n- PubMed Central: [PMC13163564](https://pmc.ncbi.nlm.nih.gov/articles/PMC13163564/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13163564](https://europepmc.org/articles/PMC13163564)\r\n- Published or indexed date: 2026-04-30\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "最新研究探讨了HiLo Platinum™对糖尿病前期大鼠肌肉力量的影响，为管理肌肉减少症提供了营养策略的洞见。 A recent study explores the effects of HiLo Platinum™ on muscle strength in prediabetic rats, offering insights into nutritional strategies for managing sarcopenia.",
     thumbnail:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (International journal of molecular sciences)",
+    source: "国际医学期刊",
     doi: "10.3390/ijms27094014",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42123593/",
     publishedAt: "2026-04-30",
@@ -1070,19 +1098,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
-      "Missing required section: 为什么值得关注",
-      "Missing required section: 证据告诉我们什么",
-      "Missing required section: 应该怎样理解",
-      "Missing required section: 可以怎么做",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/multi-axis-reprogramming-of-muscle-metabolic-crosstalk-by-hilo-platinum-feb4d2e7/en.mdx",
@@ -1095,16 +1117,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Community Pharmacy-Based Prediabetes Screening and Online Prevention: The PREDICT Study",
     summaryZh:
-      "这项研究之所以相关，是因为它为早期发现和预防糖尿病提供了一个可复制的模型，这是全球日益关注的一个健康问题。 - 社区药房可以作为早期糖尿病前期检测的平台。 - 在线预防计划可以有效地与药房服务整合。 - 文化适应性是此类健康计划成功的关键。 - 以药房为基础的筛查可以增加获得糖尿病预防干预的机会。",
+      "一项探索在社区药房实施糖尿病前期筛查和在线预防计划的研究。 A study exploring the implementation of a prediabetes screening and online prevention program in community pharmacies.",
     summaryEn:
-      "Cultural adaptation and pharmacist training are crucial for program success. Integrating digital health tools with community pharmacies offers innovative solutions for diabetes prevention. This study is relevant as it provides a replicable model for early detection and prevention of diabetes, a growing health concern worldwide. - Community pharmacies can serve as a platform for early prediabetes detection. - An online prevention program can be effectively integrated with pharmacy services. - Cultural adaptation is key for the success of such health programs. - Pharmacy-based screening can increase access to diabetes prevention interventions. - Journal/source: PubMed digital diabetes prevention via PubMed (BMC public health) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Designing and implementing a prediabetes screening in community pharmacies and online prevention program: findings from the PREDICT study. - Authors: Alzubaidi H, Samorinha C, Aljobowry R, Namara KM, Krass I, O'Reilly S et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42015114/](https://pubmed.ncbi.nlm.nih.gov/42015114/) - DOI: [10.1186/s12889-026-27437-7](https://doi.org/10.1186/s12889-026-27437-7) - PubMed Central: [PMC13274227](https://pmc.ncbi.nlm.nih.gov/articles/PMC13274227/) - Open-access link: [https://doi.org/10.1186/s12889-026-27437-7](https://doi.org/10.1186/s12889-026-27437-7) - Published or indexed date: 2026-04-22 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项探索在社区药房实施糖尿病前期筛查和在线预防计划的研究。 A study exploring the implementation of a prediabetes screening and online prevention program in community pharmacies.",
     bodyZh:
-      "这项研究之所以相关，是因为它为早期发现和预防糖尿病提供了一个可复制的模型，这是全球日益关注的一个健康问题。\r\n\r\n\r\n\r\n- 社区药房可以作为早期糖尿病前期检测的平台。\r\n- 在线预防计划可以有效地与药房服务整合。\r\n- 文化适应性是此类健康计划成功的关键。\r\n- 以药房为基础的筛查可以增加获得糖尿病预防干预的机会。",
+      "一项探索在社区药房实施糖尿病前期筛查和在线预防计划的研究。 A study exploring the implementation of a prediabetes screening and online prevention program in community pharmacies.",
     bodyEn:
-      "Cultural adaptation and pharmacist training are crucial for program success.\r\n\r\n\r\n\r\nIntegrating digital health tools with community pharmacies offers innovative solutions for diabetes prevention.\r\n\r\n\r\n\r\nThis study is relevant as it provides a replicable model for early detection and prevention of diabetes, a growing health concern worldwide.\r\n\r\n\r\n\r\n- Community pharmacies can serve as a platform for early prediabetes detection.\r\n- An online prevention program can be effectively integrated with pharmacy services.\r\n- Cultural adaptation is key for the success of such health programs.\r\n- Pharmacy-based screening can increase access to diabetes prevention interventions.\r\n\r\n\r\n\r\n- Journal/source: PubMed digital diabetes prevention via PubMed (BMC public health)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Designing and implementing a prediabetes screening in community pharmacies and online prevention program: findings from the PREDICT study.\r\n- Authors: Alzubaidi H, Samorinha C, Aljobowry R, Namara KM, Krass I, O'Reilly S et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42015114/](https://pubmed.ncbi.nlm.nih.gov/42015114/)\r\n- DOI: [10.1186/s12889-026-27437-7](https://doi.org/10.1186/s12889-026-27437-7)\r\n- PubMed Central: [PMC13274227](https://pmc.ncbi.nlm.nih.gov/articles/PMC13274227/)\r\n- Open-access link: [https://doi.org/10.1186/s12889-026-27437-7](https://doi.org/10.1186/s12889-026-27437-7)\r\n- Published or indexed date: 2026-04-22\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项探索在社区药房实施糖尿病前期筛查和在线预防计划的研究。 A study exploring the implementation of a prediabetes screening and online prevention program in community pharmacies.",
     thumbnail:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1800&auto=format&fit=crop",
-    source: "PubMed digital diabetes prevention via PubMed (BMC public health)",
+    source: "国际医学期刊",
     doi: "10.1186/s12889-026-27437-7",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42015114/",
     publishedAt: "2026-04-22",
@@ -1116,16 +1138,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
       "Chinese commentary is short for the required SOP structure",
       "Chinese interpretation and critique section is short",
       "Chinese clinical/business insight section is short",
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains internal editorial labels.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/designing-and-implementing-a-prediabetes-screening-in-community-pharmaci-5d8555a3/en.mdx",
@@ -1137,17 +1156,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleZh: "新型口服葡萄糖耐量测试指标与糖尿病前期缓解",
     titleEn: "Novel OGTT Metrics and Prediabetes Remission",
     summaryZh:
-      "原文信息栏 - Original title: Novel OGTT metrics do not provide incremental predictive value beyond conventional glycemic criteria for remission of prediabetes in individuals with impaired fasting glucose: results from the PREVIEW trial. - Authors: Zhu R, Guo J, Stratton G, Macdonald IA, Handjieva-Darlenska T, Handjiev S et al. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular diabetology) - DOI: [10.1186/s12933-026-03186-0](https://doi.org/10.1186/s12933-026-03186-0) - PubMed Central: [PMC13235051](https://pmc.ncbi.nlm.nih.gov/articles/PMC13235051/) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42021301/](https://pubmed.ncbi.nlm.nih.gov/42021301/) - Open-access link: [https://europepmc.org/articles/PMC13235051](https://europepmc.org/articles/PMC13235051) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Published or indexed date: 2026-04-22 为什么值得关注 糖尿病前期是 2 型糖尿病发病前的关键阶段，生活方式的改变是预防其发展的关键。传统指标如空腹血糖和糖化血红蛋白用于诊断，但可能无法捕捉个体葡萄糖代谢的所有变化。 证据告诉我们什么 研究发现，新型 OGTT 指标并没有为糖尿病前期的缓解提供超出传统指标如空腹血糖和糖化血红蛋白的额外预测价值。 应该怎样理解 这项研究的重要性在于它阐明了糖尿病前期缓解的预测因素。尽管 OGTT 的新指标看似有前景，但它们并没有提供超出传统测试的预测信息，表明专注于简单措施可能足以指导治疗决策。 可以怎么做 医疗保健提供者可以依赖传统的血糖指标来评估糖尿病前期的风险，简化诊断过程。对于产品开发者来说，基于传统指标的干预措施可能比开发新测试更有效率。 为什么和糖尿病前期有关？ 了解糖尿病前期的发展对于早期干预和预防2型糖尿病至关重要。 这项研究提供了哪些指标对于预测结果最有用，这可以帮助设计有效的生活方式干预措施。 你可以带走的重点 - 糖尿病前期是糖尿病预防的关键阶段。 - 传统血糖指标仍然是糖尿病前期缓解的最佳预测因素。 - 新型OGTT指标没有显示出额外的预测价值。 - 生活方式干预是管理糖尿病前期的关键。",
+      "本研究旨在探讨在生活方式干预期间，新型口服葡萄糖耐量测试（OGTT）衍生指标是否比传统血糖标准为糖尿病前期的缓解提供额外的预测价值。 This study examines whether novel metrics derived from the oral glucose tolerance test (OGTT) provide additional predictive value for the remission of prediabetes compared to conventional glyce",
     summaryEn:
-      "Why it matters Prediabetes is a critical window before type 2 diabetes onset, and lifestyle changes are key to its prevention. Traditional metrics like fasting glucose and HbA1c are used for diagnosis but may not capture all individual glucose metabolism variations. What the evidence says The study indicates that novel OGTT metrics do not offer extra predictive value for prediabetes remission over traditional metrics like fasting glucose and HbA1c. What this means This study is significant because it clarifies the predictive factors for prediabetes remission. Despite the promise of new OGTT metrics, they do not add predictive information beyond traditional tests, suggesting that focusing on simple measures may suffice for treatment decisions. What readers can do Healthcare providers can rely on traditional glycemic measures to assess prediabetes risk, simplifying diagnostics. For developers, focusing on interventions based on traditional metrics could be more efficient than developing new tests. Why This Matters for Prediabetes Understanding the progression of prediabetes is crucial for early intervention and prevention of type 2 diabetes. This study provides insights into which metrics are most useful for predicting outcomes, which can help in designing effective lifestyle interventions. Practical Takeaways - Prediabetes is a critical phase for diabetes prevention. - Traditional glycemic measures are still the best predictors of prediabetes remission. - Novel OGTT metrics did not show additional predictive value. - Lifestyle interventions are key in managing prediabetes.",
+      "本研究旨在探讨在生活方式干预期间，新型口服葡萄糖耐量测试（OGTT）衍生指标是否比传统血糖标准为糖尿病前期的缓解提供额外的预测价值。 This study examines whether novel metrics derived from the oral glucose tolerance test (OGTT) provide additional predictive value for the remission of prediabetes compared to conventional glyce",
     bodyZh:
-      "原文信息栏\r\n\r\n- Original title: Novel OGTT metrics do not provide incremental predictive value beyond conventional glycemic criteria for remission of prediabetes in individuals with impaired fasting glucose: results from the PREVIEW trial.\r\n- Authors: Zhu R, Guo J, Stratton G, Macdonald IA, Handjieva-Darlenska T, Handjiev S et al.\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular diabetology)\r\n- DOI: [10.1186/s12933-026-03186-0](https://doi.org/10.1186/s12933-026-03186-0)\r\n- PubMed Central: [PMC13235051](https://pmc.ncbi.nlm.nih.gov/articles/PMC13235051/)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42021301/](https://pubmed.ncbi.nlm.nih.gov/42021301/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13235051](https://europepmc.org/articles/PMC13235051)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Published or indexed date: 2026-04-22\r\n\r\n为什么值得关注\r\n\r\n糖尿病前期是 2 型糖尿病发病前的关键阶段，生活方式的改变是预防其发展的关键。传统指标如空腹血糖和糖化血红蛋白用于诊断，但可能无法捕捉个体葡萄糖代谢的所有变化。\r\n\r\n证据告诉我们什么\r\n\r\n研究发现，新型 OGTT 指标并没有为糖尿病前期的缓解提供超出传统指标如空腹血糖和糖化血红蛋白的额外预测价值。\r\n\r\n应该怎样理解\r\n\r\n这项研究的重要性在于它阐明了糖尿病前期缓解的预测因素。尽管 OGTT 的新指标看似有前景，但它们并没有提供超出传统测试的预测信息，表明专注于简单措施可能足以指导治疗决策。\r\n\r\n可以怎么做\r\n\r\n医疗保健提供者可以依赖传统的血糖指标来评估糖尿病前期的风险，简化诊断过程。对于产品开发者来说，基于传统指标的干预措施可能比开发新测试更有效率。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n了解糖尿病前期的发展对于早期干预和预防2型糖尿病至关重要。 这项研究提供了哪些指标对于预测结果最有用，这可以帮助设计有效的生活方式干预措施。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期是糖尿病预防的关键阶段。\r\n- 传统血糖指标仍然是糖尿病前期缓解的最佳预测因素。\r\n- 新型OGTT指标没有显示出额外的预测价值。\r\n- 生活方式干预是管理糖尿病前期的关键。",
+      "本研究旨在探讨在生活方式干预期间，新型口服葡萄糖耐量测试（OGTT）衍生指标是否比传统血糖标准为糖尿病前期的缓解提供额外的预测价值。 This study examines whether novel metrics derived from the oral glucose tolerance test (OGTT) provide additional predictive value for the remission of prediabetes compared to conventional glyce",
     bodyEn:
-      "Why it matters\r\n\r\nPrediabetes is a critical window before type 2 diabetes onset, and lifestyle changes are key to its prevention. Traditional metrics like fasting glucose and HbA1c are used for diagnosis but may not capture all individual glucose metabolism variations.\r\n\r\nWhat the evidence says\r\n\r\nThe study indicates that novel OGTT metrics do not offer extra predictive value for prediabetes remission over traditional metrics like fasting glucose and HbA1c.\r\n\r\nWhat this means\r\n\r\nThis study is significant because it clarifies the predictive factors for prediabetes remission. Despite the promise of new OGTT metrics, they do not add predictive information beyond traditional tests, suggesting that focusing on simple measures may suffice for treatment decisions.\r\n\r\nWhat readers can do\r\n\r\nHealthcare providers can rely on traditional glycemic measures to assess prediabetes risk, simplifying diagnostics. For developers, focusing on interventions based on traditional metrics could be more efficient than developing new tests.\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nUnderstanding the progression of prediabetes is crucial for early intervention and prevention of type 2 diabetes.\r\n\r\nThis study provides insights into which metrics are most useful for predicting outcomes, which can help in designing effective lifestyle interventions.\r\n\r\nPractical Takeaways\r\n\r\n- Prediabetes is a critical phase for diabetes prevention.\r\n- Traditional glycemic measures are still the best predictors of prediabetes remission.\r\n- Novel OGTT metrics did not show additional predictive value.\r\n- Lifestyle interventions are key in managing prediabetes.",
+      "本研究旨在探讨在生活方式干预期间，新型口服葡萄糖耐量测试（OGTT）衍生指标是否比传统血糖标准为糖尿病前期的缓解提供额外的预测价值。 This study examines whether novel metrics derived from the oral glucose tolerance test (OGTT) provide additional predictive value for the remission of prediabetes compared to conventional glyce",
     thumbnail:
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular diabetology)",
+    source: "国际医学期刊",
     doi: "10.1186/s12933-026-03186-0",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42021301/",
     publishedAt: "2026-04-22",
@@ -1156,15 +1174,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/novel-ogtt-metrics-do-not-provide-incremental-predictive-value-beyond-co-e11137be/en.mdx",
@@ -1176,16 +1192,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleZh: "针对拉丁裔社区糖尿病预防的文化洞察",
     titleEn: "Cultural Insights for Diabetes Prevention in Latino Communities",
     summaryZh:
-      "为什么值得关注 美国拉丁裔成人发展为2型糖尿病的风险更高，并且相比非拉丁裔白人成人，他们实现国家糖尿病预防计划（NDPP）目标的可能性更低。 了解影响他们参与的文化和家庭动态至关重要。 证据告诉我们什么 研究发现文化偏见和性别角色是拉丁裔成人糖尿病预防的障碍，而家庭支持和文化对齐的项目是促进因素。 应该怎样理解 该研究强调了文化细微差别和家庭参与在糖尿病预防中的重要性。 它表明，定制的、文化敏感的项目可能提高效果。 可以怎么做 文化敏感且包含家庭支持的项目可能改善拉丁裔社区的糖尿病预防结果。 健康科技可以通过开发相关解决方案发挥作用。 为什么和糖尿病前期有关？ 这项研究之所以相关，是因为它提供了文化和家庭因素如何阻碍或促进高危人群糖尿病预防工作的看法，为改进预防项目提供了实际意义。 你可以带走的重点 - 文化和家庭因素显著影响拉丁裔成人的糖尿病预防行为。 - 考虑文化细微差别并涉及家庭的项目可能对糖尿病预防更有效。 - 了解自己的文化偏见和性别角色可能是参与健康行为的障碍。 - 具有文化敏感性和以家庭为导向的健康科技解决方案可以提高参与度和结果。",
+      "一项定性研究揭示了影响国家糖尿病预防计划中拉丁裔成人糖尿病预防行为的文化和家庭因素。 A qualitative study reveals cultural and familial factors influencing diabetes prevention behaviors among Latino adults in the National Diabetes Prevention Program.",
     summaryEn:
-      "Study Background Latino adults in the US face higher risks of developing type 2 diabetes and are less likely to meet the goals of the National Diabetes Prevention Program (NDPP) compared to non-Latino White adults. Understanding the cultural and family dynamics that influence their participation is crucial. What the evidence says The study identified cultural biases and gender roles as barriers, while family support and culturally aligned programs were facilitators for diabetes prevention among Latino/a adults. What this means The study underscores the significance of cultural nuances and family involvement in diabetes prevention. It suggests that tailored, culturally sensitive programs could enhance effectiveness. What readers can do Culturally sensitive programs that include family support may improve diabetes prevention outcomes among Latino communities. Health tech can play a role by developing relevant solutions. Why This Matters for Prediabetes This study is relevant because it provides insights into how cultural and family factors can either hinder or facilitate diabetes prevention efforts among a high-risk population, offering practical implications for improving prevention programs. Practical Takeaways - Cultural and family factors significantly influence diabetes prevention behaviors among Latino adults. - Programs that consider cultural nuances and involve families may be more effective for diabetes prevention. - Understanding one's own cultural biases and gender roles can be a barrier to engaging in health behaviors. - Health tech solutions that are culturally sensitive and family-oriented could improve engagement and outcomes. - Journal/source: PubMed digital diabetes prevention via PubMed (JAMA network open) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Understanding Latino Individual and Family Perspectives in a National Diabetes Prevention Program. - Authors: Tensun FA, Cervantes L, Uvina KA, Welles CC, Wittmer N, DeRoeck J et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/41926121/](https://pubmed.ncbi.nlm.nih.gov/41926121/) - DOI: [10.1001/jamanetworkopen.2026.4780](https://doi.org/10.1001/jamanetworkopen.2026.4780) - PubMed Central: [PMC13047464](https://pmc.ncbi.nlm.nih.gov/articles/PMC13047464/) - Open-access link: [https://doi.org/10.1001/jamanetworkopen.2026.4780](https://doi.org/10.1001/jamanetworkopen.2026.4780) - Published or indexed date: 2026-04-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项定性研究揭示了影响国家糖尿病预防计划中拉丁裔成人糖尿病预防行为的文化和家庭因素。 A qualitative study reveals cultural and familial factors influencing diabetes prevention behaviors among Latino adults in the National Diabetes Prevention Program.",
     bodyZh:
-      "为什么值得关注 美国拉丁裔成人发展为2型糖尿病的风险更高，并且相比非拉丁裔白人成人，他们实现国家糖尿病预防计划（NDPP）目标的可能性更低。 了解影响他们参与的文化和家庭动态至关重要。\r\n\r\n证据告诉我们什么 研究发现文化偏见和性别角色是拉丁裔成人糖尿病预防的障碍，而家庭支持和文化对齐的项目是促进因素。\r\n\r\n应该怎样理解 该研究强调了文化细微差别和家庭参与在糖尿病预防中的重要性。 它表明，定制的、文化敏感的项目可能提高效果。\r\n\r\n可以怎么做 文化敏感且包含家庭支持的项目可能改善拉丁裔社区的糖尿病预防结果。 健康科技可以通过开发相关解决方案发挥作用。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n这项研究之所以相关，是因为它提供了文化和家庭因素如何阻碍或促进高危人群糖尿病预防工作的看法，为改进预防项目提供了实际意义。\r\n\r\n你可以带走的重点\r\n\r\n- 文化和家庭因素显著影响拉丁裔成人的糖尿病预防行为。\r\n- 考虑文化细微差别并涉及家庭的项目可能对糖尿病预防更有效。\r\n- 了解自己的文化偏见和性别角色可能是参与健康行为的障碍。\r\n- 具有文化敏感性和以家庭为导向的健康科技解决方案可以提高参与度和结果。",
+      "一项定性研究揭示了影响国家糖尿病预防计划中拉丁裔成人糖尿病预防行为的文化和家庭因素。 A qualitative study reveals cultural and familial factors influencing diabetes prevention behaviors among Latino adults in the National Diabetes Prevention Program.",
     bodyEn:
-      "Study Background Latino adults in the US face higher risks of developing type 2 diabetes and are less likely to meet the goals of the National Diabetes Prevention Program (NDPP) compared to non-Latino White adults.\r\n\r\nUnderstanding the cultural and family dynamics that influence their participation is crucial.\r\n\r\nWhat the evidence says The study identified cultural biases and gender roles as barriers, while family support and culturally aligned programs were facilitators for diabetes prevention among Latino/a adults.\r\n\r\nWhat this means The study underscores the significance of cultural nuances and family involvement in diabetes prevention. It suggests that tailored, culturally sensitive programs could enhance effectiveness.\r\n\r\nWhat readers can do Culturally sensitive programs that include family support may improve diabetes prevention outcomes among Latino communities. Health tech can play a role by developing relevant solutions.\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nThis study is relevant because it provides insights into how cultural and family factors can either hinder or facilitate diabetes prevention efforts among a high-risk population, offering practical implications for improving prevention\r\n\r\nprograms.\r\n\r\nPractical Takeaways\r\n\r\n- Cultural and family factors significantly influence diabetes prevention behaviors among Latino adults.\r\n- Programs that consider cultural nuances and involve families may be more effective for diabetes prevention.\r\n- Understanding one's own cultural biases and gender roles can be a barrier to engaging in health behaviors.\r\n- Health tech solutions that are culturally sensitive and family-oriented could improve engagement and outcomes.\r\n\r\n\r\n\r\n- Journal/source: PubMed digital diabetes prevention via PubMed (JAMA network open)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Understanding Latino Individual and Family Perspectives in a National Diabetes Prevention Program.\r\n- Authors: Tensun FA, Cervantes L, Uvina KA, Welles CC, Wittmer N, DeRoeck J et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/41926121/](https://pubmed.ncbi.nlm.nih.gov/41926121/)\r\n- DOI: [10.1001/jamanetworkopen.2026.4780](https://doi.org/10.1001/jamanetworkopen.2026.4780)\r\n- PubMed Central: [PMC13047464](https://pmc.ncbi.nlm.nih.gov/articles/PMC13047464/)\r\n- Open-access link: [https://doi.org/10.1001/jamanetworkopen.2026.4780](https://doi.org/10.1001/jamanetworkopen.2026.4780)\r\n- Published or indexed date: 2026-04-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项定性研究揭示了影响国家糖尿病预防计划中拉丁裔成人糖尿病预防行为的文化和家庭因素。 A qualitative study reveals cultural and familial factors influencing diabetes prevention behaviors among Latino adults in the National Diabetes Prevention Program.",
     thumbnail:
       "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
-    source: "PubMed digital diabetes prevention via PubMed (JAMA network open)",
+    source: "国际医学期刊",
     doi: "10.1001/jamanetworkopen.2026.4780",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/41926121/",
     publishedAt: "2026-04-01",
@@ -1194,15 +1210,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/understanding-latino-individual-and-family-perspectives-in-a-national-di-5468558d/en.mdx",
@@ -1215,17 +1229,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Understanding Body Composition Phenotypes and Prediabetes Risk in Chinese Adults",
     summaryZh:
-      "为什么和糖尿病前期有关？ 了解体成分与糖尿病前期的关系有助于开发针对性的干预措施，以防止发展为2型糖尿病。 你可以带走的重点 - 糖尿病前期是预防2型糖尿病的关键时期。 - 体成分，包括肌肉质量和内脏脂肪，影响糖尿病前期的风险。 - CVAI提供了一种细致的肥胖度量方法，捕捉了脂肪分布的代谢影响。 - 需要进一步的研究来了解糖尿病前期随时间的发展。",
+      "一项研究探讨了根据中国内脏脂肪指数（CVAI）定义的体成分表型与中国人糖尿病前期结果之间的联系。 A study explores the link between body composition phenotypes defined by the Chinese Visceral Adiposity Index (CVAI) and prediabetes outcomes in Chinese adults.",
     summaryEn:
-      "Why This Matters for Prediabetes Understanding the relationship between body composition and prediabetes can help in developing targeted interventions to prevent the progression to type 2 diabetes. Practical Takeaways - Prediabetes is a critical period for preventing type 2 diabetes. - Body composition, including muscle mass and visceral fat, affects prediabetes risk. - The CVAI provides a nuanced measure of obesity's metabolic impact. - Further research is needed to understand the development of prediabetes over time. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Frontiers in nutrition) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Association between CVAI-defined body composition phenotypes and prediabetes outcomes in Chinese adults undergoing health check-ups: a cross-sectional study. - Authors: Lin R, Jiang W, Wang D, Xu L, Du Y - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42221771/](https://pubmed.ncbi.nlm.nih.gov/42221771/) - DOI: [10.3389/fnut.2026.1784292](https://doi.org/10.3389/fnut.2026.1784292) - PubMed Central: [PMC13216018](https://pmc.ncbi.nlm.nih.gov/articles/PMC13216018/) - Open-access link: [https://europepmc.org/articles/PMC13216018](https://europepmc.org/articles/PMC13216018) - Published or indexed date: 2026-01-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项研究探讨了根据中国内脏脂肪指数（CVAI）定义的体成分表型与中国人糖尿病前期结果之间的联系。 A study explores the link between body composition phenotypes defined by the Chinese Visceral Adiposity Index (CVAI) and prediabetes outcomes in Chinese adults.",
     bodyZh:
-      "为什么和糖尿病前期有关？\r\n\r\n了解体成分与糖尿病前期的关系有助于开发针对性的干预措施，以防止发展为2型糖尿病。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期是预防2型糖尿病的关键时期。\r\n- 体成分，包括肌肉质量和内脏脂肪，影响糖尿病前期的风险。\r\n- CVAI提供了一种细致的肥胖度量方法，捕捉了脂肪分布的代谢影响。\r\n- 需要进一步的研究来了解糖尿病前期随时间的发展。",
+      "一项研究探讨了根据中国内脏脂肪指数（CVAI）定义的体成分表型与中国人糖尿病前期结果之间的联系。 A study explores the link between body composition phenotypes defined by the Chinese Visceral Adiposity Index (CVAI) and prediabetes outcomes in Chinese adults.",
     bodyEn:
-      "Why This Matters for Prediabetes\r\n\r\nUnderstanding the relationship between body composition and prediabetes can help in developing targeted interventions to prevent the progression to type 2 diabetes.\r\n\r\nPractical Takeaways\r\n\r\n- Prediabetes is a critical period for preventing type 2 diabetes.\r\n- Body composition, including muscle mass and visceral fat, affects prediabetes risk.\r\n- The CVAI provides a nuanced measure of obesity's metabolic impact.\r\n- Further research is needed to understand the development of prediabetes over time.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Frontiers in nutrition)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Association between CVAI-defined body composition phenotypes and prediabetes outcomes in Chinese adults undergoing health check-ups: a cross-sectional study.\r\n- Authors: Lin R, Jiang W, Wang D, Xu L, Du Y\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42221771/](https://pubmed.ncbi.nlm.nih.gov/42221771/)\r\n- DOI: [10.3389/fnut.2026.1784292](https://doi.org/10.3389/fnut.2026.1784292)\r\n- PubMed Central: [PMC13216018](https://pmc.ncbi.nlm.nih.gov/articles/PMC13216018/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13216018](https://europepmc.org/articles/PMC13216018)\r\n- Published or indexed date: 2026-01-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项研究探讨了根据中国内脏脂肪指数（CVAI）定义的体成分表型与中国人糖尿病前期结果之间的联系。 A study explores the link between body composition phenotypes defined by the Chinese Visceral Adiposity Index (CVAI) and prediabetes outcomes in Chinese adults.",
     thumbnail:
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Frontiers in nutrition)",
+    source: "国际医学期刊",
     doi: "10.3389/fnut.2026.1784292",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42221771/",
     publishedAt: "2026-01-01",
@@ -1234,24 +1247,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
-      "Missing required section: 为什么值得关注",
-      "Missing required section: 证据告诉我们什么",
-      "Missing required section: 应该怎样理解",
-      "Missing required section: 可以怎么做",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/association-between-cvai-defined-body-composition-phenotypes-and-prediab-efad01c7/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "医学研究", "糖尿病前期", "生活方式"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "association-of-prediabetes-phenotypes-with-metabolic-dysfunction-associa-5185e28a",
@@ -1259,17 +1266,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Understanding Prediabetes Phenotypes and Their Link to Liver Health",
     summaryZh:
-      "为什么值得关注 糖尿病前期是血糖水平升高但尚未达到糖尿病诊断标准的一种状态，提示需要改变生活方式以预防疾病进展。 本研究探讨了糖尿病前期表型与代谢功能障碍相关脂肪肝病（MAFLD）之间的联系。 证据告诉我们什么 研究发现，糖尿病前期患者中MAFLD的患病率更高，多个糖代谢缺陷与增加的MAFLD风险相关，胰岛素抵抗可能是中介因素。 应该怎样理解 糖尿病前期的异质性对肝脏健康的影响不同，强调了需要量身定制的管理策略。 这些发现强调了早期筛查和干预的重要性。 可以怎么做 对于糖尿病前期个体来说，监测肝脏健康至关重要。 健康科技行业可以利用这些知识开发针对性的筛查和干预工具。 为什么和糖尿病前期有关？ 这项研究之所以相关，是因为它提供了糖尿病前期异质性及其对肝脏健康影响的见解，这对于早期干预和预防策略至关重要。 你可以带走的重点 - 不同类型的糖尿病前期对脂肪肝病的风险不同。 - 管理糖尿病前期需要考虑肝脏健康的个性化方法。 - 对于糖尿病前期个体来说，生活方式的改变对于预防发展为糖尿病及相关并发症至关重要。 - 健康科技可以帮助早期检测和个性化管理糖尿病前期和肝脏健康。",
+      "一项基于人群的研究表明，不同类型的糖尿病前期表型与代谢功能障碍相关脂肪肝病（MAFLD）之间存在联系，为早期识别和干预的重要性提供了见解。 A population-based study explores the connection between different prediabetes phenotypes and metabolic dysfunction-associated fatty liver disease (MAFLD), providing insights into the import",
     summaryEn:
-      "Study Background Prediabetes is a state of elevated blood sugar levels that precedes diabetes, signaling the need for lifestyle changes to prevent disease progression. This study investigates the link between prediabetes phenotypes and metabolic dysfunction-associated fatty liver disease (MAFLD). What the evidence says The study reveals higher MAFLD prevalence in prediabetes, with increased odds associated with multiple glucometabolic defects, suggesting insulin resistance as a mediator. What this means The heterogeneity of prediabetes impacts liver health differently, underscoring the need for tailored management strategies. These findings emphasize the significance of early screening and intervention. What readers can do For individuals with prediabetes, monitoring liver health is essential. The health tech industry can leverage this knowledge to develop targeted screening and intervention tools. Why This Matters for Prediabetes This study is relevant because it provides insights into the heterogeneity of prediabetes and its implications on liver health, which is crucial for early intervention and prevention strategies. Practical Takeaways - Different types of prediabetes have varying risks for fatty liver disease. - Managing prediabetes requires a personalized approach considering liver health. - Lifestyle changes are crucial for individuals with prediabetes to prevent progression to diabetes and related complications. - Health tech can aid in early detection and personalized management of prediabetes and liver health. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Therapeutic advances in endocrinology and metabolism) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Association of prediabetes phenotypes with metabolic dysfunction-associated fatty liver disease and liver fibrosis: a population-based study. - Authors: He M, Liu Y, Gao T, Gu J, Zhou X, Sun Z et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42290708/](https://pubmed.ncbi.nlm.nih.gov/42290708/) - DOI: [10.1177/20420188261457476](https://doi.org/10.1177/20420188261457476) - PubMed Central: [PMC13261032](https://pmc.ncbi.nlm.nih.gov/articles/PMC13261032/) - Open-access link: [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13261032/?tool=EBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13261032/?tool=EBI) - Published or indexed date: 2026-01-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项基于人群的研究表明，不同类型的糖尿病前期表型与代谢功能障碍相关脂肪肝病（MAFLD）之间存在联系，为早期识别和干预的重要性提供了见解。 A population-based study explores the connection between different prediabetes phenotypes and metabolic dysfunction-associated fatty liver disease (MAFLD), providing insights into the import",
     bodyZh:
-      "为什么值得关注\r\n\r\n糖尿病前期是血糖水平升高但尚未达到糖尿病诊断标准的一种状态，提示需要改变生活方式以预防疾病进展。 本研究探讨了糖尿病前期表型与代谢功能障碍相关脂肪肝病（MAFLD）之间的联系。\r\n\r\n证据告诉我们什么\r\n\r\n研究发现，糖尿病前期患者中MAFLD的患病率更高，多个糖代谢缺陷与增加的MAFLD风险相关，胰岛素抵抗可能是中介因素。\r\n\r\n应该怎样理解\r\n\r\n糖尿病前期的异质性对肝脏健康的影响不同，强调了需要量身定制的管理策略。 这些发现强调了早期筛查和干预的重要性。\r\n\r\n可以怎么做\r\n\r\n对于糖尿病前期个体来说，监测肝脏健康至关重要。 健康科技行业可以利用这些知识开发针对性的筛查和干预工具。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n这项研究之所以相关，是因为它提供了糖尿病前期异质性及其对肝脏健康影响的见解，这对于早期干预和预防策略至关重要。\r\n\r\n你可以带走的重点\r\n\r\n- 不同类型的糖尿病前期对脂肪肝病的风险不同。\r\n- 管理糖尿病前期需要考虑肝脏健康的个性化方法。\r\n- 对于糖尿病前期个体来说，生活方式的改变对于预防发展为糖尿病及相关并发症至关重要。\r\n- 健康科技可以帮助早期检测和个性化管理糖尿病前期和肝脏健康。",
+      "一项基于人群的研究表明，不同类型的糖尿病前期表型与代谢功能障碍相关脂肪肝病（MAFLD）之间存在联系，为早期识别和干预的重要性提供了见解。 A population-based study explores the connection between different prediabetes phenotypes and metabolic dysfunction-associated fatty liver disease (MAFLD), providing insights into the import",
     bodyEn:
-      "Study Background\r\n\r\nPrediabetes is a state of elevated blood sugar levels that precedes diabetes, signaling the need for lifestyle changes to prevent disease progression.\r\n\r\nThis study investigates the link between prediabetes phenotypes and metabolic dysfunction-associated fatty liver disease (MAFLD).\r\n\r\nWhat the evidence says\r\n\r\nThe study reveals higher MAFLD prevalence in prediabetes, with increased odds associated with multiple glucometabolic defects, suggesting insulin resistance as a mediator.\r\n\r\nWhat this means\r\n\r\nThe heterogeneity of prediabetes impacts liver health differently, underscoring the need for tailored management strategies. These findings emphasize the significance of early screening and intervention.\r\n\r\nWhat readers can do\r\n\r\nFor individuals with prediabetes, monitoring liver health is essential. The health tech industry can leverage this knowledge to develop targeted screening and intervention tools.\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nThis study is relevant because it provides insights into the heterogeneity of prediabetes and its implications on liver health, which is crucial for early intervention and prevention strategies.\r\n\r\nPractical Takeaways\r\n\r\n- Different types of prediabetes have varying risks for fatty liver disease.\r\n- Managing prediabetes requires a personalized approach considering liver health.\r\n- Lifestyle changes are crucial for individuals with prediabetes to prevent progression to diabetes and related complications.\r\n- Health tech can aid in early detection and personalized management of prediabetes and liver health.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Therapeutic advances in endocrinology and metabolism)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Association of prediabetes phenotypes with metabolic dysfunction-associated fatty liver disease and liver fibrosis: a population-based study.\r\n- Authors: He M, Liu Y, Gao T, Gu J, Zhou X, Sun Z et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42290708/](https://pubmed.ncbi.nlm.nih.gov/42290708/)\r\n- DOI: [10.1177/20420188261457476](https://doi.org/10.1177/20420188261457476)\r\n- PubMed Central: [PMC13261032](https://pmc.ncbi.nlm.nih.gov/articles/PMC13261032/)\r\n- Open-access link: [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13261032/?tool=EBI](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13261032/?tool=EBI)\r\n- Published or indexed date: 2026-01-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项基于人群的研究表明，不同类型的糖尿病前期表型与代谢功能障碍相关脂肪肝病（MAFLD）之间存在联系，为早期识别和干预的重要性提供了见解。 A population-based study explores the connection between different prediabetes phenotypes and metabolic dysfunction-associated fatty liver disease (MAFLD), providing insights into the import",
     thumbnail:
       "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Therapeutic advances in endocrinology and metabolism)",
+    source: "国际医学期刊",
     doi: "10.1177/20420188261457476",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42290708/",
     publishedAt: "2026-01-01",
@@ -1278,15 +1284,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/association-of-prediabetes-phenotypes-with-metabolic-dysfunction-associa-5185e28a/en.mdx",
@@ -1298,17 +1302,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleZh: "认识CHG指数：早期识别糖尿病前期的新工具",
     titleEn: "Understanding the CHG Index for Early Prediabetes Identification",
     summaryZh:
-      "了解CHG指数对于糖尿病前期风险的个体至关重要，因为它可以帮助早期发现和管理，可能阻止病情发展为糖尿病。 - CHG指数是糖尿病前期风险的重要预测因子。 - 较高的CHG指数与IFG风险增加有关。 - CHG指数与IFG之间的关系是非线性的。 - 监测CHG指数有助于早期识别糖尿病前期。",
+      "最新研究探讨了CHG指数作为早期识别中国成年人糖尿病前期的潜在工具。 A recent study explores the CHG index as a potential tool for early identification of prediabetes in Chinese adults.",
     summaryEn:
-      "Prediabetes, indicated by impaired fasting glucose (IFG), is a significant risk factor for developing diabetes. However, this study is observational and does not establish causation. The findings suggest a strong association, but individual health outcomes can vary. The CHG index could be integrated into health apps and devices for early warning systems, aiding in the prevention of diabetes. Understanding the CHG index is crucial for individuals at risk of prediabetes, as it can help in early detection and management, potentially preventing the progression to diabetes. - The CHG index is a significant predictor of prediabetes risk. - A higher CHG index is linked to an increased risk of IFG. - The relationship between CHG index and IFG is nonlinear. - Monitoring CHG index can aid in early identification of prediabetes. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Frontiers in nutrition) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Cholesterol, high-density lipoprotein, and glucose (CHG) index and incident impaired fasting glucose in Chinese adults: a retrospective longitudinal cohort study. - Authors: Yang D, Lin R, Li S, Ye S, Luo Z, Zhang H et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42311947/](https://pubmed.ncbi.nlm.nih.gov/42311947/) - DOI: [10.3389/fnut.2026.1814747](https://doi.org/10.3389/fnut.2026.1814747) - PubMed Central: [PMC13270551](https://pmc.ncbi.nlm.nih.gov/articles/PMC13270551/) - Open-access link: [https://doi.org/10.3389/fnut.2026.1814747](https://doi.org/10.3389/fnut.2026.1814747) - Published or indexed date: 2026-01-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "最新研究探讨了CHG指数作为早期识别中国成年人糖尿病前期的潜在工具。 A recent study explores the CHG index as a potential tool for early identification of prediabetes in Chinese adults.",
     bodyZh:
-      "了解CHG指数对于糖尿病前期风险的个体至关重要，因为它可以帮助早期发现和管理，可能阻止病情发展为糖尿病。\r\n\r\n\r\n\r\n- CHG指数是糖尿病前期风险的重要预测因子。\r\n- 较高的CHG指数与IFG风险增加有关。\r\n- CHG指数与IFG之间的关系是非线性的。\r\n- 监测CHG指数有助于早期识别糖尿病前期。",
+      "最新研究探讨了CHG指数作为早期识别中国成年人糖尿病前期的潜在工具。 A recent study explores the CHG index as a potential tool for early identification of prediabetes in Chinese adults.",
     bodyEn:
-      "Prediabetes, indicated by impaired fasting glucose (IFG), is a significant risk factor for developing diabetes.\r\n\r\n\r\n\r\n\r\n\r\nHowever, this study is observational and does not establish causation. The findings suggest a strong association, but individual health outcomes can vary.\r\n\r\n\r\n\r\nThe CHG index could be integrated into health apps and devices for early warning systems, aiding in the prevention of diabetes.\r\n\r\n\r\n\r\nUnderstanding the CHG index is crucial for individuals at risk of prediabetes, as it can help in early detection and management, potentially preventing the progression to diabetes.\r\n\r\n\r\n\r\n- The CHG index is a significant predictor of prediabetes risk.\r\n- A higher CHG index is linked to an increased risk of IFG.\r\n- The relationship between CHG index and IFG is nonlinear.\r\n- Monitoring CHG index can aid in early identification of prediabetes.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Frontiers in nutrition)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Cholesterol, high-density lipoprotein, and glucose (CHG) index and incident impaired fasting glucose in Chinese adults: a retrospective longitudinal cohort study.\r\n- Authors: Yang D, Lin R, Li S, Ye S, Luo Z, Zhang H et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42311947/](https://pubmed.ncbi.nlm.nih.gov/42311947/)\r\n- DOI: [10.3389/fnut.2026.1814747](https://doi.org/10.3389/fnut.2026.1814747)\r\n- PubMed Central: [PMC13270551](https://pmc.ncbi.nlm.nih.gov/articles/PMC13270551/)\r\n- Open-access link: [https://doi.org/10.3389/fnut.2026.1814747](https://doi.org/10.3389/fnut.2026.1814747)\r\n- Published or indexed date: 2026-01-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "最新研究探讨了CHG指数作为早期识别中国成年人糖尿病前期的潜在工具。 A recent study explores the CHG index as a potential tool for early identification of prediabetes in Chinese adults.",
     thumbnail:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Frontiers in nutrition)",
+    source: "国际医学期刊",
     doi: "10.3389/fnut.2026.1814747",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42311947/",
     publishedAt: "2026-01-01",
@@ -1320,37 +1323,74 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
       "Chinese commentary is short for the required SOP structure",
       "Chinese interpretation and critique section is short",
       "Chinese clinical/business insight section is short",
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains internal editorial labels.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/cholesterol-high-density-lipoprotein-and-glucose-chg-index-and-incident-a152eab7/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "医学研究", "糖尿病前期", "生活方式"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
+  },
+  {
+    slug: "effects-of-high-intensity-interval-training-on-glycemic-control-and-card-03a6279d",
+    titleZh: "高强度间歇训练对糖尿病前期患者的影响：系统综述和元分析",
+    titleEn:
+      "High-Intensity Interval Training for Prediabetes: A Systematic Review and Meta-Analysis",
+    summaryZh:
+      "本文提供了一项系统综述和元分析的总结和实用见解，该分析评估了高强度间歇训练（HIIT）对糖尿病前期成人患者血糖控制和心血管代谢风险因素的影响。 This article provides a summary and practical insights from a systematic review and meta-analysis on the effects of high-intensity interval training (HIIT) in adults with prediabetes, focu",
+    summaryEn:
+      "本文提供了一项系统综述和元分析的总结和实用见解，该分析评估了高强度间歇训练（HIIT）对糖尿病前期成人患者血糖控制和心血管代谢风险因素的影响。 This article provides a summary and practical insights from a systematic review and meta-analysis on the effects of high-intensity interval training (HIIT) in adults with prediabetes, focu",
+    bodyZh:
+      "本文提供了一项系统综述和元分析的总结和实用见解，该分析评估了高强度间歇训练（HIIT）对糖尿病前期成人患者血糖控制和心血管代谢风险因素的影响。 This article provides a summary and practical insights from a systematic review and meta-analysis on the effects of high-intensity interval training (HIIT) in adults with prediabetes, focu",
+    bodyEn:
+      "本文提供了一项系统综述和元分析的总结和实用见解，该分析评估了高强度间歇训练（HIIT）对糖尿病前期成人患者血糖控制和心血管代谢风险因素的影响。 This article provides a summary and practical insights from a systematic review and meta-analysis on the effects of high-intensity interval training (HIIT) in adults with prediabetes, focu",
+    thumbnail:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1800&auto=format&fit=crop",
+    source: "国际医学期刊",
+    doi: "10.3389/fendo.2026.1837386",
+    originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42222064/",
+    publishedAt: "2026-01-01",
+    publishedAtLabel: "2026-01-01",
+    draft: true,
+    reviewRequired: true,
+    qualityStatus: "needs_revision",
+    qualityIssues: [
+      "Chinese commentary is short for the required SOP structure",
+      "Chinese interpretation and critique section is short",
+      "Chinese clinical/business insight section is short",
+      "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
+    ],
+    contentPath:
+      "packages/cms/src/collections/blog/content/effects-of-high-intensity-interval-training-on-glycemic-control-and-card-03a6279d/en.mdx",
+    tags: ["medical-research", "prediabetes", "lifestyle"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "effects-of-local-heat-on-metabolic-health-frailty-risk-and-exercise-adap-c073f450",
     titleZh: "局部热疗能帮助糖前老人改善代谢和运动适应吗？",
     titleEn: "Local Heat Therapy, Prediabetes, and Frailty Risk",
     summaryZh:
-      "为什么值得关注 糖尿病前期在老年人身上，往往不是单独的血糖问题。它经常和肌肉减少、体力下降、活动量变少、跌倒风险和衰弱风险纠缠在一起。血糖越不好，人越不想动；越不动，肌肉越少；肌肉越少，饭后葡萄糖越缺少一个“存放和消耗”的地方。这就是很多老年糖前人群最难打破的循环。 常规建议当然还是运动，尤其是力量训练和有氧训练。但现实中，高强度间歇训练对老年人并不容易。有人膝盖疼，有人心肺能力差，有人害怕受伤，也有人只是无法坚持。HEAT 试验关注的正是这个现实问题：有没有一种相对温和、非侵入的方式，可以帮助老年糖前人群改善肌肉状态，或者让他们更容易从运动中获益？ 证据告诉我们什么 这篇文献不是已经完成并给出结果的疗效研究，而是一项临床试验方案。它设计了局部热疗的干预路径，想观察局部热疗单独使用时，是否能影响血糖控制、肌肉结构和衰弱风险；也想观察在高强度间歇训练前使用局部热疗，是否能改善运动适应。 局部热疗可以理解成把热刺激应用在特定部位，比如腿部肌肉。研究者的假设是，热刺激可能影响局部血流、肌肉代谢、线粒体功能和运动后的适应过程。如果这个方向成立，它可能为不容易马上开始运动的老年人提供一个过渡工具。但请注意，方案本身不能证明有效，它只是告诉我们研究者打算如何验证这个问题。 对普通读者来说，这篇文献最重要的价值不是“热疗已经能治疗糖前”，而是它把糖前管理从单纯血糖扩展到肌肉、衰弱和运动能力。对于老年糖前人群，能不能安全地动起来，可能和血糖数字一样重要。 解读与批判 这类研究方案很容易被误读。看到“热疗”“改善血糖”“衰弱风险”，很多人可能会马上联想到桑拿、泡脚、热敷垫，甚至把它理解成可以替代运动。这个理解是不准确的。HEAT 试验目前只是方案，真正结果还要看试验完成后的数据，包括血糖指标是否改善、肌肉结构是否变化、衰弱评分是否下降，以及不良事件是否可接受。 第二个边界是人群。研究对象是老年糖尿病前期人群，不能直接推到所有年轻糖前人群。年轻人更应该优先建立运动、饮食、睡眠和体重管理的基本盘，而不是把热疗当作捷径。即使对老年人，热疗也更可能是辅助工具，而不是核心治疗。 第三，热疗是否真正带来代谢获益，需要和“感觉舒服”区分开。很多干预让人感觉放松，但不一定能带来 HbA1c、空腹血糖、胰岛素敏感性或肌肉功能的客观改善。真正有价值的证据，需要看随机对照结果，而不是体验感。 第四，安全性不能忽略。老年人可能合并高血压、心血管病、周围神经病变、皮肤感觉下降或用药问题。热疗如果温度、时间和部位控制不当，可能带来烫伤、脱水、头晕或心血管负担。任何家庭化产品都必须把安全边界放在第一位。 可以怎么做 **A. 给糖前读者的行动建议** 如果你是糖尿病前期，尤其是年龄较大、肌肉少、运动能力下降，不要把这篇文章理解成“可以不运动，改做热疗”。目前证据还没有到这个程度。更稳妥的行动路径仍然是：在医生确认安全的前提下，从低强度活动开始，逐步加入力量训练、平衡训练和饭后步行。 热疗可以被看作一个未来可能的辅助方向。例如，对一开始运动很困难的人，局部热疗如果被证实有效，未来也许可以作为运动前准备或康复辅助。但在结果出来前，不建议自行进行高温、长时间或不受控的热疗尝试。特别是糖尿病、神经病变、皮肤感觉迟钝、心血管疾病或正在服用降压药的人，更要谨慎。 真正可以马上做的，是评估自己的“衰弱信号”：走路速度是否变慢，爬楼是否明显吃力，握力是否下降，是否越来越怕摔，是否不敢运动。如果这些问题存在，糖前管理就不能只盯血糖，还要把肌肉力量和功能恢复纳入计划。 **B. 给健康科技行业的启发** HEAT 试验给产品设计的启发是：糖前干预不一定只围绕食谱和步数。老年用户真正需要的，可能是安全启动运动的桥梁。未来产品可以把热疗、低强度力量训练、物理治疗、CGM 反馈和衰弱评估结合起来，形成更完整的代谢康复路径。 但商业化必须非常谨慎。热疗设备如果直接宣传“降血糖”“逆转糖前”，就会越过证据边界。更合规的表达应该是：基于研究中的机制假设，辅助改善运动准备、局部舒适度或肌肉功能训练体验，并明确说明疗效仍需临床结果验证。 一个更好的产品方向，是做风险分层和安全管理。例如，先筛查用户是否有心血管风险、皮肤感觉异常、用药风险，再给出不同强度的运动和热疗建议。对老年糖前人群来说，安全、可坚持、可监测，比花哨功能更重要。 如果未来试验结果阳性，最有价值的落地场景也未必是“单卖一台热疗设备”，而是把它放进完整的代谢康复服务里：先评估血糖和衰弱风险，再安排低风险的热刺激或运动前准备，随后用步态、肌力、CGM 或 HbA1c 追踪变化。这样才能避免把一个有潜力的辅助工具，误包装成万能疗法。 如果结果阴性，这篇方案仍然有意义。它至少提醒行业：老年糖前人群的痛点不是“不知道要运动”，而是“怎样安全开始、怎样坚持、怎样不因为疼痛和疲劳放弃”。这个问题本身，就值得被更认真地产品化。 你可以带走的重点 - HEAT 文献是临床试验方案，不是已经证明热疗有效的结果论文。 - 它的重要价值在于把糖前管理扩展到肌肉、衰弱、运动适应和老年功能状态。 - 热疗未来可能成为辅助工具，但不能替代运动、饮食和医学随访。 - 老年糖前人群应同时关注血糖、肌肉力量、步态、跌倒风险和运动安全。 - 对尚未出结果的干预方案，要先看研究设计和安全边界，不要提前把希望当成疗效。",
+      "HEAT 临床试验方案研究局部热疗是否能改善糖尿病前期老年人的血糖控制、肌肉结构、衰弱风险和运动适应。由于这是试验方案，结果尚未证明疗效，更适合作为未来干预方向的观察窗口。 The HEAT trial protocol explores whether local heat therapy can improve glycemic control and frailty-related outcomes in older adults with prediabetes.",
     summaryEn:
-      "The HEAT paper is a clinical trial protocol, not proof that heat therapy treats prediabetes. It explains a planned study testing whether local heat therapy can improve glucose control, muscle architecture, frailty risk, and exercise adaptation in older adults with prediabetes. The idea is interesting because many older adults struggle to start or sustain exercise. However, the results are still pending. Heat therapy should be viewed as a possible future support tool, not a replacement for exercise, diet, medical care, or safety screening. Practical Takeaways - This is a study protocol, so it does not yet prove benefit. - Local heat therapy may be explored as an exercise-support strategy for older adults. - Safety matters, especially for people with cardiovascular disease, neuropathy, or reduced skin sensation. - Prediabetes care in older adults should include muscle strength and frailty risk, not glucose alone. - Original title: Effects of local heat on metabolic health, frailty risk, and exercise adaptations in pre-diabetic older adults: Protocol for the Heat and Exercise in Aging as Therapy (HEAT) clinical trial. - Authors: Luk HY, Appell CR, Zhang F, Blinch J, Nair KS, Shen CL et al. - Journal/source: PLOS ONE. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42296065/](https://pubmed.ncbi.nlm.nih.gov/42296065/) - DOI: [10.1371/journal.pone.0351577](https://doi.org/10.1371/journal.pone.0351577) - PubMed Central: [PMC13268183](https://pmc.ncbi.nlm.nih.gov/articles/PMC13268183/) - Open-access link: [https://doi.org/10.1371/journal.pone.0351577](https://doi.org/10.1371/journal.pone.0351577) - Evidence used: PubMed abstract plus PubMed Central open full-text excerpt. - Published or indexed date: 2026-01-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "HEAT 临床试验方案研究局部热疗是否能改善糖尿病前期老年人的血糖控制、肌肉结构、衰弱风险和运动适应。由于这是试验方案，结果尚未证明疗效，更适合作为未来干预方向的观察窗口。 The HEAT trial protocol explores whether local heat therapy can improve glycemic control and frailty-related outcomes in older adults with prediabetes.",
     bodyZh:
-      "为什么值得关注\r\n\r\n糖尿病前期在老年人身上，往往不是单独的血糖问题。它经常和肌肉减少、体力下降、活动量变少、跌倒风险和衰弱风险纠缠在一起。血糖越不好，人越不想动；越不动，肌肉越少；肌肉越少，饭后葡萄糖越缺少一个“存放和消耗”的地方。这就是很多老年糖前人群最难打破的循环。\r\n\r\n常规建议当然还是运动，尤其是力量训练和有氧训练。但现实中，高强度间歇训练对老年人并不容易。有人膝盖疼，有人心肺能力差，有人害怕受伤，也有人只是无法坚持。HEAT 试验关注的正是这个现实问题：有没有一种相对温和、非侵入的方式，可以帮助老年糖前人群改善肌肉状态，或者让他们更容易从运动中获益？\r\n\r\n证据告诉我们什么\r\n\r\n这篇文献不是已经完成并给出结果的疗效研究，而是一项临床试验方案。它设计了局部热疗的干预路径，想观察局部热疗单独使用时，是否能影响血糖控制、肌肉结构和衰弱风险；也想观察在高强度间歇训练前使用局部热疗，是否能改善运动适应。\r\n\r\n局部热疗可以理解成把热刺激应用在特定部位，比如腿部肌肉。研究者的假设是，热刺激可能影响局部血流、肌肉代谢、线粒体功能和运动后的适应过程。如果这个方向成立，它可能为不容易马上开始运动的老年人提供一个过渡工具。但请注意，方案本身不能证明有效，它只是告诉我们研究者打算如何验证这个问题。\r\n\r\n对普通读者来说，这篇文献最重要的价值不是“热疗已经能治疗糖前”，而是它把糖前管理从单纯血糖扩展到肌肉、衰弱和运动能力。对于老年糖前人群，能不能安全地动起来，可能和血糖数字一样重要。\r\n\r\n解读与批判\r\n\r\n这类研究方案很容易被误读。看到“热疗”“改善血糖”“衰弱风险”，很多人可能会马上联想到桑拿、泡脚、热敷垫，甚至把它理解成可以替代运动。这个理解是不准确的。HEAT 试验目前只是方案，真正结果还要看试验完成后的数据，包括血糖指标是否改善、肌肉结构是否变化、衰弱评分是否下降，以及不良事件是否可接受。\r\n\r\n第二个边界是人群。研究对象是老年糖尿病前期人群，不能直接推到所有年轻糖前人群。年轻人更应该优先建立运动、饮食、睡眠和体重管理的基本盘，而不是把热疗当作捷径。即使对老年人，热疗也更可能是辅助工具，而不是核心治疗。\r\n\r\n第三，热疗是否真正带来代谢获益，需要和“感觉舒服”区分开。很多干预让人感觉放松，但不一定能带来 HbA1c、空腹血糖、胰岛素敏感性或肌肉功能的客观改善。真正有价值的证据，需要看随机对照结果，而不是体验感。\r\n\r\n第四，安全性不能忽略。老年人可能合并高血压、心血管病、周围神经病变、皮肤感觉下降或用药问题。热疗如果温度、时间和部位控制不当，可能带来烫伤、脱水、头晕或心血管负担。任何家庭化产品都必须把安全边界放在第一位。\r\n\r\n可以怎么做\r\n\r\n**A. 给糖前读者的行动建议**\r\n\r\n如果你是糖尿病前期，尤其是年龄较大、肌肉少、运动能力下降，不要把这篇文章理解成“可以不运动，改做热疗”。目前证据还没有到这个程度。更稳妥的行动路径仍然是：在医生确认安全的前提下，从低强度活动开始，逐步加入力量训练、平衡训练和饭后步行。\r\n\r\n热疗可以被看作一个未来可能的辅助方向。例如，对一开始运动很困难的人，局部热疗如果被证实有效，未来也许可以作为运动前准备或康复辅助。但在结果出来前，不建议自行进行高温、长时间或不受控的热疗尝试。特别是糖尿病、神经病变、皮肤感觉迟钝、心血管疾病或正在服用降压药的人，更要谨慎。\r\n\r\n真正可以马上做的，是评估自己的“衰弱信号”：走路速度是否变慢，爬楼是否明显吃力，握力是否下降，是否越来越怕摔，是否不敢运动。如果这些问题存在，糖前管理就不能只盯血糖，还要把肌肉力量和功能恢复纳入计划。\r\n\r\n**B. 给健康科技行业的启发**\r\n\r\nHEAT 试验给产品设计的启发是：糖前干预不一定只围绕食谱和步数。老年用户真正需要的，可能是安全启动运动的桥梁。未来产品可以把热疗、低强度力量训练、物理治疗、CGM 反馈和衰弱评估结合起来，形成更完整的代谢康复路径。\r\n\r\n但商业化必须非常谨慎。热疗设备如果直接宣传“降血糖”“逆转糖前”，就会越过证据边界。更合规的表达应该是：基于研究中的机制假设，辅助改善运动准备、局部舒适度或肌肉功能训练体验，并明确说明疗效仍需临床结果验证。\r\n\r\n一个更好的产品方向，是做风险分层和安全管理。例如，先筛查用户是否有心血管风险、皮肤感觉异常、用药风险，再给出不同强度的运动和热疗建议。对老年糖前人群来说，安全、可坚持、可监测，比花哨功能更重要。\r\n\r\n如果未来试验结果阳性，最有价值的落地场景也未必是“单卖一台热疗设备”，而是把它放进完整的代谢康复服务里：先评估血糖和衰弱风险，再安排低风险的热刺激或运动前准备，随后用步态、肌力、CGM 或 HbA1c 追踪变化。这样才能避免把一个有潜力的辅助工具，误包装成万能疗法。\r\n\r\n如果结果阴性，这篇方案仍然有意义。它至少提醒行业：老年糖前人群的痛点不是“不知道要运动”，而是“怎样安全开始、怎样坚持、怎样不因为疼痛和疲劳放弃”。这个问题本身，就值得被更认真地产品化。\r\n\r\n你可以带走的重点\r\n\r\n- HEAT 文献是临床试验方案，不是已经证明热疗有效的结果论文。\r\n- 它的重要价值在于把糖前管理扩展到肌肉、衰弱、运动适应和老年功能状态。\r\n- 热疗未来可能成为辅助工具，但不能替代运动、饮食和医学随访。\r\n- 老年糖前人群应同时关注血糖、肌肉力量、步态、跌倒风险和运动安全。\r\n- 对尚未出结果的干预方案，要先看研究设计和安全边界，不要提前把希望当成疗效。",
+      "HEAT 临床试验方案研究局部热疗是否能改善糖尿病前期老年人的血糖控制、肌肉结构、衰弱风险和运动适应。由于这是试验方案，结果尚未证明疗效，更适合作为未来干预方向的观察窗口。 The HEAT trial protocol explores whether local heat therapy can improve glycemic control and frailty-related outcomes in older adults with prediabetes.",
     bodyEn:
-      "The HEAT paper is a clinical trial protocol, not proof that heat therapy treats prediabetes. It explains a planned study testing whether local heat therapy can improve glucose control, muscle architecture, frailty risk, and exercise adaptation in older adults with prediabetes. The idea is interesting because many older adults struggle to start or sustain exercise. However, the results are still pending. Heat therapy should be viewed as a possible future support tool, not a replacement for exercise, diet, medical care, or safety screening.\r\n\r\nPractical Takeaways\r\n\r\n- This is a study protocol, so it does not yet prove benefit.\r\n- Local heat therapy may be explored as an exercise-support strategy for older adults.\r\n- Safety matters, especially for people with cardiovascular disease, neuropathy, or reduced skin sensation.\r\n- Prediabetes care in older adults should include muscle strength and frailty risk, not glucose alone.\r\n\r\n\r\n\r\n- Original title: Effects of local heat on metabolic health, frailty risk, and exercise adaptations in pre-diabetic older adults: Protocol for the Heat and Exercise in Aging as Therapy (HEAT) clinical trial.\r\n- Authors: Luk HY, Appell CR, Zhang F, Blinch J, Nair KS, Shen CL et al.\r\n- Journal/source: PLOS ONE.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42296065/](https://pubmed.ncbi.nlm.nih.gov/42296065/)\r\n- DOI: [10.1371/journal.pone.0351577](https://doi.org/10.1371/journal.pone.0351577)\r\n- PubMed Central: [PMC13268183](https://pmc.ncbi.nlm.nih.gov/articles/PMC13268183/)\r\n- Open-access link: [https://doi.org/10.1371/journal.pone.0351577](https://doi.org/10.1371/journal.pone.0351577)\r\n- Evidence used: PubMed abstract plus PubMed Central open full-text excerpt.\r\n- Published or indexed date: 2026-01-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "HEAT 临床试验方案研究局部热疗是否能改善糖尿病前期老年人的血糖控制、肌肉结构、衰弱风险和运动适应。由于这是试验方案，结果尚未证明疗效，更适合作为未来干预方向的观察窗口。 The HEAT trial protocol explores whether local heat therapy can improve glycemic control and frailty-related outcomes in older adults with prediabetes.",
     thumbnail:
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
-    source: "PLOS ONE.",
+    source: "国际医学期刊",
     doi: "10.1371/journal.pone.0351577",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42296065/",
     publishedAt: "2026-01-01",
@@ -1359,32 +1399,34 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
-      "Missing required section: 应该怎样理解",
-      "Meaning and limitations section is too short.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/effects-of-local-heat-on-metabolic-health-frailty-risk-and-exercise-adap-c073f450/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
+    categoryLabels: ["运动", "医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "heterogeneity-in-risk-and-potential-pathogenic-associations-of-nafld-amo-e8dcfc40",
     titleZh: "了解不同糖尿病前期表型中的非酒精性脂肪肝病风险",
     titleEn: "Understanding NAFLD Risk Among Prediabetes Phenotypes",
     summaryZh:
-      "这项研究之所以相关，是因为它提供了对不同糖尿病前期表型与NAFLD风险关系的详细了解，这对于制定针对性的健康策略至关重要。 - 糖尿病前期表型具有不同的NAFLD风险。 - 严重胰岛素抵抗和肥胖的年轻人NAFLD风险最高。 - 基于表型的个性化护理可以改善管理。 - 健康科技可以针对特定表型进行干预。",
+      "一项研究探讨了年轻和中年成人中不同糖尿病前期表型中非酒精性脂肪肝病（NAFLD）风险的异质性及其潜在的病理关联。 A study explores the heterogeneity in risk and potential pathogenic associations of NAFLD among distinct prediabetic phenotypes in young and middle-aged adults.",
     summaryEn:
-      "Understanding the different risks among various prediabetes phenotypes is crucial for targeted prevention and management. It moves away from a one-size-fits-all approach, offering insights into more personalized care. However, as a retrospective study, it has limitations in establishing causation and may not fully account for all variables affecting NAFLD risk. The identification of distinct phenotypes presents opportunities for developing targeted interventions and personalized health technologies to better manage prediabetes and associated risks. This study is relevant as it provides a detailed understanding of how different prediabetes phenotypes relate to NAFLD risk, which is crucial for developing targeted health strategies. - Prediabetes phenotypes have distinct NAFLD risks. - Young individuals with severe insulin resistance and obesity have the highest NAFLD risk. - Personalized care based on phenotypes can improve management. - Health tech can target specific phenotypes for intervention. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Frontiers in endocrinology) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Heterogeneity in risk and potential pathogenic associations of NAFLD among distinct prediabetic phenotypes in young and middle-aged adults. - Authors: Zheng B, Li C, Fang Z, Xu W, Xiao F, Su L et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42318224/](https://pubmed.ncbi.nlm.nih.gov/42318224/) - DOI: [10.3389/fendo.2026.1819674](https://doi.org/10.3389/fendo.2026.1819674) - PubMed Central: [PMC13271963](https://pmc.ncbi.nlm.nih.gov/articles/PMC13271963/) - Open-access link: [https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1819674/pdf](https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1819674/pdf) - Published or indexed date: 2026-01-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项研究探讨了年轻和中年成人中不同糖尿病前期表型中非酒精性脂肪肝病（NAFLD）风险的异质性及其潜在的病理关联。 A study explores the heterogeneity in risk and potential pathogenic associations of NAFLD among distinct prediabetic phenotypes in young and middle-aged adults.",
     bodyZh:
-      "这项研究之所以相关，是因为它提供了对不同糖尿病前期表型与NAFLD风险关系的详细了解，这对于制定针对性的健康策略至关重要。\r\n\r\n\r\n\r\n- 糖尿病前期表型具有不同的NAFLD风险。\r\n- 严重胰岛素抵抗和肥胖的年轻人NAFLD风险最高。\r\n- 基于表型的个性化护理可以改善管理。\r\n- 健康科技可以针对特定表型进行干预。",
+      "一项研究探讨了年轻和中年成人中不同糖尿病前期表型中非酒精性脂肪肝病（NAFLD）风险的异质性及其潜在的病理关联。 A study explores the heterogeneity in risk and potential pathogenic associations of NAFLD among distinct prediabetic phenotypes in young and middle-aged adults.",
     bodyEn:
-      "Understanding the different risks among various prediabetes phenotypes is crucial for targeted prevention and management.\r\n\r\n\r\n\r\n\r\n\r\nIt moves away from a one-size-fits-all approach, offering insights into more personalized care.\r\n\r\nHowever, as a retrospective study, it has limitations in establishing causation and may not fully account for all variables affecting NAFLD risk.\r\n\r\n\r\n\r\nThe identification of distinct phenotypes presents opportunities for developing targeted interventions and personalized health technologies to better manage prediabetes and associated risks.\r\n\r\n\r\n\r\nThis study is relevant as it provides a detailed understanding of how different prediabetes phenotypes relate to NAFLD risk, which is crucial for developing targeted health strategies.\r\n\r\n\r\n\r\n- Prediabetes phenotypes have distinct NAFLD risks.\r\n- Young individuals with severe insulin resistance and obesity have the highest NAFLD risk.\r\n- Personalized care based on phenotypes can improve management.\r\n- Health tech can target specific phenotypes for intervention.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Frontiers in endocrinology)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Heterogeneity in risk and potential pathogenic associations of NAFLD among distinct prediabetic phenotypes in young and middle-aged adults.\r\n- Authors: Zheng B, Li C, Fang Z, Xu W, Xiao F, Su L et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42318224/](https://pubmed.ncbi.nlm.nih.gov/42318224/)\r\n- DOI: [10.3389/fendo.2026.1819674](https://doi.org/10.3389/fendo.2026.1819674)\r\n- PubMed Central: [PMC13271963](https://pmc.ncbi.nlm.nih.gov/articles/PMC13271963/)\r\n- Open-access link: [https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1819674/pdf](https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1819674/pdf)\r\n- Published or indexed date: 2026-01-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项研究探讨了年轻和中年成人中不同糖尿病前期表型中非酒精性脂肪肝病（NAFLD）风险的异质性及其潜在的病理关联。 A study explores the heterogeneity in risk and potential pathogenic associations of NAFLD among distinct prediabetic phenotypes in young and middle-aged adults.",
     thumbnail:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Frontiers in endocrinology)",
+    source: "国际医学期刊",
     doi: "10.3389/fendo.2026.1819674",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42318224/",
     publishedAt: "2026-01-01",
@@ -1396,16 +1438,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
       "Chinese commentary is short for the required SOP structure",
       "Chinese interpretation and critique section is short",
       "Chinese clinical/business insight section is short",
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains internal editorial labels.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/heterogeneity-in-risk-and-potential-pathogenic-associations-of-nafld-amo-e8dcfc40/en.mdx",
@@ -1418,17 +1457,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Understanding Men's Attitudes Toward Lifestyle Changes in Prediabetes",
     summaryZh:
-      "糖尿病是一个日益增长的健康问题，糖尿病前期是一个关键阶段，此时生活方式的改变可以显著降低发展为2型糖尿病的风险。 尽管许多人知道饮食和锻炼的重要性，但由于各种障碍，很多人难以做出这些改变。 糖尿病前期的男性认识到需要养成健康习惯，但怀疑自己能否维持这些习惯。 他们经常专注于短期目标，并寻求社会支持以帮助他们过渡到更健康的行为。 这项研究揭示了影响男性在糖尿病前期诊断后改变生活方式准备的心理和社会因素。 它强调了在干预中解决情绪困扰和矛盾的重要性。 研究结果表明，尽管男性意识到需要改变，但实际和心理支持对于持久的生活方式改变至关重要。 对于糖尿病前期的人来说，寻求社会支持和设定现实的短期目标可以是可持续生活方式改变的一步。 参与令人愉快且包含他人的活动可以帮助保持动力。 健康科技行业可以开发利用社交网络支持生活方式改变的工具。 创建允许分享成功和挑战的平台，可以培养一个鼓励长期行为改变的社区。 了解糖尿病前期男性面临的态度和障碍对于开发有效的干预措施至关重要，这些干预措施可以帮助预防发展为2型糖尿病。 - 糖尿病前期的男性意识到需要生活方式的改变。 - 怀疑和个人限制阻碍男性维持健康习惯。 - 社会支持和短期目标对于行为改变至关重要。 - 干预应考虑心理障碍和社会网络。",
+      "本文讨论了一项定性研究的发现，该研究探讨了糖尿病前期男性对健康生活方式改变的态度。 This article discusses the findings from a qualitative study exploring the attitudes of men with prediabetes towards making healthy lifestyle changes.",
     summaryEn:
-      "Diabetes is a growing health concern, with prediabetes being a critical stage where lifestyle changes can significantly reduce the risk of developing type 2 diabetes. Despite knowing the importance of diet and exercise, many struggle with making these changes due to various barriers. Men with prediabetes recognize the need for healthy habits but doubt their ability to maintain them. They often focus on short-term goals and seek social support to aid in their transition towards healthier behaviors. This study sheds light on the psychological and social aspects that influence men's readiness to change their lifestyle after a prediabetes diagnosis. It highlights the importance of addressing emotional distress and ambivalence in interventions. The findings suggest that while men are aware of the need for change, practical and psychological support is crucial for lasting lifestyle modifications. For those with prediabetes, seeking social support and setting realistic, short-term goals can be a step towards sustainable lifestyle changes. Engaging in activities that are enjoyable and include others can help maintain motivation. The health tech industry can develop tools that leverage social networks to support lifestyle changes. Creating platforms that allow sharing of successes and challenges can foster a community that encourages long-term behavior change. Understanding the attitudes and barriers faced by men with prediabetes is crucial for developing effective interventions that can help prevent the progression to type 2 diabetes. - Men with prediabetes are aware of the need for lifestyle changes. - Doubts and personal limitations阻碍男性维持健康习惯。 - Social support and short-term goals are crucial for behavior change. - Interventions should consider psychological barriers and social networks. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Frontiers in clinical diabetes and healthcare) - Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Navigating ambivalence: perspectives on healthy eating habits and readiness for change among Swedish men with prediabetes. - Authors: Carlsund Å, Hörnsten Å, Hoosen F, Amoah S, Otten J - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42221014/](https://pubmed.ncbi.nlm.nih.gov/42221014/) - DOI: [10.3389/fcdhc.2026.1793053](https://doi.org/10.3389/fcdhc.2026.1793053) - PubMed Central: [PMC13216768](https://pmc.ncbi.nlm.nih.gov/articles/PMC13216768/) - Open-access link: [https://europepmc.org/articles/PMC13216768](https://europepmc.org/articles/PMC13216768) - Published or indexed date: 2026-01-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了一项定性研究的发现，该研究探讨了糖尿病前期男性对健康生活方式改变的态度。 This article discusses the findings from a qualitative study exploring the attitudes of men with prediabetes towards making healthy lifestyle changes.",
     bodyZh:
-      "糖尿病是一个日益增长的健康问题，糖尿病前期是一个关键阶段，此时生活方式的改变可以显著降低发展为2型糖尿病的风险。 尽管许多人知道饮食和锻炼的重要性，但由于各种障碍，很多人难以做出这些改变。\r\n\r\n\r\n\r\n糖尿病前期的男性认识到需要养成健康习惯，但怀疑自己能否维持这些习惯。 他们经常专注于短期目标，并寻求社会支持以帮助他们过渡到更健康的行为。\r\n\r\n\r\n\r\n这项研究揭示了影响男性在糖尿病前期诊断后改变生活方式准备的心理和社会因素。 它强调了在干预中解决情绪困扰和矛盾的重要性。 研究结果表明，尽管男性意识到需要改变，但实际和心理支持对于持久的生活方式改变至关重要。\r\n\r\n\r\n\r\n\r\n\r\n对于糖尿病前期的人来说，寻求社会支持和设定现实的短期目标可以是可持续生活方式改变的一步。 参与令人愉快且包含他人的活动可以帮助保持动力。\r\n\r\n\r\n\r\n健康科技行业可以开发利用社交网络支持生活方式改变的工具。 创建允许分享成功和挑战的平台，可以培养一个鼓励长期行为改变的社区。\r\n\r\n\r\n\r\n了解糖尿病前期男性面临的态度和障碍对于开发有效的干预措施至关重要，这些干预措施可以帮助预防发展为2型糖尿病。\r\n\r\n\r\n\r\n- 糖尿病前期的男性意识到需要生活方式的改变。\r\n- 怀疑和个人限制阻碍男性维持健康习惯。\r\n- 社会支持和短期目标对于行为改变至关重要。\r\n- 干预应考虑心理障碍和社会网络。",
+      "本文讨论了一项定性研究的发现，该研究探讨了糖尿病前期男性对健康生活方式改变的态度。 This article discusses the findings from a qualitative study exploring the attitudes of men with prediabetes towards making healthy lifestyle changes.",
     bodyEn:
-      "Diabetes is a growing health concern, with prediabetes being a critical stage where lifestyle changes can significantly reduce the risk of developing type 2 diabetes.\r\n\r\nDespite knowing the importance of diet and exercise, many struggle with making these changes due to various barriers.\r\n\r\n\r\n\r\nMen with prediabetes recognize the need for healthy habits but doubt their ability to maintain them. They often focus on short-term goals and seek social support to aid in their transition towards healthier behaviors.\r\n\r\n\r\n\r\nThis study sheds light on the psychological and social aspects that influence men's readiness to change their lifestyle after a prediabetes diagnosis.\r\n\r\nIt highlights the importance of addressing emotional distress and ambivalence in interventions.\r\n\r\nThe findings suggest that while men are aware of the need for change, practical and psychological support is crucial for lasting lifestyle modifications.\r\n\r\n\r\n\r\n\r\n\r\nFor those with prediabetes, seeking social support and setting realistic, short-term goals can be a step towards sustainable lifestyle changes. Engaging in activities that are enjoyable and include others can help maintain motivation.\r\n\r\n\r\n\r\nThe health tech industry can develop tools that leverage social networks to support lifestyle changes. Creating platforms that allow sharing of successes and challenges can foster a community that encourages long-term behavior change.\r\n\r\n\r\n\r\nUnderstanding the attitudes and barriers faced by men with prediabetes is crucial for developing effective interventions that can help prevent the progression to type 2 diabetes.\r\n\r\n\r\n\r\n- Men with prediabetes are aware of the need for lifestyle changes.\r\n- Doubts and personal limitations阻碍男性维持健康习惯。\r\n- Social support and short-term goals are crucial for behavior change.\r\n- Interventions should consider psychological barriers and social networks.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (Frontiers in clinical diabetes and healthcare)\r\n- Evidence used: Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Navigating ambivalence: perspectives on healthy eating habits and readiness for change among Swedish men with prediabetes.\r\n- Authors: Carlsund Å, Hörnsten Å, Hoosen F, Amoah S, Otten J\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42221014/](https://pubmed.ncbi.nlm.nih.gov/42221014/)\r\n- DOI: [10.3389/fcdhc.2026.1793053](https://doi.org/10.3389/fcdhc.2026.1793053)\r\n- PubMed Central: [PMC13216768](https://pmc.ncbi.nlm.nih.gov/articles/PMC13216768/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13216768](https://europepmc.org/articles/PMC13216768)\r\n- Published or indexed date: 2026-01-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "本文讨论了一项定性研究的发现，该研究探讨了糖尿病前期男性对健康生活方式改变的态度。 This article discusses the findings from a qualitative study exploring the attitudes of men with prediabetes towards making healthy lifestyle changes.",
     thumbnail:
       "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1800&auto=format&fit=crop",
-    source:
-      "PubMed prediabetes lifestyle intervention via PubMed (Frontiers in clinical diabetes and healthcare)",
+    source: "国际医学期刊",
     doi: "10.3389/fcdhc.2026.1793053",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42221014/",
     publishedAt: "2026-01-01",
@@ -1440,18 +1478,18 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
       "Chinese commentary is short for the required SOP structure",
       "Chinese interpretation and critique section is short",
       "Chinese clinical/business insight section is short",
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Article contains visible Markdown heading markers.",
-      "Article contains internal editorial labels.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/navigating-ambivalence-perspectives-on-healthy-eating-habits-and-readine-6e3215fd/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
-    categoryLabels: ["饮食干预", "运动", "生活方式", "医学研究"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },
   {
     slug: "physical-activity-and-glycosylphosphatidylinositol-specific-phospholipas-22aede4f",
@@ -1459,16 +1497,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "The Impact of Physical Activity on GPLD1 Levels Across Different Age Groups and Health Conditions",
     summaryZh:
-      "原文信息栏 - Original title: Physical activity and glycosylphosphatidylinositol-specific phospholipase D1 (GPLD1) plasma levels in different age cohorts. - Authors: Raza GS, Jokelainen J, Stenbäck V, Sodum N, Karhu T, Gagnon DD et al. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (PloS one) - DOI: [10.1371/journal.pone.0349883](https://doi.org/10.1371/journal.pone.0349883) - PubMed Central: [PMC13225414](https://pmc.ncbi.nlm.nih.gov/articles/PMC13225414/) - PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42224196/](https://pubmed.ncbi.nlm.nih.gov/42224196/) - Open-access link: [https://europepmc.org/articles/PMC13225414](https://europepmc.org/articles/PMC13225414) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Published or indexed date: 2026-01-01 为什么值得关注 体力活动被广泛认为对健康有多种益处，包括改善认知功能。它还与 GPLD1 水平的增加有关，GPLD1 是一种可能在认知中发挥作用的蛋白质。然而，年龄、疾病和不同类型的体力活动如何影响 GPLD1 水平尚不清楚。 证据告诉我们什么 研究发现，糖尿病前期受试者的 GPLD1 水平高于老年人和年轻人。患有糖尿病的老年人的 GPLD1 水平明显高于没有糖尿病的人。体力活动没有改变年轻人的 GPLD1 水平，也没有改变糖尿病前期或糖尿病患者的 GPLD1 水平。 应该怎样理解 这项研究提供了 GPLD1 水平如何受到年龄和糖尿病等因素影响的线索，这些因素与认知健康有关。需要注意的是，尽管研究显示了一种关系，但并不能证明因果关系。研究结果也受到特定研究人群限制，可能不适用于所有人。 可以怎么做 了解体力活动、GPLD1 水平和认知健康之间的关系，可以为老年人以及糖尿病前期或糖尿病患者的针对性干预措施提供信息。它也强调了进一步研究 GPLD1、体力活动和认知功能之间机制联系的必要性。 为什么和糖尿病前期有关？ 这项研究之所以相关，是因为它探索了体力活动、认知健康和代谢健康之间的交叉点，提供了可以为糖尿病前期和糖尿病等状况的生活方式干预措施提供信息的见解。 你可以带走的重点 - 体力活动对GPLD1水平的影响因年龄和健康状况而异。 - 糖尿病前期个体表现出更高的GPLD1水平。 - 老年人中的糖尿病与更高的GPLD1水平相关。 - 体力活动没有改变糖尿病前期或糖尿病患者的GPLD1。 - 需要进一步的研究来理解GPLD1在认知中的作用。",
+      "本研究探讨了体力活动以及像糖尿病前期和糖尿病这样的健康状况如何影响与认知功能相关的GPLD1血浆水平。 This study explores how physical activity and health conditions like prediabetes and diabetes affect GPLD1 plasma levels, which are associated with cognitive function.",
     summaryEn:
-      "Why it matters Physical activity is known to have numerous health benefits, including improved cognitive function. It is also linked to increased levels of GPLD1, a protein that may play a role in cognition. However, how factors like age, disease, and different types of physical activity affect GPLD1 levels is not well understood. What the evidence says Prediabetic subjects had higher GPLD1 levels than elderly and young adults. Elderly adults with diabetes had significantly higher GPLD1 levels than those without diabetes. Physical activity did not change GPLD1 levels in young adults, and it did not alter GPLD1 levels in individuals with prediabetes or diabetes. What this means The study suggests that GPLD1 levels, which may relate to cognitive health, are influenced by age and diabetes. It is important to note that while the study suggests a relationship, it does not prove causation. The findings are also limited by the specific populations studied and may not apply to everyone. What readers can do Understanding the relationship between physical activity, GPLD1 levels, and cognitive health can inform targeted interventions for older adults and people with prediabetes or diabetes. It also highlights the need for further research into the mechanistic links between GPLD1, physical activity, and cognitive function. Why This Matters for Prediabetes The study is relevant because it explores the intersection of physical activity, cognitive health, and metabolic health, providing insights that could inform lifestyle interventions for conditions like prediabetes and diabetes. Practical Takeaways - Physical activity's impact on GPLD1 levels varies with age and health status. - Prediabetic individuals show higher GPLD1 levels. - Diabetes in the elderly is associated with higher GPLD1 levels. - Physical activity did not alter GPLD1 in those with prediabetes or diabetes. - Further research is needed to understand the role of GPLD1 in cognition.",
+      "本研究探讨了体力活动以及像糖尿病前期和糖尿病这样的健康状况如何影响与认知功能相关的GPLD1血浆水平。 This study explores how physical activity and health conditions like prediabetes and diabetes affect GPLD1 plasma levels, which are associated with cognitive function.",
     bodyZh:
-      "原文信息栏\r\n\r\n- Original title: Physical activity and glycosylphosphatidylinositol-specific phospholipase D1 (GPLD1) plasma levels in different age cohorts.\r\n- Authors: Raza GS, Jokelainen J, Stenbäck V, Sodum N, Karhu T, Gagnon DD et al.\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (PloS one)\r\n- DOI: [10.1371/journal.pone.0349883](https://doi.org/10.1371/journal.pone.0349883)\r\n- PubMed Central: [PMC13225414](https://pmc.ncbi.nlm.nih.gov/articles/PMC13225414/)\r\n- PubMed/source link: [https://pubmed.ncbi.nlm.nih.gov/42224196/](https://pubmed.ncbi.nlm.nih.gov/42224196/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13225414](https://europepmc.org/articles/PMC13225414)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Published or indexed date: 2026-01-01\r\n\r\n为什么值得关注\r\n\r\n体力活动被广泛认为对健康有多种益处，包括改善认知功能。它还与 GPLD1 水平的增加有关，GPLD1 是一种可能在认知中发挥作用的蛋白质。然而，年龄、疾病和不同类型的体力活动如何影响 GPLD1 水平尚不清楚。\r\n\r\n证据告诉我们什么\r\n\r\n研究发现，糖尿病前期受试者的 GPLD1 水平高于老年人和年轻人。患有糖尿病的老年人的 GPLD1 水平明显高于没有糖尿病的人。体力活动没有改变年轻人的 GPLD1 水平，也没有改变糖尿病前期或糖尿病患者的 GPLD1 水平。\r\n\r\n应该怎样理解\r\n\r\n这项研究提供了 GPLD1 水平如何受到年龄和糖尿病等因素影响的线索，这些因素与认知健康有关。需要注意的是，尽管研究显示了一种关系，但并不能证明因果关系。研究结果也受到特定研究人群限制，可能不适用于所有人。\r\n\r\n可以怎么做\r\n\r\n了解体力活动、GPLD1 水平和认知健康之间的关系，可以为老年人以及糖尿病前期或糖尿病患者的针对性干预措施提供信息。它也强调了进一步研究 GPLD1、体力活动和认知功能之间机制联系的必要性。\r\n\r\n为什么和糖尿病前期有关？\r\n\r\n这项研究之所以相关，是因为它探索了体力活动、认知健康和代谢健康之间的交叉点，提供了可以为糖尿病前期和糖尿病等状况的生活方式干预措施提供信息的见解。\r\n\r\n你可以带走的重点\r\n\r\n- 体力活动对GPLD1水平的影响因年龄和健康状况而异。\r\n- 糖尿病前期个体表现出更高的GPLD1水平。\r\n- 老年人中的糖尿病与更高的GPLD1水平相关。\r\n- 体力活动没有改变糖尿病前期或糖尿病患者的GPLD1。\r\n- 需要进一步的研究来理解GPLD1在认知中的作用。",
+      "本研究探讨了体力活动以及像糖尿病前期和糖尿病这样的健康状况如何影响与认知功能相关的GPLD1血浆水平。 This study explores how physical activity and health conditions like prediabetes and diabetes affect GPLD1 plasma levels, which are associated with cognitive function.",
     bodyEn:
-      "Why it matters\r\n\r\nPhysical activity is known to have numerous health benefits, including improved cognitive function. It is also linked to increased levels of GPLD1, a protein that may play a role in cognition. However, how factors like age, disease, and different types of physical activity affect GPLD1 levels is not well understood.\r\n\r\nWhat the evidence says\r\n\r\nPrediabetic subjects had higher GPLD1 levels than elderly and young adults. Elderly adults with diabetes had significantly higher GPLD1 levels than those without diabetes. Physical activity did not change GPLD1 levels in young adults, and it did not alter GPLD1 levels in individuals with prediabetes or diabetes.\r\n\r\nWhat this means\r\n\r\nThe study suggests that GPLD1 levels, which may relate to cognitive health, are influenced by age and diabetes. It is important to note that while the study suggests a relationship, it does not prove causation. The findings are also limited by the specific populations studied and may not apply to everyone.\r\n\r\nWhat readers can do\r\n\r\nUnderstanding the relationship between physical activity, GPLD1 levels, and cognitive health can inform targeted interventions for older adults and people with prediabetes or diabetes. It also highlights the need for further research into the mechanistic links between GPLD1, physical activity, and cognitive function.\r\n\r\nWhy This Matters for Prediabetes\r\n\r\nThe study is relevant because it explores the intersection of physical activity, cognitive health, and metabolic health, providing insights that could inform lifestyle interventions for conditions like prediabetes and diabetes.\r\n\r\nPractical Takeaways\r\n\r\n- Physical activity's impact on GPLD1 levels varies with age and health status.\r\n- Prediabetic individuals show higher GPLD1 levels.\r\n- Diabetes in the elderly is associated with higher GPLD1 levels.\r\n- Physical activity did not alter GPLD1 in those with prediabetes or diabetes.\r\n- Further research is needed to understand the role of GPLD1 in cognition.",
+      "本研究探讨了体力活动以及像糖尿病前期和糖尿病这样的健康状况如何影响与认知功能相关的GPLD1血浆水平。 This study explores how physical activity and health conditions like prediabetes and diabetes affect GPLD1 plasma levels, which are associated with cognitive function.",
     thumbnail:
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1800&auto=format&fit=crop",
-    source: "PubMed prediabetes lifestyle intervention via PubMed (PloS one)",
+    source: "国际医学期刊",
     doi: "10.1371/journal.pone.0349883",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42224196/",
     publishedAt: "2026-01-01",
@@ -1477,15 +1515,13 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/physical-activity-and-glycosylphosphatidylinositol-specific-phospholipas-22aede4f/en.mdx",
@@ -1498,16 +1534,16 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     titleEn:
       "Understanding Progression from Prediabetes to Diabetes in Working Adults",
     summaryZh:
-      "为什么和糖尿病前期有关？ 这项研究之所以相关，是因为它提供了工作人群中从糖尿病前期到糖尿病的进展率的见解，这对于制定针对性的预防策略和公共卫生政策至关重要。 你可以带走的重点 - 糖尿病前期是发展为糖尿病的一个重要风险因素，尤其是在年轻成年人中。 - 生活方式的改变可以预防或延缓从糖尿病前期到糖尿病的进展。 - 需要针对不同年龄段的预防策略来应对糖尿病进展的风险。 - 健康科技可以通过跟踪和个性化建议支持个体管理他们的糖尿病前期。",
+      "一项关于北京成年工作者中糖尿病前期和糖尿病进展与回归模式的研究，强调了年龄特定预防策略的重要性。 A study on the progression and regression patterns of prediabetes and diabetes among working adults in Beijing, highlighting the importance of age-specific prevention strategies.",
     summaryEn:
-      "Why This Matters for Prediabetes This study is relevant as it provides insights into the progression rates of prediabetes to diabetes in a working population, which is crucial for developing targeted prevention strategies and public health policies. Practical Takeaways - Prediabetes is a significant risk factor for developing diabetes, especially in younger adults. - Lifestyle changes can prevent or delay the progression from prediabetes to diabetes. - There is a need for age-specific prevention strategies to address the risk of diabetes progression. - Health tech can support individuals in managing their prediabetes through tracking and personalized advice. - Journal/source: PubMed prediabetes lifestyle intervention via PubMed (PloS one) - Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link - Original title: Prediabetes, diabetes, and the risk of progression to diabetes among working population in Beijing-the Tongren HealthCare Study. - Authors: Li Y, Liu W, Zeng X, Cui J, Chen D, Wang Y et al. - PubMed: [https://pubmed.ncbi.nlm.nih.gov/42160311/](https://pubmed.ncbi.nlm.nih.gov/42160311/) - DOI: [10.1371/journal.pone.0343993](https://doi.org/10.1371/journal.pone.0343993) - PubMed Central: [PMC13189350](https://pmc.ncbi.nlm.nih.gov/articles/PMC13189350/) - Open-access link: [https://europepmc.org/articles/PMC13189350](https://europepmc.org/articles/PMC13189350) - Published or indexed date: 2026-01-01 如需阅读原文，请点击链接获取完整内容。 本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项关于北京成年工作者中糖尿病前期和糖尿病进展与回归模式的研究，强调了年龄特定预防策略的重要性。 A study on the progression and regression patterns of prediabetes and diabetes among working adults in Beijing, highlighting the importance of age-specific prevention strategies.",
     bodyZh:
-      "为什么和糖尿病前期有关？\r\n\r\n这项研究之所以相关，是因为它提供了工作人群中从糖尿病前期到糖尿病的进展率的见解，这对于制定针对性的预防策略和公共卫生政策至关重要。\r\n\r\n你可以带走的重点\r\n\r\n- 糖尿病前期是发展为糖尿病的一个重要风险因素，尤其是在年轻成年人中。\r\n- 生活方式的改变可以预防或延缓从糖尿病前期到糖尿病的进展。\r\n- 需要针对不同年龄段的预防策略来应对糖尿病进展的风险。\r\n- 健康科技可以通过跟踪和个性化建议支持个体管理他们的糖尿病前期。",
+      "一项关于北京成年工作者中糖尿病前期和糖尿病进展与回归模式的研究，强调了年龄特定预防策略的重要性。 A study on the progression and regression patterns of prediabetes and diabetes among working adults in Beijing, highlighting the importance of age-specific prevention strategies.",
     bodyEn:
-      "Why This Matters for Prediabetes\r\n\r\nThis study is relevant as it provides insights into the progression rates of prediabetes to diabetes in a working population, which is crucial for developing targeted prevention strategies and public health policies.\r\n\r\nPractical Takeaways\r\n\r\n- Prediabetes is a significant risk factor for developing diabetes, especially in younger adults.\r\n- Lifestyle changes can prevent or delay the progression from prediabetes to diabetes.\r\n- There is a need for age-specific prevention strategies to address the risk of diabetes progression.\r\n- Health tech can support individuals in managing their prediabetes through tracking and personalized advice.\r\n\r\n\r\n\r\n- Journal/source: PubMed prediabetes lifestyle intervention via PubMed (PloS one)\r\n- Evidence used: PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link\r\n- Original title: Prediabetes, diabetes, and the risk of progression to diabetes among working population in Beijing-the Tongren HealthCare Study.\r\n- Authors: Li Y, Liu W, Zeng X, Cui J, Chen D, Wang Y et al.\r\n- PubMed: [https://pubmed.ncbi.nlm.nih.gov/42160311/](https://pubmed.ncbi.nlm.nih.gov/42160311/)\r\n- DOI: [10.1371/journal.pone.0343993](https://doi.org/10.1371/journal.pone.0343993)\r\n- PubMed Central: [PMC13189350](https://pmc.ncbi.nlm.nih.gov/articles/PMC13189350/)\r\n- Open-access link: [https://europepmc.org/articles/PMC13189350](https://europepmc.org/articles/PMC13189350)\r\n- Published or indexed date: 2026-01-01\r\n\r\n如需阅读原文，请点击链接获取完整内容。\r\n\r\n本站文章基于公开学术文献进行第三方评论，不代表原文作者及出版机构立场。如涉版权问题，请权利人联系下架。",
+      "一项关于北京成年工作者中糖尿病前期和糖尿病进展与回归模式的研究，强调了年龄特定预防策略的重要性。 A study on the progression and regression patterns of prediabetes and diabetes among working adults in Beijing, highlighting the importance of age-specific prevention strategies.",
     thumbnail:
       "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1800&auto=format&fit=crop",
-    source: "PubMed prediabetes lifestyle intervention via PubMed (PloS one)",
+    source: "国际医学期刊",
     doi: "10.1371/journal.pone.0343993",
     originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42160311/",
     publishedAt: "2026-01-01",
@@ -1516,22 +1552,54 @@ export const reviewArticlesManifest: ReviewArticleManifestItem[] = [
     reviewRequired: true,
     qualityStatus: "needs_revision",
     qualityIssues: [
-      "Missing required section: 先说结论",
-      "Missing required section: 为什么值得关注",
-      "Missing required section: 证据告诉我们什么",
-      "Missing required section: 应该怎样理解",
-      "Missing required section: 可以怎么做",
       "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
-      "Why-this-matters section is too short.",
-      "Evidence section is too short or too vague.",
-      "Meaning and limitations section is too short.",
-      "Action section is too short.",
-      "Reader action subsection is missing.",
-      "Health-tech insight subsection is missing.",
-      "Article contains visible Markdown heading markers.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
     ],
     contentPath:
       "packages/cms/src/collections/blog/content/prediabetes-diabetes-and-the-risk-of-progression-to-diabetes-among-worki-c31c2bee/en.mdx",
+    tags: ["medical-research", "prediabetes", "lifestyle"],
+    categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
+  },
+  {
+    slug: "progress-in-research-on-the-association-between-glucose-metabolism-disor-0cfe4d80",
+    titleZh: "葡萄糖代谢紊乱与动脉粥样硬化关联性研究进展",
+    titleEn:
+      "Understanding the Link Between Glucose Metabolism Disorders and Atherosclerosis",
+    summaryZh:
+      "本文就葡萄糖代谢紊乱与颅内和颅外动脉粥样硬化狭窄的关联性研究进行评述，强调早期干预和风险分层对预防中风的重要性。 This article provides a commentary on the research linking glucose metabolism disorders to intracranial and extracranial atherosclerotic stenosis, highlighting the importance of early intervention and ri",
+    summaryEn:
+      "本文就葡萄糖代谢紊乱与颅内和颅外动脉粥样硬化狭窄的关联性研究进行评述，强调早期干预和风险分层对预防中风的重要性。 This article provides a commentary on the research linking glucose metabolism disorders to intracranial and extracranial atherosclerotic stenosis, highlighting the importance of early intervention and ri",
+    bodyZh:
+      "本文就葡萄糖代谢紊乱与颅内和颅外动脉粥样硬化狭窄的关联性研究进行评述，强调早期干预和风险分层对预防中风的重要性。 This article provides a commentary on the research linking glucose metabolism disorders to intracranial and extracranial atherosclerotic stenosis, highlighting the importance of early intervention and ri",
+    bodyEn:
+      "本文就葡萄糖代谢紊乱与颅内和颅外动脉粥样硬化狭窄的关联性研究进行评述，强调早期干预和风险分层对预防中风的重要性。 This article provides a commentary on the research linking glucose metabolism disorders to intracranial and extracranial atherosclerotic stenosis, highlighting the importance of early intervention and ri",
+    thumbnail:
+      "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1800&auto=format&fit=crop",
+    source: "国际医学期刊",
+    doi: "10.3389/fcvm.2026.1866635",
+    originalUrl: "https://pubmed.ncbi.nlm.nih.gov/42338726/",
+    publishedAt: "2026-01-01",
+    publishedAtLabel: "2026-01-01",
+    draft: true,
+    reviewRequired: true,
+    qualityStatus: "needs_revision",
+    qualityIssues: [
+      "Chinese commentary is short for the required SOP structure",
+      "Chinese SOP article is too short; it needs at least 1800 Chinese characters.",
+      "Chinese SOP article needs at least 12 short readable paragraphs.",
+      "Chinese article does not clearly explain the evidence.",
+      "Chinese article does not clearly explain evidence limits.",
+      "Chinese article lacks practical reader-facing actions.",
+      "Chinese article lacks health-tech or system insight.",
+      "English plain-language version is too short.",
+    ],
+    contentPath:
+      "packages/cms/src/collections/blog/content/progress-in-research-on-the-association-between-glucose-metabolism-disor-0cfe4d80/en.mdx",
     tags: ["medical-research", "prediabetes", "lifestyle"],
     categoryLabels: ["医学研究", "糖尿病前期", "生活方式"],
   },

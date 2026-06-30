@@ -11,9 +11,9 @@ export type ReadingBlock =
 const hasCjk = (text: string) => /[\u3400-\u9fff]/.test(text);
 
 const sentenceParts = (text: string) =>
-  text.match(/[^。！？!?；;]+[。！？!?；;]?/g)?.map((part) => part.trim()) || [
-    text,
-  ];
+  text
+    .match(/[^\u3002\uff01\uff1f!?]+[\u3002\uff01\uff1f!?]?/g)
+    ?.map((part) => part.trim()) || [text];
 
 const splitOversizedSentence = (sentence: string, maxLength: number) => {
   if (sentence.length <= maxLength) {
@@ -26,9 +26,9 @@ const splitOversizedSentence = (sentence: string, maxLength: number) => {
   while (remaining.length > maxLength) {
     const window = remaining.slice(0, maxLength);
     const breakAt = Math.max(
-      window.lastIndexOf("，"),
+      window.lastIndexOf("\uff0c"),
       window.lastIndexOf(","),
-      window.lastIndexOf("、"),
+      window.lastIndexOf("\u3001"),
       window.lastIndexOf(" "),
     );
     const cut = breakAt > maxLength * 0.45 ? breakAt + 1 : maxLength;
@@ -52,7 +52,7 @@ const compactParagraphs = (paragraph: string) => {
   let current = "";
 
   parts.forEach((part) => {
-    const next = current ? `${current} ${part}` : part;
+    const next = current ? current + " " + part : part;
 
     if (current && next.length > maxLength) {
       chunks.push(current.trim());
@@ -73,18 +73,30 @@ const compactParagraphs = (paragraph: string) => {
 const normalizeLooseBullets = (content: string) =>
   content
     .replace(/\r\n/g, "\n")
-    .replace(/([。！？!?；;])\s+[-*]\s+/g, "$1\n- ")
+    .replace(/([\u3002\uff01\uff1f!?])\s+[-*]\s+/g, "$1\n- ")
     .replace(/\n[ \t]*[-*]\s+/g, "\n- ");
 
 const sanitizeReaderText = (content: string) =>
   content
     .replace(/^#{1,6}\s*/gm, "")
-    .replace(/研究背景/g, "为什么值得关注")
-    .replace(/核心发现/g, "证据告诉我们什么")
-    .replace(/你的解读与批判/g, "应该怎样理解")
-    .replace(/临床\/商业启发/g, "可以怎么做")
-    .replace(/A[.、．：:]\s*给糖前读者的行动建议/g, "给糖前读者")
-    .replace(/B[.、．：:]\s*给健康科技行业的启发/g, "给健康科技行业")
+    .replace(
+      /^(\u7814\u7a76\u80cc\u666f|\u6838\u5fc3\u53d1\u73b0|\u4f60\u7684\u6279\u5224\u4e0e\u89e3\u8bfb|\u4f60\u7684\u89e3\u8bfb\u4e0e\u6279\u5224|\u4e34\u5e8a\/\u5546\u4e1a\u542f\u53d1)\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(
+      /^(\u5148\u8bf4\u7ed3\u8bba|\u4e3a\u4ec0\u4e48\u503c\u5f97\u5173\u6ce8|\u8bc1\u636e\u544a\u8bc9\u6211\u4eec\u4ec0\u4e48|\u5e94\u8be5\u600e\u6837\u7406\u89e3|\u53ef\u4ee5\u600e\u4e48\u505a)\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(
+      /^A[.\u3001\uff0e\uff1a:]\s*\u7ed9\u7cd6\u524d\u8bfb\u8005\u7684\u884c\u52a8\u5efa\u8bae\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(
+      /^B[.\u3001\uff0e\uff1a:]\s*\u7ed9\u5065\u5eb7\u79d1\u6280\u884c\u4e1a\u7684\u542f\u53d1\s*[:\uff1a]?/gm,
+      "",
+    )
+    .replace(/^\u7ed9\u7cd6\u524d\u8bfb\u8005\s*[:\uff1a]?/gm, "")
+    .replace(/^\u7ed9\u5065\u5eb7\u79d1\u6280\u884c\u4e1a\s*[:\uff1a]?/gm, "")
     .replace(/\n{3,}/g, "\n\n");
 
 export const readingBlocks = (content: string): ReadingBlock[] =>
