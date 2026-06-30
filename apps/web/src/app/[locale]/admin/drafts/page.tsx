@@ -240,6 +240,11 @@ export default async function AdminDraftsPage({
                     <form action={reviseDraftWithSopAction}>
                       <input
                         type="hidden"
+                        name="returnTo"
+                        value={pathsConfig.admin.drafts.index}
+                      />
+                      <input
+                        type="hidden"
                         name="contentPath"
                         value={article.contentPath}
                       />

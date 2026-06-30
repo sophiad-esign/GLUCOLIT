@@ -59,10 +59,18 @@ export const dynamic = "force-dynamic";
 
 export default async function DraftPreviewPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{
+    error?: string;
+    issues?: string;
+    revised?: string;
+    revisionWarning?: string;
+  }>;
 }) {
   const { slug } = await params;
+  const { error, issues, revised, revisionWarning } = await searchParams;
   const article = await getAdminReviewArticleBySlug(slug);
 
   if (!article || !article.draft) {
@@ -79,6 +87,21 @@ export default async function DraftPreviewPage({
 
   return (
     <div className="space-y-6">
+      {revised ? (
+        <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">
+          SOP 修订已写回，下面显示的是最新版本。
+        </div>
+      ) : null}
+      {revisionWarning ? (
+        <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+          修订已写回，但仍有质量问题：{issues || "请继续人工复核。"}
+        </div>
+      ) : null}
+      {error ? (
+        <div className="rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-800">
+          {error}
+        </div>
+      ) : null}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <TurboLink
           href={pathsConfig.admin.drafts.index}
@@ -90,6 +113,11 @@ export default async function DraftPreviewPage({
 
         <div className="flex flex-col gap-2 sm:flex-row">
           <form action={reviseDraftWithSopAction}>
+            <input
+              type="hidden"
+              name="returnTo"
+              value={pathsConfig.admin.drafts.draft(article.slug)}
+            />
             <input
               type="hidden"
               name="contentPath"

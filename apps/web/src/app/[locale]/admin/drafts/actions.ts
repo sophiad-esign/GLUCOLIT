@@ -35,10 +35,11 @@ type QualityEvaluation = {
 
 const envValue = (name: string) => process.env[name];
 
-const redirectWithError = (message: string): never => {
-  redirect(
-    `${pathsConfig.admin.drafts.index}?error=${encodeURIComponent(message)}`,
-  );
+const redirectWithError = (
+  message: string,
+  returnTo: string = pathsConfig.admin.drafts.index,
+): never => {
+  redirect(`${returnTo}?error=${encodeURIComponent(message)}`);
 };
 
 const assertContentPath = (path: string) => {
@@ -475,6 +476,46 @@ const revisionScore = (
   countEnglishWords(article.bodyEn ?? "") * 2 -
   (evaluation?.issues.length ?? 0) * 300;
 
+const ngrams = (value: string, size = 3) => {
+  const normalized = value.replace(/[\s\p{P}\p{S}]+/gu, "").toLowerCase();
+  const result = new Set<string>();
+  for (let index = 0; index <= normalized.length - size; index += 1) {
+    result.add(normalized.slice(index, index + size));
+  }
+  return result;
+};
+
+const revisionSimilarity = (raw: string, revised: RevisedArticle) => {
+  const currentZh = sectionText(
+    raw,
+    "## \u539f\u6587\u7cbe\u534e\u6458\u8981",
+    ["## English Plain-Language Version", "## Source", "## Research Primer"],
+  );
+  const current = ngrams(currentZh);
+  const next = ngrams(revised.bodyZh ?? "");
+  if (current.size === 0 || next.size === 0) return 0;
+
+  let overlap = 0;
+  current.forEach((part) => {
+    if (next.has(part)) overlap += 1;
+  });
+  return overlap / new Set([...current, ...next]).size;
+};
+
+const evaluateRevisionAgainstSource = (
+  raw: string,
+  revised: RevisedArticle,
+): QualityEvaluation => {
+  const evaluation = evaluateRevisedArticle(revised);
+  if (revisionSimilarity(raw, revised) > 0.9) {
+    evaluation.issues.push(
+      "Revision is too similar to the existing article; perform a substantive rewrite.",
+    );
+    evaluation.ready = false;
+  }
+  return evaluation;
+};
+
 const buildRevisionAttemptRaw = (
   originalRaw: string,
   revised: RevisedArticle,
@@ -843,6 +884,11 @@ export async function reviseDraftWithSopAction(formData: FormData) {
   const contentPath = getFormString(formData, "contentPath");
   const slug = getFormString(formData, "slug");
   const title = getFormString(formData, "title") || slug;
+  const requestedReturnTo = getFormString(formData, "returnTo");
+  const returnTo =
+    requestedReturnTo === pathsConfig.admin.drafts.draft(slug)
+      ? requestedReturnTo
+      : pathsConfig.admin.drafts.index;
 
   assertContentPath(contentPath);
 
@@ -858,13 +904,16 @@ export async function reviseDraftWithSopAction(formData: FormData) {
 
   let attemptRaw = current.raw;
   let revised = await reviseWithLlm(attemptRaw);
-  let evaluation = evaluateRevisedArticle(revised);
+  let evaluation = evaluateRevisionAgainstSource(current.raw, revised);
 
   for (let attempt = 2; attempt <= 5 && !evaluation.ready; attempt += 1) {
     attemptRaw = buildRevisionAttemptRaw(current.raw, revised, evaluation);
 
     const nextRevision = await reviseWithLlm(attemptRaw, evaluation.issues);
-    const nextEvaluation = evaluateRevisedArticle(nextRevision);
+    const nextEvaluation = evaluateRevisionAgainstSource(
+      current.raw,
+      nextRevision,
+    );
 
     if (
       nextEvaluation.ready ||
@@ -874,6 +923,13 @@ export async function reviseDraftWithSopAction(formData: FormData) {
       revised = nextRevision;
       evaluation = nextEvaluation;
     }
+  }
+
+  if (revisionSimilarity(current.raw, revised) > 0.9) {
+    redirectWithError(
+      "SOP revision did not materially change the article. Please retry; no unchanged version was saved.",
+      returnTo,
+    );
   }
 
   const updated = buildRevisedMdx(current.raw, revised, evaluation);
@@ -892,13 +948,11 @@ export async function reviseDraftWithSopAction(formData: FormData) {
 
   if (!evaluation.ready) {
     redirect(
-      `${pathsConfig.admin.drafts.index}?revisionWarning=${encodeURIComponent(slug)}&issues=${encodeURIComponent(evaluation.issues.join("; "))}`,
+      `${returnTo}?revisionWarning=${encodeURIComponent(slug)}&issues=${encodeURIComponent(evaluation.issues.join("; "))}`,
     );
   }
 
-  redirect(
-    `${pathsConfig.admin.drafts.index}?revised=${encodeURIComponent(slug)}`,
-  );
+  redirect(`${returnTo}?revised=${encodeURIComponent(slug)}`);
 }
 
 export async function publishDraftAction(formData: FormData) {
