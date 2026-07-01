@@ -7,6 +7,7 @@ import { ogttAnalysis } from "@workspace/db/schema";
 import { db } from "@workspace/db/server";
 
 import { enforceAdmin, enforceAuth, validate } from "../../middleware";
+import { companionRequestSchema, respondAsCompanion } from "./companion";
 import { analyzeFood, foodAnalysisRequestSchema } from "./food";
 import { analyzeOgtt, ogttRequestSchema } from "./ogtt";
 
@@ -43,6 +44,19 @@ export const aiRouter = new Hono()
       return c.json(
         {
           error: "餐食识别暂时失败。请确认照片清晰、完整包含餐盘后重试。",
+        },
+        422,
+      );
+    }
+  })
+  .post("/companion", validate("json", companionRequestSchema), async (c) => {
+    try {
+      return c.json(await respondAsCompanion(c.req.valid("json")));
+    } catch (error) {
+      console.error("Companion response failed", error);
+      return c.json(
+        {
+          error: "陪伴回复暂时不可用。你可以先完成一个最小行动，稍后再试。",
         },
         422,
       );

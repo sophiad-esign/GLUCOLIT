@@ -11,6 +11,7 @@ import {
   TOPIC_CLUSTERS,
 } from "~/modules/articles/data";
 import { TurboLink } from "~/modules/common/turbo-link";
+import { CompanionCoach } from "~/modules/companion/companion-coach";
 import { FoodAnalyzer } from "~/modules/food/food-analyzer";
 import { OgttAnalyzer } from "~/modules/ogtt/ogtt-analyzer";
 
@@ -156,6 +157,23 @@ export default async function TopicGuidePage({
             </p>
           </div>
           <FoodAnalyzer />
+        </section>
+      ) : null}
+
+      {topic.slug === "stress-emotion" ? (
+        <section className="mt-10" id="companion-coach">
+          <div className="mb-6 max-w-3xl">
+            <p className="text-sm font-semibold tracking-[0.16em] text-[#2d5a87] uppercase">
+              DPP behavior companion
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-normal text-slate-950 dark:text-white">
+              难受时有人接住，偏离后还能重新开始
+            </h2>
+            <p className="mt-3 text-base leading-8 text-slate-600 dark:text-slate-300">
+              面向长期生活方式改变过程中的疲惫、渴望、平台期和自我怀疑，提供每日签到、即时陪伴、重新开始计划与每周复盘。
+            </p>
+          </div>
+          <CompanionCoach />
         </section>
       ) : null}
 
