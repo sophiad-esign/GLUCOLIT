@@ -216,9 +216,7 @@ export function CompanionCoach() {
         <CardHeader className="bg-gradient-to-r from-rose-50 to-sky-50">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
             <div>
-              <CardTitle className="text-2xl">
-                糖前同行 · 147天陪伴教练
-              </CardTitle>
+              <CardTitle className="text-2xl">糖前同行 · 陪伴教练</CardTitle>
               <CardDescription className="mt-2 max-w-2xl leading-6">
                 难受时有人接住，偏离后还能重新开始。它是行为改变陪伴工具，不替代心理治疗或医疗服务。
               </CardDescription>
