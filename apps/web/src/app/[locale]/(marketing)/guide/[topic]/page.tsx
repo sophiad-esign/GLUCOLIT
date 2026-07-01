@@ -69,7 +69,8 @@ export default async function TopicGuidePage({
           <TurboLink
             href="/articles"
             className={buttonVariants({
-              className: "bg-white text-[#1e3a5f] hover:bg-sky-50",
+              className:
+                "!bg-white !text-[#1e3a5f] hover:!bg-sky-50 focus-visible:!text-[#1e3a5f]",
             })}
           >
             浏览全部文献
@@ -78,7 +79,8 @@ export default async function TopicGuidePage({
             href="/subscribe"
             className={buttonVariants({
               variant: "outline",
-              className: "border-white/40 text-white hover:bg-white/10",
+              className:
+                "!border-white/50 !bg-transparent !text-white hover:!bg-white/10 hover:!text-white focus-visible:!text-white",
             })}
           >
             订阅每日更新
