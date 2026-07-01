@@ -98,7 +98,21 @@ const createFallbackResponse = (
   fallback: true,
 });
 
-const parseModelResponse = (
+const cleanSection = (value?: string) =>
+  value
+    ?.trim()
+    .replace(/^[-*•]\s*/, "")
+    .replace(/\s+/g, " ");
+
+const containsInternalCoachingLanguage = (value?: string) =>
+  Boolean(
+    value &&
+    /(?:鼓励|建议|引导|帮助|询问)(?:这位)?用户|(?:用户|来访者)(?:分享|表达|完成|尝试)/.test(
+      value,
+    ),
+  );
+
+export const parseCompanionModelResponse = (
   text: string,
   input: z.infer<typeof companionRequestSchema>,
 ) => {
@@ -122,16 +136,30 @@ const parseModelResponse = (
     }
   }
 
-  const sections = cleaned
-    .replace(/^回复[：:]\s*/i, "")
-    .split(/\n+(?:下一步(?:行动)?|行动建议)[：:]\s*/i);
-  const reply = sections[0]?.trim();
   const fallback = createFallbackResponse(input);
+  const withoutReplyLabel = cleaned.replace(/^回复[：:]\s*/i, "");
+  const nextActionMatch = withoutReplyLabel.match(
+    /(?:下一步(?:行动)?|行动建议)[：:]\s*([\s\S]*?)(?=(?:肯定|鼓励)[：:]|$)/i,
+  );
+  const affirmationMatch = withoutReplyLabel.match(
+    /(?:肯定|鼓励)[：:]\s*([\s\S]*?)$/i,
+  );
+  const reply = cleanSection(
+    withoutReplyLabel.split(/(?:下一步(?:行动)?|行动建议|肯定|鼓励)[：:]/i)[0],
+  );
+  const parsedNextAction = cleanSection(nextActionMatch?.[1]);
+  const parsedAffirmation = cleanSection(affirmationMatch?.[1]);
 
   return {
     reply: reply?.slice(0, 2500) || fallback.reply,
-    nextAction: sections[1]?.trim().slice(0, 300) || fallback.nextAction,
-    affirmation: fallback.affirmation,
+    nextAction:
+      !containsInternalCoachingLanguage(parsedNextAction) && parsedNextAction
+        ? parsedNextAction.slice(0, 300)
+        : fallback.nextAction,
+    affirmation:
+      !containsInternalCoachingLanguage(parsedAffirmation) && parsedAffirmation
+        ? parsedAffirmation.slice(0, 300)
+        : fallback.affirmation,
   };
 };
 
@@ -168,6 +196,7 @@ You are not a therapist or doctor. Do not diagnose, promise reversal, prescribe 
 Do not call normal habit-change discomfort a medical withdrawal syndrome.
 Use natural Simplified Chinese. Validate feelings before suggesting action. Treat lapses as information, never as failure. Preserve autonomy and make actions tiny and specific.
 If the user mentions self-harm, suicide, wanting to die, or inability to stay safe, do not provide routine coaching; instruct immediate human and emergency support.
+Address the user directly as "你". Never expose coaching instructions or phrases such as "用户", "鼓励用户", "建议用户", or "引导用户".
 Return JSON only with keys reply, nextAction, affirmation. No Markdown fences.`,
         },
         {
@@ -183,7 +212,7 @@ Return JSON only with keys reply, nextAction, affirmation. No Markdown fences.`,
       ],
     });
 
-    return { crisis: false, ...parseModelResponse(text, input) };
+    return { crisis: false, ...parseCompanionModelResponse(text, input) };
   } catch (error) {
     console.error("Companion model unavailable; using safe fallback", error);
     return createFallbackResponse(input);
