@@ -61,7 +61,7 @@ const HomePage = async ({
                 内容按 Diet / Exercise / Sleep / Stress / Supplements
                 的干预路径组织，而不是只按疾病分类。
               </p>
-              <p>新文章先进入后台草稿库，人工审核后才会发布到前台。</p>
+              <p>每篇内容都保留原始研究来源、证据边界和可执行行动建议。</p>
               <p>所有医学内容仅供科普参考，不替代医生诊疗建议。</p>
             </div>
           </aside>
@@ -143,7 +143,7 @@ const HomePage = async ({
               暂无已发布文章
             </h3>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-300">
-              后台草稿通过人工审核并发布后，最新文章会显示在这里。
+              内容正在持续更新，欢迎先从上方主题指南开始阅读。
             </p>
           </div>
         )}
@@ -160,7 +160,7 @@ const HomePage = async ({
                 订阅每日文献更新
               </h2>
               <p className="mt-3 max-w-2xl text-sm leading-7 text-sky-50">
-                每天追踪最新代谢健康研究，优先把可执行、证据边界清楚的内容放进草稿审核流程。
+                每天精选最新代谢健康研究，把重要结论转化为清晰、可执行的生活方式建议。
               </p>
             </div>
             <TurboLink

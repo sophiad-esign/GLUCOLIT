@@ -285,7 +285,7 @@ export default async function ArticleDetailPage({
               <p className="font-semibold text-slate-950 dark:text-white">
                 GLUCOLIT 解读
               </p>
-              <p>医学科普写作流程 + 人工审核后发布</p>
+              <p>基于公开研究证据整理，并保留原文来源与适用边界</p>
             </div>
             <div>
               <p className="font-semibold text-slate-950 dark:text-white">

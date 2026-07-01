@@ -35,7 +35,7 @@ export default async function ArticlesPage({
           糖尿病前期与代谢健康干预指南库
         </h1>
         <p className="mt-4 max-w-3xl text-base leading-8 text-sky-50">
-          这里收录已经通过人工审核的干预指南。顶部先给结论、评分和行动清单，研究证据放在底部，方便你核查
+          这里收录面向糖前期生活方式干预的专业指南。顶部先给结论、评分和行动清单，研究证据放在底部，方便你核查
           PubMed、DOI 或开放获取原文。
         </p>
       </section>

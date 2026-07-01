@@ -20,7 +20,6 @@ const columns = [
     title: "读者服务",
     links: [
       { title: "订阅每日更新", href: "/subscribe" },
-      { title: "后台草稿审核", href: pathsConfig.admin.drafts.index },
       { title: "公开文章", href: pathsConfig.marketing.articles.index },
     ],
   },
@@ -55,10 +54,10 @@ export const Footer = async () => {
               </div>
               <div>
                 <p className="font-semibold text-slate-950 dark:text-white">
-                  审核流程说明
+                  内容原则
                 </p>
                 <p>
-                  自动生成内容先进入草稿库，人工检查事实边界、版权风险和可读性后再发布。
+                  说明研究来源、适用人群和证据边界，帮助读者判断信息是否适合自己。
                 </p>
               </div>
               <div>

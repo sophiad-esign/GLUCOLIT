@@ -2,7 +2,7 @@
 
 export const metadata = {
   title: "关于 GLUCOLIT",
-  description: "GLUCOLIT 的定位、数据源、审核流程和医学免责声明。",
+  description: "GLUCOLIT 的定位、研究来源、证据边界和医学免责声明。",
 };
 
 export default function AboutPage() {
@@ -22,10 +22,10 @@ export default function AboutPage() {
           </p>
           <p>
             网站优先使用 PubMed、PubMed Central、Europe PMC、Unpaywall
-            和开放获取论文链接。自动生成内容不会直接发布，必须经过人工审核。
+            和开放获取论文链接，并保留可供读者继续核查的原始出处。
           </p>
           <p>
-            审核机制包括：原文来源核查、证据等级判断、版权风险检查、因果边界检查、中文可读性检查，以及是否能转化为可执行行动清单。
+            为帮助读者判断信息是否适合自己，内容会说明研究来源、证据强度、适用人群、因果边界和可以尝试的行动。
           </p>
           <p>
             本站内容仅供科普参考，不构成诊断、治疗或用药建议。如果你已经确诊糖尿病、正在用药、怀孕或有低血糖风险，请优先咨询专业医生。

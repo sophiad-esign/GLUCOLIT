@@ -9,7 +9,6 @@ import { Button } from "@workspace/ui-web/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@workspace/ui-web/card";
@@ -150,9 +149,6 @@ export function LifestyleTracker({ focus = "exercise-sleep" }: Props) {
             ? "饮食之外：睡眠与运动影响记录"
             : "睡眠与运动数据追踪"}
         </CardTitle>
-        <CardDescription className="max-w-3xl leading-6">
-          参考你4—6月记录习惯，保留睡眠时长、深睡与REM、夜醒、精力、压力、饭后活动、有氧和抗阻训练。数据只保存在当前浏览器。
-        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-8 pt-6">
         <section>

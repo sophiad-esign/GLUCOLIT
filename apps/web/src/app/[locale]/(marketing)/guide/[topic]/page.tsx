@@ -189,7 +189,7 @@ export default async function TopicGuidePage({
               记录睡眠与运动，获得连续趋势分析
             </h2>
             <p className="mt-3 text-base leading-8 text-slate-600 dark:text-slate-300">
-              参考4—6月真实记录格式，综合睡眠、精力、压力、有氧、饭后活动和抗阻训练给出判断与建议。
+              综合睡眠、精力、压力、有氧、饭后活动和抗阻训练，给出连续趋势判断与可执行建议。
             </p>
           </div>
           <LifestyleTracker />
@@ -247,7 +247,7 @@ export default async function TopicGuidePage({
               这个主题正在积累文章
             </h3>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-7 text-slate-600 dark:text-slate-300">
-              RSS 工作流生成并审核发布相关研究后，会自动进入这个主题集群。
+              相关研究正在持续整理中，你可以先查看行动清单或浏览其他主题。
             </p>
           </div>
         )}
@@ -255,7 +255,7 @@ export default async function TopicGuidePage({
 
       <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-950">
         <p className="text-sm font-semibold tracking-[0.16em] text-[#2d5a87] uppercase">
-          Internal links
+          Related topics
         </p>
         <h2 className="mt-3 text-2xl font-bold tracking-normal text-slate-950 dark:text-white">
           继续学习相关主题
