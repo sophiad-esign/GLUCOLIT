@@ -75,7 +75,7 @@ export default function SubscribePage() {
         <aside className="bg-gradient-to-br from-[#1e3a5f] to-[#2d5a87] p-8 text-white sm:p-10">
           <h2 className="text-2xl font-bold tracking-normal">你会收到什么？</h2>
           <ul className="mt-6 list-disc space-y-4 pl-5 text-sm leading-7 text-sky-50">
-            <li>每天最多 2 篇候选研究的人工审核草稿。</li>
+            <li>每天最少两篇顶级科普文献帮助你培养健康意识。</li>
             <li>干预指南式摘要：结论、评分、行动清单和 Research Primer。</li>
             <li>原文 DOI、PubMed 或开放获取链接，方便继续核查。</li>
           </ul>
