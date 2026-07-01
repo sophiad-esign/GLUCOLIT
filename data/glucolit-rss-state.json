@@ -3768,6 +3768,207 @@
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
+    },
+    "8009e499df660a81": {
+      "title": "Adipose cellularity and long-term development of impaired glucose metabolism: Swedish cohort study from 1988 through 2016.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (EBioMedicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42228998/",
+      "pmid": "42228998",
+      "pmcid": "PMC13254842",
+      "doi": "10.1016/j.ebiom.2026.106299",
+      "oa_url": "https://europepmc.org/articles/PMC13254842",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-01",
+      "score": 20,
+      "matched": [
+        "impaired fasting glucose",
+        "insulin resistance",
+        "physical activity",
+        "glucose"
+      ],
+      "created_at": "2026-07-01T18:23:40.716651+00:00",
+      "last_seen_at": "2026-07-01T18:23:40.716671+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/adipose-cellularity-and-long-term-development-of-impaired-glucose-metabo-8009e499/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "English plain-language article is short",
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "1f89f9dbb9f1e894": {
+      "title": "Discretionary Screen Time and Progression From Prediabetes to Type 2 Diabetes: Mediating Roles of Sleep and the Triglyceride-Glucose Index.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Diabetes, obesity & metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42010366/",
+      "pmid": "42010366",
+      "pmcid": "",
+      "doi": "10.1111/dom.70796",
+      "oa_url": "https://doi.org/10.1111/dom.70796",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 19,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "sleep",
+        "glucose"
+      ],
+      "created_at": "2026-07-01T18:24:11.128613+00:00",
+      "last_seen_at": "2026-07-01T18:24:11.128625+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/discretionary-screen-time-and-progression-from-prediabetes-to-type-2-dia-1f89f9db/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "a53d5ac0bf425539": {
+      "title": "A Lasting Legacy: Long-Term Effects of Exercise Training on Cardiometabolic Health in the STRRIDE-Prediabetes Reunion Study.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (medRxiv : the preprint server for health sciences)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42245018/",
+      "pmid": "42245018",
+      "pmcid": "PMC13232391",
+      "doi": "10.64898/2026.05.26.26352907",
+      "oa_url": "https://europepmc.org/articles/PMC13232391",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 2072,
+      "published_at": "2026-05-28",
+      "score": 18,
+      "matched": [
+        "prediabetes",
+        "weight loss",
+        "diet",
+        "exercise"
+      ],
+      "created_at": "2026-07-01T18:24:42.907571+00:00",
+      "last_seen_at": "2026-07-01T18:24:42.907585+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/a-lasting-legacy-long-term-effects-of-exercise-training-on-cardiometabol-a53d5ac0/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "8eff6207f030acce": {
+      "title": "Energy beats: Daily and circadian rhythms in mitochondrial biology.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Mitochondrion)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42364884/",
+      "pmid": "42364884",
+      "pmcid": "",
+      "doi": "10.1016/j.mito.2026.102191",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-27",
+      "score": 23,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "sleep",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-07-01T18:25:15.657382+00:00",
+      "last_seen_at": "2026-07-01T18:25:15.657396+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/energy-beats-daily-and-circadian-rhythms-in-mitochondrial-biology-8eff6207/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "69df9ff32fc06fea": {
+      "title": "Physical Activity Self-Reflections: A Year-Long Analysis of Barriers and Facilitators in a Diabetes Prevention Program.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Canadian journal of diabetes)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42155677/",
+      "pmid": "42155677",
+      "pmcid": "",
+      "doi": "10.1016/j.jcjd.2026.05.003",
+      "oa_url": "https://doi.org/10.1016/j.jcjd.2026.05.003",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-05-18",
+      "score": 21,
+      "matched": [
+        "diabetes prevention",
+        "weight loss",
+        "diet",
+        "exercise",
+        "physical activity"
+      ],
+      "created_at": "2026-07-01T18:25:49.241207+00:00",
+      "last_seen_at": "2026-07-01T18:25:49.241223+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/physical-activity-self-reflections-a-year-long-analysis-of-barriers-and-69df9ff3/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "e737a4e93345fbcd": {
+      "title": "Impact of Elovl3 Suppression on Sleep Deprivation-Induced Hepatic Steatosis and Glucose Intolerance in Mice.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Cureus)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42153054/",
+      "pmid": "42153054",
+      "pmcid": "PMC13180340",
+      "doi": "10.7759/cureus.107228",
+      "oa_url": "https://europepmc.org/articles/PMC13180340",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-04-01",
+      "score": 30,
+      "matched": [
+        "prediabetic",
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "physical activity",
+        "sleep",
+        "glucose"
+      ],
+      "created_at": "2026-07-01T18:26:32.865507+00:00",
+      "last_seen_at": "2026-07-01T18:26:32.865518+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/impact-of-elovl3-suppression-on-sleep-deprivation-induced-hepatic-steato-e737a4e9/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
     }
   }
 }
