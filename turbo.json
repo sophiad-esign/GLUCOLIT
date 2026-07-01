@@ -7,7 +7,9 @@
         "KIMI_VISION_MODEL",
         "OPENAI_VISION_MODEL",
         "KIMI_COMPANION_MODEL",
-        "OPENAI_COMPANION_MODEL"
+        "OPENAI_COMPANION_MODEL",
+        "KIMI_LIFESTYLE_MODEL",
+        "OPENAI_LIFESTYLE_MODEL"
       ],
       "dependsOn": ["^build"],
       "outputs": [".cache/tsbuildinfo.json", "dist/**", "build/**"]

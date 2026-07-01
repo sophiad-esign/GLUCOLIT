@@ -13,6 +13,7 @@ import {
 import { TurboLink } from "~/modules/common/turbo-link";
 import { CompanionCoach } from "~/modules/companion/companion-coach";
 import { FoodAnalyzer } from "~/modules/food/food-analyzer";
+import { LifestyleTracker } from "~/modules/lifestyle/lifestyle-tracker";
 import { OgttAnalyzer } from "~/modules/ogtt/ogtt-analyzer";
 
 export function generateStaticParams() {
@@ -145,20 +146,53 @@ export default async function TopicGuidePage({
       ) : null}
 
       {topic.slug === "diet" ? (
-        <section className="mt-10" id="food-analyzer">
+        <>
+          <section className="mt-10" id="food-analyzer">
+            <div className="mb-6 max-w-3xl">
+              <p className="text-sm font-semibold tracking-[0.16em] text-[#2d5a87] uppercase">
+                AI meal analyzer
+              </p>
+              <h2 className="mt-2 text-3xl font-bold tracking-normal text-slate-950 dark:text-white">
+                拍下这一餐，获得糖前期饮食建议
+              </h2>
+              <p className="mt-3 text-base leading-8 text-slate-600 dark:text-slate-300">
+                AI
+                识别餐盘中的食物和目测份量，分析碳水质量、蛋白质、蔬菜与纤维搭配，并给出下一餐可以直接执行的调整建议。
+              </p>
+            </div>
+            <FoodAnalyzer />
+          </section>
+          <section className="mt-10" id="diet-lifestyle-tracker">
+            <div className="mb-6 max-w-3xl">
+              <p className="text-sm font-semibold tracking-[0.16em] text-[#2d5a87] uppercase">
+                Daily context tracker
+              </p>
+              <h2 className="mt-2 text-3xl font-bold tracking-normal text-slate-950 dark:text-white">
+                把饮食、睡眠与运动放在同一条时间线上
+              </h2>
+              <p className="mt-3 text-base leading-8 text-slate-600 dark:text-slate-300">
+                记录恢复状态与活动信息，避免只根据一顿饭或单日血糖下结论。
+              </p>
+            </div>
+            <LifestyleTracker focus="diet" />
+          </section>
+        </>
+      ) : null}
+
+      {topic.slug === "exercise-sleep" ? (
+        <section className="mt-10" id="lifestyle-tracker">
           <div className="mb-6 max-w-3xl">
             <p className="text-sm font-semibold tracking-[0.16em] text-[#2d5a87] uppercase">
-              AI meal analyzer
+              Sleep & movement tracker
             </p>
             <h2 className="mt-2 text-3xl font-bold tracking-normal text-slate-950 dark:text-white">
-              拍下这一餐，获得糖前期饮食建议
+              记录睡眠与运动，获得连续趋势分析
             </h2>
             <p className="mt-3 text-base leading-8 text-slate-600 dark:text-slate-300">
-              AI
-              识别餐盘中的食物和目测份量，分析碳水质量、蛋白质、蔬菜与纤维搭配，并给出下一餐可以直接执行的调整建议。
+              参考4—6月真实记录格式，综合睡眠、精力、压力、有氧、饭后活动和抗阻训练给出判断与建议。
             </p>
           </div>
-          <FoodAnalyzer />
+          <LifestyleTracker />
         </section>
       ) : null}
 

@@ -9,6 +9,7 @@ import { db } from "@workspace/db/server";
 import { enforceAdmin, enforceAuth, validate } from "../../middleware";
 import { companionRequestSchema, respondAsCompanion } from "./companion";
 import { analyzeFood, foodAnalysisRequestSchema } from "./food";
+import { analyzeLifestyle, lifestyleAnalysisRequestSchema } from "./lifestyle";
 import { analyzeOgtt, ogttRequestSchema } from "./ogtt";
 
 import type { UIMessage } from "ai";
@@ -62,6 +63,11 @@ export const aiRouter = new Hono()
       );
     }
   })
+  .post(
+    "/lifestyle",
+    validate("json", lifestyleAnalysisRequestSchema),
+    async (c) => c.json(await analyzeLifestyle(c.req.valid("json"))),
+  )
   .get("/ogtt", enforceAuth, enforceAdmin, async (c) => {
     const analyses = await db
       .select()
