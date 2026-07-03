@@ -23,4 +23,5 @@ if (
   console.warn("DATABASE_URL is not configured; skipping database migrations.");
 }
 
+run(["--filter", "@workspace/cms", "build"]);
 run(["--filter", "web", "build"]);
