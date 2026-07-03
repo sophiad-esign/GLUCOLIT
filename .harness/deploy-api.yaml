@@ -1,0 +1,55 @@
+pipeline:
+  name: GLUCOLIT API
+  identifier: GLUCOLIT_API
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: Test and deploy API
+        identifier: Test_and_deploy_API
+        type: CI
+        spec:
+          cloneCodebase: false
+          caching:
+            enabled: true
+          buildIntelligence:
+            enabled: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Verify
+                  identifier: Verify
+                  spec:
+                    shell: Sh
+                    command: |-
+                      git clone --depth 1 --branch codex/glucolit-food-demo https://github.com/sophiad-esign/GLUCOLIT.git repo
+                      cd repo
+                      corepack enable
+                      corepack prepare pnpm@11.1.3 --activate
+                      pnpm install --frozen-lockfile
+                      pnpm exec tsc -p packages/api/tsconfig.json --noEmit
+                      pnpm --filter @workspace/api test
+                      pnpm --filter miniprogram typecheck
+                      pnpm --filter miniprogram build
+              - step:
+                  type: Run
+                  name: Deploy API
+                  identifier: Deploy_API
+                  spec:
+                    shell: Sh
+                    envVariables:
+                      VERCEL_TOKEN: <+secrets.getValue("VERCEL_TOKEN")>
+                    command: |-
+                      cd repo
+                      test -n "$VERCEL_TOKEN"
+                      pnpm dlx vercel@latest pull --yes --environment=production --token="$VERCEL_TOKEN"
+                      pnpm dlx vercel@latest build --prod --token="$VERCEL_TOKEN"
+                      pnpm dlx vercel@latest deploy --prebuilt --prod --token="$VERCEL_TOKEN"

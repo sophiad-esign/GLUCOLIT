@@ -2,6 +2,7 @@ import { openai } from "@ai-sdk/openai";
 import { convertToModelMessages, streamText } from "ai";
 import { desc } from "drizzle-orm";
 import { Hono } from "hono";
+import { Buffer } from "node:buffer";
 
 import { ogttAnalysis } from "@workspace/db/schema";
 import { db } from "@workspace/db/server";
@@ -13,6 +14,30 @@ import { analyzeLifestyle, lifestyleAnalysisRequestSchema } from "./lifestyle";
 import { analyzeOgtt, ogttRequestSchema } from "./ogtt";
 
 import type { UIMessage } from "ai";
+
+const MAX_UPLOAD_BYTES = 5 * 1024 * 1024;
+const IMAGE_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
+
+const uploadedImageDataUrl = async (value: FormDataEntryValue | undefined) => {
+  if (!(value instanceof File)) {
+    throw new Error("请选择要上传的图片。");
+  }
+  if (!IMAGE_TYPES.has(value.type)) {
+    throw new Error("仅支持 JPEG、PNG 或 WebP 图片。");
+  }
+  if (value.size > MAX_UPLOAD_BYTES) {
+    throw new Error("图片不能超过 5MB，请压缩后重试。");
+  }
+
+  const encoded = Buffer.from(await value.arrayBuffer()).toString("base64");
+  return `data:${value.type};base64,${encoded}`;
+};
+
+const jsonField = (form: FormData, key: string, fallback: unknown) => {
+  const value = form.get(key);
+  if (typeof value !== "string" || !value.trim()) return fallback;
+  return JSON.parse(value);
+};
 
 export const aiRouter = new Hono()
   .post("/chat", enforceAuth, async (c) => {
@@ -45,6 +70,56 @@ export const aiRouter = new Hono()
       return c.json(
         {
           error: "餐食识别暂时失败。请确认照片清晰、完整包含餐盘后重试。",
+        },
+        422,
+      );
+    }
+  })
+  .post("/food-upload", async (c) => {
+    try {
+      const form = await c.req.formData();
+      const input = foodAnalysisRequestSchema.parse({
+        imageDataUrl: await uploadedImageDataUrl(
+          form.get("image") ?? undefined,
+        ),
+        mealType: form.get("mealType") || "unknown",
+        goal: form.get("goal") || "glucose",
+        notes: form.get("notes") || undefined,
+        consent: form.get("consent") === "true",
+      });
+      return c.json(await analyzeFood(input));
+    } catch (error) {
+      console.error("Food upload analysis failed", error);
+      return c.json(
+        {
+          error:
+            error instanceof Error
+              ? error.message
+              : "餐食识别暂时失败，请稍后重试。",
+        },
+        422,
+      );
+    }
+  })
+  .post("/ogtt-upload", async (c) => {
+    try {
+      const form = await c.req.formData();
+      const input = ogttRequestSchema.parse({
+        imageDataUrl: await uploadedImageDataUrl(
+          form.get("image") ?? undefined,
+        ),
+        profile: jsonField(form, "profile", {}),
+        consent: form.get("consent") === "true",
+      });
+      return c.json(await analyzeOgtt(input));
+    } catch (error) {
+      console.error("OGTT upload analysis failed", error);
+      return c.json(
+        {
+          error:
+            error instanceof Error
+              ? error.message
+              : "报告识别暂时失败，请改用手动录入。",
         },
         422,
       );

@@ -31,10 +31,25 @@ const foodItemSchema = z.object({
   ),
 });
 
+const nutrientRangeSchema = z
+  .object({
+    min: numberFromModel,
+    max: numberFromModel,
+  })
+  .transform(({ min, max }) => ({
+    min: Math.round(Math.min(min, max)),
+    max: Math.round(Math.max(min, max)),
+  }));
+
 const modelResultSchema = z.object({
   isFoodImage: z.boolean().catch(true),
   mealSummary: modelText(500),
   foods: z.array(foodItemSchema).max(20).catch([]),
+  caloriesKcal: nutrientRangeSchema,
+  carbsGrams: nutrientRangeSchema,
+  proteinGrams: nutrientRangeSchema,
+  fatGrams: nutrientRangeSchema,
+  fiberGrams: nutrientRangeSchema,
   estimatedCarbs: modelText(500),
   estimatedProtein: modelText(500),
   estimatedFiber: modelText(500),
@@ -80,7 +95,7 @@ const getVisionModel = () => {
   throw new Error("KIMI_API_KEY or OPENAI_API_KEY is required");
 };
 
-const parseJson = (text: string) =>
+export const parseFoodModelResult = (text: string) =>
   modelResultSchema.parse(
     JSON.parse(
       text
@@ -106,6 +121,7 @@ export const analyzeFood = async (
             type: "text",
             text: `You are assisting a registered dietitian with photo-based meal education for an adult with prediabetes.
 Analyze only what is visibly supported. Never claim exact calories, grams, ingredients, cooking oil, sugar, sodium, or portion weight from an image.
+Give conservative numeric ranges for calories and macronutrients. These ranges must reflect visible portion uncertainty and must not be presented as measurements.
 Estimate portions as ranges or visual household measures and explicitly list uncertainty.
 Assess carbohydrate quality and amount, protein, non-starchy vegetables, fiber, sugary drinks, sauces, and cooking method.
 Use a practical plate method: about half non-starchy vegetables, one quarter protein, one quarter high-fiber staple where appropriate.
@@ -113,9 +129,12 @@ Give specific swaps and eating-order suggestions. Do not prescribe medication, s
 Meal type: ${input.mealType}. User goal: ${input.goal}. User note: ${input.notes || "none"}.
 All user-facing string values must be written in clear, natural Simplified Chinese, including food names, portions, summaries, strengths, concerns, actions, and uncertainties.
 Return JSON only with exactly these keys:
-isFoodImage, mealSummary, foods, estimatedCarbs, estimatedProtein, estimatedFiber,
+isFoodImage, mealSummary, foods, caloriesKcal, carbsGrams, proteinGrams,
+fatGrams, fiberGrams, estimatedCarbs, estimatedProtein, estimatedFiber,
 plateBalanceScore, glycemicLoad, strengths, concerns, actions, uncertainties.
 foods items use keys name, estimatedPortion, category, confidence.
+caloriesKcal, carbsGrams, proteinGrams, fatGrams, and fiberGrams each use
+numeric keys min and max. Use a genuinely useful range, not identical values.
 category must be staple, protein, vegetable, fruit, fat, drink, or other.
 glycemicLoad must be low, medium, high, or uncertain.
 plateBalanceScore is 0-100. confidence is 0-1.`,
@@ -126,7 +145,7 @@ plateBalanceScore is 0-100. confidence is 0-1.`,
     ],
   });
 
-  const result = parseJson(text);
+  const result = parseFoodModelResult(text);
   if (!result.isFoodImage || result.foods.length === 0) {
     return {
       ...result,
@@ -166,6 +185,11 @@ ${foodRows}
 
 ## 营养结构估算
 
+- **热量：** ${result.caloriesKcal.min}–${result.caloriesKcal.max} 千卡
+- **碳水化合物：** ${result.carbsGrams.min}–${result.carbsGrams.max} 克
+- **蛋白质：** ${result.proteinGrams.min}–${result.proteinGrams.max} 克
+- **脂肪：** ${result.fatGrams.min}–${result.fatGrams.max} 克
+- **膳食纤维：** ${result.fiberGrams.min}–${result.fiberGrams.max} 克
 - **碳水化合物：** ${result.estimatedCarbs}
 - **蛋白质：** ${result.estimatedProtein}
 - **膳食纤维：** ${result.estimatedFiber}

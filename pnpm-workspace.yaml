@@ -37,9 +37,14 @@ catalogs:
     eslint-plugin-turbo: 2.9.14
 
 allowBuilds:
+  "@parcel/watcher": true
   "@sentry/cli": true
   "@shopify/react-native-skia": true
+  "@swc/core": true
+  "@tarojs/binding": true
+  "@tarojs/cli": true
   core-js: true
+  core-js-pure: true
   esbuild: true
   expo-superwall: true
   lefthook: true

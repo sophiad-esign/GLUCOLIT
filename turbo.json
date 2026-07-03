@@ -52,6 +52,7 @@
     "OPENAI_API_KEY",
     "OPENAI_MODEL",
     "SKIP_ENV_VALIDATION",
+    "TARO_APP_API_BASE_URL",
     "npm_lifecycle_event"
   ]
 }
