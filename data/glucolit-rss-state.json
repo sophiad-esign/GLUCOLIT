@@ -4145,7 +4145,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-04T17:28:40.724536+00:00",
+      "last_seen_at": "2026-07-05T17:39:03.648144+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -4605,6 +4605,208 @@
         "Chinese article needs more short readable paragraphs",
         "Chinese evidence story is too thin",
         "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "143482b5e2c8a1c7": {
+      "title": "Balanced Essential Amino Acids as Synergistic Therapeutic Agents in Resistance Training: Mechanistic and Clinical Perspectives on Muscle and Metabolic Health.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Nutrients)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42356377/",
+      "pmid": "42356377",
+      "pmcid": "PMC13306221",
+      "doi": "10.3390/nu18121990",
+      "oa_url": "https://doi.org/10.3390/nu18121990",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-19",
+      "score": 19,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "nutrition",
+        "exercise",
+        "glucose"
+      ],
+      "created_at": "2026-07-05T17:39:03.648597+00:00",
+      "last_seen_at": "2026-07-05T17:39:03.648602+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/balanced-essential-amino-acids-as-synergistic-therapeutic-agents-in-resi-143482b5/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "English plain-language article is short",
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "66f910941b71d7e4": {
+      "title": "Type 2 diabetes prevention programs at the community and municipal level: a scoping review of controlled intervention studies.",
+      "source": "PubMed prediabetes diet intervention via PubMed (BMC public health)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42387346/",
+      "pmid": "42387346",
+      "pmcid": "",
+      "doi": "10.1186/s12889-026-28319-8",
+      "oa_url": "https://doi.org/10.1186/s12889-026-28319-8",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 28,
+      "matched": [
+        "prediabetes",
+        "type 2 diabetes prevention",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "nutrition",
+        "physical activity",
+        "metabolic syndrome"
+      ],
+      "created_at": "2026-07-05T17:39:31.374305+00:00",
+      "last_seen_at": "2026-07-05T17:39:31.374322+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/type-2-diabetes-prevention-programs-at-the-community-and-municipal-level-66f91094/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "820cdeed481203b3": {
+      "title": "Obesity and cardiovascular risk in down syndrome: Challenges and updated management.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Current problems in cardiology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42142642/",
+      "pmid": "42142642",
+      "pmcid": "",
+      "doi": "10.1016/j.cpcardiol.2026.103372",
+      "oa_url": "https://doi.org/10.1016/j.cpcardiol.2026.103372",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-05-15",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "nutrition",
+        "physical activity",
+        "sleep"
+      ],
+      "created_at": "2026-07-05T17:40:08.572665+00:00",
+      "last_seen_at": "2026-07-05T17:40:08.572683+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/obesity-and-cardiovascular-risk-in-down-syndrome-challenges-and-updated-820cdeed/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "324e800cd161e306": {
+      "title": "Relationships Between Regional and Ectopic Adiposity and Insulin Sensitivity in Early and Late Pregnancy.",
+      "source": "Diabetes Care via PubMed (Diabetes care)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41746698/",
+      "pmid": "41746698",
+      "pmcid": "PMC13108613",
+      "doi": "10.2337/dc25-2081",
+      "oa_url": "https://europepmc.org/articles/PMC13108613",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 1935,
+      "published_at": "2026-07-01",
+      "score": 16,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-05T17:40:36.328229+00:00",
+      "last_seen_at": "2026-07-05T17:40:36.328246+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/relationships-between-regional-and-ectopic-adiposity-and-insulin-sensiti-324e800c/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "cb6e2a179ac07f6f": {
+      "title": "Non-traditional metabolic indices predict incident circadian syndrome in middle-aged and older Chinese adults: a nationwide prospective cohort study and machine learning analysis.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Lipids in health and disease)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42129743/",
+      "pmid": "42129743",
+      "pmcid": "",
+      "doi": "10.1186/s12944-026-02972-9",
+      "oa_url": "https://doi.org/10.1186/s12944-026-02972-9",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-05-13",
+      "score": 16,
+      "matched": [
+        "insulin resistance",
+        "sleep",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-07-05T17:41:12.814283+00:00",
+      "last_seen_at": "2026-07-05T17:41:12.814302+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/non-traditional-metabolic-indices-predict-incident-circadian-syndrome-in-cb6e2a17/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "fd79ee49baf64cc5": {
+      "title": "Combined diet and physical activity effects on health-related outcomes in people with overweight or obesity: an overview of systematic reviews.",
+      "source": "PubMed digital diabetes prevention via PubMed (Frontiers in nutrition)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42211095/",
+      "pmid": "42211095",
+      "pmcid": "PMC13212185",
+      "doi": "10.3389/fnut.2026.1821389",
+      "oa_url": "https://europepmc.org/articles/PMC13212185",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 13,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "weight loss",
+        "diet",
+        "exercise",
+        "physical activity",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-05T17:41:47.333742+00:00",
+      "last_seen_at": "2026-07-05T17:41:47.333760+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/combined-diet-and-physical-activity-effects-on-health-related-outcomes-i-fd79ee49/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
     }
