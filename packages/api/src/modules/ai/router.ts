@@ -12,6 +12,7 @@ import { companionRequestSchema, respondAsCompanion } from "./companion";
 import { analyzeFood, foodAnalysisRequestSchema } from "./food";
 import { analyzeLifestyle, lifestyleAnalysisRequestSchema } from "./lifestyle";
 import { analyzeOgtt, ogttRequestSchema } from "./ogtt";
+import { analyzeProduct, productAnalysisRequestSchema } from "./product";
 
 import type { UIMessage } from "ai";
 
@@ -96,6 +97,29 @@ export const aiRouter = new Hono()
             error instanceof Error
               ? error.message
               : "餐食识别暂时失败，请稍后重试。",
+        },
+        422,
+      );
+    }
+  })
+  .post("/product-upload", async (c) => {
+    try {
+      const form = await c.req.formData();
+      const input = productAnalysisRequestSchema.parse({
+        imageDataUrl: await uploadedImageDataUrl(
+          form.get("image") ?? undefined,
+        ),
+        consent: form.get("consent") === "true",
+      });
+      return c.json(await analyzeProduct(input));
+    } catch (error) {
+      console.error("Product label analysis failed", error);
+      return c.json(
+        {
+          error:
+            error instanceof Error
+              ? error.message
+              : "配料表识别暂时失败，请稍后重试。",
         },
         422,
       );

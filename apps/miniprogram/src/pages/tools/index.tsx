@@ -1,6 +1,7 @@
 import { Button, Image, Input, Textarea, View } from "@tarojs/components";
 import { useState } from "react";
 
+import { BrandHeader } from "../../components/brand-header";
 import { apiRequest, chooseCompressedImage, uploadImage } from "../../lib/api";
 
 type FoodResult = {
@@ -32,6 +33,21 @@ type OgttResult = {
   riskLevel: string;
   reportMarkdown: string;
 };
+type ProductResult = {
+  productName: string;
+  summary: string;
+  suitability: "often" | "sometimes" | "rarely" | "uncertain";
+  addedSugar: string;
+  refinedCarbs: string;
+  protein: string;
+  fiber: string;
+  keyIngredients: string[];
+  strengths: string[];
+  concerns: string[];
+  shoppingAdvice: string[];
+  uncertainties: string[];
+  privacy: string;
+};
 const emptyMetrics: Metrics = {
   glucoseUnit: "mmol/L",
   fastingGlucose: null,
@@ -46,7 +62,7 @@ const numberValue = (value: string) =>
   value.trim() === "" ? null : Number(value);
 
 export default function ToolsPage() {
-  const [mode, setMode] = useState<"food" | "ogtt">("food");
+  const [mode, setMode] = useState<"food" | "ogtt" | "label">("food");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [food, setFood] = useState<FoodResult>();
@@ -55,6 +71,8 @@ export default function ToolsPage() {
   const [metrics, setMetrics] = useState<Metrics>(emptyMetrics);
   const [recognized, setRecognized] = useState(false);
   const [ogtt, setOgtt] = useState<OgttResult>();
+  const [product, setProduct] = useState<ProductResult>();
+  const [productPhoto, setProductPhoto] = useState("");
 
   const run = async (job: () => Promise<void>) => {
     if (busy) return;
@@ -107,15 +125,40 @@ export default function ToolsPage() {
       setOgtt(result);
     });
 
+  const analyzeProduct = () =>
+    run(async () => {
+      const file = await chooseCompressedImage();
+      setProductPhoto(file);
+      setProduct(undefined);
+      const result = await uploadImage<ProductResult>(
+        "/ai/product-upload",
+        file,
+        { consent: "true" },
+      );
+      setProduct(result);
+    });
+
   const update = (key: keyof Metrics, value: string) =>
     setMetrics((current) => ({ ...current, [key]: numberValue(value) }));
 
   return (
     <View className="page">
+      <BrandHeader />
       <View className="hero">
-        <View className="hero-title">先看清，再行动</View>
+        <View className="eyebrow">AI 工具</View>
+        <View className="hero-title">
+          {mode === "food"
+            ? "餐盘分析"
+            : mode === "ogtt"
+              ? "报告解读"
+              : "配料表分析"}
+        </View>
         <View className="hero-copy">
-          AI 负责识别和解释，关键医学指标由规则判断并由你最终核对。
+          {mode === "food"
+            ? "看蔬菜、蛋白质和主食结构，给出下一餐可以直接执行的建议。"
+            : mode === "ogtt"
+              ? "读取 HbA1c、空腹血糖、餐后 2 小时血糖等指标，并提醒你确认数值。"
+              : "识别添加糖、精制碳水、蛋白质和膳食纤维，辅助日常选购。"}
         </View>
       </View>
       <View className="row">
@@ -130,6 +173,12 @@ export default function ToolsPage() {
           onClick={() => setMode("ogtt")}
         >
           OGTT 解读
+        </Button>
+        <Button
+          className={`button ${mode === "label" ? "secondary" : "ghost"}`}
+          onClick={() => setMode("label")}
+        >
+          配料表
         </Button>
       </View>
       <View className="notice">
@@ -217,7 +266,7 @@ export default function ToolsPage() {
             </View>
           )}
         </>
-      ) : (
+      ) : mode === "ogtt" ? (
         <>
           <View className="card">
             <View className="card-title">上传报告或直接手动录入</View>
@@ -286,6 +335,67 @@ export default function ToolsPage() {
                 {ogtt.classification}
               </View>
               <View className="markdown">{ogtt.reportMarkdown}</View>
+            </View>
+          )}
+        </>
+      ) : (
+        <>
+          <View className="card">
+            <View className="card-title">拍食品配料表</View>
+            <View className="muted">
+              请同时拍到配料表与营养成分表，并确保文字清晰、没有反光。
+            </View>
+            <Button
+              loading={busy}
+              disabled={busy}
+              className="button"
+              onClick={analyzeProduct}
+            >
+              拍照上传
+            </Button>
+            {productPhoto && (
+              <Image
+                className="food-photo"
+                src={productPhoto}
+                mode="aspectFill"
+                showMenuByLongpress={false}
+              />
+            )}
+          </View>
+          {product && (
+            <View className="card">
+              <View className="eyebrow">配料表识别</View>
+              <View className="card-title">{product.productName}</View>
+              <View className="notice success">{product.summary}</View>
+              <View className="mini-grid">
+                <View className="mini-card">
+                  <View>添加糖</View>
+                  <View className="mini-value">{product.addedSugar}</View>
+                </View>
+                <View className="mini-card">
+                  <View>精制碳水</View>
+                  <View className="mini-value">{product.refinedCarbs}</View>
+                </View>
+                <View className="mini-card">
+                  <View>购买频率</View>
+                  <View className="mini-value">{product.suitability}</View>
+                </View>
+              </View>
+              <View className="card-title">蛋白质与膳食纤维</View>
+              <View>{product.protein}</View>
+              <View>{product.fiber}</View>
+              <View className="card-title">选购建议</View>
+              {product.shoppingAdvice.map((item, index) => (
+                <View className="action-step" key={item}>
+                  {index + 1}. {item}
+                </View>
+              ))}
+              {!!product.uncertainties.length && (
+                <View className="notice">
+                  看不清的部分：{product.uncertainties.join("；")}
+                </View>
+              )}
+              <View className="muted">{product.privacy}</View>
             </View>
           )}
         </>

@@ -14,15 +14,15 @@ export default defineAppConfig({
     backgroundColor: "#f5f7fa",
   },
   tabBar: {
-    color: "#667085",
-    selectedColor: "#f04b13",
-    backgroundColor: "#ffffff",
+    color: "#718078",
+    selectedColor: "#0e5c43",
+    backgroundColor: "#fffef8",
+    borderStyle: "white",
     list: [
       { pagePath: "pages/home/index", text: "首页" },
-      { pagePath: "pages/articles/index", text: "科普" },
-      { pagePath: "pages/tools/index", text: "AI工具" },
-      { pagePath: "pages/records/index", text: "记录" },
-      { pagePath: "pages/companion/index", text: "同行" },
+      { pagePath: "pages/tools/index", text: "AI" },
+      { pagePath: "pages/records/index", text: "行动" },
+      { pagePath: "pages/articles/index", text: "指南" },
     ],
   },
   permission: {

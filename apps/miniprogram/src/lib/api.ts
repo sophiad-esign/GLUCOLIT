@@ -46,7 +46,7 @@ export async function apiRequest<T>(
 }
 
 export async function uploadImage<T>(
-  path: "/ai/food-upload" | "/ai/ogtt-upload",
+  path: "/ai/food-upload" | "/ai/ogtt-upload" | "/ai/product-upload",
   filePath: string,
   formData: Record<string, string>,
 ): Promise<T> {

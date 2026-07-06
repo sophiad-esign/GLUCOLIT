@@ -1,6 +1,7 @@
-import { Button, Input, Textarea, View } from "@tarojs/components";
+import { Button, Input, Text, Textarea, View } from "@tarojs/components";
 import { useState } from "react";
 
+import { BrandHeader } from "../../components/brand-header";
 import { apiRequest } from "../../lib/api";
 import { readLocal, writeLocal } from "../../lib/storage";
 
@@ -45,6 +46,9 @@ export default function RecordsPage() {
   const [analysis, setAnalysis] = useState<Analysis>();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const [completed, setCompleted] = useState(
+    readLocal("daily-core-action", false),
+  );
   const number = (key: keyof RecordItem, value: string) =>
     setRecord((current) => ({ ...current, [key]: Number(value) || 0 }));
   const save = async () => {
@@ -89,10 +93,49 @@ export default function RecordsPage() {
   ];
   return (
     <View className="page">
+      <BrandHeader />
       <View className="hero">
-        <View className="hero-title">记录趋势，不追求满分</View>
+        <View className="row">
+          <View>
+            <View className="eyebrow">今日行动</View>
+            <View className="hero-title">今天，只专注这 1 件事</View>
+          </View>
+          <Button
+            className="button ghost"
+            onClick={() => {
+              const next = !completed;
+              setCompleted(next);
+              writeLocal("daily-core-action", next);
+            }}
+          >
+            {completed ? "已做到 ✓" : "我做到了"}
+          </Button>
+        </View>
         <View className="hero-copy">
-          用七日变化判断恢复与活动节奏，单日数据不用于诊断。
+          先把这件事搞定，其他都是加分项，不要有压力。
+        </View>
+      </View>
+      <View className="eyebrow">核心行动 {completed ? "1/1" : "0/1"}</View>
+      <View className="card">
+        <Text className="status-pill">核心行动</Text>
+        <View className="card-title">运动</View>
+        <View className="action-step">
+          <View className="action-label">怎么去做</View>
+          饭后约 30 分钟开始散步，体力不足时先走 15–20 分钟。
+        </View>
+        <View className="action-step">
+          <View className="action-label">为什么做</View>
+          饭后轻度活动可以帮助身体更平稳地利用这一餐带来的能量。
+        </View>
+        <View className="action-step">
+          <View className="action-label">做不到时</View>
+          哪怕只走 8 分钟也算完成；不追求完美，只保留节奏。
+        </View>
+      </View>
+      <View className="card">
+        <View className="card-title">加分项：记录今天</View>
+        <View className="muted">
+          用七日变化观察恢复与活动节奏，单日数据不用于诊断。
         </View>
       </View>
       {error && (

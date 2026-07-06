@@ -2,6 +2,7 @@ import { ScrollView, Text, View } from "@tarojs/components";
 import Taro from "@tarojs/taro";
 import { useEffect, useState } from "react";
 
+import { BrandHeader } from "../../components/brand-header";
 import { apiRequest } from "../../lib/api";
 import { readLocal, writeLocal } from "../../lib/storage";
 
@@ -51,10 +52,26 @@ export default function ArticlesPage() {
 
   return (
     <View className="page">
+      <BrandHeader />
       <View className="hero">
-        <View className="hero-title">每天读懂一点</View>
+        <View className="eyebrow">指南</View>
+        <View className="hero-title">把知识拆成可执行路线</View>
         <View className="hero-copy">
-          把前沿研究翻译成可以执行的生活方式行动。
+          聚焦饮食结构、饭后步行、抗阻训练与睡眠节律；先给清单，再看研究来源。
+        </View>
+      </View>
+      <View className="card">
+        <Text className="status-pill">Diet</Text>
+        <View className="card-title">饮食干预</View>
+        <View className="muted">
+          聚焦蛋白质、膳食纤维、低 GI 主食与进食顺序。
+        </View>
+      </View>
+      <View className="card">
+        <Text className="status-pill">Exercise / Sleep</Text>
+        <View className="card-title">运动睡眠</View>
+        <View className="muted">
+          聚焦饭后步行、有氧、抗阻训练、睡眠节律和恢复。
         </View>
       </View>
       <ScrollView className="chips" scrollX>
