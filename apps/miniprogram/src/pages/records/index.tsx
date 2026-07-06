@@ -14,6 +14,9 @@ type RecordItem = {
   postMealMinutes: number;
   strengthMinutes: number;
   strengthSessions: number;
+  mealRecords: number;
+  fastingGlucose?: number;
+  postMealGlucose?: number;
   exerciseNotes: string;
   context: string;
 };
@@ -34,6 +37,9 @@ const initial = (): RecordItem => ({
   postMealMinutes: 0,
   strengthMinutes: 0,
   strengthSessions: 0,
+  mealRecords: 0,
+  fastingGlucose: undefined,
+  postMealGlucose: undefined,
   exerciseNotes: "",
   context: "",
 });
@@ -51,6 +57,14 @@ export default function RecordsPage() {
   );
   const number = (key: keyof RecordItem, value: string) =>
     setRecord((current) => ({ ...current, [key]: Number(value) || 0 }));
+  const optionalNumber = (
+    key: "fastingGlucose" | "postMealGlucose",
+    value: string,
+  ) =>
+    setRecord((current) => ({
+      ...current,
+      [key]: value.trim() ? Number(value) : undefined,
+    }));
   const save = async () => {
     if (busy) return;
     setBusy(true);
@@ -83,6 +97,7 @@ export default function RecordsPage() {
     }
   };
   const fields: [keyof RecordItem, string, string][] = [
+    ["mealRecords", "今天已记录饮食（0—3 餐）", "0"],
     ["sleepHours", "睡眠时长（小时）", "7"],
     ["energy", "白天精力（1—10）", "5"],
     ["stress", "压力程度（1—10）", "5"],
@@ -142,6 +157,30 @@ export default function RecordsPage() {
         <View className="notice error">{error} 本次记录已安全保存在本机。</View>
       )}
       <View className="card">
+        <View className="label">空腹血糖（mmol/L，可选）</View>
+        <Input
+          className="input"
+          type="digit"
+          value={
+            record.fastingGlucose == null ? "" : String(record.fastingGlucose)
+          }
+          placeholder="例如 5.4"
+          onInput={(event) =>
+            optionalNumber("fastingGlucose", event.detail.value)
+          }
+        />
+        <View className="label">餐后 2 小时血糖（mmol/L，可选）</View>
+        <Input
+          className="input"
+          type="digit"
+          value={
+            record.postMealGlucose == null ? "" : String(record.postMealGlucose)
+          }
+          placeholder="例如 7.8"
+          onInput={(event) =>
+            optionalNumber("postMealGlucose", event.detail.value)
+          }
+        />
         {fields.map(([key, label, placeholder]) => (
           <View key={key}>
             <View className="label">{label}</View>
@@ -217,8 +256,12 @@ export default function RecordsPage() {
           .reverse()
           .map((item) => (
             <View className="muted" key={item.date}>
-              {item.date} · 睡眠 {item.sleepHours}h · 活动{" "}
+              {item.date} · 饮食 {item.mealRecords ?? 0}/3 · 睡眠{" "}
+              {item.sleepHours}h · 活动{" "}
               {item.postMealMinutes + item.aerobicMinutes} 分钟
+              {item.fastingGlucose
+                ? ` · 空腹 ${item.fastingGlucose} mmol/L`
+                : ""}
             </View>
           ))}
         {!records.length && (

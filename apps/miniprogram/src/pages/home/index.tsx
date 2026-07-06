@@ -8,6 +8,9 @@ type LifestyleRecord = {
   sleepHours: number;
   postMealMinutes: number;
   aerobicMinutes: number;
+  mealRecords?: number;
+  fastingGlucose?: number;
+  postMealGlucose?: number;
 };
 
 export default function HomePage() {
@@ -16,6 +19,8 @@ export default function HomePage() {
   const sleep = latest?.sleepHours ?? 7.2;
   const movement =
     (latest?.postMealMinutes ?? 15) + (latest?.aerobicMinutes ?? 15);
+  const meals = latest?.mealRecords ?? 0;
+  const peak = latest?.postMealGlucose;
 
   return (
     <View className="page">
@@ -41,7 +46,7 @@ export default function HomePage() {
             </View>
           </View>
           <View>
-            <View className="daily-stat">◉ 饮食 2/3 记录</View>
+            <View className="daily-stat">◉ 饮食 {meals}/3 记录</View>
             <View className="daily-stat">◔ 睡眠 {sleep} 小时</View>
             <View className="daily-stat">⌁ 运动 {movement} 分钟</View>
           </View>
@@ -85,7 +90,7 @@ export default function HomePage() {
         <View className="mini-grid">
           <View className="mini-card">
             <Text>餐后峰值</Text>
-            <View className="mini-value">8.5</View>
+            <View className="mini-value">{peak ?? "待录入"}</View>
           </View>
           <View className="mini-card">
             <Text>睡眠</Text>

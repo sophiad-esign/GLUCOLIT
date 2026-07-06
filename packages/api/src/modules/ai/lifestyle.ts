@@ -17,7 +17,9 @@ const recordSchema = z.object({
   steps: z.number().int().min(0).max(100000).optional(),
   exerciseNotes: z.string().max(500),
   context: z.string().max(500),
+  mealRecords: z.number().int().min(0).max(3).optional(),
   fastingGlucose: z.number().min(1).max(30).optional(),
+  postMealGlucose: z.number().min(1).max(30).optional(),
 });
 
 export const lifestyleAnalysisRequestSchema = z.object({
