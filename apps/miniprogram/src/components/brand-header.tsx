@@ -1,4 +1,5 @@
 import { Text, View } from "@tarojs/components";
+import Taro from "@tarojs/taro";
 
 export function BrandHeader({ eyebrow }: { eyebrow?: string }) {
   return (
@@ -12,7 +13,12 @@ export function BrandHeader({ eyebrow }: { eyebrow?: string }) {
           <Text className="brand-name">GLUCOLIT</Text>
         </View>
       </View>
-      <View className="brand-switch">⇄ 切换</View>
+      <View
+        className="brand-switch"
+        onClick={() => Taro.navigateTo({ url: "/pages/profile/index" })}
+      >
+        ⇄ 切换
+      </View>
     </View>
   );
 }

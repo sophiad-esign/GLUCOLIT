@@ -2,6 +2,8 @@ import { createOpenAI } from "@ai-sdk/openai";
 import { generateText } from "ai";
 import { z } from "zod";
 
+import { neutralizeModelStrings } from "./language-guard";
+
 const numberFromModel = z.preprocess((value) => {
   if (typeof value === "number") return value;
   const parsed = Number(String(value).replace(/[^\d.-]/g, ""));
@@ -145,7 +147,7 @@ plateBalanceScore is 0-100. confidence is 0-1.`,
     ],
   });
 
-  const result = parseFoodModelResult(text);
+  const result = neutralizeModelStrings(parseFoodModelResult(text));
   if (!result.isFoodImage || result.foods.length === 0) {
     return {
       ...result,

@@ -5,6 +5,7 @@ export default defineAppConfig({
     "pages/tools/index",
     "pages/records/index",
     "pages/companion/index",
+    "pages/profile/index",
     "pages/article/index",
   ],
   window: {

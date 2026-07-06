@@ -2,6 +2,8 @@ import { createOpenAI } from "@ai-sdk/openai";
 import { generateText } from "ai";
 import { z } from "zod";
 
+import { neutralizeModelStrings } from "./language-guard";
+
 const text = (max: number) =>
   z.preprocess(
     (value) => (typeof value === "string" ? value.trim().slice(0, max) : ""),
@@ -95,7 +97,7 @@ refinedCarbs 只能是 low、medium、high、uncertain。`,
   });
 
   return {
-    ...parseProductModelResult(result),
+    ...neutralizeModelStrings(parseProductModelResult(result)),
     privacy: "原始食品标签照片不会保存。",
   };
 };
