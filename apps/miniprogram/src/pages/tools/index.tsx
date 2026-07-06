@@ -48,6 +48,19 @@ type ProductResult = {
   uncertainties: string[];
   privacy: string;
 };
+const suitabilityLabel = {
+  often: "可经常选择",
+  sometimes: "偶尔选择",
+  rarely: "少量选择",
+  uncertain: "信息不足",
+} as const;
+const signalLabel: Record<string, string> = {
+  "none-visible": "未见添加",
+  low: "较低",
+  medium: "中等",
+  high: "较高",
+  uncertain: "信息不足",
+};
 const emptyMetrics: Metrics = {
   glucoseUnit: "mmol/L",
   fastingGlucose: null,
@@ -370,15 +383,21 @@ export default function ToolsPage() {
               <View className="mini-grid">
                 <View className="mini-card">
                   <View>添加糖</View>
-                  <View className="mini-value">{product.addedSugar}</View>
+                  <View className="mini-value">
+                    {signalLabel[product.addedSugar]}
+                  </View>
                 </View>
                 <View className="mini-card">
                   <View>精制碳水</View>
-                  <View className="mini-value">{product.refinedCarbs}</View>
+                  <View className="mini-value">
+                    {signalLabel[product.refinedCarbs]}
+                  </View>
                 </View>
                 <View className="mini-card">
                   <View>购买频率</View>
-                  <View className="mini-value">{product.suitability}</View>
+                  <View className="mini-value">
+                    {suitabilityLabel[product.suitability]}
+                  </View>
                 </View>
               </View>
               <View className="card-title">蛋白质与膳食纤维</View>
