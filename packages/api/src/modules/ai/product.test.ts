@@ -25,4 +25,26 @@ describe("product label result validation", () => {
     expect(result.suitability).toBe("sometimes");
     expect(result.shoppingAdvice).toHaveLength(1);
   });
+
+  it("normalizes a single shopping recommendation into a list", () => {
+    const result = parseProductModelResult(
+      JSON.stringify({
+        productName: "植物饮料",
+        summary: "图片信息有限。",
+        suitability: "uncertain",
+        addedSugar: "uncertain",
+        refinedCarbs: "uncertain",
+        protein: "无法确认。",
+        fiber: "无法确认。",
+        keyIngredients: "水",
+        strengths: [],
+        concerns: [],
+        shoppingAdvice: "补拍清晰的营养成分表。",
+        uncertainties: "营养成分表文字较小。",
+      }),
+    );
+
+    expect(result.keyIngredients).toEqual(["水"]);
+    expect(result.shoppingAdvice).toEqual(["补拍清晰的营养成分表。"]);
+  });
 });

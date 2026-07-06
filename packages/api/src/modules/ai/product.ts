@@ -8,6 +8,12 @@ const text = (max: number) =>
     z.string().min(1),
   );
 
+const list = (maxItems: number, maxLength: number) =>
+  z.preprocess(
+    (value) => (typeof value === "string" ? [value] : value),
+    z.array(text(maxLength)).max(maxItems),
+  );
+
 const productResultSchema = z.object({
   productName: text(120),
   summary: text(500),
@@ -16,11 +22,11 @@ const productResultSchema = z.object({
   refinedCarbs: z.enum(["low", "medium", "high", "uncertain"]),
   protein: text(300),
   fiber: text(300),
-  keyIngredients: z.array(text(120)).max(12).catch([]),
-  strengths: z.array(text(240)).max(6).catch([]),
-  concerns: z.array(text(240)).max(6).catch([]),
-  shoppingAdvice: z.array(text(300)).min(1).max(6),
-  uncertainties: z.array(text(240)).max(6).catch([]),
+  keyIngredients: list(12, 120).catch([]),
+  strengths: list(6, 240).catch([]),
+  concerns: list(6, 240).catch([]),
+  shoppingAdvice: list(6, 300).refine((items) => items.length > 0),
+  uncertainties: list(6, 240).catch([]),
 });
 
 export const productAnalysisRequestSchema = z.object({
