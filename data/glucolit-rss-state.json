@@ -4145,7 +4145,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-06T18:29:21.798780+00:00",
+      "last_seen_at": "2026-07-07T18:30:04.501684+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5021,6 +5021,201 @@
         "Chinese evidence story is too thin",
         "Chinese interpretation and critique section is short",
         "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "94554239dcef3585": {
+      "title": "Impact of chronic REM sleep deprivation on glucose homeostasis, insulin sensitivity, oxidative stress, and histological changes in adult male Wistar rats.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Sleep medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42407329/",
+      "pmid": "42407329",
+      "pmcid": "",
+      "doi": "10.1016/j.sleep.2026.109105",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-30",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "sleep",
+        "glucose"
+      ],
+      "created_at": "2026-07-07T18:30:04.501860+00:00",
+      "last_seen_at": "2026-07-07T18:30:04.501864+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/impact-of-chronic-rem-sleep-deprivation-on-glucose-homeostasis-insulin-s-94554239/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "ab956d2cef8bcce9": {
+      "title": "Effects of a 12-week aerobic training on TLQP-21, its receptor, and UCP1 in STZ-induced Diabetic Wistar rats.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Physiology & behavior)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42218925/",
+      "pmid": "42218925",
+      "pmcid": "",
+      "doi": "10.1016/j.physbeh.2026.115405",
+      "oa_url": "https://doi.org/10.1016/j.physbeh.2026.115405",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-05-30",
+      "score": 20,
+      "matched": [
+        "insulin resistance",
+        "lifestyle intervention",
+        "diet",
+        "exercise"
+      ],
+      "created_at": "2026-07-07T18:31:08.549826+00:00",
+      "last_seen_at": "2026-07-07T18:31:08.549842+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effects-of-a-12-week-aerobic-training-on-tlqp-21-its-receptor-and-ucp1-i-ab956d2c/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "f55b0a36fa9b24b2": {
+      "title": "Identifying critical period of type 2 diabetes in Chinese population with leading molecules based on dynamic network biomarkers.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Scientific reports)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42409956/",
+      "pmid": "42409956",
+      "pmcid": "",
+      "doi": "10.1038/s41598-026-60307-1",
+      "oa_url": "https://doi.org/10.1038/s41598-026-60307-1",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-06",
+      "score": 18,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-07-07T18:31:40.017314+00:00",
+      "last_seen_at": "2026-07-07T18:31:40.017333+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/identifying-critical-period-of-type-2-diabetes-in-chinese-population-wit-f55b0a36/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "74566ef17c6c46cf": {
+      "title": "Neuroligin-3: A Novel Exercise-Induced Secreted Factor Enhancing Insulin Sensitivity in Obese Insulin-Resistant Mice.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Diabetes)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42065629/",
+      "pmid": "42065629",
+      "pmcid": "",
+      "doi": "10.2337/db25-0259",
+      "oa_url": "https://doi.org/10.2337/db25-0259",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 19,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "exercise"
+      ],
+      "created_at": "2026-07-07T18:32:24.369976+00:00",
+      "last_seen_at": "2026-07-07T18:32:24.369990+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/neuroligin-3-a-novel-exercise-induced-secreted-factor-enhancing-insulin-74566ef1/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "2650c92b61eec86e": {
+      "title": "Fructose-induced prediabetes causes persistent DNA methylation changes in white adipose tissue despite metabolic normalization.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Molecular and cellular endocrinology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41748061/",
+      "pmid": "41748061",
+      "pmcid": "",
+      "doi": "10.1016/j.mce.2026.112772",
+      "oa_url": "https://doi.org/10.1016/j.mce.2026.112772",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-01",
+      "score": 18,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-07-07T18:32:58.780955+00:00",
+      "last_seen_at": "2026-07-07T18:32:58.780974+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/fructose-induced-prediabetes-causes-persistent-dna-methylation-changes-i-2650c92b/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "8d3aebc5f7d0bb07": {
+      "title": "Understanding insulin resistance in osteosarcopenic obesity: Therapeutic approaches for prevention and management.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Nutrition and health)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41533773/",
+      "pmid": "41533773",
+      "pmcid": "",
+      "doi": "10.1177/02601060251412680",
+      "oa_url": "https://doi.org/10.1177/02601060251412680",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 19,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "exercise"
+      ],
+      "created_at": "2026-07-07T18:33:56.631655+00:00",
+      "last_seen_at": "2026-07-07T18:33:56.631675+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/understanding-insulin-resistance-in-osteosarcopenic-obesity-therapeutic-8d3aebc5/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
