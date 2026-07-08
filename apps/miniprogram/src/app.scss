@@ -112,7 +112,7 @@ page {
   display: flex;
   gap: 16px;
 }
-.row > * {
+.row > view {
   flex: 1;
 }
 .button {

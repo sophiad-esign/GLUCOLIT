@@ -2,7 +2,7 @@
   "miniprogramRoot": "dist/",
   "projectname": "GLUCOLIT",
   "description": "糖尿病前期生活方式干预 MVP",
-  "appid": "touristappid",
+  "appid": "wxadb09e6d70d13964",
   "setting": {
     "urlCheck": true,
     "es6": true,
