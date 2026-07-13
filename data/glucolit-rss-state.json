@@ -4182,7 +4182,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-12T17:24:32.256761+00:00",
+      "last_seen_at": "2026-07-13T18:19:39.568373+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5319,7 +5319,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-12T17:24:32.256339+00:00",
+      "last_seen_at": "2026-07-13T18:19:39.567868+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6271,6 +6271,208 @@
         "Chinese article needs more short readable paragraphs",
         "Chinese evidence story is too thin",
         "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "32a7eebc432b4e87": {
+      "title": "Association of the planetary health diet score with obesity, high blood pressure, dyslipidemia, and cardiometabolic risk markers: Using data from the 2016-2020 Korea National Health and Nutrition Examination Survey.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (PloS one)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42258502/",
+      "pmid": "42258502",
+      "pmcid": "PMC13245749",
+      "doi": "10.1371/journal.pone.0350821",
+      "oa_url": "https://europepmc.org/articles/PMC13245749",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 22,
+      "matched": [
+        "impaired fasting glucose",
+        "diet",
+        "nutrition",
+        "physical activity",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-07-13T18:19:39.568853+00:00",
+      "last_seen_at": "2026-07-13T18:19:39.568857+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/association-of-the-planetary-health-diet-score-with-obesity-high-blood-p-32a7eebc/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "9b7b861f430752f0": {
+      "title": "The Prognostic Role of C-Reactive Protein-Triglyceride Glucose Index in Predicting Unfavorable Outcomes in Acute Ischemic Stroke: A Large-Scale Cohort Study.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Brain and behavior)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42423122/",
+      "pmid": "42423122",
+      "pmcid": "PMC13347318",
+      "doi": "10.1002/brb3.71578",
+      "oa_url": "https://doi.org/10.1002/brb3.71578",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-01",
+      "score": 21,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-13T18:20:27.469490+00:00",
+      "last_seen_at": "2026-07-13T18:20:27.469512+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/the-prognostic-role-of-c-reactive-protein-triglyceride-glucose-index-in-9b7b861f/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "7820fd6d9cd7234f": {
+      "title": "Subphenotyping of prediabetes with a phenotypic tree model and its correlations with outcomes: Insights from two Chinese cohorts.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Journal of translational internal medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42389435/",
+      "pmid": "42389435",
+      "pmcid": "PMC13320526",
+      "doi": "10.1515/jtim-2026-0034",
+      "oa_url": "https://doi.org/10.1515/jtim-2026-0034",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-01",
+      "score": 21,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "lifestyle intervention",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-13T18:21:06.191202+00:00",
+      "last_seen_at": "2026-07-13T18:21:06.191224+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/subphenotyping-of-prediabetes-with-a-phenotypic-tree-model-and-its-corre-7820fd6d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "e3e9189fea125337": {
+      "title": "Sestrin-2: a new biomarker for type 2 Diabetes Mellitus and Insulin resistance.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Journal of diabetes and metabolic disorders)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42422115/",
+      "pmid": "42422115",
+      "pmcid": "PMC13341981",
+      "doi": "10.1007/s40200-026-02008-0",
+      "oa_url": "https://doi.org/10.1007/s40200-026-02008-0",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 1484,
+      "published_at": "2026-07-13",
+      "score": 21,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-13T18:21:41.649219+00:00",
+      "last_seen_at": "2026-07-13T18:21:41.649241+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/sestrin-2-a-new-biomarker-for-type-2-diabetes-mellitus-and-insulin-resis-e3e9189f/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "37f309ca8a417b4b": {
+      "title": "Nocturnal fat oxidation is lower in older individuals with overweight/obesity, including those with type 2 diabetes, and is associated with fasting triglyceride levels.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Diabetologia)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42118256/",
+      "pmid": "42118256",
+      "pmcid": "PMC13310229",
+      "doi": "10.1007/s00125-026-06736-z",
+      "oa_url": "https://doi.org/10.1007/s00125-026-06736-z",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-13",
+      "score": 17,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "physical activity",
+        "glucose",
+        "glycaemic"
+      ],
+      "created_at": "2026-07-13T18:22:16.137710+00:00",
+      "last_seen_at": "2026-07-13T18:22:16.137733+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/nocturnal-fat-oxidation-is-lower-in-older-individuals-with-overweight-ob-37f309ca/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "6a6d08022d17b023": {
+      "title": "Impaired fasting glucose is comparable to diabetes mellitus in predicting mortality and cardiovascular events in patients undergoing peritoneal dialysis: the role of β-cell function and insulin resistance.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Renal failure)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42402705/",
+      "pmid": "42402705",
+      "pmcid": "PMC13347838",
+      "doi": "10.1080/0886022X.2026.2692758",
+      "oa_url": "https://doi.org/10.1080/0886022X.2026.2692758",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-13",
+      "score": 10,
+      "matched": [
+        "impaired fasting glucose",
+        "insulin resistance",
+        "nutrition",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-13T18:22:49.892382+00:00",
+      "last_seen_at": "2026-07-13T18:22:49.892405+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/impaired-fasting-glucose-is-comparable-to-diabetes-mellitus-in-predictin-6a6d0802/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
