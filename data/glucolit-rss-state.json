@@ -569,10 +569,16 @@
     },
     "2e7a61d9d590dd0b": {
       "title": "Sex Differences in Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD): Epidemiology, Pathophysiology, and Clinical Implications.",
-      "source": "PubMed prediabetes via PubMed (Journal of clinical and experimental hepatology)",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Journal of clinical and experimental hepatology)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42022177/",
+      "pmid": "42022177",
+      "pmcid": "PMC13097097",
+      "doi": "10.1016/j.jceh.2026.103533",
+      "oa_url": "https://doi.org/10.1016/j.jceh.2026.103533",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
       "published_at": "2026-01-01",
-      "score": 17,
+      "score": 20,
       "matched": [
         "prediabetes",
         "insulin resistance",
@@ -580,10 +586,19 @@
         "diet"
       ],
       "created_at": "2026-06-03T08:55:13.812578+00:00",
-      "last_seen_at": "2026-06-03T09:26:08.010162+00:00",
-      "attempts": 1,
-      "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "last_seen_at": "2026-07-14T17:46:17.050671+00:00",
+      "attempts": 2,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/sex-differences-in-metabolic-dysfunction-associated-steatotic-liver-dise-2e7a61d9/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
     },
     "434a579af9dec499": {
       "title": "Biochemical biomarker-Driven deep learning framework with SHAP-based feature interpretation for diabetes classification.",
@@ -4182,7 +4197,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-13T18:19:39.568373+00:00",
+      "last_seen_at": "2026-07-14T17:44:45.906704+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5319,7 +5334,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-13T18:19:39.567868+00:00",
+      "last_seen_at": "2026-07-14T17:44:45.906060+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6473,6 +6488,178 @@
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "1ad25576e0281da7": {
+      "title": "Compositional analyses of accelerometer-measured 24-h movement behaviors among adults with normoglycemia, pre-diabetes phenotypes, and diabetes: a population-based study.",
+      "source": "PubMed prediabetes diet intervention via PubMed (International journal of obesity (2005))",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42443431/",
+      "pmid": "42443431",
+      "pmcid": "6133005",
+      "doi": "10.1038/s41366-026-02162-8",
+      "oa_url": "https://pmc.ncbi.nlm.nih.gov/articles/6133005/",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-13",
+      "score": 34,
+      "matched": [
+        "pre-diabetes",
+        "impaired glucose tolerance",
+        "diabetes prevention",
+        "nutrition",
+        "physical activity",
+        "sleep",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-14T17:44:05.792295+00:00",
+      "last_seen_at": "2026-07-14T17:44:05.792315+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/compositional-analyses-of-accelerometer-measured-24-h-movement-behaviors-1ad25576/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "f4d936b869d3a3db": {
+      "title": "Sleep-Related Alzheimer's Disease Vulnerability in Aging: A Muscle-Metabolic Perspective.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Neuroscience and biobehavioral reviews)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42442566/",
+      "pmid": "42442566",
+      "pmcid": "",
+      "doi": "10.1016/j.neubiorev.2026.106869",
+      "oa_url": "https://doi.org/10.1016/j.neubiorev.2026.106869",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-13",
+      "score": 19,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "exercise",
+        "sleep"
+      ],
+      "created_at": "2026-07-14T17:44:45.906919+00:00",
+      "last_seen_at": "2026-07-14T17:44:45.906923+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/sleep-related-alzheimer-s-disease-vulnerability-in-aging-a-muscle-metabo-f4d936b8/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "9095f4ebbf113465": {
+      "title": "Paternal folate deficiency induces hepatic insulin resistance in offspring mice.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Nutrition & diabetes)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42393025/",
+      "pmid": "42393025",
+      "pmcid": "",
+      "doi": "10.1038/s41387-026-00448-4",
+      "oa_url": "https://doi.org/10.1038/s41387-026-00448-4",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-02",
+      "score": 22,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "diet",
+        "nutrition",
+        "glucose"
+      ],
+      "created_at": "2026-07-14T17:45:28.526577+00:00",
+      "last_seen_at": "2026-07-14T17:45:28.526594+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/paternal-folate-deficiency-induces-hepatic-insulin-resistance-in-offspri-9095f4eb/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "2fa7b8e2c9f4a658": {
+      "title": "Chrononutrition-based hypocaloric diets with varying macronutrient and protein distribution in shift workers with prediabetes or type 2 diabetes: Protocol for a randomized controlled trial.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (The British journal of nutrition)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42087280/",
+      "pmid": "42087280",
+      "pmcid": "",
+      "doi": "10.1017/S0007114526107417",
+      "oa_url": "https://doi.org/10.1017/S0007114526107417",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-05-06",
+      "score": 20,
+      "matched": [
+        "prediabetes",
+        "diet",
+        "nutrition",
+        "sleep",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-14T17:46:54.158281+00:00",
+      "last_seen_at": "2026-07-14T17:46:54.158300+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/chrononutrition-based-hypocaloric-diets-with-varying-macronutrient-and-p-2fa7b8e2/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "ac87a18d699b5244": {
+      "title": "Modeling the Impact of Combined Individual and Population-level National strategies for preventing type 2 diabetes.",
+      "source": "PubMed digital diabetes prevention via PubMed (American journal of preventive medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42342090/",
+      "pmid": "42342090",
+      "pmcid": "",
+      "doi": "10.1016/j.amepre.2026.108493",
+      "oa_url": "https://doi.org/10.1016/j.amepre.2026.108493",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-24",
+      "score": 20,
+      "matched": [
+        "diabetes prevention",
+        "lifestyle intervention",
+        "nutrition",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-14T17:47:25.495241+00:00",
+      "last_seen_at": "2026-07-14T17:47:25.495255+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/modeling-the-impact-of-combined-individual-and-population-level-national-ac87a18d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
