@@ -4197,7 +4197,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-14T17:44:45.906704+00:00",
+      "last_seen_at": "2026-07-15T17:50:13.890999+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5334,7 +5334,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-14T17:44:45.906060+00:00",
+      "last_seen_at": "2026-07-15T17:50:13.890510+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6660,6 +6660,204 @@
         "Chinese article needs more short readable paragraphs",
         "Chinese interpretation and critique section is short",
         "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "5cd5f68cea3e5a1e": {
+      "title": "Atrial Fibrillation in Diabetes: Epidemiology, Mechanisms and Integrated Management.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Journal of clinical medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42452486/",
+      "pmid": "42452486",
+      "pmcid": "",
+      "doi": "10.3390/jcm15135024",
+      "oa_url": "https://www.mdpi.com/2077-0383/15/13/5024/pdf?version=1782552183",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-27",
+      "score": 18,
+      "matched": [
+        "insulin resistance",
+        "lifestyle intervention",
+        "sleep",
+        "glycaemic"
+      ],
+      "created_at": "2026-07-15T17:50:13.891144+00:00",
+      "last_seen_at": "2026-07-15T17:50:13.891148+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/atrial-fibrillation-in-diabetes-epidemiology-mechanisms-and-integrated-m-5cd5f68c/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "e37d329942d08025": {
+      "title": "Effects of carob (Ceratonia siliqua) and carob-derived products on glycaemic control and insulin resistance: A systematic review of clinical trials.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Nutrition research (New York, N.Y.))",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42372710/",
+      "pmid": "42372710",
+      "pmcid": "",
+      "doi": "10.1016/j.nutres.2026.05.007",
+      "oa_url": "https://doi.org/10.1016/j.nutres.2026.05.007",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-01",
+      "score": 19,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "diet",
+        "glycaemic"
+      ],
+      "created_at": "2026-07-15T17:50:45.581831+00:00",
+      "last_seen_at": "2026-07-15T17:50:45.581844+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effects-of-carob-ceratonia-siliqua-and-carob-derived-products-on-glycaem-e37d3299/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "a0f917ad8916d10a": {
+      "title": "Albuminuria trajectories following intensive lifestyle intervention with or without bariatric surgery in adolescents with and at risk of type 2 diabetes.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Diabetes research and clinical practice)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42105868/",
+      "pmid": "42105868",
+      "pmcid": "",
+      "doi": "10.1016/j.diabres.2026.113296",
+      "oa_url": "https://doi.org/10.1016/j.diabres.2026.113296",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 19,
+      "matched": [
+        "prediabetes",
+        "lifestyle intervention",
+        "diet",
+        "hba1c"
+      ],
+      "created_at": "2026-07-15T17:51:23.891175+00:00",
+      "last_seen_at": "2026-07-15T17:51:23.891187+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/albuminuria-trajectories-following-intensive-lifestyle-intervention-with-a0f917ad/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "230d83f1a23cb597": {
+      "title": "Maternal insulin resistance during late gestation impairs brown adipose tissue development and thermogenic function in calves.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Journal of dairy science)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41937062/",
+      "pmid": "41937062",
+      "pmcid": "",
+      "doi": "10.3168/jds.2025-28031",
+      "oa_url": "https://doi.org/10.3168/jds.2025-28031",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 18,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-15T17:51:57.558254+00:00",
+      "last_seen_at": "2026-07-15T17:51:57.558268+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/maternal-insulin-resistance-during-late-gestation-impairs-brown-adipose-230d83f1/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "1afe982a016385b5": {
+      "title": "Patient Perspectives and Experiences From Participation in the Glycemic Excursion Minimization Prediabetes Intervention: A Qualitative Study.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (American journal of health promotion : AJHP)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41277327/",
+      "pmid": "41277327",
+      "pmcid": "",
+      "doi": "10.1177/08901171251399590",
+      "oa_url": "https://doi.org/10.1177/08901171251399590",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 17,
+      "matched": [
+        "prediabetes",
+        "diet",
+        "glucose",
+        "glycemic",
+        "continuous glucose"
+      ],
+      "created_at": "2026-07-15T17:52:41.144745+00:00",
+      "last_seen_at": "2026-07-15T17:52:41.144763+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/patient-perspectives-and-experiences-from-participation-in-the-glycemic-1afe982a/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "da54cc2393613682": {
+      "title": "Nutritional advice for patients with obesity and prediabetes.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Best practice & research. Clinical endocrinology & metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42297673/",
+      "pmid": "42297673",
+      "pmcid": "",
+      "doi": "10.1016/j.beem.2026.102134",
+      "oa_url": "https://doi.org/10.1016/j.beem.2026.102134",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 17,
+      "matched": [
+        "prediabetes",
+        "weight loss",
+        "diet",
+        "nutrition"
+      ],
+      "created_at": "2026-07-15T17:53:13.760050+00:00",
+      "last_seen_at": "2026-07-15T17:53:13.760064+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/nutritional-advice-for-patients-with-obesity-and-prediabetes-da54cc23/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "English plain-language article is short",
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
