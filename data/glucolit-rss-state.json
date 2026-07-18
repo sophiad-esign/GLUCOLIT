@@ -4215,7 +4215,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-17T17:47:17.893788+00:00",
+      "last_seen_at": "2026-07-18T17:29:05.814714+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5352,7 +5352,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-17T17:47:17.893320+00:00",
+      "last_seen_at": "2026-07-18T17:29:05.814158+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6983,7 +6983,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-17T17:47:17.894215+00:00",
+      "last_seen_at": "2026-07-18T17:29:37.798451+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -7276,6 +7276,217 @@
         "Chinese clinical/business insight section is short",
         "English takeaways are incomplete",
         "Chinese takeaways are incomplete"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "201c4ef4177b01f4": {
+      "title": "Constitutive mTORC1 Activation in Skeletal Muscle Increases Inflammation but is not Sufficient to Impair Glucose Tolerance.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Function (Oxford, England))",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42468920/",
+      "pmid": "42468920",
+      "pmcid": "",
+      "doi": "10.1152/function.039.2026",
+      "oa_url": "https://doi.org/10.1152/function.039.2026",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-17",
+      "score": 22,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "diet",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-07-18T17:28:29.481351+00:00",
+      "last_seen_at": "2026-07-18T17:28:29.481374+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/constitutive-mtorc1-activation-in-skeletal-muscle-increases-inflammation-201c4ef4/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "20eb89538af8ea82": {
+      "title": "miR-23a-3p as a Biomarker Associated with Prediabetes in People Living with HIV: An Integrative Analysis of Inflammatory, Metabolic, and Insulin Resistance Signatures.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (International journal of molecular sciences)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42449934/",
+      "pmid": "42449934",
+      "pmcid": "PMC13361635",
+      "doi": "10.3390/ijms27135658",
+      "oa_url": "https://doi.org/10.3390/ijms27135658",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-23",
+      "score": 26,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "insulin sensitivity",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-18T17:29:05.815206+00:00",
+      "last_seen_at": "2026-07-18T17:29:05.815211+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/mir-23a-3p-as-a-biomarker-associated-with-prediabetes-in-people-living-w-20eb8953/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "English plain-language article is short",
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "96d04cb6f5be237f": {
+      "title": "Chrononutrition and cardiometabolic health: circadian timing as a dimension of precision nutrition.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Frontiers in nutrition)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42317866/",
+      "pmid": "42317866",
+      "pmcid": "PMC13272113",
+      "doi": "10.3389/fnut.2026.1779033",
+      "oa_url": "https://europepmc.org/articles/PMC13272113",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 27,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "nutrition",
+        "sleep",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-07-18T17:29:37.799249+00:00",
+      "last_seen_at": "2026-07-18T17:29:37.799252+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/chrononutrition-and-cardiometabolic-health-circadian-timing-as-a-dimensi-96d04cb6/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "12a2d37c713a506f": {
+      "title": "Investigating the effect of intermittent fasting (time-restricted eating) with and without calorie restriction compared to calorie restriction on anthropometric parameters, depression score, and metabolic factors in patients with major depression disorder and obesity: a study protocol for a randomized controlled trial.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Trials)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42363285/",
+      "pmid": "42363285",
+      "pmcid": "PMC13321579",
+      "doi": "10.1186/s13063-026-09860-8",
+      "oa_url": "https://doi.org/10.1186/s13063-026-09860-8",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-27",
+      "score": 27,
+      "matched": [
+        "insulin resistance",
+        "lifestyle intervention",
+        "weight loss",
+        "diet",
+        "nutrition",
+        "physical activity",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-07-18T17:30:15.185648+00:00",
+      "last_seen_at": "2026-07-18T17:30:15.185670+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/investigating-the-effect-of-intermittent-fasting-time-restricted-eating-12a2d37c/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "fd72a565956ea2b3": {
+      "title": "Male fertility as an integral reflection of metabolic, endocrine, and musculoskeletal health.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Rheumatology international)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42435059/",
+      "pmid": "42435059",
+      "pmcid": "11216957",
+      "doi": "10.1007/s00296-026-06235-9",
+      "oa_url": "https://doi.org/10.1007/s00296-026-06235-9",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-11",
+      "score": 27,
+      "matched": [
+        "insulin resistance",
+        "lifestyle modification",
+        "diet",
+        "nutrition",
+        "exercise",
+        "physical activity"
+      ],
+      "created_at": "2026-07-18T17:30:57.956308+00:00",
+      "last_seen_at": "2026-07-18T17:30:57.956330+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/male-fertility-as-an-integral-reflection-of-metabolic-endocrine-and-musc-fd72a565/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "f5a8ff5c10f2c713": {
+      "title": "Changes in IL-1β and Pancreatic Islet Function and Their Correlation Before and After Weight Loss in Obese Individuals.",
+      "source": "PubMed obesity and metabolic health via PubMed (Diabetes, metabolic syndrome and obesity : targets and therapy)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42453279/",
+      "pmid": "42453279",
+      "pmcid": "PMC13367283",
+      "doi": "10.2147/DMSO.S574992",
+      "oa_url": "https://doi.org/10.2147/DMSO.S574992",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 26,
+      "matched": [
+        "insulin resistance",
+        "lifestyle intervention",
+        "weight loss",
+        "diet",
+        "exercise",
+        "physical activity",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-18T17:31:40.018672+00:00",
+      "last_seen_at": "2026-07-18T17:31:40.018693+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/changes-in-il-1-and-pancreatic-islet-function-and-their-correlation-befo-f5a8ff5c/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
       ],
       "skip_reason": "saved as needs-revision draft"
     }
