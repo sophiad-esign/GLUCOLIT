@@ -4215,7 +4215,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-19T17:28:44.979198+00:00",
+      "last_seen_at": "2026-07-20T18:32:29.417224+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5352,7 +5352,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-19T17:28:44.978819+00:00",
+      "last_seen_at": "2026-07-20T18:32:29.416652+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6983,7 +6983,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-19T17:29:22.440997+00:00",
+      "last_seen_at": "2026-07-20T18:32:29.417699+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -7698,6 +7698,204 @@
         "Chinese evidence story is too thin",
         "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "f2aa94d8b02b4d95": {
+      "title": "Combined Time-Restricted Feeding and Physical Exercise Attenuate ER Stress and Improve Liver Inflammation and Collagen Deposition in Aged Mice.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Cell biochemistry and function)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42473696/",
+      "pmid": "42473696",
+      "pmcid": "",
+      "doi": "10.1002/cbf.70272",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 19,
+      "matched": [
+        "impaired glucose tolerance",
+        "diet",
+        "nutrition",
+        "exercise",
+        "glucose"
+      ],
+      "created_at": "2026-07-20T18:31:43.572249+00:00",
+      "last_seen_at": "2026-07-20T18:31:43.572271+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/combined-time-restricted-feeding-and-physical-exercise-attenuate-er-stre-f2aa94d8/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "4c29bfb16b0f8ba0": {
+      "title": "Coffee Intake is Associated with Improved Insulin Sensitivity and Lower Visceral Adiposity: Evidence from Biomarker and Genetic Analysis.",
+      "source": "PubMed obesity and metabolic health via PubMed (medRxiv : the preprint server for health sciences)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42465876/",
+      "pmid": "42465876",
+      "pmcid": "PMC13370568",
+      "doi": "10.64898/2026.06.25.26356610",
+      "oa_url": "https://doi.org/10.64898/2026.06.25.26356610",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 4237,
+      "published_at": "2026-07-08",
+      "score": 20,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-07-20T18:32:29.418300+00:00",
+      "last_seen_at": "2026-07-20T18:32:29.418303+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/coffee-intake-is-associated-with-improved-insulin-sensitivity-and-lower-4c29bfb1/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "be92ad086ce364c8": {
+      "title": "Prevalence and influencing factors of vitamin D deficiency in women with polycystic ovary syndrome: a systematic review and meta-analysis.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Frontiers in nutrition)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42375776/",
+      "pmid": "42375776",
+      "pmcid": "PMC13311376",
+      "doi": "10.3389/fnut.2026.1865564",
+      "oa_url": "https://doi.org/10.3389/fnut.2026.1865564",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 19,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "nutrition",
+        "exercise",
+        "glucose"
+      ],
+      "created_at": "2026-07-20T18:32:59.989863+00:00",
+      "last_seen_at": "2026-07-20T18:32:59.989883+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/prevalence-and-influencing-factors-of-vitamin-d-deficiency-in-women-with-be92ad08/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "8ba7ab0cd1f81b3b": {
+      "title": "Endocrine‑metabolic imbalance drives osteoarthritis: From whole‑joint pathobiology to precision therapy (Review).",
+      "source": "PubMed prediabetes diet intervention via PubMed (International journal of molecular medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42429052/",
+      "pmid": "42429052",
+      "pmcid": "PMC13378586",
+      "doi": "10.3892/ijmm.2026.5923",
+      "oa_url": "https://doi.org/10.3892/ijmm.2026.5923",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-20",
+      "score": 18,
+      "matched": [
+        "insulin resistance",
+        "lifestyle intervention",
+        "nutrition",
+        "glucose"
+      ],
+      "created_at": "2026-07-20T18:33:35.896599+00:00",
+      "last_seen_at": "2026-07-20T18:33:35.896620+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/endocrine-metabolic-imbalance-drives-osteoarthritis-from-whole-joint-pat-8ba7ab0c/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "5c4b910a91f776de": {
+      "title": "Thyroid hormone acts independently of the thyroid hormone receptor beta in hepatocytes to improve systemic insulin sensitivity.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Hepatology communications)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42118980/",
+      "pmid": "42118980",
+      "pmcid": "PMC13218675",
+      "doi": "10.1097/HC9.0000000000000937",
+      "oa_url": "https://europepmc.org/articles/PMC13218675",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-01",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-07-20T18:34:02.762773+00:00",
+      "last_seen_at": "2026-07-20T18:34:02.762794+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/thyroid-hormone-acts-independently-of-the-thyroid-hormone-receptor-beta-5c4b910a/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "a214b42b68b1a928": {
+      "title": "Diet, lifestyle, metabolic markers, and socioeconomic status are associated with cognitive function in school-aged children from a population-based cohort.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Pediatric research)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42365169/",
+      "pmid": "42365169",
+      "pmcid": "7613190",
+      "doi": "10.1038/s41390-026-05250-7",
+      "oa_url": "https://doi.org/10.1038/s41390-026-05250-7",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-27",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "physical activity",
+        "sleep"
+      ],
+      "created_at": "2026-07-20T18:34:40.030088+00:00",
+      "last_seen_at": "2026-07-20T18:34:40.030109+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/diet-lifestyle-metabolic-markers-and-socioeconomic-status-are-associated-a214b42b/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
       ],
       "skip_reason": "saved as needs-revision draft"
     }
