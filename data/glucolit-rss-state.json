@@ -4215,7 +4215,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-21T17:58:45.409711+00:00",
+      "last_seen_at": "2026-07-22T17:51:32.389498+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5352,7 +5352,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-21T17:58:45.409039+00:00",
+      "last_seen_at": "2026-07-22T17:51:32.389025+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6983,7 +6983,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-21T18:00:06.608593+00:00",
+      "last_seen_at": "2026-07-22T17:52:31.618650+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8062,7 +8062,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-07-21T18:00:40.965596+00:00",
+      "last_seen_at": "2026-07-22T17:53:07.849026+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -8090,7 +8090,7 @@
         "hba1c"
       ],
       "created_at": "2026-07-21T18:00:40.966418+00:00",
-      "last_seen_at": "2026-07-21T18:00:40.966422+00:00",
+      "last_seen_at": "2026-07-22T17:53:07.849978+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -14 below min-score 3"
@@ -8160,6 +8160,201 @@
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "339186a4c809c821": {
+      "title": "Optimizing Care in Cardiovascular-Kidney-Metabolic Syndrome: Registry Data From the Cardiometabolic Center Alliance.",
+      "source": "PubMed digital diabetes prevention via PubMed (Circulation. Population health and outcomes)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42324992/",
+      "pmid": "42324992",
+      "pmcid": "PMC13288766",
+      "doi": "10.1161/CIRCOUTCOMES.125.012828",
+      "oa_url": "https://europepmc.org/articles/PMC13288766",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 2124,
+      "published_at": "2026-07-01",
+      "score": 16,
+      "matched": [
+        "prediabetes",
+        "metabolic syndrome",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-07-22T17:51:32.389780+00:00",
+      "last_seen_at": "2026-07-22T17:51:32.389784+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/optimizing-care-in-cardiovascular-kidney-metabolic-syndrome-registry-dat-339186a4/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "69cb92402521932b": {
+      "title": "Reduced platelet count in mice protects against glucose intolerance and beta cell loss during a long-term high-fat diet.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Frontiers in immunology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42459661/",
+      "pmid": "42459661",
+      "pmcid": "PMC13368534",
+      "doi": "10.3389/fimmu.2026.1854992",
+      "oa_url": "https://doi.org/10.3389/fimmu.2026.1854992",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 23,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "diet",
+        "physical activity",
+        "glucose"
+      ],
+      "created_at": "2026-07-22T17:52:00.703121+00:00",
+      "last_seen_at": "2026-07-22T17:52:00.703139+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/reduced-platelet-count-in-mice-protects-against-glucose-intolerance-and-69cb9240/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "dcd1c16c63385ae3": {
+      "title": "Association of the C-reactive protein-triglyceride glucose index with albuminuria and macroalbuminuria: A population-based cross-sectional analysis.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42332502/",
+      "pmid": "42332502",
+      "pmcid": "PMC13286468",
+      "doi": "10.1097/MD.0000000000049381",
+      "oa_url": "https://europepmc.org/articles/PMC13286468",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-19",
+      "score": 12,
+      "matched": [
+        "insulin resistance",
+        "nutrition",
+        "physical activity",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-22T17:52:31.619478+00:00",
+      "last_seen_at": "2026-07-22T17:52:31.619483+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/association-of-the-c-reactive-protein-triglyceride-glucose-index-with-al-dcd1c16c/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "fddd56cfb66e7363": {
+      "title": "A controlled-release mitochondrial protonophore attenuates early- and late-stage atheroprogression in mice.",
+      "source": "PubMed obesity and metabolic health via PubMed (Science translational medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42455898/",
+      "pmid": "42455898",
+      "pmcid": "",
+      "doi": "10.1126/scitranslmed.adv1815",
+      "oa_url": "https://doi.org/10.1126/scitranslmed.adv1815",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-15",
+      "score": 21,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "metabolic syndrome",
+        "glycemic"
+      ],
+      "created_at": "2026-07-22T17:53:07.850448+00:00",
+      "last_seen_at": "2026-07-22T17:53:07.850452+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/a-controlled-release-mitochondrial-protonophore-attenuates-early-and-lat-fddd56cf/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "0c930882bdf2768c": {
+      "title": "Research Hotspots, Trends, and Molecular Mechanisms of Diabetes and Sarcopenia: A Bibliometric and Bioinformatics Analysis.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Endocrine, metabolic & immune disorders drug targets)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42260776/",
+      "pmid": "42260776",
+      "pmcid": "",
+      "doi": "10.2174/0118715303427280251205051848",
+      "oa_url": "https://doi.org/10.2174/0118715303427280251205051848",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-05",
+      "score": 20,
+      "matched": [
+        "insulin resistance",
+        "lifestyle intervention",
+        "nutrition",
+        "exercise"
+      ],
+      "created_at": "2026-07-22T17:53:50.573642+00:00",
+      "last_seen_at": "2026-07-22T17:53:50.573659+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/research-hotspots-trends-and-molecular-mechanisms-of-diabetes-and-sarcop-0c930882/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "780cefbc950440b5": {
+      "title": "Pre-exercise meal macronutrient composition and acute inflammatory response in males with type 2 diabetes mellitus.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Journal of diabetes and its complications)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42442053/",
+      "pmid": "42442053",
+      "pmcid": "",
+      "doi": "10.1016/j.jdiacomp.2026.109367",
+      "oa_url": "https://doi.org/10.1016/j.jdiacomp.2026.109367",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-09",
+      "score": 18,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "exercise",
+        "physical activity"
+      ],
+      "created_at": "2026-07-22T17:54:24.440241+00:00",
+      "last_seen_at": "2026-07-22T17:54:24.440259+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/pre-exercise-meal-macronutrient-composition-and-acute-inflammatory-respo-780cefbc/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
       ],
       "skip_reason": "saved as needs-revision draft"
     }
