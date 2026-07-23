@@ -4215,7 +4215,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-22T17:51:32.389498+00:00",
+      "last_seen_at": "2026-07-23T17:50:48.544504+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5352,7 +5352,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-22T17:51:32.389025+00:00",
+      "last_seen_at": "2026-07-23T17:50:48.543982+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6983,7 +6983,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-22T17:52:31.618650+00:00",
+      "last_seen_at": "2026-07-23T17:52:00.698880+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8062,7 +8062,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-07-22T17:53:07.849026+00:00",
+      "last_seen_at": "2026-07-23T17:52:00.699712+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -8090,7 +8090,7 @@
         "hba1c"
       ],
       "created_at": "2026-07-21T18:00:40.966418+00:00",
-      "last_seen_at": "2026-07-22T17:53:07.849978+00:00",
+      "last_seen_at": "2026-07-23T17:52:00.700460+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -14 below min-score 3"
@@ -8353,6 +8353,208 @@
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "ec3a234fbcbbd25e": {
+      "title": "Triglyceride-glucose index, genetic predisposition, and incident depression: a prospective cohort study from the UK Biobank.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Psychological medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41918219/",
+      "pmid": "41918219",
+      "pmcid": "PMC13079221",
+      "doi": "10.1017/S0033291726103535",
+      "oa_url": "https://europepmc.org/articles/PMC13079221",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-04-01",
+      "score": 16,
+      "matched": [
+        "insulin resistance",
+        "physical activity",
+        "sleep",
+        "glucose"
+      ],
+      "created_at": "2026-07-23T17:50:48.544943+00:00",
+      "last_seen_at": "2026-07-23T17:50:48.544946+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/triglyceride-glucose-index-genetic-predisposition-and-incident-depressio-ec3a234f/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "7532842bccffad21": {
+      "title": "One year after gestational diabetes: metabolic changes and predictors of postpartum dysglycaemia.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Acta diabetologica)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41619055/",
+      "pmid": "41619055",
+      "pmcid": "7218708",
+      "doi": "10.1007/s00592-026-02657-w",
+      "oa_url": "https://doi.org/10.1007/s00592-026-02657-w",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-01",
+      "score": 31,
+      "matched": [
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "lifestyle intervention",
+        "diet",
+        "nutrition",
+        "physical activity",
+        "glucose",
+        "glycaemic"
+      ],
+      "created_at": "2026-07-23T17:51:29.103909+00:00",
+      "last_seen_at": "2026-07-23T17:51:29.103929+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/one-year-after-gestational-diabetes-metabolic-changes-and-predictors-of-7532842b/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "English plain-language article is short",
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "b6b53531740321fe": {
+      "title": "[Chrononutrition and metabolic health: impact of meal timing on obesity and metabolic risk].",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Nutricion hospitalaria)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42377351/",
+      "pmid": "42377351",
+      "pmcid": "",
+      "doi": "10.20960/nh.06968",
+      "oa_url": "https://doi.org/10.20960/nh.06968",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-20",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "nutrition",
+        "metabolic syndrome"
+      ],
+      "created_at": "2026-07-23T17:52:00.700954+00:00",
+      "last_seen_at": "2026-07-23T17:52:00.700957+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/chrononutrition-and-metabolic-health-impact-of-meal-timing-on-obesity-an-b6b53531/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "9a0d501615ec7518": {
+      "title": "Low-grade chronic inflammation in young adults: An underrecognized epidicemic.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Explore (New York, N.Y.))",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41818927/",
+      "pmid": "41818927",
+      "pmcid": "",
+      "doi": "10.1016/j.explore.2026.103377",
+      "oa_url": "https://doi.org/10.1016/j.explore.2026.103377",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-01-01",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "physical activity",
+        "sleep"
+      ],
+      "created_at": "2026-07-23T17:52:35.308595+00:00",
+      "last_seen_at": "2026-07-23T17:52:35.308615+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/low-grade-chronic-inflammation-in-young-adults-an-underrecognized-epidic-9a0d5016/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "7653a73d1aa76d4e": {
+      "title": "Gut microbiota-generated trimethylamine N-oxide from dietary choline and glucose homeostasis in humans.",
+      "source": "PubMed prediabetes diet intervention via PubMed (American journal of physiology. Endocrinology and metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42314769/",
+      "pmid": "42314769",
+      "pmcid": "",
+      "doi": "10.1152/ajpendo.00160.2026",
+      "oa_url": "https://doi.org/10.1152/ajpendo.00160.2026",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-23",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-07-23T17:53:21.571490+00:00",
+      "last_seen_at": "2026-07-23T17:53:21.571510+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/gut-microbiota-generated-trimethylamine-n-oxide-from-dietary-choline-and-7653a73d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "8c6e56d09b40dd8b": {
+      "title": "Resveratrol and tomato pectin synergistically ameliorated metabolic disorder in high-fat-diet mice through the microbiota-gut-liver axis.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Food research international (Ottawa, Ont.))",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42169316/",
+      "pmid": "42169316",
+      "pmcid": "",
+      "doi": "10.1016/j.foodres.2026.119354",
+      "oa_url": "https://doi.org/10.1016/j.foodres.2026.119354",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-23",
+      "score": 17,
+      "matched": [
+        "insulin sensitivity",
+        "diet",
+        "nutrition",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-07-23T17:53:53.556826+00:00",
+      "last_seen_at": "2026-07-23T17:53:53.556847+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/resveratrol-and-tomato-pectin-synergistically-ameliorated-metabolic-diso-8c6e56d0/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
         "Chinese clinical/business insight section is short",
         "uses reviewer voice too often"
       ],
