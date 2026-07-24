@@ -4215,7 +4215,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-23T17:50:48.544504+00:00",
+      "last_seen_at": "2026-07-24T18:00:40.830401+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5352,7 +5352,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-23T17:50:48.543982+00:00",
+      "last_seen_at": "2026-07-24T18:00:40.829908+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6983,7 +6983,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-23T17:52:00.698880+00:00",
+      "last_seen_at": "2026-07-24T18:02:08.011151+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8062,7 +8062,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-07-23T17:52:00.699712+00:00",
+      "last_seen_at": "2026-07-24T18:02:40.561155+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -8090,7 +8090,7 @@
         "hba1c"
       ],
       "created_at": "2026-07-21T18:00:40.966418+00:00",
-      "last_seen_at": "2026-07-23T17:52:00.700460+00:00",
+      "last_seen_at": "2026-07-24T18:02:40.561907+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -14 below min-score 3"
@@ -8557,6 +8557,213 @@
         "Chinese evidence story is too thin",
         "Chinese clinical/business insight section is short",
         "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "87e74092ba131dc5": {
+      "title": "Neuro-molecular mediators of yoga intervention in females with prediabetes: A randomized controlled trial.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (iScience)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42491519/",
+      "pmid": "42491519",
+      "pmcid": "PMC13378015",
+      "doi": "10.1016/j.isci.2026.115996",
+      "oa_url": "https://doi.org/10.1016/j.isci.2026.115996",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-17",
+      "score": 46,
+      "matched": [
+        "prediabetes",
+        "pre-diabetes",
+        "prediabetic",
+        "insulin resistance",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "lifestyle modification",
+        "nutrition",
+        "exercise",
+        "physical activity",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-24T18:00:40.830764+00:00",
+      "last_seen_at": "2026-07-24T18:00:40.830767+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/neuro-molecular-mediators-of-yoga-intervention-in-females-with-prediabet-87e74092/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "03d146059214a525": {
+      "title": "Macrophages in MASLD: from inflammatory and metabolic crosstalk to exercise intervention.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Frontiers in immunology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42495624/",
+      "pmid": "42495624",
+      "pmcid": "PMC13391286",
+      "doi": "10.3389/fimmu.2026.1894884",
+      "oa_url": "https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2026.1894884/pdf",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 9,
+      "matched": [
+        "insulin resistance",
+        "lifestyle intervention",
+        "exercise"
+      ],
+      "created_at": "2026-07-24T18:01:24.994548+00:00",
+      "last_seen_at": "2026-07-24T18:01:24.994567+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/macrophages-in-masld-from-inflammatory-and-metabolic-crosstalk-to-exerci-03d14605/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "79b8b032c006c8de": {
+      "title": "Extracellular 70 kDa heat shock protein in blood plasma binds insulin and modulates glycaemic control in vivo.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Cell stress & chaperones)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42119638/",
+      "pmid": "42119638",
+      "pmcid": "PMC13213666",
+      "doi": "10.1016/j.cstres.2026.100180",
+      "oa_url": "https://europepmc.org/articles/PMC13213666",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-01",
+      "score": 22,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "exercise",
+        "glucose",
+        "glycaemic",
+        "glycemic"
+      ],
+      "created_at": "2026-07-24T18:02:08.011999+00:00",
+      "last_seen_at": "2026-07-24T18:02:08.012003+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/extracellular-70-kda-heat-shock-protein-in-blood-plasma-binds-insulin-an-79b8b032/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "c0d889545840cb3b": {
+      "title": "Trace element dynamics following low-calorie formula diet and their association with glycaemic traits.",
+      "source": "PubMed diabetes prevention and remission via PubMed (Clinical nutrition (Edinburgh, Scotland))",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42269399/",
+      "pmid": "42269399",
+      "pmcid": "",
+      "doi": "10.1016/j.clnu.2026.106693",
+      "oa_url": "https://doi.org/10.1016/j.clnu.2026.106693",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-24",
+      "score": 18,
+      "matched": [
+        "weight loss",
+        "diet",
+        "nutrition",
+        "glycaemic",
+        "hba1c",
+        "remission"
+      ],
+      "created_at": "2026-07-24T18:02:40.562402+00:00",
+      "last_seen_at": "2026-07-24T18:02:40.562406+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/trace-element-dynamics-following-low-calorie-formula-diet-and-their-asso-c0d88954/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "8ac930e9b1cb5bba": {
+      "title": "Preconditioning and supplementation with glutathione ameliorates oxidative stress, mitochondrial dysfunction, and restores metabolic imbalance in insulin-resistant myotubes.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Biochemical and biophysical research communications)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42202436/",
+      "pmid": "42202436",
+      "pmcid": "",
+      "doi": "10.1016/j.bbrc.2026.153997",
+      "oa_url": "https://doi.org/10.1016/j.bbrc.2026.153997",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-24",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-07-24T18:03:14.029231+00:00",
+      "last_seen_at": "2026-07-24T18:03:14.029247+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/preconditioning-and-supplementation-with-glutathione-ameliorates-oxidati-8ac930e9/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "d496b0cfb657fe77": {
+      "title": "Telomir-Zn restores glucose homeostasis and reduces insulin resistance in a diet-induced zebrafish model of type 2 diabetes.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Biomedicine & pharmacotherapy = Biomedecine & pharmacotherapie)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42275690/",
+      "pmid": "42275690",
+      "pmcid": "",
+      "doi": "10.1016/j.biopha.2026.119617",
+      "oa_url": "https://doi.org/10.1016/j.biopha.2026.119617",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-24",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-07-24T18:03:46.830269+00:00",
+      "last_seen_at": "2026-07-24T18:03:46.830288+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/telomir-zn-restores-glucose-homeostasis-and-reduces-insulin-resistance-i-d496b0cf/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
     }
