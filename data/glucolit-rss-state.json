@@ -4215,7 +4215,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-24T18:00:40.830401+00:00",
+      "last_seen_at": "2026-07-25T17:23:31.237278+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5352,7 +5352,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-24T18:00:40.829908+00:00",
+      "last_seen_at": "2026-07-25T17:23:31.236640+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6959,7 +6959,7 @@
     },
     "23f9ee2be434c83c": {
       "title": "Cardiovascular-kidney-metabolic (CKM) syndrome.",
-      "source": "PubMed prediabetes exercise intervention via PubMed (Australian prescriber)",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Australian prescriber)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42312302/",
       "pmid": "42312302",
       "pmcid": "PMC13268837",
@@ -6983,7 +6983,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-24T18:02:08.011151+00:00",
+      "last_seen_at": "2026-07-25T17:24:08.530297+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8062,7 +8062,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-07-24T18:02:40.561155+00:00",
+      "last_seen_at": "2026-07-25T17:24:08.531188+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -8090,7 +8090,7 @@
         "hba1c"
       ],
       "created_at": "2026-07-21T18:00:40.966418+00:00",
-      "last_seen_at": "2026-07-24T18:02:40.561907+00:00",
+      "last_seen_at": "2026-07-25T17:24:08.531947+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -14 below min-score 3"
@@ -8763,6 +8763,209 @@
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
         "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "cf673ed27b76ba16": {
+      "title": "From diagnosis to daily life: a qualitative investigation into patients' lived experiences of pre-diabetes diagnosis and care in a primary care setting in Singapore.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (BMJ open)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42498475/",
+      "pmid": "42498475",
+      "pmcid": "",
+      "doi": "10.1136/bmjopen-2025-108846",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-24",
+      "score": 30,
+      "matched": [
+        "pre-diabetes",
+        "lifestyle intervention",
+        "lifestyle modification",
+        "diet",
+        "exercise",
+        "physical activity"
+      ],
+      "created_at": "2026-07-25T17:22:57.624124+00:00",
+      "last_seen_at": "2026-07-25T17:22:57.624151+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/from-diagnosis-to-daily-life-a-qualitative-investigation-into-patients-l-cf673ed2/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "f6a03513bc360297": {
+      "title": "Efficacy of Ayurveda treatment protocol in the management of prediabetes- A randomized controlled clinical trial.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Journal of Ayurveda and integrative medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42497786/",
+      "pmid": "42497786",
+      "pmcid": "",
+      "doi": "10.1016/j.jaim.2026.101392",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-24",
+      "score": 35,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "lifestyle intervention",
+        "lifestyle modification",
+        "diet",
+        "glucose",
+        "glycaemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-25T17:23:31.237471+00:00",
+      "last_seen_at": "2026-07-25T17:23:31.237475+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/efficacy-of-ayurveda-treatment-protocol-in-the-management-of-prediabetes-f6a03513/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "a511dbcbd5444111": {
+      "title": "Implementing a Digital-Enhanced Multiple-Behavior Self-Monitoring Intervention in Diabetes Care and Support: A Mixed-Method Evaluation of Patient Outcomes.",
+      "source": "PubMed digital diabetes prevention via PubMed (The science of diabetes self-management and care)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42159281/",
+      "pmid": "42159281",
+      "pmcid": "",
+      "doi": "10.1177/26350106261438832",
+      "oa_url": "https://doi.org/10.1177/26350106261438832",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-01",
+      "score": 17,
+      "matched": [
+        "lifestyle intervention",
+        "weight loss",
+        "diet",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-25T17:24:08.532438+00:00",
+      "last_seen_at": "2026-07-25T17:24:08.532442+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/implementing-a-digital-enhanced-multiple-behavior-self-monitoring-interv-a511dbcb/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "c37f4f924727ec23": {
+      "title": "Gut-pancreas-metabolism axis: emerging anti-diabetic roles of gut-derived bioactive molecules.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Diabetes research and clinical practice)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42320750/",
+      "pmid": "42320750",
+      "pmcid": "",
+      "doi": "10.1016/j.diabres.2026.113383",
+      "oa_url": "https://doi.org/10.1016/j.diabres.2026.113383",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-25",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-07-25T17:24:48.852103+00:00",
+      "last_seen_at": "2026-07-25T17:24:48.852115+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/gut-pancreas-metabolism-axis-emerging-anti-diabetic-roles-of-gut-derived-c37f4f92/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "0584dc57f28ccfcb": {
+      "title": "Metabolic Syndrome and Its Correlates in Systemic Lupus Erythematosus Patients: A Hidden Clinical Challenge.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Annals of African medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41439507/",
+      "pmid": "41439507",
+      "pmcid": "",
+      "doi": "10.4103/aam.aam_210_25",
+      "oa_url": "https://doi.org/10.4103/aam.aam_210_25",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-25",
+      "score": 16,
+      "matched": [
+        "insulin resistance",
+        "nutrition",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-07-25T17:25:23.090093+00:00",
+      "last_seen_at": "2026-07-25T17:25:23.090105+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/metabolic-syndrome-and-its-correlates-in-systemic-lupus-erythematosus-pa-0584dc57/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "d5aee5a5d633a0e8": {
+      "title": "Obesity and Metabolic Complications in Cystic Fibrosis.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Endocrine practice : official journal of the American College of Endocrinology and the American Association of Clinical Endocrinologists)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41932619/",
+      "pmid": "41932619",
+      "pmcid": "",
+      "doi": "10.1016/j.eprac.2026.03.099",
+      "oa_url": "https://doi.org/10.1016/j.eprac.2026.03.099",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-04-01",
+      "score": 16,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "nutrition",
+        "sleep"
+      ],
+      "created_at": "2026-07-25T17:26:02.970978+00:00",
+      "last_seen_at": "2026-07-25T17:26:02.970990+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/obesity-and-metabolic-complications-in-cystic-fibrosis-d5aee5a5/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
