@@ -4215,7 +4215,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-25T17:23:31.237278+00:00",
+      "last_seen_at": "2026-07-26T17:24:00.144673+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5352,7 +5352,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-25T17:23:31.236640+00:00",
+      "last_seen_at": "2026-07-26T17:24:00.144096+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6983,7 +6983,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-25T17:24:08.530297+00:00",
+      "last_seen_at": "2026-07-26T17:24:30.748926+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8062,7 +8062,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-07-25T17:24:08.531188+00:00",
+      "last_seen_at": "2026-07-26T17:24:30.749712+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -8090,7 +8090,7 @@
         "hba1c"
       ],
       "created_at": "2026-07-21T18:00:40.966418+00:00",
-      "last_seen_at": "2026-07-25T17:24:08.531947+00:00",
+      "last_seen_at": "2026-07-26T17:24:30.750459+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -14 below min-score 3"
@@ -8967,6 +8967,215 @@
         "Chinese evidence story is too thin",
         "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "633ca47759bdc3b1": {
+      "title": "Pre-diabetes and Diabetes in Heart Transplant Recipients: Epidemiological Insights from a Decade-Long Study.",
+      "source": "PubMed diabetes prevention and remission via PubMed (International journal of endocrinology and metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42502735/",
+      "pmid": "42502735",
+      "pmcid": "PMC13401106",
+      "doi": "10.5812/ijem-168325",
+      "oa_url": "https://brieflands.com/journals/ijem/articles/168325.pdf",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-26",
+      "score": 42,
+      "matched": [
+        "prediabetes",
+        "pre-diabetes",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-26T17:23:27.414986+00:00",
+      "last_seen_at": "2026-07-26T17:23:27.415009+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/pre-diabetes-and-diabetes-in-heart-transplant-recipients-epidemiological-633ca477/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "77f02a31b0a1eb7b": {
+      "title": "Biochemical and Molecular Markers Among Prediabetic and Type 2 Diabetes Mellitus Patients.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (International journal of endocrinology and metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42502734/",
+      "pmid": "42502734",
+      "pmcid": "PMC13401189",
+      "doi": "10.5812/ijem-171089",
+      "oa_url": "https://brieflands.com/journals/ijem/articles/171089.pdf",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-26",
+      "score": 25,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "insulin resistance",
+        "diet",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-26T17:24:00.145100+00:00",
+      "last_seen_at": "2026-07-26T17:24:00.145103+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/biochemical-and-molecular-markers-among-prediabetic-and-type-2-diabetes-77f02a31/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "English plain-language article is short",
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "7ab7c0afaf02492b": {
+      "title": "Gut Microbiota Contributes to Protection Against High-Fat Diet- Induced Insulin Resistance in iNOS Knockout Mice.",
+      "source": "PubMed obesity and metabolic health via PubMed (Molecular and cellular endocrinology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42498211/",
+      "pmid": "42498211",
+      "pmcid": "",
+      "doi": "10.1016/j.mce.2026.112875",
+      "oa_url": "https://doi.org/10.1016/j.mce.2026.112875",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-24",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-07-26T17:24:30.750955+00:00",
+      "last_seen_at": "2026-07-26T17:24:30.750958+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/gut-microbiota-contributes-to-protection-against-high-fat-diet-induced-i-7ab7c0af/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "e71d3ba18e6db519": {
+      "title": "Association of long-term exposure to air pollution, built environment and air temperature with the incidence of prediabetes phenotypes, and prediabetes remission and progression to type 2 diabetes: a longitudinal study in the KORA cohort.",
+      "source": "Diabetologia via PubMed (Diabetologia)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42502136/",
+      "pmid": "42502136",
+      "pmcid": "6516891",
+      "doi": "10.1007/s00125-026-06814-2",
+      "oa_url": "https://pmc.ncbi.nlm.nih.gov/articles/6516891/",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 6439,
+      "published_at": "2026-07-25",
+      "score": 25,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "glucose",
+        "glycaemic",
+        "hba1c",
+        "remission"
+      ],
+      "created_at": "2026-07-26T17:25:08.917055+00:00",
+      "last_seen_at": "2026-07-26T17:25:08.917076+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/association-of-long-term-exposure-to-air-pollution-built-environment-and-e71d3ba1/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "c31446c77763f989": {
+      "title": "Hidden metabolic risk in erectile dysfunction: Prevalence of undiagnosed diabetes mellitus, prediabetes, and metabolic syndrome.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Primary care diabetes)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42225540/",
+      "pmid": "42225540",
+      "pmcid": "",
+      "doi": "10.1016/j.pcd.2026.05.006",
+      "oa_url": "https://doi.org/10.1016/j.pcd.2026.05.006",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-26",
+      "score": 30,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "metabolic syndrome",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-07-26T17:25:49.721451+00:00",
+      "last_seen_at": "2026-07-26T17:25:49.721473+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/hidden-metabolic-risk-in-erectile-dysfunction-prevalence-of-undiagnosed-c31446c7/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "765d83fb54e74d61": {
+      "title": "Prediabetes in Ontario: improving surveillance for better disease prevention.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Diabetes research and clinical practice)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42251948/",
+      "pmid": "42251948",
+      "pmcid": "",
+      "doi": "10.1016/j.diabres.2026.113352",
+      "oa_url": "https://doi.org/10.1016/j.diabres.2026.113352",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-26",
+      "score": 23,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "glucose"
+      ],
+      "created_at": "2026-07-26T17:26:25.781597+00:00",
+      "last_seen_at": "2026-07-26T17:26:25.781618+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/prediabetes-in-ontario-improving-surveillance-for-better-disease-prevent-765d83fb/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
       ],
       "skip_reason": "saved as needs-revision draft"
     }
