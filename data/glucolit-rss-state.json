@@ -4215,7 +4215,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-27T18:02:19.446821+00:00",
+      "last_seen_at": "2026-07-28T17:52:52.517787+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5352,7 +5352,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-27T18:02:19.446278+00:00",
+      "last_seen_at": "2026-07-28T17:52:52.517239+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6983,7 +6983,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-27T18:03:22.734180+00:00",
+      "last_seen_at": "2026-07-28T17:54:03.423273+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8062,7 +8062,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-07-27T18:03:22.735087+00:00",
+      "last_seen_at": "2026-07-28T17:54:03.424110+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -9362,25 +9362,42 @@
       "source": "PubMed prediabetes lifestyle intervention via PubMed (BMJ open)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42493207/",
       "pmid": "42493207",
-      "pmcid": "",
+      "pmcid": "PMC13404484",
       "doi": "10.1136/bmjopen-2026-118191",
       "oa_url": "https://doi.org/10.1136/bmjopen-2026-118191",
-      "evidence": "PubMed abstract + open-access full-text link",
-      "full_text_excerpt_chars": 0,
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
       "published_at": "2026-07-23",
-      "score": 17,
+      "score": 24,
       "matched": [
         "prediabetes",
         "pre-diabetes",
+        "impaired glucose tolerance",
         "insulin sensitivity",
+        "diabetes prevention",
         "lifestyle intervention",
-        "weight loss"
+        "weight loss",
+        "diet",
+        "physical activity",
+        "metabolic syndrome",
+        "glucose",
+        "glycaemic",
+        "hba1c"
       ],
       "created_at": "2026-07-27T18:04:35.655761+00:00",
-      "last_seen_at": "2026-07-27T18:04:35.655776+00:00",
-      "attempts": 0,
-      "generated": false,
-      "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
+      "last_seen_at": "2026-07-28T17:52:13.608999+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/semaglutide-for-prevention-of-type-2-diabetes-in-women-with-postpartum-p-fc8ec3b6/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
     },
     "83675bd59e94c452": {
       "title": "The efficacy of intermittent metformin plus lifestyle intervention for diabetes prevention in women with prediabetes and prior gestational diabetes: a randomized clinical, non-inferiority trial.",
@@ -9436,6 +9453,173 @@
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "6229aaa23a0b0409": {
+      "title": "Research Progress on Downstream Mechanisms of Glucose Metabolic Reprogramming and Its Role in the Occurrence and Progression of Type 2 Diabetes Mellitus.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Biomedicines)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42511901/",
+      "pmid": "42511901",
+      "pmcid": "",
+      "doi": "10.3390/biomedicines14071427",
+      "oa_url": "https://www.mdpi.com/2227-9059/14/7/1427/pdf?version=1782286560",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-24",
+      "score": 18,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-28T17:51:11.549018+00:00",
+      "last_seen_at": "2026-07-28T17:51:11.549038+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/research-progress-on-downstream-mechanisms-of-glucose-metabolic-reprogra-6229aaa2/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "ea1b822825826b1b": {
+      "title": "An Evaluation of the Effects of the Ruthenium (II)-Uracil Schiff Base Complex on Selected Markers of Glucose Homeostasis in Diet-Induced Prediabetic Male Rats.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Pharmaceutics)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42514889/",
+      "pmid": "42514889",
+      "pmcid": "",
+      "doi": "10.3390/pharmaceutics18070811",
+      "oa_url": "https://doi.org/10.3390/pharmaceutics18070811",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-30",
+      "score": 39,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "lifestyle intervention",
+        "diet",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-07-28T17:51:41.807548+00:00",
+      "last_seen_at": "2026-07-28T17:51:41.807567+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/an-evaluation-of-the-effects-of-the-ruthenium-ii-uracil-schiff-base-comp-ea1b8228/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "93577889297de025": {
+      "title": "Cold Dialysis Combined with Intradialytic Exercise Improves Insulin Sensitivity in Hemodialysis Patients: A Pilot Randomized Clinical Trial.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Medicina (Kaunas, Lithuania))",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42512810/",
+      "pmid": "42512810",
+      "pmcid": "",
+      "doi": "10.3390/medicina62071268",
+      "oa_url": "https://doi.org/10.3390/medicina62071268",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-30",
+      "score": 18,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "exercise",
+        "glucose"
+      ],
+      "created_at": "2026-07-28T17:52:52.518008+00:00",
+      "last_seen_at": "2026-07-28T17:52:52.518012+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/cold-dialysis-combined-with-intradialytic-exercise-improves-insulin-sens-93577889/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "4ee18241711d1175": {
+      "title": "Hippocampal Mitochondrial Dysfunction and Synaptic Disruption Link Organophosphate Exposure to Pre-Diabetes: An LC-MS/MS-Based Proteomics Approach.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Biomolecules)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42509746/",
+      "pmid": "42509746",
+      "pmcid": "",
+      "doi": "10.3390/biom16070952",
+      "oa_url": "https://doi.org/10.3390/biom16070952",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-26",
+      "score": 17,
+      "matched": [
+        "pre-diabetes",
+        "insulin resistance",
+        "diet"
+      ],
+      "created_at": "2026-07-28T17:53:27.772270+00:00",
+      "last_seen_at": "2026-07-28T17:53:27.772290+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/hippocampal-mitochondrial-dysfunction-and-synaptic-disruption-link-organ-4ee18241/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "6f3af18172b1c55b": {
+      "title": "Screen Time, Unhealthy Eating Behaviors, and Associated Health Risks in Children: A Narrative Review.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Children (Basel, Switzerland))",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42509912/",
+      "pmid": "42509912",
+      "pmcid": "",
+      "doi": "10.3390/children13070887",
+      "oa_url": "https://doi.org/10.3390/children13070887",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-30",
+      "score": 21,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "physical activity",
+        "sleep",
+        "metabolic syndrome"
+      ],
+      "created_at": "2026-07-28T17:54:03.424611+00:00",
+      "last_seen_at": "2026-07-28T17:54:03.424614+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/screen-time-unhealthy-eating-behaviors-and-associated-health-risks-in-ch-6f3af181/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
         "Chinese practical action guidance is too thin",
         "Chinese clinical/business insight section is short"
       ],
