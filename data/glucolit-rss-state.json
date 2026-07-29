@@ -2087,24 +2087,34 @@
     },
     "f32c813eed518e00": {
       "title": "Maternal and fetal genetic predispositions to insulin deficiency and resistance affect fetal growth through distinct pathways.",
-      "source": "PubMed high-yield prediabetes via PubMed (Diabetologia)",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Diabetologia)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/41634175/",
       "pmid": "41634175",
+      "pmcid": "PMC13236813",
       "doi": "10.1007/s00125-026-06669-7",
-      "oa_url": "https://doi.org/10.1007/s00125-026-06669-7",
-      "evidence": "Europe PMC abstract + open-access full-text link",
+      "oa_url": "https://europepmc.org/articles/PMC13236813",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
       "published_at": "2026-07-01",
       "score": 21,
       "matched": [
         "impaired fasting glucose",
         "insulin resistance",
         "insulin sensitivity",
-        "glucose"
+        "glucose",
+        "hba1c"
       ],
       "created_at": "2026-06-04T18:31:03.384611+00:00",
-      "last_seen_at": "2026-06-06T17:43:51.335870+00:00",
-      "attempts": 3,
-      "generated": false
+      "last_seen_at": "2026-07-29T17:49:00.037022+00:00",
+      "attempts": 4,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/maternal-and-fetal-genetic-predispositions-to-insulin-deficiency-and-res-f32c813e/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs"
+      ],
+      "skip_reason": "saved as needs-revision draft"
     },
     "8f314aee5670869f": {
       "title": "Impact of oral magnesium supplementation on glycemic and cardiometabolic outcomes in prediabetic adults: a systematic review and meta-analysis.",
@@ -4215,7 +4225,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-28T17:52:52.517787+00:00",
+      "last_seen_at": "2026-07-29T17:45:48.548834+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5352,7 +5362,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-28T17:52:52.517239+00:00",
+      "last_seen_at": "2026-07-29T17:45:48.548269+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6983,7 +6993,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-28T17:54:03.423273+00:00",
+      "last_seen_at": "2026-07-29T17:47:25.803684+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8062,7 +8072,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-07-28T17:54:03.424110+00:00",
+      "last_seen_at": "2026-07-29T17:48:19.762393+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -9420,7 +9430,7 @@
         "remission"
       ],
       "created_at": "2026-07-27T18:04:35.656028+00:00",
-      "last_seen_at": "2026-07-27T18:04:35.656031+00:00",
+      "last_seen_at": "2026-07-29T17:49:00.036436+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -9621,6 +9631,183 @@
         "Chinese article needs more short readable paragraphs",
         "Chinese evidence story is too thin",
         "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "cb69657d8a1c90d4": {
+      "title": "Cognitive benefits of a lifestyle-induced prediabetes remission intervention in Canada.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Preventive medicine reports)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42519658/",
+      "pmid": "42519658",
+      "pmcid": "PMC13382342",
+      "doi": "10.1016/j.pmedr.2026.103562",
+      "oa_url": "https://doi.org/10.1016/j.pmedr.2026.103562",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-29",
+      "score": 34,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "weight loss",
+        "diet",
+        "nutrition",
+        "exercise",
+        "physical activity",
+        "glucose",
+        "glycemic",
+        "hba1c",
+        "remission"
+      ],
+      "created_at": "2026-07-29T17:45:08.366377+00:00",
+      "last_seen_at": "2026-07-29T17:45:08.366402+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/cognitive-benefits-of-a-lifestyle-induced-prediabetes-remission-interven-cb69657d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "ed6b4bae7ea88ae0": {
+      "title": "A hypothalamus-liver-skeletal muscle axis controlled by JNK1 and FGF21 mediates olanzapine-induced insulin resistance in an intraperitoneal treatment in male mice.",
+      "source": "PubMed insulin resistance interventions via PubMed (Redox biology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42419174/",
+      "pmid": "42419174",
+      "pmcid": "PMC13356700",
+      "doi": "10.1016/j.redox.2026.104286",
+      "oa_url": "https://doi.org/10.1016/j.redox.2026.104286",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-29",
+      "score": 16,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "weight loss",
+        "diet",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-29T17:45:48.549314+00:00",
+      "last_seen_at": "2026-07-29T17:45:48.549316+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/a-hypothalamus-liver-skeletal-muscle-axis-controlled-by-jnk1-and-fgf21-m-ed6b4bae/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "e2807976e08a4398": {
+      "title": "Periodontitis-associated gut microbiota disrupts glucose homeostasis through SCFAs depletion and inflammation in germ-free mice.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (BMC oral health)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42316130/",
+      "pmid": "42316130",
+      "pmcid": "3024353",
+      "doi": "10.1186/s12903-026-08936-w",
+      "oa_url": "https://doi.org/10.1186/s12903-026-08936-w",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-06-18",
+      "score": 35,
+      "matched": [
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "nutrition",
+        "physical activity",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-07-29T17:46:44.669414+00:00",
+      "last_seen_at": "2026-07-29T17:46:44.669435+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/periodontitis-associated-gut-microbiota-disrupts-glucose-homeostasis-thr-e2807976/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "93e1acd75d8e8aa5": {
+      "title": "Effects of Physalis philadelphica Lam. Husk Infusion on Obesity and Associated Metabolic Disturbances in an Experimental Model.",
+      "source": "PubMed obesity and metabolic health via PubMed (International journal of molecular sciences)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42511842/",
+      "pmid": "42511842",
+      "pmcid": "PMC13410684",
+      "doi": "10.3390/ijms27146500",
+      "oa_url": "https://doi.org/10.3390/ijms27146500",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-22",
+      "score": 11,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-29T17:47:25.804484+00:00",
+      "last_seen_at": "2026-07-29T17:47:25.804488+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effects-of-physalis-philadelphica-lam-husk-infusion-on-obesity-and-assoc-93e1acd7/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "4932b8cedf62ac31": {
+      "title": "Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD): From Steatosis to Systemic Metabolic Failure: Classical Pathophysiology, Emerging Systemic Mechanisms and Modifiable Lifestyle Determinants.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Nutrients)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42514385/",
+      "pmid": "42514385",
+      "pmcid": "",
+      "doi": "10.3390/nu18142316",
+      "oa_url": "https://doi.org/10.3390/nu18142316",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-15",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "physical activity",
+        "sleep"
+      ],
+      "created_at": "2026-07-29T17:48:19.763006+00:00",
+      "last_seen_at": "2026-07-29T17:48:19.763012+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/metabolic-dysfunction-associated-steatotic-liver-disease-masld-from-stea-4932b8ce/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
