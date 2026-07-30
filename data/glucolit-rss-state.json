@@ -418,10 +418,16 @@
     },
     "951f6b09c7bef6f8": {
       "title": "Subtypes of Type 2 Diabetes and Prediabetes: Mortality and Excess Life Lost in South Asians.",
-      "source": "Diabetes Care (ADA) via PubMed (Diabetes care)",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Diabetes care)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42102359/",
-      "published_at": "2026-05-08",
-      "score": 17,
+      "pmid": "42102359",
+      "pmcid": "PMC13371112",
+      "doi": "10.2337/dc26-0043",
+      "oa_url": "https://doi.org/10.2337/dc26-0043",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 1824,
+      "published_at": "2026-07-30",
+      "score": 19,
       "matched": [
         "prediabetes",
         "insulin resistance",
@@ -429,10 +435,19 @@
         "hba1c"
       ],
       "created_at": "2026-06-03T08:54:37.107151+00:00",
-      "last_seen_at": "2026-06-03T09:25:25.392379+00:00",
-      "attempts": 1,
-      "generated": false,
-      "skip_reason": "OpenAI did not return an article"
+      "last_seen_at": "2026-07-30T17:56:36.568949+00:00",
+      "attempts": 2,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/subtypes-of-type-2-diabetes-and-prediabetes-mortality-and-excess-life-lo-951f6b09/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
     },
     "1085f0a438d75270": {
       "title": "Extending Sleep to Improve Glucose Metabolism in Adults With Short Sleep and Prediabetes: A Challenging Intervention.",
@@ -4225,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-29T17:45:48.548834+00:00",
+      "last_seen_at": "2026-07-30T17:54:10.769841+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5362,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-29T17:45:48.548269+00:00",
+      "last_seen_at": "2026-07-30T17:54:10.769371+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6993,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-29T17:47:25.803684+00:00",
+      "last_seen_at": "2026-07-30T17:55:56.103845+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8072,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-07-29T17:48:19.762393+00:00",
+      "last_seen_at": "2026-07-30T17:56:36.568169+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -9430,7 +9445,7 @@
         "remission"
       ],
       "created_at": "2026-07-27T18:04:35.656028+00:00",
-      "last_seen_at": "2026-07-29T17:49:00.036436+00:00",
+      "last_seen_at": "2026-07-30T17:56:36.568745+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -9802,6 +9817,181 @@
       "attempts": 1,
       "generated": true,
       "path": "packages/cms/src/collections/blog/content/metabolic-dysfunction-associated-steatotic-liver-disease-masld-from-stea-4932b8ce/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "234d2e4a59366ca2": {
+      "title": "Evidence-Based Behavioral Interventions for Diabetes Prevention in the United States: A Scoping Review Using 24-Hour Recalls and Objective Activity Measures.",
+      "source": "PubMed digital diabetes prevention via PubMed (Advances in nutrition (Bethesda, Md.))",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42419428/",
+      "pmid": "42419428",
+      "pmcid": "",
+      "doi": "10.1016/j.advnut.2026.100699",
+      "oa_url": "https://doi.org/10.1016/j.advnut.2026.100699",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-08",
+      "score": 19,
+      "matched": [
+        "type 2 diabetes prevention",
+        "diabetes prevention",
+        "diet",
+        "physical activity"
+      ],
+      "created_at": "2026-07-30T17:53:44.571179+00:00",
+      "last_seen_at": "2026-07-30T17:53:44.571195+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/evidence-based-behavioral-interventions-for-diabetes-prevention-in-the-u-234d2e4a/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "d2c5f32ae19584ac": {
+      "title": "Chrononutrition, Circadian Rhythms, and Genetic Susceptibility in Noncommunicable Diseases: Sex-Specific Perspective.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Nutrition reviews)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42528305/",
+      "pmid": "42528305",
+      "pmcid": "",
+      "doi": "10.1093/nutrit/nuag115",
+      "oa_url": "https://doi.org/10.1093/nutrit/nuag115",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-29",
+      "score": 18,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "nutrition",
+        "sleep",
+        "glycemic"
+      ],
+      "created_at": "2026-07-30T17:54:10.769999+00:00",
+      "last_seen_at": "2026-07-30T17:54:10.770002+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/chrononutrition-circadian-rhythms-and-genetic-susceptibility-in-noncommu-d2c5f32a/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "69125dd2f9504b3d": {
+      "title": "Challenges in managing endocrine and metabolic dysfunction in a child with Prader-Willi syndrome and medulloblastoma.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (JCEM case reports)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42524270/",
+      "pmid": "42524270",
+      "pmcid": "PMC13409325",
+      "doi": "10.1210/jcemcr/luag177",
+      "oa_url": "https://doi.org/10.1210/jcemcr/luag177",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-30",
+      "score": 27,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "physical activity",
+        "sleep",
+        "glucose",
+        "hba1c"
+      ],
+      "created_at": "2026-07-30T17:54:36.984612+00:00",
+      "last_seen_at": "2026-07-30T17:54:36.984623+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/challenges-in-managing-endocrine-and-metabolic-dysfunction-in-a-child-wi-69125dd2/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "584f54e6e190cb26": {
+      "title": "Degree of islet function preservation and continuous glucose monitoring in individuals undergoing total pancreatectomy with islet autotransplantation.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Diabetologia)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42362969/",
+      "pmid": "42362969",
+      "pmcid": "9623823",
+      "doi": "10.1007/s00125-026-06772-9",
+      "oa_url": "https://doi.org/10.1007/s00125-026-06772-9",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-30",
+      "score": 17,
+      "matched": [
+        "prediabetes",
+        "glucose",
+        "glycaemic",
+        "hba1c",
+        "continuous glucose"
+      ],
+      "created_at": "2026-07-30T17:55:19.968215+00:00",
+      "last_seen_at": "2026-07-30T17:55:19.968225+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/degree-of-islet-function-preservation-and-continuous-glucose-monitoring-584f54e6/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "58eddaa876556dcd": {
+      "title": "Rapid regression of advanced hepatic fibrosis in a patient with metabolic dysfunction-associated steatotic liver disease and severe obesity: a case report highlighting lifestyle-induced NETosis activation through serum proteomic analysis.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Clinical journal of gastroenterology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42089951/",
+      "pmid": "42089951",
+      "pmcid": "11724794",
+      "doi": "10.1007/s12328-026-02356-7",
+      "oa_url": "https://doi.org/10.1007/s12328-026-02356-7",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-07-30",
+      "score": 42,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "lifestyle intervention",
+        "lifestyle modification",
+        "weight loss",
+        "diet",
+        "nutrition",
+        "physical activity",
+        "metabolic syndrome"
+      ],
+      "created_at": "2026-07-30T17:55:56.104573+00:00",
+      "last_seen_at": "2026-07-30T17:55:56.104578+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/rapid-regression-of-advanced-hepatic-fibrosis-in-a-patient-with-metaboli-58eddaa8/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
