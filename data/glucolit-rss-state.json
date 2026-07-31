@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-30T17:54:10.769841+00:00",
+      "last_seen_at": "2026-07-31T17:57:54.897698+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-30T17:54:10.769371+00:00",
+      "last_seen_at": "2026-07-31T17:57:54.897227+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-30T17:55:56.103845+00:00",
+      "last_seen_at": "2026-07-31T17:58:49.465679+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-07-30T17:56:36.568169+00:00",
+      "last_seen_at": "2026-07-31T17:58:49.466544+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -9445,7 +9445,7 @@
         "remission"
       ],
       "created_at": "2026-07-27T18:04:35.656028+00:00",
-      "last_seen_at": "2026-07-30T17:56:36.568745+00:00",
+      "last_seen_at": "2026-07-31T17:58:49.467058+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -9999,6 +9999,233 @@
         "Chinese evidence story is too thin",
         "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "3afca0129fdf23df": {
+      "title": "Knowledge mapping and bibliometric analysis of metabolic phenotypes in childhood and adolescent obesity: research hotspots and emerging trends from 2000 to 2026.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Frontiers in public health)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42534462/",
+      "pmid": "42534462",
+      "pmcid": "PMC13420723",
+      "doi": "10.3389/fpubh.2026.1907434",
+      "oa_url": "https://doi.org/10.3389/fpubh.2026.1907434",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 36,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "exercise",
+        "physical activity",
+        "sleep",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-07-31T17:57:25.020346+00:00",
+      "last_seen_at": "2026-07-31T17:57:25.020363+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/knowledge-mapping-and-bibliometric-analysis-of-metabolic-phenotypes-in-c-3afca012/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "50213def8ffa10f6": {
+      "title": "Light Exposure and Type 2 Diabetes Mellitus: A Bibliometric Analysis of Research Hotspots and Emerging Frontiers from 2001 to 2025.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Photodiagnosis and photodynamic therapy)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42532251/",
+      "pmid": "42532251",
+      "pmcid": "",
+      "doi": "10.1016/j.pdpdt.2026.105594",
+      "oa_url": "https://doi.org/10.1016/j.pdpdt.2026.105594",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-30",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "sleep",
+        "glucose",
+        "glycemic",
+        "continuous glucose"
+      ],
+      "created_at": "2026-07-31T17:57:54.897886+00:00",
+      "last_seen_at": "2026-07-31T17:57:54.897890+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "not directly about prediabetes prevention or insulin resistance"
+    },
+    "ba8d7ad0f885e6b3": {
+      "title": "Loss of Slc39a5 in α-cells impairs glucose metabolism by chronically increasing glucagon.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Journal of advanced research)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41223989/",
+      "pmid": "41223989",
+      "pmcid": "",
+      "doi": "10.1016/j.jare.2025.11.013",
+      "oa_url": "https://doi.org/10.1016/j.jare.2025.11.013",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-31",
+      "score": 24,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-07-31T17:57:54.898066+00:00",
+      "last_seen_at": "2026-07-31T17:57:54.898068+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/loss-of-slc39a5-in-cells-impairs-glucose-metabolism-by-chronically-incre-ba8d7ad0/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "4bd88f6562a1cc9b": {
+      "title": "Therapeutic potential of crystal-engineered berberine cocrystals ameliorates PCOS phenotypes via AMPK-IRS1/PI3K/Akt axis: An integrative computational and preclinical study.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (The Journal of pharmacology and experimental therapeutics)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42275928/",
+      "pmid": "42275928",
+      "pmcid": "",
+      "doi": "10.1016/j.jpet.2026.104937",
+      "oa_url": "https://doi.org/10.1016/j.jpet.2026.104937",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 16,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "glucose"
+      ],
+      "created_at": "2026-07-31T17:58:22.119550+00:00",
+      "last_seen_at": "2026-07-31T17:58:22.119568+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/therapeutic-potential-of-crystal-engineered-berberine-cocrystals-amelior-4bd88f65/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "b1371bf825326602": {
+      "title": "Head-to-head comparison of fasting-insulin-based versus non-insulin-based insulin resistance surrogates for predicting all-cause and cardiovascular mortality in hypertensive adults across the glycemic continuum: a prospective cohort study.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Cardiovascular diabetology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42298603/",
+      "pmid": "42298603",
+      "pmcid": "",
+      "doi": "10.1186/s12933-026-03244-7",
+      "oa_url": "https://doi.org/10.1186/s12933-026-03244-7",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-15",
+      "score": 23,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "insulin sensitivity",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-07-31T17:58:49.467239+00:00",
+      "last_seen_at": "2026-07-31T17:58:49.467242+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/head-to-head-comparison-of-fasting-insulin-based-versus-non-insulin-base-b1371bf8/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "52744fc0424d9dd9": {
+      "title": "Pubertal Stage-Based One-hour Postload Glucose Thresholds Improve Identification of Prediabetes and Type 2 Diabetes in Children With Overweight or Obesity.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Diabetes, obesity & metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42380694/",
+      "pmid": "42380694",
+      "pmcid": "",
+      "doi": "10.1111/dom.70969",
+      "oa_url": "https://doi.org/10.1111/dom.70969",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-30",
+      "score": 21,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "insulin sensitivity",
+        "glucose"
+      ],
+      "created_at": "2026-07-31T17:59:26.078152+00:00",
+      "last_seen_at": "2026-07-31T17:59:26.078170+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/pubertal-stage-based-one-hour-postload-glucose-thresholds-improve-identi-52744fc0/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "2cd17b29e93d0904": {
+      "title": "Insulin Sensitive Patients With Impaired Glucose Tolerance: Physiologic and Metabolic Characterization (STOP DIABETES).",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Diabetes, obesity & metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/41969201/",
+      "pmid": "41969201",
+      "pmcid": "",
+      "doi": "10.1111/dom.70762",
+      "oa_url": "https://doi.org/10.1111/dom.70762",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 21,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "glucose"
+      ],
+      "created_at": "2026-07-31T17:59:59.058144+00:00",
+      "last_seen_at": "2026-07-31T17:59:59.058163+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/insulin-sensitive-patients-with-impaired-glucose-tolerance-physiologic-a-2cd17b29/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
     }
