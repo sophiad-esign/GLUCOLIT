@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-07-31T17:57:54.897698+00:00",
+      "last_seen_at": "2026-08-01T17:23:28.037360+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-07-31T17:57:54.897227+00:00",
+      "last_seen_at": "2026-08-01T17:23:28.036888+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-07-31T17:58:49.465679+00:00",
+      "last_seen_at": "2026-08-01T17:24:10.743143+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-07-31T17:58:49.466544+00:00",
+      "last_seen_at": "2026-08-01T17:24:10.743928+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -9445,7 +9445,7 @@
         "remission"
       ],
       "created_at": "2026-07-27T18:04:35.656028+00:00",
-      "last_seen_at": "2026-07-31T17:58:49.467058+00:00",
+      "last_seen_at": "2026-08-01T17:24:10.744454+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-07-31T17:57:54.897890+00:00",
+      "last_seen_at": "2026-08-01T17:23:28.037519+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -10226,6 +10226,169 @@
         "Chinese article needs more short readable paragraphs",
         "Chinese evidence story is too thin",
         "Chinese interpretation and critique section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "c3ce1265de36d5eb": {
+      "title": "Alcohol Herbal Beverage and Ethanol Consumption in High-Fat Diet fed Rats Exacerbates Blood pressure, Insulin Resistance, dyslipidemia, and Cardio-hepatic inflammation.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Nigerian journal of physiological sciences : official publication of the Physiological Society of Nigeria)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42537023/",
+      "pmid": "42537023",
+      "pmcid": "",
+      "doi": "",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-06-30",
+      "score": 23,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "diet",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-08-01T17:23:28.037658+00:00",
+      "last_seen_at": "2026-08-01T17:23:28.037660+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/alcohol-herbal-beverage-and-ethanol-consumption-in-high-fat-diet-fed-rat-c3ce1265/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "62617c607c762545": {
+      "title": "Effects of Prediabetes on Bone Metabolism and Healing in Orthognathic Surgery: A Narrative Review.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (European journal of dentistry)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42419705/",
+      "pmid": "42419705",
+      "pmcid": "",
+      "doi": "10.1055/s-0046-1820502",
+      "oa_url": "https://doi.org/10.1055/s-0046-1820502",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-08",
+      "score": 18,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-08-01T17:24:10.744589+00:00",
+      "last_seen_at": "2026-08-01T17:24:10.744592+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effects-of-prediabetes-on-bone-metabolism-and-healing-in-orthognathic-su-62617c60/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "English plain-language article is short",
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "bcdee62f48113794": {
+      "title": "Continuous glucose monitoring for prediabetes classification in a large real-world cohort: Comparison with HbA1c and fasting plasma glucose.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Diabetes research and clinical practice)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42349688/",
+      "pmid": "42349688",
+      "pmcid": "",
+      "doi": "10.1016/j.diabres.2026.113394",
+      "oa_url": "https://doi.org/10.1016/j.diabres.2026.113394",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-01",
+      "score": 17,
+      "matched": [
+        "prediabetes",
+        "glucose",
+        "glycemic",
+        "hba1c",
+        "continuous glucose"
+      ],
+      "created_at": "2026-08-01T17:24:48.738559+00:00",
+      "last_seen_at": "2026-08-01T17:24:48.738583+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/continuous-glucose-monitoring-for-prediabetes-classification-in-a-large-bcdee62f/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "2aee51ba1a339b7c": {
+      "title": "Effects of time-restricted eating on glycemic control and variability in individuals with overweight/obesity and prediabetes: A secondary analysis of the RESET randomized controlled trial.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Diabetes research and clinical practice)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42025926/",
+      "pmid": "42025926",
+      "pmcid": "",
+      "doi": "10.1016/j.diabres.2026.113276",
+      "oa_url": "https://doi.org/10.1016/j.diabres.2026.113276",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-01",
+      "score": 17,
+      "matched": [
+        "prediabetes",
+        "glucose",
+        "glycemic",
+        "hba1c",
+        "continuous glucose"
+      ],
+      "created_at": "2026-08-01T17:25:36.312240+00:00",
+      "last_seen_at": "2026-08-01T17:25:36.312259+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effects-of-time-restricted-eating-on-glycemic-control-and-variability-in-2aee51ba/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "e7040a403a36f949": {
+      "title": "Prospective evaluation of hepatic steatosis and fibrosis after one anastomosis gastric bypass using transient elastography.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Scientific reports)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42414450/",
+      "pmid": "42414450",
+      "pmcid": "",
+      "doi": "10.1038/s41598-026-60993-x",
+      "oa_url": "https://doi.org/10.1038/s41598-026-60993-x",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-07-07",
+      "score": 18,
+      "matched": [
+        "insulin resistance",
+        "weight loss",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-08-01T17:26:26.150114+00:00",
+      "last_seen_at": "2026-08-01T17:26:26.150132+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/prospective-evaluation-of-hepatic-steatosis-and-fibrosis-after-one-anast-e7040a40/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
     }
