@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-08-03T18:13:31.724850+00:00",
+      "last_seen_at": "2026-08-04T18:10:20.334591+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-03T18:13:31.724303+00:00",
+      "last_seen_at": "2026-08-04T18:10:20.334057+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-03T18:14:51.239807+00:00",
+      "last_seen_at": "2026-08-04T18:10:54.600369+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-03T18:14:51.240595+00:00",
+      "last_seen_at": "2026-08-04T18:10:54.601095+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -9445,7 +9445,7 @@
         "remission"
       ],
       "created_at": "2026-07-27T18:04:35.656028+00:00",
-      "last_seen_at": "2026-08-03T18:15:37.257663+00:00",
+      "last_seen_at": "2026-08-04T18:12:15.111541+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -10041,7 +10041,7 @@
       "skip_reason": "saved as needs-revision draft"
     },
     "50213def8ffa10f6": {
-      "title": "Light Exposure and Type 2 Diabetes Mellitus: A Bibliometric Analysis of Research Hotspots and Emerging Frontiers from 2001 to 2025.",
+      "title": "Light exposure and type 2 diabetes mellitus: a bibliometric analysis of research hotspots and emerging frontiers from 2001 to 2025.",
       "source": "PubMed prediabetes sleep intervention via PubMed (Photodiagnosis and photodynamic therapy)",
       "link": "https://pubmed.ncbi.nlm.nih.gov/42532251/",
       "pmid": "42532251",
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-03T18:13:31.725032+00:00",
+      "last_seen_at": "2026-08-04T18:10:20.334761+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -10627,6 +10627,141 @@
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
         "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "9bf265257d2b4770": {
+      "title": "Deciphering the Association of Fasting Blood Glucose With Gamma-Glutamyl Transferase and Uric Acid: A cross-sectional study in a tertiary care hospital in South India.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Sultan Qaboos University medical journal)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42549307/",
+      "pmid": "42549307",
+      "pmcid": "PMC13431264",
+      "doi": "10.18295/2075-0528.3000",
+      "oa_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13431264/",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 39,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "lifestyle modification",
+        "sleep",
+        "metabolic syndrome",
+        "glucose",
+        "glycaemic"
+      ],
+      "created_at": "2026-08-04T18:09:46.503483+00:00",
+      "last_seen_at": "2026-08-04T18:09:46.503497+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/deciphering-the-association-of-fasting-blood-glucose-with-gamma-glutamyl-9bf26525/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "74c244762ea0546b": {
+      "title": "Advances, challenges, and future directions in precision nutrition by machine learning-based prediction of glycemic responses to foods: a narrative review.",
+      "source": "PubMed prediabetes diet intervention via PubMed (The American journal of clinical nutrition)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42547103/",
+      "pmid": "42547103",
+      "pmcid": "",
+      "doi": "10.1016/j.ajcnut.2026.101322",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-01",
+      "score": 20,
+      "matched": [
+        "prediabetes",
+        "diet",
+        "nutrition",
+        "glucose",
+        "glycemic",
+        "continuous glucose"
+      ],
+      "created_at": "2026-08-04T18:10:20.334935+00:00",
+      "last_seen_at": "2026-08-04T18:10:20.334937+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/advances-challenges-and-future-directions-in-precision-nutrition-by-mach-74c24476/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "d1f61d1d24d878d9": {
+      "title": "Dietary intakes of anthocyanins and cardiometabolic health: a systematic review and meta-analysis of randomized trials and prospective cohort studies in healthy participants.",
+      "source": "PubMed prediabetes diet intervention via PubMed (The American journal of clinical nutrition)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42547104/",
+      "pmid": "42547104",
+      "pmcid": "",
+      "doi": "10.1016/j.ajcnut.2026.101304",
+      "oa_url": "https://doi.org/10.1016/j.ajcnut.2026.101304",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-01",
+      "score": 19,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "nutrition",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-08-04T18:10:54.601620+00:00",
+      "last_seen_at": "2026-08-04T18:10:54.601625+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/dietary-intakes-of-anthocyanins-and-cardiometabolic-health-a-systematic-d1f61d1d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "590708e281b7fa05": {
+      "title": "Liquiritigenin ameliorates adipocyte insulin resistance by inhibiting pro-inflammatory polarization of macrophages via regulation of the mtROS/OXPHOS axis.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Phytomedicine : international journal of phytotherapy and phytopharmacology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42402249/",
+      "pmid": "42402249",
+      "pmcid": "",
+      "doi": "10.1016/j.phymed.2026.158509",
+      "oa_url": "https://doi.org/10.1016/j.phymed.2026.158509",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-04",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-08-04T18:11:36.106752+00:00",
+      "last_seen_at": "2026-08-04T18:11:36.106764+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/liquiritigenin-ameliorates-adipocyte-insulin-resistance-by-inhibiting-pr-590708e2/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
