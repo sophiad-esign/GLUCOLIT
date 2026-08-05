@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-08-04T18:10:20.334591+00:00",
+      "last_seen_at": "2026-08-05T17:59:55.182176+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-04T18:10:20.334057+00:00",
+      "last_seen_at": "2026-08-05T17:59:55.181634+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-04T18:10:54.600369+00:00",
+      "last_seen_at": "2026-08-05T18:01:24.985471+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-04T18:10:54.601095+00:00",
+      "last_seen_at": "2026-08-05T18:01:24.986278+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -9445,7 +9445,7 @@
         "remission"
       ],
       "created_at": "2026-07-27T18:04:35.656028+00:00",
-      "last_seen_at": "2026-08-04T18:12:15.111541+00:00",
+      "last_seen_at": "2026-08-05T18:01:24.986804+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-04T18:10:20.334761+00:00",
+      "last_seen_at": "2026-08-05T17:59:55.182335+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -10762,6 +10762,72 @@
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "c17119bc651bb171": {
+      "title": "Associations of Healthy Lifestyle With All-Cause and Cardiovascular Disease Mortality in Individuals With Cardiovascular-Kidney-Metabolic Syndrome: Two Prospective Cohort Studies.",
+      "source": "PubMed insulin resistance interventions via PubMed (Clinical cardiology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42554187/",
+      "pmid": "42554187",
+      "pmcid": "",
+      "doi": "10.1002/clc.70436",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-01",
+      "score": 20,
+      "matched": [
+        "lifestyle intervention",
+        "diet",
+        "physical activity",
+        "sleep",
+        "metabolic syndrome"
+      ],
+      "created_at": "2026-08-05T17:59:55.182447+00:00",
+      "last_seen_at": "2026-08-05T17:59:55.182451+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/associations-of-healthy-lifestyle-with-all-cause-and-cardiovascular-dise-c17119bc/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "19734c8bfc538ebb": {
+      "title": "Sucrose-free low-fat diet induces metabolic dysfunction through gut dysbiosis and colonic inflammation in mice.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Frontiers in immunology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42553085/",
+      "pmid": "42553085",
+      "pmcid": "PMC13433177",
+      "doi": "10.3389/fimmu.2026.1813722",
+      "oa_url": "https://doi.org/10.3389/fimmu.2026.1813722",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 28,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "metabolic syndrome",
+        "glucose"
+      ],
+      "created_at": "2026-08-05T18:00:36.311556+00:00",
+      "last_seen_at": "2026-08-05T18:00:36.311577+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/sucrose-free-low-fat-diet-induces-metabolic-dysfunction-through-gut-dysb-19734c8b/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
