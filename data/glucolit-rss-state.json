@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-08-05T17:59:55.182176+00:00",
+      "last_seen_at": "2026-08-07T17:13:57.261224+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-05T17:59:55.181634+00:00",
+      "last_seen_at": "2026-08-07T17:13:21.953381+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-05T18:01:24.985471+00:00",
+      "last_seen_at": "2026-08-07T17:13:57.261729+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-05T18:01:24.986278+00:00",
+      "last_seen_at": "2026-08-07T17:14:32.984669+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-05T17:59:55.182335+00:00",
+      "last_seen_at": "2026-08-07T17:13:57.261399+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -10828,6 +10828,146 @@
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
         "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "e5e2568dbc95e7ab": {
+      "title": "Concurrent training is associated with enhanced post-exercise ceramide clearance and fat oxidation capacity in individuals with type 2 diabetes following lifestyle intervention.",
+      "source": "PubMed diabetes prevention and remission via PubMed (Diabetologia)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42557446/",
+      "pmid": "42557446",
+      "pmcid": "6445456",
+      "doi": "10.1007/s00125-026-06820-4",
+      "oa_url": "https://doi.org/10.1007/s00125-026-06820-4",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-08-05",
+      "score": 32,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "lifestyle intervention",
+        "weight loss",
+        "diet",
+        "nutrition",
+        "exercise",
+        "glucose",
+        "glycaemic",
+        "hba1c"
+      ],
+      "created_at": "2026-08-07T17:13:21.954005+00:00",
+      "last_seen_at": "2026-08-07T17:13:21.954009+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/concurrent-training-is-associated-with-enhanced-post-exercise-ceramide-c-e5e2568d/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "334bcb84a776bb6b": {
+      "title": "Adherence to the Mediterranean diet is inversely associated with hematologic inflammatory indices in adults seeking a weight loss dietary program: a cross-sectional study.",
+      "source": "PubMed insulin resistance interventions via PubMed (European journal of nutrition)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42560509/",
+      "pmid": "42560509",
+      "pmcid": "9384752",
+      "doi": "10.1007/s00394-026-04075-8",
+      "oa_url": "https://doi.org/10.1007/s00394-026-04075-8",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-08-06",
+      "score": 34,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "weight loss",
+        "diet",
+        "nutrition",
+        "physical activity",
+        "metabolic syndrome",
+        "glucose",
+        "glycaemic"
+      ],
+      "created_at": "2026-08-07T17:13:57.262284+00:00",
+      "last_seen_at": "2026-08-07T17:13:57.262287+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/adherence-to-the-mediterranean-diet-is-inversely-associated-with-hematol-334bcb84/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "bf05c60eecb840eb": {
+      "title": "Noninvasive diabetes mellitus classification based on HbA1c using the Mel-frequency cepstral coefficients from the photoplethysmographic signal.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Physiological measurement)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42497900/",
+      "pmid": "42497900",
+      "pmcid": "",
+      "doi": "10.1088/1361-6579/ae9037",
+      "oa_url": "https://doi.org/10.1088/1361-6579/ae9037",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-06",
+      "score": 18,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-08-07T17:14:32.985119+00:00",
+      "last_seen_at": "2026-08-07T17:14:32.985123+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/noninvasive-diabetes-mellitus-classification-based-on-hba1c-using-the-me-bf05c60e/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "774d93a5e34d1a61": {
+      "title": "FAM151A Regulates Insulin Secretion in Pancreatic β-Cells and Is Implicated in Pathogenesis of Type 2 Diabetes Mellitus.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Diabetes & metabolism journal)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42556431/",
+      "pmid": "42556431",
+      "pmcid": "",
+      "doi": "10.4093/dmj.2025.1061",
+      "oa_url": "https://doi.org/10.4093/dmj.2025.1061",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-06",
+      "score": 21,
+      "matched": [
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "insulin sensitivity",
+        "glucose"
+      ],
+      "created_at": "2026-08-07T17:15:07.760128+00:00",
+      "last_seen_at": "2026-08-07T17:15:07.760152+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/fam151a-regulates-insulin-secretion-in-pancreatic-cells-and-is-implicate-774d93a5/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
