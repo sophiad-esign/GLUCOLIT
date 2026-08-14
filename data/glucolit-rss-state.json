@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-08-13T17:21:01.206308+00:00",
+      "last_seen_at": "2026-08-14T17:17:04.230778+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-13T17:21:01.205723+00:00",
+      "last_seen_at": "2026-08-14T17:17:04.230200+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-12T17:18:49.773102+00:00",
+      "last_seen_at": "2026-08-14T17:17:04.231378+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-12T17:18:49.773822+00:00",
+      "last_seen_at": "2026-08-14T17:17:04.232130+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-13T17:21:55.464492+00:00",
+      "last_seen_at": "2026-08-14T17:17:04.230953+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -11142,7 +11142,7 @@
       "pmid": "42572726",
       "pmcid": "PMC13453383",
       "doi": "10.2147/DMSO.S596986",
-      "oa_url": "https://www.dovepress.com/article/download/117969",
+      "oa_url": "https://doi.org/10.2147/DMSO.S596986",
       "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
       "full_text_excerpt_chars": 9000,
       "published_at": "2026-01-01",
@@ -11156,7 +11156,7 @@
         "glucose"
       ],
       "created_at": "2026-08-10T17:15:47.964169+00:00",
-      "last_seen_at": "2026-08-12T17:19:31.417020+00:00",
+      "last_seen_at": "2026-08-14T17:18:18.223223+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -11564,6 +11564,105 @@
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "1d8af820aefa300c": {
+      "title": "Age-Specific Associations of Moderate-to-Vigorous Physical Activity With Relative and Absolute Risk of Type 2 Diabetes in UK Biobank Participants.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Diabetes, obesity & metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42595741/",
+      "pmid": "42595741",
+      "pmcid": "",
+      "doi": "10.1111/dom.71214",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-13",
+      "score": 23,
+      "matched": [
+        "prediabetes",
+        "type 2 diabetes prevention",
+        "diabetes prevention",
+        "physical activity"
+      ],
+      "created_at": "2026-08-14T17:16:22.012900+00:00",
+      "last_seen_at": "2026-08-14T17:16:22.012923+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/age-specific-associations-of-moderate-to-vigorous-physical-activity-with-1d8af820/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "89a62a7b81da252a": {
+      "title": "Associations between physical activity and dietary live microbe intake with non-alcoholic fatty liver disease: findings from the NHANES, 2007-2018.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Journal of global health)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42596894/",
+      "pmid": "42596894",
+      "pmcid": "",
+      "doi": "10.7189/jogh.16.04119",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-14",
+      "score": 19,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "nutrition",
+        "physical activity",
+        "glucose"
+      ],
+      "created_at": "2026-08-14T17:17:04.232633+00:00",
+      "last_seen_at": "2026-08-14T17:17:04.232636+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/associations-between-physical-activity-and-dietary-live-microbe-intake-w-89a62a7b/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "0a25a7f8e9a16106": {
+      "title": "An N-Salicyloyl Tryptamine Derivative (Compound 18) Improves Spermatogenic Impairment in Obese Mice via Regulating Insulin Resistance and Enhancing Sertoli Cell Glycolysis.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Molecular and cellular endocrinology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42595295/",
+      "pmid": "42595295",
+      "pmcid": "",
+      "doi": "10.1016/j.mce.2026.112894",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-13",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-08-14T17:17:45.582097+00:00",
+      "last_seen_at": "2026-08-14T17:17:45.582118+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/an-n-salicyloyl-tryptamine-derivative-compound-18-improves-spermatogenic-0a25a7f8/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
         "Chinese interpretation and critique section is short",
         "Chinese practical action guidance is too thin",
         "Chinese clinical/business insight section is short"
