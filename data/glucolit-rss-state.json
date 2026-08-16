@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-08-15T16:49:26.903104+00:00",
+      "last_seen_at": "2026-08-16T16:48:45.370394+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-15T16:49:26.902614+00:00",
+      "last_seen_at": "2026-08-16T16:48:45.369932+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-15T16:49:26.903637+00:00",
+      "last_seen_at": "2026-08-16T16:49:27.614085+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-15T16:49:26.904336+00:00",
+      "last_seen_at": "2026-08-16T16:49:27.614911+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-15T16:49:26.903265+00:00",
+      "last_seen_at": "2026-08-16T16:49:27.613553+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -11156,7 +11156,7 @@
         "glucose"
       ],
       "created_at": "2026-08-10T17:15:47.964169+00:00",
-      "last_seen_at": "2026-08-15T16:50:01.661581+00:00",
+      "last_seen_at": "2026-08-16T16:49:27.615653+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -11735,6 +11735,43 @@
         "Chinese interpretation and critique section is short",
         "Chinese practical action guidance is too thin",
         "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "488a4319d9996b64": {
+      "title": "Effectiveness of Aerobic Exercise on Metabolic Profiles in Women with Polycystic Ovary Syndrome: A Systematic Review, Meta-Analysis, and GRADE Assessment of RCTs.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Diabetes, metabolic syndrome and obesity : targets and therapy)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42602369/",
+      "pmid": "42602369",
+      "pmcid": "PMC13473826",
+      "doi": "10.2147/DMSO.S588523",
+      "oa_url": "https://doi.org/10.2147/DMSO.S588523",
+      "evidence": "Europe PMC abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 26,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "lifestyle intervention",
+        "weight loss",
+        "diet",
+        "exercise",
+        "physical activity",
+        "metabolic syndrome",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-08-16T16:48:45.370753+00:00",
+      "last_seen_at": "2026-08-16T16:48:45.370756+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effectiveness-of-aerobic-exercise-on-metabolic-profiles-in-women-with-po-488a4319/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
     }
