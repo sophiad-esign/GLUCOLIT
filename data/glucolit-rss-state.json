@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-08-17T16:52:05.412158+00:00",
+      "last_seen_at": "2026-08-18T16:54:05.390884+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-17T16:52:05.411672+00:00",
+      "last_seen_at": "2026-08-18T16:54:05.390317+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-17T16:52:05.412684+00:00",
+      "last_seen_at": "2026-08-18T16:54:31.189144+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-17T16:52:05.413357+00:00",
+      "last_seen_at": "2026-08-18T16:54:31.189963+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-17T16:52:05.412312+00:00",
+      "last_seen_at": "2026-08-18T16:54:05.391061+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -11156,7 +11156,7 @@
         "glucose"
       ],
       "created_at": "2026-08-10T17:15:47.964169+00:00",
-      "last_seen_at": "2026-08-17T16:52:39.242251+00:00",
+      "last_seen_at": "2026-08-18T16:54:31.190785+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -11803,6 +11803,83 @@
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
         "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "93e2f7fa9932a3ee": {
+      "title": "Prediabetic cardiomyopathy is attenuated by hypothalamic PVN oxytocin neuron activation.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (The Journal of physiology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/40930156/",
+      "pmid": "40930156",
+      "pmcid": "PMC13006082",
+      "doi": "10.1113/JP287928",
+      "oa_url": "https://europepmc.org/articles/PMC13006082",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-08-01",
+      "score": 37,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "insulin resistance",
+        "diabetes prevention",
+        "diet",
+        "nutrition",
+        "exercise",
+        "sleep",
+        "metabolic syndrome",
+        "glycaemic"
+      ],
+      "created_at": "2026-08-18T16:53:21.071524+00:00",
+      "last_seen_at": "2026-08-18T16:53:21.071546+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/prediabetic-cardiomyopathy-is-attenuated-by-hypothalamic-pvn-oxytocin-ne-93e2f7fa/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short",
+        "uses reviewer voice too often"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "eb74fb3f21a89625": {
+      "title": "Associations between the gut microbiome and diet, body composition, and glycemic profiles: a cross-sectional post-hoc analysis of the Personal Diet Study.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Frontiers in nutrition)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42609392/",
+      "pmid": "42609392",
+      "pmcid": "PMC13478278",
+      "doi": "10.3389/fnut.2026.1851439",
+      "oa_url": "https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1851439/pdf",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 27,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "weight loss",
+        "diet",
+        "nutrition",
+        "glucose",
+        "glycemic",
+        "hba1c",
+        "continuous glucose"
+      ],
+      "created_at": "2026-08-18T16:54:05.391465+00:00",
+      "last_seen_at": "2026-08-18T16:54:05.391468+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/associations-between-the-gut-microbiome-and-diet-body-composition-and-gl-eb74fb3f/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese practical action guidance is too thin",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
