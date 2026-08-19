@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-08-18T16:54:05.390884+00:00",
+      "last_seen_at": "2026-08-19T16:54:48.772103+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-18T16:54:05.390317+00:00",
+      "last_seen_at": "2026-08-19T16:54:48.771623+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -6989,7 +6989,7 @@
       "pmid": "42312302",
       "pmcid": "PMC13268837",
       "doi": "10.18773/austprescr.2026.026",
-      "oa_url": "https://europepmc.org/articles/PMC13268837",
+      "oa_url": "https://doi.org/10.18773/austprescr.2026.026",
       "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
       "full_text_excerpt_chars": 9000,
       "published_at": "2026-06-01",
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-18T16:54:31.189144+00:00",
+      "last_seen_at": "2026-08-19T16:55:17.669072+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8067,7 +8067,7 @@
       "pmid": "42353211",
       "pmcid": "PMC13299947",
       "doi": "10.3390/ijms27125495",
-      "oa_url": "https://doi.org/10.3390/ijms27125495",
+      "oa_url": "https://www.mdpi.com/1422-0067/27/12/5495/pdf?version=1781756892",
       "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
       "full_text_excerpt_chars": 9000,
       "published_at": "2026-06-18",
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-18T16:54:31.189963+00:00",
+      "last_seen_at": "2026-08-19T16:55:17.669816+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -10047,8 +10047,8 @@
       "pmid": "42532251",
       "pmcid": "",
       "doi": "10.1016/j.pdpdt.2026.105594",
-      "oa_url": "https://doi.org/10.1016/j.pdpdt.2026.105594",
-      "evidence": "Europe PMC abstract + open-access full-text link",
+      "oa_url": "https://www.sciencedirect.com/science/article/pii/S1572100026002619/pdf",
+      "evidence": "PubMed abstract + open-access full-text link",
       "full_text_excerpt_chars": 0,
       "published_at": "2026-07-30",
       "score": 17,
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-18T16:54:05.391061+00:00",
+      "last_seen_at": "2026-08-19T16:54:48.772248+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -11156,7 +11156,7 @@
         "glucose"
       ],
       "created_at": "2026-08-10T17:15:47.964169+00:00",
-      "last_seen_at": "2026-08-18T16:54:31.190785+00:00",
+      "last_seen_at": "2026-08-19T16:55:17.670571+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -11879,6 +11879,74 @@
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
         "Chinese evidence story is too thin",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "7c807fea8cd4f376": {
+      "title": "Comparing the Independent Effects of Weight Loss or Exercise Training on Skeletal Muscle Lipid Localization and Insulin Sensitivity in Humans.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Diabetes)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42610973/",
+      "pmid": "42610973",
+      "pmcid": "",
+      "doi": "10.2337/db26-0239",
+      "oa_url": "https://doi.org/10.2337/db26-0239",
+      "evidence": "Europe PMC abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-18",
+      "score": 26,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "lifestyle intervention",
+        "weight loss",
+        "exercise"
+      ],
+      "created_at": "2026-08-19T16:54:48.772328+00:00",
+      "last_seen_at": "2026-08-19T16:54:48.772331+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/comparing-the-independent-effects-of-weight-loss-or-exercise-training-on-7c807fea/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "d2819c970971dee6": {
+      "title": "Metabolic and bariatric surgery in adults with obesity and diabetes mellitus: a network meta-analysis.",
+      "source": "PubMed diabetes prevention and remission via PubMed (The Cochrane database of systematic reviews)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42610488/",
+      "pmid": "42610488",
+      "pmcid": "",
+      "doi": "10.1002/14651858.CD015622.pub2",
+      "oa_url": "https://doi.org/10.1002/14651858.CD015622.pub2",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-18",
+      "score": 18,
+      "matched": [
+        "lifestyle intervention",
+        "weight loss",
+        "glycaemic",
+        "hba1c",
+        "remission"
+      ],
+      "created_at": "2026-08-19T16:55:17.671168+00:00",
+      "last_seen_at": "2026-08-19T16:55:17.671172+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/metabolic-and-bariatric-surgery-in-adults-with-obesity-and-diabetes-mell-d2819c97/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
         "Chinese practical action guidance is too thin",
         "Chinese clinical/business insight section is short"
       ],
