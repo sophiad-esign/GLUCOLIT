@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-08-21T16:58:01.682082+00:00",
+      "last_seen_at": "2026-08-22T16:47:18.576207+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-21T16:57:26.219441+00:00",
+      "last_seen_at": "2026-08-22T16:47:18.575701+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-21T16:59:14.853575+00:00",
+      "last_seen_at": "2026-08-22T16:47:46.769211+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8067,7 +8067,7 @@
       "pmid": "42353211",
       "pmcid": "PMC13299947",
       "doi": "10.3390/ijms27125495",
-      "oa_url": "https://doi.org/10.3390/ijms27125495",
+      "oa_url": "https://europepmc.org/articles/PMC13299947",
       "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
       "full_text_excerpt_chars": 9000,
       "published_at": "2026-06-18",
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-21T16:59:14.854196+00:00",
+      "last_seen_at": "2026-08-22T16:48:30.761746+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-21T16:58:01.682299+00:00",
+      "last_seen_at": "2026-08-22T16:47:18.576364+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -11156,7 +11156,7 @@
         "glucose"
       ],
       "created_at": "2026-08-10T17:15:47.964169+00:00",
-      "last_seen_at": "2026-08-21T16:59:14.854859+00:00",
+      "last_seen_at": "2026-08-22T16:48:30.762622+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -12261,6 +12261,71 @@
       "attempts": 1,
       "generated": true,
       "path": "packages/cms/src/collections/blog/content/distinct-and-stage-specific-effects-of-pre-pregnancy-and-gestational-hig-e6acce37/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "1eee4735cbf628ec": {
+      "title": "TBC1D4-Related Monogenic Diabetes: Molecular Mechanisms, Clinical Recognition, and Therapeutic Implications.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Journal of diabetes)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42629605/",
+      "pmid": "42629605",
+      "pmcid": "",
+      "doi": "10.1111/1753-0407.70266",
+      "oa_url": "https://doi.org/10.1111/1753-0407.70266",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-01",
+      "score": 26,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "lifestyle intervention",
+        "exercise",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-08-22T16:47:18.576465+00:00",
+      "last_seen_at": "2026-08-22T16:47:18.576467+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/tbc1d4-related-monogenic-diabetes-molecular-mechanisms-clinical-recognit-1eee4735/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "34caaf2e053a96d1": {
+      "title": "Insulin resistance and sarcopenia: independent and combined associations with obesity and dietary protein intake.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Journal of endocrinological investigation)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42189481/",
+      "pmid": "42189481",
+      "pmcid": "5434551",
+      "doi": "10.1007/s40618-026-02923-2",
+      "oa_url": "https://doi.org/10.1007/s40618-026-02923-2",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-08-22",
+      "score": 17,
+      "matched": [
+        "insulin resistance",
+        "diet",
+        "nutrition",
+        "physical activity"
+      ],
+      "created_at": "2026-08-22T16:47:46.770124+00:00",
+      "last_seen_at": "2026-08-22T16:47:46.770129+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/insulin-resistance-and-sarcopenia-independent-and-combined-associations-34caaf2e/en.mdx",
       "quality_status": "needs_revision",
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
