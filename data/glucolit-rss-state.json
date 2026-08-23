@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-08-22T16:47:18.576207+00:00",
+      "last_seen_at": "2026-08-23T16:48:04.588938+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-22T16:47:18.575701+00:00",
+      "last_seen_at": "2026-08-23T16:48:04.588400+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-22T16:47:46.769211+00:00",
+      "last_seen_at": "2026-08-23T16:48:04.589510+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-22T16:48:30.761746+00:00",
+      "last_seen_at": "2026-08-23T16:48:50.841204+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -9445,7 +9445,7 @@
         "remission"
       ],
       "created_at": "2026-07-27T18:04:35.656028+00:00",
-      "last_seen_at": "2026-08-21T16:59:14.855254+00:00",
+      "last_seen_at": "2026-08-23T16:49:19.386188+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-22T16:47:18.576364+00:00",
+      "last_seen_at": "2026-08-23T16:48:04.589098+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -11156,7 +11156,7 @@
         "glucose"
       ],
       "created_at": "2026-08-10T17:15:47.964169+00:00",
-      "last_seen_at": "2026-08-22T16:48:30.762622+00:00",
+      "last_seen_at": "2026-08-23T16:49:19.385604+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -12330,6 +12330,76 @@
       "quality_issues": [
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "d27eb4f2ac054ea7": {
+      "title": "Effects of Time-Restricted Eating on Insulin Sensitivity, Glycemic Control, and Metabolic Outcomes in Low- and Middle-Income Countries: A Systematic Review.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Clinical medicine insights. Endocrinology and diabetes)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42633004/",
+      "pmid": "42633004",
+      "pmcid": "PMC13498806",
+      "doi": "10.1177/11795514261480411",
+      "oa_url": "https://doi.org/10.1177/11795514261480411",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 34,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "weight loss",
+        "diet",
+        "exercise",
+        "metabolic syndrome",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-08-23T16:48:04.590229+00:00",
+      "last_seen_at": "2026-08-23T16:48:04.590233+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effects-of-time-restricted-eating-on-insulin-sensitivity-glycemic-contro-d27eb4f2/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "26ca1d6fba53c266": {
+      "title": "Loss of mitochondrial co-chaperone GRPEL2 protects mice from age- and diet-induced obesity.",
+      "source": "PubMed obesity and metabolic health via PubMed (Mitochondrion)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42632475/",
+      "pmid": "42632475",
+      "pmcid": "",
+      "doi": "10.1016/j.mito.2026.102205",
+      "oa_url": "https://doi.org/10.1016/j.mito.2026.102205",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-22",
+      "score": 18,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "nutrition"
+      ],
+      "created_at": "2026-08-23T16:48:50.841738+00:00",
+      "last_seen_at": "2026-08-23T16:48:50.841742+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/loss-of-mitochondrial-co-chaperone-grpel2-protects-mice-from-age-and-die-26ca1d6f/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
