@@ -4240,7 +4240,7 @@
         "glycemic"
       ],
       "created_at": "2026-07-02T18:16:55.073604+00:00",
-      "last_seen_at": "2026-08-24T17:00:22.805408+00:00",
+      "last_seen_at": "2026-08-25T17:02:41.330592+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-24T17:00:22.804882+00:00",
+      "last_seen_at": "2026-08-25T17:02:41.330082+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-24T17:01:09.790116+00:00",
+      "last_seen_at": "2026-08-25T17:02:41.331178+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-24T17:01:09.790929+00:00",
+      "last_seen_at": "2026-08-25T17:03:30.055775+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-24T17:00:22.805567+00:00",
+      "last_seen_at": "2026-08-25T17:02:41.330757+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -11156,7 +11156,7 @@
         "glucose"
       ],
       "created_at": "2026-08-10T17:15:47.964169+00:00",
-      "last_seen_at": "2026-08-24T17:01:47.470365+00:00",
+      "last_seen_at": "2026-08-25T17:03:30.056650+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -12467,6 +12467,112 @@
         "Chinese commentary is short for the required SOP structure",
         "Chinese article needs more short readable paragraphs",
         "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "02bf413b0014c27b": {
+      "title": "Meal Replacement Provides Additional Benefits for Weight and Visceral Fat Reduction in Prediabetic Individuals: A Randomized Clinical Trial.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Journal of nutrition and metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42639295/",
+      "pmid": "42639295",
+      "pmcid": "PMC13501115",
+      "doi": "10.1155/jnme/7109903",
+      "oa_url": "https://doi.org/10.1155/jnme/7109903",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 48,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "impaired glucose tolerance",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "weight loss",
+        "diet",
+        "nutrition",
+        "physical activity",
+        "metabolic syndrome",
+        "glucose",
+        "hba1c",
+        "remission"
+      ],
+      "created_at": "2026-08-25T17:01:58.229978+00:00",
+      "last_seen_at": "2026-08-25T17:01:58.229998+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/meal-replacement-provides-additional-benefits-for-weight-and-visceral-fa-02bf413b/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "0f90ca9e633de58c": {
+      "title": "Branched-chain amino acid metabolism and macrophage polarization: potential regulatory nodes and therapeutic targets in diabetes-associated metabolic inflammation.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Frontiers in cellular and infection microbiology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42639348/",
+      "pmid": "42639348",
+      "pmcid": "PMC13501152",
+      "doi": "10.3389/fcimb.2026.1902640",
+      "oa_url": "https://www.frontiersin.org/journals/cellular-and-infection-microbiology/articles/10.3389/fcimb.2026.1902640/pdf",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 24,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "nutrition",
+        "exercise",
+        "glucose"
+      ],
+      "created_at": "2026-08-25T17:02:41.331855+00:00",
+      "last_seen_at": "2026-08-25T17:02:41.331858+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/branched-chain-amino-acid-metabolism-and-macrophage-polarization-potenti-0f90ca9e/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "23f6dff17e5018c5": {
+      "title": "Associations of cumulative exposure and control patterns of the single-point insulin sensitivity estimator with incident cardiovascular disease in middle-aged and older Chinese adults with dysglycemia.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Nutricion hospitalaria)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42639938/",
+      "pmid": "42639938",
+      "pmcid": "",
+      "doi": "10.20960/nh.06792",
+      "oa_url": "https://doi.org/10.20960/nh.06792",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-07",
+      "score": 19,
+      "matched": [
+        "prediabetes",
+        "insulin resistance",
+        "insulin sensitivity"
+      ],
+      "created_at": "2026-08-25T17:03:30.057121+00:00",
+      "last_seen_at": "2026-08-25T17:03:30.057124+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/associations-of-cumulative-exposure-and-control-patterns-of-the-single-p-23f6dff1/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
