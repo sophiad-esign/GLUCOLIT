@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-29T00:39:13.267276+00:00",
+      "last_seen_at": "2026-08-29T19:31:05.060001+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-29T00:39:53.078777+00:00",
+      "last_seen_at": "2026-08-29T19:32:06.675027+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-29T00:41:05.083393+00:00",
+      "last_seen_at": "2026-08-29T19:32:06.675848+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -9445,7 +9445,7 @@
         "remission"
       ],
       "created_at": "2026-07-27T18:04:35.656028+00:00",
-      "last_seen_at": "2026-08-23T16:49:19.386188+00:00",
+      "last_seen_at": "2026-08-29T19:32:06.677423+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-29T00:39:13.267724+00:00",
+      "last_seen_at": "2026-08-29T19:31:05.060542+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -11156,7 +11156,7 @@
         "glucose"
       ],
       "created_at": "2026-08-10T17:15:47.964169+00:00",
-      "last_seen_at": "2026-08-29T00:41:05.084168+00:00",
+      "last_seen_at": "2026-08-29T19:32:06.676806+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -12597,7 +12597,7 @@
         "hba1c"
       ],
       "created_at": "2026-08-26T17:05:43.374995+00:00",
-      "last_seen_at": "2026-08-29T00:41:05.084556+00:00",
+      "last_seen_at": "2026-08-29T19:32:06.677289+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -13049,10 +13049,82 @@
         "remission"
       ],
       "created_at": "2026-08-29T00:41:05.083821+00:00",
-      "last_seen_at": "2026-08-29T00:41:05.083824+00:00",
+      "last_seen_at": "2026-08-29T19:32:06.676347+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
+    },
+    "6e77c0ce39e448bb": {
+      "title": "Brain insulin resistance: A link between obstructive sleep apnea and cognitive impairment.",
+      "source": "PubMed prediabetes sleep intervention via PubMed (Journal of diabetes and its complications)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42664811/",
+      "pmid": "42664811",
+      "pmcid": "",
+      "doi": "10.1016/j.jdiacomp.2026.109360",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-22",
+      "score": 21,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "weight loss",
+        "sleep",
+        "glucose"
+      ],
+      "created_at": "2026-08-29T19:31:05.060669+00:00",
+      "last_seen_at": "2026-08-29T19:31:05.060672+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/brain-insulin-resistance-a-link-between-obstructive-sleep-apnea-and-cogn-6e77c0ce/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short",
+        "Chinese practical action guidance is too thin",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "7596319964b07708": {
+      "title": "Artificial intelligence in prediabetes care: applications in screening, risk prediction, and lifestyle intervention.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Frontiers in endocrinology)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42666695/",
+      "pmid": "42666695",
+      "pmcid": "PMC13522911",
+      "doi": "10.3389/fendo.2026.1885905",
+      "oa_url": "https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2026.1885905/pdf",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-01-01",
+      "score": 47,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "lifestyle intervention",
+        "diet",
+        "physical activity",
+        "sleep",
+        "glucose",
+        "glycaemic",
+        "hba1c",
+        "continuous glucose"
+      ],
+      "created_at": "2026-08-29T19:31:36.769941+00:00",
+      "last_seen_at": "2026-08-29T19:31:36.769964+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/artificial-intelligence-in-prediabetes-care-applications-in-screening-ri-75963199/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese interpretation and critique section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
     }
   }
 }
