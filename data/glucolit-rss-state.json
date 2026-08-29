@@ -5377,7 +5377,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-08T17:57:52.882089+00:00",
-      "last_seen_at": "2026-08-28T01:04:22.251629+00:00",
+      "last_seen_at": "2026-08-29T00:39:13.267276+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score 2 below min-score 3"
@@ -7008,7 +7008,7 @@
         "remission"
       ],
       "created_at": "2026-07-16T17:59:00.828187+00:00",
-      "last_seen_at": "2026-08-26T17:05:43.372987+00:00",
+      "last_seen_at": "2026-08-29T00:39:53.078777+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -1 below min-score 3"
@@ -8087,7 +8087,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-21T18:00:40.965579+00:00",
-      "last_seen_at": "2026-08-26T17:05:43.373720+00:00",
+      "last_seen_at": "2026-08-29T00:41:05.083393+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "score -2 below min-score 3"
@@ -10060,7 +10060,7 @@
         "continuous glucose"
       ],
       "created_at": "2026-07-31T17:57:54.897886+00:00",
-      "last_seen_at": "2026-08-26T17:05:43.372574+00:00",
+      "last_seen_at": "2026-08-29T00:39:13.267724+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -11156,7 +11156,7 @@
         "glucose"
       ],
       "created_at": "2026-08-10T17:15:47.964169+00:00",
-      "last_seen_at": "2026-08-26T17:05:43.374508+00:00",
+      "last_seen_at": "2026-08-29T00:41:05.084168+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
@@ -12587,7 +12587,7 @@
       "oa_url": "https://doi.org/10.1016/j.ijcard.2026.134727",
       "evidence": "Europe PMC abstract + open-access full-text link",
       "full_text_excerpt_chars": 0,
-      "published_at": "2026-08-26",
+      "published_at": "2026-08-29",
       "score": 20,
       "matched": [
         "prediabetes",
@@ -12597,7 +12597,7 @@
         "hba1c"
       ],
       "created_at": "2026-08-26T17:05:43.374995+00:00",
-      "last_seen_at": "2026-08-26T17:05:43.374998+00:00",
+      "last_seen_at": "2026-08-29T00:41:05.084556+00:00",
       "attempts": 0,
       "generated": false,
       "skip_reason": "not directly about prediabetes prevention or insulin resistance"
@@ -12848,6 +12848,211 @@
         "Chinese clinical/business insight section is short"
       ],
       "skip_reason": "saved as needs-revision draft"
+    },
+    "d632e533d809bd28": {
+      "title": "Identification of Progressive Islet Biomarkers for Type 2 Diabetes by Integrated Transcriptomics and Mendelian Randomization: Alterations Spanning the Normal Glucose Tolerance-Impaired Glucose Tolerance-Type 2 Diabetes Continuum.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Biomedicines)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42652231/",
+      "pmid": "42652231",
+      "pmcid": "PMC13510233",
+      "doi": "10.3390/biomedicines14081850",
+      "oa_url": "https://doi.org/10.3390/biomedicines14081850",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-08-18",
+      "score": 31,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "insulin resistance",
+        "lifestyle intervention",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-08-29T00:38:01.769141+00:00",
+      "last_seen_at": "2026-08-29T00:38:01.769163+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/identification-of-progressive-islet-biomarkers-for-type-2-diabetes-by-in-d632e533/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "62e754a9f7003847": {
+      "title": "Preventing Type 2 Diabetes in At-Risk Cardiorenal Populations.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Cureus)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42662961/",
+      "pmid": "42662961",
+      "pmcid": "PMC13521482",
+      "doi": "10.7759/cureus.113529",
+      "oa_url": "https://www.cureus.com/articles/516451-preventing-type-2-diabetes-in-at-risk-cardiorenal-populations.pdf",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 8841,
+      "published_at": "2026-07-01",
+      "score": 29,
+      "matched": [
+        "prediabetes",
+        "prediabetic",
+        "diabetes prevention",
+        "lifestyle modification",
+        "diet",
+        "metabolic syndrome",
+        "glucose",
+        "glycemic"
+      ],
+      "created_at": "2026-08-29T00:38:35.487525+00:00",
+      "last_seen_at": "2026-08-29T00:38:35.487547+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/preventing-type-2-diabetes-in-at-risk-cardiorenal-populations-62e754a9/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "6ac13d2ebd2f5913": {
+      "title": "Effect of diet macronutrient content on the cardiometabolic response to weight loss: A randomized clinical trial.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Cell metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42660124/",
+      "pmid": "42660124",
+      "pmcid": "",
+      "doi": "10.1016/j.cmet.2026.07.020",
+      "oa_url": "",
+      "evidence": "PubMed abstract",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-27",
+      "score": 21,
+      "matched": [
+        "prediabetes",
+        "insulin sensitivity",
+        "weight loss",
+        "diet",
+        "glucose"
+      ],
+      "created_at": "2026-08-29T00:39:13.267869+00:00",
+      "last_seen_at": "2026-08-29T00:39:13.267872+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/effect-of-diet-macronutrient-content-on-the-cardiometabolic-response-to-6ac13d2e/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "44d6ee74e5a4c85f": {
+      "title": "The dietary calcium-to-magnesium ratio and its association with glycemic control in type 2 diabetes: a cross-sectional study.",
+      "source": "PubMed prediabetes diet intervention via PubMed (Biometals : an international journal on the role of metal ions in biology, biochemistry, and medicine)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42474889/",
+      "pmid": "42474889",
+      "pmcid": "PMC13518385",
+      "doi": "10.1007/s10534-026-00834-6",
+      "oa_url": "https://doi.org/10.1007/s10534-026-00834-6",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-08-29",
+      "score": 23,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "nutrition",
+        "physical activity",
+        "glucose",
+        "glycemic",
+        "hba1c"
+      ],
+      "created_at": "2026-08-29T00:39:53.079399+00:00",
+      "last_seen_at": "2026-08-29T00:39:53.079402+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/the-dietary-calcium-to-magnesium-ratio-and-its-association-with-glycemic-44d6ee74/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "2679fc5298905f16": {
+      "title": "Dietary Inflammatory Index, Physical Activity, and Inflammation-Related Health Outcomes: A Narrative Review and Inflammatory Resilience Framework.",
+      "source": "PubMed prediabetes exercise intervention via PubMed (Nutrients)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42654168/",
+      "pmid": "42654168",
+      "pmcid": "PMC13516439",
+      "doi": "10.3390/nu18162590",
+      "oa_url": "https://www.mdpi.com/2072-6643/18/16/2590/pdf?version=1786099714",
+      "evidence": "PubMed abstract + PubMed Central open full-text excerpt + open-access full-text link",
+      "full_text_excerpt_chars": 9000,
+      "published_at": "2026-08-07",
+      "score": 23,
+      "matched": [
+        "insulin resistance",
+        "insulin sensitivity",
+        "diet",
+        "exercise",
+        "physical activity"
+      ],
+      "created_at": "2026-08-29T00:40:29.062909+00:00",
+      "last_seen_at": "2026-08-29T00:40:29.062929+00:00",
+      "attempts": 1,
+      "generated": true,
+      "path": "packages/cms/src/collections/blog/content/dietary-inflammatory-index-physical-activity-and-inflammation-related-he-2679fc52/en.mdx",
+      "quality_status": "needs_revision",
+      "quality_issues": [
+        "Chinese commentary is short for the required SOP structure",
+        "Chinese article needs more short readable paragraphs",
+        "Chinese evidence story is too thin",
+        "Chinese interpretation and critique section is short",
+        "Chinese clinical/business insight section is short"
+      ],
+      "skip_reason": "saved as needs-revision draft"
+    },
+    "9ec5f0baf80eba93": {
+      "title": "Impact of Metformin Plus Lifestyle Intervention Compared With Lifestyle Intervention Alone on Prediabetes Remission in Participants With Impaired Glucose Regulation: The China DPP Study.",
+      "source": "PubMed prediabetes lifestyle intervention via PubMed (Diabetes, obesity & metabolism)",
+      "link": "https://pubmed.ncbi.nlm.nih.gov/42655937/",
+      "pmid": "42655937",
+      "pmcid": "",
+      "doi": "10.1111/dom.71271",
+      "oa_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/dom.71271",
+      "evidence": "PubMed abstract + open-access full-text link",
+      "full_text_excerpt_chars": 0,
+      "published_at": "2026-08-26",
+      "score": 20,
+      "matched": [
+        "prediabetes",
+        "impaired fasting glucose",
+        "impaired glucose tolerance",
+        "diabetes prevention",
+        "lifestyle intervention",
+        "glucose",
+        "hba1c",
+        "remission"
+      ],
+      "created_at": "2026-08-29T00:41:05.083821+00:00",
+      "last_seen_at": "2026-08-29T00:41:05.083824+00:00",
+      "attempts": 0,
+      "generated": false,
+      "skip_reason": "drug-dominant topic; lifestyle education is prioritized"
     }
   }
 }
